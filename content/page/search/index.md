@@ -1,6 +1,6 @@
 ---
 title: "Recherche un article"
-description: "Vous cherchez quelque chose ? Type quelques mots-clés et le tour est joué !"
+description: "Vous cherchez quelque chose en particulier ? Saisissz quelques mots-clés et le tour est joué ! Les résultats vous donnent rapidement les résultats les plus pertinents."
 slug: "search"
 layout: "search"
 outputs:
