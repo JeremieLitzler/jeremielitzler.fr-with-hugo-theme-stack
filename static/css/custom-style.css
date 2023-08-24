@@ -1,0 +1,44 @@
+:root {
+  --theme-color: #e78228;
+}
+.jli-notice {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 1em 0;
+}
+
+.jli-notice .highlight,
+.jli-notice .gallery {
+  margin-left: initial;
+  margin-right: initial;
+  width: initial;
+}
+
+.jli-notice-title {
+  font-weight: bold;
+}
+.jli-notice-note {
+  background-color: #fdfdfe;
+  border: 1px solid #ccc;
+  border-left: 4px solid #ccc;
+}
+
+.jli-notice-tip {
+  background-color: #e6f6e6;
+  border: 1px solid #009400;
+  border-left: 4px solid #009400;
+}
+
+.jli-notice-warning {
+  background-color: #fff8e6;
+  border: 1px solid #e6a700;
+  border-left: 4px solid #e6a700;
+}
+.jli-notice-danger {
+  background-color: #ffebec;
+  border: 1px solid #e13238;
+  border-left: 4px solid #e13238;
+}
+.jli-notice p {
+  margin: 0;
+}

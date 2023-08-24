@@ -1,3 +1,5 @@
 # Permalinks format of each content section
-post = "/p/:slug/"
-page = "/:slug/"
+# NB: if the following lines are uncommented, the title from the frontmatter will be used...
+
+# post = "/p/:slug/"
+# page = "/:slug/"
