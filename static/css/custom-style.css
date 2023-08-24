@@ -1,6 +1,9 @@
 :root {
   --theme-color: #e78228;
 }
+
+/* CUSTOM SHORTODES */
+
 .jli-notice {
   padding: 0.5em;
   border-radius: 0.5em;
