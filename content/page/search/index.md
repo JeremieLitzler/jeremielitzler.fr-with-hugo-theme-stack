@@ -1,5 +1,5 @@
 ---
-title: "Recherche"
+title: "Recherche un article"
 description: "Vous cherchez quelque chose ? Type quelques mots-clés et le tour est joué !"
 slug: "search"
 layout: "search"

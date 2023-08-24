@@ -1,7 +1,6 @@
 ---
 title: Hello World
-description: Welcome to Hugo Theme Stack
-slug: hello-world
+description: "Hé oui ! ceci est bien un article \"Hello world\" que le thème Hugo que j'utilise inclus depuis le départ. Du coup, il va sûrement rester, juste pour le fun."
 date: 2022-03-06 00:00:00+0000
 image: cover.jpg
 categories:

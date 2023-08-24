@@ -1,10 +1,11 @@
 ---
 title: "Liens utiles"
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+description: "Ici, je liste les liens les plus utiles de mon blog. Cela me permet autant qu'à vous de retrouver rapidement des articles ou des ressources les plus utilisés."
+# links:
+#   - title: GitHub
+#     description: GitHub is the world's largest software development platform.
+#     website: https://github.com
+#     image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 menu:
     main: 
         weight: 4
