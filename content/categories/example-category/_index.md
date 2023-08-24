@@ -1,5 +1,5 @@
 ---
-title: Example Category
+title: "Catégorie \"exemple\""
 description: Ceci est une catégorie d'exemple, qui était disponible dans le kit de démarrage de ce site. Il ne contient qu'un article.
 image:
 
