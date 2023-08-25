@@ -1,8 +1,4 @@
 <article class="{{ if .Params.image }}has-image {{ end }}main-article">
-    {{ .Scratch.Set "isArticle" true}}  
-    <p class="jli-debug">
-      Scratch.Set isArticle to true (from article > article)
-    </p>
     {{ partial "article/components/header" . }}
 
     {{ partial "article/components/content" . }}

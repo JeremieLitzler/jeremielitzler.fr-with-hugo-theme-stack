@@ -30,15 +30,9 @@
         </div>
     {{ end }}
 
-    {{ if .Scratch.Get "isArticle" }}
-	  <p class="jli-debug">
-      Since isArticle is true, isHome is false (from article > components > header)
-      </p>
-      {{ .Scratch.Set "isHome" false }}
-	{{ end }}
-	{{ if .Scratch.Get "isHome" }}
+    {{ if .Scratch.Get "isHome" }}
       <p class="jli-debug">
-      isHome is true (from article > components > header)
+      isHome is true (from article > components > header-for-article-list)
       </p>
       {{ .Scratch.Set "isHome" true }}
     {{ else }}
