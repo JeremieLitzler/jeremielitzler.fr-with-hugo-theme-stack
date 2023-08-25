@@ -1,7 +1,7 @@
 <article class="{{ if .Params.image }}has-image {{ end }}main-article">
-    {{ .Scratch.Set "isHome" false }}  
+    {{ .Scratch.Set "isArticle" true}}  
     <p class="jli-debug">
-      isHome is set to false from Scratch.Set (article > article)
+      Scratch.Set isArticle to true (from article > article)
     </p>
     {{ partial "article/components/header" . }}
 
