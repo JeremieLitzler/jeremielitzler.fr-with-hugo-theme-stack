@@ -2,6 +2,9 @@
   --theme-color: #e78228;
 }
 
+.jli-debug {
+  display: none;
+}
 /* CUSTOM STYLES OVERRIDES */
 .site-name {
   font-weight: bold;

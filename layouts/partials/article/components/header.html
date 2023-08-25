@@ -17,7 +17,6 @@
                         {{- $Width = $thumbnail.Width -}}
                         {{- $Height = $thumbnail.Height -}}
                     {{- end -}}
-
                     <img src="{{ $Permalink }}"
                         {{ with $Srcset }}srcset="{{ . }}"{{ end }}
                         width="{{ $Width }}" 
@@ -32,10 +31,14 @@
     {{ end }}
 
     {{ if .Scratch.Get "isHome" }}
-      <!-- <p>isHome is true from Scratch.Set (article > components > header)</p> -->
+      <p class="jli-debug">
+      isHome is true from Scratch.Set (article > components > header)
+      </p>
       {{ .Scratch.Set "isHome" true }}
     {{ else }}
-      <!-- <p>isHome is false from Scratch.Set (article > components > header)</p> -->
+      <p class="jli-debug">
+      isHome is false from Scratch.Set (article > components > header)
+      </p>
       {{ .Scratch.Set "isHome" false }}  
     {{ end }}
     {{ partial "article/components/details" . .RelPermalink }}

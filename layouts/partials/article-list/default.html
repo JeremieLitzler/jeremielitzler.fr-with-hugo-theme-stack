@@ -2,11 +2,13 @@
 "articleList") .RelPermalink "articleList" }}
 <article class="{{ if $image.exists }}has-image{{ end }}">
   {{ if .Scratch.Get "isHome" }}
-    <!-- <p>isHome is true from Scratch.Set (article-list > default) </p> -->
-    {{ .Scratch.Set "isHome" true }}
-  {{ else }}
-    <!-- <p>isHome is false from Scratch.Set (article-list > default) </p> -->
-    {{ .Scratch.Set "isHome" false }}  
-  {{ end }}
-  {{ partial "article/components/header" . }}
+  <p class="jli-debug">
+    isHome is true from Scratch.Set (article > components > header)
+  </p>
+  {{ .Scratch.Set "isHome" true }} {{ else }}
+  <p class="jli-debug">
+    isHome is false from Scratch.Set (article > components > header)
+  </p>
+  {{ .Scratch.Set "isHome" false }} {{ end }} {{ partial
+  "article/components/header" . }}
 </article>
