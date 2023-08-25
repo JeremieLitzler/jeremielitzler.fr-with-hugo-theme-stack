@@ -22,9 +22,9 @@
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
                         loading="lazy"
-                        alt="Featured image of post {{ .Title }}" />
+                        alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+                    <img src="{{ $image.permalink }}" loading="lazy" alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
                 {{ end }}
             </a>
         </div>

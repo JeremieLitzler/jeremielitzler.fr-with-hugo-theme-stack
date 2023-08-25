@@ -24,6 +24,7 @@ src = "img/profilepic-400w.jpg"
 [article]
 math = false
 readingTime = true
+featureImgAltPrefix = "Image de l'article"
 
 [article.license]
 enabled = true

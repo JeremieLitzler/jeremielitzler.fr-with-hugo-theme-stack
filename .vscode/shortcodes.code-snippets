@@ -3,7 +3,7 @@
     "scope": "markdown",
     "prefix": "add block container",
     "body": [
-      "{{< blockcontainer notice-${1|note,tip,warning,danger|} \"$2\">}}",
+      "{{< blockcontainer jli-notice-${1|note,tip,warning,danger|} \"$2\">}}",
       "",
       "$3",
       "",
