@@ -2,6 +2,11 @@
   --theme-color: #e78228;
 }
 
+/* CUSTOM STYLES OVERRIDES */
+.site-name {
+  font-weight: bold;
+}
+
 /* CUSTOM SHORTODES */
 
 .jli-notice {
