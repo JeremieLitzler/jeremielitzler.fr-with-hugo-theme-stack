@@ -19,7 +19,8 @@
 }
 
 .jli-notice .highlight,
-.jli-notice .gallery {
+.jli-notice .gallery,
+.jli-notice blockquote {
   margin-left: initial;
   margin-right: initial;
   width: initial;

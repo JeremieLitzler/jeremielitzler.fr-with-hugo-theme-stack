@@ -1,7 +1,7 @@
 ---
 title: 3 Trucs à faire en Août au Jardin, avec Damien Dekarz
 description: "En août, la production du jardin nécessite du suivi journalier. On pense aussi à l'automne et l'hiver avec les semis pour ces saisons à planter dès ce mois estival."
-image: images/vue-aerienne-du-jardin-de-damien-en-aout.jpg
+image: /images/2023-08-11-vue-aerienne-du-jardin-de-damien-en-aout.jpg
 alt: Vue aérienne du jardin de Damien en août
 date: 2023-08-11
 categories:

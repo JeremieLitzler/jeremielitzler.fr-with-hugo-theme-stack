@@ -1,0 +1,33 @@
+locale: fr
+backend:
+  name: github
+  repo: JeremieLitzler/journal-fr
+  branch: main # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: 'docs/.vuepress/public/images'
+public_folder: 'docs/.vuepress/dist/'
+collections:
+  - name: 'root' # Used in routes, e.g., /admin/collections/blog
+    label: 'Root folder' # Used in the UI
+    folder: 'docs' # The path to the folder where the documents are stored
+    nested:
+      depth: 5 # max depth to show in the collection tree = 100
+      summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Featured image', name: 'heroImage', widget: 'image' }
+      - { label: 'Featured image Atl text', name: 'heroAlt', widget: 'string' }
+      - { label: 'Publishing Date', name: 'date', widget: 'datetime' }
+      - { label: 'Head meta tags', name: 'head', widget: 'list' }
+      - { label: 'Category', name: 'category', widget: 'list' }
+      - { label: 'Tag', name: 'tag', widget: 'list' }
+      - {
+          label: 'Published',
+          name: 'article',
+          widget: 'boolean',
+          default: 'false',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

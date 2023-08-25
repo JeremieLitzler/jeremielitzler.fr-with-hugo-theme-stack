@@ -1,5 +1,5 @@
 ---
-title: "Catégorie \"Jardin\""
+title: "Dans le jardin"
 description: Au jardin, la créativité s'exprime. Ici, vous trouverez tout ce que j'ai appris dans des dizaines de vlogs de personnes expérimentées.
 image:
 
