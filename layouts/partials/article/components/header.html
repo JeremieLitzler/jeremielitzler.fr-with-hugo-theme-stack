@@ -29,16 +29,13 @@
             </a>
         </div>
     {{ end }}
-    {{ if .Scratch.Get "isHome" }}
-      <p class="jli-debug">
-      isHome is true (from article > components > header)
-      </p>
-      {{ .Scratch.Set "isHome" true }}
-    {{ else }}
-      <p class="jli-debug">
-      isHome is false (from article > components > header)
-      </p>
-      {{ .Scratch.Set "isHome" false }}  
-    {{ end }}
+    <!-- 25/08/23 : I add to "duplicate" the header partial because somehow,
+                    the "isHome" variable is evaluate to true on the home first
+                    and the posts seems to inherit from the value "true" even though
+                    it is not supposed to be.
+                    
+                    Not clean, but it works!
+    -->
+    {{ .Scratch.Set "parentIsArticle" true}}  
     {{ partial "article/components/details" . .RelPermalink }}
 </header>

@@ -6,8 +6,6 @@
 
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
-            <!-- Thanks to https://mertbakir.gitlab.io/hugo/pass-arguments-in-partials-hugo/ -->
-            {{ .Scratch.Set "isHome" true }}
             {{ partial "article-list/default" . }}
         {{ end }}
     </section>
