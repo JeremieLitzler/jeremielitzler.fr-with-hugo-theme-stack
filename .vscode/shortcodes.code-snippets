@@ -1,0 +1,14 @@
+{
+  "Shortcode for blockcontainers": {
+    "scope": "markdown",
+    "prefix": "add block container",
+    "body": [
+      "{{< blockcontainer notice-${1|note,tip,warning,danger|} \"$2\">}}",
+      "",
+      "$3",
+      "",
+      "{{< /blockcontainer >}}"
+    ],
+    "description": "Add a block container with a title and type to choose (WARNING : images don't currently work...)"
+  }
+}
