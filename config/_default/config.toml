@@ -16,5 +16,8 @@ hasCJKLanguage = false
 # Change it to your Disqus shortname before using
 # disqusShortname = "hugo-theme-stack"
 
+# See https://gohugo.io/getting-started/configuration/#removepathaccents
+removePathAccents = true
+
 [params]
 custom_css = ["css/custom-style.css"]
