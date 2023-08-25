@@ -38,5 +38,5 @@
     -->
     <!-- Thanks to https://mertbakir.gitlab.io/hugo/pass-arguments-in-partials-hugo/ -->
     {{ .Scratch.Set "parentIsArticleList" true }}  
-    {{ partial "article/components/details" . .RelPermalink }}
+    {{ partial "article/components/details-from-article-list" . .RelPermalink }}
 </header>
