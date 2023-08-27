@@ -44,9 +44,6 @@ Merci à Brian et [Rémi du jardin d’émerveille](https://www.youtube.com/chan
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=yULaWY3QAKE).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Les plantes toxiques en France
 
 Il y a en quelques-unes, mais ce n’est pas très répandu. On trouve donc, et cela varie selon les régions :
@@ -190,8 +187,3 @@ Au lieu d’utiliser cela, qui peut saturer le sol en cuivre, on peut aussi réa
 ## Conclusion
 
 Si vous aimez ce genre d'article, partageant des notes de ce genre de vlogs, [soutenez-moi](../../../page/soutenez-moi/README.md) ou abonnez-vous à mon bulletin d’information.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

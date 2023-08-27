@@ -47,9 +47,6 @@ Merci à Damien et David Brico ut pour le partage de leur savoir ! Cet article r
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=U7OF07QHd0I).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## L’origine du nom
 
 On retrouve la même racine étymologique : urtica, ortie, ortica, ortiga, urtiga dans les différentes langues.
@@ -207,6 +204,3 @@ En théorie, la sérotonine agit en calmant, mais les effets des autres composan
 A vous d’essayer ;)
 
 : ::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

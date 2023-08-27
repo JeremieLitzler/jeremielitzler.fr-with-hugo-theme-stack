@@ -48,9 +48,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=FzHxym4jeEA).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Expérience de Damien avec la prêle
 
 Beaucoup de gens sont en guerre avec les prêles, car elles repoussent systématiquement dans le jardin.

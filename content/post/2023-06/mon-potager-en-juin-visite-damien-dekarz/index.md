@@ -45,9 +45,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 <!-- more -->
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=6aS2fXJ6xs8).
 
 ## Première zone de culture
@@ -119,8 +116,3 @@ Damien a une passion : la résilience en semence. Sur l’image ci-dessus, on pe
 Damien a réorganisé la serre avec une zone de culture en moins, cela permet de mieux se déplacer et cela n’empêche pas de produire des quantités plus que suffisantes.
 
 Les vignes qu’il y a plantées sont extrêmement fertiles et productives. Je vous invite à voir [le passage à 11:15](https://youtu.be/6aS2fXJ6xs8?t=675).
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

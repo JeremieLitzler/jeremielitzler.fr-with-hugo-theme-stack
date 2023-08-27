@@ -154,6 +154,3 @@ Si cet article vous plait, n’hésitez pas à me le faire savoir en vous abonna
 :::center ⏬⏬⏬
 
 :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

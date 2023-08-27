@@ -40,11 +40,6 @@ Je vais donc réaliser un meilleur calcul. Voici la formule.
 
 <!-- more -->
 
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Calcul original
 
 Pour rappel, dans la section _Quelle économie sur 9 mois_ de [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md#quelle-économie-sur-9-mois), j'ai avancé le fait que j'avais économisé 300 euros.
@@ -166,8 +161,3 @@ Cela fait entre 1 an et demi et 2 ans et demi de plus que par le calcul préc�
 En tout cas, merci d'avoir lu cet article.
 
 Et comme toujours, si vous voulez lire mes prochains articles, n'hésitez pas à souscrire à ma newsletter gratuite. Je publie une fois par semaine, le lundi.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

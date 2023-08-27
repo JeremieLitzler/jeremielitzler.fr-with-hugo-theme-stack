@@ -44,9 +44,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=WS40hHI8yB4).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## La greffe, c’est terminé
 
 En avril, Damien a arrêté les greffes. C’est son choix même s’il pourrait continuer.
@@ -203,8 +200,3 @@ Damien retire le paillage et utilise une Grelinette pour assouplir la terre.
 Cela permettra de retirer les racines de chiens-dent, liserons et autres mauvaises herbes.
 
 Ensuite, il vient étaler de la tonte fraiche avant de recouvrir du paillage original.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

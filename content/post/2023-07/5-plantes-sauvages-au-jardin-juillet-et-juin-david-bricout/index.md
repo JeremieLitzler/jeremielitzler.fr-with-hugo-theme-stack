@@ -44,9 +44,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=E6SxWst-Exg).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Le tilleul à petites feuilles
 
 Le nom scientifique est _Tilia cordata_, qui donne le second nom de « tilleul cordé ».
@@ -186,6 +183,3 @@ David réalise des macérats huileux de cette verveine (des sommités) pour l’
 ⏬⏬⏬
 
 :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

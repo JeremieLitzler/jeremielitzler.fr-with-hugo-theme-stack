@@ -152,8 +152,3 @@ Pour lancer une compilation complète, il faut éditer le fichier `docs/.vuepres
 Je compte réaliser un guide plus complet, dans le futur, sur l'usage de Netlify.
 
 J'espère que vous avez aimé cette série et pour recevoir d'autres articles de ce type, abonnez-vous !
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

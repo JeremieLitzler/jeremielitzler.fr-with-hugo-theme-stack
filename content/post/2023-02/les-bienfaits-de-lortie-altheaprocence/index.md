@@ -45,9 +45,6 @@ Merci à Christophe pour le partage de son savoir ! Cet article résume mes note
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=O9wDllXVwQs).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 :::note Pour information Cet article contiendra uniquement les informations médicales sur la plante. Christophe fournit un descriptif botanique sur [son article lié à la vidéo](https://www.altheaprovence.com/ortie-urtica-dioica-urens/).
 
 Aussi, allez lire [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/README.md) pour plus d’informations botaniques. :::
@@ -206,8 +203,3 @@ Je dois bientôt extraire la teinture. :::
 Non, l’ortie n’est pas un parasite dans le jardin !
 
 Alors qu’attendez-vous pour commencer à l’utiliser ?
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

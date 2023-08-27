@@ -45,9 +45,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=Px-SqmqSQaI).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Qu’est-ce que c’est cette histoire de la guerre de l’ortie
 
 Cela a commencé en 2002, mais ce fut en 2006 qu’il y a eu le plus d’effets médiatiques.

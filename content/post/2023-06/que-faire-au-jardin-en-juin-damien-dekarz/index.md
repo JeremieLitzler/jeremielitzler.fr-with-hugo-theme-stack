@@ -117,8 +117,3 @@ Dans la mare, vous avez sûrement déjà vu cette plante avec une sorte de sauci
 Tout est consommable dans la massette.
 
 Par exemple, le cœur des tiges est très bon !
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

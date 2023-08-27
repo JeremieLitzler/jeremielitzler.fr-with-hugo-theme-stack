@@ -47,9 +47,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=0e9uraspI1E).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 Non, même si le jardin est au repos, nous avons un tas d’activités possible pour préparer la nouvelle saison.
 
 ## Le bouturage
@@ -165,8 +162,3 @@ Le paillage autour de l’arbre tout juste planté garantira la non-gelée du so
 Utilisez le temps disponible en janvier pour préparer, anticiper, car dans quelques mois, il y aura beaucoup d’activités.
 
 Et comme, toujours si vous trouvez mon travail utile, pensez à vous abonner pour ne rien manquer. Merci.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

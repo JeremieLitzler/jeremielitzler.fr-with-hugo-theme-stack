@@ -47,9 +47,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=WCo4WDHVr0s).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 Avant de voir les 3 trucs du mois de juin, Damien récolte ses choux romanesco à ce moment de l’année.
 
 ![D’énormes choux romanesco](images/d-enormes-choux-romanesco.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
@@ -164,8 +161,3 @@ Il n’y a pas de risque de brûler les plants avec cette méthode. Toutefois, c
 Dans le jardin, les résultats sont excellents.
 
 Dans la maison, pour les plantes en pot, cela fonctionne aussi très bien.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

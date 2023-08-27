@@ -45,9 +45,6 @@ Merci à Christophe pour le partage de son savoir ! Cet article résume mes not
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=JYow8sXGzP0).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 :::note Pour ne pas répéter, je mettrai ici les notes complémentaires uniquement.
 
 J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/README.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_). :::
@@ -152,8 +149,3 @@ On peut remplacer la consoude en interne par le souci (_Calendula officinale_). 
 :::note Mais la peau transmet-elle les alcaloïdes dans le sang ? Non, la pénétration est très très faible, surtout qu’on ne casse pas un os tous les jours ! :::
 
 Si vous aimez cet article, pensez à souscrire à mon bulletin d’informations :)
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

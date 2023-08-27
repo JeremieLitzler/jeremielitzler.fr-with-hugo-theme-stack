@@ -44,9 +44,6 @@ Merci à Brian pour le partage ! Cet article résume mes notes du vlog réalis�
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=TyN8q2aHc8U).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Qui est Raymonde Gal
 
 Elle est la présidente d’honneur de la confrérie des amis de l’ortie.

@@ -42,9 +42,6 @@ Merci à Christophe pour le partage de son savoir ! Cet article résume mes not
 
 <!-- more -->
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 Vous pouvez retrouver les vlogs dont je me suis inspiré pour cet article dans la liste suivante :
 
 - [Le pissenlit et ses usages](https://www.youtube.com/watch?v=Pqe3ulcwdUQ)
@@ -322,8 +319,3 @@ Nom scientifique : _Lapsana communis_.
 Les feuilles sont toutefois lobées et de forme arrondies avec jusqu’à 6 petits lobes sur le pétiole.
 
 Pour continuer à lire des articles comme celui, n’hésitez pas et abonnez-vous !
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

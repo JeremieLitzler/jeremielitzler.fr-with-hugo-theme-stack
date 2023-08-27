@@ -149,8 +149,6 @@ J’espère vraiment que le premier point sera adressé très bientôt..
 
 Pour les abonnements, lisez la suite
 
-:::center ⏬⏬⏬ :::
-
 ## Pour les abonnements ou la vente de produits digitaux
 
 Je n’ai pas d’abonnés premium à ce jour. J’espère que la formation que je suis auprès de [Darius Foroux et son école « Digital Business school »](https://members.dariusforoux.com/digitalbusiness-school) va me permettre de faire grandir cela.
@@ -162,8 +160,3 @@ Pour le moment, ce site personnel, par exemple, met à disposition des liens de 
 Peut-être qu’en 2023, cela évoluera :)
 
 Si vous souhaitez suivre mes progrès dans la recherche de la meilleure solution, n’hésitez pas à vous abonner à mon bulletin d’information.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

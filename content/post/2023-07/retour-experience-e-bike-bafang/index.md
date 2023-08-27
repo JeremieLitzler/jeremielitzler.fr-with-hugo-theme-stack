@@ -37,9 +37,6 @@ Voilà plus de 5 ans que je roule en VAE, au début sur une base de Scott CX C
 
 <!-- more -->
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Pourquoi et quand
 
 Au printemps 2018, la SNCF subit une grève majeure qui [lui coûtera 890 millions d’euros](https://www.google.com/search?q=gr%C3%A8ve+scnf+printemps+2018).
@@ -372,6 +369,3 @@ Merci.
 ⏬⏬⏬
 
 :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

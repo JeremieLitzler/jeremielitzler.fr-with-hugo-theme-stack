@@ -36,9 +36,6 @@ Merci à Olivier pour le partage de son savoir ! Cet article résume mes notes 
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=VHHPJaZKeHk).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Température
 
 En janvier, on est très loin des températures de germination.
@@ -93,8 +90,3 @@ On ne gagne pas forcément de temps en lançant des semis en janvier.
 Donc, patience et ne gâchez pas vos graines en janvier.
 
 Conservez-les et elles produiront la nourriture que vous attendez dans quelques mois.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

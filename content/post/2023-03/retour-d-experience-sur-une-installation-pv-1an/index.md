@@ -246,8 +246,3 @@ Je dois aussi attacher le champ Sud-Ouest, car il y a eu un bon coup de vent il 
 J’ai réussi à remettre le tout en route rapidement.
 
 En attendant le prochain rendez-vous en fin d’année 2023, ==merci d’avoir lu cet article et n’hésitez pas à me soutenir en vous abonnant !==
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

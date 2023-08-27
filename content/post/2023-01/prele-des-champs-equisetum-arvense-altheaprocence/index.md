@@ -339,8 +339,3 @@ Savez-vous qu'elle est aussi, comme l'ortie, très utile au jardin ?
 On en reparlera avec [Damien Dekarz](../../../tag/damien-dekarz).
 
 En attendant...
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

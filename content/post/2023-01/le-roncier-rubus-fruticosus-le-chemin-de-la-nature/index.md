@@ -53,9 +53,6 @@ Vous pouvez retrouver les vidéos dont sont issues les notes de cet article :
 - [Savez-vous manger les ronces ?](https://www.youtube.com/watch?v=v0tC-efunOw)
 - [La mûre de la ronce bleue se mange aussi !](https://www.youtube.com/watch?v=rIhNm_qYRIs)
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Que consommer dans la ronce
 
 ### Les jeunes rameaux de ronces
@@ -179,8 +176,3 @@ On appelle chaque petit fruit _une drupe_.
 ## Conclusion
 
 Allez, cette année, qui est votre amie ?
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

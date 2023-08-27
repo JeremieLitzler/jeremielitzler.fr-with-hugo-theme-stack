@@ -44,9 +44,6 @@ Merci à lui pour le partage de son savoir ! Cet article résume mes notes du v
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=VDvyGwyhFWc).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Trois autres choses non décrites en détail dans le vlog
 
 ### Récupérer les graines de courges
@@ -135,8 +132,3 @@ Pour les semis qui réussissent, suivez ces recommandations :
 3. sortir les semis dans un châssis ou une serre la journée et les rentrer le soir.
 
 Tant que les graines n’ont pas germées, il est même préférable de garder les semis dans le noir.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

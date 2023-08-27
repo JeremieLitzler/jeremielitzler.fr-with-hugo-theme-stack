@@ -53,9 +53,6 @@ Vous pouvez retrouver les vidéos de Christophe sur le rosier sauvage dans les v
 - [Églantier et ses cynorhodons](https://www.youtube.com/watch?v=SD8NloaM71M).
 - [Mangeons l'églantier, cynorhodon ou gratte cul](https://www.youtube.com/watch?v=pmiRJbAYgWA).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Les noms du rosier sauvage
 
 Le nom scientifique est _Rosa canina_ ou rosier des chiens.
@@ -178,8 +175,3 @@ On l'utilise aussi pour calmer les gorges irritées.
 En janvier, il est encore temps de les ramasser.
 
 Alors, allez-y ! Vous ne serez pas déçu.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

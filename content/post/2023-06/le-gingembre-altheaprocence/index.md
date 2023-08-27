@@ -45,9 +45,6 @@ Merci à Christophe pour le partage de son savoir ! Cet article résume mes not
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=L4P28NLFJnM).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Botanique
 
 Le gingembre est appelé _zingiber officinale_.

@@ -44,9 +44,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=UM3T44V99C4).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 :::tip Un petit mot sur la biodiversité…
 
 ![Les jardins privatifs peuvent beaucoup aider à la biodiversité](images/les-jardins-privatifs-peuvent-beaucoup-aides-a-la-biodiversite.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
@@ -191,8 +188,3 @@ Pour Damien, il a noté qu’il fait en général 2 °C de moins que les prévis
 :::tip Ne regarder pas au-delà de 7 jours :::
 
 Selon Damien, comprendre les températures à venir permet d’anticiper les vagues de froid.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

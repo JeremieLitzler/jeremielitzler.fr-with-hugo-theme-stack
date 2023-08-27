@@ -44,9 +44,6 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=zNE8yd5yecg).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Les tomates en pot
 
 Damien a semé ses tomates fin février et cela lui a demandé pas mal de boulot de sortir et rentrer les plantes la journée et le soir respectivement.
@@ -146,8 +143,3 @@ Damien voit souvent ces arbres fruitiers attaqués par les chevreuils, de maniè
 En gros, avec une bonne observation et le respect de la faune sauvage, on peut vivre ensemble et produire des fruits pour notre consommation.
 
 Quelle différence avec les pratiques conventionnelles, n’est-ce pas ?
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

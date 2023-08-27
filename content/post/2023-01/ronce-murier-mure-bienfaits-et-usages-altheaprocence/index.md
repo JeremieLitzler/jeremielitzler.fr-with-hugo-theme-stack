@@ -48,9 +48,6 @@ Merci à Christophe pour le partage de son savoir ! Cet article résume mes not
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=TAPGVryv8TY).
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## La partie _botanique_
 
 La ronce (_Rubus Fruticosus_) est aussi nommée mûrier sauvage, car elle produit ces petites baies l'été.
@@ -245,8 +242,3 @@ C'est toujours vrai avec les plantes astringentes : comme les muqueuses sont ta
 On retrouve la même remarque pour la prise de médicaments et de compléments alimentaires.
 
 Si vous êtes constipés, on évitera la ronce à cause de ses propriétés asséchant.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

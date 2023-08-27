@@ -50,9 +50,6 @@ Vous pouvez retrouver les vidéos dont sont issues mes notes sur YouTube :
 - [Les vertus de la prêle des champs](https://www.youtube.com/watch?v=-qG71xpKoSY)
 - [La prêle des champs, plante des articulations](https://www.youtube.com/watch?v=VEJvF5w7xB4)
 
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-
 ## Qu'est-ce que la prêle
 
 Dans le règne végétale, on trouve les plantes avec fleurs et sans fleurs.
@@ -122,8 +119,3 @@ En image, cela donne ceci :
 ![Le premier article est 2 fois plus long que la gaine](images/identification-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 On effectuera une identification sur plusieurs individus pour confirmer.
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

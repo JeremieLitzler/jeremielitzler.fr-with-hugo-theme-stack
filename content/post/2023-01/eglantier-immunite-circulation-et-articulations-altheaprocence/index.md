@@ -192,8 +192,3 @@ Voilà, cela conclut mes notes sur l'églantier ou le rosier sauvage.
 Encore une fois, [l'article](../le-rosier-sauvage-bourgeons-et-cynorhodons-le-chemin-de-la-nature/README.md#gemmothérapie), que j'ai réalisé sur le cynorhodon sur les bases des vlogs d'un autre Christophe, auteur du Chemin de la Nature, complétera bien celui-ci.
 
 Et comment toujours, pour ne rien rater...
-
-:::center ⏬⏬⏬ :::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
