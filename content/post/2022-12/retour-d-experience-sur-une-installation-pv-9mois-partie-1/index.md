@@ -4,26 +4,6 @@ description: "Fin Mars 2022, nous avons mis en service notre installation photov
 date: 2022-12-15
 image: /images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg
 imageAlt: Des tableaux électriques et un boitier avec un afficheur digital
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/rex-installation-pv-9mois-partie1,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Installation PV - retour d'expérience après 9 mois (partie 1)" },
-     meta,
-     {
-       "og:description": "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons comment j'ai modifié l'installation et ajusté les appareils et les usages dans mon foyer.",
-     },
-     meta,
-     {
-       "og:image": /images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg,
-     },
-    ]
 categories:
   - Energie
 tags:
@@ -32,17 +12,15 @@ tags:
   - Eau chaude sanitaire
 ---
 
-![Des tableaux électriques et un boitier avec un afficheur digital](/images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg 'Le routeur solaire de Robin Emley avec son afficheur digital et les 2 tableaux électriques pour la production (au fond) et la consommation (sous le routeur)')
-
 Depuis la mise en route, j’ai réalisé un bon nombre de modifications, principalement dans la maison et pour le cumulus. Regardons ensemble les détails.
 
 <!-- more -->
 
 ## La série d'articles
 
-- [Installation PV - quel retour d'expérience après 2 mois ?](../../06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
-- [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
-- [Installation PV - quel retour d'expérience après 1 an ?](../../../2023/03/retour-d-experience-sur-une-installation-pv-1an/index.md)
+- [Installation PV - quel retour d'expérience après 2 mois ?](../../2022-06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
+- [Installation PV - quel retour d'expérience après 1 an ?](../../2023-03/retour-d-experience-sur-une-installation-pv-1an/index.md)
 
 <hr>
 
@@ -311,7 +289,9 @@ Encore 2 semaines de relevés et vous pourrez découvrir :
 
 En attendant, ==merci pour votre soutien !==
 
-:::center ⏬⏬⏬ :::
+:::center ⏬⏬⏬
+
+:::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

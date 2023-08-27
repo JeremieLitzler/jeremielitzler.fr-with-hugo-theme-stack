@@ -138,7 +138,7 @@ Les utilités des deux plantains :
 
 ### Le trèfle violet (ou le trèfle des prés)
 
-![Champ de trèfles violets](images/trefle-violet.jpg "Crédits de l'image : [Paysan breton](https://www.paysan-breton.fr/2014/05/trefle-interessant-meme-a-3-feuilles/)")
+![Champ de trèfles violets](images/trefle-violet.jpg "Crédits de l'image : [Paysan breton](https://www.paysan-breton.fr/2014/2022-05/trefle-interessant-meme-a-3-feuilles/)")
 
 C'est une plante :
 

@@ -123,11 +123,15 @@ On coupe bien les tranches de cire en petits morceaux pour faire rentrer le plus
 
 Par contre, j’ai coupé au fur et à mesure que la cire fondait dans la _marmite_ et je l’ai bien remplie jusqu’en haut.
 
-Cela a permis de réaliser les 4 bougies sans trop de surplus. :::
+Cela a permis de réaliser les 4 bougies sans trop de surplus.
+
+:::
 
 ### Fondre la cire
 
-:::danger Surtout pas de gaz La cire brûle très très bien ! Ne la faites pas fondre sur une cuisinière à gaz !!! :::
+:::danger Surtout pas de gaz La cire brûle très très bien ! Ne la faites pas fondre sur une cuisinière à gaz !!!
+
+:::
 
 J’utilise [cette plaque à induction](https://amzn.to/3UgZ4GC) sur la puissance 3.5. Cela prend un peu plus d’une demi-heure pour faire fondre toute la cire.
 
@@ -144,7 +148,9 @@ J’ai pris 4 beaux rouleaux de papier WC, pas trop accidentés que j’ai pos�
 
 :::warning Avant de couler la cire… Il faut que la mèche soit _clipsée_ au centreur de mèche avant de couler la cire…
 
-Il faut aussi que la mèche soit tendue, car une fois la cire fondue dans le moule, tirer la mèche la séparera de la partie métallique… :::
+Il faut aussi que la mèche soit tendue, car une fois la cire fondue dans le moule, tirer la mèche la séparera de la partie métallique…
+
+:::
 
 Il faut couler la cire en trois étapes dans les rouleaux de papier WC :
 

@@ -12,7 +12,7 @@ categories:
 
 {{< blockcontainer jli-notice-note "For the english version of this article" >}}
 
-[Continue here](https://iamjeremie.me/2023/03/how-is-setup-my-digital-presence-today/)
+[Continue here](https://iamjeremie.me/2023-03/how-is-setup-my-digital-presence-today/)
 
 {{< /blockcontainer >}}
 

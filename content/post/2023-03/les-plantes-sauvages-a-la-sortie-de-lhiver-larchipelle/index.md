@@ -12,7 +12,7 @@ head:
       link,
       {
         rel: canonical,
-        href: https://jeremielitzler.fr/2023/03/les-plantes-sauvages-a-la-sortie-de-lhiver-larchipelle,
+        href: https://jeremielitzler.fr/2023-03/les-plantes-sauvages-a-la-sortie-de-lhiver-larchipelle,
       },
      meta,
      { "og:type": article },

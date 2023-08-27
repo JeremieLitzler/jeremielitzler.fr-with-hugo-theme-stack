@@ -56,4 +56,6 @@ Cela fonctionne de la même façon :
 
 ![Paramètre sur Android](/images/reduce-blue-light-android.jpg)
 
-:::tip Vous aurez aussi remarqué que j’utilise le _mode Sombre_. Cela aide aussi, mais tout le monde n’est pas fan. Chacun ses préférences. :::
+:::tip Vous aurez aussi remarqué que j’utilise le _mode Sombre_. Cela aide aussi, mais tout le monde n’est pas fan. Chacun ses préférences.
+
+:::

@@ -4,26 +4,6 @@ description: 'Fin Mars 2022, nous avons mis en service notre installation photov
 date: 2022-12-31
 image: /images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg
 imageAlt: Vue des champs Sud et Sud-Est
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Installation PV - retour d'expérience après 9 mois (partie 2)" },
-     meta,
-     {
-       "og:description": "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin Décembre 2022",
-     },
-     meta,
-     {
-       "og:image": /images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg,
-     },
-    ]
 categories:
   - Energie
 tags:
@@ -40,9 +20,9 @@ En cet hiver 2022-2023, il devient de plus en plus intéressant de produire sa 
 
 ## La série d'articles
 
-- [Installation PV - quel retour d'expérience après 2 mois ?](../../06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
-- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
-- [Installation PV - quel retour d'expérience après 1 an ?](../../../2023/03/retour-d-experience-sur-une-installation-pv-1an/index.md)
+- [Installation PV - quel retour d'expérience après 2 mois ?](../../2022-06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
+- [Installation PV - quel retour d'expérience après 1 an ?](../../2023-03/retour-d-experience-sur-une-installation-pv-1an/index.md)
 
 <hr>
 
@@ -79,7 +59,9 @@ Et si l’on compare la consommation en 2019, 2020 et 2021 à celle de 2022, on 
 
 En février et début mars 2022, nous étions à Siwa.
 
-Il faudra attendre encore 3 mois pour voir comment l’installation aide à diminuer la consommation sur ces mois d’hiver. :::
+Il faudra attendre encore 3 mois pour voir comment l’installation aide à diminuer la consommation sur ces mois d’hiver.
+
+:::
 
 ### Conclusion
 
@@ -354,7 +336,11 @@ Soit un total de 1503,69 kWh annuels consommés.
 
 ### Calcul de la date de rentabilité de l'installation
 
-:::danger Calculé erroné Voir [cet article](../../../2023/01/calculer-le-retour-sur-investissement-pv/index.md) pour un calcule plus juste. :::
+:::danger Calculé erroné
+
+Voir [cet article](../../2023-01/calculer-le-retour-sur-investissement-pv/index.md) pour un calcule plus juste.
+
+:::
 
 Avec une augmentation annuelle du prix du kWh acheté à EDF à 8 %[^third], ce qui me semble relativement optimiste vu la situation début 2023, l’installation devient rentable au bout de **==5 ans et 2 mois environ, soit mai 2027==**.
 
@@ -401,7 +387,9 @@ Partagez vos avis de façon constructive. Avant tout, ce n’est pas avoir raiso
 
 En attendant le point à 12 mois, ==merci pour votre soutien !==
 
-:::center ⏬⏬⏬ :::
+:::center ⏬⏬⏬
+
+:::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

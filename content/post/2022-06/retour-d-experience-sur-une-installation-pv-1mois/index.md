@@ -2,22 +2,6 @@
 title: "Installation PV - retour d'expérience après 2 mois"
 description: 'Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin Mai 2022'
 date: 2022-06-01
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/installation-pv-retour-dexperience,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Installation PV - retour d'expérience après 2 mois calendaires complets ?" },
-     meta,
-     {
-       "og:description": "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin Mai 2022",
-     },
-    ]
 categories:
   - Energie
 tags:
@@ -34,9 +18,9 @@ Ce n'était rien de très accueillant pour planter quelque chose (on a essayé e
 
 ## La série d'articles
 
-- [Installation PV - retour d'expérience après 9 mois ? (partie 1)](../../12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
-- [Installation PV - retour d'expérience après 9 mois ? (partie 2)](../../12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
-- [Installation PV - retour d'expérience après 1 an ?](../../../2023/03/retour-d-experience-sur-une-installation-pv-1an/index.md)
+- [Installation PV - retour d'expérience après 9 mois ? (partie 1)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
+- [Installation PV - retour d'expérience après 9 mois ? (partie 2)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
+- [Installation PV - retour d'expérience après 1 an ?](../../2023-03/retour-d-experience-sur-une-installation-pv-1an/index.md)
 
 <hr>
 
@@ -50,7 +34,7 @@ Cela nous avait permis de réduire de 12-13kWh pour chauffer l'ECS à 8-10kWh po
 
 Je suis assez regardant sur la consommation électrique et je suis d'accord avec ceux qui prônent [la sobriété énergétique](https://negawatt.org/La-sobriete-energetique) pour réduire notre impact sur l'environnement.
 
-J'ai réalisé une estimation de notre consommation en 2016, en listant chaque élément électrifié, car, pour moi, connaitre la consommation du foyer et la répartition sur les équipements est le premier pas vers une meilleure efficacité et une sensibilisation à la sobriété énergétique. J'ai réalisé [une prise de notes](../../05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle) qui valide cette première étape.
+J'ai réalisé une estimation de notre consommation en 2016, en listant chaque élément électrifié, car, pour moi, connaitre la consommation du foyer et la répartition sur les équipements est le premier pas vers une meilleure efficacité et une sensibilisation à la sobriété énergétique. J'ai réalisé [une prise de notes](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle) qui valide cette première étape.
 
 J'avais estimé 2900 kWh sur 1 an. Vous pouvez consulter [ce tableau](https://docs.google.com/spreadsheets/d/1-1A2I04MqVy3-zxMwQJ7Zy83OP200ruxGRUNXsHlNbQ/edit?usp=sharing) pour le détail et n'hésitez pas à copier la Google Sheets pour votre cas.
 
@@ -156,7 +140,7 @@ Après quelques échanges très intéressants avec l'artisan de SolaireEthic (vo
   - La distance est due à la situation de la terrasse.
 - 8 panneaux de 190 Wc recyclés (7-8 ans d'âge), soit 1520 Wc
   - Si on prend en compte les 0.3 % de réduction de la production, on est plutôt entre 1484 et 1488 Wc.
-  - La valeur de 0.3 % provient de l'étude faite depuis 1992 en Savoie dont je n'ai pas le lien, mais citée dans [ma prise de notes (§ "Dimensionner les panneaux photovoltaïques")](../../05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle).
+  - La valeur de 0.3 % provient de l'étude faite depuis 1992 en Savoie dont je n'ai pas le lien, mais citée dans [ma prise de notes (§ "Dimensionner les panneaux photovoltaïques")](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle).
 
 J'ai réalisé :
 
