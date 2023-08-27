@@ -1,8 +1,8 @@
 ---
 title: Un meilleur calcul du retour sur investissement d'une installation photovoltaïque
 description: "Le calcul du retour sur investissement n'était pas juste dans mon article du 31 décembre 2022. Cet article corrige le tir"
-heroImage: /images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg
-heroAlt: Production théorique vs Production réelle vs Autoconsommation
+image: /images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg
+imageAlt: Production théorique vs Production réelle vs Autoconsommation
 date: 2023-01-08
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg,
      },
     ]
-category:
+categories:
   - Energie
-tag:
+tags:
   - Photovoltaique
 ---
 
@@ -40,9 +40,7 @@ Je vais donc réaliser un meilleur calcul. Voici la formule.
 
 <!-- more -->
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
@@ -89,21 +87,21 @@ Toutefois, on va calculer :
 
 ### Le résultat du calcul sur 9 mois
 
-| Mois          | Prix kWh HP | Économie HP | Prix kWh HC    | Économie HC | Économie moyenne HP+HC |
-| ------------- | ----------- | ----------- | -------------- | ----------- | ---------------------- |
-| 1             | 0,18826 €   | 0,00 €      | 0,12766 €      | 0,00 €      | 0,00 €                 |
-| 2             | 0,18826 €   | 0,00 €      | 0,12766 €      | 0,00 €      | 0,00 €                 |
-| 3             | 0,18826 €   | 1,37 €      | 0,12766 €      | 0,93 €      | 1,15 €                 |
-| 4             | 0,18826 €   | 27,79 €     | 0,12766 €      | 18,84 €     | 23,31 €                |
-| 5             | 0,18826 €   | 35,09 €     | 0,12766 €      | 23,80 €     | 29,44 €                |
-| 6             | 0,18826 €   | 34,51 €     | 0,12766 €      | 23,40 €     | 28,95 €                |
-| 7             | 0,18826 €   | 38,48 €     | 0,12766 €      | 26,09 €     | 32,29 €                |
-| 8             | 0,18826 €   | 29,12 €     | 0,12766 €      | 19,75 €     | 24,44 €                |
-| 9             | 0,18826 €   | 27,84 €     | 0,12766 €      | 18,88 €     | 23,36 €                |
-| 10            | 0,18826 €   | 20,39 €     | 0,12766 €      | 13,83 €     | 17,11 €                |
-| 11            | 0,17496 €   | 10,78 €     | 0,13788 € (\*) | 8,49 €      | 9,64 €                 |
-| 12            | 0,17496 €   | 6,18 €      | 0,13788 € (\*) | 4,87 €      | 5,52 €                 |
-| Total général | -           | 231,55 €    | -              | 158,88 €    | 195,21 €               |
+| Mois | Prix kWh HP | Économie HP | Prix kWh HC | Économie HC | Économie moyenne HP+HC |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 0,18826 € | 0,00 € | 0,12766 € | 0,00 € | 0,00 € |
+| 2 | 0,18826 € | 0,00 € | 0,12766 € | 0,00 € | 0,00 € |
+| 3 | 0,18826 € | 1,37 € | 0,12766 € | 0,93 € | 1,15 € |
+| 4 | 0,18826 € | 27,79 € | 0,12766 € | 18,84 € | 23,31 € |
+| 5 | 0,18826 € | 35,09 € | 0,12766 € | 23,80 € | 29,44 € |
+| 6 | 0,18826 € | 34,51 € | 0,12766 € | 23,40 € | 28,95 € |
+| 7 | 0,18826 € | 38,48 € | 0,12766 € | 26,09 € | 32,29 € |
+| 8 | 0,18826 € | 29,12 € | 0,12766 € | 19,75 € | 24,44 € |
+| 9 | 0,18826 € | 27,84 € | 0,12766 € | 18,88 € | 23,36 € |
+| 10 | 0,18826 € | 20,39 € | 0,12766 € | 13,83 € | 17,11 € |
+| 11 | 0,17496 € | 10,78 € | 0,13788 € (\*) | 8,49 € | 9,64 € |
+| 12 | 0,17496 € | 6,18 € | 0,13788 € (\*) | 4,87 € | 5,52 € |
+| Total général | - | 231,55 € | - | 158,88 € | 195,21 € |
 
 (\*) :
 
@@ -125,35 +123,35 @@ Du côté de la date de rentabilité, on peut s'attendre à une date deux plus �
 
 Toutefois, entre 2021 et 2022, le prix du kWh, que ce soit en heures creuses ou en heures pleines, a augmenté de
 
-| Mois | 2014 | 2015   | 2016    | 2017    | 2018   | 2019   | 2020   | 2021    | 2022    | Moyenne |
-| ---- | ---- | ------ | ------- | ------- | ------ | ------ | ------ | ------- | ------- | ------- |
-| HP   | -    | 0,00 % | -0,33 % | -1,68 % | 1,66 % | 8,19 % | 3,65 % | 21,49 % | 14,57 % | 5,28 %  |
-| HC   | -    | 0,00 % | 3,53 %  | 17,05 % | 0,48 % | 2,38 % | 2,81 % | 17,42 % | 17,63 % | 6,81 %  |
+| Mois | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | Moyenne |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| HP | - | 0,00 % | -0,33 % | -1,68 % | 1,66 % | 8,19 % | 3,65 % | 21,49 % | 14,57 % | 5,28 % |
+| HC | - | 0,00 % | 3,53 % | 17,05 % | 0,48 % | 2,38 % | 2,81 % | 17,42 % | 17,63 % | 6,81 % |
 
 Je pense que les 8 % d'origine sont toujours appropriés.
 
 ==Si l'on prend une augmentation de 8 % seulement du coût de l'électricité (optimiste), on obtient ceci :==
 
-| Année | Production annuelle | Prix du kWh HC (optimiste) | Économie annuelle | Cumul     |
-| ----- | ------------------- | -------------------------- | ----------------- | --------- |
-| 2023  | 1503,69             | 0,16 €                     | 238,43 €          | 238,43 €  |
-| 2024  | 1503,69             | 0,17 €                     | 257,50 €          | 495,93 €  |
-| 2025  | 1503,69             | 0,18 €                     | 278,10 €          | 774,03 €  |
-| 2026  | 1503,69             | 0,20 €                     | 300,35 €          | 1074,38 € |
-| 2027  | 1503,69             | 0,22 €                     | 324,38 €          | 1398,76 € |
-| 2028  | 1503,69             | 0,23 €                     | 350,33 €          | 1749,09 € |
-| 2029  | 1225,00             | 0,25 €                     | 308,23 €          | 2057,32 € |
+| Année | Production annuelle | Prix du kWh HC (optimiste) | Économie annuelle | Cumul |
+| --- | --- | --- | --- | --- |
+| 2023 | 1503,69 | 0,16 € | 238,43 € | 238,43 € |
+| 2024 | 1503,69 | 0,17 € | 257,50 € | 495,93 € |
+| 2025 | 1503,69 | 0,18 € | 278,10 € | 774,03 € |
+| 2026 | 1503,69 | 0,20 € | 300,35 € | 1074,38 € |
+| 2027 | 1503,69 | 0,22 € | 324,38 € | 1398,76 € |
+| 2028 | 1503,69 | 0,23 € | 350,33 € | 1749,09 € |
+| 2029 | 1225,00 | 0,25 € | 308,23 € | 2057,32 € |
 
 ==Si l'on prend une augmentation de 15 % du coût de l'électricité (comme en février 2023), on obtient ceci :==
 
-| Année | Production annuelle | Prix du kWh (optimiste) | Économie annuelle | Cumul     |
-| ----- | ------------------- | ----------------------- | ----------------- | --------- |
-| 2023  | 1503,69             | 0,16 €                  | 238,43 €          | 238,43 €  |
-| 2024  | 1503,69             | 0,18 €                  | 274,19 €          | 512,62 €  |
-| 2025  | 1503,69             | 0,21 €                  | 315,32 €          | 827,94 €  |
-| 2026  | 1503,69             | 0,24 €                  | 362,62 €          | 1190,56 € |
-| 2027  | 1503,69             | 0,28 €                  | 417,01 €          | 1607,57 € |
-| 2028  | 1410,00             | 0,32 €                  | 449,68 €          | 2057,26 € |
+| Année | Production annuelle | Prix du kWh (optimiste) | Économie annuelle | Cumul |
+| --- | --- | --- | --- | --- |
+| 2023 | 1503,69 | 0,16 € | 238,43 € | 238,43 € |
+| 2024 | 1503,69 | 0,18 € | 274,19 € | 512,62 € |
+| 2025 | 1503,69 | 0,21 € | 315,32 € | 827,94 € |
+| 2026 | 1503,69 | 0,24 € | 362,62 € | 1190,56 € |
+| 2027 | 1503,69 | 0,28 € | 417,01 € | 1607,57 € |
+| 2028 | 1410,00 | 0,32 € | 449,68 € | 2057,26 € |
 
 ### Conclusion de la date de rentabilité
 
@@ -169,9 +167,7 @@ En tout cas, merci d'avoir lu cet article.
 
 Et comme toujours, si vous voulez lire mes prochains articles, n'hésitez pas à souscrire à ma newsletter gratuite. Je publie une fois par semaine, le lundi.
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

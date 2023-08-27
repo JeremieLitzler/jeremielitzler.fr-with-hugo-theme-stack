@@ -2,8 +2,8 @@
 title: 'Prêle des champs avec Christophe Bernard'
 description: "La prêle se trouve dans les zones humides et j'ai le bonheur d'en avoir juste à côté de chez moi. Nous l'utilisons pour le jardin et la santé. Dans ce dernier domaine, Christophe nous détaille son usage."
 date: 2023-01-31
-heroImage: /images/2023-01-31-champ-de-prele.jpg
-heroAlt: Champ de prêles
+image: /images/2023-01-31-champ-de-prele.jpg
+imageAlt: Champ de prêles
 prev:
   text: 'Toutes mes notes des vlogs de Christophe Bernard'
   link: ../../../tag/christophe-bernard/
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-01-31-champ-de-prele.jpg,
      },
     ]
-category:
+categories:
   - Santé
-tag:
+tags:
   - Christophe Bernard
   - Prêle
 ---
@@ -63,7 +63,7 @@ Nous verrons plus comment les distinguer, principalement pour utiliser les non t
 
 ### Structure
 
-![Vue de près de la prêle des champs](./images/prele-des-champs-vue-de-pres.jpg "Crédits de l'image : publicdomainpictures.net")
+![Vue de près de la prêle des champs](images/prele-des-champs-vue-de-pres.jpg "Crédits de l'image : publicdomainpictures.net")
 
 Elle est composée d'emboitements de tubes les uns dans les autres.
 

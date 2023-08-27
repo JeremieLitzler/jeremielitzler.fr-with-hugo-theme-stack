@@ -1,8 +1,8 @@
 ---
 title: 'Construire son site moderne et rapide !'
 description: 'Dans cet article, je décris les étapes concrètes pour créer, configurer le site et personnaliser son contenu.'
-heroImage: /images/2023-04-19-jamstack-javascript-apis-markup.webp
-heroAlt: Diagramme expliquant l'organisation de la JAMSTACK
+image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
+imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-11
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
      },
     ]
-category:
+categories:
   - Tutoriels
-tag:
+tags:
   - Web
 ---
 
@@ -44,9 +44,7 @@ Dans cet article, je décris les étapes concrètes pour créer, configurer le s
 
 ## Cloner les dépôts
 
-:::tip Optionnellement, créer un dossier <em>Git</em>
-A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux.
-:::
+:::tip Optionnellement, créer un dossier <em>Git</em> A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux. :::
 
 - Lancer la commande suivante qui crée un dossier`NomDeVotreDepot`.
 
@@ -74,10 +72,9 @@ Maintenant que les dépôts sont clonés :
 
 On copiera les fichiers du dossier `TemplateVuepress`dans le dossier`NomDeVotreDepot`, incluant le dossier `.vscode`pour les extraits de code permettant de rédiger son contenu plus rapidement.
 
-:::warning Sauf le dossier <em>.git</em> et <em>.github</em>
-:::
+:::warning Sauf le dossier <em>.git</em> et <em>.github</em> :::
 
-![Fichiers à copier du dépôt modèle vers votre dépôt](./images/fichiers-a-copier-du-depot-modele-vers-votre-depot.jpg)
+![Fichiers à copier du dépôt modèle vers votre dépôt](images/fichiers-a-copier-du-depot-modele-vers-votre-depot.jpg)
 
 ### Personnaliser les fichiers issus du modèle
 
@@ -114,7 +111,7 @@ Au minimum les fichiers suivants doivent être personnalisés, incluants :
     - soit implicite, c'est-à-dire la valeur du `title`dans le fichier Markdown.
     - soit explicite, c'est-à-dire la valeur `text`
 
-![Liens implicites vs liens explicites dans le menu de navigation](./images/liens-implicites-vs-liens-explicites-dans-le-menu-de-navigation.jpg)
+![Liens implicites vs liens explicites dans le menu de navigation](images/liens-implicites-vs-liens-explicites-dans-le-menu-de-navigation.jpg)
 
 - le fichier `docs/.vuepress/public/admin/config.yml`définissant l'interface avec NetlifyCMS, si vous l'activez (voir plus loin comme l'activer).
 

@@ -1,8 +1,8 @@
 ---
 title: "L'ortie et tous ses secrets avec Le chemin de la nature"
 description: "L'ortie est une plante incroyable. Elle pousse facilement en France et peut même devenir envahissante. Toutefois, les bénéfices qu'elle amène surpasse largement les inconvénients, en particulier celui le plus connu : ça pique !"
-heroImage: /images/2023-02-15-ortie-femelle.jpg
-heroAlt: Ortie femelle avec de longs pistiles
+image: /images/2023-02-15-ortie-femelle.jpg
+imageAlt: Ortie femelle avec de longs pistiles
 date: 2023-02-15
 prev:
   text: 'Toutes mes notes des vlogs du Chemin de la Nature'
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-02-15-ortie-femelle.jpg,
      },
     ]
-category:
+categories:
   - Plantes
-tag:
+tags:
   - Chemin de la Nature
   - Ortie
 ---
@@ -38,8 +38,7 @@ tag:
 
 L'ortie est une plante incroyable. Elle pousse facilement en France et peut même devenir envahissante. Toutefois, les bénéfices qu'elle amène surpassent largement les inconvénients, en particulier celui le plus connu : ça pique !
 
-Merci à Christophe pour le partage de son savoir !
-Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
+Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
 <!-- more -->
 
@@ -62,20 +61,17 @@ L'ortie est une plante dioïque (_deux maisons_), c'est-à-dire qu'il y a des pi
 
 Pour reconnaître les pieds femelles, on cherchera des fleurs qui retombent.
 
-![Fleurs femelles de l'ortie](./images/fleurs-femelles-de-l-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Fleurs femelles de l'ortie](images/fleurs-femelles-de-l-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Dans le cas des mâles, les fleurs sont dressées.
 
 Vers le mois de mars, elle revient à la vie à partir des mêmes tiges, ou rhizomes, souterrains sur plusieurs années.
 
-:::note Rappel
-Les organes mâles s'appellent les étamines.
-Les organes femelles s'appellent les pistils
-:::
+:::note Rappel Les organes mâles s'appellent les étamines. Les organes femelles s'appellent les pistils :::
 
 La feuille de l'ortie est très proche du lamier blanc (_Lamium album_), qui ne pique pas et surtout possède des fleurs blanches bilabiées.
 
-![Lamier blanc](./images/lamier-blanc.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Lamier blanc](images/lamier-blanc.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 ### Pourquoi l'ortie pique
 
@@ -97,7 +93,7 @@ L'ortie pique beaucoup plus au printemps qu'à la fleuraison.
 
 Et elle est beaucoup plus goûteuse quand elle pique le plus.
 
-![Jeunes pousses d'ortie](./images/jeunes-pousses-d-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeunes pousses d'ortie](images/jeunes-pousses-d-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 ### Pesto, salades, _gaspatcho_...
 
@@ -105,21 +101,19 @@ Pour les salades, il faudra la hacher finement.
 
 Pour les pestos, la méthode est similaire au pesto de basilic : huile d'olive, câpre, sel.
 
-![Pesto d'ortie crue](./images/pesto-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Pesto d'ortie crue](images/pesto-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 On peut aussi la consommer dans des _gaspachos_.
 
-![gaspacho d'ortie crue](./images/gaspatcho-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![gaspacho d'ortie crue](images/gaspatcho-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 En l'ébouillantant 2 min dans de l'eau, elle se mange aussi très bien avec un filet d'huile d'olive.
 
-:::tip Note personnelle
-J'utilise l'ortie beaucoup à l'automne dans les soupes.
+:::tip Note personnelle J'utilise l'ortie beaucoup à l'automne dans les soupes.
 
 Je les ajoute au dernier moment (pour préserver la vitamine C) sur les légumes bien chauds et avec une bonne quantité d'eau bouillante.
 
-Je mixe ensuite le tout et tout le monde se régale !
-:::
+Je mixe ensuite le tout et tout le monde se régale ! :::
 
 ### Les graines
 
@@ -143,7 +137,7 @@ On utilise les racines pour les problèmes de prostates.
 
 Une bonne plante accompagnante est l'épilobe hirsute pour traiter les mêmes troubles de la prostate.
 
-![Epilobe hirsute](./images/epilobe-hirsute.jpg 'On peut utiliser l'intégralité de la plante. Crédit : [Préservons la nature](https://www.preservons-la-nature.fr/flore/taxon/395.html)')
+![Epilobe hirsute](images/epilobe-hirsute.jpg 'On peut utiliser l'intégralité de la plante. Crédit : [Préservons la nature](https://www.preservons-la-nature.fr/flore/taxon/395.html)')
 
 La préparation en décoction permet d'extraire au mieux les propriétés de la racine.
 
@@ -151,27 +145,21 @@ La préparation en décoction permet d'extraire au mieux les propriétés de la 
 
 - 1,5 g de racines dans 150 ml d'eau
 
-Laisser bouillir 1 min
-Laisser infuser 15 min
+Laisser bouillir 1 min Laisser infuser 15 min
 
-Boire plusieurs tasses dans la journée sans dépasser 4 à 6 h de racines par jour.
-:::
+Boire plusieurs tasses dans la journée sans dépasser 4 à 6 h de racines par jour. :::
 
 ou
 
-:::tip Alcoolature de racines fraîches
-Laisser pendant 3 semaines 100 g de racines fraîches avec 200 ml d'alcool à 55 % mini à macérer.
+:::tip Alcoolature de racines fraîches Laisser pendant 3 semaines 100 g de racines fraîches avec 200 ml d'alcool à 55 % mini à macérer.
 
-Consommer 20 à 30 gouttes, trois fois par jour, diluées dans un peu d'eau.
-:::
+Consommer 20 à 30 gouttes, trois fois par jour, diluées dans un peu d'eau. :::
 
 ou
 
-:::tip Teinture officinale de racines sèches
-Laisser pendant 3 semaines 100 g de racines fraîches avec 500 ml d'alcool à 45 % mini à macérer.
+:::tip Teinture officinale de racines sèches Laisser pendant 3 semaines 100 g de racines fraîches avec 500 ml d'alcool à 45 % mini à macérer.
 
-Consommer 20 à 30 gouttes, trois fois par jour, diluées dans un peu d'eau.
-:::
+Consommer 20 à 30 gouttes, trois fois par jour, diluées dans un peu d'eau. :::
 
 ### Les feuilles
 
@@ -183,8 +171,7 @@ L'ortie est très connue pour :
 - les infections de peau (comme l'acné) ou les petites blessures
 - et elle est diurétique.
 
-:::tip On la mélange en infusion avec le frêne.
-:::
+:::tip On la mélange en infusion avec le frêne. :::
 
 C'est au printemps que les propriétés médicinales sont optimales : les jeunes pousses sont concentrés en minéraux et vitamines.
 
@@ -205,8 +192,7 @@ Les étapes sont :
 
 Pour la démonstration, [allez visionner le court vlog de Christophe](https://www.youtube.com/shorts/kgrJSPjIsU0).
 
-==Attention :== vous vous piquerez sûrement les doigts, mais pas la bouche.
-:::
+==Attention :== vous vous piquerez sûrement les doigts, mais pas la bouche. :::
 
 ## Riche en protéines
 

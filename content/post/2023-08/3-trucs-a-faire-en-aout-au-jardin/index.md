@@ -11,13 +11,7 @@ tags:
   - En août
 ---
 
-<!-- ![Vue aérienne du jardin de Damien en août](images/vue-aerienne-du-jardin-de-damien-en-aout.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-En août, la production du jardin nécessite du suivi journalier. On pense aussi à l'automne et l'hiver avec les semis pour ces saisons à planter dès ce mois estival.
-
-Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_. -->
-
-<!-- more -->
+Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=bkacvFjicBg).
 

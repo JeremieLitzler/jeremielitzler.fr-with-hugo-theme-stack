@@ -1,8 +1,8 @@
 ---
 title: "Comment recevoir un seul bulletin d'information sur ma publication"
 description: "Si vous vous êtes abonné avant avril 2023, cela vous sera utile."
-heroImage: /images/2023-06-06-substack-logo.avif
-heroAlt: Le logo de Substack
+image: /images/2023-06-06-substack-logo.avif
+imageAlt: Le logo de Substack
 date: 2023-06-07
 head:
   - [
@@ -24,7 +24,7 @@ head:
        "og:image": /images/2023-06-06-substack-logo.avif,
      },
     ]
-tag:
+tags:
   - Substack
 ---
 

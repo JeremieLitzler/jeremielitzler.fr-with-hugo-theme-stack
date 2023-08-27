@@ -2,8 +2,8 @@
 title: "Comment j'organise mon activité digitale ?"
 description: 'En 2023, il existe toute une myriade de solutions pour développer sa présence digitale. Dans cet article, je vais présenter mon organisation actuelle.'
 date: 2023-03-30
-heroImage: /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg
-heroAlt: Un PC portable et un bloc-notes sur un bureau
+image: /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg
+imageAlt: Un PC portable et un bloc-notes sur un bureau
 head:
   - [
       link,
@@ -24,7 +24,7 @@ head:
        "og:image": /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg,
      },
     ]
-category:
+categories:
   - Entreprenariat
 ---
 
@@ -34,9 +34,7 @@ En 2023, il existe toute une myriade de solutions pour développer sa présence 
 
 <!-- more -->
 
-:::note
-For the english version of this article, [continue here](https://iamjeremie.me/2023/03/how-is-setup-my-digital-presence-today/)
-:::
+:::note For the english version of this article, [continue here](https://iamjeremie.me/2023/03/how-is-setup-my-digital-presence-today/) :::
 
 ## Pour les sites web
 
@@ -100,9 +98,7 @@ En termes de coût, vous aurez à payer le nom de domaine et l’hébergement. P
 - [L’Ensemble Instrumental Tournon-Tain](https://ensembleinstrumentaltournontain.fr/).
 - [Le site de Gilles Fauriat](https://fauriat-ardeche.fr/), tailleur de pierre près d’Annonay, Ardèche.
 
-:::tip Enfin, Infomaniak met l’accent sur son impact environnemental
-Allez lire leur article sur le sujet [disponible sur leur site web](https://www.infomaniak.com/fr/ecologie).
-:::
+:::tip Enfin, Infomaniak met l’accent sur son impact environnemental Allez lire leur article sur le sujet [disponible sur leur site web](https://www.infomaniak.com/fr/ecologie). :::
 
 [Contactez-moi](../../../page/contactez-moi/README.md) si vous souhaitez être accompagné pour utiliser cette solution.
 
@@ -153,9 +149,7 @@ J’espère vraiment que le premier point sera adressé très bientôt..
 
 Pour les abonnements, lisez la suite
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 ## Pour les abonnements ou la vente de produits digitaux
 
@@ -169,9 +163,7 @@ Peut-être qu’en 2023, cela évoluera :)
 
 Si vous souhaitez suivre mes progrès dans la recherche de la meilleure solution, n’hésitez pas à vous abonner à mon bulletin d’information.
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

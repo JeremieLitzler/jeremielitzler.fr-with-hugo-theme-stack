@@ -1,8 +1,8 @@
 ---
 title: Que faire au jardin en juin, avec Damien Dekarz
 description: "Semis, plantations, boutures, arrosages, récoltes sauvages, etc ... En juin, on est bien occupé !"
-heroImage: /images/2023-06-26-titre-du-vlog.jpg
-heroAlt: Titre du vlog
+image: /images/2023-06-26-titre-du-vlog.jpg
+imageAlt: Titre du vlog
 date: 2023-06-26
 prev:
   text: "Toutes mes notes des vlogs de Damien Dekarz"
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-06-26-titre-du-vlog.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Damien Dekarz
   - En Juin
 ---
@@ -49,7 +49,7 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=fY
 
 ## Bouturer les plantes aromatiques
 
-![Godets pour boutures de romarin](./images/godets-pour-boutures-de-romarin.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Godets pour boutures de romarin](images/godets-pour-boutures-de-romarin.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 À ce moment de l’année, les romarins ont fini leur fleuraison et c’est le moment de récupérer les jeunes pousses.
 
@@ -73,7 +73,7 @@ On les plante dès qu’on a consommé la cerise. Les laisser sécher au soleil 
 
 Il n’est pas nécessaire de les arroser. En les plantant dans un godet de compost, le printemps suivant, nous aurez ceci:
 
-![Un petit cerisier à la fin de l’hiver](./images/un-petit-cerisier-a-la-fin-de-l-hiver.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Un petit cerisier à la fin de l’hiver](images/un-petit-cerisier-a-la-fin-de-l-hiver.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 On peut aussi juste planter le noyau dans le sol, même avec la chair tout autour.
 
@@ -89,7 +89,7 @@ Damien explique la technique de tuteurer les plantes qui poussent en hauteur ou 
 
 Comme lui, j’utilise des ficelles pour suspendre ou _encercler_ les plantes qui ont besoin de support, comme ci-dessous des tomates.
 
-![Des tomates encerclées par une ficelle pour la soutenir dans sa croissance](./images/des-tomates-encerclees-par-une-ficelle-pour-la-soutenir-dans-sa-croissance.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Des tomates encerclées par une ficelle pour la soutenir dans sa croissance](images/des-tomates-encerclees-par-une-ficelle-pour-la-soutenir-dans-sa-croissance.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 ## Arrosage
 
@@ -108,11 +108,11 @@ Le tilleul est en fleur en juin. C’est le moment de les récolter pour les inf
 
 En juin, c’est aussi le moment de récolter l’épilobe hirsute, qui fleurira bientôt.
 
-![Photo de l’épilobe hirsute](./images/photo-de-lepilobe-hirsute.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Photo de l’épilobe hirsute](images/photo-de-lepilobe-hirsute.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 Dans la mare, vous avez sûrement déjà vu cette plante avec une sorte de saucisse marron.
 
-![Massette à larges feuilles](./images/massette-a-larges-feuilles.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Massette à larges feuilles](images/massette-a-larges-feuilles.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 Tout est consommable dans la massette.
 

@@ -1,8 +1,8 @@
 ---
 title: "Mon retour d'expérience avec le kit Bafang VAE 250 W"
 description: "Voilà plus de 5 ans que je roule en VAE, au début en Scott CX Comp de 2011, puis sur un Raleigh Brazil. Je vous explique le pourquoi, comment et mon ressenti."
-heroImage: /images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg
-heroAlt: A remplacer
+image: /images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg
+imageAlt: A remplacer
 date: 2023-07-25
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg,
      },
     ]
-category:
+categories:
   - Avis de produits
-tag:
+tags:
   - VAE
   - Bafang
 ---
@@ -136,11 +136,11 @@ J’ai longuement échangé avec Cycloboost sur ces trois éléments du kit et j
 
 Il est livré avec l’aimant, une pièce avec la LED, à laquelle est connecté le câble et la patte qui sert de support entre le vélo et la pièce avec la LED.
 
-![Un capteur de vitesse « Bafang »](./images/bafang-capteur-de-vitesse.jpg)
+![Un capteur de vitesse « Bafang »](images/bafang-capteur-de-vitesse.jpg)
 
 Après m’être assuré que je pouvais le faire, j’ai coupé la patte sur la pièce avec la LED au niveau où pointe la flèche rouge sur l’image ci-dessus pour donner ce qui suit :
 
-![Le capteur de vitesse sur mon Raleigh Brazil](./images/la-capteur-de-vitesse-sur-mon-raleigh-brazil.jpg)
+![Le capteur de vitesse sur mon Raleigh Brazil](images/la-capteur-de-vitesse-sur-mon-raleigh-brazil.jpg)
 
 J’ai ensuite fixé le capteur avec des colliers de serrage. Après 37 000 km, je dois avouer que ça convient très bien.
 
@@ -148,13 +148,13 @@ J’ai ensuite fixé le capteur avec des colliers de serrage. Après 37 000 k
 
 Cycloboost m’a envoyé une pièce en plastique construite avec une imprimante 3D pour un anneau permettant de serrer la potence à la fourche.
 
-![La pièce 3D sur la potence](./images/la-piece-3d-sur-la-potence.jpg)
+![La pièce 3D sur la potence](images/la-piece-3d-sur-la-potence.jpg)
 
 J’ai utilisé cela uniquement avec le Scott.
 
 Avec le Raleigh, j’ai préféré l’installer avec un collier de serrage et la guidoline, car cela permet d’ajuster l’assistance sans lever la main du guidon.
 
-![Position de la commande d’assistance sur le Raleigh](./images/position-de-la-commande-d-assistance-sur-le-raleigh.jpg)
+![Position de la commande d’assistance sur le Raleigh](images/position-de-la-commande-d-assistance-sur-le-raleigh.jpg)
 
 ### Pour la batterie
 
@@ -170,7 +170,7 @@ Toutefois, cela a posé un problème au bout de 1200 km : les vibrations de 40�
 
 J’ai résolu le problème avec des supports « maison » en thermoplastique que j’utilise pour réaliser des pièces uniques « façon pâte à modeler » (il s’agit de billes plastiques qui fondent dans l’eau bouillante et se rigidifient à température ambiante).
 
-![Supports « maison » en thermoplastique](./images/supports-maison-en-thermo-plastiques.jpg)
+![Supports « maison » en thermoplastique](images/supports-maison-en-thermo-plastiques.jpg)
 
 Au départ, j'ai utilisé des colliers de serrage de grande taille, mais les bords de la platine en aluminium venaient rapidement cisailler les colliers.
 
@@ -223,7 +223,7 @@ Sur le Raleigh, je ne me soucis pas de cela, car je ne prévois pas de revenir e
 
 Après un troisième démontage, j’ai eu la surprise d’avoir un souci de puissance sur le second moteur.
 
-![Le bloc moteur n°2 démonté](./images/le-bloc-moteur-n2-demonte.jpg)
+![Le bloc moteur n°2 démonté](images/le-bloc-moteur-n2-demonte.jpg)
 
 La cause : je pense qu’il s’agit des 3 câbles reliant le moteur au contrôleur que j'ai cassés au démontage…
 
@@ -235,7 +235,7 @@ En démontant le moteur, on tire dessus et la gaine casse…
 
 Je vais sûrement essayer de remplacer ces câbles, mais je ne suis pas sûr du résultat.
 
-![Les câble moteur coupés](./images/les-cable-moteur-coupes.jpg)
+![Les câble moteur coupés](images/les-cable-moteur-coupes.jpg)
 
 Au pire, j’ai des roulements et des pièces de rechange.
 
@@ -257,7 +257,7 @@ Cela a permis de gagner un peu d’autonomie, mais je pense que le mal était fa
 
 Elle permet de prévenir l’intrusion de l’eau entre la batterie et la platine de batterie, ce qui posait problème en cas de forte averse !
 
-![La housse néoprène enveloppe la batterie contre le froid et la pluie](./images/la-housse-neoprene-enveloppe-la-batterie-contre-le-froid-et-la-pluie.jpg)
+![La housse néoprène enveloppe la batterie contre le froid et la pluie](images/la-housse-neoprene-enveloppe-la-batterie-contre-le-froid-et-la-pluie.jpg)
 
 :::
 
@@ -311,9 +311,9 @@ Sur [l’article anglais « A Hacker’s Guide To Programming The BBS02 & BBSHD
 
 :::
 
-![Programmer la section « Général »](./images/programmer-la-section-general.png)
+![Programmer la section « Général »](images/programmer-la-section-general.png)
 
-![Programmer la section « Assistance pédalage »](./images/programmer-la-section-assistance-pedalage.png)
+![Programmer la section « Assistance pédalage »](images/programmer-la-section-assistance-pedalage.png)
 
 6. débrancher la batterie du moteur
 7. débrancher le câble de programmation du PC

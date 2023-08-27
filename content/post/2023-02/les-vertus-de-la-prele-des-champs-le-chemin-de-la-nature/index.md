@@ -2,8 +2,8 @@
 title: La prêle des champs avec Le chemin de la nature
 description: 'Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile.'
 date: 2023-02-02
-heroImage: /images/2023-02-02-une-prele-des-champs.jpg
-heroAlt: Une prêle des champs
+image: /images/2023-02-02-une-prele-des-champs.jpg
+imageAlt: Une prêle des champs
 prev:
   text: 'Toutes mes notes des vlogs du Chemin de la Nature'
   link: ../../../tag/chemin-de-la-nature/
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-02-02-une-prele-des-champs.jpg,
      },
     ]
-category:
+categories:
   - Plantes
-tag:
+tags:
   - Chemin de la Nature
   - Prêle
 ---
@@ -41,8 +41,7 @@ tag:
 
 Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile.
 
-Merci à Christophe pour le partage de son savoir !
-Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
+Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
 <!-- more -->
 
@@ -62,13 +61,13 @@ Parmi les plantes sans fleurs, on trouve les mousses, les fougères et les prêl
 
 La prêle des champs est la seule comestible.
 
-![Jeune pousse de prêle des champs](./images/jeune-pousse-de-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeune pousse de prêle des champs](images/jeune-pousse-de-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Quand la prêle est jeune, elle est fertile et se reproduit à travers des spores. Vous pouvez voir [à quoi cela ressemble sur le vlog de Christophe](https://youtu.be/-qG71xpKoSY?t=80).
 
 On peut manger les jeunes pousses, mais la plante mature au mois de mai ou juin est la forme la plus communément consommée.
 
-![Une prêle mature](./images/prele-mature.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Une prêle mature](images/prele-mature.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 ## Comment la consommer
 
@@ -80,8 +79,7 @@ On la consommer ensuite dans un lait végétal ou un jus de fruit.
 
 On peut l'utiliser en infusion.
 
-:::warning Mode opératoire en cure
-La plante est une forte drainante rénale donc il faut réaliser des cures :
+:::warning Mode opératoire en cure La plante est une forte drainante rénale donc il faut réaliser des cures :
 
 - de 3 semaines
 - maximum 2 à 3 fois par an
@@ -107,15 +105,13 @@ Enfin, elle aide les reins et donc à éliminer les déchets plus efficacement.
 
 ## Précautions
 
-:::danger Ne pas confondre la prêle des marais ou la grande prêle avec la prêle des champs.
-Les deux premières sont toxiques.
-:::
+:::danger Ne pas confondre la prêle des marais ou la grande prêle avec la prêle des champs. Les deux premières sont toxiques. :::
 
-![prele-des-marais](./images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html')
+![prele-des-marais](images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html')
 
 La prêle des marais présente parfois une partie fertile à son sommet, alors que la prêle des champs n'est fertile au début.
 
-![La tige de la grande prêle](./images/grande-prele.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![La tige de la grande prêle](images/grande-prele.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 La grande prêle est bien plus grande, donc difficile de se tromper.
 
@@ -123,13 +119,11 @@ La meilleure façon de savoir si vous avez à faire avec la prêle des champs, i
 
 En image, cela donne ceci :
 
-![Le premier article est 2 fois plus long que la gaine](./images/identification-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Le premier article est 2 fois plus long que la gaine](images/identification-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 On effectuera une identification sur plusieurs individus pour confirmer.
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

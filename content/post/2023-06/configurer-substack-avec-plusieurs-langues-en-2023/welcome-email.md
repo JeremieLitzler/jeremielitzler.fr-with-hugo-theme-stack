@@ -26,7 +26,7 @@ From your SubStack account, you willl need to toggle the newsletter(s), either e
 
 Use [this link to access your settings](https://iamjeremie.substack.com/account). You will see this:
 
-![Choose what you want to receive](./images/helping-the-subscriber-to-pick-his-optins.jpg)
+![Choose what you want to receive](images/helping-the-subscriber-to-pick-his-optins.jpg)
 
 As shown above, you will receive only posts published under the publication.
 
@@ -63,7 +63,7 @@ Depuis votre compte SubStack, vous devrez basculer le ou les bulletins d’infor
 
 Utilisez [ce lien pour accéder à vos paramètres concernant ma publication](https://iamjeremie.substack.com/account). Vous verrez ceci :
 
-![Choisissez ce que vous voulez recevoir](./images/helping-the-subscriber-to-pick-his-optins.jpg)
+![Choisissez ce que vous voulez recevoir](images/helping-the-subscriber-to-pick-his-optins.jpg)
 
 Comme indiqué ci-dessus, vous ne recevrez que les messages publiés sous la publication (première ligne).
 

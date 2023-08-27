@@ -1,43 +1,14 @@
 ---
 title: 'Comment configurer Substack avec plusieurs langues en 2023'
 description: "Regardons ensemble les étapes pour configurer votre publication afin que vous puissiez fournir du contenu en deux langues."
-heroImage: /images/2023-06-06-substack-logo.avif
-heroAlt: Le logo de Substack
+image: /images/2023-06-06-substack-logo.avif
+imageAlt: Le logo de Substack
 date: 2023-06-07
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/comment-configurer-substack-avec-plusieurs-langues-en-2023,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Comment configurer Substack avec plusieurs langues en 2023" },
-     meta,
-     {
-       "og:description": "Regardons ensemble les étapes pour configurer votre publication afin que vous puissiez fournir du contenu en deux langues.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-06-substack-logo.avif,
-     },
-    ]
-category:
+categories:
   - Entreprenariat
-tag:
+tags:
   - Substack
 ---
-
-![Le logo de Substack](/images/2023-06-06-substack-logo.avif)
-
-Regardons ensemble les étapes pour configurer votre publication afin que vous puissiez fournir du contenu en deux langues.
-
-<!-- more -->
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
 
 Lorsqu’il s’agit de créer votre bulletin d’information, vous disposez d’un large choix de solutions.
 
@@ -67,11 +38,11 @@ Quelques liens de navigation seront toujours en anglais, pour l’instant. Cepen
 
 Par exemple, sur mon profil principal avec Chrome, je vois ceci :
 
-![Formulaire de souscription avec un profil Chrome en anglais](./images/subscription-embed-on-a-english-chrome-profile.jpg)
+![Formulaire de souscription avec un profil Chrome en anglais](images/subscription-embed-on-a-english-chrome-profile.jpg)
 
 Avec un profile chrome en français, je vois cela :
 
-![Formulaire de souscription avec un profil Chrome en français](./images/subscription-embed-on-a-french-chrome-profile.jpg)
+![Formulaire de souscription avec un profil Chrome en français](images/subscription-embed-on-a-french-chrome-profile.jpg)
 
 En ce qui concerne les éléments suivants, nous les examinerons dans les paragraphes suivants :
 
@@ -126,7 +97,7 @@ Je cache la page Archive et les Sections (qui sont ajoutées automatiquement au 
 
 Cela vous donnera un résultat soigné (mise en avant en rouge) :
 
-![La page « Bulletins d’information » avec une navigation propre](./images/the-newsletter-page-with-a-clean-navigation.jpg)
+![La page « Bulletins d’information » avec une navigation propre](images/the-newsletter-page-with-a-clean-navigation.jpg)
 
 ## Configurer l’e-mail de bienvenue
 
@@ -134,7 +105,7 @@ De même, l’e-mail de bienvenue est écrit en utilisant `heading3` pour sépar
 
 Ce qui est important ici : vous ajouterez pour expliquer au nouvel abonné comment activer les notifications de la publication ou sur un bulletin d’information sélectionné (peut-être que votre abonné ne parle que le français, par exemple).
 
-![Aider l’abonné à choisir ses opt-ins](./images/helping-the-subscriber-to-pick-his-optins.jpg)
+![Aider l’abonné à choisir ses opt-ins](images/helping-the-subscriber-to-pick-his-optins.jpg)
 
 Dans mon cas, je devrai écrire un article spécial à mes abonnés français actuels, afin de les aider à s’abonner au bulletin d'information en français uniquement.
 
@@ -152,13 +123,6 @@ J’ai demandé à Substack quand ils auront le support complet pour les langues
 
 Voici leur réponse :
 
-![Réponse de l’équipe d’assistance de Substack à propos de la localisation du contenu](./images/reply-of-substack-support-team-about-localization-of-content.jpg)
+![Réponse de l’équipe d’assistance de Substack à propos de la localisation du contenu](images/reply-of-substack-support-team-about-localization-of-content.jpg)
 
 Soyons patients et espérons pour une mise à disposition dans peu de temps !
-
-:::center
-⏬⏬⏬
-:::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

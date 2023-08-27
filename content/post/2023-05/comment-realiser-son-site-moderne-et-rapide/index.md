@@ -1,8 +1,8 @@
 ---
 title: 'Créer votre site web moderne pour moins de 10 euros !'
 description: 'De nos jours, il existe beaucoup de méthodes pour créer son site web. J’en présente une qui ne coûte presque rien. Pour de vrai !'
-heroImage: /images/2023-04-19-jamstack-javascript-apis-markup.webp
-heroAlt: Diagramme expliquant l'organisation de la JAMSTACK
+image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
+imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-05
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
      },
     ]
-category:
+categories:
   - Tutoriels
-tag:
+tags:
   - Web
 ---
 

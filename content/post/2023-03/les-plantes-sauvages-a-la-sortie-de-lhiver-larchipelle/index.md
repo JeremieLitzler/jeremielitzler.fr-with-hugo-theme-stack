@@ -1,8 +1,8 @@
 ---
 title: "Les plantes sauvages à la sortie de l'hiver, avec l'Archi'Pelle"
 description: "A la sortie de l'hiver, les arbres n'ont pas encore leurs feuilles. C'est l'occasion pour les plantes couvres-sol de se développer."
-heroImage: /images/2023-03-29-pulmonaria-officinalis.jpg
-heroAlt: Pulmonaria officinalis
+image: /images/2023-03-29-pulmonaria-officinalis.jpg
+imageAlt: Pulmonaria officinalis
 date: 2023-03-29
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-03-29-pulmonaria-officinalis.jpg,
      },
     ]
-category:
+categories:
   - Plantes
-tag:
+tags:
   - Saison Hiver
   - Plantes sauvages
 ---
@@ -80,7 +80,7 @@ Quand on connait le sol, on est presque sûr de savoir si une plante s’y trouv
 
 Par exemple, une reine des prés, qui requiert un sol humide, ne se trouvera pas dans un pré ensoleillé pendant une bonne partie de la journée.
 
-![Des feuilles de reines des prés](./images/des-feuilles-de-reines-des-pres.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+![Des feuilles de reines des prés](images/des-feuilles-de-reines-des-pres.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
 ## Connaitre les principes de la botanique aide à la cueillette
 
@@ -115,24 +115,24 @@ Aussi, certaines ne sont pas forcément consommées comme aliment, mais peuvent 
 
 - l’angélique
 
-![Des feuilles d’angélique](./images/des-feuilles-dangelique.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+![Des feuilles d’angélique](images/des-feuilles-dangelique.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
-- la cardamine, de la famille des crucifères (choux, radis...) ![Une cardamine](./images/une-cardamine.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+- la cardamine, de la famille des crucifères (choux, radis...) ![Une cardamine](images/une-cardamine.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
   - Le goût est fort à cause du soufre qu’elle contient.
 
-- La valériane, pour bien dormir pour les humains, mais attention, ça excite les chats ! On consomme la racine. ![Des feuilles de valériane](./images/des-feuilles-de-valeriane.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+- La valériane, pour bien dormir pour les humains, mais attention, ça excite les chats ! On consomme la racine. ![Des feuilles de valériane](images/des-feuilles-de-valeriane.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
   - La valériane (Valeriana officinalis) est une plante commune et réputée en Europe.
   - Elle doit sa réputation à ses parties souterraines qui renferment des principes actifs aux propriétés relaxantes.
   - Ces derniers contribuent à apaiser l’organisme, lutter contre la nervosité et prévenir les troubles du sommeil.
   - Source : [Dieti Natura](<https://www.dieti-natura.com/plantes-actifs/valeriane.html#:~:text=La%20val%C3%A9riane%20(Valeriana%20officinalis)%20est,pr%C3%A9venir%20les%20troubles%20du%20sommeil.>)
 
-- Le lierre terrestre, pour confectionner les sirops pour la toux et à consommer en cuisine. ![Du lierre terrestre](./images/du-lierre-terrestre.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+- Le lierre terrestre, pour confectionner les sirops pour la toux et à consommer en cuisine. ![Du lierre terrestre](images/du-lierre-terrestre.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
 - La pulmonaire officinale
 
-- L’achillée mille-feuille ![Une feuille d’achillée mille-feuilles](./images/une-feuille-dachillee-mille-feuilles.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+- L’achillée mille-feuille ![Une feuille d’achillée mille-feuilles](images/une-feuille-dachillee-mille-feuilles.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
   - Elle aide à cicatriser.
 
@@ -159,7 +159,7 @@ Source : [Wikipédia](https://fr.wikipedia.org/wiki/Fasciola_hepatica) :::
 
 ## Des plantes à éviter
 
-- l’arôme, qui ressemble à l’oseille ![Feuille d’arôme](./images/feuille-darome.jpg 'Crédits: image extraite du vlog de L’Archipelle')
+- l’arôme, qui ressemble à l’oseille ![Feuille d’arôme](images/feuille-darome.jpg 'Crédits: image extraite du vlog de L’Archipelle')
 
 ## D’autres plantes intéressantes
 

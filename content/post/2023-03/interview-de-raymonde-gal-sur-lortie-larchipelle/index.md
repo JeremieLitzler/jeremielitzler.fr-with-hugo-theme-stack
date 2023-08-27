@@ -1,8 +1,8 @@
 ---
 title: "Interview de Raymonde Gal sur l'ortie par l'Archi'Pelle"
 description: "Brian partage avec nous la rencontre avec Raymonde Gal. Raymond connait très l'ortie et elle partage ici son savoir."
-heroImage: /images/2023-03-28-ortie-avec-des-graines.jpg
-heroAlt: Des orties femelles avec des graines
+image: /images/2023-03-28-ortie-avec-des-graines.jpg
+imageAlt: Des orties femelles avec des graines
 date: 2023-03-28
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-03-28-ortie-avec-des-graines.jpg,
      },
     ]
-category:
+categories:
   - Témoignages
-tag:
+tags:
   - Brian Ejarque
   - Ortie
 ---

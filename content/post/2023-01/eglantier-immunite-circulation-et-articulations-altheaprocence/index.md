@@ -2,8 +2,8 @@
 title: "Découverte de l'églantier avec Christophe Bernard"
 description: "Le rosier sauvage est l'ancêtre des rosiers cultivés et il n'existe pas un seul rosier sauvage. Cette plante est douce et utile dans beaucoup de domaines. Christophe d'Altheaprovence nous explique."
 date: 2023-01-26
-heroImage: /images/2023-01-26-faux-fruit-de-cynorrhodon-ouvert.jpg
-heroAlt: Faux fruit de cynorhodon ouvert
+image: /images/2023-01-26-faux-fruit-de-cynorrhodon-ouvert.jpg
+imageAlt: Faux fruit de cynorhodon ouvert
 prev:
   text: 'Toutes mes notes des vlogs de Christophe Bernard'
   link: ../../../tag/christophe-bernard/
@@ -27,10 +27,10 @@ head:
        "og:image": /images/2023-01-26-faux-fruit-de-cynorrhodon-ouvert.jpg,
      },
     ]
-category:
+categories:
   - Santé
   - Plantes
-tag:
+tags:
   - Christophe Bernard
   - Cynorhodon
 ---
@@ -100,7 +100,7 @@ Et on mentionnera l'huile essentielle de rose qui est très chère, car cela req
 
 ## Utilisation du bédégar
 
-![Bédégar de l'églantier](./images/galle-eglantier.jpg 'Credits : image extraite du site orchidee-poitou-charentes.org')
+![Bédégar de l'églantier](images/galle-eglantier.jpg 'Credits : image extraite du site orchidee-poitou-charentes.org')
 
 On la nomme aussi la _barbe de Saint-Pierre_ et il se développe à cause de la présence d'un parasite dans la plante.
 

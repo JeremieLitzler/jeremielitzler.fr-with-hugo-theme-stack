@@ -1,8 +1,8 @@
 ---
 title: 3 Trucs à faire en Juin au Jardin, avec Damien Dekarz
 description: "Au mois de juin, on récolte, on paille et on crée de l'engrais liquide. C'est parti !"
-heroImage: /images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg
-heroAlt: Vue aérienne du jardin de Damien
+image: /images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg
+imageAlt: Vue aérienne du jardin de Damien
 date: 2023-06-12
 prev:
   text: "Toutes mes notes des vlogs de Damien Dekarz"
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Damien Dekarz
   - En Juin
 ---
@@ -52,13 +52,13 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=WC
 
 Avant de voir les 3 trucs du mois de juin, Damien récolte ses choux romanesco à ce moment de l’année.
 
-![D’énormes choux romanesco](./images/d-enormes-choux-romanesco.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![D’énormes choux romanesco](images/d-enormes-choux-romanesco.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 Les feuilles se mangent, mais, dans son cas, les chenilles avaient infesté les plants. Du coup, les poules vont recevoir un dîner _premium_.
 
 Une autre plante qu’il récolte en juin est l’arroche rouge, qui ressemble à l’épinard et la blette.
 
-![Damien présente une feuille d’arroche rouge](./images/damien-presente-une-feuille-darroche-rouge.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Damien présente une feuille d’arroche rouge](images/damien-presente-une-feuille-darroche-rouge.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 Les feuilles se cuisent comme l’épinard.
 
@@ -127,7 +127,7 @@ Cet engrais fonctionne aussi bien en curatif, lorsque l’azote vient à manquer
 
 Damien réalise l’engrais à base de crottin de cheval et d’eau.
 
-![Brouette remplie de crottin](./images/brouette-rempli-de-crottin.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Brouette remplie de crottin](images/brouette-rempli-de-crottin.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 ### Outillage
 
@@ -147,7 +147,7 @@ On peut laisser _tremper une nuit_, mais ce n’est pas forcément obligatoire.
 
 Après avoir mélangé maximum 5 minutes, on retire la matière solide (qu’on compostera).
 
-![L’engrais liquide est prêt !](./images/l-engrais-liquide-est-pret.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![L’engrais liquide est prêt !](images/l-engrais-liquide-est-pret.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 Damien n’attend pas plus et il a obtenu d’excellents résultats.
 

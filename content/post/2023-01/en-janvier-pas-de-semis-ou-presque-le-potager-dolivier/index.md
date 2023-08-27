@@ -21,9 +21,9 @@ head:
        "og:description": "En janvier, la température est trop basse pour planter quoi que ce soit. Olivier nous explique sa stratégie.",
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Potager d Olivier
   - En janvier
 ---
@@ -74,7 +74,7 @@ Ce qu'il vous faudra pour semer en janvier :
 - un châssis comme montrer ci-dessous.
 - utiliser des graines de variétés précoces (pour la carotte, il y a la variété _Touchon_ ou _Napoli F1_).
 
-![Un châssis très simple avec une vitre de récupération](./images/chassis-de-recuperation.jpg "Credits : image extraite du vlog d'Olivier")
+![Un châssis très simple avec une vitre de récupération](images/chassis-de-recuperation.jpg "Credits : image extraite du vlog d'Olivier")
 
 La serre est indispensable d'après les échanges et les expériences des différents jardiniers présents sur [Terra Potager](https://terra-potager.com/).
 

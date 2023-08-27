@@ -2,8 +2,8 @@
 title: "Installation PV - quel retour d'expérience après 1 an"
 description: 'Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin de la première année.'
 date: 2023-03-31
-heroImage: /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg
-heroAlt: "Production par mois d'avril 2022 à mars 2023"
+image: /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg
+imageAlt: "Production par mois d'avril 2022 à mars 2023"
 prev:
   - text: "Installation PV - quel retour d'expérience après 9 mois"
   - link: ../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg,
      },
     ]
-category:
+categories:
   - Energie
-tag:
+tags:
   - Photovoltaique
   - Autoconsommation
   - Eau chaude sanitaire
@@ -172,8 +172,7 @@ En partant du principe que le nombre de kWh non achetés sur un an correspond à
 
 Il faudra donc 1875 kWh de surplus pour rentabiliser 300 euros à 16 cts d’euros l’unité.
 
-Cela donne une rentabilité dans 4 ans avec 1.5kWc installés.
-De plus, le fait de consommer le maximum de la production va permettre de rentabiliser l’installation complète plus rapidement.
+Cela donne une rentabilité dans 4 ans avec 1.5kWc installés. De plus, le fait de consommer le maximum de la production va permettre de rentabiliser l’installation complète plus rapidement.
 
 Car qui aime donner à ces entreprises qui ne nous font pas de cadeaux ? Pas moi !
 
@@ -210,7 +209,7 @@ On consomme globalement toujours autant si l’on réalise la somme de toutes le
 
 Toutefois, si l’on regarde la consommation du réseau, on voit que cela a bien diminué.
 
-![Comparaison des années 2021 à 2022 à 2023.](./images/comparaison-2021-2022-2023.jpg)
+![Comparaison des années 2021 à 2022 à 2023.](images/comparaison-2021-2022-2023.jpg)
 
 - Sur janvier, on a eu 8 jours où j’étais seul avec 1.4 kWh par jour. Ensuite, on est revenu à 8 kWh par jour.
 - En février 2023, on a consommé 85 % de plus, mais nous étions présents qu’une semaine en 2022 !
@@ -248,9 +247,7 @@ J’ai réussi à remettre le tout en route rapidement.
 
 En attendant le prochain rendez-vous en fin d’année 2023, ==merci d’avoir lu cet article et n’hésitez pas à me soutenir en vous abonnant !==
 
-:::center
-⏬⏬⏬
-:::
+:::center ⏬⏬⏬ :::
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

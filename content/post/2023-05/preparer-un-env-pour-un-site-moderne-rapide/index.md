@@ -1,8 +1,8 @@
 ---
 title: 'Préparer un environnement de gestion de son site web sur un PC lambda en 2 étapes'
 description: "La première étape pour créer son site web moderne et rapide, c'est de préparer le PC pour le créer."
-heroImage: /images/2023-04-19-jamstack-javascript-apis-markup.webp
-heroAlt: Diagramme expliquant l'organisation de la JAMSTACK
+image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
+imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-08
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
      },
     ]
-category:
+categories:
   - Tutoriels
-tag:
+tags:
   - Web
 ---
 
@@ -48,11 +48,9 @@ La première étape pour créer son site web moderne et rapide, c’est de prép
 - Un compte [chez Netlify](https://app.netlify.com/) (lié à votre compte GitHub)
 - Optionnellement, un compte chez un registar de domaines (OVH, Infomaniak, etc.). Cela est utile pour le nom de domaine, si vous souhaitez une URL 100 % personnalisée.
 
-:::tip Par défaut, Netlify fournit une URL publique
-Le sous-domaine est configurable, sous réserve de disponibilité.
+:::tip Par défaut, Netlify fournit une URL publique Le sous-domaine est configurable, sous réserve de disponibilité.
 
-L’application serait alors disponible sous`https://mon-site.netlify.app` .
-:::
+L’application serait alors disponible sous`https://mon-site.netlify.app` . :::
 
 ## Créer le dépôt sur GitHub
 
@@ -68,7 +66,7 @@ Pour cela, connectez-vous à votre compte GitHub et :
 - Choisissez la visibilité : `Public` ou`Private` .
 - Ignorez la suite qui sera copiée du modèle
 
-![Créer le dépôt sur GitHub](./images/creer-le-depot-sur-github.jpg)
+![Créer le dépôt sur GitHub](images/creer-le-depot-sur-github.jpg)
 
 3. Cliquez `Create repository`en bas du formulaire pour terminer.
 
@@ -86,31 +84,27 @@ Il faut :
 
 - Configurer l’explorateur Windows pour afficher les dossiers et fichiers cachés (ex : fichier`.gitignore`, dossier`.vscode`)
 
-  - Ouvrez l’explorateur de fichiers et sélectionnez le menu `Options`comme indiqué ci-dessous :
-    ![Ouvrir les options de visualisation des dossiers](./images/ouvrir-les-options-de-visualisation-des-dossiers.jpg)
+  - Ouvrez l’explorateur de fichiers et sélectionnez le menu `Options`comme indiqué ci-dessous : ![Ouvrir les options de visualisation des dossiers](images/ouvrir-les-options-de-visualisation-des-dossiers.jpg)
 
-  - Sélectionnez l’affichage des dossiers et fichiers cachés :
-    ![Sélectionner l’option d’afficher les fichiers et dossiers cachés.](./images/selectionner-loption-dafficher-les-fichiers-et-dossiers-caches.jpg)
+  - Sélectionnez l’affichage des dossiers et fichiers cachés : ![Sélectionner l’option d’afficher les fichiers et dossiers cachés.](images/selectionner-loption-dafficher-les-fichiers-et-dossiers-caches.jpg)
 
-:::note Pour l’étape qui suit seulement…
-Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.
+:::note Pour l’étape qui suit seulement… Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.
 
 L’étape est là, au cas où ce n’est pas le cas.
 
-Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste.
-:::
+Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste. :::
 
 - Lancez Visual Studio Code et saisissez `CTRL+SHIFT+P`puis `Terminal`pour sélectionner le profil `Git Bash`
 
-  ![Changer le profil du terminal](./images/changer-le-profil-du-terminal.jpg)
+  ![Changer le profil du terminal](images/changer-le-profil-du-terminal.jpg)
 
   Et sélectionnez `Git Bash`:
 
-  ![Sélectionner git bash](./images/selectionner-git-bash.jpg)
+  ![Sélectionner git bash](images/selectionner-git-bash.jpg)
 
 - Tapez `CTRL+ù`pour ouvrir le terminal avec `Git Bash`
 
-  ![Le terminal est lancé avec Git Bash](./images/le-terminal-est-lance-avec-git-bash.jpg)
+  ![Le terminal est lancé avec Git Bash](images/le-terminal-est-lance-avec-git-bash.jpg)
 
 Vous êtes prêts à cloner les dépôts !
 

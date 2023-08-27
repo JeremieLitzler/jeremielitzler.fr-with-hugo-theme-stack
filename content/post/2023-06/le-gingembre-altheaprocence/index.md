@@ -1,8 +1,8 @@
 ---
 title: Le gingembre, par Christophe Bernard
 description: "Le gingembre : qui ne le connait pas ? Cette plante dont on consomme la racine, ou rhizome, est très appréciée dans le monde entier. Christophe nous explique."
-heroImage: /images/2023-06-13-un-morceau-de-gingembre.jpg
-heroAlt: Un morceau de gingembre
+image: /images/2023-06-13-un-morceau-de-gingembre.jpg
+imageAlt: Un morceau de gingembre
 date: 2023-06-13
 prev:
   text: "Toutes mes notes des vlogs de Christophe Bernard"
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-06-13-un-morceau-de-gingembre.jpg,
      },
     ]
-category:
+categories:
   - Santé
-tag:
+tags:
   - Christophe Bernard
   - Plantes
   - Gingembre

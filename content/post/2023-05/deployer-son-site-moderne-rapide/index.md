@@ -1,8 +1,8 @@
 ---
 title: 'Déployer votre site web moderne pour moins de 10 euros !'
 description: "Avec les services de Netlify, le déploiement n'a jamais été aussi simple."
-heroImage: /images/2023-04-19-jamstack-javascript-apis-markup.webp
-heroAlt: Diagramme expliquant l'organisation de la JAMSTACK
+image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
+imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-15
 head:
   - [
@@ -24,9 +24,9 @@ head:
        "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
      },
     ]
-category:
+categories:
   - Tutoriels
-tag:
+tags:
   - Web
 ---
 
@@ -65,31 +65,29 @@ Une fois que le domaine est provisionné, il faut paramétrer Netlify pour que l
 
 Pour un domaine de base, il faut préalable supprimer les entrées DNS `A`sur le domaine `mon-super-domaine.fr`et `wwww.mon-super-domaine.fr`.
 
-:::warning Sur OVH…
-J’ai eu une fois un temps de propagation de la suppression de l’entrée `A`sur le sous-domaine `www` qui a pris plus des dizaines de minutes.
+:::warning Sur OVH… J’ai eu une fois un temps de propagation de la suppression de l’entrée `A`sur le sous-domaine `www` qui a pris plus des dizaines de minutes.
 
-Soyez patients ;)
-:::
+Soyez patients ;) :::
 
 ## Déployer le site sur Netlify
 
 Rendez-vous sur [app.netlify.com](https://app.netlify.com) en vous connectant avec votre compte GitHub.
 
-![Connexion netlify via github sso](./images/connexion-netlify-via-github-sso.jpg 'Crédits: image extraite du site Netlify')
+![Connexion netlify via github sso](images/connexion-netlify-via-github-sso.jpg 'Crédits: image extraite du site Netlify')
 
 Vous devez alors autoriser l’accès à votre compte par Netlify (pour lire la liste des dépôts).
 
 Une fois connecté, sélectionnez `Add new site` puis `Import an existing project` :
 
-![Ajouter un site](./images/ajouter-un-site.jpg 'Crédits: image extraite du site Netlify')
+![Ajouter un site](images/ajouter-un-site.jpg 'Crédits: image extraite du site Netlify')
 
 Sélectionnez `GitHub` :
 
-![Sélectionner GitHub](./images/selectionner-github.jpg 'Crédits: image extraite du site Netlify')
+![Sélectionner GitHub](images/selectionner-github.jpg 'Crédits: image extraite du site Netlify')
 
 Rechercher et sélectionner votre dépôt :
 
-![Rechercher et sélectionner votre dépôt](./images/recherche-et-selectionner-votre-depôt.jpg 'Crédits: image extraite du site Netlify')
+![Rechercher et sélectionner votre dépôt](images/recherche-et-selectionner-votre-depôt.jpg 'Crédits: image extraite du site Netlify')
 
 Configurez le déploiement en modifiant :
 
@@ -97,7 +95,7 @@ Configurez le déploiement en modifiant :
 - `Build command` par `yarn && npm run docs:build`.
 - `Publish directory` en ajouter `dist` à la valeur.
 
-![Configurer le déploiement](./images/configurer-le-deploiement.jpg 'Crédits: image extraite du site Netlify')
+![Configurer le déploiement](images/configurer-le-deploiement.jpg 'Crédits: image extraite du site Netlify')
 
 Le déploiement ne devrait pas prendre plus de 2 minutes.
 
@@ -118,21 +116,17 @@ Une fois la zone DNS prête,
 
 Vous verrez sûrement l’alerte suivante :
 
-> .fr domains can’t be registered through Netlify.
-> You can still add mon-site.fr to your Netlify site if you already own the domain. Select Add domain to add it to your site. You can configure Netlify DNS for this domain later.
+> .fr domains can’t be registered through Netlify. You can still add mon-site.fr to your Netlify site if you already own the domain. Select Add domain to add it to your site. You can configure Netlify DNS for this domain later.
 
-Cliquer `Add domain` ou `Add subdomain` quand même.
-:::
+Cliquer `Add domain` ou `Add subdomain` quand même. :::
 
-- une fois sur l’écran ci-dessous :
-  ![Écran suite à l’ajout du domaine personnalisé](./images/ecran-suite-a-lajout-du-domaine-personnalise.jpg 'Crédits: image extraite du site Netlify')
+- une fois sur l’écran ci-dessous : ![Écran suite à l’ajout du domaine personnalisé](images/ecran-suite-a-lajout-du-domaine-personnalise.jpg 'Crédits: image extraite du site Netlify')
 
 - Cliquez `Awaiting External DNS` et suivez les instructions :
 
   - pour un domaine _racine_,
     - ajouter l’entrée `A` en utilisant l’adresse IP du loadbalancer que Netlify vous fournit.
-    - ajouter l’entrée `CNAME` en utilisant le DNS que Netlify vous fournit.
-      ![Instructions de Netlify pour une configuration par entrée CNAME](./images/instructions-de-netlify-pour-une-configuration-par-entree-cname.jpg 'Instructions de Netlify pour une configuration par entrée CNAME. Crédits: image extraite du site Netlify')
+    - ajouter l’entrée `CNAME` en utilisant le DNS que Netlify vous fournit. ![Instructions de Netlify pour une configuration par entrée CNAME](images/instructions-de-netlify-pour-une-configuration-par-entree-cname.jpg 'Instructions de Netlify pour une configuration par entrée CNAME. Crédits: image extraite du site Netlify')
   - pour un sous-domaine,
     - vous aurez seulement l’entrée `CNAME` à ajouter.
 
@@ -140,28 +134,26 @@ Cliquer `Add domain` ou `Add subdomain` quand même.
 
   - pour une entrée`CNAME` , ça ressemble à ceci :
 
-  ![Choix du type d’entrée DNS](./images/choix-du-type-dentree-dns.jpg 'Choix du type d’entrée DNS. Crédits: image extraite du site OVGCloud')
+  ![Choix du type d’entrée DNS](images/choix-du-type-dentree-dns.jpg 'Choix du type d’entrée DNS. Crédits: image extraite du site OVGCloud')
 
-  ![Configurer l’entrée DNS](./images/configurer-lentree-dns.jpg 'Crédits: image extraite du site OVGCloud')
+  ![Configurer l’entrée DNS](images/configurer-lentree-dns.jpg 'Crédits: image extraite du site OVGCloud')
 
-  ![Confirmer l’ajout de l’entrée DNS](./images/confirmer-lajout-de-lentree-dns.jpg 'Confirmer l’ajout de l’entrée DNS. Crédits: image extraite du site OVGCloud')
+  ![Confirmer l’ajout de l’entrée DNS](images/confirmer-lajout-de-lentree-dns.jpg 'Confirmer l’ajout de l’entrée DNS. Crédits: image extraite du site OVGCloud')
 
   - confirmez et attendez quelques minutes (voire plus si votre registar de domaine est lent)
   - rafraichissez la page sur Netlify : quand tout est bon, le message `Awaiting external DNS` doit avoir disparu.
 
-  ![Netlify a bien détecté la mise à jour DNS](./images/netlify-a-bien-detecte-la-mise-a-jour-dns.jpg 'Netlify a bien détecté la mise à jour DNS. Crédits: image extraite du site Netlify')
+  ![Netlify a bien détecté la mise à jour DNS](images/netlify-a-bien-detecte-la-mise-a-jour-dns.jpg 'Netlify a bien détecté la mise à jour DNS. Crédits: image extraite du site Netlify')
 
   - Netlify provisionne ensuite un certificat _Let's encrypt_ automatiquement pour vous.
 
-![Certificat Let’s Encrypt en cours de provisionnement](./images/certificat-lets-encrypt-en-cours-de-provisionnement.jpg)
+![Certificat Let’s Encrypt en cours de provisionnement](images/certificat-lets-encrypt-en-cours-de-provisionnement.jpg)
 
-:::warning Temps de provisionnement du certificat HTTPS
-Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement.
-:::
+:::warning Temps de provisionnement du certificat HTTPS Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement. :::
 
 Une fois que le certificat est déployé, vous pourrez accéder à votre site web sécurisé ! Ex : `https://mon-super-domaine.fr`.
 
-![Certificat Let’s Encrypt est actif. Votre site web est sécurisé.](./images/certificat-lets-encrypt-est-actif-votre-site-web-est-securise.jpg 'Certificat Let’s Encrypt est actif. Votre site web est sécurisé ! Crédits: image extraite du site Netlify')
+![Certificat Let’s Encrypt est actif. Votre site web est sécurisé.](images/certificat-lets-encrypt-est-actif-votre-site-web-est-securise.jpg 'Certificat Let’s Encrypt est actif. Votre site web est sécurisé ! Crédits: image extraite du site Netlify')
 
 Si vous souhaitez éditer le contenu depuis n’importe quel PC, cela est possible avec NetlifyCMS. Je vous explique [comment l’activer sur votre site web](../activer-netlifycms-sur-son-site-web/README.md).
 

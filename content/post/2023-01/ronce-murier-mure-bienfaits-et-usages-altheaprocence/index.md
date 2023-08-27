@@ -2,8 +2,8 @@
 title: 'La ronce avec Christophe Bernard'
 description: "Vous en avez sûrement chez vous si vous vivez à la campagne, proche d'une zone sauvage. On essaye souvent de s'en débarrasser. Toutefois, saviez-vous qu'il s'agit plutôt d'une ami ?"
 date: 2023-01-20
-heroImage: /images/2023-01-20-ronce-fleurie.jpg
-heroAlt: Ronce fleurie
+image: /images/2023-01-20-ronce-fleurie.jpg
+imageAlt: Ronce fleurie
 prev:
   text: 'Toutes mes notes des vlogs de Christophe Bernard'
   link: ../../../tag/christophe-bernard/
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-01-20-ronce-fleurie.jpg,
      },
     ]
-category:
+categories:
   - Santé
-tag:
+tags:
   - Christophe Bernard
   - Plantes
   - Ronces
@@ -77,7 +77,7 @@ Elles sont aussi couvertes d'épines sur leur dos, le long des nervures.
 
 ### Les fleurs
 
-![Fleur de ronce](./images/fleur-de-ronce.jpg 'Credits: image extraite de https://amandebasilic.com/la-mure-sauvage/')
+![Fleur de ronce](images/fleur-de-ronce.jpg 'Credits: image extraite de https://amandebasilic.com/la-mure-sauvage/')
 
 Elles sont très petites et très similaires aux rosacées :
 
@@ -89,7 +89,7 @@ De couleur blanche ou légèrement rosée, elles sont regroupées en grappes.
 
 ### Le fruit
 
-![Mûre sauvage](./images/mure-sauvage.jpg 'Credits: image extraite de www.canon.photo.free.fr')
+![Mûre sauvage](images/mure-sauvage.jpg 'Credits: image extraite de www.canon.photo.free.fr')
 
 On le connait sur le nom de _mûre_.
 

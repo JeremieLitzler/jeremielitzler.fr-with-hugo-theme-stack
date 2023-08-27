@@ -1,8 +1,8 @@
 ---
 title: La Vigne de A à Z (ou presque) avec Damien Dekarz
 description: 'Damien nous explique tout sur le vigne, comment la cultiver, comment les tailler et quelles variétés sont à privilégier.'
-heroImage: /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg
-heroAlt: Une vigne et ses grappes de raisin blanc
+image: /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg
+imageAlt: Une vigne et ses grappes de raisin blanc
 date: 2023-02-22
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Damien Dekarz
   - Vigne
 ---
@@ -112,11 +112,11 @@ Pourquoi ?
 
 Voici la liste des vignes interdites, e.g. les vignes résistantes :
 
-![Liste des vignes résistantes](./images/vignes-resistantes.png)
+![Liste des vignes résistantes](images/vignes-resistantes.png)
 
 Il y a aussi les vigne sans pépins, pratique pour faire des raisins secs :
 
-![Liste des vignes aux résins sans pépins](./images/vignes-aux-raisins-sans-pepins.png)
+![Liste des vignes aux résins sans pépins](images/vignes-aux-raisins-sans-pepins.png)
 
 ## Comment cultiver la vigne
 
@@ -174,7 +174,7 @@ C’est moins simple pour les vitis vinifera qui requiert des portes-greffe.
 
 Il y a aussi la méthode du marcotage qui consiste à mettre une branche au sol partiellement recouverte de terre. La racine se déveleppera à partir de la partie enterrée.
 
-![Démonstration du marcotage de la vigne](./images/marcotage-de-la-vigne.png)
+![Démonstration du marcotage de la vigne](images/marcotage-de-la-vigne.png)
 
 ## Consommation
 

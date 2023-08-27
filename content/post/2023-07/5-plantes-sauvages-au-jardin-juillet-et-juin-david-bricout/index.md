@@ -1,8 +1,8 @@
 ---
 title: 5 plantes sauvages au jardin, avec David Bricout
 description: "En juin et juillet, la flore est active et abondante. Avec David, nous allons découvrir 5 dd'entre elles."
-heroImage: /images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg
-heroAlt: Fleur de camomille butinee par un insecte
+image: /images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg
+imageAlt: Fleur de camomille butinee par un insecte
 date: 2023-07-18
 prev:
   text: "Toutes mes notes des vlogs de David Bricout"
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - David Bricout
   - Plantes sauvages
 ---
@@ -57,11 +57,11 @@ Le tilleul est riche en mucilage, ce qui donne ce goût onctueux.
 
 Le revers de la feuille, aussi appelé le limbe, est glabre, c’est-à-dire qu’il n’y a pas de poils, sauf à l’aisselle des nervures.
 
-![Le limbe d’une feuille de tilleul cordé](./images/le-limbe-d-une-feuille-de-tilleul-corde.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Le limbe d’une feuille de tilleul cordé](images/le-limbe-d-une-feuille-de-tilleul-corde.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 Comparé au tilleul à grandes feuilles, on distingue que ce dernier présente des poils un peu partout.
 
-![Le limbe d’une feuille de tilleul à grandes feuilles](./images/le-limbe-d-une-feuille-de-tilleul-a-grandes-feuilles.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Le limbe d’une feuille de tilleul à grandes feuilles](images/le-limbe-d-une-feuille-de-tilleul-a-grandes-feuilles.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ### Consommation des feuilles
 
@@ -69,7 +69,7 @@ L’usage des feuilles des deux sortes de tilleul est similaire. Toutefois, cell
 
 Après, il est toujours plus simple de consommer les très jeunes feuilles comme celles ci-dessous.
 
-![Jeunes feuilles de tilleul](./images/jeunes-feuilles-de-tilleul.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Jeunes feuilles de tilleul](images/jeunes-feuilles-de-tilleul.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 :::warning A consommer en respectant l’arbre
 
@@ -87,17 +87,17 @@ Les feuilles se consomment aussi séchées, mélangées à de la farine, car ell
 
 Bien sûr, les fleurs sont connues pour se consommer en infusion pour sa propriété calmante et sudorifique (qui favorise la transpiration).
 
-![Fleurs de tilleul](./images/fleurs-de-tilleul.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Fleurs de tilleul](images/fleurs-de-tilleul.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ## Le lotier corniculé
 
-![Le lotier corniculé en jaune dans une prairie](./images/le-lotier-cornicule-en-jaune-dans-une-prairie.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Le lotier corniculé en jaune dans une prairie](images/le-lotier-cornicule-en-jaune-dans-une-prairie.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 Le lotier corniculé (_Lotus corniculatus_) fait partie de la famille des légumineuses, comme le trèfle, les lentilles et autres haricots.
 
 Les feuilles se composent de 3 folioles et les 2 « fausses feuilles » à la base de la tige sont en fait des stipules.
 
-![La feuille et les stipules du lotier](./images/la-feuille-et-stipules-du-lotier.jpg 'Crédits : image extraite du vlog de David Bricout')
+![La feuille et les stipules du lotier](images/la-feuille-et-stipules-du-lotier.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ## Consommation non recommandée
 
@@ -107,11 +107,11 @@ Il ne s’agit pas d’une plante recommandée à la consommation, car elle cont
 
 Malgré cela, le lotier est plutôt utile pour la biodiversité, surtout des papillons, comme l’azuré commun (_Polyommatus icarus_).
 
-![Un papillon azuré commun](./images/un-papillon-azure-commun.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Un papillon azuré commun](images/un-papillon-azure-commun.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ## La mauve musquée
 
-![Mauve musquée de couleur rose](./images/mauve-musquee-de-couleur-rose.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Mauve musquée de couleur rose](images/mauve-musquee-de-couleur-rose.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 La mauve musquée (_Malva moschata_) appartient à la même famille que le tilleul.
 
@@ -119,7 +119,7 @@ C’est très bon pour la peau et la gorge, car le mucilage vient adoucir. Donc 
 
 Les feuilles permettent aussi d’épaissir les plats, encore une fois, grâce au mucilage.
 
-![Feuille de mauve musquée très dentelée](./images/feuille-de-mauve-musquee-tres-dentellee.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Feuille de mauve musquée très dentelée](images/feuille-de-mauve-musquee-tres-dentellee.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 Les boutons de fleurs fanées se consomment aussi.
 
@@ -127,15 +127,15 @@ Les boutons de fleurs fanées se consomment aussi.
 
 La fleur se compose de 5 pétales séparés avec des étamines soudés ensemble.
 
-![Détails de la fleur de mauve](./images/details-de-la-fleur-de-mauve.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Détails de la fleur de mauve](images/details-de-la-fleur-de-mauve.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 Aussi, dans la fleur, on trouve le calice, une sorte d’étoile.
 
-![Le calice de la fleur de mauve](./images/le-calice-de-la-fleur-de-mauve.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Le calice de la fleur de mauve](images/le-calice-de-la-fleur-de-mauve.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ## La nielle des blés
 
-![La nielle des blés](./images/la-nielle-des-bles.jpg 'Crédits : image extraite du vlog de David Bricout')
+![La nielle des blés](images/la-nielle-des-bles.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 La nielle des blés (_Agrostemma gitagho_) appartient à la famille des _Caryophyllacées_, tout comme les œillets, les saponaires, les silènes, stellaires, etc.
 
@@ -149,7 +149,7 @@ Dans le Limousin et l’Alsace, elle est classée espèce protégée et donc on 
 
 ## La verveine officinale
 
-![Un épi de verveine officinale](./images/un-epis-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Un épi de verveine officinale](images/un-epis-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 La verveine officinale (_Verbena officinalis_) n’a pas grande chose à voir avec la verveine citronnée du point de vue de leur apparence respective, bien qu’elles appartiennent toutes les deux à la même famille.
 
@@ -157,13 +157,13 @@ On la trouve facilement en bord de chemin ou les endroits piétinés, comme un c
 
 On reconnait cette verveine par ses feuilles opposées très découpées.
 
-![Une feuille de verveine officinale](./images/une-feuille-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Une feuille de verveine officinale](images/une-feuille-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 Les feuilles se trouvent des épis où les fleurs de bas de la tige sont en fait fanées et on trouve en générale juste 3-4 fleurs au sommet de l’épi.
 
 Les fleurs ont 5 pétales, de taille inégale.
 
-![Un groupe de fleurs de verveine officinale](./images/un-groupe-de-fleurs-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
+![Un groupe de fleurs de verveine officinale](images/un-groupe-de-fleurs-de-verveine-officinale.jpg 'Crédits : image extraite du vlog de David Bricout')
 
 ### A consommer en interne
 

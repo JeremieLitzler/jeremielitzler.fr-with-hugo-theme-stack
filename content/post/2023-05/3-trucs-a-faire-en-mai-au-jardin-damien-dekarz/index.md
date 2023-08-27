@@ -1,8 +1,8 @@
 ---
 title: 3 Trucs à faire en Mai au Jardin, avec Damien Dekarz
 description: "En mai, fais ce qu'il te plait, comme dis le dicton. Et au jardin, est-ce la même chose ? Damien nous explique !"
-heroImage: /images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg
-heroAlt: Un homme ramasse des radis dans un jardin surélevé
+image: /images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg
+imageAlt: Un homme ramasse des radis dans un jardin surélevé
 date: 2023-05-16
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Damien Dekarz
   - En Mai
 ---
@@ -91,7 +91,7 @@ La massette pousse une zone marécageuse (mare, étang).
 
 En 2022, Damien a démarré une expérimentation de goutte-à-goutte avec des tuyaux singuliers : de cannes de bambou.
 
-![Une canne de bambou pour arroser le jardin en goutte-à-goutte](./images/une-canne-de-bambou-pour-arroser-le-jardin-en-goutte-a-goutte.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Une canne de bambou pour arroser le jardin en goutte-à-goutte](images/une-canne-de-bambou-pour-arroser-le-jardin-en-goutte-a-goutte.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 On pourrait penser que percer l’intérieur du bambou est compliqué et c’est bien ce qui a freiné Damien jusqu’à mai 2022. Mais qu’en est-il vraiment ?
 
@@ -109,7 +109,7 @@ La pression d’entrée doit être pris en compte. Si vous avez peu de pression,
 
 L’astuce de Damien est de régler le débit en installant une bûche de bois pour surélever l’extrémité du bambou qui est le plus proche de l’arrivée d’eau.
 
-![Damien installe le bambou sur un lit de culture](./images/damien-installe-le-bambou-sur-un-lit-de-culture.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Damien installe le bambou sur un lit de culture](images/damien-installe-le-bambou-sur-un-lit-de-culture.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
 ### Protection des plants du gel tardif
 

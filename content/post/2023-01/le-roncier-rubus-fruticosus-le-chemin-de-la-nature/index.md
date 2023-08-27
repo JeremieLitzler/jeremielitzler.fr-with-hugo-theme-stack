@@ -2,8 +2,8 @@
 title: Le roncier avec Le chemin de la nature
 description: 'La ronce, vous connaissez ? On en a peur, car elle pique et nous enviahit. Mais, la connaissez-vous vraiment ? Christophe nous partage dans son vlog qui est vraiment cette plante.'
 date: 2023-01-24
-heroImage: /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg
-heroAlt: Des fleurs de mûriers se transforment en fruits
+image: /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg
+imageAlt: Des fleurs de mûriers se transforment en fruits
 prev:
   text: 'Toutes mes notes des vlogs du Chemin de la Nature'
   link: ../../../tag/chemin-de-la-nature/
@@ -30,9 +30,9 @@ head:
        "og:image": /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg,
      },
     ]
-category:
+categories:
   - Plantes
-tag:
+tags:
   - Chemin de la Nature
   - Ronce
 ---
@@ -68,7 +68,7 @@ On épluche la peau et on les mange crus ou cuits.
 
 Cru, s'il n'y a pas d'âpreté et que vous sentez un petit goût de mûres, c'est le bon stage de consommation.
 
-![Jeune rameau de ronce dans les mains de Christophe](./images/jeune-rameau-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeune rameau de ronce dans les mains de Christophe](images/jeune-rameau-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 La jeune tige de ronce est très riche en eau, c'est frais quand on se promène en forêt.
 
@@ -80,7 +80,7 @@ Bien sûr, les fruits sont ce que nous recherchons le plus.
 
 ## Les jeunes feuilles
 
-![Feuille de ronce avec cinq folioles](./images/feuille-de-ronce-avec-cinq-folioles.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Feuille de ronce avec cinq folioles](images/feuille-de-ronce-avec-cinq-folioles.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Pour les gargarismes, elles se révèlent utiles en cas de maux de gorge.
 
@@ -90,7 +90,7 @@ On infuse les jeunes feuilles.
 
 ### LEs jeunes pousses
 
-![Jeune pousse de ronce](./images/jeune-pousse-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeune pousse de ronce](images/jeune-pousse-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 En gemmothérapie, les jeunes pousses sont utiles.
 
@@ -141,7 +141,7 @@ La ronce bleue (voir ci-dessous) dépassera rarement 1.5 m. Donc il est simple 
 
 Pour la ronce bleue, la fleur prend toujours une couleur blanche et plus petite.
 
-![Rameau de ronce bleue](./images/rameau-de-ronce-bleue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Rameau de ronce bleue](images/rameau-de-ronce-bleue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Les rameaux semblent aussi blanchâtres, ce qui permet de la différencier un peu plus de la ronce commune.
 
@@ -149,7 +149,7 @@ Les feuilles sont trifoliées, comme les framboisiers, mais le dessous des folio
 
 ### Famille
 
-![Fleur de ronce](./images/fleur-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Fleur de ronce](images/fleur-de-ronce.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 La ronce appartient à la famille de _Rosaceae_.
 
@@ -160,7 +160,7 @@ On identifie la famille facilement par la fleur :
 - aux nombreuses étamines
 - aux nombreux styles qui deviendront les petites boules qui formeront le fruit bien connu.
 
-![Fleur de ronce se transformant en fruit](./images/fleur-de-ronce-se-transformant-en-fruit.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Fleur de ronce se transformant en fruit](images/fleur-de-ronce-se-transformant-en-fruit.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Au printemps, c'est la pleine saison de la floraison.
 
@@ -170,7 +170,7 @@ Cela donne beaucoup de nourriture aux pollinisateurs.
 
 On attendra mi-août pour déguster les fruits, riches en antioxydants et vitamines.
 
-![Une grappe de mûres](./images/grappe-de-mures.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Une grappe de mûres](images/grappe-de-mures.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
 
 Ce qu'on connait comme un fruit de ronce se compose en fait de plusieurs petits fruits, comme on peut le voir ci-dessus.
 

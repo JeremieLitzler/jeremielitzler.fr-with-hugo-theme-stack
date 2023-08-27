@@ -2,8 +2,8 @@
 title: 3 Trucs à faire en Janvier au Jardin avec Damien Dekarz
 description: "En janvier, le jardin est au repos. Toutefois, il reste toujours pas mal de choses à réaliser. Damien nous explique ce qu'il en retourne."
 date: 2023-01-04
-heroImage: /images/2023-01-04-un-chien-des-bottes-de-pailles-enneigees.jpg
-heroAlt: Un chien des bottes de paille enneigées
+image: /images/2023-01-04-un-chien-des-bottes-de-pailles-enneigees.jpg
+imageAlt: Un chien des bottes de paille enneigées
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
   link: ../../../tag/damien-dekarz/
@@ -27,9 +27,9 @@ head:
        "og:image": /images/2023-01-04-un-chien-des-bottes-de-pailles-enneigees.jpg,
      },
     ]
-category:
+categories:
   - Jardin
-tag:
+tags:
   - Damien Dekarz
   - En janvier
 ---
@@ -71,7 +71,7 @@ Autre exemple, dans un sol trop acide, l'abricotier aura du mal. Sauf si l'on gr
 
 Donc, pour commencer, qu'est-ce que le porte-greffe et le greffon ?
 
-![Schéma expliquant le porte-greffe et le greffon](./images/schema-le-porte-greffe-et-le-greffon.jpg 'Crédits : image extraite du vlog de Damien')
+![Schéma expliquant le porte-greffe et le greffon](images/schema-le-porte-greffe-et-le-greffon.jpg 'Crédits : image extraite du vlog de Damien')
 
 - Le porte-greffe correspond à la partie qui est enracinée, dépassant au-dessus du sol.
 - Le greffon correspond à la partie aérienne.
@@ -142,7 +142,7 @@ En Europe, 36 espèces de chauve-souris sont répertoriées, dont aucune ne suc
 
 ### Matériaux
 
-![Planches de bois pour construire le nichoir](./images/planches-de-bois-pour-le-nichoir.jpg 'Crédits : image extraite du vlog de Damien')
+![Planches de bois pour construire le nichoir](images/planches-de-bois-pour-le-nichoir.jpg 'Crédits : image extraite du vlog de Damien')
 
 Les planches ci-dessus sont un exemple. Vous êtes libres d'adapter.
 
@@ -152,11 +152,11 @@ La planche rainurée sert pour les chauves-souris à s'accrocher.
 
 L'assemblage est simple :
 
-![Le nichoir assemblé](./images/nichoir-assemble.jpg 'L'entrée doit être orientée vers le bas. Crédits : image extraite du vlog de Damien')
+![Le nichoir assemblé](images/nichoir-assemble.jpg 'L'entrée doit être orientée vers le bas. Crédits : image extraite du vlog de Damien')
 
 :::tip Pourquoi aussi fin ? Les chauves-souris n'ont pas besoin de plus de 2 cm d'épaisseur, en tout cas, par chez nous.
 
-![Chauve-souris dans un nichoir](./images/chauve-souris-pipistrelle-commune.jpg 'Comme vous le voyez, l'espace de 2 cm leur suffit largement. Crédits : image extraite du vlog de Damien')
+![Chauve-souris dans un nichoir](images/chauve-souris-pipistrelle-commune.jpg 'Comme vous le voyez, l'espace de 2 cm leur suffit largement. Crédits : image extraite du vlog de Damien')
 
 Pour plus d'informations sur les chiroptères, allez visiter le site [Plan National d'Actions Chiroptères](https://plan-actions-chiropteres.fr/). :::
 
@@ -166,13 +166,13 @@ On installe les nichoirs l'hiver pour permettre une colonisation au printemps.
 
 :::warning Si le nichoir est exposé aux intempéries... Prévoyez du bois résistant à l'humidité et un petit _toit_ comme ci-dessous :
 
-![Nichoir avec toit en métal sur un mur en brique](./images/nichoir-avec-toit-mur-brique.jpg 'Crédits : image extraite du vlog de Damien') :::
+![Nichoir avec toit en métal sur un mur en brique](images/nichoir-avec-toit-mur-brique.jpg 'Crédits : image extraite du vlog de Damien') :::
 
 ### Exemple de triples nichoirs
 
-![Nichoir avec plusieurs logements](./images/nichoir-avec-plusieurs-logements.jpg 'Comme un hôtel... mais pour chiroptères. Crédits : image extraite du vlog de Damien')
+![Nichoir avec plusieurs logements](images/nichoir-avec-plusieurs-logements.jpg 'Comme un hôtel... mais pour chiroptères. Crédits : image extraite du vlog de Damien')
 
-![Arrière du nichoir multiple](./images/arriere-nichoir-multiple.jpg 'Crédits : image extraite du vlog de Damien')
+![Arrière du nichoir multiple](images/arriere-nichoir-multiple.jpg 'Crédits : image extraite du vlog de Damien')
 
 ### Où l'installer
 
@@ -198,11 +198,11 @@ Malheureusement, nos chats ont réussi à en attraper 2, dont 1 a été relâch�
 
 ## *Truc 3* : Structure au potager
 
-![Vue aérienne du potager de Damien](./images/vue-aerienne-potager-damien.jpg 'À droite, la flèche indique le potager de petite taille que Damien utilise pour motiver les gens qui ne peuvent pas avoir plus que 20 mètres carrés. Crédits : image extraite du vlog de Damien')
+![Vue aérienne du potager de Damien](images/vue-aerienne-potager-damien.jpg 'À droite, la flèche indique le potager de petite taille que Damien utilise pour motiver les gens qui ne peuvent pas avoir plus que 20 mètres carrés. Crédits : image extraite du vlog de Damien')
 
 Avec _seulement 20 m²_, pensez en trois dimensions : on va faire grimper les végétaux.
 
-![Vue par-dessus du potager de 20 mètres carrés](./images/vue-dessus-potager-20m2.jpg 'Crédits : image extraite du vlog de Damien')
+![Vue par-dessus du potager de 20 mètres carrés](images/vue-dessus-potager-20m2.jpg 'Crédits : image extraite du vlog de Damien')
 
 Pour optimiser l'espace, Damien va :
 
@@ -214,6 +214,6 @@ Pour optimiser l'espace, Damien va :
 
 - agrandir le toit du châssis à droite pour le même but. Le châssis sert pour les semis.
 
-![Chantier d'agrandissement de la toiture du châssis](./images/chantier-agrandissement-toiture-chassis.jpg 'Pour les haricots grimpants, les concombres : le but est d'obtenir un toit végétal. Crédits : image extraite du vlog de Damien')
+![Chantier d'agrandissement de la toiture du châssis](images/chantier-agrandissement-toiture-chassis.jpg 'Pour les haricots grimpants, les concombres : le but est d'obtenir un toit végétal. Crédits : image extraite du vlog de Damien')
 
-![Vue par-dessus du potager de 20 mètres carrés prêt à l'emploi](./images/vue-dessus-potager-20m2-termine.jpg 'Crédits : image extraite du vlog de Damien')
+![Vue par-dessus du potager de 20 mètres carrés prêt à l'emploi](images/vue-dessus-potager-20m2-termine.jpg 'Crédits : image extraite du vlog de Damien')
