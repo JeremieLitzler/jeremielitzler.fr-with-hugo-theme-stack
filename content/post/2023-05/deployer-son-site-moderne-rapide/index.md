@@ -25,7 +25,7 @@ Maintenant que le contenu est prêt :
 npm run docs:build
 ```
 
-3. Si vous avez une erreur, [contactez-moi](../../../page/contactez-moi/README.md) en fournissant l’URL du dépôt. Sinon, continuez avec :
+3. Si vous avez une erreur, [contactez-moi](../../../page/contactez-moi/index.md) en fournissant l’URL du dépôt. Sinon, continuez avec :
 
 ```sh
 git add -A && git commit "pousser le contenu sur GitHub" && git push
@@ -143,7 +143,7 @@ Une fois que le certificat est déployé, vous pourrez accéder à votre site we
 
 ![Certificat Let’s Encrypt est actif. Votre site web est sécurisé.](images/certificat-lets-encrypt-est-actif-votre-site-web-est-securise.jpg 'Certificat Let’s Encrypt est actif. Votre site web est sécurisé ! Crédits: image extraite du site Netlify')
 
-Si vous souhaitez éditer le contenu depuis n’importe quel PC, cela est possible avec NetlifyCMS. Je vous explique [comment l’activer sur votre site web](../activer-netlifycms-sur-son-site-web/README.md).
+Si vous souhaitez éditer le contenu depuis n’importe quel PC, cela est possible avec NetlifyCMS. Je vous explique [comment l’activer sur votre site web](../activer-netlifycms-sur-son-site-web/index.md).
 
 ## Limitations
 

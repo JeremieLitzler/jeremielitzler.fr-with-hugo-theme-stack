@@ -37,7 +37,7 @@ Après 7 mois, je peux vous dire que l’efficacité de ce paillage est vraimen
 
 ## Truc n° 1 : alimentation des volailles
 
-Damien a planté du seigle, comme on a vu sur [l’article de juin](../../06/3-trucs-a-faire-en-juin-au-jardin-damien-dekarz/README.md). Cela contribuera un peu à l’alimentation des volailles.
+Damien a planté du seigle, comme on a vu sur [l’article de juin](../../06/3-trucs-a-faire-en-juin-au-jardin-damien-dekarz/index.md). Cela contribuera un peu à l’alimentation des volailles.
 
 Mais il n’y a pas que les céréales pour nourrir les poules et canards.
 

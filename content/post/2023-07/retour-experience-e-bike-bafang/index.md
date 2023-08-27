@@ -336,6 +336,6 @@ De plus, je ne parle pas des bienfaits pour la santé et cela, ça ne se chiffre
 
 ### Me contacter sur le sujet
 
-C’est [par là](../../../page/contactez-moi/README.md) ou dans le menu « Contact » dans le menu du site.
+C’est [par là](../../../page/contactez-moi/index.md) ou dans le menu « Contact » dans le menu du site.
 
 Merci.

@@ -20,7 +20,7 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=JY
 
 {{< blockcontainer jli-notice-note " Pour ne pas répéter, je mettrai ici les notes complémentaires uniquement." >}}
 
-J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/README.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_).
+J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_).
 
 {{< /blockcontainer >}}
 

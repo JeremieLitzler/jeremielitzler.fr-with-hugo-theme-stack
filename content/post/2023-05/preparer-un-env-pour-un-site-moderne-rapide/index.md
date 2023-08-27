@@ -92,6 +92,6 @@ Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr q
 
 Vous êtes prêts à cloner les dépôts !
 
-Cliquez sur le lien suivant pour [créer votre site web moderne et rapide](../creer-son-site-moderne-rapide/README.md).
+Cliquez sur le lien suivant pour [créer votre site web moderne et rapide](../creer-son-site-moderne-rapide/index.md).
 
-[< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/README.md)
+[< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/index.md)

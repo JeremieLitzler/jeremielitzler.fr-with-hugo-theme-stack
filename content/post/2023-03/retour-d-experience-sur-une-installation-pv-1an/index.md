@@ -24,9 +24,9 @@ Le 27 mars 2022, nous avons mis en service notre installation photovoltaïque. 
 
 ## La série d'articles
 
-- [Installation PV - quel retour d'expérience après 2 mois ?](../../../2022/06/retour-d-experience-sur-une-installation-pv-1mois/README.md)
-- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/README.md)
-- [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md)
+- [Installation PV - quel retour d'expérience après 2 mois ?](../../../2022/06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
 
 ## Usage du cumulus en hiver
 

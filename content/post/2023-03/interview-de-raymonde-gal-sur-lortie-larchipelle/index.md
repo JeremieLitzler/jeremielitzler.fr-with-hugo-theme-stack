@@ -43,7 +43,7 @@ Chez certains animaux de la famille aviaire, l’ortie peut être bénéfique no
 
 Raymonde pense que l’ortie est peu connue parce que réaliser du profit sur la plante sauvage n'est pas autorisé, surtout après le combat qui a eu lieu dans les années 2000 à 2006.
 
-Pendant le scandale sur le _purin d’ortie_, Raymonde et sa famille ont reçu des menaces de prison. Pourquoi ? Parce qu’ils utilisaient l’ortie et en faisaient la promotion. Ils ont défendu leur droit d'utilisation de l’ortie pour qu'elle reste dans le domaine public, comme [Bernard Bertrand le partage dans son entretien avec Damien Dekarz](../la-guerre-de-lortie-avec-bernard-bertrand-damien-dekarz/README.md).
+Pendant le scandale sur le _purin d’ortie_, Raymonde et sa famille ont reçu des menaces de prison. Pourquoi ? Parce qu’ils utilisaient l’ortie et en faisaient la promotion. Ils ont défendu leur droit d'utilisation de l’ortie pour qu'elle reste dans le domaine public, comme [Bernard Bertrand le partage dans son entretien avec Damien Dekarz](../la-guerre-de-lortie-avec-bernard-bertrand-damien-dekarz/index.md).
 
 La société Brayer-Monsento l’a même approché à cette époque, et ce n'était sûrement pas pour partager l'utilisation de l'ortie.
 

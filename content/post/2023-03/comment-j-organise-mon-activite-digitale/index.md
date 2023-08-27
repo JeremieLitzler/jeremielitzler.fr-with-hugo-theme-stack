@@ -46,7 +46,7 @@ Cette solution me permet de :
 - rédiger des articles rapidement [avec Markdown](https://fr.wikipedia.org/wiki/Markdown). VuePress vient ensuite transformer les fichiers Markdown en fichier HTML statique.
 - déployer automatiquement le site web sans effort.
 
-J’ai créé un [dépôt modèle avec support multilangue](https://github.com/Puzzlout/TemplateVuepress/) qui fournit la configuration et les étapes minimums pour démarrer. [N’hésitez pas à me contacter si vous souhaitez être accompagné](../../../page/contactez-moi/README.md).
+J’ai créé un [dépôt modèle avec support multilangue](https://github.com/Puzzlout/TemplateVuepress/) qui fournit la configuration et les étapes minimums pour démarrer. [N’hésitez pas à me contacter si vous souhaitez être accompagné](../../../page/contactez-moi/index.md).
 
 À ce jour, j’utilise cette solution pour :
 
@@ -84,7 +84,7 @@ Allez lire leur article sur le sujet [disponible sur leur site web](https://www.
 
 {{< /blockcontainer >}}
 
-[Contactez-moi](../../../page/contactez-moi/README.md) si vous souhaitez être accompagné pour utiliser cette solution.
+[Contactez-moi](../../../page/contactez-moi/index.md) si vous souhaitez être accompagné pour utiliser cette solution.
 
 ### WordPress avec Divi hébergé sur Cloudways
 
@@ -114,7 +114,7 @@ J’aime beaucoup Cloudways, car j’ai accès à bien plus de fonctionnalités 
 
 Comparé à la solution mutualisée d’Infomaniak, la différence réside du fait que vous être seul sur votre serveur. Sur Infomaniak, un VPS coûte 30 euros par mois (et oui, il procure plus de puissance, mais dans mon cas, le plus petit serveur de Cloudways est largement suffisant).
 
-[Contactez-moi](../../../page/contactez-moi/README.md) si vous êtes intéressés par les scripts de déploiement sur Infomaniak ou Cloudways.
+[Contactez-moi](../../../page/contactez-moi/index.md) si vous êtes intéressés par les scripts de déploiement sur Infomaniak ou Cloudways.
 
 ## Pour les bulletins d’information
 
@@ -137,7 +137,7 @@ Pour les abonnements, lisez la suite
 
 Je n’ai pas d’abonnés premium à ce jour. J’espère que la formation que je suis auprès de [Darius Foroux et son école « Digital Business school »](https://members.dariusforoux.com/digitalbusiness-school) va me permettre de faire grandir cela.
 
-En attendant, j’utilise mon compte Stripe avec des produits en anglais et français. Pour ceux qui souhaitent, un jour, m’aider ou profiter de mes services, ils peuvent [le faire avec un don et un abonnement mensuel ou annuel](../../../page/soutenez-moi/README.md).
+En attendant, j’utilise mon compte Stripe avec des produits en anglais et français. Pour ceux qui souhaitent, un jour, m’aider ou profiter de mes services, ils peuvent [le faire avec un don et un abonnement mensuel ou annuel](../../../page/soutenez-moi/index.md).
 
 Pour le moment, ce site personnel, par exemple, met à disposition des liens de paiements dans 4 monnaies (Euro, Franc suisse, Livres sterling et le dollar américain).
 

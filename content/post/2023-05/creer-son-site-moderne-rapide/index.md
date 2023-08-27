@@ -14,11 +14,11 @@ Dans cet article, je décris les étapes concrètes pour créer, configurer le s
 
 <!-- more -->
 
-<!-- [< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/README.md) |[Préparer son PC](../preparer-un-env-pour-un-site-moderne-rapide/README.md) |[Déployer son site web sur Netlify >](../deployer-son-site-moderne-rapide/README.md) -->
+<!-- [< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/index.md) |[Préparer son PC](../preparer-un-env-pour-un-site-moderne-rapide/index.md) |[Déployer son site web sur Netlify >](../deployer-son-site-moderne-rapide/index.md) -->
 
 ## Pré-requis
 
-- Avoir réalisé [l’étape de préparation de son PC](../preparer-un-env-pour-un-site-moderne-rapide/README.md).
+- Avoir réalisé [l’étape de préparation de son PC](../preparer-un-env-pour-un-site-moderne-rapide/index.md).
 
 ## Cloner les dépôts
 
@@ -69,7 +69,7 @@ Au minimum les fichiers suivants doivent être personnalisés, incluants :
   - vous trouverez un fichier `js`par locale ou langue que le site propose.
   - il faut au minimum modifier, **par chaque fichier `js`** :
 
-    - la variable `websiteDomain`avec l'URL de votre site. On reviendra dessous après [le déploiement.](../deployer-son-site-moderne-rapide/README.md)
+    - la variable `websiteDomain`avec l'URL de votre site. On reviendra dessous après [le déploiement.](../deployer-son-site-moderne-rapide/index.md)
     - la variable`titleDefault`, qui doit être inférieure à 60 caractères
     - la variable`descriptionDefault`, qui doit être comprise entre 50 à 160 caractères
 
@@ -198,8 +198,8 @@ Voici les exemples de sites :
 - le site d’une productrice de quinoa que j’ai réalisé au premier semestre 2023 : [www.inflorescences-quinoa.fr/](https://www.inflorescences-quinoa.fr/)
 - le site de la méthode _Passons le C.A.P_ : [wwww.passonslecap.fr](http://passonslecap.fr/)
 
-Pour des conseils et des besoins particuliers, [contactez-moi](../../../page/contactez-moi/README.md).
+Pour des conseils et des besoins particuliers, [contactez-moi](../../../page/contactez-moi/index.md).
 
-Sinon, continuons avec [l’étape de déploiement](../deployer-son-site-moderne-rapide/README.md)
+Sinon, continuons avec [l’étape de déploiement](../deployer-son-site-moderne-rapide/index.md)
 
-[< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/README.md)
+[< Retour à la table des matières](../comment-realiser-son-site-moderne-et-rapide/index.md)

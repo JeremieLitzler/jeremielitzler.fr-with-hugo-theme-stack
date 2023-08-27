@@ -59,7 +59,7 @@ On infuse les jeunes feuilles.
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
+Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
 
 {{< /blockcontainer >}}
 
@@ -112,7 +112,7 @@ Les affections ostéo-articulaires sont généralement caractérisées par des d
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
+Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
 
 {{< /blockcontainer >}}
 

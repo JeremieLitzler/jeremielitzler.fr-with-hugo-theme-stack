@@ -87,7 +87,7 @@ J’ai de nombreuses fois utilisé ce baume et en une heure seulement, les cramp
 
 Je fais pousser de la consoude chez moi depuis 2 ans et je la propage depuis l’automne dernier.
 
-Si vous intéressez, je peux essayer de récolter les graines pour les partager. [Contactez-moi pour en recevoir](../../../page/contactez-moi/README.md).
+Si vous intéressez, je peux essayer de récolter les graines pour les partager. [Contactez-moi pour en recevoir](../../../page/contactez-moi/index.md).
 
 Sinon je recommande [les pots de Consoude du Jardin du PicVert](https://www.jardindupicvert.com/vivaces/2346-consoude-officinale.html). Je me suis fourni chez eux il y a 2 ans.
 

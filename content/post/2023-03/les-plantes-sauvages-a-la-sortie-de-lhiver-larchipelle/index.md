@@ -189,4 +189,4 @@ Au lieu d’utiliser cela, qui peut saturer le sol en cuivre, on peut aussi réa
 
 ## Conclusion
 
-Si vous aimez ce genre d'article, partageant des notes de ce genre de vlogs, [soutenez-moi](../../../page/soutenez-moi/README.md) ou abonnez-vous à mon bulletin d’information.
+Si vous aimez ce genre d'article, partageant des notes de ce genre de vlogs, [soutenez-moi](../../../page/soutenez-moi/index.md) ou abonnez-vous à mon bulletin d’information.
