@@ -4,39 +4,13 @@ description: 'En avril, on repique, on sème, on plante.'
 image: /images/2023-04-17-titre-de-la-video-de-damien.jpg
 imageAlt: Titre de la video de Damien
 date: 2023-04-17
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/04/3-trucs-a-faire-en-avril-au-jardin-damien-dekarz/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "3 Trucs à faire en Avril au Jardin, par Damien Dekarz" },
-     meta,
-     {
-       "og:description": "En avril, on repique, on sème, on plante.",
-     },
-     meta,
-     {
-       "og:image": /images/Titre de la vidéo de Damien.jpg,
-     },
-    ]
+
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Avril
 ---
-
-![Titre de la video de damien](/images/2023-04-17-titre-de-la-video-de-damien.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-En avril, on repique, on sème, on plante.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -62,7 +36,11 @@ Il a aussi préparé le châssis pour continuer à faire grimper les courges et 
 
 ![Un grillage recyclé maintient des courges](images/un-grillage-recycle-maintient-des-courges.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
 
-:::tip Note personnelle Je pense qu’il faut bien la fixer pour soutenir un poids conséquent. :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Je pense qu’il faut bien la fixer pour soutenir un poids conséquent.
+
+{{< /blockcontainer >}}
 
 ## La biodiversité
 
@@ -74,21 +52,29 @@ Les pollinisateurs s’activent sur les arbres à fruit, aussi bien cultivés qu
 
 Les insectes, comme les coccinelles, arrivent pour s’occuper des pucerons.
 
-:::tip Note personnelle J’ai vu beaucoup de pucerons cette année, plus que les années précédentes, sur les jeunes pousses d’ortie.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’ai vu beaucoup de pucerons cette année, plus que les années précédentes, sur les jeunes pousses d’ortie.
 
 C’est à la fois bien pour les insectes comme la coccinelle, mais moins sympa pour la cueillette d’ortie.
 
 Pour supprimer les pucerons des têtes que je ramasse, je _fouette_ deux têtes l’une contre l’autre. Ça n’enlève pas tout, mais le reste partira facilement dans un bain d’eau et vinaigre de cidre.
 
-Un petit coup d’essoreuse à salade, et ils sont prêts pour consommer en tisane et à sécher pour consommer plus tard. :::
+Un petit coup d’essoreuse à salade, et ils sont prêts pour consommer en tisane et à sécher pour consommer plus tard.
 
-:::tip Fait intéressant Le papillon _Azuré commun_, présent chez nous (cela peut varier selon les régions), ressemble à ça :
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-tip "Fait intéressant" >}}
+
+Le papillon _Azuré commun_, présent chez nous (cela peut varier selon les régions), ressemble à ça :
 
 ![2 papillons Azuré commun, un mâle et une femelle](images/2-papillons-azure-commun-un-male-et-une-femelle.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
 
 Il s’agit d’un papillon myrmécophile, c’est-à-dire qu’il sécrète une phéromone similaire à la reine d’une colonie de fourmis.
 
-Celles-ci transportent alors la larve du papillon chez elles et la larve sera donc protégée jusqu’à sa transformation. :::
+Celles-ci transportent alors la larve du papillon chez elles et la larve sera donc protégée jusqu’à sa transformation.
+
+{{< /blockcontainer >}}
 
 ## Les 3 trucs du mois d’avril
 
@@ -114,13 +100,17 @@ Il réalise un semis de laitue toutes les 3 semaines (ça doit faire un paquet 
 
 ![Une myriade de laitues prêtes à repiquer](images/une-myriade-de-laitues-pretes-a-repiquer.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
 
-:::tip Note personnelle Cette année, je m’essaie au mesclun, et j’ai acheté une variété verte et une variété rouge ! Ça tombe bien.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Cette année, je m’essaie au mesclun, et j’ai acheté une variété verte et une variété rouge ! Ça tombe bien.
 
 Pour l’instant, ça a l’air de bien fonctionner.
 
 Aussi, j’ai trouvé une source de compost en vrac pour moins de 50 euros la tonne.
 
-Avant de repiquer les pois mangetout et le mesclun rouge, j’ai appliqué environ 5 cm de ce compost. Je suis surpris que les plants n’aient pas été encore attaqués, malgré la pluie bien abondante les 2 dernières semaines. :::
+Avant de repiquer les pois mangetout et le mesclun rouge, j’ai appliqué environ 5 cm de ce compost. Je suis surpris que les plants n’aient pas été encore attaqués, malgré la pluie bien abondante les 2 dernières semaines.
+
+{{< /blockcontainer >}}
 
 L’autre tactique de Damien est de repiquer des végétaux qui ont bien grandi dans leur pot à la place de réaliser du semi-direct.
 
@@ -152,13 +142,17 @@ Aussi, privilégier les plantes qui ne sont pas promptes à finir dans l’assie
 
 Les limaces se repèrent à l’odorat, d’où les nombreuses plantes aromatiques ci-dessus.
 
-:::tip Note personnelle J’avoue, qu’avec le compost que je trouve en vrac, je ne suis pas sûr de la raison de l’absence d’attaques des limaces. Sur et autour de mes laitues et mon échinacée (qui vient de sortir et est très attaquée en général) se trouvent beaucoup de compost et une grande quantité d’ail planté en novembre et janvier.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’avoue, qu’avec le compost que je trouve en vrac, je ne suis pas sûr de la raison de l’absence d’attaques des limaces. Sur et autour de mes laitues et mon échinacée (qui vient de sortir et est très attaquée en général) se trouvent beaucoup de compost et une grande quantité d’ail planté en novembre et janvier.
 
 Je pense que le compost joue autant un rôle protecteur, car j’ai un plant d’échinacée, au lieu de consoudes sans ail, qui semble avoir récupéré suite à l’application de compost.
 
 Quand il est sorti, les limaces l’attaquaient clairement.
 
-Après l’application du compost, les feuilles ont grandi bien plus et ne montrent pas de signe d’agression. :::
+Après l’application du compost, les feuilles ont grandi bien plus et ne montrent pas de signe d’agression.
+
+{{< /blockcontainer >}}
 
 Aussi, si vous devez arroser, faites-le le matin, pour éviter d’inviter les limaces dans des conditions idéales en arrosant le soir…
 
@@ -172,14 +166,18 @@ Parmi les prédateurs les plus efficaces, les insectes et un vers dénommé _Leu
 
 ![Liste d’insectes prédateurs des limaces.](images/liste-dinsectes-predateurs-des-limaces.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
 
-:::tip Note personnelle Par exemple, j’ai remarqué qu’un paillage de foin ou de paille attire les blaireaux.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Par exemple, j’ai remarqué qu’un paillage de foin ou de paille attire les blaireaux.
 
 Du coup, peut-être qu’ils aiment les limaces, mais, dans mon cas, ils labourent le jardin et je peux vous dire que replanter 3 fois des pois mangetout, ça ne permet pas d’en manger beaucoup…
 
 Pour contrer les blaireaux, j’ai toujours 2 solutions :
 
 - grillage assez fin autour du potager sur 30 cm de haut
-- utiliser du paillage de feuilles mortes :::
+- utiliser du paillage de feuilles mortes
+
+{{< /blockcontainer >}}
 
 Les canards _coureur indien_ sont très connus pour l’aide qu’ils apportent au jardin. Damien a réalisé une vidéo sur le sujet disponible [via ce lien](https://www.youtube.com/watch?v=8zdvVoBuUtY).
 
@@ -191,9 +189,13 @@ De plus, les poules viendront fertiliser le sol au passage.
 
 En général, si vous voulez cultiver sur une zone au printemps, il est préférable de l’avoir paillage à l’automne.
 
-:::tip Note personnelle J’utilise des feuilles mortes depuis 2 ans et la vie dans le sol semble y trouver son compte.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
-Cette année, j’ai pu récupérer 8 mètres cubes de feuilles. :::
+J’utilise des feuilles mortes depuis 2 ans et la vie dans le sol semble y trouver son compte.
+
+Cette année, j’ai pu récupérer 8 mètres cubes de feuilles.
+
+{{< /blockcontainer >}}
 
 Damien retire le paillage et utilise une Grelinette pour assouplir la terre.
 

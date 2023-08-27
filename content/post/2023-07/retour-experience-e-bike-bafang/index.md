@@ -4,36 +4,12 @@ description: "Voilà plus de 5 ans que je roule en VAE, au début en Scott CX Co
 image: /images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg
 imageAlt: A remplacer
 date: 2023-07-25
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/07/retour-experience-e-bike-bafang,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Mon retour d'expérience avec le kit Bafang VAE 250 W" },
-     meta,
-     {
-       "og:description": "Voilà plus de 5 ans que je roule en VAE, au début en Scott CX Comp de 2011, puis sur un Raleigh Brazil. Je vous explique le pourquoi, comment et mon ressenti.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg,
-     },
-    ]
 categories:
   - Avis de produits
 tags:
   - VAE
   - Bafang
 ---
-
-![Le Raleigh Brazil 300 EX en mode VAE](/images/2023-07-25-le-raleigh-brazil-300-ex-en-mode-vae.jpg)
-
-Voilà plus de 5 ans que je roule en VAE, au début sur une base de Scott CX Comp (cyclocross), puis sur un Raleigh Brazil 300 EX (route). Je vous explique le pourquoi, comment et mon ressenti après plus de 5 ans d'utilisation+.
 
 <!-- more -->
 
@@ -65,7 +41,7 @@ Mon choix s’est orienté vers le kit Bafang fabriqué en Chine, revendu en Fra
 
 J’ai échangé pendant 2 mois avec Cycloboost (mars 2018 à avril 2018) afin de m’assurer que le kit soit compatible avec mon vélo cyclocross, qui est typé « route » et donc la géométrie du cadre et les dimensions n’étaient pas exactement les mêmes qu’un VTC ou un VTT classique.
 
-:::note Point légal sur les VAE
+{{< blockcontainer jli-notice-note "Point légal sur les VAE" >}}
 
 Un VAE est légal sur la route public s'il remplit 3 conditions :
 
@@ -73,7 +49,7 @@ Un VAE est légal sur la route public s'il remplit 3 conditions :
 - il faut pédaler pour être assistance (pas d'accélérateur)
 - la puissance du moteur ne dépasse pas 250 W
 
-:::
+{{< /blockcontainer >}}
 
 J’ai pourtant posé des questions sur le fait d’utiliser un kit avec un moteur de 500 W.
 
@@ -250,13 +226,13 @@ En lisant sur le sujet, le froid n’est pas trop l’ami des batteries et j’a
 
 Cela a permis de gagner un peu d’autonomie, mais je pense que le mal était fait : j’ai sûrement perdu de l’autonomie en roulant sans protection les hivers 2018-2019, 2019-2020 et 2020-2021…
 
-:::tip Un des plus de la housse
+{{< blockcontainer jli-notice-tip "Un des plus de la housse" >}}
 
 Elle permet de prévenir l’intrusion de l’eau entre la batterie et la platine de batterie, ce qui posait problème en cas de forte averse !
 
 ![La housse néoprène enveloppe la batterie contre le froid et la pluie](images/la-housse-neoprene-enveloppe-la-batterie-contre-le-froid-et-la-pluie.jpg)
 
-:::
+{{< /blockcontainer >}}
 
 En 2020, j’ai contacté Cycloboost, qui m’a dit :
 
@@ -304,9 +280,9 @@ Sur [l’article anglais « A Hacker’s Guide To Programming The BBS02 & BBSHD
 4. rebrancher la batterie au moteur **sans allumer le kit**
 5. lire et programmer le contrôleur en confirmant l'écriture de la nouvelle configuration
 
-:::warning Attention, sauvegarder la configuration initial au cas où…
+{{< blockcontainer jli-notice-warning "Attention, sauvegarder la configuration initial au cas où…" >}}
 
-:::
+{{< /blockcontainer >}}
 
 ![Programmer la section « Général »](images/programmer-la-section-general.png)
 
@@ -363,9 +339,3 @@ De plus, je ne parle pas des bienfaits pour la santé et cela, ça ne se chiffre
 C’est [par là](../../../page/contactez-moi/README.md) ou dans le menu « Contact » dans le menu du site.
 
 Merci.
-
-:::center
-
-⏬⏬⏬
-
-:::

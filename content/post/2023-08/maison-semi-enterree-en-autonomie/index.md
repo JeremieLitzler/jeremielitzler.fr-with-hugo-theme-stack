@@ -179,7 +179,7 @@ C’est important à savoir, surtout pour ceux qui n’aimeraient pas les grands
 
 Luc et Magalie utilisent le gaz, qu’ils aimeraient produire eux-mêmes grâce à la formation de [picojoules](https://www.picojoule.org/) sur la production de biogaz.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Comme chez moi, ils utilisent en journée une plaque à induction et un petit four, alimentés par l’excédent de production électrique.
 
@@ -313,7 +313,7 @@ En moyenne, la capacité de la batterie descend de 20 % par nuit, été comme h
 
 Comme chez moi, ils utilisent un routeur 4G+ de la marque TP-Link qui permet d’utiliser une carte SIM classique et de profiter d’une connexion Internet plus que décente.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Dans mon cas, j’ai installé le routeur à 100 mètres de la maison, pas seulement pour éviter les ondes électromagnétiques dans la maison, mais aussi parce que la réception était bien meilleure là-bas.
 
@@ -388,7 +388,7 @@ Luc et Magalie sont passés par toutes les options : yourte, tinyhouse, caravan
 
 Pourquoi ? Selon Luc, les autres habitats type yourte, tinyhouse ou caravane signifient une plus grande précarité lorsqu’on vit dans ceux-ci.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Tout est une question point de vue de chacun.
 
@@ -404,7 +404,7 @@ Ainsi, pour certains, l’habitat peut ne pas être précaire, mais simplement p
 
 Luc et Magalie se sont rencontrés alors qu’ils vivaient tous les deux ce malaise de la vie de société qu’on vit tous : boulot de 9 h à 17 h, vivre en ville, dans un appartement, etc.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Je ne pense pas que tout le monde choisisse la vie en ville, dans un appartement, ou le boulot de 9 h à 17 h, mais la majorité tombe dans ce cas.
 
@@ -444,7 +444,7 @@ Même si l’on parle de développement durable, respect de l’environnement, i
 
 L’administration a mis beaucoup de _bâtons dans les roues_ et il faut le savoir : c’est le cas pour beaucoup de ce type de projet.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 C’est nouveau, c’est différent, ça peut faire un peu peur et cela prend beaucoup plus de temps pour l’administration à comprendre et accepter.
 

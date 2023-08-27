@@ -4,39 +4,12 @@ description: "En mai, fais ce qu'il te plait, comme dis le dicton. Et au jardin,
 image: /images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg
 imageAlt: Un homme ramasse des radis dans un jardin surélevé
 date: 2023-05-16
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/3-trucs-a-faire-en-mai-au-jardin-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "3 Trucs à faire en Mai au Jardin, avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "En mai, fais ce qu'il te plait, comme dis le dicton. Et au jardin, est-ce la même chose ? Damien nous explique !",
-     },
-     meta,
-     {
-       "og:image": /images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Mai
 ---
-
-![Un homme ramasse des radis dans un jardin surélevé](/images/2023-05-17-un-homme-ramasse-des-radis-dans-un-jardin-sureleve.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-En mai, fais ce qu’il te plait, comme dis le dicton. Et au jardin, est-ce la même chose ? Damien nous explique !
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -120,13 +93,15 @@ Dans ce potager, les techniques d’arrosage en goutte-à-goutte et de protectio
 
 Par contre, pour du maraîchage, on doit procéder autrement. [Le film _Une ferme sur sol vivant_](https://www.youtube.com/watch?v=T6cFPxLRkTs) est un très bon début pour un projet de maraîchage. J’ai aussi écrit [plusieurs articles sur le sujet grâce aux vlogs du _Dutch Farmer_](https://iamjeremie.me/tag/the-dutch-farmer/).
 
-:::tip Note personnelle Je pratique la culture sur sol vivant depuis 3 ans en couvrant tout mon jardin chaque hiver 20 cm de feuilles mortes.
+{{< blockcontainer jli-notice-tip "Note personnelle" >}} Je pratique la culture sur sol vivant depuis 3 ans en couvrant tout mon jardin chaque hiver 20 cm de feuilles mortes.
 
 Jusqu’à l’été, les feuilles à elles seules me permettent de garder une humidité surprenante et je ne vous dis pas la taille des vers de terre qui naviguent sous la couverture de feuilles.
 
 Par exemple, ce début d’année 2023 a été particulièrement peu arroser par le ciel. Et pourtant, 5 cm sous la couche de feuilles, l’humidité est là.
 
-Je préfère les feuilles au foin ou la paille, car c’est plus économique. Surtout, j’en trouve en abondance dans un grand parce communale proche de chez moi qui est très sauvage avec de très grands arbres produisant des petites feuilles. Ces feuilles se décomposent sans problème et en juillet, je dois même en rajouter pour tenir jusqu’à l’automne. :::
+Je préfère les feuilles au foin ou la paille, car c’est plus économique. Surtout, j’en trouve en abondance dans un grand parce communale proche de chez moi qui est très sauvage avec de très grands arbres produisant des petites feuilles. Ces feuilles se décomposent sans problème et en juillet, je dois même en rajouter pour tenir jusqu’à l’automne.
+
+{{< /blockcontainer >}}
 
 ## Entretenir les greffes
 

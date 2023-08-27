@@ -4,33 +4,11 @@ description: "Avec les services de Netlify, le déploiement n'a jamais été aus
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-15
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/deployer-son-site-moderne-rapide/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Déployer votre site web moderne pour moins de 10 euros !" },
-     meta,
-     {
-       "og:description": "Avec les services de Netlify, le déploiement n'a jamais été aussi simple.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
-     },
-    ]
 categories:
   - Tutoriels
 tags:
   - Web
 ---
-
-![Diagramme expliquant l’organisation de la JAMSTACK](/images/2023-04-19-jamstack-javascript-apis-markup.webp 'Image issue de l\'article ["New to Jamstack? Everything You Need to Know to Get Started"](https://snipcart.com/blog/jamstack) de Snipcart.')
 
 Avec les services de Netlify, le déploiement n’a jamais été aussi simple.
 
@@ -65,9 +43,13 @@ Une fois que le domaine est provisionné, il faut paramétrer Netlify pour que l
 
 Pour un domaine de base, il faut préalable supprimer les entrées DNS `A`sur le domaine `mon-super-domaine.fr`et `wwww.mon-super-domaine.fr`.
 
-:::warning Sur OVH… J’ai eu une fois un temps de propagation de la suppression de l’entrée `A`sur le sous-domaine `www` qui a pris plus des dizaines de minutes.
+{{< blockcontainer jli-notice-warning "Sur OVH…" >}}
 
-Soyez patients ;) :::
+J’ai eu une fois un temps de propagation de la suppression de l’entrée `A`sur le sous-domaine `www` qui a pris plus des dizaines de minutes.
+
+Soyez patients ;)
+
+{{< /blockcontainer >}}
 
 ## Déployer le site sur Netlify
 
@@ -112,13 +94,15 @@ Une fois la zone DNS prête,
 - ajouter le domaine dans Netlify en sélectionnant votre site depuis [app.netlify.com](https://app.netlify.com), puis en cliquant `Site settings` puis `Domain management`.
   - dans`Production domains` , cliquer `Add domain` et confirmer l’ajout sans passer par `Netlify DNS`
 
-:::warning Netlify DNS
+{{< blockcontainer jli-notice-warning "Netlify DNS" >}}
 
 Vous verrez sûrement l’alerte suivante :
 
 > .fr domains can’t be registered through Netlify. You can still add mon-site.fr to your Netlify site if you already own the domain. Select Add domain to add it to your site. You can configure Netlify DNS for this domain later.
 
-Cliquer `Add domain` ou `Add subdomain` quand même. :::
+Cliquer `Add domain` ou `Add subdomain` quand même.
+
+{{< /blockcontainer >}}
 
 - une fois sur l’écran ci-dessous : ![Écran suite à l’ajout du domaine personnalisé](images/ecran-suite-a-lajout-du-domaine-personnalise.jpg 'Crédits: image extraite du site Netlify')
 
@@ -149,7 +133,11 @@ Cliquer `Add domain` ou `Add subdomain` quand même. :::
 
 ![Certificat Let’s Encrypt en cours de provisionnement](images/certificat-lets-encrypt-en-cours-de-provisionnement.jpg)
 
-:::warning Temps de provisionnement du certificat HTTPS Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement. :::
+{{< blockcontainer jli-notice-warning "Temps de provisionnement du certificat HTTPS" >}}
+
+Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement.
+
+{{< /blockcontainer >}}
 
 Une fois que le certificat est déployé, vous pourrez accéder à votre site web sécurisé ! Ex : `https://mon-super-domaine.fr`.
 

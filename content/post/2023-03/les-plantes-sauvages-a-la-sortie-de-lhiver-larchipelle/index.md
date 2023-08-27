@@ -34,10 +34,6 @@ tags:
   - Plantes sauvages
 ---
 
-![Pulmonaria officinalis](/images/2023-03-29-pulmonaria-officinalis.jpg 'Crédits : image issue de [Wikimedia.org](https://commons.wikimedia.org/wiki/File:Pulmonaria_officinalis_1.jpg)')
-
-À la sortie de l’hiver, les arbres n’ont pas encore leurs feuilles. C’est l’occasion pour les plantes couvre-sol de se développer.
-
 Merci à Brian et [Rémi du jardin d’émerveille](https://www.youtube.com/channel/UC9Q8WeyCb3yxySC3P3mGpBw) ([site Internet de Rémi](https://www.lejardindemerveille.net/)) pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Brian sur sa chaîne _L’Archi'Pelle_.
 
 <!-- more -->
@@ -143,16 +139,23 @@ Source : [Wikipédia](https://fr.wikipedia.org/wiki/Totum#:~:text=Son%20but%20th
 
 Toutes ces plantes apportent principalement des oligoéléments et des minéraux, plus que les glucides, protéines, fibres et autres macronutriments.
 
-:::warning Attention  
+{{< blockcontainer jli-notice-warning "Attention" >}}
+
 Sur les plantes sauvages, on fera attention où l’on cueille, mais aussi, les possibles parasites et urines des animaux sauvages.
 
-Laver sa cueillette peut être utile avant de la consommer. :::
+Laver sa cueillette peut être utile avant de la consommer.
 
-:::warning Attention aux plantes proches de l’eau Si vous cueillez proche d’une source d’eau, on fera attention à la douve du foie.
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-warning "Attention aux plantes proches de l’eau" >}}
+
+Si vous cueillez proche d’une source d’eau, on fera attention à la douve du foie.
 
 La grande douve du foie est un trématode de grande taille. C’est un ver plat parasite qui infecte le foie et les voies biliaires des herbivores ruminants, particulièrement les ovins, souvent les bovins, et occasionnellement l’homme.
 
-Source : [Wikipédia](https://fr.wikipedia.org/wiki/Fasciola_hepatica) :::
+Source : [Wikipédia](https://fr.wikipedia.org/wiki/Fasciola_hepatica)
+
+{{< /blockcontainer >}}
 
 ## Des plantes à éviter
 

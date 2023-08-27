@@ -4,33 +4,11 @@ description: 'Dans cet article, je décris les étapes concrètes pour créer, c
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-11
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/creer-son-site-moderne-rapide/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Construire son site moderne et rapide !" },
-     meta,
-     {
-       "og:description": "Dans cet article, je décris les étapes concrètes pour créer, configurer le site et personnaliser son contenu.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
-     },
-    ]
 categories:
   - Tutoriels
 tags:
   - Web
 ---
-
-![Diagramme expliquant l’organisation de la JAMSTACK](/images/2023-04-19-jamstack-javascript-apis-markup.webp 'Image issue de l\'article ["New to Jamstack? Everything You Need to Know to Get Started"](https://snipcart.com/blog/jamstack) de Snipcart.')
 
 Dans cet article, je décris les étapes concrètes pour créer, configurer le site et personnaliser son contenu.
 
@@ -44,7 +22,11 @@ Dans cet article, je décris les étapes concrètes pour créer, configurer le s
 
 ## Cloner les dépôts
 
-:::tip Optionnellement, créer un dossier <em>Git</em> A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux. :::
+{{< blockcontainer jli-notice-tip "Optionnellement, créer un dossier <em>Git</em>" >}}
+
+A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux.
+
+{{< /blockcontainer >}}
 
 - Lancer la commande suivante qui crée un dossier`NomDeVotreDepot`.
 
@@ -72,7 +54,9 @@ Maintenant que les dépôts sont clonés :
 
 On copiera les fichiers du dossier `TemplateVuepress`dans le dossier`NomDeVotreDepot`, incluant le dossier `.vscode`pour les extraits de code permettant de rédiger son contenu plus rapidement.
 
-:::warning Sauf le dossier <em>.git</em> et <em>.github</em> :::
+{{< blockcontainer jli-notice-warning "Sauf le dossier <em>.git</em> et <em>.github</em>" >}}
+
+{{< /blockcontainer >}}
 
 ![Fichiers à copier du dépôt modèle vers votre dépôt](images/fichiers-a-copier-du-depot-modele-vers-votre-depot.jpg)
 

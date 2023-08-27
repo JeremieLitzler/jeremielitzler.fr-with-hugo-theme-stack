@@ -4,42 +4,12 @@ description: "Semis, plantations, boutures, arrosages, récoltes sauvages, etc .
 image: /images/2023-06-26-titre-du-vlog.jpg
 imageAlt: Titre du vlog
 date: 2023-06-26
-prev:
-  text: "Toutes mes notes des vlogs de Damien Dekarz"
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/que-faire-au-jardin-en-juin-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Que faire au jardin en juin, avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Semis, plantations, boutures, arrosages, récoltes sauvages, etc ... En juin, on est bien occupé !",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-26-titre-du-vlog.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Juin
 ---
-
-![Titre du vlog](/images/2023-06-26-titre-du-vlog.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-Semis, plantations, boutures, arrosages, récoltes sauvages, etc… En juin, on est bien occupé !
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -95,7 +65,11 @@ Comme lui, j’utilise des ficelles pour suspendre ou _encercler_ les plantes qu
 
 Avec les oyas, c’est-à-dire des pots en terre cuite, Damien profite de la porosité pour diffuser lentement mais sûrement l’eau aux plantes proches de l’oya.
 
-:::tip Note personnelle C’est une technique que j’ai découverte cette année, mais je ne la testerai pas avant l’année prochaine, car les pots ne sont pas donnés. :::
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
+
+C’est une technique que j’ai découverte cette année, mais je ne la testerai pas avant l’année prochaine, car les pots ne sont pas donnés.
+
+{{< /blockcontainer >}}
 
 Au passage, Damien rappelle 2-3 choses concernant l’arrosage :
 

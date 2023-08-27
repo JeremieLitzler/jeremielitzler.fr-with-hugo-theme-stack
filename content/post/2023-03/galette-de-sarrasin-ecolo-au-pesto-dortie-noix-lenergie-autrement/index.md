@@ -4,29 +4,6 @@ description: "Réaliser ses galettes au sarrasins avec un accompagnement d'ortie
 image: /images/2023-03-07-galette-de-sarrasin-ecolo-au-pesto-dortie-noix-lenergie-autrement.jpg
 imageAlt: 2 galettes de sarrasin qui cuisent sur une plaque
 date: 2023-03-07
-prev:
-  text: 'Toutes mes notes des vlogs de Barnabé'
-  link: ../../../tag/barnabe-chaillot/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/03/galette-de-sarrasin-ecolo-au-pesto-dortie-noix-lenergie-autrement,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Galette de sarrasin sans électricité, avec Barnabé Chaillot" },
-     meta,
-     {
-       "og:description": "Réaliser ses galettes au sarrasins avec un accompagnement d'ortie et noix... Hum, Barnabé nous régale ! A table !",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-07-galette-de-sarrasin-ecolo-au-pesto-dortie-noix-lenergie-autrement.jpg,
-     },
-    ]
 categories:
   - Energie
   - Alimentation
@@ -35,10 +12,6 @@ tags:
   - Ortie
   - Sarrasin
 ---
-
-![2 galettes de sarrasin qui cuisent sur une plaque](/images/2023-03-07-galette-de-sarrasin-ecolo-au-pesto-dortie-noix-lenergie-autrement.jpg 'Crédits: image extraite du vlog sur la chaîne de Barnabé Chaillot')
-
-Réaliser ses galettes au sarrasin avec un accompagnement d’ortie et noix… Hum, Barnabé nous régale ! À table !
 
 Merci à Barnabé pour le partage de son savoir et de ses astuces ! Cet article résume mes notes du vlog réalisé par Barnabé sur sa chaîne _Energie autrement_.
 
@@ -54,7 +27,11 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=-s
 
 Barnabé prend une petit partie de la récolte de l’année précédente pour l’année à venir.
 
-:::tip Note personnelle Je pense qu’il a utilisé du sarrasin décortiqué d’un magasin bio pour démarrer ;) :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Je pense qu’il a utilisé du sarrasin décortiqué d’un magasin bio pour démarrer ;)
+
+{{< /blockcontainer >}}
 
 Le sarrasin pousse très bien sur des sol pauvre et nécessite aucun engrais ou pesticide.
 
@@ -106,7 +83,11 @@ Barnabé suggère d’utiliser un _moulin à céréales manuel_ ou _moulin à gr
 
 Avant de passer les graines au moulinn Barnabé souffle gentillement sur le mix de grains et de déchets pour supprimer les parties plus légères.
 
-:::tip Note personnelle J’ai utilisé la même technique pour des lentilles vertes il y a 2 ans. :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’ai utilisé la même technique pour des lentilles vertes il y a 2 ans.
+
+{{< /blockcontainer >}}
 
 Ensuite,
 

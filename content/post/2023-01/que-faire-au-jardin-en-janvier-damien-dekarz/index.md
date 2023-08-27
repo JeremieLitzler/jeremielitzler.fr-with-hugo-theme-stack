@@ -4,42 +4,12 @@ description: "En janvier, le jardin est au repos. Il reste toutefois pas mal de 
 date: 2023-01-05
 image: /images/2023-01-05-une-myriade-de-boutures.jpg
 imageAlt: Une myriade de boutures dans des pots
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      meta,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/01/que-faire-au-jardin-en-janvier-damien-dekarz/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Que faire au jardin en janvier avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "En janvier, le jardin est au repos. Il reste toutefois pas mal de choses à faire. Damien va nous expliquer ce qu'il réalise.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-01-05-une-myriade-de-boutures.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En janvier
 ---
-
-![Une myriade de boutures dans des pots](/images/2023-01-05-une-myriade-de-boutures.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-En janvier, le jardin est au repos. Il reste toutefois pas mal de choses à réaliser. Damien va nous expliquer.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -84,7 +54,11 @@ On place ensuite les pots en extérieur, à mi-ombre.
 
 Normalement, les pépins ne germent pas avant le printemps, mais s’il fait doux, ils germeront plus vite et il faudra les placer dans une serre.
 
-:::tip Astuce pour obtenir une meilleure germination Faites tromper les pépins une nuit dans du vinaigre. :::
+{{< blockcontainer jli-notice-tip "Astuce pour obtenir une meilleure germination" >}}
+
+Faites tromper les pépins une nuit dans du vinaigre.
+
+{{< /blockcontainer >}}
 
 ## Plantes sauvages
 
@@ -110,7 +84,11 @@ En janvier, vous pouvez trouver un bon nombre de plantes sauvages pour la consom
 
 ![Brocoli sauvage](images/brocoli-sauvage.jpg 'Crédits : image extraite du vlog de Damien')
 
-:::warning Plus simple à reconnaitre au printemps Damien nous montrera quand les plants sont en fleurs dans quelques mois. :::
+{{< blockcontainer jli-notice-warning "Plus simple à reconnaitre au printemps" >}}
+
+Damien nous montrera quand les plants sont en fleurs dans quelques mois.
+
+{{< /blockcontainer >}}
 
 - La centranthe rouge, ou aussi appelé _lilas d’Espagne_ dont les feuilles sont moins amères en hiver qu’en été.
 

@@ -4,29 +4,6 @@ description: "Le gingembre : qui ne le connait pas ? Cette plante dont on consom
 image: /images/2023-06-13-un-morceau-de-gingembre.jpg
 imageAlt: Un morceau de gingembre
 date: 2023-06-13
-prev:
-  text: "Toutes mes notes des vlogs de Christophe Bernard"
-  link: ../../../tag/christophe-bernard/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/le-gingembre-altheaprocence,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le gingembre, par Christophe Bernard" },
-     meta,
-     {
-       "og:description": "Le gingembre : qui ne le connait pas ? Cette plante dont on consomme la racine, ou rhizome, est très appréciée dans le monde entier. Christophe nous explique.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-13-un-morceau-de-gingembre.jpg,
-     },
-    ]
 categories:
   - Santé
 tags:
@@ -34,10 +11,6 @@ tags:
   - Plantes
   - Gingembre
 ---
-
-![Un morceau de gingembre](/images/2023-06-13-un-morceau-de-gingembre.jpg 'Crédits : image extraite du vlog de Christophe Bernard')
-
-Le gingembre : qui ne le connait pas ? Cette plante dont on consomme la racine, ou rhizome, est très appréciée dans le monde entier. Christophe nous explique.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
 
@@ -107,7 +80,11 @@ La forme sèche est considérée plus chaud et épicée. Faites le test !
 
 Comme évoqué plus haut, la forme fraiche se rape ou se coupe en petits morceaux.
 
-:::tip Pour besoin d’enlever la peau si vous achetez bio Par contre, laver le rhizome, car des traces de terre peuvent être présentes. :::
+{{< blockcontainer jli-notice-tip "Pour besoin d’enlever la peau si vous achetez bio" >}}
+
+Par contre, laver le rhizome, car des traces de terre peuvent être présentes.
+
+{{< /blockcontainer >}}
 
 Il est possible de réaliser des teintures ou aussi des macérats.
 

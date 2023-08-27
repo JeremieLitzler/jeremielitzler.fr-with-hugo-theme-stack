@@ -4,42 +4,12 @@ description: 'Feuille musicale, la consoude se révèle surtout utile pour guér
 image: /images/2023-04-25-feuille-de-consoude-officinale.jpg
 imageAlt: Feuille de consoude officinale
 date: 2023-04-25
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/04/tout-sur-la-grande-consoude-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La consoude consolide et cicatrise, avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "Feuille musicale, la consoude se révèle surtout utile pour guérir depuis des millénaires.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-25-feuille-de-consoude-officinale.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Consoude
 ---
-
-![Feuille de consoude officinale](/images/2023-04-25-feuille-de-consoude-officinale.jpg 'Crédits: image extraite du vlog du Chemin de la Nature')
-
-Feuille musicale, la consoude se révèle surtout utile pour guérir depuis des millénaires.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
@@ -60,9 +30,13 @@ Le nom scientifique est _symphytum officinale_.
 
 Ses poils bien rêches permettent d’accrocher une feuille à ses vêtements.
 
-:::tip Fait intéressant Appliquer une feuille de consoude sur son t-shirt attirera l’attention des passants ;) C’est une bonne astuce pour créer un lien social.
+{{< blockcontainer jli-notice-tip "Fait intéressant" >}}
 
-Le gadge avec une feuille n’est fonctionne qu’en appliquant la face inférieure (où se trouvent les poils recourbés) contre le tissu. :::
+Appliquer une feuille de consoude sur son t-shirt attirera l’attention des passants ;) C’est une bonne astuce pour créer un lien social.
+
+Le gadge avec une feuille n’est fonctionne qu’en appliquant la face inférieure (où se trouvent les poils recourbés) contre le tissu.
+
+{{< /blockcontainer >}}
 
 ### Ses fleurs
 
@@ -103,7 +77,9 @@ On utilise généralement les racines, plus concentrés en l’allantoïne.
 
 Le plus connu des usages est le baume de consoude.
 
-:::tip Note personnelle J’utilise [le baume de la grande consoude du Dr Theiss](https://www.drtheiss.fr/beaute-soins/baume-a-la-grande-consoude-100ml/).
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’utilise [le baume de la grande consoude du Dr Theiss](https://www.drtheiss.fr/beaute-soins/baume-a-la-grande-consoude-100ml/).
 
 J’ai un CMT 1A et lorsque je fais des efforts trop prolongés, mes muscles se crampent facilement et tout le monde sait comment c’est douloureux.
 
@@ -113,7 +89,9 @@ Je fais pousser de la consoude chez moi depuis 2 ans et je la propage depuis l�
 
 Si vous intéressez, je peux essayer de récolter les graines pour les partager. [Contactez-moi pour en recevoir](../../../page/contactez-moi/README.md).
 
-Sinon je recommande [les pots de Consoude du Jardin du PicVert](https://www.jardindupicvert.com/vivaces/2346-consoude-officinale.html). Je me suis fourni chez eux il y a 2 ans. :::
+Sinon je recommande [les pots de Consoude du Jardin du PicVert](https://www.jardindupicvert.com/vivaces/2346-consoude-officinale.html). Je me suis fourni chez eux il y a 2 ans.
+
+{{< /blockcontainer >}}
 
 Christophe recommande toutefois les alcoolatures de racines fraiches (avec un alcool à 45° ou moins) qui extraient mieux l’allantoïne.
 
@@ -129,23 +107,35 @@ Pour plus d’informations, si vous parlez anglais, [rendez-vous sur mon blog an
 
 Si vous souhaitez que je traduise un article, [faites un don](https://buy.stripe.com/cN25m1foh6VTaPe6oq) et je créerai l’article sur le site français.
 
-:::warning La consoude est envahissante ! Un petit morceau de rhizome suffit pour que la plante reparte ! :::
+{{< blockcontainer jli-notice-warning "La consoude est envahissante !" >}}
 
-:::tip Note personnelle J’ai introduit la consoude dans mon jardin dans un bac construit à partir de palettes.
+Un petit morceau de rhizome suffit pour que la plante reparte !
+
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
+
+J’ai introduit la consoude dans mon jardin dans un bac construit à partir de palettes.
 
 Je n’ai pas la chance d’en trouver à distance raisonnable (à pied) de chez moi.
 
-Et elle produit beaucoup de matière verte pour mon composte donc elle est la bienvenue sur un sol AOC Saint-Joseph très granité. :::
+Et elle produit beaucoup de matière verte pour mon composte donc elle est la bienvenue sur un sol AOC Saint-Joseph très granité.
+
+{{< /blockcontainer >}}
 
 ## Précautions
 
 ### Consommation en interne à proscrire
 
-:::warning Attention !!! Une grosse quantité peut bloquer la veine hépatique.
+{{< blockcontainer jli-notice-warning "Attention !!!" >}}
+
+Une grosse quantité peut bloquer la veine hépatique.
 
 La consoude contient en effet des alcaloïdes pyrrolizidiniques qui sont toxiques pour le foie.
 
-En petite quantité régulièrement, on risque le cancer du foie. :::
+En petite quantité régulièrement, on risque le cancer du foie.
+
+{{< /blockcontainer >}}
 
 ### Plante similaire
 

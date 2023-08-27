@@ -4,33 +4,9 @@ description: "Si vous vous êtes abonné avant avril 2023, cela vous sera utile.
 image: /images/2023-06-06-substack-logo.avif
 imageAlt: Le logo de Substack
 date: 2023-06-07
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/comment-recevoir-un-seul-bulletin-d-information-sur-ma-publication,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Comment recevoir un seul bulletin d information sur ma publication" },
-     meta,
-     {
-       "og:description": "Si vous vous êtes abonné avant avril 2023, cela vous sera utile.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-06-substack-logo.avif,
-     },
-    ]
 tags:
   - Substack
 ---
-
-![Le logo de Substack](/images/2023-06-06-substack-logo.avif)
-
-Si vous vous êtes abonné avant avril 2023, cela vous sera utile.
 
 <!-- more -->
 

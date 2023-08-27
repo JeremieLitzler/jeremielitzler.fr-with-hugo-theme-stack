@@ -4,35 +4,11 @@ description: "La première étape pour créer son site web moderne et rapide, c'
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-08
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/preparer-un-env-pour-un-site-moderne-rapide/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Préparer un environnement de gestion de son site web sur un PC lambda en 2 étapes" },
-     meta,
-     {
-       "og:description": "La première étape pour créer son site web moderne et rapide, c'est de préparer le PC pour le créer.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
-     },
-    ]
 categories:
   - Tutoriels
 tags:
   - Web
 ---
-
-![Diagramme expliquant l’organisation de la JAMSTACK](/images/2023-04-19-jamstack-javascript-apis-markup.webp 'Image issue de l\'article ["New to Jamstack? Everything You Need to Know to Get Started"](https://snipcart.com/blog/jamstack) de Snipcart.')
-
-La première étape pour créer son site web moderne et rapide, c’est de préparer le PC pour le créer.
 
 <!-- more -->
 
@@ -48,9 +24,13 @@ La première étape pour créer son site web moderne et rapide, c’est de prép
 - Un compte [chez Netlify](https://app.netlify.com/) (lié à votre compte GitHub)
 - Optionnellement, un compte chez un registar de domaines (OVH, Infomaniak, etc.). Cela est utile pour le nom de domaine, si vous souhaitez une URL 100 % personnalisée.
 
-:::tip Par défaut, Netlify fournit une URL publique Le sous-domaine est configurable, sous réserve de disponibilité.
+{{< blockcontainer jli-notice-tip "Par défaut, Netlify fournit une URL publique" >}}
 
-L’application serait alors disponible sous`https://mon-site.netlify.app` . :::
+Le sous-domaine est configurable, sous réserve de disponibilité.
+
+L’application serait alors disponible sous`https://mon-site.netlify.app` .
+
+{{< /blockcontainer >}}
 
 ## Créer le dépôt sur GitHub
 
@@ -88,11 +68,15 @@ Il faut :
 
   - Sélectionnez l’affichage des dossiers et fichiers cachés : ![Sélectionner l’option d’afficher les fichiers et dossiers cachés.](images/selectionner-loption-dafficher-les-fichiers-et-dossiers-caches.jpg)
 
-:::note Pour l’étape qui suit seulement… Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.
+{{< blockcontainer jli-notice-note " Pour l’étape qui suit seulement…" >}}
+
+Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.
 
 L’étape est là, au cas où ce n’est pas le cas.
 
-Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste. :::
+Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste.
+
+{{< /blockcontainer >}}
 
 - Lancez Visual Studio Code et saisissez `CTRL+SHIFT+P`puis `Terminal`pour sélectionner le profil `Git Bash`
 

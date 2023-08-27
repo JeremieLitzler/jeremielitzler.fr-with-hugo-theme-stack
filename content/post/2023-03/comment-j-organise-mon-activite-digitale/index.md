@@ -4,37 +4,17 @@ description: 'En 2023, il existe toute une myriade de solutions pour développer
 date: 2023-03-30
 image: /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg
 imageAlt: Un PC portable et un bloc-notes sur un bureau
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/03/comment-j-organise-mon-activite-digitale/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Comment j'organise mon activité digitale ?" },
-     meta,
-     {
-       "og:description": "En 2023, il existe toute une myriade de solutions pour développer sa présence digitale. Dans cet article, je vais présenter mon organisation actuelle.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg,
-     },
-    ]
 categories:
   - Entreprenariat
 ---
 
-![Un PC portable et un bloc-notes sur un bureau.](/images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg 'Photo de [Nick Morrison](https://unsplash.com/@nickmorrison?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) sur [Unsplash](https://unsplash.com/s/photos/digital-business?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)')
-
-En 2023, il existe toute une myriade de solutions pour développer sa présence digitale. Dans cet article, je vais présenter mon organisation actuelle.
-
 <!-- more -->
 
-:::note For the english version of this article, [continue here](https://iamjeremie.me/2023/03/how-is-setup-my-digital-presence-today/) :::
+{{< blockcontainer jli-notice-note "For the english version of this article" >}}
+
+[Continue here](https://iamjeremie.me/2023/03/how-is-setup-my-digital-presence-today/)
+
+{{< /blockcontainer >}}
 
 ## Pour les sites web
 
@@ -98,7 +78,11 @@ En termes de coût, vous aurez à payer le nom de domaine et l’hébergement. P
 - [L’Ensemble Instrumental Tournon-Tain](https://ensembleinstrumentaltournontain.fr/).
 - [Le site de Gilles Fauriat](https://fauriat-ardeche.fr/), tailleur de pierre près d’Annonay, Ardèche.
 
-:::tip Enfin, Infomaniak met l’accent sur son impact environnemental Allez lire leur article sur le sujet [disponible sur leur site web](https://www.infomaniak.com/fr/ecologie). :::
+{{< blockcontainer jli-notice-tip "Enfin, Infomaniak met l’accent sur son impact environnemental" >}}
+
+Allez lire leur article sur le sujet [disponible sur leur site web](https://www.infomaniak.com/fr/ecologie).
+
+{{< /blockcontainer >}}
 
 [Contactez-moi](../../../page/contactez-moi/README.md) si vous souhaitez être accompagné pour utiliser cette solution.
 

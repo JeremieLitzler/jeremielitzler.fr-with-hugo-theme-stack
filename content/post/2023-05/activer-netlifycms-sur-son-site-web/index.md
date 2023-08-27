@@ -4,35 +4,11 @@ description: 'À la place d’une solution comme WordPress, NetlifyCMS permet de
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-18
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/activer-netlifycms-sur-son-site-web/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Activer l'édition du contenu de son site web" },
-     meta,
-     {
-       "og:description": "À la place d’une solution comme WordPress, NetlifyCMS permet de gérer son contenu sans toutes les difficultés connues du CMS le plus utilisé dans le monde.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
-     },
-    ]
 categories:
   - Tutoriels
 tags:
   - Web
 ---
-
-![Diagramme expliquant l'organisation de la JAMSTACK](/images/2023-04-19-jamstack-javascript-apis-markup.webp 'Image issue de l\'article ["New to Jamstack? Everything You Need to Know to Get Started"](https://snipcart.com/blog/jamstack) de Snipcart.')
-
-À la place d’une solution comme WordPress, NetlifyCMS permet de gérer son contenu sans toutes les difficultés connues du CMS le plus utilisé dans le monde.
 
 <!-- more -->
 
@@ -91,13 +67,21 @@ Saisissez le _client secret_ copié dans GitHub et copiez-collez le client ID av
 
 ![Configurer la liaison entre GitHub et le site Netlify](images/configurer-la-liaison-entre-github-et-le-site-netlify.jpg)
 
-:::tip Si vous n'avez pas copié le _client secret_... Regénérez-en un, tout simplement :) :::
+{{< blockcontainer jli-notice-tip "Si vous n'avez pas copié le <em>client secret</em>..." >}}
+
+Regénérez-en un, tout simplement :)
+
+{{< /blockcontainer >}}
 
 Pour finir, rendez-vous sur `https://mon-super-domaine.fr/admin` et cliquez `Se connecter avec GitHub`.
 
 ![Ecran de connexion à NetlifyCMS sur votre site](images/ecran-de-connexion-a-netlifycms-sur-votre-site.jpg)
 
-:::warning Pour accéder à NetlifyCMS de votre site, soyez sûr de pouvoir vous connecter à GitHub. :::
+{{< blockcontainer jli-notice-warning "Pour accéder à NetlifyCMS de votre site" >}}
+
+Soyez sûr de pouvoir vous connecter à GitHub.
+
+{{< /blockcontainer >}}
 
 L’écran suivant s’affiche où il suffit de cliquer `Authorize VotrePseudoGitHub`.
 

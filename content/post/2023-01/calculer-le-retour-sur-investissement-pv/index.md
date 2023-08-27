@@ -4,33 +4,11 @@ description: "Le calcul du retour sur investissement n'était pas juste dans mon
 image: /images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg
 imageAlt: Production théorique vs Production réelle vs Autoconsommation
 date: 2023-01-08
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/01/calculer-le-retour-sur-investissement-pv/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Un meilleur calcul du retour sur investissement d'une installation photovoltaïque" },
-     meta,
-     {
-       "og:description": "Le calcul du retour sur investissement n'était pas juste dans mon article du 31 décembre 2022. Cet article corrige le tir",
-     },
-     meta,
-     {
-       "og:image": /images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg,
-     },
-    ]
 categories:
   - Energie
 tags:
   - Photovoltaique
 ---
-
-![Production théorique vs Production réelle vs Autoconsommation](/images/2023-01-08-production-reel-vs-theorique-vs-autoconsommation-2022.jpg)
 
 OK, c'est vrai. J'ai sûrement _abusé_ en prenant le coût moyennant du kWh incluant l'abonnement en me basant sur le montant de la facture divisé par le nombre de kWh consommés.
 

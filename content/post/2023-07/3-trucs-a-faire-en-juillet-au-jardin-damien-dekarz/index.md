@@ -4,39 +4,12 @@ description: "En juillet, c'est la période où l'on récolte le plus."
 image: /images/2023-07-11-vue-aerienne-du-jardin-de-damien.jpg
 imageAlt: Vue aérienne du jardin de Damien
 date: 2023-07-11
-prev:
-  text: "Toutes mes notes des vlogs de Damien Dekarz"
-  link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/07/3-trucs-a-faire-en-juillet-au-jardin-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "3 Trucs à faire en Juillet au Jardin" },
-     meta,
-     {
-       "og:description": "En juillet, c'est la période où l'on récolte le plus.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-07-11-vue-aerienne-du-jardin-de-damien.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Juillet
 ---
-
-![Vue aérienne du jardin de Damien](/images/2023-07-11-vue-aerienne-du-jardin-de-damien.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-En juillet, c’est la période où l’on récolte le plus.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -54,13 +27,13 @@ Comme lui, je pense que démarrer petit est le meilleur moyen de réussir sur un
 
 Pour éviter que les herbes sauvages n’envahissent le sol, Damien a utilisé un paillage conséquent.
 
-:::tip Personal note
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Cette année, j’ai appliqué sur les allées de mon jardin du carton et une couche de broyat de branches récupéré dans un parc communal proche de chez nous.
 
 Après 7 mois, je peux vous dire que l’efficacité de ce paillage est vraiment intéressante. Même si je dois retourner récupérer carton à Satoriz et plaquettes de bois à la scierie pour calmer le liseron et le chiendent qui ont percé la couche de paillage.
 
-:::
+{{< /blockcontainer >}}
 
 ## Truc n° 1 : alimentation des volailles
 
@@ -150,7 +123,3 @@ Trop souvent, on veut agir et produire plus.
 Je vous laisse [écouter ce que Damien dit sur le sujet](https://www.youtube.com/watch?v=OcO3XRZw2AI&t=1722s).
 
 Si cet article vous plait, n’hésitez pas à me le faire savoir en vous abonnant à ma lettre d’information :)
-
-:::center ⏬⏬⏬
-
-:::

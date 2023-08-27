@@ -4,29 +4,6 @@ description: 'Vous marchez sûrement dessus à chaque fois que vous vous promene
 image: /images/2023-05-02-un-parterre-de-pissenlits-en-fleurs.jpg
 imageAlt: Un parterre de pissenlits en fleurs
 date: 2023-05-05
-prev:
-  text: 'Toutes mes notes des vlogs de Christophe Bernard'
-  link: ../../../tag/christophe-bernard/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/le-pissenlit-altheaprocence,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le pissenlit, par Christophe Bernard" },
-     meta,
-     {
-       "og:description": "Vous marchez sûrement dessus à chaque fois que vous vous promenez ! Mais connaissez-vous le pissenlit, véritable bombe nutritive ?",
-     },
-     meta,
-     {
-       "og:image": /images/2023-05-02-un-parterre-de-pissenlits-en-fleurs.jpg,
-     },
-    ]
 categories:
   - Santé
 tags:
@@ -34,8 +11,6 @@ tags:
   - Plantes
   - Pissenlit
 ---
-
-![Un parterre de pissenlits en fleurs](/images/2023-05-02-un-parterre-de-pissenlits-en-fleurs.jpg 'Crédits: image extraite du vlog de Christophe Bernard')
 
 Vous marchez sûrement dessus à chaque fois que vous vous promenez ! Mais connaissez-vous le pissenlit, véritable bombe nutritive ?
 
@@ -57,13 +32,17 @@ Toutes les parties de la plante s’utilisent :
 
 - la feuille en salade
 
-:::tip Note personnelle En ce moment, c’est l’heure du pissenlit. J’ai la chance d’en avoir au jardin (implanté tout seul).
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
+
+En ce moment, c’est l’heure du pissenlit. J’ai la chance d’en avoir au jardin (implanté tout seul).
 
 Depuis 2 ans, il y a des plants de grandes tailles qui poussent au même endroit chaque année, produisant de larges feuilles.
 
 Je vous recommande de couper finement les feuilles pour une meilleure expérience culinaire.
 
-Bernard, lui, les consomme avec de l’huile d’olive, de l’ail et des anchois. :::
+Bernard, lui, les consomme avec de l’huile d’olive, de l’ail et des anchois.
+
+{{< /blockcontainer >}}
 
 - la fleur se consomme aussi en salade ou en confiture (nommée _cramaillotte_).
 

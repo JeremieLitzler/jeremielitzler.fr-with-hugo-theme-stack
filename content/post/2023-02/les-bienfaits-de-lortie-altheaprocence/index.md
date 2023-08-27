@@ -4,29 +4,6 @@ description: "Il y a tellement de choses à dire sur l'ortie ! Ces notes seront 
 image: /images/2023-02-28-ortie-femelle-et-ses-pistils.jpg
 imageAlt: Ortie femelle et ses pistils
 date: 2023-02-28
-prev:
-  text: 'Toutes mes notes des vlogs de Christophe Bernard'
-  link: ../../../tag/christophe-bernard/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/les-bienfaits-de-lortie-altheaprocence,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Les bienfaits de l’ortie avec Christophe Bernard" },
-     meta,
-     {
-       "og:description": "Il y a tellement de choses à dire sur l'ortie ! Ces notes seront un concentré d'informations sur cette plante incroyable.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-28-ortie-femelle-et-ses-pistils.jpg,
-     },
-    ]
 categories:
   - Santé
 tags:
@@ -35,19 +12,19 @@ tags:
   - Ortie
 ---
 
-![Ortie femelle et ses pistils](/images/2023-02-28-ortie-femelle-et-ses-pistils.jpg 'Crédits: image extraite du vlog de Christophe Bernard')
-
-Il y a tellement de choses à dire sur l’ortie ! Ces notes représentent un concentré d’informations sur cette plante incroyable.
-
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
 
 <!-- more -->
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=O9wDllXVwQs).
 
-:::note Pour information Cet article contiendra uniquement les informations médicales sur la plante. Christophe fournit un descriptif botanique sur [son article lié à la vidéo](https://www.altheaprovence.com/ortie-urtica-dioica-urens/).
+{{< blockcontainer jli-notice-note "Pour information" >}}
 
-Aussi, allez lire [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/README.md) pour plus d’informations botaniques. :::
+Cet article contiendra uniquement les informations médicales sur la plante. Christophe fournit un descriptif botanique sur [son article lié à la vidéo](https://www.altheaprovence.com/ortie-urtica-dioica-urens/).
+
+Aussi, allez lire [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/README.md) pour plus d’informations botaniques.
+
+{{< /blockcontainer >}}
 
 ## L’ortie : une bombe nutritive
 
@@ -59,14 +36,16 @@ Elle contient un large spectre :
 
 La teneur en éléments va dépendre du terrain de récolte, mais, quel que soit le lieu où elle pousse, elle restera riche.
 
-:::warning Attention au lieu de récolte Comme il s’agit d’une plante qui absorbe les éléments dans le sol, on évitera :
+{{< blockcontainer jli-notice-warning "Attention au lieu de récolte" >}}
+
+Comme il s’agit d’une plante qui absorbe les éléments dans le sol, on évitera :
 
 - les champs traités par des produits phytosanitaires
 - les bords de route
 - les caniveaux
 - etc.
 
-:::
+{{< /blockcontainer >}}
 
 ## Les éléments constitutifs en détail
 
@@ -110,7 +89,9 @@ Il est intéressant de coupler l’ortie, qui agit sur les reins, et une plante 
 
 Dans le cas de problème de peau (par ex. eczema), des migraines chroniques, des problèmes inflammatoires articulaires, l’ortie vient aider.
 
-:::warning Attention L’ortie ne va pas forcément résoudre le problème.
+{{< blockcontainer jli-notice-warning "Attention" >}}
+
+L’ortie ne va pas forcément résoudre le problème.
 
 Quand il y a un problème de santé, il faut regarder le problème globalement et utiliser plusieurs axes de travail pour résoudre le problème.
 
@@ -126,7 +107,7 @@ L’ortie se trouve dans l’axe n° 3.
 
 > L’ortie est un musicien dans l’orchestre, mais elle ne peut pas tout faire à elle seule. Elle doit se faire aider. — Christophe Bernard
 
-:::
+{{< /blockcontainer >}}
 
 ### Calmer les allergies respiratoires
 
@@ -154,7 +135,11 @@ Les graines sont consommées avec la nourriture, à raison d’une cuillère à 
 
 - Couper le plus de tiges possible quand l’ortie est montée en graines.
 
-:::warning L’ortie est une plante dioïque Voir [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/README.md) pour distinguer l’ortie mâle de l’ortie femelle. :::
+{{< blockcontainer jli-notice-warning "L’ortie est une plante dioïque" >}}
+
+Voir [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/README.md) pour distinguer l’ortie mâle de l’ortie femelle.
+
+{{< /blockcontainer >}}
 
 - Faire sécher la tête en bas
 - Secouer dans un sac en papier pour obtenir les graines
@@ -194,9 +179,13 @@ Ceci est applicable pour les racines sèches.
 
 Idéalement, un rhum à 55° fera l’affaire.
 
-:::tip Note personnelle Je me suis essayé à la teinture avec un alcool à 45° de feuilles et racines fraiches.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
-Je dois bientôt extraire la teinture. :::
+Je me suis essayé à la teinture avec un alcool à 45° de feuilles et racines fraiches.
+
+Je dois bientôt extraire la teinture.
+
+{{< /blockcontainer >}}
 
 ## Conclusion
 

@@ -4,33 +4,11 @@ description: 'De nos jours, il existe beaucoup de méthodes pour créer son site
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK
 date: 2023-05-05
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/comment-realiser-son-site-moderne-et-rapide/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Créer votre site web moderne pour moins de 10 euros !" },
-     meta,
-     {
-       "og:description": "De nos jours, il existe beaucoup de méthodes pour créer son site web. J’en présente une qui ne coûte presque rien. Pour de vrai !",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-19-jamstack-javascript-apis-markup.webp,
-     },
-    ]
 categories:
   - Tutoriels
 tags:
   - Web
 ---
-
-![Diagramme expliquant l’organisation de la JAMSTACK](/images/2023-04-19-jamstack-javascript-apis-markup.webp 'Image issue de l\'article ["New to Jamstack? Everything You Need to Know to Get Started"](https://snipcart.com/blog/jamstack) de Snipcart.')
 
 De nos jours, il existe beaucoup de méthodes pour créer son site web. J’en présente une qui ne coûte presque rien. Pour de vrai !
 

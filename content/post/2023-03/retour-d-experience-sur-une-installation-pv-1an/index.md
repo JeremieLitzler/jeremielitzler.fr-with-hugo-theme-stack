@@ -4,32 +4,6 @@ description: 'Fin Mars 2022, nous avons mis en service notre installation photov
 date: 2023-03-31
 image: /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg
 imageAlt: "Production par mois d'avril 2022 à mars 2023"
-prev:
-  - text: "Installation PV - quel retour d'expérience après 9 mois"
-  - link: ../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/
-next:
-  - text: "Optimiser l'autonomie électrique"
-  - link: ../../../2022/11/optimiser-l-autonomie-electrique/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/retour-d-experience-sur-une-installation-pv-1an,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Installation PV - quel retour d'expérience après 1 an" },
-     meta,
-     {
-       "og:description": "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin de la première année",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg,
-     },
-    ]
 categories:
   - Energie
 tags:
@@ -37,8 +11,6 @@ tags:
   - Autoconsommation
   - Eau chaude sanitaire
 ---
-
-![Production par mois d’avril 2022 à mars 2023](/images/2023-03-31-production-par-mois-avril2022-mars2023.png)
 
 La légende de l’image ci-dessus est la suivante :
 
@@ -55,8 +27,6 @@ Le 27 mars 2022, nous avons mis en service notre installation photovoltaïque. 
 - [Installation PV - quel retour d'expérience après 2 mois ?](../../../2022/06/retour-d-experience-sur-une-installation-pv-1mois/README.md)
 - [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/README.md)
 - [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md)
-
-<hr>
 
 ## Usage du cumulus en hiver
 
@@ -76,47 +46,7 @@ Du coup, quand le routeur donne 2 kWh de surplus solaire au cumulus (pour une j
 
 Après, cela a duré de novembre à février.
 
-:::echarts La production (en bleu) versus la consommation pour le cumulus (en vert)
-
-```json
-{
-  "xAxis": {
-    "type": "category",
-    "data": [
-      "Jan '23",
-      "Fév '23",
-      "Mar '23",
-      "Avr '22",
-      "Mai '22",
-      "Jun '22",
-      "Jul '22",
-      "Aou '22",
-      "Sep '22",
-      "Oct '22",
-      "Nov '22",
-      "Dec '22"
-    ]
-  },
-  "yAxis": {
-    "type": "value"
-  },
-  "series": [
-    {
-      "data": [
-        44.6, 113.7, 135.2, 160.6, 210.4, 204.3, 225.4, 192.7, 150.9, 109.3,
-        62.6, 36.3
-      ],
-      "type": "line"
-    },
-    {
-      "data": [115, 99, 64, 31, 0, 0, 0, 0, 0, 14, 79, 125],
-      "type": "bar"
-    }
-  ]
-}
-```
-
-:::
+![La production (en bleu) versus la consommation pour le cumulus (en vert)](images/production-vs-consommation-sur-12-mois.jpg)
 
 Nous sommes fin mars et la température de l’eau du réseau a déjà repris 2 °C et les journées sont très belles et ensoleillées.
 

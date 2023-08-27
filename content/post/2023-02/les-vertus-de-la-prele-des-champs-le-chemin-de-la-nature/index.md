@@ -4,42 +4,12 @@ description: 'Avec Christophe De Hody, comprenons comment reconnaitre la prêle,
 date: 2023-02-02
 image: /images/2023-02-02-une-prele-des-champs.jpg
 imageAlt: Une prêle des champs
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/les-vertus-de-la-prele-des-champs-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La prêle des champs avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-02-une-prele-des-champs.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Prêle
 ---
-
-![Une prêle des champs](/images/2023-02-02-une-prele-des-champs.jpg 'Crédits: image extraite du vlog du Chemin de la Nature')
-
-Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
@@ -76,13 +46,15 @@ On la consommer ensuite dans un lait végétal ou un jus de fruit.
 
 On peut l'utiliser en infusion.
 
-:::warning Mode opératoire en cure La plante est une forte drainante rénale donc il faut réaliser des cures :
+{{< blockcontainer jli-notice-warning "Mode opératoire en cure" >}}
+
+La plante est une forte drainante rénale donc il faut réaliser des cures :
 
 - de 3 semaines
 - maximum 2 à 3 fois par an
 - avec une pause d'un semaine entre chaque période de 3 semaines.
 
-:::
+{{< /blockcontainer >}}
 
 ## Bienfaits
 
@@ -102,7 +74,11 @@ Enfin, elle aide les reins et donc à éliminer les déchets plus efficacement.
 
 ## Précautions
 
-:::danger Ne pas confondre la prêle des marais ou la grande prêle avec la prêle des champs. Les deux premières sont toxiques. :::
+{{< blockcontainer jli-notice-danger "Ne pas confondre la prêle des marais ou la grande prêle avec la prêle des champs." >}}
+
+Les deux premières sont toxiques.
+
+{{< /blockcontainer >}}
 
 ![prele-des-marais](images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html')
 

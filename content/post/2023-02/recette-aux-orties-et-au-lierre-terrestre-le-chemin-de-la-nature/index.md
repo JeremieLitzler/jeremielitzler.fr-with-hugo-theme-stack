@@ -4,32 +4,6 @@ description: "Avec l'ortie, je connais des recettes, en particulier la soupe aux
 image: /images/2023-02-13-message-sur-une-ardoise-posee-sur-un-plan-de-travail.jpg
 imageAlt: Message sur une ardoise posée sur un plan de travail
 date: 2023-02-13
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/recette-aux-orties-et-au-lierre-terrestre-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Une recette aux orties avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "Avec l'ortie, je connais des recettes, en particulier la soupe aux orties. Mais avec le lierre terrestre, je ne connaissais pour cette recette.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-13-message-sur-une-ardoise-posee-sur-un-plan-de-travail.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
@@ -37,10 +11,6 @@ tags:
   - Recettes
   - Ortie
 ---
-
-![Message sur une ardoise posée sur un plan de travail](/images/2023-02-13-message-sur-une-ardoise-posee-sur-un-plan-de-travail.jpg 'Crédits: image extraite du vlog du Chemin de la Nature')
-
-Avec l’ortie, je connais des recettes, en particulier la soupe aux orties. Mais avec le lierre terrestre, je ne connaissais pour cette recette.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
@@ -50,11 +20,15 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=hl
 
 ## Ingrédients
 
-:::tip Note personnelle J’ai modifié quelques ingrédients, ==ceux en jaune== ci-dessous.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’ai modifié quelques ingrédients, ==ceux en jaune== ci-dessous.
 
 Je n’ai pas encore essayé à la date de publication.
 
-Pour retrouver la liste originale, [c’est à la 15e seconde](https://youtu.be/hlr107VfCqE?t=15) du vlog que vous la trouverez. :::
+Pour retrouver la liste originale, [c’est à la 15e seconde](https://youtu.be/hlr107VfCqE?t=15) du vlog que vous la trouverez.
+
+{{< /blockcontainer >}}
 
 - 250 g de ==huile d’olive==
 - 185 g de ==farine de petit épeautre==

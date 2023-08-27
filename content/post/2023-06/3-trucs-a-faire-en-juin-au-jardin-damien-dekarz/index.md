@@ -4,42 +4,12 @@ description: "Au mois de juin, on récolte, on paille et on crée de l'engrais l
 image: /images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg
 imageAlt: Vue aérienne du jardin de Damien
 date: 2023-06-12
-prev:
-  text: "Toutes mes notes des vlogs de Damien Dekarz"
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/3-trucs-a-faire-en-juin-au-jardin-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "3 Trucs à faire en Juin au Jardin, avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Au mois de juin, on récolte, on paille et on crée de l'engrais liquide. C'est parti !",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Juin
 ---
-
-![Vue aérienne du jardin de Damien](/images/2023-06-12-vue-aerienne-du-jardin-de-damien.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-Au mois de juin, on récolte, on paille et on crée de l’engrais liquide. C’est parti !
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -84,9 +54,13 @@ Pourquoi le faire en juin ?
 
 En juin, les plants de courge par exemple ne sont pas encore trop étalés et donc disposer le paillage est simple. Plus tard, ce serait bien plus compliqué.
 
-:::tip Avant de pailler Marquez le départ de vos plants de courges.
+{{< blockcontainer jli-notice-tip "Avant de pailler" >}}
 
-Pourquoi ? Ça permet de savoir où est le pied pour arroser quand le plant est très grand. :::
+Marquez le départ de vos plants de courges.
+
+Pourquoi ? Ça permet de savoir où est le pied pour arroser quand le plant est très grand.
+
+{{< /blockcontainer >}}
 
 On étalera donc une bonne couche, de 20 cm si possible.
 
@@ -98,9 +72,13 @@ Il recommande aussi le paillage de consoude, car cette plante contient beaucoup 
 
 La plante repousse plusieurs fois dans l’année et elle pousse énormément et facilement.
 
-:::tip Note personnelle Cette année, la couche de feuilles de peupliers, que j’utilise pour le jardin d’hiver, arrive à un point où il faut la renouveler.
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
-Heureusement, j’ai collecté assez de feuilles pour avoir encore 1-2 mètres cubes disponibles. :::
+Cette année, la couche de feuilles de peupliers, que j’utilise pour le jardin d’hiver, arrive à un point où il faut la renouveler.
+
+Heureusement, j’ai collecté assez de feuilles pour avoir encore 1-2 mètres cubes disponibles.
+
+{{< /blockcontainer >}}
 
 ### Paillage et arrosage
 
@@ -112,7 +90,11 @@ Si le sol est sableux, on réalisera plutôt un arrosage court et fréquent.
 
 Avec plusieurs années de paillage, la couche d’humus, qui sera présente sur le sol, forme une éponge dans le sol et la rétention d’eau s'en trouve optimisée.
 
-:::tip Note personnelle Je confirme, qu’après 2-3 années de paillage toute l’année, cet avantage d’arrosage moins fréquent dont parle Damien. :::
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
+
+Je confirme, qu’après 2-3 années de paillage toute l’année, cet avantage d’arrosage moins fréquent dont parle Damien.
+
+{{< /blockcontainer >}}
 
 ## Créer un engrais liquide
 

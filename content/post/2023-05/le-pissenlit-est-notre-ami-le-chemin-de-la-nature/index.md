@@ -4,39 +4,12 @@ description: "Parmi les plantes sauvages, le pissenlit est l'une des plus riches
 image: /images/2023-05-09-une-feuille-de-pissenlit-par-une-personne.jpg
 imageAlt: Une feuille de pissenlit par une personne
 date: 2023-05-09
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/05/le-pissenlit-est-notre-ami-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le pissenlit est notre ami, par Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "Parmi les plantes sauvages, le pissenlit est l'une des plus riches et des plus utiles. Apprenons à l'aimer.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-05-09-une-feuille-de-pissenlit-par-une-personne.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Pissenlit
 ---
-
-![Une feuille de pissenlit par une personne](/images/2023-05-09-une-feuille-de-pissenlit-par-une-personne.jpg 'Crédits: Crédits: image extraite du vlog du Chemin de la Nature')
-
-Parmi les plantes sauvages, le pissenlit est l’une des plus riches et des plus utiles. Apprenons à l’aimer.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le Chemin de la Nature.
 
@@ -87,21 +60,31 @@ Leurs formes peuvent varier.
 
 Aussi, les feuilles ne présentent pas de poils, contraitement à d'autres plantes de la famille des Asteraceae. Voir [plus loin sur les confusions possibles](#precautions).
 
-:::warning Un point important à retenir. La nervure principale de la feuille est parfaitement ronde.
+{{< blockcontainer jli-notice-warning "Un point important à retenir" >}}
 
-![Nervure de feuille de pissenlit](images/nervure-de-feuille-de-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature') :::
+La nervure principale de la feuille est parfaitement ronde.
+
+![Nervure de feuille de pissenlit](images/nervure-de-feuille-de-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+
+{{< /blockcontainer >}}
 
 ### À propos des fleurs
 
 Voici la chronologie de l’inflorescence :
 
-::: tabs @tab Inflorescence en bouton ![Une inflorescence en bouton](images/une-inflorescence-en-bouton.jpg 'Crédits : image extraite du vlog du chemin de la nature') Ils se mangent revenus à la poêle ou macérer comme les câpres. @tab Inflorescence épanouie ![Une inflorescence épanouie](images/une-inflorescence-epanouie.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une inflorescence en bouton. Ils se mangent revenus à la poêle ou macérer comme les câpres.](images/une-inflorescence-en-bouton.jpg 'Crédits : image extraite du vlog du chemin de la nature')
 
-@tab Inflorescence fanée ![Une inflorescence fanée](images/une-inflorescence-fanee.jpg 'Crédits : image extraite du vlog du chemin de la nature') @tab Les soies sont formées ![Les soies sont formées](images/les-soies-sont-formes.jpg 'Crédits : image extraite du vlog du chemin de la nature') @tab Infrutescence d’arkènes ![Infrutescence d’arkènes](images/infrutescence-darkenes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une inflorescence épanouie](images/une-inflorescence-epanouie.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+
+![Une inflorescence fanée](images/une-inflorescence-fanee.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+
+![Les soies sont formées](images/les-soies-sont-formes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+
+![Infrutescence d’arkènes](images/infrutescence-darkenes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
 
 Un arkène est un _fruit sec_. Ci-dessous, on distingue clairement l’arkène de l’aigrette :
 
-![Vue zoomée sur les arkènes et les aigrettes, le petit parachute de l’arkène](images/vue-zoomee-sur-les-arkenes-et-les-aigrettes-le-petit-parachute-de-larkene.jpg 'Crédits : image extraite du vlog du chemin de la nature') :::
+![Vue zoomée sur les arkènes et les aigrettes, le petit parachute de l’arkène](images/vue-zoomee-sur-les-arkenes-et-les-aigrettes-le-petit-parachute-de-larkene.jpg 'Crédits : image extraite du vlog du chemin de la nature')
 
 La fleur du pissenlit n’est pas cette grosse boule jaune, qu'on appelle **le capitule**. A la base de l'inflorescence, on trouve un involucre de bractées. La bractée représente une petite feuille à la base d'un capitule.
 
@@ -139,9 +122,13 @@ La période maximale optimale de floraison se trouve entre avril et mai.
 
 Pour les feuilles, ce sera en mars où les feuilles sont tendres et fraiches.
 
-:::tip Note personnelle Je consomme autant les feuilles d’avril ou mai, même si elles sont plus coriaces.
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
-Christophe insiste sur le fait que l'amertume peut être facilement supprimée avec la cuisson. :::
+Je consomme autant les feuilles d’avril ou mai, même si elles sont plus coriaces.
+
+Christophe insiste sur le fait que l'amertume peut être facilement supprimée avec la cuisson.
+
+{{< /blockcontainer >}}
 
 ![Identification du collet sur un pissenlit](images/identification-du-collet-sur-un-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
 
@@ -202,9 +189,11 @@ On l’utilise en interne :
 
 Il n’existe pas de toxicité connue, en tout cas, dans des doses conseillées.
 
-:::tip Note personnelle Quelles sont les doses conseillées ?
+{{< blockcontainer jli-notice-tip "Note personnelle" >}} Quelles sont les doses conseillées ?
 
-Voir [l’autre article sur le pissenlit](../le-pissenlit-altheaprocence/README.md). Simplement : pas d’extrême, on consomme modérément avec une alimentation équilibrée. :::
+Voir [l’autre article sur le pissenlit](../le-pissenlit-altheaprocence/README.md). Simplement : pas d’extrême, on consomme modérément avec une alimentation équilibrée.
+
+{{< /blockcontainer >}}
 
 On évitera toutefois le pissenlit en cas :
 
@@ -230,11 +219,15 @@ Au printemps, on peut facilement distinguer le pissenlit des autres plantes lui 
 
 Pour toutes les autres plantes, les inflorescences se développent une fois la tige déjà bien haute.
 
-::: Pour toutes les confusions qui suivent… Pas de danger pour toutes les plantes de la famille des Asteraceae.
+{{< blockcontainer jli-notice-tip "Pour toutes les confusions qui suivent…" >}}
+
+Pas de danger pour toutes les plantes de la famille des Asteraceae.
 
 Plus les feuilles sont jeunes, plus c'est comestibles.
 
-Toutefois, on évitera quand même le coquelicot et la laitue vireuse. :::
+Toutefois, on évitera quand même le coquelicot et la laitue vireuse.
+
+{{< /blockcontainer >}}
 
 ### Confusion avec la bourse-à-pasteur
 

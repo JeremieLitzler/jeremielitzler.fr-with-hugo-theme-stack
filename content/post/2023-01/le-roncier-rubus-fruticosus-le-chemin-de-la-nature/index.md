@@ -4,42 +4,12 @@ description: 'La ronce, vous connaissez ? On en a peur, car elle pique et nous e
 date: 2023-01-24
 image: /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg
 imageAlt: Des fleurs de mûriers se transforment en fruits
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/01/le-roncier-rubus-fruticosus-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le roncier avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "La ronce, vous connaissez ? On en a peur, car elle pique et nous enviahit. Mais, la connaissez-vous vraiment ? Christophe nous partage dans son vlog qui est vraiment cette plante.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Ronce
 ---
-
-![Des fleurs de mûriers se transforment en fruits](/images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg 'Crédits : image extraite du vlog du Chemin de la Nature')
-
-La ronce, vous connaissez ? On en a peur, car elle pique et nous envahit. Mais, la connaissez-vous vraiment ? Christophe nous partage dans son vlog qui est vraiment cette plante.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
@@ -73,7 +43,11 @@ La jeune tige de ronce est très riche en eau, c'est frais quand on se promène 
 
 Bien sûr, les fruits sont ce que nous recherchons le plus.
 
-:::warning Attention aux épines Quand j'étais jeune, on ramassait de belles quantités et à la fin de la récolte, nos doigts étaient bien tachés, du jus sombre. :::
+{{< blockcontainer jli-notice-warning "Attention aux épines" >}}
+
+Quand j'étais jeune, on ramassait de belles quantités et à la fin de la récolte, nos doigts étaient bien tachés, du jus sombre.
+
+{{< /blockcontainer >}}
 
 ## Les jeunes feuilles
 
@@ -83,7 +57,11 @@ Pour les gargarismes, elles se révèlent utiles en cas de maux de gorge.
 
 On infuse les jeunes feuilles.
 
-:::warning Attention La ronce est astringente. Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes. :::
+{{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
+
+Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
+
+{{< /blockcontainer >}}
 
 ### LEs jeunes pousses
 
@@ -91,13 +69,23 @@ On infuse les jeunes feuilles.
 
 En gemmothérapie, les jeunes pousses sont utiles.
 
-:::tip Note personnelle Je prévois de commencer à réaliser de la gemmothérapie au printemps 2023, pas forcément avec la ronce, mais le rosier sauvage. :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
-:::note Définition de gemmothérapie La gemmothérapie consiste à utiliser les propriétés des tissus embryonnaires végétaux en croissance : les bourgeons et les jeunes pousses d’arbres et d’arbustes.
+Je prévois de commencer à réaliser de la gemmothérapie au printemps 2023, pas forcément avec la ronce, mais le rosier sauvage.
 
-Pour en savoir plus, allez [cet article de Herbalgam.fr](https://www.herbalgem.fr/fr/content/10-la-gemmotherapie). :::
+{{< /blockcontainer >}}
 
-:::note Réalisation d'une solution en gemmothérapie Il est important, lors de la récolte, de mettre les bourgeons dans le solvant immédiatement.
+{{< blockcontainer jli-notice-note "Définition de gemmothérapie" >}}
+
+La gemmothérapie consiste à utiliser les propriétés des tissus embryonnaires végétaux en croissance : les bourgeons et les jeunes pousses d’arbres et d’arbustes.
+
+Pour en savoir plus, allez [cet article de Herbalgam.fr](https://www.herbalgem.fr/fr/content/10-la-gemmotherapie).
+
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-note "Réalisation d'une solution en gemmothérapie" >}}
+
+Il est important, lors de la récolte, de mettre les bourgeons dans le solvant immédiatement.
 
 Le solvant se compose :
 
@@ -108,7 +96,7 @@ Le solvant se compose :
 
 Pour l'alcool, si vous n'avez pas de source d'alcool à 96°, utiliser un alcool à 50° permet d'obtenir les 2 premiers tiers du solvant !
 
-:::
+{{< /blockcontainer >}}
 
 Une solution en gemmothérapie peut être utile pour [les infections ORL](https://www.mpedia.fr/art-troubles-orl/) incluant :
 
@@ -122,7 +110,11 @@ Aussi, les problèmes ostéo-articulaires peuvent être traités par la gemmoth�
 
 Les affections ostéo-articulaires sont généralement caractérisées par des douleurs (souvent persistantes) et des limitations de la mobilité, de la dextérité et du niveau global de fonctionnement, et réduisent donc la possibilité de travailler (source : [OMS](https://www.who.int/fr/news-room/fact-sheets/detail/musculoskeletal-conditions#:~:text=Les%20affections%20ost%C3%A9o%2Darticulaires%20et%20musculaires%20sont%20g%C3%A9n%C3%A9ralement%20caract%C3%A9ris%C3%A9es%20par,donc%20la%20possibilit%C3%A9%20de%20travailler.)).
 
-:::warning Attention La ronce est astringente. Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi. :::
+{{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
+
+Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/README.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
+
+{{< /blockcontainer >}}
 
 ## Théorie botanique
 

@@ -31,7 +31,7 @@ Et tous les deux jours, on s'affère au jardin. Il faut y retourner et récolter
 
 Au mois d'août, la récolte des haricots se terminent. Il est intéressant de laisser ce qu'il reste monter en graine pour avoir les semences pour l'année suivante.
 
-{{< blockcontainer jli-notice-tip "Note personnelle">}}
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Cela s'applique à toutes les semences. Par exemple, en juin, j'ai laissé les pois mangetout à rames _Sweet horizon_ produire assez de semences pour l'année prochaine.
 

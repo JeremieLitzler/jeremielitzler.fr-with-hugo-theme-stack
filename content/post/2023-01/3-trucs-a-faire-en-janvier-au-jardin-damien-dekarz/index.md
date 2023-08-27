@@ -52,7 +52,9 @@ En gros, vous avez simplement à trouver des branches (bois de l'année) d'arbre
 
 Par exemple, Damien possède un très bon poirier duquel il va extraire les greffons pour les greffer sur des aubépines sauvages !
 
-:::tip Note personnelle J'ai beaucoup d'aubépine chez moi.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J'ai beaucoup d'aubépine chez moi.
 
 J'aurais aimé faire la même chose.
 
@@ -60,7 +62,9 @@ Problème : les aubépines se trouvent sur le terrain en terrasse où les mouto
 
 A étudier.
 
-En tout cas, je trouve l'idée excellente ! :::
+En tout cas, je trouve l'idée excellente !
+
+{{< /blockcontainer >}}
 
 Dans l'idéal, on prend donc des branches à 45° pour que les arbres produisent plus vite, mais en vrai, voulons-nous vraiment que les arbres produisent plus vite si vous avez déjà beaucoup ? Pas forcément.
 
@@ -72,7 +76,11 @@ C'est simple : on les emballe dans un papier journal humide comme un bouquet de
 
 On les stocke ensuite dans un réfrigérateur.
 
-:::tip Note personnelle Je me demande si une cave à moins de 10 °C peut remplacer le réfrigérateur. :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Je me demande si une cave à moins de 10 °C peut remplacer le réfrigérateur.
+
+{{< /blockcontainer >}}
 
 Damien suggère à la place du réfrigérateur la solution suivante :
 
@@ -106,7 +114,11 @@ C'est un très utile insectivore.
 
 Non, la chauve-souris ne s'emmêle pas dans les cheveux.
 
-:::tip Origine du mythe de la chauve-souris dans les cheveux Il s'agit simplement d'une histoire racontée aux jeunes filles pour qu'elles ne sortent pas le soir. :::
+{{< blockcontainer jli-notice-tip "Origine du mythe de la chauve-souris dans les cheveux" >}}
+
+Il s'agit simplement d'une histoire racontée aux jeunes filles pour qu'elles ne sortent pas le soir.
+
+{{< /blockcontainer >}}
 
 En Europe, 36 espèces de chauve-souris sont répertoriées, dont aucune ne suce le sang...
 
@@ -124,19 +136,27 @@ L'assemblage est simple :
 
 ![Le nichoir assemblé](images/nichoir-assemble.jpg 'L'entrée doit être orientée vers le bas. Crédits : image extraite du vlog de Damien')
 
-:::tip Pourquoi aussi fin ? Les chauves-souris n'ont pas besoin de plus de 2 cm d'épaisseur, en tout cas, par chez nous.
+{{< blockcontainer jli-notice-tip "Pourquoi aussi fin ?" >}}
+
+Les chauves-souris n'ont pas besoin de plus de 2 cm d'épaisseur, en tout cas, par chez nous.
 
 ![Chauve-souris dans un nichoir](images/chauve-souris-pipistrelle-commune.jpg 'Comme vous le voyez, l'espace de 2 cm leur suffit largement. Crédits : image extraite du vlog de Damien')
 
-Pour plus d'informations sur les chiroptères, allez visiter le site [Plan National d'Actions Chiroptères](https://plan-actions-chiropteres.fr/). :::
+Pour plus d'informations sur les chiroptères, allez visiter le site [Plan National d'Actions Chiroptères](https://plan-actions-chiropteres.fr/).
+
+{{< /blockcontainer >}}
 
 Les planches sont ensuite clouées ou vissées.
 
 On installe les nichoirs l'hiver pour permettre une colonisation au printemps.
 
-:::warning Si le nichoir est exposé aux intempéries... Prévoyez du bois résistant à l'humidité et un petit _toit_ comme ci-dessous :
+{{< blockcontainer jli-notice-warning "Si le nichoir est exposé aux intempéries..." >}}
 
-![Nichoir avec toit en métal sur un mur en brique](images/nichoir-avec-toit-mur-brique.jpg 'Crédits : image extraite du vlog de Damien') :::
+Prévoyez du bois résistant à l'humidité et un petit _toit_ comme ci-dessous :
+
+![Nichoir avec toit en métal sur un mur en brique](images/nichoir-avec-toit-mur-brique.jpg 'Crédits : image extraite du vlog de Damien')
+
+{{< /blockcontainer >}}
 
 ### Exemple de triples nichoirs
 
@@ -160,11 +180,15 @@ Elles aident à réguler la population d'insectes et les chauves-souris sont mal
 
 Créer des nichoirs permet (re) créer un habitat pour ces animaux utiles où nous, les hommes, avons très souvent détruit leur maison d'autant.
 
-:::tip Note personnelle Chez moi, l'été surtout, on voit voler quasiment tous les soirs, pas trop chaud, je crois, des chauves-souris.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Chez moi, l'été surtout, on voit voler quasiment tous les soirs, pas trop chaud, je crois, des chauves-souris.
 
 Elles volent plutôt bas et on entend leurs petits cris.
 
-Malheureusement, nos chats ont réussi à en attraper 2, dont 1 a été relâchée avant de finir comme les musaraignes... :::
+Malheureusement, nos chats ont réussi à en attraper 2, dont 1 a été relâchée avant de finir comme les musaraignes...
+
+{{< /blockcontainer >}}
 
 ## *Truc 3* : Structure au potager
 

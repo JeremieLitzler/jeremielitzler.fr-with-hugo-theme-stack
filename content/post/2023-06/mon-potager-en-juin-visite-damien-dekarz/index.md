@@ -4,42 +4,12 @@ description: "A quoi ressemble le potager de Damien en juin ? Il nous montre dan
 image: /images/2023-06-27-vue-aerienne-du-jardin-de-damien.jpg
 imageAlt: Vue aérienne du jardin de Damien
 date: 2023-06-27
-prev:
-  text: "Toutes mes notes des vlogs de Damien Dekarz"
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/06/mon-potager-en-juin-visite-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le potager de Damien Dekarz en juin" },
-     meta,
-     {
-       "og:description": "A quoi ressemble le potager de Damien en juin ? Il nous montre dans cet article.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-06-27-vue-aerienne-du-jardin-de-damien.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Juin
 ---
-
-![Vue aérienne du jardin de Damien](/images/2023-06-27-vue-aerienne-du-jardin-de-damien.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
-
-À quoi ressemble le potager de Damien en juin ? Il nous montre dans cet article.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -85,9 +55,13 @@ Il sera bientôt l’heure de récolter la céréale.
 
 Tout pousse super bien !
 
-:::tip Le <em>Fun fact</em> Le comble de Damien est le fait qu’il n’y a que très peu de mauvaise ou plante sauvage dans le mini potager. Même, les nouvelles plantes sauvages sont les pommes de terre, plantées il y a 2 ans, qu’il ne ramasse jamais entièrement et qui repoussent chaque année volontairement !
+{{< blockcontainer jli-notice-tip "Le <em>Fun fact</em>" >}}
 
-Je connais la même chose chez moi ! :::
+Le comble de Damien est le fait qu’il n’y a que très peu de mauvaise ou plante sauvage dans le mini potager. Même, les nouvelles plantes sauvages sont les pommes de terre, plantées il y a 2 ans, qu’il ne ramasse jamais entièrement et qui repoussent chaque année volontairement !
+
+Je connais la même chose chez moi !
+
+{{< /blockcontainer >}}
 
 ## Dans les bacs de culture
 

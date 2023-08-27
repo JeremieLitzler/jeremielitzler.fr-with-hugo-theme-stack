@@ -4,29 +4,6 @@ description: 'Très facile à cultiver au jardin, cette plante est très connue 
 image: /images/2023-04-28-inflorescence-bleue-de-consoude.jpg
 imageAlt: Inflorescence bleue de consoude
 date: 2023-04-27
-prev:
-  text: 'Toutes mes notes des vlogs de Christophe Bernard'
-  link: ../../../tag/christophe-bernard/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/04/la-consoude-altheaprocence,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La consoude, par Christophe Bernard" },
-     meta,
-     {
-       "og:description": "Très facile à cultiver au jardin, cette plante est très connue pour ses propriétés réparatrice et cicatrisante.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-04-28-inflorescence-bleue-de-consoude.jpg,
-     },
-    ]
 categories:
   - Santé
 tags:
@@ -35,19 +12,17 @@ tags:
   - Consoude
 ---
 
-![Inflorescence bleue de consoude](/images/2023-04-28-inflorescence-bleue-de-consoude.jpg 'Crédits: image d’[EVGEN SLAVIN](https://unsplash.com/@evgenslavin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) sur [Unsplash](https://unsplash.com/photos/uC0Kka45QtU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)')
-
-Très facile à cultiver au jardin, cette plante est très connue pour ses propriétés réparatrice et cicatrisante.
-
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
 
 <!-- more -->
 
 Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=JYow8sXGzP0).
 
-:::note Pour ne pas répéter, je mettrai ici les notes complémentaires uniquement.
+{{< blockcontainer jli-notice-note " Pour ne pas répéter, je mettrai ici les notes complémentaires uniquement." >}}
 
-J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/README.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_). :::
+J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/README.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_).
+
+{{< /blockcontainer >}}
 
 ## Au jardin
 
@@ -70,7 +45,11 @@ La consoude peut se préparer :
 
 L’usage le plus connu est la réparation des os, n’importe quel os.
 
-:::warning Attention ! Elle aide à réparer une fracture et une fêlure plus rapidement, mais cela n’empêche pas d’aller aux urgences. :::
+{{< blockcontainer jli-notice-warning "Attention !" >}}
+
+Elle aide à réparer une fracture et une fêlure plus rapidement, mais cela n’empêche pas d’aller aux urgences.
+
+{{< /blockcontainer >}}
 
 Le cataplasme de racines fraiches est la première forme d’utilisation.
 
@@ -86,13 +65,21 @@ Du point de vue de l’efficacité entre les racines et les feuilles, Christope 
 
 La différence se trouve plutôt sur le travail des racines, plus agréable, parce qu’elles n’ont pas les poils et elles contiennent plus de mucilage.
 
-:::warning A propos des poils… Les poils peuvent se révéler irritants chez certaines personnes, chez qui la peau va rougir.
+{{< blockcontainer jli-notice-warning "A propos des poils…" >}}
 
-On utilisera alors plus une infusion appliquée sur des compresses, si l’on n’a pas de racines à disposition. :::
+Les poils peuvent se révéler irritants chez certaines personnes, chez qui la peau va rougir.
 
-:::tip Note personnelle Christophe mentionne l'intérêt de la poudre de racine qui permet d'obtenir une pâte super rapidement.
+On utilisera alors plus une infusion appliquée sur des compresses, si l’on n’a pas de racines à disposition.
 
-Je pense que je vais essayer de sécher les racines. Je verrai comment les réduire en poudre afin de l’utiliser ultérieurement avec un peu d’eau chaude. :::
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Christophe mentionne l'intérêt de la poudre de racine qui permet d'obtenir une pâte super rapidement.
+
+Je pense que je vais essayer de sécher les racines. Je verrai comment les réduire en poudre afin de l’utiliser ultérieurement avec un peu d’eau chaude.
+
+{{< /blockcontainer >}}
 
 ### Pour les ligaments, muscles ou tendons
 
@@ -102,7 +89,9 @@ Par exemple, après une entorse de cheville, un déchirement d’un muscle, on a
 
 Pour les blessures ==en surface==, la consoude accélère la guérison.
 
-:::warning Attention ! Des fois, la consoude agit trop rapidement. C’est pour cela que, pour les blessures profondes, ==**on n’utilisera pas la consoude**==, car la consoude referme la blessure en surface avant même que les couches profondes soient réparées.
+{{< blockcontainer jli-notice-warning "Attention !" >}}
+
+Des fois, la consoude agit trop rapidement. C’est pour cela que, pour les blessures profondes, ==**on n’utilisera pas la consoude**==, car la consoude referme la blessure en surface avant même que les couches profondes soient réparées.
 
 Ce problème est bien connu.
 
@@ -112,7 +101,7 @@ Exemple d’une coupure profonde au doigt de Christophe :
 - très vite la coupure s’est refermée.
 - quelques jours après, une infection purulente avait fait gonfler son doigt…
 
-:::
+{{< /blockcontainer >}}
 
 Comment ça fait que la consoude est aussi efficace ?
 
@@ -136,16 +125,28 @@ Ce sont ces dérivés qui viennent détruire les veines à l’intérieur du foi
 
 Ceci a été démontré : voir [cet article de l’office fédéral de la sécurité alimentaire et des affaires vétérinaires](https://www.blv.admin.ch/blv/fr/home/lebensmittel-und-ernaehrung/lebensmittelsicherheit/stoffe-im-fokus/kontaminanten/pyrrolizidinalkaloide.html) en Suisse ou [cette étude du CNRS](https://dumas.ccsd.cnrs.fr/dumas-01675622) sur la Grande consoude.
 
-:::tip Note personnelle Je pense que les avantages en externe sont suffisants pour m’en tenir à cela.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Je pense que les avantages en externe sont suffisants pour m’en tenir à cela.
 
 Le foie est l’organe qui encaisse toute la charge toxique de notre vie. Si on le sollicite un peu plus par orgueil, les conséquences n’apparaitront que bien plus tard…
 
 C’est d’autant plus vrai pour les jeunes enfants ou les femmes enceintes.
 
-On peut remplacer la consoude en interne par le souci (_Calendula officinale_). :::
+On peut remplacer la consoude en interne par le souci (_Calendula officinale_).
 
-:::warning Attention aux hybrides Le consoude de Russie (_symphytum x uplandicum_) contient beaucoup plus d’alcaloïdes. :::
+{{< /blockcontainer >}}
 
-:::note Mais la peau transmet-elle les alcaloïdes dans le sang ? Non, la pénétration est très très faible, surtout qu’on ne casse pas un os tous les jours ! :::
+{{< blockcontainer jli-notice-warning "Attention aux hybrides" >}}
+
+Le consoude de Russie (_symphytum x uplandicum_) contient beaucoup plus d’alcaloïdes.
+
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-note " Mais la peau transmet-elle les alcaloïdes dans le sang ?" >}}
+
+Non, la pénétration est très très faible, surtout qu’on ne casse pas un os tous les jours !
+
+{{< /blockcontainer >}}
 
 Si vous aimez cet article, pensez à souscrire à mon bulletin d’informations :)

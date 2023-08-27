@@ -4,32 +4,6 @@ description: "Vous en avez sûrement chez vous si vous vivez à la campagne, pro
 date: 2023-01-20
 image: /images/2023-01-20-ronce-fleurie.jpg
 imageAlt: Ronce fleurie
-prev:
-  text: 'Toutes mes notes des vlogs de Christophe Bernard'
-  link: ../../../tag/christophe-bernard/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/ronce-murier-mure-bienfaits-et-usages-althea,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La ronce avec Christophe Bernard" },
-     meta,
-     {
-       "og:description": "Vous en avez sûrement chez vous si vous vivez à la campagne, proche d'une zone sauvage. On essaye souvent de s'en débarrasser. Toutefois, saviez-vous qu'il s'agit plutôt d'une ami ?",
-     },
-     meta,
-     {
-       "og:image": /images/2023-01-20-ronce-fleurie.jpg,
-     },
-    ]
 categories:
   - Santé
 tags:
@@ -37,10 +11,6 @@ tags:
   - Plantes
   - Ronces
 ---
-
-![Ronce fleurie](/images/2023-01-20-ronce-fleurie.jpg 'Crédits : www.publicdomainpictures.net')
-
-Vous en avez sûrement chez vous si vous vivez à la campagne, proche d'une zone sauvage. On essaye souvent de s'en débarrasser. Toutefois, saviez-vous qu'il s'agit plutôt d'une amie ? Christophe nous raconte tout dans son vlog sur cette plante incroyable.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
 
@@ -113,7 +83,9 @@ Après, si l'on n'a pas le temps, on simplement ramasser au besoin. On est très
 
 Christophe récolte des rameaux qu'il met à sécher pour rendre la récolte des feuilles plus simples.
 
-:::warning Evidemment, mettez des gants :) :::
+{{< blockcontainer jli-notice-warning "Evidemment, mettez des gants :)" >}}
+
+{{< /blockcontainer >}}
 
 ## Utilisation alimentaire
 
@@ -149,11 +121,13 @@ Cela assèche les muqueuses.
 
 On utilise donc la ronce dans le cas ==d'une forte inflammation== des muqueuses avec hypersécrétion.
 
-:::warning Il faut bien choisir le moment pour utiliser les plantes astringentes Et ce n'est pas dès le départ.
+{{< blockcontainer jli-notice-warning "Il faut bien choisir le moment pour utiliser les plantes astringentes" >}}
 
 Une petite inflammation ne requiert pas un traitement par les plantes astringentes, car elles assèchent trop.
 
-Au contraire, cela risque d'irriter la muqueuse. :::
+Au contraire, cela risque d'irriter la muqueuse.
+
+{{< /blockcontainer >}}
 
 ## Application dans la bouche
 
@@ -167,13 +141,19 @@ Pour les aphtes, la ronce rend service.
 
 On retrouve aussi la ronce pour traiter les angines. Encore une fois, on ne parle pas d'un petit mal de gorge, mais plutôt du cas où les amygdales sont rouges et gonflées.
 
-:::warning Consulter d'abord pour connaitre la cause de l'angine (virale ou bactérienne) :::
+{{< blockcontainer jli-notice-warning "Consulter d'abord pour connaitre la cause de l'angine (virale ou bactérienne)" >}}
 
-:::tip Préparation de la décoction des feuilles de ronces Une fois que la décoction est devenue tiède, vous la salez.
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-tip "Préparation de la décoction des feuilles de ronces" >}}
+
+Une fois que la décoction est devenue tiède, vous la salez.
 
 Le sel rajoute un effet thérapeutique bien connu pour les angines.
 
-On utilisera une cuillère à café pour 250 ml de décoction. :::
+On utilisera une cuillère à café pour 250 ml de décoction.
+
+{{< /blockcontainer >}}
 
 ### Pour une inflammation sévère de l'estomac ou de l'intestin
 

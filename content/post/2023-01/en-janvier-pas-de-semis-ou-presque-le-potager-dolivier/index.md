@@ -2,33 +2,12 @@
 title: En janvier, ne semez RIEN avec Le potager d'Olivier
 description: 'En janvier, la température est trop basse pour planter quoi que ce soit. Olivier nous explique sa stratégie.'
 date: 2023-01-06
-prev:
-  text: "Toutes mes notes des vlogs d'Olivier"
-  link: ../../../tag/potager-d-olivier/
-head:
-  - [
-      meta,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/01/en-janvier-pas-de-semis-ou-presque-le-potager-dolivier/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "En janvier, ne semez RIEN avec Le potager d'Olivier" },
-     meta,
-     {
-       "og:description": "En janvier, la température est trop basse pour planter quoi que ce soit. Olivier nous explique sa stratégie.",
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Potager d Olivier
   - En janvier
 ---
-
-En janvier, la température est trop basse et la luminosité très faible pour planter quoi que ce soit. Olivier nous explique sa stratégie.
 
 Merci à Olivier pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Olivier sur sa chaîne _Le Potager d'Olivier_.
 
@@ -49,13 +28,17 @@ Pour information, d'après [La Ferme de Sainte-Marthe](https://www.fermedesainte
 
 Le risque de gèle est toujours important en janvier et les semis n'y résisteraient pas.
 
-:::tip Note personnelle Quand je vois la vidéo d'Olivier, je vois une contradiction avec Damien, surtout dans [ces notes que j'ai prises](../que-faire-au-jardin-en-janvier-damien-dekarz/README.md#planter-lail).
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+Quand je vois la vidéo d'Olivier, je vois une contradiction avec Damien, surtout dans [ces notes que j'ai prises](../que-faire-au-jardin-en-janvier-damien-dekarz/README.md#planter-lail).
 
 Damien dit _On peut planter l'ail_, Olivier attend février ou mars pour l'ail, fève, pois pour en semer en pleine terre.
 
 Quand je vois mes fèves et mon ail sortis il y a 3 semaines, je vais sûrement les couvrir avec une sorte de _tente hivernale_ réalisée avec une toile d'hivernage.
 
-On verra ce que ça donne et je vous donnerai un retour d'expérience en septembre. :::
+On verra ce que ça donne et je vous donnerai un retour d'expérience en septembre.
+
+{{< /blockcontainer >}}
 
 ## Luminosité
 

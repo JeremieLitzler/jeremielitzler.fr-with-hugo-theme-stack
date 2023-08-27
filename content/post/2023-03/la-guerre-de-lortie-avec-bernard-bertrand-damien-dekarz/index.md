@@ -4,29 +4,7 @@ description: "Bernard Bertrand a beaucoup inspiré Damien avant même qu'il comm
 image: /images/2023-03-21-livres-ecrits-par-bernard-bertrand.jpg
 imageAlt: Livres écrits par Bernard Bertrand
 date: 2023-03-21
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/03/la-guerre-de-lortie-avec-bernard-bertrand-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La Guerre de l'Ortie avec Bernard Bertrand, avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Bernard Bertrand a beaucoup inspiré Damien avant même qu'il commence sa chaîne YouTube.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-21-livres-ecrits-par-bernard-bertrand.jpg,
-     },
-    ]
+
 categories:
   - Jardin
 tags:
@@ -34,10 +12,6 @@ tags:
   - Ortie
   - Bernard Bertrand
 ---
-
-![Livres écrits par Bernard Bertrand](/images/2023-03-21-livres-ecrits-par-bernard-bertrand.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-Bernard Bertrand a beaucoup inspiré Damien avant même qu’il commence sa chaîne YouTube.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -69,8 +43,14 @@ Toutefois, les extraits végétaux ne sont toujours pas reconnus (par un numéro
 
 Il faut cependant nommer les produits indirectement, c’est-à-dire sans pouvoir explicitement décrire à quoi cela sert.
 
-:::note Au passage, c’est la même chose pour les plantes médicinales… :::
+{{< blockcontainer jli-notice-note " Au passage, c’est la même chose pour les plantes médicinales…" >}}
 
-:::tip Note personnelle J’utilise le purin d’ortie et de prêle chez moi depuis des années et il n’y a pas de doute sur leur efficacité.
+{{< /blockcontainer >}}
 
-Il est vrai que l’odeur n’attire personne autour du liquide, mais les avantages dépassent largement cet inconvénient. :::
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
+
+J’utilise le purin d’ortie et de prêle chez moi depuis des années et il n’y a pas de doute sur leur efficacité.
+
+Il est vrai que l’odeur n’attire personne autour du liquide, mais les avantages dépassent largement cet inconvénient.
+
+{{< /blockcontainer >}}

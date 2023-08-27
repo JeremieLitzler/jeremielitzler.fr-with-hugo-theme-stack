@@ -4,44 +4,12 @@ description: 'Damien nous explique tout sur le vigne, comment la cultiver, comme
 image: /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg
 imageAlt: Une vigne et ses grappes de raisin blanc
 date: 2023-02-22
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/la-vigne-de-a-a-z-presque-damien-dekarz/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "La Vigne de A à Z (ou presque) avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Damien nous explique tout sur le vigne, comment la cultiver, comment les tailler et quelles variétés sont à privilégier.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - Vigne
 ---
-
-<!-- https://www.notion.so/jeremie-litzler/Taille-et-cultiver-la-vigne-5c5758f3c35a44a2962b589e23bcf418 -->
-
-![Une vigne et ses grappes de raisin blanc](/images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-Damien nous explique tout sur le vigne, comment la cultiver, comment les tailler et quelles variétés sont à privilégier.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -154,7 +122,11 @@ Mal tailler peut causer une non production.
 
 La taille a lieu à la fin de l’hiver (février) à un moment où la taille fait pleurer la vigne;
 
-:::tip Note personnelle 💡 Voir [cette vidéo pour le détail sur la taille](https://www.youtube.com/watch?v=w0efTjemrFY). :::
+{{< blockcontainer jli-notice-tip "Note personnelle" >}} 💡" >}}
+
+Voir [cette vidéo pour le détail sur la taille](https://www.youtube.com/watch?v=w0efTjemrFY).
+
+{{< /blockcontainer >}}
 
 ## Comment et quand la récolter
 

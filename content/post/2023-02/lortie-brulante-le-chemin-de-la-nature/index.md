@@ -4,39 +4,12 @@ description: "L'ortie brûlante est moins répandue que la grande ortie."
 image: /images/2023-02-14-feuille-dortie-brulante.jpg
 imageAlt: Feuille d'ortie brûlante
 date: 2023-02-14
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/lortie-brulante-le-chemin-de-la-nature,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "L'ortie brûlante avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "L'ortie brûlante est moins répandue que la grande ortie.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-14-feuille-dortie-brulante.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Ortie
 ---
-
-![Feuille d’ortie brûlante](/images/2023-02-14-feuille-dortie-brulante.jpg 'Crédits: image extraite du vlog du Chemin de la Nature')
-
-L’ortie brûlante (_Urtica urens_) est moins répandue que la grande ortie.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 

@@ -7,9 +7,6 @@ date: 2023-03-14
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
   link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//README.md
 head:
   - [
       link,
@@ -37,10 +34,6 @@ tags:
   - Ortie
 ---
 
-![Le titre de la vidéo sur fond d’ortie](/images/2023-03-14-titre-de-la-video-sur-fond-d-ortie.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
-
-Ceci n’est pas _l’ortie de A à Z_, mais on comprendra pourquoi ça pique, comment éviter les piqûres et comment l’ortie est une bonne compagne culinaire.
-
 Merci à Damien et David Brico ut pour le partage de leur savoir ! Cet article résume mes notes du vlog réalisé par Damien et David sur la chaîne _Permaculture, agroécologie, etc_.
 
 <!-- more -->
@@ -59,7 +52,11 @@ En japonais, la plante est nommée _Irkusa_ qui signifie littéralement ==herbe 
 
 ![Aperçu des aiguilles d’ortie](images/aperçu-des-aiguilles-dortie.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
 
-: ::tip Fait intéressant… Les Wallons en Belgique nomment l’ortie _le trèfle du pauvre_ (ou **Kaloob do pauv**) qui fait référence aux atouts de la plante autant pour les fourrages que l’alimentation. :::
+{{< blockcontainer jli-notice-tip "Fait intéressant…" >}}
+
+Les Wallons en Belgique nomment l’ortie _le trèfle du pauvre_ (ou **Kaloob do pauv**) qui fait référence aux atouts de la plante autant pour les fourrages que l’alimentation.
+
+{{< /blockcontainer >}}
 
 L’ortie la plus connue est la grande ortie (_urtica dioica_), mais on trouve aussi l’ortie brûlante ou petite ortie (_urtica urens_).
 
@@ -73,9 +70,13 @@ Les poils de l’ortie correspondent aux aiguilles qui piquent et ils sont très
 
 Il suffit _simplement_ de frotter les feuilles avec des gants.
 
-: ::warning Note personnelle Contrairement à ce que David dit dans la vidéo, le séchage n’empêche pas que les poils piquent encore.
+{{< blockcontainer jli-notice-warning "Note personnelle" >}}
 
-Le lavage et la cuisson garantissent la suppression des poils urticants par contre. :::
+Contrairement à ce que David dit dans la vidéo, le séchage n’empêche pas que les poils piquent encore.
+
+Le lavage et la cuisson garantissent la suppression des poils urticants par contre.
+
+{{< /blockcontainer >}}
 
 Toute la plante ne pique pas uniformément.
 
@@ -107,9 +108,13 @@ L’ortie plus âgée a un goût de poisson.
 
 La liste des plats possibles à d’ortie est très longue. Je vous donnerai juste [le lien de recherche sur Google](https://www.google.com/search?q=recette+ortie+piquante) pour faire votre choix.
 
-: ::tip Note personnelle Je consomme l’ortie principalement en soupe, en l’ajoutant en dernier avec des légumes cuits
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
-Je la consomme aussi en infusion ; je laisse en général infusion 10 min puis je mange l’ortie. 😋 :::
+Je consomme l’ortie principalement en soupe, en l’ajoutant en dernier avec des légumes cuits
+
+Je la consomme aussi en infusion ; je laisse en général infusion 10 min puis je mange l’ortie. 😋
+
+{{< /blockcontainer >}}
 
 Les recettes sucrées utilisent plutôt l’ortie jeune et elle se marie très bien avec la banane et le chocolat.
 
@@ -181,7 +186,11 @@ Ils sont recouverts d’une enveloppe de silice (l’aiguille) et à la base, on
 
 Il faut 1/10000 de grammes pour créer une réaction.
 
-: ::tip Pour information… On retrouve les mêmes composants chimiques dans le dard d’un frelon européen. :::
+{{< blockcontainer jli-notice-tip "Pour information…">}}
+
+On retrouve les mêmes composants chimiques dans le dard d’un frelon européen.
+
+{{< /blockcontainer >}}
 
 ### Comment soulager ou soigner la piqûre
 
@@ -191,7 +200,11 @@ L’aloe vera, le romarin, la menthe ou l’oseille et le basilic se révèlent 
 
 L’acide rosmarinique que ces plantes contiennent est un anti-inflammatoire bien connu.
 
-: ::warning Note personnelle Je suis d’accord avec David l’eau ne calme pas la douleur ! :::
+{{< blockcontainer jli-notice-warning "Note personnelle" >}}
+
+Je suis d’accord avec David l’eau ne calme pas la douleur !
+
+{{< /blockcontainer >}}
 
 ## Vertues médicinales
 
@@ -202,5 +215,3 @@ David m’a fait connaitre l’utilisation de l’ortie par friction ou fouettem
 En théorie, la sérotonine agit en calmant, mais les effets des autres composants chimiques ne sont-ils pas supérieurs ?
 
 A vous d’essayer ;)
-
-: ::center ⏬⏬⏬ :::

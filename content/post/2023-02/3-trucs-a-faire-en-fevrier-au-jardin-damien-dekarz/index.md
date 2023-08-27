@@ -4,39 +4,12 @@ description: 'Il y a beaucoup de choses à faire en février et dans cet article
 image: /images/2023-02-21-graines-de-courges-a-planter-pour-la-nouvelle-annee.jpg
 imageAlt: Des graines de courges à planter pour la nouvelle année au jardin.
 date: 2023-02-21
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/02/3-trucs-a-faire-en-fevrier-au-jardin-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "3 Trucs à faire en Février au Jardin, avec Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Il y a beaucoup de choses à faire en février et dans cet article, nous regardons ensemble ce que Damien suggère.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-02-21-graines-de-courges-a-planter-pour-la-nouvelle-annee.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Février
 ---
-
-![Des graines de courges à planter pour la nouvelle année au jardin.](/images/2023-02-21-graines-de-courges-a-planter-pour-la-nouvelle-annee.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-
-Il y a beaucoup de choses à faire en février et dans cet article, nous regardons ensemble ce que Damien suggère.
 
 Merci à lui pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 

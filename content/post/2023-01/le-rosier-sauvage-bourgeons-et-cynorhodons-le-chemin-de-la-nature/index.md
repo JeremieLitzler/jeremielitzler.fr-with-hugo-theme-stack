@@ -1,45 +1,15 @@
 ---
-title: Le rosier sauvage avec Le chemin de la nature
+title: "Le rosier sauvage avec Le chemin de la nature"
 description: "Le rosier sauvage : on le trouve facilement en France. C'est lui qui produit ces fruits rouges en forme de ballon de rugby au début de l'hiver. Christophe nous explique dans le détail comment le reconnaitre et l'utiliser."
 date: 2023-01-25
 image: /images/2023-01-25-cynorhodons-matures.jpg
 imageAlt: cynorhodons matures prêts à cueillir
-prev:
-  text: 'Toutes mes notes des vlogs du Chemin de la Nature'
-  link: ../../../tag/chemin-de-la-nature/
-#next:
-#  text: ''
-#  link: ..//README.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/01/le-rosier-sauvage-bourgeons-et-cynorhodons-le-chemin-de-la-nature/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Le rosier sauvage avec Le chemin de la nature" },
-     meta,
-     {
-       "og:description": "Le rosier sauvage : on le trouve facilement en France. C'est lui qui produit ces fruits rouges en forme de ballon de rugby au début de l'hiver. Christophe nous explique dans le détail comment le reconnaitre et l'utiliser.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-01-25-cynorhodons-matures.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:
   - Chemin de la Nature
   - Cynorhodon
 ---
-
-![Cynorhodons matures prêts à cueillir](/images/2023-01-25-cynorhodons-matures.jpg 'Crédits: image extraite du vlog du Chemin de la Nature')
-
-Le rosier sauvage : on le trouve facilement en France. C'est lui qui produit ces fruits rouges en forme de ballon de rugby au début de l'hiver. Christophe nous explique dans le détail comment le reconnaitre et l'utiliser.
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Le chemin de la nature.
 
@@ -69,13 +39,21 @@ Le rosier sauvage est aussi connu sous divers autres noms :
 
 Selon la maturité, le cynorhodon contient 20 à 80 fois plus de vitamine C que l'orange.
 
-:::warning Pour rappel La vitamine C se consomme crue, car elle est sensible à la chaleur, la lumière et s'oxyde facilement. :::
+{{< blockcontainer jli-notice-warning "Pour rappel" >}}
+
+La vitamine C se consomme crue, car elle est sensible à la chaleur, la lumière et s'oxyde facilement.
+
+{{< /blockcontainer >}}
 
 Il contient aussi beaucoup d'antioxydants. C'est pour cela qu'il est souvent recommandé pour les problèmes d'arthrite.
 
 ## Utilisations
 
-:::tip Information Il n'y a pas de cynorhodons toxiques. :::
+{{< blockcontainer jli-notice-tip "Information" >}}
+
+Il n'y a pas de cynorhodons toxiques.
+
+{{< /blockcontainer >}}
 
 ### Dégustation sur place
 
@@ -91,7 +69,11 @@ Pour consommer la chair du faux fruit, il faut simplement :
 - retirer les akènes,
   - il peut reste quelques poils
 
-:::warning Bien choisir son cynorhodon On cherchera toujours les faux fruits de belles couleurs, bien rouges, fermes ou mous. :::
+{{< blockcontainer jli-notice-warning "Bien choisir son cynorhodon" >}}
+
+On cherchera toujours les faux fruits de belles couleurs, bien rouges, fermes ou mous.
+
+{{< /blockcontainer >}}
 
 ### Confiture
 
@@ -130,27 +112,39 @@ On l'utilise beaucoup pour renforcer le système immunitaire.
 
 La gemmothérapie se réalise sur place où l'on met directement après la récolte dans le solvant (mélange d'alcool à environ 50° et de miel par exemple).
 
-:::tip L'importance de le faire sur place Il peut s'écouler plusieurs heures pendant la collecte des bourgeons.
+{{< blockcontainer jli-notice-tip "L'importance de le faire sur place" >}}
 
-C'est pour cela que les mettre dans la solution solvant dès la cueillette est l'idéal. :::
+Il peut s'écouler plusieurs heures pendant la collecte des bourgeons.
+
+C'est pour cela que les mettre dans la solution solvant dès la cueillette est l'idéal.
+
+{{< /blockcontainer >}}
 
 Un miel naturellement liquide (ex. : acacia) et un rhum à 55° peuvent faire l'affaire.
 
-:::tip Note personnelle J'utilise un alcool à fruit à 45° pour mes teintures.
+{{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
-Ce sera mon choix pour démarrer ma gemmothérapie cette année 2023. :::
+J'utilise un alcool à fruit à 45° pour mes teintures.
+
+Ce sera mon choix pour démarrer ma gemmothérapie cette année 2023.
+
+{{< /blockcontainer >}}
 
 On remue ensuite une fois tous les jours pendant 3 semaines. Pour finir, on filtrera la solution dans des conteneurs goutte à goutte.
 
 On peut faire cela avec les arbres, les arbrisseaux et les arbustes.
 
-:::tip Arbres vs arbrisseaux vs arbustes Pour la France, on peut définir les 3 catégories comme suit :
+{{< blockcontainer jli-notice-tip "Arbres vs arbrisseaux vs arbustes" >}}
+
+Pour la France, on peut définir les 3 catégories comme suit :
 
 Un arbre fait plus de 7 m, une fois adulte. Un arbuste mesure moins de 7 m, une fois adulte.
 
 Les deux possèdent un tronc unique.
 
-L'arbrisseau est issu de plusieurs rameaux qui sortent du sol. Le noisetier est un arbrisseau comme l'églantier ou rosier sauvage. :::
+L'arbrisseau est issu de plusieurs rameaux qui sortent du sol. Le noisetier est un arbrisseau comme l'églantier ou rosier sauvage.
+
+{{< /blockcontainer >}}
 
 ### Phytothérapie
 
@@ -168,7 +162,9 @@ En macérat huileur, avec huile de jojoba et des pétales séchés, on laisse ma
 
 On l'utilise aussi pour calmer les gorges irritées.
 
-:::tip Note personnelle Je me demande si l'adoucissement de la gorge avec l'infusion de fleur de rosier sauvage serait utile sans avoir l'effet astringent de la ronce par exemple. :::
+{{< blockcontainer jli-notice-tip "Note personnelle" >}} Je me demande si l'adoucissement de la gorge avec l'infusion de fleur de rosier sauvage serait utile sans avoir l'effet astringent de la ronce par exemple.
+
+{{< /blockcontainer >}}
 
 ## Conclusion
 

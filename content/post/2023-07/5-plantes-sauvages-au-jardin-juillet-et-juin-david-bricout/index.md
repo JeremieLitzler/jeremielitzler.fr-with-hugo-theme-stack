@@ -4,39 +4,12 @@ description: "En juin et juillet, la flore est active et abondante. Avec David, 
 image: /images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg
 imageAlt: Fleur de camomille butinee par un insecte
 date: 2023-07-18
-prev:
-  text: "Toutes mes notes des vlogs de David Bricout"
-  link: ../../../tag/david-bricout/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023/07/5-plantes-sauvages-au-jardin-juillet-et-juin-david-bricout,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "5 plantes sauvages au jardin, avec David Bricout" },
-     meta,
-     {
-       "og:description": "En juin et juillet, la flore est active et abondante. Avec David, nous allons découvrir 5 dd'entre elles.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - David Bricout
   - Plantes sauvages
 ---
-
-![Fleur de camomille butinée par un insecte](/images/2023-07-18-fleur-de-camomille-butinee-par-un-insecte.jpg 'Crédits: image extraite du vlog de David Bricout')
-
-En juin et juillet, la flore est active et abondante. Avec David, nous allons découvrir 5 d’entre elles.
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.
 
@@ -68,17 +41,17 @@ Après, il est toujours plus simple de consommer les très jeunes feuilles comme
 
 ![Jeunes feuilles de tilleul](images/jeunes-feuilles-de-tilleul.jpg 'Crédits : image extraite du vlog de David Bricout')
 
-:::warning A consommer en respectant l’arbre
+{{< blockcontainer jli-notice-warning "A consommer en respectant l’arbre" >}}
 
 On ne consommera pas l’intégralité des jeunes feuilles afin de permettre à l’arbre de reste en bonne santé.
 
-:::
+{{< /blockcontainer >}}
 
-:::tip Note personnelle
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Avec mes filles, nous apprécions au printemps les jeunes feuilles de tilleul, soit directement consommées sur place, soit en salade mixte.
 
-:::
+{{< /blockcontainer >}}
 
 Les feuilles se consomment aussi séchées, mélangées à de la farine, car elles apportent une bonne quantité de minéraux, de protéines et des sucres très assimilables.
 
@@ -174,12 +147,6 @@ On peut ajouter de la menthe pour diminuer l’amertume.
 
 David réalise des macérats huileux de cette verveine (des sommités) pour l’utiliser en massage. Cela aide apparemment à relâcher les tensions du cou ou des épaules, causées souvent par le stress.
 
-:::tip Et chez vous, vous trouvez ces plantes sauvages ?
+{{< blockcontainer jli-notice-tip "Et chez vous, vous trouvez ces plantes sauvages ?" >}}
 
-:::
-
-:::center
-
-⏬⏬⏬
-
-:::
+{{< /blockcontainer >}}
