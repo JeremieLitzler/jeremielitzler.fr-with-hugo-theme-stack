@@ -1,6 +1,6 @@
 ---
 title: "Rechercher"
-description: "Vous cherchez quelque chose en particulier ? Saisissz quelques mots-clés et le tour est joué ! Les résultats vous donnent rapidement les résultats les plus pertinents."
+description: "Vous cherchez quelque chose en particulier ? Saisissez quelques mots-clés et le tour est joué ! Les résultats vous donnent rapidement les résultats les plus pertinents."
 slug: "search"
 layout: "search"
 outputs:
@@ -8,7 +8,7 @@ outputs:
     - json
 menu:
     main:
-        weight: 3
+        weight: 10
         params: 
             icon: search
 ---
