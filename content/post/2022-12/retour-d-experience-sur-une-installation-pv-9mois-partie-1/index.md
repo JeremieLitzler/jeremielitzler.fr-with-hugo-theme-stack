@@ -1,5 +1,5 @@
 ---
-title: "Installation PV - retour d'expérience après 9 mois (partie 1)"
+title: "Photovoltaïque : mon expérience après 9 mois (partie 1)"
 description: "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons comment j'ai modifié l'installation et ajusté les appareils et les usages dans mon foyer."
 date: 2022-12-15
 image: /images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg

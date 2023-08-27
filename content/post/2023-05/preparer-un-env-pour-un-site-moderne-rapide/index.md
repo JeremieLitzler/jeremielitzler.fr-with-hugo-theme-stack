@@ -1,5 +1,5 @@
 ---
-title: 'Préparer un environnement de gestion de son site web sur un PC lambda en 2 étapes'
+title: "Préparer l'environnement pour créer son site web en 2 étapes"
 description: "La première étape pour créer son site web moderne et rapide, c'est de préparer le PC pour le créer."
 image: /images/2023-04-19-jamstack-javascript-apis-markup.webp
 imageAlt: Diagramme expliquant l'organisation de la JAMSTACK

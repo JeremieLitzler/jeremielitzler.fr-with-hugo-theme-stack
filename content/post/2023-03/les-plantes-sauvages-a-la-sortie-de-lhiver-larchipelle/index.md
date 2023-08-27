@@ -1,32 +1,9 @@
 ---
-title: "Les plantes sauvages à la sortie de l'hiver, avec l'Archi'Pelle"
+title: "Les plantes sauvages à la sortie de l'hiver"
 description: "A la sortie de l'hiver, les arbres n'ont pas encore leurs feuilles. C'est l'occasion pour les plantes couvres-sol de se développer."
 image: /images/2023-03-29-pulmonaria-officinalis.jpg
 imageAlt: Pulmonaria officinalis
 date: 2023-03-29
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/brian-ejarque/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023-03/les-plantes-sauvages-a-la-sortie-de-lhiver-larchipelle,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Les plantes sauvages à la sortie de l'hiver, avec l'Archi'Pelle" },
-     meta,
-     {
-       "og:description": " la sortie de l'hiver, les arbres n'ont pas encore leurs feuilles. C'est l'occasion pour les plantes couvres-sol de se développer.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-29-pulmonaria-officinalis.jpg,
-     },
-    ]
 categories:
   - Plantes
 tags:

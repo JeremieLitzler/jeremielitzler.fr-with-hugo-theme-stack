@@ -1,5 +1,5 @@
 ---
-title: La consoude consolide et cicatrise, avec Le chemin de la nature
+title: La consoude consolide et cicatrise
 description: 'Feuille musicale, la consoude se révèle surtout utile pour guérir depuis des millénaires.'
 image: /images/2023-04-25-feuille-de-consoude-officinale.jpg
 imageAlt: Feuille de consoude officinale
