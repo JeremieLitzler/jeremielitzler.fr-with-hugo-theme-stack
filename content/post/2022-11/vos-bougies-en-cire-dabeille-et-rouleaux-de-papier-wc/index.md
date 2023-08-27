@@ -44,7 +44,7 @@ La méthode est simple et fascinante pour les enfants. Elle leur apprend ce que 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
 
-![Alyssia observe une bougie se consommer](./images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg 'Les bougies apportent une lumière puissante et naturelle qui fascine.')
+![Alyssia observe une bougie se consommer](images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg 'Les bougies apportent une lumière puissante et naturelle qui fascine.')
 
 ## Pourquoi réaliser des bougies maintenant
 
@@ -79,7 +79,7 @@ Je n’ai pas refusé !
 
 C’est très simple : de la cire d’abeille à peu près pure. Une cire foncée fera l’affaire.
 
-![Un lingot de cire](./images/cire-d-abeille-en-lingot.jpg 'Chaque lingot pèse 1 kg. Ci-dessus, j’ai déjà consommé la moitié d’un lingot pour 4 bougies.')
+![Un lingot de cire](images/cire-d-abeille-en-lingot.jpg 'Chaque lingot pèse 1 kg. Ci-dessus, j’ai déjà consommé la moitié d’un lingot pour 4 bougies.')
 
 ### Matériel
 
@@ -159,15 +159,15 @@ Il faut couler la cire en trois étapes dans les rouleaux de papier WC :
 
 Nous avons essayé une bougie (celle où je n’ai pas tendu la mèche assez ou je ne l'ai centrée correctement).
 
-![Une bougie allumée dans le noir](./images/une-bougie-allumee-dans-le-noir.jpg 'La lumière jaune est chaleureuse.')
+![Une bougie allumée dans le noir](images/une-bougie-allumee-dans-le-noir.jpg 'La lumière jaune est chaleureuse.')
 
-![Alyssia observe la bougie se consummer](./images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg 'La bougie nous éclaire bien pour un premier essai !')
+![Alyssia observe la bougie se consummer](images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg 'La bougie nous éclaire bien pour un premier essai !')
 
 Au bout de deux heures et demie, la bougie a perdu 15 g de son poids. Pour une bougie de 95 g, cela donne une autonomie de 20 heures, si bien sûr tout se passe bien jusqu’à la fin de la fonte.
 
 ## Un premier retour d’expérience
 
-![3 bougies de cire d’abeille](./images/2022-11-26-3-bougies-finies.jpg 'On voit bien le chapeau de la troisième coulée.')
+![3 bougies de cire d’abeille](images/2022-11-26-3-bougies-finies.jpg 'On voit bien le chapeau de la troisième coulée.')
 
 Après coup, il me manque 2 centreurs en inox supplémentaire pour faire 4 bougies à la fois sans attendre que les premières refroidissent.
 
@@ -175,7 +175,7 @@ Au niveau de la coulée de la cire, l’étape 3 n’a pas donné un super rés
 
 Ça n’empêche en rien son utilisation, sauf que la mèche s’est un peu noyée au bout de 20 min. En enlevant la couronne restante de ce chapeau, après 20 min de fonte, la bougie se trouvait revigorée ! Après, il est aussi possible que cela soit dû au fait que la bougie testée n’avait pas la mèche bien centrée.
 
-![4 bougies finies avec une bougie utilisée](./images/4-bougies-dont-1-testée.jpg 'Le poids vire entre 90 et 100 g par bougie.')
+![4 bougies finies avec une bougie utilisée](images/4-bougies-dont-1-testée.jpg 'Le poids vire entre 90 et 100 g par bougie.')
 
 Enfin, pour la prochaine fois, je sais que j’aurai à couper l’équivalent de quatre fois le poids d’une bougie, soit 95 g par bougie en moyenne.
 

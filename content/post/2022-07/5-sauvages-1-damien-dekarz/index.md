@@ -70,7 +70,7 @@ En tout cas, il faut faire des recherches dans la litterature, car tout le monde
 
 ### Le lotier corniculé
 
-![Photo du lotier corniculé](./images/lotier-cornicule.jpg "Crédits de l'image : [Le Monde](https://jardinage.lemonde.fr/dossier-3160-lotier-cornicule.html)")
+![Photo du lotier corniculé](images/lotier-cornicule.jpg "Crédits de l'image : [Le Monde](https://jardinage.lemonde.fr/dossier-3160-lotier-cornicule.html)")
 
 C'est une plante :
 
@@ -93,7 +93,7 @@ _Pour information :_ on consomme souvent des plantes "toxiques", comme la pomme 
 
 ### La centaurée jacée
 
-![La centaurée jacée](./images/centauree-jacee.jpg "Crédits de l'image : [Génial végétal](https://www.genialvegetal.net/-Centauree-jacee-)")
+![La centaurée jacée](images/centauree-jacee.jpg "Crédits de l'image : [Génial végétal](https://www.genialvegetal.net/-Centauree-jacee-)")
 
 C'est une plante :
 
@@ -110,9 +110,9 @@ Ses utilités :
 
 ### Les boutons d'or ou renoncule
 
-![Fleurs de bouton d'or](./images/bouton-dor.jpg "Crédits de l'image : [Troyes Champagne Tourisme](https://www.troyeslachampagne.com/le-luxueux-et-rutilant-bouton-dor/)")
+![Fleurs de bouton d'or](images/bouton-dor.jpg "Crédits de l'image : [Troyes Champagne Tourisme](https://www.troyeslachampagne.com/le-luxueux-et-rutilant-bouton-dor/)")
 
-![Feuille de bouton d'or ou renoncule rampante](./images/bouton-dor-feuille.jpg "Crédits de l'image : [Alamy](https://www.alamyimages.fr/photos-images/feuille-simple-lob%C3%A9e.html?blackwhite=1)")
+![Feuille de bouton d'or ou renoncule rampante](images/bouton-dor-feuille.jpg "Crédits de l'image : [Alamy](https://www.alamyimages.fr/photos-images/feuille-simple-lob%C3%A9e.html?blackwhite=1)")
 
 La plante entière est toxique, et même allergisante.
 
@@ -122,9 +122,9 @@ Attention, il existe plusieurs sortes de renoncules et toutes n'indique pas tout
 
 ### Le plantain lancéolé ou le plantain majeur
 
-![Le plantain lancéolé](./images/plantain-lanceole.jpg) "Crédits de l'image : Issue du site Santé et nature \"https://www.sante-et-nature.fr\"")
+![Le plantain lancéolé](images/plantain-lanceole.jpg) "Crédits de l'image : Issue du site Santé et nature \"https://www.sante-et-nature.fr\"")
 
-![Le plantain majeur](./images/plantago-major.jpg "Crédits de l'image : [AquaPortail](https://www.aquaportail.com/fiche-plante-3741-plantago-major.html)")
+![Le plantain majeur](images/plantago-major.jpg "Crédits de l'image : [AquaPortail](https://www.aquaportail.com/fiche-plante-3741-plantago-major.html)")
 
 C'est une plante :
 
@@ -138,7 +138,7 @@ Les utilités des deux plantains :
 
 ### Le trèfle violet (ou le trèfle des prés)
 
-![Champ de trèfles violets](./images/trefle-violet.jpg "Crédits de l'image : [Paysan breton](https://www.paysan-breton.fr/2014/05/trefle-interessant-meme-a-3-feuilles/)")
+![Champ de trèfles violets](images/trefle-violet.jpg "Crédits de l'image : [Paysan breton](https://www.paysan-breton.fr/2014/05/trefle-interessant-meme-a-3-feuilles/)")
 
 C'est une plante :
 

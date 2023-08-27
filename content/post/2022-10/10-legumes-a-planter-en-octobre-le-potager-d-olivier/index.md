@@ -41,7 +41,7 @@ Merci à Olivier pour le partage de son savoir ! Cet article résume mes notes d
 
 ## Zones climatiques en France
 
-![Les zones climatiques en France](./images/carte-de-France-Climats-zones-usda-1.jpg)
+![Les zones climatiques en France](images/carte-de-France-Climats-zones-usda-1.jpg)
 
 _Crédits de l'image : [Les promesses de fleurs](https://www.promessedefleurs.com/conseil-plantes-jardin/ficheconseil/climat-carte-france-zone-rusticite-usda-definition)_
 
@@ -61,7 +61,7 @@ Il n'y a pas de contraintes pour planter les cultures listées ci-dessous dans c
 
 ### Les fèves
 
-![Des fèves en fleurs](./images/feves.jpg "Crédits de l'image : [Le Droit](https://www.ledroit.com/2019/04/11/legumes-originaux-pour-votre-potager-e9a764139ba81d9db4304da8a5b3fb26)")
+![Des fèves en fleurs](images/feves.jpg "Crédits de l'image : [Le Droit](https://www.ledroit.com/2019/04/11/legumes-originaux-pour-votre-potager-e9a764139ba81d9db4304da8a5b3fb26)")
 
 On peut les planter en toutes les saisons, mais on n'aura pas la productivité des tomates.
 
@@ -73,7 +73,7 @@ Dans les climats plus froids, il est vraiment préférable d'attendre le printem
 
 De manière générale, on peut les tuteurer, mais dans l'idéal, il est préférable de retarder le plantage des fèves.
 
-![Des fèves sèches](./images/graine-de-feves-seches.jpg "Crédits : image extraite du vlog d'Olivier")
+![Des fèves sèches](images/graine-de-feves-seches.jpg "Crédits : image extraite du vlog d'Olivier")
 
 Les fèves se sèment individuellement (espacées de 10-15cm) ou par poquet de 3 graines (plus espacées de 30-40cm).
 
@@ -81,7 +81,7 @@ Les fèves se sèment individuellement (espacées de 10-15cm) ou par poquet de 3
 
 Les fèves font partie de la famille des _Fabaceae_, ou Leguminosae (Légumineuses). Cela signifie qu'elles capturent l'azote de l'air dans les racines.
 
-![Racines d'un plant de fèves](./images/racines-de-feves.jpg "Crédits : image extraite du vlog d'Olivier")
+![Racines d'un plant de fèves](images/racines-de-feves.jpg "Crédits : image extraite du vlog d'Olivier")
 
 Elles sont donc un très bon engrais vert où on compostera les plants après la récolte.
 
@@ -129,7 +129,7 @@ Il faut bien tuteurer des grillages, grilles ou filets sur les plants pour évit
 
 Le semi se fait bien serré, tous les 2-3 cm.
 
-![Exemple de semi de petits pois](./images/semer-les-petits-pois.jpg "Crédits : image extraite du vlog d'Olivier")
+![Exemple de semi de petits pois](images/semer-les-petits-pois.jpg "Crédits : image extraite du vlog d'Olivier")
 
 Les petits pois vont sortir de 20-30 cm quelques semaines après et la croissance stagnera le reste de l'hiver.
 
@@ -143,7 +143,7 @@ Cela est spécifié sur les sachets de graines.
 
 ### Les artichauts
 
-![Plant d'artichauts](./images/plat-d-artichauts.jpg "Crédits : image extraite du vlog d'Olivier")
+![Plant d'artichauts](images/plat-d-artichauts.jpg "Crédits : image extraite du vlog d'Olivier")
 
 La culture est possible dans tous les climats, mais en climats 1 à 3, il faudra pailler ou abriter les plants.
 
@@ -153,7 +153,7 @@ Si l'on a un grand plant,
 2. on fera ensuite ce qu'on appelle un habillage où l'on coupe une bonne partie des feuilles
 3. et on plante l'œilleton dans un godet avec une terre bien meuble.
 
-![Semi d'artichaut](./images/semi-d-artichaut.jpg "Crédits : image extraite du vlog d'Olivier")
+![Semi d'artichaut](images/semi-d-artichaut.jpg "Crédits : image extraite du vlog d'Olivier")
 
 On réserve cette technique aux climats doux, même s'ils résistent aux gelées de -5°C.
 
@@ -163,11 +163,11 @@ Cette culture est adaptée à toutes les régions.
 
 C'est le moment idéal en ce mois d'octobre de planter les fraisiers, soit issus de plants de jardineries, soit issus des stolons de plants existants.
 
-![Jeunes stolons](./images/jeunes-stolons-de-fraisiers.jpg 'Crédits : image issue du [Magasin Aveve](https://magasinsaveve.be)')
+![Jeunes stolons](images/jeunes-stolons-de-fraisiers.jpg 'Crédits : image issue du [Magasin Aveve](https://magasinsaveve.be)')
 
 versus
 
-![Stolons matures avec des racines](./images/stolons-de-fraisiers.jpg 'Crédits : image issue du [Le Magasin Aveve](https://magasinsaveve.be)')
+![Stolons matures avec des racines](images/stolons-de-fraisiers.jpg 'Crédits : image issue du [Le Magasin Aveve](https://magasinsaveve.be)')
 
 Les stolons sont à planter dans des godets si l'on veut les implanter dans une zone différente des plants parents.
 
@@ -181,7 +181,7 @@ L'échalote se plante aussi dans une terre bien meuble pour éviter l'excès d'h
 
 ### Les épinards
 
-![Champ d'épinards](./images/champ-d-epinard.jpg "Crédits : image extraite du vlog d'Olivier")
+![Champ d'épinards](images/champ-d-epinard.jpg "Crédits : image extraite du vlog d'Olivier")
 
 On peut les planter depuis 2 mois et en ce mois d'octobre, on est encore bon pour en planter.
 
@@ -203,7 +203,7 @@ Voir [ce vlog d'Olivier](https://www.youtube.com/watch?v=j-dKPtWlsaY) pour ses a
 
 ### Les oignons
 
-![Jeunes oignons sortant de terre](./images/jeunes-oignons-sortant-de-terre.jpg "Crédits : image extraite du vlog d'Olivier")
+![Jeunes oignons sortant de terre](images/jeunes-oignons-sortant-de-terre.jpg "Crédits : image extraite du vlog d'Olivier")
 
 Cette culture est réservée aux régions aux climats 4 à 8 pour une culture à partir d'octobre. Pour les autres climats, on attendra le printemps, car il y a un trop gros risque que cela pourrisse à cause du gel.
 
@@ -225,7 +225,7 @@ Donc,
 - aux climats 1 à 3, on les plantera au printemps
 - pour le reste, on s'adaptera à la météo, mais il est possible de planter toute l'année.
 
-![Un chou vert](./images/choux-vert.jpg "Crédits : image extraite du vlog d'Olivier")
+![Un chou vert](images/choux-vert.jpg "Crédits : image extraite du vlog d'Olivier")
 
 ### Les engrais verts
 

@@ -58,7 +58,7 @@ Aussi, une vie dans le sol permet d'obtenir une bonne structure du sol, c'est-à
 
 Par conséquent, cela permet une bonne gestion de l'eau. Dans un sol très compacté, l'eau ne peut pas bien pénétrer. Au contraire, un sol décompacté favorise le développement des micro-organismes, comme le mycélium.
 
-![Du mycélium dans les feuilles mortes](./images/micelium.jpg 'Crédits : image extraite du vlog de Damien')
+![Du mycélium dans les feuilles mortes](images/micelium.jpg 'Crédits : image extraite du vlog de Damien')
 
 ## Le stockage du carbone dans le sol
 
