@@ -20,7 +20,9 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=JY
 
 {{< blockcontainer jli-notice-note " Pour ne pas répéter, je mettrai ici les notes complémentaires uniquement." >}}
 
-J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_).
+<!-- TODO : Link KO ? -->
+
+<!-- J'ai écrit [un autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md) sur le sujet avec l'aide d'un autre Christophe (chaîne _Chemin de la Nature_). -->
 
 {{< /blockcontainer >}}
 
@@ -115,7 +117,9 @@ Je me demande si la consoude aide pour les brûlures…
 
 Il existe aujourd’hui des désaccords sur le sujet.
 
-Voir [les précautions dans l’autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md#precautions).
+<!-- TODO : Link KO ? -->
+
+<!-- Voir [les précautions dans l’autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md#precautions). -->
 
 En fait, Christophe d’Altheaprovence explique pourquoi les alcaloïdes pyrrolizidiniques se trouvent au milieu du débat.
 

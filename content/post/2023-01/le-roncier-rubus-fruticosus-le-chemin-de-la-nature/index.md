@@ -112,7 +112,9 @@ Les affections ostéo-articulaires sont généralement caractérisées par des d
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
+<!-- TODO : Link KO ? -->
+
+<!-- Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi. -->
 
 {{< /blockcontainer >}}
 

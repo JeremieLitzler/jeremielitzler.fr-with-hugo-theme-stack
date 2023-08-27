@@ -26,6 +26,8 @@ Vous pouvez retrouver les vlogs dont je me suis inspiré pour cet article dans l
 - [5 confusions du pissenlit](https://www.youtube.com/watch?v=nI2n-pNHF2w)
 - [Les picrides proches du pissenlit](https://www.youtube.com/watch?v=2ed_FeQmvi8)
 
+<!-- TODO : Link KO ? -->
+
 <!-- J’ajouterai ici les compléments d’information sur le pissenlit que je n’ai pas déjà mentionné sur [l’article rédigé à partir du vlog de l’autre Christophe sur Altheaprovence](../le-pissenlit-altheaprocence/index.md). -->
 
 ## Botanique
@@ -190,6 +192,8 @@ On l’utilise en interne :
 Il n’existe pas de toxicité connue, en tout cas, dans des doses conseillées.
 
 {{< blockcontainer jli-notice-tip "Note personnelle" >}} Quelles sont les doses conseillées ?
+
+<!-- TODO : Link KO ? -->
 
 <!-- Voir [l’autre article sur le pissenlit](../le-pissenlit-altheaprocence/index.md). Simplement : pas d’extrême, on consomme modérément avec une alimentation équilibrée. -->
 
