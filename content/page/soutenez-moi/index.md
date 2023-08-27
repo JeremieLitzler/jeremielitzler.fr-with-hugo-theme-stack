@@ -5,30 +5,7 @@ description: La prise de notes des très nombreuses et utiles vidéos à regarde
 image: /images/une-soeur-aidant-son-frere-a-se-relever.jpg
 heroText: "Une soeur aidant son frère à se relever"
 date: 2021-08-10
-head:
-  - [
-      meta,
-      { 
-        rel: canonical,
-        href: https://jeremielitzler.fr/page/soutenez-moi/ 
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Soutenez mon travail pour partager davantage de notes et d'expériences" },
-     meta,
-     {
-       "og:description": "La prise de notes des très nombreuses et utiles vidéos à regarder prendre du temps. Je le fais, car je souhaite accroitre ma connaissance sur les domaines des technologies web, de la santé, de la permaculture et bien d'autres. Si vous souhaitez me remercier par une participation, je vous en remercie beaucoup et cela m'aidera à publier plus de contenu, pour vous, chers lecteurs.",
-     },
-     meta,
-     {
-       "og:image": /images/une-soeur-aidant-son-frere-a-se-relever.jpg,
-     },
-    ]
-article: false
 ---
-
-![Une soeur aidant son frère à se relever](/images/une-soeur-aidant-son-frere-a-se-relever.jpg)
 
 Quand j’ai commencé ce blog, mon but était le suivant : écrire autant que possible pour construire une base d’informations utiles pour les projets utiles à ma famille afin d’atteindre une meilleure autonomie dans la plupart des domaines.
 

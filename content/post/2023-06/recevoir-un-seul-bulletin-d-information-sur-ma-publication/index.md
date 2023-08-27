@@ -10,6 +10,6 @@ tags:
 
 <!-- more -->
 
-Cliquez [ce lien](../configurer-substack-avec-plusieurs-langues-en-2023/welcome-email.md#activez-la-ou-les-newsletters-dont-vous-avez-besoin) pour découvrir comment configurer ce que vous recevez de ma publication.
+Cliquez [ce lien](../configurer-substack-avec-plusieurs-langues-en-2023/index.md#mon-e-mail-de-bienvenue) pour découvrir comment configurer ce que vous recevez de ma publication.
 
 [Contactez-moi](../../../page/contactez-moi/index.md) si vous avez besoin d'aide supplémentaire.

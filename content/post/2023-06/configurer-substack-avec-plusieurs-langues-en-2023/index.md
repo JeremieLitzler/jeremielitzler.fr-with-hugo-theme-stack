@@ -109,7 +109,7 @@ Ce qui est important ici : vous ajouterez pour expliquer au nouvel abonné comme
 
 Dans mon cas, je devrai écrire un article spécial à mes abonnés français actuels, afin de les aider à s’abonner au bulletin d'information en français uniquement.
 
-Voici mon e-mail de bienvenue :
+### Mon e-mail de bienvenue
 
 ```markdown
 # Welcome! Bienvenue !
