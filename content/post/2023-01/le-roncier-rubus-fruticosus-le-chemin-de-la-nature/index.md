@@ -59,7 +59,7 @@ On infuse les jeunes feuilles.
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
+Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard]({{ < rel "/post/2023-01/ronce-murier-mure-bienfaits-et-usages-altheaprocence/" >}}) de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
 
 {{< /blockcontainer >}}
 

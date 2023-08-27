@@ -20,7 +20,7 @@ Je vais donc réaliser un meilleur calcul. Voici la formule.
 
 ## Calcul original
 
-Pour rappel, dans la section _Quelle économie sur 9 mois_ de [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md#quelle-économie-sur-9-mois), j'ai avancé le fait que j'avais économisé 300 euros.
+Pour rappel, dans la section _Quelle économie sur 9 mois_ de [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md#quelle-économie-sur-9-mois), j'ai avancé le fait que j'avais économisé 300 euros.
 
 Seulement, j'ai pris le coût moyen du kWh sur les deux mois (par exemple : avril et mai) calculé par`montant de la facture (*) divisé par la somme des kWh consommés (**)` :
 
@@ -78,7 +78,7 @@ Toutefois, on va calculer :
 
 (\*) :
 
-- Dans [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md#quelle-économie-sur-9-mois), j'indiquais un prix moyen du kWh très différent entre Engie (jusqu'à octobre 2022) et EDF (à partir de novembre 2022).
+- Dans [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md#quelle-économie-sur-9-mois), j'indiquais un prix moyen du kWh très différent entre Engie (jusqu'à octobre 2022) et EDF (à partir de novembre 2022).
 - Cela était dû à la séparation en deux factures par EDF de la première facture, n'incluant pas l'abonnement avec la consommation.
 - Toutefois, la hausse de 25 % sur le renouvellement du contrat annuel 2022-2023 d’Engie est bien réelle et largement supérieure à celle d'EDF à la fin du mois.
 
@@ -90,7 +90,7 @@ Cela va aussi impacter le retour sur investissement et la date à laquelle l'ins
 
 ## Retour sur investissement recalculé
 
-Du côté de la production, rien ne change (voir _Mon calcul de la production annuelle estimée_ dans [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/README.md#quelle-économie-sur-9-mois))
+Du côté de la production, rien ne change (voir _Mon calcul de la production annuelle estimée_ dans [la partie 2 de mon retour d'expérience après 9 mois](../../../2022/12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md#quelle-économie-sur-9-mois))
 
 Du côté de la date de rentabilité, on peut s'attendre à une date deux plus éloignée.
 

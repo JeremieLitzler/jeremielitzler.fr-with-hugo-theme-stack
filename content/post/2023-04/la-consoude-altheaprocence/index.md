@@ -115,7 +115,7 @@ Je me demande si la consoude aide pour les brûlures…
 
 Il existe aujourd’hui des désaccords sur le sujet.
 
-Voir [les précautions dans l’autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/README.md#precautions).
+Voir [les précautions dans l’autre article](../tout-sur-la-grande-consoude-le-chemin-de-la-nature/index.md#precautions).
 
 En fait, Christophe d’Altheaprovence explique pourquoi les alcaloïdes pyrrolizidiniques se trouvent au milieu du débat.
 

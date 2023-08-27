@@ -83,4 +83,4 @@ Merci encore et recommendez moi à vos amis si vous en avez envie.
 
 <hr>
 
-[Revenir à l'article](./README.md#configurer-le-mail-de-bienvenue)
+[Revenir à l'article](./index.md#configurer-le-mail-de-bienvenue)
