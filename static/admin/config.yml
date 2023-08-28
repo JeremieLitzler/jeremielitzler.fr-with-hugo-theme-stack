@@ -2,10 +2,10 @@ locale: fr
 backend:
   name: github
   repo: JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: 'static/images'
-public_folder: 'public/'
+public_folder: 'public'
 collections:
   - name: 'root' # Used in routes, e.g., /admin/collections/blog
     label: 'Root folder' # Used in the UI
