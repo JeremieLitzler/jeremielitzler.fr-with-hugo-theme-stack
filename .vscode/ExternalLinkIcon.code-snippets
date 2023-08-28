@@ -1,0 +1,10 @@
+{
+  "External link": {
+    // "scope": "html,php,blade,vue,javascript,xml",
+    "prefix": "externallink",
+    "body": [
+      "<a href=\"$1\" target=\"_blank\" rel=\"noopener noreferrer\">$2<ExternalLinkIcon/></a>"
+    ],
+    "description": "Add an external link"
+  }
+}

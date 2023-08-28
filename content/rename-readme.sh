@@ -1,1 +1,1 @@
-find . -iname 'index.md' -execdir mv {} index.md \;
+find . -iname 'README.md' -execdir mv {} index.md \;

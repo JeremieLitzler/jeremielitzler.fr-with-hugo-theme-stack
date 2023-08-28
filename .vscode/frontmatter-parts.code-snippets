@@ -1,0 +1,34 @@
+{
+  "FM Template prev and next articles": {
+    "scope": "yaml",
+    "prefix": "set frontmatter next prev",
+    "body": [
+      "prev:",
+      "  text: ''",
+      "  link: ..//README.md",
+      "next:",
+      "  text: ''",
+      "  link: ..//README.md"
+    ],
+    "description": "Set prev and next articles"
+  },
+  "FM Template for OpenGraph meta": {
+    "scope": "yaml",
+    "prefix": "set og:metas",
+    "body": [
+      "meta,",
+      "{ \"og:type\": article },",
+      "meta,",
+      "{ \"og:title\": \"\" },",
+      "meta,",
+      "{",
+      "  \"og:description\": \"\",",
+      "},",
+      "meta,",
+      "{",
+      "  \"og:image\": /images/.jpg,",
+      "},"
+    ],
+    "description": "Set prev and next articles"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "Charles's Dowding book": {
+    "scope": "markdown",
+    "prefix": "charles book link",
+    "body": "Checkout Charles’s book (use the link according to your location: [in France](https://amzn.to/3ELjByW), [in the US](https://amzn.to/3SROzJm) or [in the UK](https://amzn.to/3Nlrpd1)) for more details about compost.",
+    "description": "Adds Charles's book link"
+  }
+}

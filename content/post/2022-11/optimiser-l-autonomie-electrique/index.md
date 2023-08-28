@@ -147,17 +147,17 @@ Finalement, le coût aurait dépassé les 10 000 euros… au moins !
 
 Conclusion : il m’a proposé une batterie de 2,5 kWh en 24V pour 1000 euros HT, un onduleur chargeur MultiPlus 1600/24V à environ 763 euros HT.
 
-:::tip Pourquoi utiliser une batterie 24V ?
+{{< blockcontainer jli-notice-tip "Pourquoi utiliser une batterie 24V ?" >}}
 
 Pour faire tourner juste le poêle à granuler, cela suffit et surtout, il n’existe pas vraiment d’onduleur 48V avec une puissance inférieure à 2000VA.
 
-:::
+{{< /blockcontainer >}}
 
 Avec le système de monitoring (Cerbo GX) sans écran tactile (\*), on dépassait mon budget avec plus de 2500 euros **hors temps de pose que j’aurai dû réaliser moi-même.**
 
 (\*) : Un smartphone suffit en Bluetooth pour communiquer avec le Cerbo GX.
 
-:::tip Un dernier point hors du sujet de mon projet
+{{< blockcontainer jli-notice-tip "Un dernier point hors du sujet de mon projet" >}}
 
 Pour donner des conseils aux gens sur le sujet, il faut au moins réaliser sa propre installation.
 
@@ -165,7 +165,7 @@ Ensuite, il faut se former sur les solutions de sites autonomes et lire sur le s
 
 J’ai acheté [le livre co-écris par Rémi](https://amzn.to/3fwo1iS) où l’on apprend sur tous les domaines pour créer son foyer résilient. Je vous le recommande. Je réaliserai dans le futur un avis sur le livre, mais pour le moment, je l'aime beaucoup !
 
-:::
+{{< /blockcontainer >}}
 
 ### Avec Eliot de My Shop Solaire
 

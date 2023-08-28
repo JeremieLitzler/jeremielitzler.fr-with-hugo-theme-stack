@@ -6,7 +6,7 @@ favicon = "/favicon.ico"
 
 [footer]
 since = 2021
-customText = ""
+customText = 'License GPLv3 | <a href="https://jeremielitzler.fr/page/mentions-legales/" title="Lire les mentions légales">Mentions légales</a>'
 
 [dateFormat]
 published = "Jan 02, 2006"

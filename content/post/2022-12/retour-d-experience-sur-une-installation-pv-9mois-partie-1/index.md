@@ -48,15 +48,13 @@ Avec pas mal de chats autour de la propriété, j’ai vu que certains sont venu
 
 ### Réorganisation du tableau _Routeur solaire_
 
-::: tabs#schema
-
-@tab Au printemps
+#### Au printemps
 
 Au mois de mai, je n’avais pas une solution optimale pour passer de l’alimentation solaire à l’alimentation réseau…
 
 ![Schéma électrique du 23 mai 2022](images/installation.electrique-photovoltaique-version-2022-05-23.jpg)
 
-@tab A la fin de l’été
+#### A la fin de l’été
 
 Fin août 2022, j’ai enfin trouvé la configuration la plus pratique pour gérer les deux sources d’alimentation du cumulus.
 
@@ -73,8 +71,6 @@ Ce qui a changé :
   - Le disjoncteur 15A-3 permet de couper l’alimentation réseau du cumulus quand cela est nécessaire.
   - Le compteur d’énergie mécanique me permet de continuer le suivi de la consommation du cumulus sur le réseau.
 
-:::
-
 ### Branchement du cumulus
 
 Au départ, j’ai branché le cumulus de la mauvaise façon.
@@ -89,7 +85,7 @@ Après plus de réflexion et de l’aide d’un ami, j’ai réussi à brancher 
 
 Sur la sortie routeur, j’ai enlevé les compteurs mécaniques d’énergie, car le comptage était faux.
 
-:::tip Note personnelle
+{{< blockcontainer jli-notice-tip "Note personnelle" >}}
 
 Je pense que cela est causé par le routeur et la façon dont il laisse passer le courant par impulsion.
 
@@ -99,7 +95,7 @@ Avec le compteur d’énergie numérique sur le tableau de la sortie solaire, ce
 
 Le routeur indique le comptage journalier et celui-ci est réinitialisé chaque jour. Je me satisfais de ce que je peux noter chaque jour, même si en notre absence, on ne peut pas connaitre la quantité de surplus redirigée par le routeur.
 
-:::
+{{< /blockcontainer >}}
 
 Au lien d’aller directement du tableau général au cumulus, j’ai installé :
 
@@ -220,7 +216,7 @@ L’idée :
 
 Quand l’eau chaude, le radiateur se sert dans le surplus solaire.
 
-:::note Pour rappel
+{{< blockcontainer jli-notice-note "Pour rappel" >}}
 
 Le routeur n’alimente pas les 2 sorties en même temps.
 
@@ -228,7 +224,7 @@ Si la sortie 1 ne consomme pas, le surplus solaire alimente la sortie 2.
 
 Cela se révèle très pratique dans le scénario ci-dessus !
 
-:::
+{{< /blockcontainer >}}
 
 ## Et l’optimisation de la puissance maximum
 
@@ -288,10 +284,3 @@ Encore 2 semaines de relevés et vous pourrez découvrir :
 - et comment cela influe sur notre consommation et notre facture.
 
 En attendant, ==merci pour votre soutien !==
-
-:::center ⏬⏬⏬
-
-:::
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>

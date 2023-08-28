@@ -22,9 +22,7 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=O9
 
 Cet article contiendra uniquement les informations médicales sur la plante. Christophe fournit un descriptif botanique sur [son article lié à la vidéo](https://www.altheaprovence.com/ortie-urtica-dioica-urens/).
 
-<!-- TODO : Link KO ? -->
-
-<!-- Aussi, allez lire [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/index.md) pour plus d’informations botaniques. -->
+Aussi, allez lire [l’article du Chemin de la nature](/post/2023-02/lortie-brulante-le-chemin-de-la-nature/index.md) pour plus d’informations botaniques.
 
 {{< /blockcontainer >}}
 
@@ -139,9 +137,7 @@ Les graines sont consommées avec la nourriture, à raison d’une cuillère à 
 
 {{< blockcontainer jli-notice-warning "L’ortie est une plante dioïque" >}}
 
-<!-- TODO : Link KO ? -->
-
-<!-- Voir [l’article du Chemin de la nature](../lortie-brulante-le-chemin-de-la-nature/index.md) pour distinguer l’ortie mâle de l’ortie femelle. -->
+Voir [l’article du Chemin de la nature](/post/2023-02/lortie-brulante-le-chemin-de-la-nature/index.md) pour distinguer l’ortie mâle de l’ortie femelle.
 
 {{< /blockcontainer >}}
 

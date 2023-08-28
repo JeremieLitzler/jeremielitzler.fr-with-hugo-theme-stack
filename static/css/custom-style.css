@@ -1,15 +1,27 @@
 :root {
-  --theme-color: #e78228;
+  --theme-color: #3eaf7c;
+  --accent-color: var(--theme-color);
 }
 
 .jli-debug {
   display: none;
 }
 /* CUSTOM STYLES OVERRIDES */
+a {
+  text-decoration: underline;
+}
+
 .site-name {
   font-weight: bold;
 }
 
+.article-list--compact article > a:hover,
+.subsection-list .article-list--tile article .article-details:hover,
+.menu li a:hover,
+.tagCloud .tagCloud-tags a:hover,
+.article-title a:hover {
+  border: 1px dashed var(--theme-color);
+}
 iframe.newsletter-embed {
   width: 100%;
   height: 16em;
