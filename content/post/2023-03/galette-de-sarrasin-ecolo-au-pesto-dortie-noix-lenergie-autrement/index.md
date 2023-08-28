@@ -1,6 +1,6 @@
 ---
-title: Galette de sarrasin sans électricité avec pesto d'ortie et noix, avec Barnabé Chaillot
-description: "Réaliser ses galettes au sarrasins avec un accompagnement d'ortie et noix... Hum, Barnabé nous régale ! A table !"
+title: Galette de sarrasin sans électricité
+description: "Réaliser ses galettes au sarrasins avec un accompagnement au pesto ortie et noix... Hum, avec Barnabé Chaillot, on se régale ! A table !"
 image: /images/2023-03-07-galette-de-sarrasin-ecolo-au-pesto-dortie-noix-lenergie-autrement.jpg
 imageAlt: 2 galettes de sarrasin qui cuisent sur une plaque
 date: 2023-03-07

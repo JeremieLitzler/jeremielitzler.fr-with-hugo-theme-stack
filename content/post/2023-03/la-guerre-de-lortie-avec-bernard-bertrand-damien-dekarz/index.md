@@ -1,6 +1,6 @@
 ---
-title: La Guerre de l'Ortie avec Bernard Bertrand, avec Damien Dekarz
-description: "Bernard Bertrand a beaucoup inspiré Damien avant même qu'il commence sa chaîne YouTube."
+title: "La Guerre de l'Ortie avec Bernard Bertrand"
+description: "Bernard Bertrand a beaucoup inspiré Damien avant même qu'il commence sa chaîne YouTube. Ce dernier nous présente son entretien avec le défenseur de l'ortie."
 image: /images/2023-03-21-livres-ecrits-par-bernard-bertrand.jpg
 imageAlt: Livres écrits par Bernard Bertrand
 date: 2023-03-21
