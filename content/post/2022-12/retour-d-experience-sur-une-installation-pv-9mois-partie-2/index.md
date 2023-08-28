@@ -55,13 +55,15 @@ Et si l’on compare la consommation en 2019, 2020 et 2021 à celle de 2022, on 
 
 ![Tableau comparant les années 2019 à 2022 en consommation mensuelle en kWh](images/consommation-comparee-2019-2020-2021-2022.jpg 'Le résultat est clair, n’est-ce pas ?')
 
-:::tip Remarques sur janvier, février et mars 2022 En janvier 2022, on a eu notre plus grosse consommation sur les 4 années comparées.
+{{< blockcontainer jli-notice-tip "Remarques sur janvier, février et mars 2022" >}}
+
+En janvier 2022, on a eu notre plus grosse consommation sur les 4 années comparées.
 
 En février et début mars 2022, nous étions à Siwa.
 
 Il faudra attendre encore 3 mois pour voir comment l’installation aide à diminuer la consommation sur ces mois d’hiver.
 
-:::
+{{< /blockcontainer >}}
 
 ### Conclusion
 
@@ -92,11 +94,11 @@ On va continuer à apprendre.
 
 ## Consommation pour l’ECS
 
-:::tip Définition de « ECS »
+{{< blockcontainer jli-notice-tip "Définition de « ECS »" >}}
 
 Il s’agit de l’eau chaude sanitaire, dans notre cas, chauffée par une résistance de 2400 W dans un cumulus de 200 litres.
 
-:::
+{{< /blockcontainer >}}
 
 | Mois  | 2020   | 2021   | 2022   |
 | ----- | ------ | ------ | ------ |
@@ -169,7 +171,7 @@ Il s’agit de l’eau chaude sanitaire, dans notre cas, chauffée par une rési
 }
 ```
 
-:::
+{{< /blockcontainer >}}
 
 - En bleu, il s’agit de la production totale.
 - En jaune, il s’agit de l’autoconsommation.
@@ -288,7 +290,7 @@ Ce qui donne cette courbe :
 }
 ```
 
-:::
+{{< /blockcontainer >}}
 
 - En bleu, il s’agit de la production théorique.
 - En vert, il s’agit de la production réelle.
@@ -305,12 +307,12 @@ Je ne sais pas quel calcul sera le plus juste. Je pars donc sur les données ré
 - Le taux d’autoconsommation
 - Le taux de production
 
-:::tip Définitions
+{{< blockcontainer jli-notice-tip "Définitions" >}}
 
 - Taux d’autoconsommation : correspond à la production consommée moins le rejet sur le réseau.
 - Taux de production : correspond à la Production réelle divisée par la Production théorique.
 
-:::
+{{< /blockcontainer >}}
 
 Cela donne :
 
@@ -336,11 +338,11 @@ Soit un total de 1503,69 kWh annuels consommés.
 
 ### Calcul de la date de rentabilité de l'installation
 
-:::danger Calculé erroné
+{{< blockcontainer jli-notice-danger "Calculé erroné" >}}
 
 Voir [cet article](../../2023-01/calculer-le-retour-sur-investissement-pv/index.md) pour un calcule plus juste.
 
-:::
+{{< /blockcontainer >}}
 
 Avec une augmentation annuelle du prix du kWh acheté à EDF à 8 %[^third], ce qui me semble relativement optimiste vu la situation début 2023, l’installation devient rentable au bout de **==5 ans et 2 mois environ, soit mai 2027==**.
 
@@ -389,7 +391,7 @@ En attendant le point à 12 mois, ==merci pour votre soutien !==
 
 :::center ⏬⏬⏬
 
-:::
+{{< /blockcontainer >}}
 
 <!-- markdownlint-disable MD033 -->
 <p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
