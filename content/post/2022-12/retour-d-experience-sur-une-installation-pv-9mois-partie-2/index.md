@@ -21,7 +21,7 @@ En cet hiver 2022-2023, il devient de plus en plus intéressant de produire sa 
 ## La série d'articles
 
 - [Installation PV - quel retour d'expérience après 2 mois ?](../../2022-06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
-- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
 - [Installation PV - quel retour d'expérience après 1 an ?](../../2023-03/retour-d-experience-sur-une-installation-pv-1an/index.md)
 
 <hr>
@@ -126,52 +126,7 @@ Il s’agit de l’eau chaude sanitaire, dans notre cas, chauffée par une rési
 
 ### Les chiffres mois par mois
 
-:::echarts La production de l’installation sur 9 mois
-
-```json
-{
-  "xAxis": {
-    "type": "category",
-    "data": [
-      "Jan",
-      "Fév",
-      "Mar",
-      "Avr",
-      "Mai",
-      "Jun",
-      "Jul",
-      "Aou",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
-    ]
-  },
-  "yAxis": {
-    "type": "value"
-  },
-  "series": [
-    {
-      "data": [
-        0, 0, 17.3, 160.6, 210.4, 204.3, 225.4, 192.7, 150.9, 109.3, 62.6, 36.3
-      ],
-      "type": "line"
-    },
-    {
-      "data": [0, 0, 10, 13, 24, 21, 21, 38, 3, 1, 1, 1],
-      "type": "bar"
-    },
-    {
-      "data": [
-        0, 0, 7.3, 147.6, 186.4, 183.3, 204.4, 154.7, 147.9, 108.3, 61.6, 35.3
-      ],
-      "type": "line"
-    }
-  ]
-}
-```
-
-{{< /blockcontainer >}}
+![La production de l’installation sur 9 mois](images/la-production-de-l’installation-sur-9-mois.jpg)
 
 - En bleu, il s’agit de la production totale.
 - En jaune, il s’agit de l’autoconsommation.
@@ -238,59 +193,7 @@ Le résultat m’a donné ceci :
 
 Ce qui donne cette courbe :
 
-:::echarts Production théorique vs Production réelle vs Autoconsommation
-
-```json
-{
-  "xAxis": {
-    "type": "category",
-    "data": [
-      "Jan",
-      "Fév",
-      "Mar",
-      "Avr",
-      "Mai",
-      "Jun",
-      "Jul",
-      "Aou",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec"
-    ]
-  },
-  "yAxis": {
-    "type": "value"
-  },
-  "series": [
-    {
-      "data": [
-        83.37, 121.58, 180.82, 189.12, 220.47, 234.06, 242.6, 227.92, 193.91,
-        147.54, 92.21, 69.44
-      ],
-      "type": "line"
-    },
-    {
-      "data": [
-        0, 0, 17.3, 160.6, 210.4, 204.3, 225.4, 192.7, 150.9, 109.3, 62.6, 36.3
-      ],
-      "type": "line"
-    },
-    {
-      "data": [0, 0, 10, 13, 24, 21, 21, 38, 3, 1, 1, 1],
-      "type": "bar"
-    },
-    {
-      "data": [
-        0, 0, 7.3, 147.6, 186.4, 183.3, 204.4, 154.7, 147.9, 108.3, 61.6, 35.3
-      ],
-      "type": "line"
-    }
-  ]
-}
-```
-
-{{< /blockcontainer >}}
+![Production théorique vs Production réelle vs Autoconsommation](images/production-theorique-vs-production-reelle-vs-autoconsommation.jpg)
 
 - En bleu, il s’agit de la production théorique.
 - En vert, il s’agit de la production réelle.
@@ -316,21 +219,21 @@ Je ne sais pas quel calcul sera le plus juste. Je pars donc sur les données ré
 
 Cela donne :
 
-| Mois | Taux d’autoconsommation | Taux de production | Production (kWh)   | Production autoconsommée |
-| ---- | ----------------------- | ------------------ | ------------------ | ------------------------ |
-| 1    | 98,00 % [^second]       | 60,00 % [^second]  | 50,02 [^second]    | 49,02 [^second]          |
-| 2    | 98,00 % [^second]       | 70,00 % [^second]  | 85,11 [^second]    | 83,40 [^second]          |
-| 3    | 98,00 % [^second]       | 80,00 % [^second]  | 144,66 [^second]   | 141,76 [^second]         |
-| 4    | 91,91 %                 | 84,92 %            | 160,60             | 147,60                   |
-| 5    | 88,59 %                 | 95,43 %            | 210,40             | 186,40                   |
-| 6    | 89,72 %                 | 87,29 %            | 204,30             | 183,30                   |
-| 7    | 90,68 %                 | 92,91 %            | 225,40             | 204,40                   |
-| 8    | 80,28 %                 | 84,55 %            | 192,70             | 154,70                   |
-| 9    | 98,01 %                 | 77,82 %            | 150,90             | 147,90                   |
-| 10   | 99,09 %                 | 74,08 %            | 109,30             | 108,30                   |
-| 11   | 98,40 %                 | 67,89 %            | 62,60              | 61,60                    |
-| 12   | 97,25 %                 | 52,28 %            | 36,30              | 35,30                    |
-| -    | -                       | -                  | Soit un total de : | 1503,69 [^second]        |
+| Mois | Taux d’autoconsommation | Taux de production | Production (kWh) | Production autoconsommée |
+| --- | --- | --- | --- | --- |
+| 1 | 98,00 % [^second] | 60,00 % [^second] | 50,02 [^second] | 49,02 [^second] |
+| 2 | 98,00 % [^second] | 70,00 % [^second] | 85,11 [^second] | 83,40 [^second] |
+| 3 | 98,00 % [^second] | 80,00 % [^second] | 144,66 [^second] | 141,76 [^second] |
+| 4 | 91,91 % | 84,92 % | 160,60 | 147,60 |
+| 5 | 88,59 % | 95,43 % | 210,40 | 186,40 |
+| 6 | 89,72 % | 87,29 % | 204,30 | 183,30 |
+| 7 | 90,68 % | 92,91 % | 225,40 | 204,40 |
+| 8 | 80,28 % | 84,55 % | 192,70 | 154,70 |
+| 9 | 98,01 % | 77,82 % | 150,90 | 147,90 |
+| 10 | 99,09 % | 74,08 % | 109,30 | 108,30 |
+| 11 | 98,40 % | 67,89 % | 62,60 | 61,60 |
+| 12 | 97,25 % | 52,28 % | 36,30 | 35,30 |
+| - | - | - | Soit un total de : | 1503,69 [^second] |
 
 [^second]: Les valeurs sont estimées
 
@@ -338,24 +241,20 @@ Soit un total de 1503,69 kWh annuels consommés.
 
 ### Calcul de la date de rentabilité de l'installation
 
-{{< blockcontainer jli-notice-danger "Calculé erroné" >}}
-
-Voir [cet article](../../2023-01/calculer-le-retour-sur-investissement-pv/index.md) pour un calcule plus juste.
-
-{{< /blockcontainer >}}
+Pour information, allez lire [cet article](../../2023-01/calculer-le-retour-sur-investissement-pv/index.md) pour un calcule plus juste.
 
 Avec une augmentation annuelle du prix du kWh acheté à EDF à 8 %[^third], ce qui me semble relativement optimiste vu la situation début 2023, l’installation devient rentable au bout de **==5 ans et 2 mois environ, soit mai 2027==**.
 
 [^third]: 8 % correspondent au taux d’augmentation _moyen_ du prix du kWh chaque année en 2014 et 2022, 4 à 20 % en réalité.
 
-| Année | Production annuelle | Prix du kWh | Économie annuelle | Cumul         |
-| ----- | ------------------- | ----------- | ----------------- | ------------- |
-| 2023  | 1503,69             | 0,23 €      | 345,85 €          | 345,85 €      |
-| 2024  | 1503,69             | 0,25 €      | 373,52 €          | 719,36 €      |
-| 2024  | 1503,69             | 0,27 €      | 403,40 €          | 1122,76 €     |
-| 2025  | 1503,69             | 0,29 €      | 435,67 €          | 1558,43 €     |
-| 2026  | 1503,69             | 0,31 €      | 470,52 €          | 2028,95 €     |
-| 2027  | 100,00              | 0,34 €      | 33,79 €           | **2062,75 €** |
+| Année | Production annuelle | Prix du kWh | Économie annuelle | Cumul |
+| --- | --- | --- | --- | --- |
+| 2023 | 1503,69 | 0,23 € | 345,85 € | 345,85 € |
+| 2024 | 1503,69 | 0,25 € | 373,52 € | 719,36 € |
+| 2024 | 1503,69 | 0,27 € | 403,40 € | 1122,76 € |
+| 2025 | 1503,69 | 0,29 € | 435,67 € | 1558,43 € |
+| 2026 | 1503,69 | 0,31 € | 470,52 € | 2028,95 € |
+| 2027 | 100,00 | 0,34 € | 33,79 € | **2062,75 €** |
 
 ## Quelle est la suite
 
@@ -388,11 +287,3 @@ Je sais aussi que certains ont sûrement fait autrement ou qu’ils trouveront d
 Partagez vos avis de façon constructive. Avant tout, ce n’est pas avoir raison à 100 % qui compte, c’est de réaliser un petit effort chez soi pour réduire la pression économique sur nos foyers.
 
 En attendant le point à 12 mois, ==merci pour votre soutien !==
-
-:::center ⏬⏬⏬
-
-{{< /blockcontainer >}}
-
-<!-- markdownlint-disable MD033 -->
-<p class="newsletter-wrapper"><iframe class="newsletter-embed" src="https://iamjeremie.substack.com/embed" frameborder="0" scrolling="no"></iframe></p>
-```

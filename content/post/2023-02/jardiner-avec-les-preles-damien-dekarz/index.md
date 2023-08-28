@@ -36,9 +36,7 @@ Damien a un très bon retour d'expérience du jardinage avec la prêle.
 
 {{< blockcontainer jli-notice-warning "Soyez sûrs de la variété de prêles avant" >}}
 
-<!-- TODO : Link KO ? -->
-
-<!-- Voir [cet article](../les-vertus-de-la-prele-des-champs-le-chemin-de-la-nature/index.md#précautions) et [celui-ci pour l'identification](../../2023-01/prele-des-champs-equisetum-arvense-altheaprocence/index.md#précautions). -->
+Voir [cet article](/post/2023-02/les-vertus-de-la-prele-des-champs-le-chemin-de-la-nature/index.md#précautions) et [celui-ci pour l'identification](/post/2023-01/prele-des-champs-equisetum-arvense-altheaprocence/index.md#précautions).
 
 {{< /blockcontainer >}}
 

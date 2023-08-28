@@ -6,7 +6,7 @@ menu:
     main:
         weight: 15
         params: 
-            icon: link
+            icon: writing
 ---
 
 {{< contact-form >}}
