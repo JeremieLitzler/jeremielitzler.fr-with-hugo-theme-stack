@@ -1,0 +1,92 @@
+{
+  "Crédit image FR": {
+    "scope": "markdown",
+    "prefix": "crédit image fr",
+    "body": ["_Crédits de l'image : [$1]($2)_"],
+    "description": "Add credit image"
+  },
+  "Crédit image EN": {
+    "scope": "markdown",
+    "prefix": "crédit image en",
+    "body": ["_Credits: [$1]($2)_"],
+    "description": "Add credit image"
+  },
+  "Crédit unsplash": {
+    "scope": "markdown",
+    "prefix": "disable warning crédit unsplash",
+    "body": ["<!-- markdownlint-disable MD033 -->"],
+    "description": "Add markdownling disable credit unsplash"
+  },
+  "Snippet 'Mes notes' FR": {
+    "scope": "markdown",
+    "prefix": "add notes link fr",
+    "body": ["**Mes notes :** [lire l'article]($1)"],
+    "description": "Add a link to notes Fr"
+  },
+  "Snippet 'My notes' EN": {
+    "scope": "markdown",
+    "prefix": "add notes link en",
+    "body": ["**My notes:** [read them here]($1)"],
+    "description": "Add a link to notes EN"
+  },
+  "Snippet newsletter no arrow": {
+    "scope": "markdown",
+    "prefix": "newsletter",
+    "body": [
+      "<!-- markdownlint-disable MD033 -->",
+      "<p class=\"newsletter-wrapper\"><iframe class=\"newsletter-embed\" src=\"https://iamjeremie.substack.com/embed\" frameborder=\"0\" scrolling=\"no\"></iframe></p>"
+    ],
+    "description": "Add substack newsletter block with no arrow"
+  },
+  "Snippet newsletter arrow": {
+    "scope": "markdown",
+    "prefix": "arrow newsletter",
+    "body": [
+      ":::center",
+      "⏬⏬⏬",
+      ":::",
+      "<!-- markdownlint-disable MD033 -->",
+      "<p class=\"newsletter-wrapper\"><iframe class=\"newsletter-embed\" src=\"https://iamjeremie.substack.com/embed\" frameborder=\"0\" scrolling=\"no\"></iframe></p>"
+    ],
+    "description": "Add substack newsletter block with arrow"
+  },
+  "Note generic EN": {
+    "scope": "markdown",
+    "prefix": "generic note",
+    "body": [":::tip $1", "$2", ":::"],
+    "description": "add generic note en"
+  },
+  "Note warning EN": {
+    "scope": "markdown",
+    "prefix": "wwarning note",
+    "body": [":::warning $1", "$2", ":::"],
+    "description": "add warning note en"
+  },
+  "Personal note EN": {
+    "scope": "markdown",
+    "prefix": "personal note en",
+    "body": [":::tip Personal note", "$1", ":::"],
+    "description": "add personal note en"
+  },
+  "Personal note FR": {
+    "scope": "markdown",
+    "prefix": "personal note fr",
+    "body": [":::tip Note personnelle", "$1", ":::"],
+    "description": "add personal note fr"
+  },
+  "Exerpt marker": {
+    "scope": "markdown",
+    "prefix": "excerpt marker",
+    "body": ["<!-- more -->"],
+    "description": "add excerpt end marker"
+  },
+
+  "Large article nav helper": {
+    "scope": "markdown",
+    "prefix": "nav helper",
+    "body": [
+      "[< Back to the table of contents](./README.md) | [$1]($2) | [$3 >]($4)"
+    ],
+    "description": "add excerpt end marker"
+  }
+}

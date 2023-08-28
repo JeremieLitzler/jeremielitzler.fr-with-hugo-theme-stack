@@ -1,0 +1,18 @@
+{
+  "Exerpt marker": {
+    "scope": "markdown",
+    "prefix": "add tabs",
+    "body": [
+      "::: tabs",
+      "@tab title 1",
+      "<!-- tab 1 content -->",
+      "@tab title 2",
+      "<!-- tab 2 content -->",
+      "@tab:active title 3",
+      "<!-- tab 3 will be activated by default -->",
+      "<!-- tab 3 content -->",
+      ":::"
+    ],
+    "description": "add tabs from MdEnhance plugin"
+  }
+}
