@@ -2,7 +2,7 @@
   --theme-color: #3eaf7c;
   --accent-color: var(--theme-color);
   --notice-note-light: #fdfdfe;
-  --notice-note-dark: #ccc;
+  --notice-note-dark: #858585;
   --notice-tip-light: #e6f6e6;
   --notice-tip-dark: var(--theme-color);
   --notice-warn-light: #fff8e6;
@@ -12,7 +12,7 @@
 }
 
 :root[data-scheme=dark] {
-  --notice-note-light: #ccc;
+  --notice-note-light: #858585;
   --notice-note-dark: #fdfdfe;
   --notice-tip-light: var(--theme-color);
   --notice-tip-dark: #e6f6e6;
