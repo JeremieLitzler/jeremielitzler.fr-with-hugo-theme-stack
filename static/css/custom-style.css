@@ -1,6 +1,8 @@
 :root {
   --theme-color: #3eaf7c;
   --accent-color: var(--theme-color);
+  --body-text-color: rgba(0, 0, 0, 0.8);
+  
   --notice-note-light: #fdfdfe;
   --notice-note-dark: #858585;
   --notice-tip-light: #e6f6e6;
@@ -12,6 +14,8 @@
 }
 
 :root[data-scheme=dark] {
+  --body-text-color: rgba(255, 255, 255, 0.8);
+  
   --notice-note-light: #858585;
   --notice-note-dark: #fdfdfe;
   --notice-tip-light: var(--theme-color);
@@ -28,6 +32,10 @@
 /* CUSTOM STYLES OVERRIDES */
 a {
   text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: var(--body-text-color);
 }
 
 .site-name {
