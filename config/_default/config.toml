@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://hugo.jeremielitzLer.fr"
+baseurl = "https://jeremielitzLer.fr"
 languageCode = "fr-fr"
 paginate = 5
 title = "Jérémie Litzler"
