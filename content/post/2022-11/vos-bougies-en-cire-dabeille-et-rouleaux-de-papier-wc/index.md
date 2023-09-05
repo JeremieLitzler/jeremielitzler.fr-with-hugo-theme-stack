@@ -4,28 +4,8 @@ description: La méthode est simple et fascinante pour les enfants. Elle leur ap
 date: 2022-11-26
 image: /images/2022-11-26-3-bougies-finies.jpg
 imageAlt: Trois bougies réalisées à la maison
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/comment-realiser-ses-propres-bougies,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Comment réaliser ses propres bougies à la maison" },
-     meta,
-     {
-       "og:description": "La méthode est simple et fascinante pour les enfants. Elle leur apprend ce que les abeilles nous donnent et comment recycler nos déchets (rouleaux de papier WC à jeter)",
-     },
-     meta,
-     {
-       "og:image": /images/2022-11-26-3-bougies-finies.jpg,
-     },
-    ]
 categories:
-  - Astuces et Tutoriels
+  - Tutoriels
 tags:
   - Bougies
   - Cire d abeilles
