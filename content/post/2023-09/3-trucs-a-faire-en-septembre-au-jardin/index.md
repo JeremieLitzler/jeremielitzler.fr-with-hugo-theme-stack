@@ -2,7 +2,7 @@
 title: 3 Trucs à faire en septembre
 description: "En septembre, l’automne approche, les récoltes sont encore abondantes. Toutefois, il faut se préparer et préparer le jardin. Enfin, il faut aussi aider nos compagnons de travail, les arthropodes pour l’hiver qui sera vite là."
 image: images/2023-09-05-titre-de-la-video-sur-fond-de-jardin.jpg
-imageAlt: Titre de la vidéo sur fond de jardin
+imageAlt: Titre de la vidéo sur fond de jardin avec de l'amaranthe.
 date: 2023-09-05
 categories:
   - Jardin
@@ -15,7 +15,7 @@ Merci à Damien pour le partage de son savoir ! Cet article résume mes notes d
 
 <!-- more -->
 
-Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=PmWl6oY8ChI).
+Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=PmWl6oY8ChI). Les notes qui suivent incluent aussi ce que Damien a partagé il y a 7 ans dans [cette autre vidéo](https://www.youtube.com/watch?v=con-c2_o9uc) au mois de septembre.
 
 ## Le point sur les récoltes
 
@@ -26,6 +26,32 @@ Si vous suivez Damien ou que vous avez lu mes notes sur les mois précédents, D
 En fin, il a bien donné 5 ans plus tard !
 
 ![Le panier de pommes récoltées sur l’arbre](images/le-panier-de-pommes-recoltes-sur-l-arbre.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+
+### … et les semences
+
+On laissera les courgettes, les courges, les tomates ou encore les laitues grossirent le maximum ou monter en graine pour que les semences soient bien matures.
+
+{{< blockcontainer jli-notice-tip "Idem pour les aromatiques">}}
+
+Dans mon cas, j’ai cultivé du basilic pourpre cette année à partir de graines que j’avais récupérées d’un plant l’année dernière.
+
+Le plant a bien poussé et il monte à son tour en graine.
+
+<!-- Mettre une photo -->
+
+{{< /blockcontainer >}}
+
+### Laisser les vieux plants
+
+Même s’il est vrai que cela n’est pas _esthétique_, laissez vos anciens plants sur place. Ne les jetez pas !
+
+Les déchets seront utiles pour enrichir le sol.
+
+### Et les plants malades ?
+
+Les arracher et les brûler n’est pas très utile. Je suis tout à fait d’accord avec Damien pour que les légumes apprennent et deviennent plus résistants.
+
+Ainsi, si le mildiou a sévi sur les tomates, laisser au sol les plants malades et planter autre chose au même endroit l’année qui suit.
 
 ## Truc n° 1 : préparer la serre pour l’automne
 
