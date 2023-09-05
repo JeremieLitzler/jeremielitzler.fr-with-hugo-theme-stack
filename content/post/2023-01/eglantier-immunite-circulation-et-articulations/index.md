@@ -95,7 +95,7 @@ Ils sont très riches en tanins et les anciens l’utilisaient pour les saigneme
 
 Christophe n’entre pas dans le détail sur cette utilisation.
 
-Pour plus de détails, je vous invite à [lire l’article que j’ai réalisé sur le cynorhodon](../le-rosier-sauvage-bourgeons-et-cynorhodons-le-chemin-de-la-nature/index.md#gemmothérapie) sur les bases des vlogs d’un autre Christophe, auteur du Chemin de la Nature.
+Pour plus de détails, je vous invite à [lire l’article que j’ai réalisé sur le cynorhodon](../le-rosier-sauvage-bourgeons-et-cynorhodons/index.md#gemmothérapie) sur les bases des vlogs d’un autre Christophe, auteur du Chemin de la Nature.
 
 ## Utilisation du cynorhodon
 
@@ -186,6 +186,6 @@ Les rameaux sont équipés d’épines, mais personnellement, c’est moins comp
 
 Voilà, cela conclut mes notes sur l’églantier ou le rosier sauvage.
 
-Encore une fois, [l’article](../le-rosier-sauvage-bourgeons-et-cynorhodons-le-chemin-de-la-nature/index.md#gemmothérapie), que j’ai réalisé sur le cynorhodon sur les bases des vlogs d’un autre Christophe, auteur du Chemin de la Nature, complétera bien celui-ci.
+Encore une fois, [l’article](../le-rosier-sauvage-bourgeons-et-cynorhodons/index.md#gemmothérapie), que j’ai réalisé sur le cynorhodon sur les bases des vlogs d’un autre Christophe, auteur du Chemin de la Nature, complétera bien celui-ci.
 
 Et comment toujours, pour ne rien rater...

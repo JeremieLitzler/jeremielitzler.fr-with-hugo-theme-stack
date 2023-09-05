@@ -34,7 +34,7 @@ Cela nous avait permis de réduire de 12-13kWh pour chauffer l'ECS à 8-10kWh po
 
 Je suis assez regardant sur la consommation électrique et je suis d'accord avec ceux qui prônent [la sobriété énergétique](https://negawatt.org/La-sobriete-energetique) pour réduire notre impact sur l'environnement.
 
-J'ai réalisé une estimation de notre consommation en 2016, en listant chaque élément électrifié, car, pour moi, connaitre la consommation du foyer et la répartition sur les équipements est le premier pas vers une meilleure efficacité et une sensibilisation à la sobriété énergétique. J'ai réalisé [une prise de notes](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle) qui valide cette première étape.
+J'ai réalisé une estimation de notre consommation en 2016, en listant chaque élément électrifié, car, pour moi, connaitre la consommation du foyer et la répartition sur les équipements est le premier pas vers une meilleure efficacité et une sensibilisation à la sobriété énergétique. J'ai réalisé [une prise de notes](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle) qui valide cette première étape.
 
 J'avais estimé 2900 kWh sur 1 an. Vous pouvez consulter [ce tableau](https://docs.google.com/spreadsheets/d/1-1A2I04MqVy3-zxMwQJ7Zy83OP200ruxGRUNXsHlNbQ/edit?usp=sharing) pour le détail et n'hésitez pas à copier la Google Sheets pour votre cas.
 
@@ -52,20 +52,20 @@ Voici ce que ça donne depuis 2014 :
 
 - notre consommation annuelle tout compris :
 
-| Month | 2014   | 2015    | 2016    | 2017    | 2018    | 2019    | 2020    | 2021    | 2022   |
-| ----- | ------ | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------ |
-| 1     |        | 306,00  | 331,00  | 334,00  | 273,00  | 313,00  | 305,00  | 320,00  | 417,00 |
-| 2     |        | 452,00  | 288,00  | 250,00  | 270,00  | 270,00  | 353,00  | 295,00  | 100,00 |
-| 3     |        | 270,00  | 296,00  | 252,00  | 188,00  | 293,00  | 310,00  | 260,00  | 268,00 |
-| 4     |        | 157,00  | 211,00  | 81,00   | 195,00  | 141,00  | 246,00  | 253,00  | 118,00 |
-| 5     |        | 292,00  | 221,00  | 254,00  | 200,00  | 238,00  | 217,00  | 213,00  | 79,00  |
-| 6     |        | 265,00  | 176,00  | 88,00   | 172,00  | 182,00  | 258,00  | 156,00  |        |
-| 7     |        | 123,45  | 205,00  | 191,00  | 171,00  | 191,00  | 191,00  | 82,00   |        |
-| 8     |        | 213,59  | 138,00  | 194,00  | 86,00   | 132,00  | 116,00  | 187,00  |        |
-| 9     |        | 137,96  | 174,00  | 182,00  | 132,00  | 204,00  | 198,00  | 58,00   |        |
-| 10    | 0,00   | 265,00  | 141,00  | 164,00  | 219,00  | 139,00  | 214,00  | 347,00  |        |
-| 11    | 373,00 | 218,00  | 254,00  | 251,00  | 304,00  | 313,00  | 277,00  | 298,00  |        |
-| 12    | 332,00 | 358,00  | 292,00  | 291,00  | 305,00  | 382,00  | 334,00  | 369,00  |        |
+| Month | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 |  | 306,00 | 331,00 | 334,00 | 273,00 | 313,00 | 305,00 | 320,00 | 417,00 |
+| 2 |  | 452,00 | 288,00 | 250,00 | 270,00 | 270,00 | 353,00 | 295,00 | 100,00 |
+| 3 |  | 270,00 | 296,00 | 252,00 | 188,00 | 293,00 | 310,00 | 260,00 | 268,00 |
+| 4 |  | 157,00 | 211,00 | 81,00 | 195,00 | 141,00 | 246,00 | 253,00 | 118,00 |
+| 5 |  | 292,00 | 221,00 | 254,00 | 200,00 | 238,00 | 217,00 | 213,00 | 79,00 |
+| 6 |  | 265,00 | 176,00 | 88,00 | 172,00 | 182,00 | 258,00 | 156,00 |  |
+| 7 |  | 123,45 | 205,00 | 191,00 | 171,00 | 191,00 | 191,00 | 82,00 |  |
+| 8 |  | 213,59 | 138,00 | 194,00 | 86,00 | 132,00 | 116,00 | 187,00 |  |
+| 9 |  | 137,96 | 174,00 | 182,00 | 132,00 | 204,00 | 198,00 | 58,00 |  |
+| 10 | 0,00 | 265,00 | 141,00 | 164,00 | 219,00 | 139,00 | 214,00 | 347,00 |  |
+| 11 | 373,00 | 218,00 | 254,00 | 251,00 | 304,00 | 313,00 | 277,00 | 298,00 |  |
+| 12 | 332,00 | 358,00 | 292,00 | 291,00 | 305,00 | 382,00 | 334,00 | 369,00 |  |
 | Total | 705,00 | 3058,00 | 2727,00 | 2532,00 | 2515,00 | 2798,00 | 3019,00 | 2838,00 | 982,00 |
 
 - notre consommation en ESC :
@@ -92,21 +92,21 @@ Cela a confirmé l'estimation de 30 % consommation par le cumulus.
 
 J'ai aussi réalisé une simulation d'ensoleillement avec l'outil ["PHOTOVOLTAIC GEOGRAPHICAL INFORMATION SYSTEM"](https://re.jrc.ec.europa.eu/pvg_tools/fr/#PVP) au niveau du toit de la maison (point le plus bas de la propriété) et au niveau de la terrasse la plus haute sur la propriété (pour le plus ensoleillé).
 
-| Mois         | Heures (toit de la maison)  | Heures (terrasse) | Diff. en % d'ensoleillement |
-| ------------ | --------------------------- | ----------------- | --------------------------- |
-| 1            | 124,07                      | 191,80            | + 35,31%                    |
-| 2            | 174,13                      | 230,27            | + 24,38%                    |
-| 3            | 274,47                      | 313,67            | + 12,50%                    |
-| 4            | 328,07                      | 358,20            | + 8,41%                     |
-| 5            | 386,80                      | 435,40            | + 11,16%                    |
-| 6            | 394,93                      | 443,87            | + 11,02%                    |
-| 7            | 398,93                      | 450,27            | + 11,40%                    |
-| 8            | 359,47                      | 398,27            | + 9,74%                     |
-| 9            | 293,93                      | 325,20            | + 9,61%                     |
-| 10           | 228,87                      | 281,20            | + 18,61%                    |
-| 11           | 140,40                      | 210,27            | + 33,23%                    |
-| 12           | 105,33                      | 162,47            | + 35,17%                    |
-| Annuellement | 3209,40                     | 3800,87           | + 15,56%                    |
+| Mois | Heures (toit de la maison)  | Heures (terrasse) | Diff. en % d'ensoleillement |
+| --- | --- | --- | --- |
+| 1 | 124,07 | 191,80 | + 35,31% |
+| 2 | 174,13 | 230,27 | + 24,38% |
+| 3 | 274,47 | 313,67 | + 12,50% |
+| 4 | 328,07 | 358,20 | + 8,41% |
+| 5 | 386,80 | 435,40 | + 11,16% |
+| 6 | 394,93 | 443,87 | + 11,02% |
+| 7 | 398,93 | 450,27 | + 11,40% |
+| 8 | 359,47 | 398,27 | + 9,74% |
+| 9 | 293,93 | 325,20 | + 9,61% |
+| 10 | 228,87 | 281,20 | + 18,61% |
+| 11 | 140,40 | 210,27 | + 33,23% |
+| 12 | 105,33 | 162,47 | + 35,17% |
+| Annuellement | 3209,40 | 3800,87 | + 15,56% |
 
 Comme vous le voyez, il n'y a pas photo !
 
@@ -140,7 +140,7 @@ Après quelques échanges très intéressants avec l'artisan de SolaireEthic (vo
   - La distance est due à la situation de la terrasse.
 - 8 panneaux de 190 Wc recyclés (7-8 ans d'âge), soit 1520 Wc
   - Si on prend en compte les 0.3 % de réduction de la production, on est plutôt entre 1484 et 1488 Wc.
-  - La valeur de 0.3 % provient de l'étude faite depuis 1992 en Savoie dont je n'ai pas le lien, mais citée dans [ma prise de notes (§ "Dimensionner les panneaux photovoltaïques")](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie-larchipelle/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle).
+  - La valeur de 0.3 % provient de l'étude faite depuis 1992 en Savoie dont je n'ai pas le lien, mais citée dans [ma prise de notes (§ "Dimensionner les panneaux photovoltaïques")](../../2022-05/les-bases-d-une-installation-solaire-en-autonomie/index.md) récemment sur un entretien de [Rémi chez "Nos pieds sur terre"](https://nospiedssurterre.fr/) réalisée par [l'Archipelle](https://www.youtube.com/c/LArchiPelle).
 
 J'ai réalisé :
 
