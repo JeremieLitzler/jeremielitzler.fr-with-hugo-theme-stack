@@ -10,18 +10,19 @@
                     {{- $Srcset := "" -}}
                     
                     {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
-                        {{- $thumbnail := $image.resource.Resize "800x" -}}
-                        {{- $thumbnailRetina := $image.resource.Resize "1600x" -}}
-                        {{- $Srcset = printf "%s 800w, %s 1600w" $thumbnail.RelPermalink $thumbnailRetina.RelPermalink -}}
-                        {{- $Permalink = $thumbnail.RelPermalink -}}
-                        {{- $Width = $thumbnail.Width -}}
-                        {{- $Height = $thumbnail.Height -}}
+                        {{- $small := $image.resource.Resize "360x" -}}
+                        {{- $medium := $image.resource.Resize "600x" -}}
+                        {{- $large := $image.resource.Resize "1024x" -}}
+                        {{- $Srcset = printf "%s 360w, %s 600w, %s 1024w" $small.RelPermalink $medium.RelPermalink $large.RelPermalink -}}
+                        {{- $Permalink = $medium.RelPermalink -}}
+                        {{- $Width = $medium.Width -}}
+                        {{- $Height = $medium.Height -}}
                     {{- end -}}
+					<!-- {{ $Srcset }} -->
                     <img src="{{ $Permalink }}"
                         {{ with $Srcset }}srcset="{{ . }}"{{ end }}
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
-                        loading="lazy"
                         alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
                 {{ else }}
                     <img src="{{ $image.permalink }}" loading="lazy" alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />

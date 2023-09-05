@@ -9,8 +9,8 @@ since = 2021
 customText = 'License GPLv3 | <a href="https://jeremielitzler.fr/page/mentions-legales/" title="Lire les mentions légales">Mentions légales</a>'
 
 [dateFormat]
-published = "Jan 02, 2006"
-lastUpdated = "Jan 02, 2006 15:04 MST"
+published = "2 Jan 2006"
+lastUpdated = "2 Jan 2006 15:04"
 
 [sidebar]
 subtitle = "Je partage ici mes notes et experiences que, je suis sûr, seront utiles pour au moins une personne. Bonne lecture !"
@@ -27,7 +27,7 @@ featureImgAltPrefix = "Image de l'article"
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "Licencié sous CC BY-NC-SA 4.0"
 
 ## Widgets
 [[widgets.homepage]]
@@ -75,7 +75,7 @@ enabled = true
 
 ## Comments
 [comments]
-enabled = true
+enabled = false
 provider = "disqus"
 
 [comments.disqusjs]
