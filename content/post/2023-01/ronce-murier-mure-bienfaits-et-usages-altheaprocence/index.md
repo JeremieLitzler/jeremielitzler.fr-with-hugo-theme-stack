@@ -8,7 +8,7 @@ categories:
   - Santé
 tags:
   - Christophe Bernard
-  - Plantes
+  - Plantes sauvages
   - Ronces
 ---
 

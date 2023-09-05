@@ -1,45 +1,15 @@
 ---
 title: "5 sauvages autour de chez vous"
-description: Autour de chez vous, ces plantes se trouvent sûrement et il serait dommage de ne pas en profiter.
+description: Autour de chez vous, vous trouverez sûrement ces plantes. Il serait dommage de ne pas en profiter et d'expérimenter.
 image: /images/2022-07-20-5-sauvages-1.jpg
 imageAlt: Une prairie garnie de fleurs variées
 date: 2022-07-20
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
-#next:
-#  text: ''
-#  link: ..//index.md
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2022/07/5-sauvages-1-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "5 sauvages autour de chez vous" },
-     meta,
-     {
-       "og:description": "Autour de chez vous, ces plantes se trouvent sûrement et il serait dommage de ne pas en profiter.",
-     },
-     meta,
-     {
-       "og:image": /images/2022-07-20-5-sauvages-1.jpg,
-     },
-    ]
 categories:
   - Alimentation
 tags:
   - Damien Dekarz
   - Plantes sauvages
 ---
-
-![Une prairie garnie de fleurs variées](/images/2022-07-20-5-sauvages-1.jpg)
-
-Autour de chez vous, ces plantes se trouvent sûrement et il serait dommage de ne pas en profiter.
 
 Merci à Damien pour le partage de son savoir !
 

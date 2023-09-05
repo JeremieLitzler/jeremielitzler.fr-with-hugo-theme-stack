@@ -1,6 +1,6 @@
 ---
 title: Mentions légales
-description: Cette page contient les mentions légales du site "Un journal partagé par Jérémie Litzler"
+description: "Cette page contient les mentions légales du site en français réalisé par Jérémie Litzler. Si vous avez des questions, n’hésitez pas à me contacter."
 date: 2021-08-10
 ---
 

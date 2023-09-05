@@ -1,6 +1,6 @@
 ---
 title: Qui suis-je ?
-description: Une présentation de Jérémie Litzler et du but du site.
+description: Une présentation de Jérémie Litzler, son parcours professionnel, ses passe-temps et une description du contenu du site.
 date: 2021-08-10
 menu:
     main: 

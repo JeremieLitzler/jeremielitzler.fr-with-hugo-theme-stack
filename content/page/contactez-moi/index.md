@@ -1,6 +1,6 @@
 ---
 title: Contactez-moi
-description: Je réponds à tous les emails, donnez-moi un peu de temps pour vous répondre au mieux.
+description: Je réponds à tous les emails, donnez-moi un peu de temps et je vous répondrai au mieux. Merci pour votre patience.
 date: 2021-08-10
 menu:
     main:
