@@ -11,6 +11,12 @@ menu:
 comments: false
 ---
 
+{{< blockcontainer jli-notice-note "You speak english?" >}}
+
+[Click this link!](https://iamjeremie.me/page/about/)
+
+{{< /blockcontainer >}}
+
 ## Mon histoire
 
 <!--![Jérémie gravissant la viaferrata à Kandersteg, Suisse](/images/profilepic-400w.jpg 'Jérémie gravissant la viaferrata à Kandersteg, Suisse') {.author-image}-->
