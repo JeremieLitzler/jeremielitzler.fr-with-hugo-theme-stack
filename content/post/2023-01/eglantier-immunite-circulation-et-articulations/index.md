@@ -4,9 +4,6 @@ description: "Le rosier sauvage est l'ancêtre des rosiers cultivés et il n'exi
 date: 2023-01-26
 image: /images/2023-01-26-faux-fruit-de-cynorrhodon-ouvert.jpg
 imageAlt: Faux fruit de cynorhodon ouvert
-prev:
-  text: 'Toutes mes notes des vlogs de Christophe Bernard'
-  link: ../../../tag/christophe-bernard/
 categories:
   - Santé
   - Plantes
