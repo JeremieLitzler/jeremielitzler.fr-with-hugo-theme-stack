@@ -105,6 +105,8 @@ Pas vraiment.
 
 Le gingembre va permettre l’arrivée de sang vers les organes sexuels, mais le désir ou l’envie sexuelle n’est pas _induite_ par la consommation de gingembre.
 
-> Les plantes médicinales ne peuvent pas réparer une relation qui bat de l’aile ~ Christophe Bernard
+> Les plantes médicinales ne peuvent pas réparer une relation qui bat de l’aile
+>
+> ~ Christophe Bernard
 
 Pour plus d’informations, allez [lire l’article associé au vlog de Christophe](https://www.altheaprovence.com/gingembre-zingiber-officinale/).
