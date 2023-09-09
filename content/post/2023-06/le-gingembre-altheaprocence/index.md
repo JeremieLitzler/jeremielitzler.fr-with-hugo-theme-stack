@@ -80,7 +80,7 @@ La forme sèche est considérée plus chaud et épicée. Faites le test !
 
 Comme évoqué plus haut, la forme fraiche se rape ou se coupe en petits morceaux.
 
-{{< blockcontainer jli-notice-tip "Pour besoin d’enlever la peau si vous achetez bio" >}}
+{{< blockcontainer jli-notice-tip "Pas besoin d’enlever la peau si vous achetez bio" >}}
 
 Par contre, laver le rhizome, car des traces de terre peuvent être présentes.
 
