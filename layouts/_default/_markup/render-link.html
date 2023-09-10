@@ -1,7 +1,7 @@
 {{- $url := urls.Parse .Destination -}}
 {{- $scheme := $url.Scheme -}}
 
-{{ printf "%#v" $.Destination }}
+<!-- {{ printf "%#v" $.Destination }} -->
 
 <a href="
   {{- if eq $scheme "" -}}

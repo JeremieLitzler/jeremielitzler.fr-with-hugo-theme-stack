@@ -1,7 +1,7 @@
 # Change baseurl before deploy
 baseurl = "https://jeremielitzLer.fr"
 languageCode = "fr-fr"
-paginate = 5
+paginate = 8
 title = "Jérémie Litzler"
 description = "Je partage ici mes notes et experiences que, je suis sûr, seront utiles pour au moins une personne. Bonne lecture !"
 
