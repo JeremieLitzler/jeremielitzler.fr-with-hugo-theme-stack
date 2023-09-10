@@ -3,7 +3,7 @@ title: "Migrer de Vuepress à Hugo"
 description: "J’utilise Vuepress depuis un an. Au travail, nous l’utilisons pour documenter nos processus et nos guides (environ 400+ articles). Mais c’est devenu lent."
 image: images/2023-08-30-accueil-du-siteweb-hugo.jpg
 imageAlt: Page d'accueil de Hugo
-date: 2023-09-10
+date: 2023-09-11
 categories:
   - Tutoriels
 tags:
