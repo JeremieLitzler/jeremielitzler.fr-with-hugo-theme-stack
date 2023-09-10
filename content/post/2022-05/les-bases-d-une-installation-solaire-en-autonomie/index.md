@@ -2,22 +2,6 @@
 title: "Les bases d'une installation solaire en autonomie"
 description: "Réaliser son installation solaire n'est pas compliquée, mais cela requiert de la préparation et une bonne définition de son besoin."
 date: 2022-05-26
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://iamjeremie.substack.com/p/notes-sur-les-bases-dune-installation,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Les bases d'une installation solaire en autonomie" },
-     meta,
-     {
-       "og:description": "Réaliser son installation solaire n'est pas compliquée, mais cela requiert de la préparation et une bonne définition de son besoin.",
-     },
-    ]
 categories:
   - Energie
 tags:
@@ -26,8 +10,6 @@ tags:
   - Autoconsommation
   - Résilience
 ---
-
-Réaliser son installation solaire n'est pas compliquée, mais cela requiert de la préparation et une bonne définition de son besoin.
 
 Merci à Brian et Rémi pour leur échange ! Ce qui suit sont mes notes de la vidéo publiée sur la chaîne de l'Archipelle. Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=WOuTv0kfwRg).
 

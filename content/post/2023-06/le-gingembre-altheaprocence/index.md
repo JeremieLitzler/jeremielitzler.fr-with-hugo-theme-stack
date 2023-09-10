@@ -80,7 +80,7 @@ La forme sèche est considérée plus chaud et épicée. Faites le test !
 
 Comme évoqué plus haut, la forme fraiche se rape ou se coupe en petits morceaux.
 
-{{< blockcontainer jli-notice-tip "Pour besoin d’enlever la peau si vous achetez bio" >}}
+{{< blockcontainer jli-notice-tip "Pas besoin d’enlever la peau si vous achetez bio" >}}
 
 Par contre, laver le rhizome, car des traces de terre peuvent être présentes.
 
@@ -105,6 +105,8 @@ Pas vraiment.
 
 Le gingembre va permettre l’arrivée de sang vers les organes sexuels, mais le désir ou l’envie sexuelle n’est pas _induite_ par la consommation de gingembre.
 
-> Les plantes médicinales ne peuvent pas réparer une relation qui bat de l’aile ~ Christophe Bernard
+> Les plantes médicinales ne peuvent pas réparer une relation qui bat de l’aile
+>
+> ~ Christophe Bernard
 
 Pour plus d’informations, allez [lire l’article associé au vlog de Christophe](https://www.altheaprovence.com/gingembre-zingiber-officinale/).

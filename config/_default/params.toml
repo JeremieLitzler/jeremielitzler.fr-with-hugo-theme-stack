@@ -27,7 +27,7 @@ featureImgAltPrefix = "Image de l'article"
 
 [article.license]
 enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+default = "Licencié sous CC BY-NC-SA 4.0"
 
 ## Widgets
 [[widgets.homepage]]
@@ -37,7 +37,7 @@ type = "search"
 type = "archives"
 
 [widgets.homepage.params]
-limit = 5
+limit = 8
 
 [[widgets.homepage]]
 type = "categories"

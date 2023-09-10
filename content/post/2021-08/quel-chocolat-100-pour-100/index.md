@@ -7,7 +7,7 @@ image: '/images/.jpg'
 imageAlt: Les 3 produits évalués dans cet article
 categories:
   - Alimentation
-article: false
+draft: true
 ---
 
 Je connais quelqu'un qui aime beaucoup le chocolat. Parce que nous croyons que le sucre est très mauvais pour la santé, nous sélectionnons uniquement des chocolat sans sucre ajouté.

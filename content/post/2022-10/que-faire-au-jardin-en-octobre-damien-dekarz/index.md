@@ -1,37 +1,15 @@
 ---
 title: Que faire au jardin en Octobre
-description: Cet article résume mes notes du vlog réalisé par Permaculture, agroecologie, etc
+description: "L’automne s’installe et les dernières récoltes se terminent. Mais ce n’est pas pour cela que le jardinier devient inactif. Damien nous détaille les tâches à réaliser ce mois-ci."
 date: 2022-10-11
 image: '/images/2022-10-11-une-courge-verte-raillee-sur-du-paillage.jpg'
 imageAlt: Une courge verte raillée sur du paillage
-head:
-  - [
-      meta,
-      {
-       rel: canonical,
-        href: 'https://jeremielitzler.fr/2022/10/que-faire-au-jardin-en-octobre-damien-dekarz/',
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Que faire au jardin en Octobre" },
-     meta,
-     {
-       "og:description": "Cet article résume mes notes du vlog réalisé par Permaculture, agroecologie, etc",
-     },
-     meta,
-     {
-       "og:image": /images/2022-10-11-une-courge-verte-raillee-sur-du-paillage.jpg,
-     },
-    ]
 categories:
   - Jardin
 tags:
   - Damien Dekarz
   - En Octobre
 ---
-
-![Une courge verte raillée sur du paillage](/images/2022-10-11-une-courge-verte-raillee-sur-du-paillage.jpg 'Crédits : image extraite du vlog de Damien')
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Permaculture, agroécologie, etc.
 

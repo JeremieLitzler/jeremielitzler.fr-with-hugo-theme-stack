@@ -1,24 +1,7 @@
 ---
 title: Réduire son exposition à la lumiere bleue
-description: Cela vous aidera beaucoup si vous passez beaucoup devant un écran
+description: "Dans notre société moderne, la lumière bleue est partout : télévision, smartphones, panneaux de publicités, écran d’ordinateur… Réduire votre exposition à celle-ci qui vous aidera beaucoup."
 date: 2021-08-25
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2021/08/reduire-son-exposition-a-la-lumiere-bleue/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Réduire son exposition à la lumiere bleue" },
-     meta,
-     {
-       "og:description": "Cela vous aidera beaucoup si vous passez beaucoup devant un écran",
-     },
-    ]
-
 categories:
   - Santé
 ---
