@@ -1,14 +1,13 @@
 ---
 title: "Comment mesurer sa consommation électrique dans son domicile"
 description: "Mesurer votre consommation est la première étape indispensable pour démarrer votre voyage vers plus de sobriété. Cela ne demande aucun investissement initial, si ce n’est un peu de votre temps. Ensuite, on affine les mesures avec un compteur d’énergie, ou aussi appelé “wattmètre”."
-# image: images/-.jpg
+image: images/exemple-d-usage-d-un-wattmetre.jpg
 # imageAlt: 
 date: 2023-09-22
 categories:
   - Energie
 tags:
   - "Le C.A.P : Comprendre"
-draft: true
 ---
 
 ## Comment mesurer sa consommation, sans investissement initial
@@ -17,7 +16,7 @@ La question de départ est : quels appareils consomment et pendant combien de t
 
 Il est possible de mesurer sa consommation électrique sans effectuer d’investissement initial en utilisant des méthodes simples et peu coûteuses. Voici quelques suggestions :
 
-### 1. Relever les index de votre compteur
+### Relever les index de votre compteur
 
 La manière la plus basique consiste à effectuer régulièrement des relevés manuels de vos compteurs électriques. Notez les chiffres indiqués à intervalles réguliers.
 
@@ -25,9 +24,9 @@ Par exemple, noter les index chaque jour pendant une semaine de chaque mois d’
 
 Vous pouvez aussi prendre une mesure chaque semaine pendant un an.
 
-{{< blockcontainer jli-notice-warning "Si vous avez un abonnement \"Heures creuses et Heures pleines\", prenez bien chaque index." />}}
+{{< blockcontainer jli-notice-warning "Si vous avez un abonnement \"Heures creuses et Heures pleines\", prenez bien la mesure de chaque index." />}}
 
-### 2. Réaliser un calcul approximatif à partir de l’usage moyen de vos appareils
+### Réaliser un calcul approximatif à partir de l’usage moyen de vos appareils
 
 Si vous connaissez la puissance de vos appareils électriques et le temps pendant lequel vous les utilisez, vous pouvez estimer la consommation en utilisant la formule : .
 
@@ -45,7 +44,7 @@ Vous avez des questions, [n’hésitez pas à me demander](/page/contactez-moi/i
 
 {{< /blockcontainer >}}
 
-### 3. Analyser vos factures d’électricité
+### Analyser vos factures d’électricité
 
 Un autre moyen de mesurer vos consommations est d’utiliser vos factures d’électricité.
 
@@ -63,7 +62,7 @@ Ces factures sont mises à disposition par votre fournisseur d’électricité t
 
 Si vous souhaitez mesurer votre consommation électrique de manière plus précise en utilisant un wattmètre (aussi appelé compteur de puissance ou compteur d’énergie), voici les étapes à suivre :
 
-### 1. **Achetez un wattmètre**
+### Achetez un wattmètre
 
 Procurez-vous un wattmètre dans un magasin d’électronique ou en ligne.
 
@@ -73,7 +72,7 @@ J’ai acheté [ce modèle](https://www.amazon.fr/gp/product/B004W7RDES) il y a 
 
 Aussi, la précision du comptage est à 0,1 kWh. Pour [cet autre modèle](https://www.amazon.fr/gp/product/B08BPC39DM), il me semble que le comptage est réalisé au watt près.
 
-### 2. **Branchez le wattmètre**
+### Branchez le wattmètre
 
 Insérez le wattmètre dans une prise électrique murale, puis branchez l’appareil que vous souhaitez mesurer. Assurez-vous que le wattmètre soit correctement configuré pour la tension de votre réseau électrique.
 
@@ -91,7 +90,7 @@ Si la puissance ne correspond pas, alors le wattmètre est sûrement défectueux
 
 {{< /blockcontainer >}}
 
-### 3. **Configurez le wattmètre**
+### Configurez le wattmètre
 
 Selon le modèle de wattmètre que vous avez acheté, il peut y avoir des instructions spécifiques à suivre pour le configurer.
 
@@ -99,7 +98,7 @@ Certains wattmètres peuvent nécessiter la saisie de certaines informations, te
 
 La configuration du tarif électrique n’est pas forcément utile si vous utilisez le modèle de Google Sheet.
 
-### 4. **Lisez les données**
+### Lisez les données
 
 Une fois le wattmètre correctement configuré, il devrait afficher des informations telles que la puissance instantanée (en watts) utilisée par l’appareil connecté, ainsi que la consommation totale d’énergie (en kilowattheures, kWh) au fil du temps.
 
@@ -109,7 +108,7 @@ La puissance instantanée (en watts) est généralement mesurée au watt près.
 
 La consommation d’énergie dans le temps (en watts heures ou Wh) peut être mesurée entre un dixième de kilo Wh (c’est-à-dire 100 Wh par 100 Wh) ou au Wh (1 Wh par 1 Wh).
 
-### 5. **Surveillez et enregistrez**
+### Surveillez et enregistrez
 
 Vous laissez l’appareil fonctionner pendant un certain temps tout en surveillant les chiffres affichés sur le wattmètre.
 
@@ -127,7 +126,7 @@ Je vous recommande de réaliser une mesure hebdomadaire sur le mois de janvier e
 
 Pour les appareils cycliques, comme un lave-vaisselle ou un lave-linge, il est préférable de mesurer la consommation d’un cycle (ou de chaque type de cycle, comme mode « Eco cotton » versus mode « cotton 95 °C ») et d’estimer le nombre de cycles par an. La consommation annuelle sera alors le résultat de la multiplication du nombre de cycles par la consommation pour un cycle.
 
-### 7. **Répétez pour d’autres appareils**
+### Répétez pour chaque appareil
 
 Si vous souhaitez mesurer la consommation d’autres appareils, répétez le processus en les connectant individuellement au wattmètre.
 
@@ -146,3 +145,5 @@ De mon expérience, peu de personnes connaissent le détail de leur consommation
 C’est pourtant la première étape pour commencer à _économiser_. Par exemple, votre bouilloire de 2400 W, est-elle vraiment nécessaire ? Votre lave-linge est-il un appareil A+++ ou B ou pire encore ?
 
 Sans avoir beaucoup investi d’argent (maximum 25 euros pour le compteur d’énergie) et avec un peu de votre temps, vous êtes en bonne voie pour réduire votre facture d’électricité.
+
+Crédit : image extraite d'Amazon sur [la page de cet article](https://www.amazon.fr/gp/product/B08BPC39DM).
