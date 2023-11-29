@@ -9,8 +9,8 @@ since = 2021
 customText = 'License GPLv3 | <a href="https://jeremielitzler.fr/page/mentions-legales/" title="Lire les mentions légales">Mentions légales</a>'
 
 [dateFormat]
-published = "2 Janvier 2006"
-lastUpdated = "2 Janvier 2006 15:04"
+published = "02/01/2006"
+lastUpdated = "02/01/2006 15:04"
 
 [sidebar]
 subtitle = "Je partage ici mes notes et experiences que, je suis sûr, seront utiles pour au moins une personne. Bonne lecture !"
