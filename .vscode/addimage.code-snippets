@@ -3,7 +3,7 @@
     "scope": "markdown",
     "prefix": "set image dutch f",
     "body": [
-      "![$1](./images/$2.jpg \"Credits: image taken from The Dutch Farmer's vlog\")"
+      "![$1](images/$2.jpg \"Credits: image taken from The Dutch Farmer's vlog\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename in the folder .vuepress/public/images"
   },
@@ -11,7 +11,7 @@
     "scope": "markdown",
     "prefix": "set image charles d",
     "body": [
-      "![$1](./images/$2.jpg \"$3. Credits: image taken from Charles Dowding's vlog\")"
+      "![$1](images/$2.jpg \"$3. Credits: image taken from Charles Dowding's vlog\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -19,7 +19,7 @@
     "scope": "markdown",
     "prefix": "set image huw r",
     "body": [
-      "![$1](./images/$2.jpg \"$3. Credits: image taken from Huw Richard's vlog\")"
+      "![$1](images/$2.jpg \"$3. Credits: image taken from Huw Richard's vlog\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -27,7 +27,7 @@
     "scope": "markdown",
     "prefix": "set image olivier",
     "body": [
-      "![$1](./images/$2.jpg \"Credits : image extraite du vlog d'Olivier\")"
+      "![$1](images/$2.jpg \"Credits : image extraite du vlog d'Olivier\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -35,7 +35,7 @@
     "scope": "markdown",
     "prefix": "set image damien",
     "body": [
-      "![$1](./images/$2.jpg \"Crédits : image extraite du vlog de Damien\")"
+      "![$1](images/$2.jpg \"Crédits : image extraite du vlog de Damien\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -43,7 +43,7 @@
     "scope": "markdown",
     "prefix": "set image pinguin",
     "body": [
-      "![$1](./images/$2.jpg \"Credits : image extraite du vlog de Kévin\")"
+      "![$1](images/$2.jpg \"Credits : image extraite du vlog de Kévin\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -51,7 +51,7 @@
     "scope": "markdown",
     "prefix": "set image althea",
     "body": [
-      "![$1](./images/$2.jpg \"Credits : image extraite du vlog de Christophe\")"
+      "![$1](images/$2.jpg \"Credits : image extraite du vlog de Christophe\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -59,7 +59,7 @@
     "scope": "markdown",
     "prefix": "set image chemin nature",
     "body": [
-      "![$1](./images/$2.jpg \"Credits : image extraite du vlog de Christophe sur le Chemin de la Nature\")"
+      "![$1](images/$2.jpg \"Credits : image extraite du vlog de Christophe sur le Chemin de la Nature\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   },
@@ -67,7 +67,7 @@
     "scope": "markdown",
     "prefix": "set image barnabe",
     "body": [
-      "![$1](./images/$2.jpg \"Credits : image extraite du vlog sur la chaîne de Barnabé Chaillot\")"
+      "![$1](images/$2.jpg \"Credits : image extraite du vlog sur la chaîne de Barnabé Chaillot\")"
     ],
     "description": "Add an image in a post where the inputs are 1) the image description, and 2) the image filename"
   }
