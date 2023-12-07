@@ -7,7 +7,8 @@ date: 2023-09-22
 categories:
   - Energie
 tags:
-  - "Le C.A.P : Comprendre"
+  - Passons le C.A.P
+  - Comprendre
 ---
 
 ## Comment mesurer sa consommation, sans investissement initial
