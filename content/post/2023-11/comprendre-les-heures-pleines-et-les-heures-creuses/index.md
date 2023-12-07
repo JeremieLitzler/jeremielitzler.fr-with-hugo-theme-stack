@@ -8,6 +8,7 @@ categories:
   - Energie
 tags:
   - Passons le C.A.P
+  - Comprendre
 ---
 
 ## Mais pourquoi faire ce choix
