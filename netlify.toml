@@ -1,4 +1,10 @@
 [[redirects]]
+from = "/post/2023-11/realiser-sa-gemmotherapie-soi-meme/"
+to = "/post/2023-12/realiser-sa-gemmotherapie-soi-meme/"
+status = 301
+force = true
+
+[[redirects]]
 from = "/2021/08/quel-chocolat-100-pour-100/"
 to = "/post/2021-08/quel-chocolat-100-pour-100"
 status = 301
