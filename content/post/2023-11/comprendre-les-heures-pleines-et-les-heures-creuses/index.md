@@ -1,8 +1,8 @@
 ---
 title: "Comprendre les heures pleines et les heures creuses"
 description: 'Les termes « HP » (Heures Pleines) et « HC » (Heures Creuses) font référence à des plages horaires spécifiques pendant lesquelles les tarifs de l’électricité peuvent varier en fonction de la demande et de l’offre sur le réseau électrique.'
-# image: images/-.jpg
-imageAlt: 
+image: images/heures-creuses-vs-heures-pleines.jpeg
+imageAlt: Les heures creuses la nuit et les heures pleines le jour.
 date: 2023-11-06
 categories:
   - Energie
@@ -82,3 +82,7 @@ Donc peut-être est-il préférable d’utiliser l’électricité nucléaire po
 À vous de faire vos choix maintenant.
 
 Comme toujours, [n’hésitez pas à me contacter](../../../page/contactez-moi/index.md) si vous avez des questions.
+
+**Remarque :** comme le montre l'image d'entête, les heures creuses sont actives généralement la nuit et les heures pleines le jour. Toutefois, cela est variable selon les régions. Vérifiez sur votre contrat auprès de votre fournisseur d'énergie.
+
+Crédit : l'image d'entête a été créée avec [Sketch.io](https://sketch.io/) et les icônes de [Freepik (la lune et le soleil)](https://www.flaticon.com/authors/freepik) et [Juicy Fish (le nuage)](https://www.flaticon.com/authors/juicy-fish) sur [Flaticon](https://www.flaticon.com/free-icons).
