@@ -1,5 +1,5 @@
 ---
-title: "Prendre des notes vos habitudes de consommation électrique"
+title: "Prenez des notes de vos habitudes de consommation électrique"
 description: "Prendre des notes sur les habitudes de consommation électrique est une excellente idée pour mieux gérer votre utilisation d’énergie et éventuellement réduire vos coûts. Voici comment vous pourriez organiser vos notes."
 image: images/modele-appareils-a-consommation-electrique-dans-le-domicile.jpg
 imageAlt: Copie d'écran du modèle de liste des appareils à consommation électrique dans le domicile
