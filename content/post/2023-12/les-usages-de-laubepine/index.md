@@ -12,7 +12,9 @@ tags:
 ---
 
 Merci à Christophe pour le partage de son savoir !
-Cet article résume mes notes du vlog réalisé par le chemin de la nature.
+Cet article résume mes notes des vlogs réalisés par le chemin de la nature.
+
+Toutes les images sont extraites des vlogs.
 
 <!-- more -->
 
