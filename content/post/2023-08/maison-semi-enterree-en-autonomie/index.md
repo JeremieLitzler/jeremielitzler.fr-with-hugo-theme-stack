@@ -410,22 +410,22 @@ Je ne pense pas que tout le monde choisisse la vie en ville, dans un appartement
 
 La société, le modèle économique actuel, nous fait croire que cela est le plus simple, le meilleur pour vivre.
 
-Toutefois, je pense qu’on devrait plus remettre en question ces fausses généralités, _le modèle identique pour tout le monde_, de se remettre en question quand on sent que les choses ne vont pas.
+Toutefois, je pense qu’on devrait plus remettre en question ces fausses généralités: _Le modèle identique pour tout le monde_ est-il viable ? N'y a-t-il pas une résilience innée dans la diversité des réalisations ? Se remettre en question quand on sent que les choses ne vont pas est sûrement un bon point de départ.
 
 Il faut construire des projets uniques et les partager pour en inspirer d’autres après nous.
 
 {{< /blockcontainer >}}
 
-Posez-vous les questions :
+Posez-vous les questions suivantes :
 
 - où ?
 - comment ?
 - pourquoi ?
 - avec quoi ?
 
-Rapidement, on se rend qu’il faut alors :
+Rapidement, on se rend compte qu’il faut alors :
 
-- changer de travail
+- changer de travail ou de façon de travailler
 - mettre de l’argent de côté pour acquérir une indépendance financière
 
 Rien que ça, cela peut être effrayant !
