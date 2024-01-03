@@ -3,7 +3,7 @@ title: Le plantain
 description: "Cette plante sauvage est incroyable. On la trouve en abondance et ses propriétés peuvent servir tous les jours, pour les petits “bobos” de la vie. Que ce soit les piqûres d’insectes, les brûlures superficielles, les problèmes de peau, le plantain est un bon allié de votre kit de premier secours."
 image: images/2024-01-03-plantain-lanceole.jpg
 imageAlt: Du plantain lancéolé
-date: 2024-01-04
+date: 2024-01-03
 categories:
   - Plantes
 tags:
