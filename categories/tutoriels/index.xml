@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutoriels on Jérémie Litzler</title><link>https://jeremielitzLer.fr/categories/tutoriels/</link><description>Recent content in Tutoriels on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/categories/tutoriels/index.xml" rel="self" type="application/rss+xml"/><item><title>Générer un document Word avec OpenXml PowerTools</title><link>https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/</link><pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-modele-word-et-son-equivalent-sans-les-balises.jpg" alt="Featured image of post Générer un document Word avec OpenXml PowerTools" />&lt;p>Pour un projet, j’ai eu la tâche de :&lt;/p>
+&lt;ul>
+&lt;li>Prendre un modèle de document Word contenant des balises prédéfinies par un besoin spécifique client,&lt;/li>
+&lt;li>Remplacer lesdites balises par des données dynamiquement issues d’une base de données.&lt;/li>
+&lt;li>Permettre la préservation des styles du modèle (texte gras, surligné, sous-ligné, de différentes, etc.) même après le remplacement des balises.&lt;/li>
+&lt;/ul>
+&lt;p>Dans cet article, je partage ce que j’ai appris et comment j’ai atteint le but.&lt;/p>
+&lt;h2 id="présentation-de-office-open-xml">Présentation de &lt;code>Office Open XML&lt;/code>&lt;/h2>
+&lt;p>Après une petite recherche sur Google, je comprends vite que le format de document Word aujourd’hui respecte &lt;em>la norme ISO/CEI 29500 créée par Microsoft, destinée à répondre à la demande d’interopérabilité dans les environnements de bureautique et à concurrencer la solution d’interopérabilité OpenDocument soutenue par tous les autres éditeurs de suites bureautiques, notamment Apache et The Document Foundation&lt;/em> (source :
+&lt;a href="https://fr.wikipedia.org/wiki/Office_Open_XML">Wikipedia&lt;/a>).&lt;/p>
+&lt;p>En lisant les divers articles, je comprends que renommer un fichier &lt;code>mon-document.docx&lt;/code> en &lt;code>mon-document.docx.zip&lt;/code> permet ensuite de dézipper le fichier et obtenir ceci :&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-modele-word-dezippe.jpg"
+width="1200"
+height="611"
+srcset="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-modele-word-dezippe_hu67dfaabde3c16a519ce57c83f75e2d3b_86240_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-modele-word-dezippe_hu67dfaabde3c16a519ce57c83f75e2d3b_86240_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-modele-word-dezippe_hu67dfaabde3c16a519ce57c83f75e2d3b_86240_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Exemple de modèle Word « dézippé »"
+class="gallery-image"
+data-flex-grow="196"
+data-flex-basis="471px"
+>&lt;/p>
+&lt;p>Les fichiers &lt;code>XML&lt;/code> définissent le document Word.&lt;/p>
+&lt;p>Par exemple, le fichier &lt;code>document.xml&lt;/code> correspond au contenu au format &lt;code>XML&lt;/code> .&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-contenu-du-document-word-en-xml.jpg"
+width="1200"
+height="591"
+srcset="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-contenu-du-document-word-en-xml_hu6d63e167b3cc0d2e176e3b56d43dec1f_540532_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-contenu-du-document-word-en-xml_hu6d63e167b3cc0d2e176e3b56d43dec1f_540532_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/exemple-de-contenu-du-document-word-en-xml_hu6d63e167b3cc0d2e176e3b56d43dec1f_540532_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Exemple de contenu du document Word en XML"
+class="gallery-image"
+data-flex-grow="203"
+data-flex-basis="487px"
+>&lt;/p>
+&lt;p>On voit bien les balises entourées de leurs &lt;em>doubles moustaches&lt;/em>, par exemple &lt;code>{{FirstName}} {{LastName}}&lt;/code> .&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Au passage..." >
+&lt;p class="jli-notice-title">Au passage...&lt;/p>&lt;p>Le choix de &lt;code>{{Balise}}&lt;/code> est arbitraire.&lt;/p>
+&lt;p>J’aurais aussi bien pu utiliser &lt;code>{Balise}&lt;/code> ou &lt;code>[Balise]&lt;/code> ou même &lt;code>%Balise%&lt;/code> .&lt;/p>
+&lt;p>C’est l’appelant de la librairie de génération qui définit les balises. Le générateur lui-même ne fait que prendre les balises et les remplacer avec la donnée associée.&lt;/p>&lt;/div>
+&lt;p>On voit aussi dans l’XML que, pour d’autres balises, on peut se demander comment le remplacement va être possible.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/balises-non-eclatees-vs-balises-eclatees.jpg"
+width="891"
+height="755"
+srcset="https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/balises-non-eclatees-vs-balises-eclatees_hu07fe510ea6310c840214d271b7b63466_187322_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/balises-non-eclatees-vs-balises-eclatees_hu07fe510ea6310c840214d271b7b63466_187322_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-12/generer-un-document-word-avec-opemxml-powertools-et-csharp/images/balises-non-eclatees-vs-balises-eclatees_hu07fe510ea6310c840214d271b7b63466_187322_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Balises « non éclatées » vs balises « éclatées »"
+class="gallery-image"
+data-flex-grow="118"
+data-flex-basis="283px"
+>&lt;/p>
+&lt;p>Que s’est-il passé sur la balise &lt;code>{{AddressLane}}&lt;/code> ? En fait, en éditant le document (suppression, ajout de caractères, correction, etc.), le texte qui compose la balise peut être découpée en &lt;code>&amp;lt;w:t&amp;gt;...&amp;lt;/w:t&amp;gt;&lt;/code> par Microsoft Word (&lt;code>w:t&lt;/code> est défini
+&lt;a href="http://www.datypic.com/sc/ooxml/e-w_t-1.html">ici dans la spécification OOXML&lt;/a>).&lt;/p>
+&lt;p>Du coup, quand on veut remplacer&lt;code>{{AddressLane}}&lt;/code>, comment fait-on ?&lt;/p>
+&lt;h2 id="la-solution">La solution&lt;/h2>
+&lt;p>La théorie est très bien détaillée
+&lt;a href="https://stackoverflow.com/a/59328568">dans cette réponse&lt;/a> de
+&lt;a href="https://stackoverflow.com/users/4654643/thomas-barnekow">Thomas Barnekow&lt;/a> sur Stackoverflow.&lt;/p>
+&lt;p>Thomas utilise deux librairies disponibles sur Nuget.org pour démontrer le remplacement efficace des balises :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>DocumentFormat.OpenXml&lt;/code> (version 3.0.0 au 12/12/2023)
+&lt;ul>
+&lt;li>cette librairie est la librairie officielle de Microsoft pour lire les documents&lt;code>OpenXml&lt;/code> .&lt;/li>
+&lt;li>Voici le dépôt de la librairie
+&lt;a href="https://github.com/dotnet/Open-XML-SDK">&lt;code>DocumentFormat.OpenXml&lt;/code>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Open-Xml-PowerTools (version 4.5.3.2 au 12/12/2023)
+&lt;ul>
+&lt;li>Cette librairie étend &lt;code>DocumentFormat.OpenXml&lt;/code> avec des outils très pratiques, comme le remplacement des balises.&lt;/li>
+&lt;li>Voici le dépôt de la librairie
+&lt;a href="https://github.com/OpenXmlDev/Open-Xml-PowerTools">&lt;code>Open-Xml-PowerTools&lt;/code>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Je me suis inspiré de
+&lt;a href="https://github.com/OpenXmlDev/Open-Xml-PowerTools/tree/vNext/OpenXmlPowerToolsExamples/TextReplacer02">l’exemple de génération &lt;code>TextReplacer02&lt;/code>&lt;/a> avec Open-Xml-PowerTools.&lt;/p>
+&lt;h2 id="lalgorithme-de-génération">L’algorithme de génération&lt;/h2>
+&lt;p>Pour transformer un modèle de document &lt;code>.docx&lt;/code> avec des balises personnalisées, l’algorithme est le suivant :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>On lit les données dynamiques.&lt;/p>
+&lt;ul>
+&lt;li>Dans mon exemple, je définis 2 objets en dur pour faire simple. J’utilise l’outil &lt;em>
+&lt;a href="https://www.fakenamegenerator.com/">Fake Name Generator&lt;/a>&lt;/em> pour obtenir deux identités de personnes.&lt;/li>
+&lt;li>Dans le projet que j’ai réalisé, les données provenaient d’une base de données MSSQL avec l’utilisation d’EF Core.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>On réalise une copie du modèle.&lt;/p>
+&lt;ul>
+&lt;li>Dans mon projet d’exemple, le document est copié dans le dossier &lt;code>bin\GeneratedDocx&lt;/code> du projet de tests.&lt;/li>
+&lt;li>Dans le cas du projet que j’ai réalisé, je devais copier le modèle du dossier source stockant les modèles à un dossier séparé en le nommant par exemple &lt;code>generated-[GUID].docx&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Ouvrir &lt;strong>en écriture&lt;/strong> la copie du modèle.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-tip" id="Lire et écriture un fichier `.docx` ?" >
+&lt;p class="jli-notice-title">Lire et écriture un fichier `.docx` ?&lt;/p>&lt;p>Au passage, il faut que les modèles soient des vrais &lt;code>.docx&lt;/code>, &lt;code>dotx&lt;/code> ou &lt;code>dotm&lt;/code> (même &lt;code>magicnumber&lt;/code> égale à&lt;code>8075&lt;/code> .&lt;/p>
+&lt;p>Un document &lt;code>.doc&lt;/code> ne pourra pas être lu.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>Remplacer chaque balise à partir de la liste prédéfinie.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Écrire le fichier.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="le-code">Le code&lt;/h2>
+&lt;p>J’ai créé un projet sur GitHub où vous pouvez trouver le code pour démontrer l’algorithme.&lt;/p>
+&lt;p>Vous trouverez
+&lt;a href="https://github.com/JeremieLitzler/demo-word-doc-generator">le code de démonstration sur GitHub&lt;/a>.&lt;/p>
+&lt;p>Le projet &lt;code>Jeremie.Codes.Core.WordGenerator&lt;/code> contient la logique pour transformer le document modèle en document final.&lt;/p>
+&lt;p>J’ai défini 3 Dto :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>ProcessedDocumentInputs.cs&lt;/code> contient&lt;/p>
+&lt;ul>
+&lt;li>Le chemin absolu de la copie du modèle à utiliser.&lt;/li>
+&lt;li>Un dictionnaire clé-valeur pour simplifier le plus possible le traitement de remplacement des balises. La clé est la balise (&lt;code>{{UneBalise}}&lt;/code> par exemple) et la valeur correspond à la donnée qui va remplacer la balise.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>ProcessedDocumentOutput.cs&lt;/code> contient&lt;/p>
+&lt;ul>
+&lt;li>Le contenu binaire du fichier Word après le remplacement des balises.&lt;/li>
+&lt;li>Une liste de messages indiquant s’il y a eu des erreurs ou si le document contient des erreurs du point de vue &lt;code>OpenXml&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>TemporaryFileInfo.cs&lt;/code> contient le chemin absolu et le nom de la copie du modèle.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Le service se compose de 2 méthodes publiques :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>CreateTemporaryDocument&lt;/code> réalise la copie du modèle dans un nouveau fichier nommé pour être unique. La méthode vérifie bien sûr que le modèle existe bien et que la copie réussit.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>ReplacePlaceholders&lt;/code> ouvre le fichier en écriture (Le &lt;code>true&lt;/code> en second argument de &lt;code>WordprocessingDocument.Open&lt;/code>) et boucle sur la liste des balises pour les remplacer avec la donnée finale respective.&lt;/p>
+&lt;ul>
+&lt;li>L&amp;rsquo;écriture est réalisée sur le &lt;code>Dispose&lt;/code> que nous sommes dans un &lt;code>Using&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Le projet &lt;code>Jeremie.Codes.Core.WordGenerator.Tests&lt;/code> démontre l’usage du service, en particulier la construction du dictionnaire de clé-valeur.&lt;/p>
+&lt;p>Cette approche du dictionnaire permet à &lt;code>Jeremie.Codes.Core.WordGenerator&lt;/code> d’être indépendant, ce qui était une obligation dans le projet concret afin d’éviter une dépendance circulaire.&lt;/p>
+&lt;p>Vous avez aimé ? Partagez !&lt;/p>
+&lt;p>À bientôt pour un nouvel article.&lt;/p></description></item><item><title>Vérifiez vraiment ce qu'est un fichier téléversé</title><link>https://jeremielitzLer.fr/post/2023-12/comment-verifier-un-fichier-televerse/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-12/comment-verifier-un-fichier-televerse/</guid><description>&lt;p>Bonjour à tous,&lt;/p>
+&lt;p>Connaissez-vous le « nombre magique » et à quoi peut-il être utile ?&lt;/p>
+&lt;p>Vous pouvez le trouver dans les deux premiers octets d’un fichier binaire et il indique quel fichier vous avez entre les mains.&lt;/p>
+&lt;p>Il est utile de le savoir si vous créez des applications Web dans lesquelles les utilisateurs peuvent téléverser des fichiers.&lt;/p>
+&lt;p>Saviez-vous que la recherche de l’extension dans le nom du fichier ou dans le type MIME ne suffit pas à s’assurer à 100 % que le fichier est vraiment ce qu’il semble être ?
+Quelqu’un peut facilement simuler une image JPEG alors qu’il s’agit en réalité d’un exécutable…&lt;/p>
+&lt;p>C’est alors que le nombre magique devient utile !&lt;/p>
+&lt;p>Voici un exemple d’implémentation en C#
+&lt;a href="https://gist.github.com/JeremieLitzler/fb0fb0ec22225947e8bb28817d2ac314">dans ce Gist&lt;/a>&lt;/p>
+&lt;p>Qui connaissait cela ?&lt;/p></description></item><item><title>Migrer de Vuepress à Hugo</title><link>https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/</link><pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/2023-08-30-accueil-du-siteweb-hugo.jpg" alt="Featured image of post Migrer de Vuepress à Hugo" />&lt;p>Au travail, la génération du site nécessite :&lt;/p>
+&lt;ul>
+&lt;li>86 secondes pour initialiser et préparer les données&lt;/li>
+&lt;li>64 secondes pour compiler&lt;/li>
+&lt;li>81 secondes pour générer les pages&lt;/li>
+&lt;/ul>
+&lt;p>Ce qui équivaut à 236 secondes au total.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/temps-de-generation-du-media-d-un-site-de-documentation-au-travail.jpg"
+width="674"
+height="233"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_4d7338119c9c8473ace9f35dc852393c.jpg 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_8eef68f0472df03c9c3574dcecc88f0d.jpg 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_4f0baf562c07413a0d255aada8b3213d.jpg 1024w"
+loading="lazy"
+alt="Temps de génération du média d’un site de documentation au travail…"
+class="gallery-image"
+data-flex-grow="289"
+data-flex-basis="694px"
+>&lt;/p>
+&lt;p>Sur une machine virtuelle sur laquelle nous travaillons, cela prend :&lt;/p>
+&lt;ul>
+&lt;li>61 secondes pour initialiser et préparer les données&lt;/li>
+&lt;li>199 secondes pour compiler&lt;/li>
+&lt;li>90 secondes pour générer les pages&lt;/li>
+&lt;/ul>
+&lt;p>Ce qui équivaut à 368 secondes au total.&lt;/p>
+&lt;p>Cela semble bien et le canal d’intégration contenu sur Azure DevOps prend environ 4 minutes, ce qui est similaire.&lt;/p>
+&lt;p>Mais deux collègues ont rapporté que cela avait pris plus de 800 secondes pour eux…&lt;/p>
+&lt;p>La raison derrière cela est détaillée ici :
+&lt;a href="https://github.com/orgs/Vuepress-theme-hope/discussions/2887">https://github.com/orgs/Vuepress-theme-hope/discussions/2887&lt;/a>.&lt;/p>
+&lt;p>Personnellement, sur mes sites web, j’ai plus eu des problèmes de SEO :&lt;/p>
+&lt;ul>
+&lt;li>taxonomie non normalisée,&lt;/li>
+&lt;li>pas d’accès à la personnalisation des pages de catégories et de tags,&lt;/li>
+&lt;li>frontmatter gonflé pour ajouter des liens canoniques et des méta OpenGraph.&lt;/li>
+&lt;/ul>
+&lt;h2 id="quelle-alternative">Quelle alternative&lt;/h2>
+&lt;h3 id="lobjectif">L’objectif&lt;/h3>
+&lt;p>J’avais besoin :&lt;/p>
+&lt;ul>
+&lt;li>des fonctionnalités en termes de syntaxe Markdown,&lt;/li>
+&lt;li>d’une génération performante,&lt;/li>
+&lt;li>d’une prise en charge de &amp;ldquo;blockcontainer&amp;rdquo;, par exemple pour afficher des notes, des conseils, des avertissements, etc.,&lt;/li>
+&lt;li>d’une prise en charge des métadonnées pour OpenGraph et canonique,&lt;/li>
+&lt;li>d’une taxonomie avec catégories et tags,&lt;/li>
+&lt;li>des liens &amp;ldquo;Markdown&amp;rdquo; pour lier les articles les uns aux autres.&lt;/li>
+&lt;/ul>
+&lt;p>De plus, si je pouvais avoir un support pour le référencement naturel avec la possibilité de personnaliser le titre et la description de toutes les pages (en particulier les pages de taxonomie) et de normaliser les URL pour que le référencement soit heureux, ce serait génial.&lt;/p>
+&lt;p>Ce dernier point serait possible (une belle surprise), mais je ne le savais pas lorsque j’ai commencé à enquêter sur Hugo.&lt;/p>
+&lt;h3 id="le-choix">Le choix&lt;/h3>
+&lt;p>J’ai pensé à utiliser un générateur de site statique comme Hugo pour son efficacité sur l’étape de génération.&lt;/p>
+&lt;p>Cela nécessiterait cependant d’adapter le contenu, car Vuepress et Hugo sont très différents lorsqu’il s’agit d’analyser et convertir le Markdown en HTML (le premier est en JavaScript et l’autre en Go…).&lt;/p>
+&lt;p>Et je ne connaissais rien au langage Go :O&lt;/p>
+&lt;h2 id="prérequis-avec-hugo">Prérequis avec Hugo&lt;/h2>
+&lt;p>Tout d’abord, nous avons besoin de :&lt;/p>
+&lt;ul>
+&lt;li>télécharger et installer &lt;code>Go&lt;/code> (rien de particulier à faire pendant l’installation, juste &amp;ldquo;Suivant, suivant, suivant…&amp;quot;) :
+&lt;a href="https://go.dev/dl/">https://go.dev/dl/&lt;/a>&lt;/li>
+&lt;li>télécharger Hugo (j’ai téléchargé la version 0.117.0) :
+&lt;a href="https://github.com/gohugoio/hugo/releases/">https://github.com/gohugoio/hugo/releases/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="installer-hugo">Installer Hugo&lt;/h3>
+&lt;p>Pour les utilisateurs Windows, il faut :&lt;/p>
+&lt;ul>
+&lt;li>Créer un dossier &lt;code>Hugo&lt;/code> dans &lt;code>C:\Program Files&lt;/code>&lt;/li>
+&lt;li>Copier le contenu du ZIP, téléchargé précédemment, dans &lt;code>C:\Program Files\Hugo&lt;/code>&lt;/li>
+&lt;li>Ajouter au &lt;code>PATH&lt;/code> le chemin vers le dossier content l’exécutable de Hugo : &lt;code>C:\Program Files\Hugo&lt;/code>&lt;/li>
+&lt;li>(Re)Lancer Visual Studio Code et ouvrir le terminal &lt;code>Git Bash&lt;/code> avec &lt;code>CTRL+ù&lt;/code>.&lt;/li>
+&lt;li>Exécuter la commande &lt;code>hugo&lt;/code>. Vous devriez lire le message “&lt;em>Error: Unable to locate config file or config directory. Perhaps you need to create a new site&lt;/em>”. Cela confirme qu’Hugo est bien installé :)&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-warning" id="N&amp;#39;utilisez pas Windows Prompt ou Windows PowerShell" >
+&lt;p class="jli-notice-title">N&amp;#39;utilisez pas Windows Prompt ou Windows PowerShell&lt;/p>&lt;p>Pour lancer la commande &lt;code>hugo&lt;/code>, préférez l’usage de :&lt;/p>
+&lt;ul>
+&lt;li>Git Bash, inclut avec Git par défaut.&lt;/li>
+&lt;li>Powershell 7.x ou plus récent.&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;h2 id="les-tâches-de-migration-du-contenu">Les tâches de migration du contenu&lt;/h2>
+&lt;h3 id="1--ne-pas-utiliser-les-_blocs-de-code_-avec-des-xy-suivant-la-déclaration-du-langage-de-programmation">1- Ne pas utiliser les &lt;em>blocs de code&lt;/em> avec des &amp;ldquo;{x,y,&amp;hellip;}&amp;rdquo; suivant la déclaration du langage de programmation&lt;/h3>
+&lt;p>Quelque chose comme ce qui suit ne compilera pas :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">```xml{1,26}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">... some XML ...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nettoyez ces cas si vous en avez.&lt;/p>
+&lt;h3 id="2--copier-le-contenu-de-vuepresspublic-dans-le-dossier-contentstatic">2- Copier le contenu de &lt;code>.Vuepress/public&lt;/code> dans le dossier &lt;code>content/static&lt;/code>&lt;/h3>
+&lt;p>De plus, si vous utilisez quelque chose comme Drawio et que vous utilisez la fonctionnalité &lt;em>export en HTML&lt;/em>, vous devrez ajouter ce qui suit en haut de chaque fichier HTML exporté :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">+++
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+++
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Cela permet que le site web soit généré sans erreur (voir
+&lt;a href="https://discourse.gohugo.io/t/solved-using-html-for-content-pages-instead-of-markdown/3374/5">cette discussion sur le forum de Hugo&lt;/a>).&lt;/p>
+&lt;h3 id="3--renommer-tous-les-readmemd-en-indexmd-si-vous-lutilisez-pour-nommer-le-fichier-racine-dune-page-ou-dun-article">3- Renommer tous les &lt;code>README.md&lt;/code> en &lt;code>index.md&lt;/code>, si vous l&amp;rsquo;utilisez pour nommer le fichier racine d&amp;rsquo;une page ou d&amp;rsquo;un article&lt;/h3>
+&lt;p>Hugo exige que les fichiers markdown d&amp;rsquo;un répertoire soient nommés &lt;code>index.md&lt;/code> lorsque vous utilisez la structure de dossiers suivante :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>J&amp;rsquo;ai vu des tutoriels où les gens les nommaient &lt;code>quelque-chose-d-autre.md&lt;/code>, mais c&amp;rsquo;est lorsque vous utilisez cette autre structure de dossiers :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Je préfère le premier, car je conserve les images spécifiques à une publication au même endroit que le fichier Markdown.&lt;/p>
+&lt;p>Le script ci-dessous doit être exécuter dans le dossier &lt;code>content&lt;/code> pour renommer les &lt;code>README.md&lt;/code> en &lt;code>index.md&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">find . -iname &lt;span class="s1">&amp;#39;README.md&amp;#39;&lt;/span> -execdir mv &lt;span class="o">{}&lt;/span> index.md &lt;span class="se">\;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4--choisir-le-thème">4- Choisir le thème&lt;/h3>
+&lt;p>J&amp;rsquo;ai tenté d&amp;rsquo;utiliser le thème suggéré par la documentation de Hugo. Toutefois, il est trop simpliste et surtout, je n&amp;rsquo;arrivais pas à afficher les pages de type &amp;ldquo;liste&amp;rdquo; à s&amp;rsquo;afficher correctement.&lt;/p>
+&lt;p>Puis, je suis tombé sur
+&lt;a href="https://github.com/CaiJimmy">le thème de Jimmy&lt;/a> :
+&lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">https://github.com/CaiJimmy/hugo-theme-stack-starter&lt;/a>.&lt;/p>
+&lt;p>Il est riche, fonctionne et est documenté !&lt;/p>
+&lt;p>Avec ce thème, il me manquait les blocs de mise en avant de contenu que j&amp;rsquo;utilisais sur Vuepress pour tout ce qui est notes, astuces, avertissements et messages de danger.&lt;/p>
+&lt;h3 id="5--personnaliser-la-thème">5- Personnaliser la thème&lt;/h3>
+&lt;p>Pour être honnête, aux premiers abords, le thème recommendé par la documentation de Hugo m&amp;rsquo;a rendu confu à propos du fonctionnement de Hugo.&lt;/p>
+&lt;p>Puis, en utilisant le
+&lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">thème de Jimmy&lt;/a>, j&amp;rsquo;ai commencé à comprendre.&lt;/p>
+&lt;p>Mon but était de conserver les liens relatifs naturels entre les différents fichiers (liens relatifs) du site web et utiliser la syntaxe Vuepress fournie dans le thème de Mr Hope pour
+&lt;a href="https://theme-hope.vuejs.press/guide/markdown/container.html">l&amp;rsquo;usage des blocs de mise en avant de contenu&lt;/a>.&lt;/p>
+&lt;h4 id="les-liens-relatifs">Les liens relatifs&lt;/h4>
+&lt;p>Par défaut, Hugo ne fournit pas la possibilité de générer un lien relatif d&amp;rsquo;un page ou d&amp;rsquo;un article à un autre :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon lien vers une autre page dans le site web&lt;/span>](&lt;span class="na">../page/a-propos.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le Markdown ci-dessus deviendrait en HTML ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-HTML" data-lang="HTML">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://mondomaine.com/page/a-propos/&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Mon lien vers une autre page dans le site web&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Même si les auteurs de Hugo et la documentation proposent d&amp;rsquo;utiliser le &lt;em>shortcode&lt;/em> &lt;code>{{&amp;lt; ref &amp;quot;/path/to/page-or-post/&amp;quot; &amp;gt;}}&lt;/code>, ce n&amp;rsquo;est pas du tout pratique et cela ne permet pas d&amp;rsquo;utiliser l&amp;rsquo;intellisense dans VSC pour sélectionner le fichier cible.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Si vous souhaitez afficher un exemple de blocs de mise en avant de contenu..." >
+&lt;p class="jli-notice-title">Si vous souhaitez afficher un exemple de blocs de mise en avant de contenu...&lt;/p>&lt;p>Faites ce que Joe Mooring indique
+&lt;a href="https://github.com/gohugoio/hugo/issues/11054#issuecomment-1572295424">dans le ticket GitHub du dépôt de Hugo&lt;/a>.&lt;/p>&lt;/div>
+&lt;p>De plus, je n&amp;rsquo;arrivais pas à trouver comment remplacer les centaines de liens relatifs sur mes sites Web pour passer de la syntaxe native markdown à la syntaxe shortcode&amp;hellip;&lt;/p>
+&lt;p>Heureusement, après un peu de recherche, j&amp;rsquo;ai trouvé un autre modèle pour écraser la logique par défaut dans &lt;code>render-link.html&lt;/code> et cela me permet de générer des liens relatifs comme je le voulais.&lt;/p>
+&lt;p>Voici le code
+&lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/layouts/_default/_markup/render-link.html">dans mon dépôt&lt;/a>.&lt;/p>
+&lt;p>Vous devez le mettre sous &lt;code>layouts/_default/_markup/render-link.html&lt;/code> pour écraser la logique par défaut.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="A propos des fichier qui ne sont pas nommés &amp;#34;index.md&amp;#34;" >
+&lt;p class="jli-notice-title">A propos des fichier qui ne sont pas nommés &amp;#34;index.md&amp;#34;&lt;/p>&lt;p>Cependant, pour les liens vers des fichiers qui sont pas nommés &lt;code>index.md&lt;/code>, cela ne fonctionne pas.&lt;/p>
+&lt;p>J&amp;rsquo;utilise cette organisation pour les pages ou articles de grande taille :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-1.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-2.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-N.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Pour que les liens relatifs fonctionnent, il faudrait :&lt;/p>
+&lt;ul>
+&lt;li>mettre chaque fichier dans son propre dossier.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-1/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-2/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-N/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>ou fusionner les parties dans le fichier &lt;code>index.md&lt;/code>.&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;h4 id="les-blocs-de-mise-en-avant-de-contenu">Les blocs de mise en avant de contenu&lt;/h4>
+&lt;p>Ensuite, je voulais pouvoir utiliser une syntaxe similaire à ceci avec Hugo :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">:::warning Le titre du bloc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Le contenu du bloc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">:::
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec l&amp;rsquo;aide de
+&lt;a href="https://github.com/Lovirr">Lovirr&lt;/a> et
+&lt;a href="https://github.com/CaiJimmy">CaiJimmy&lt;/a>, nous avons trouvé la solution : créer un &lt;em>shortcode&lt;/em> personnalisé. N&amp;rsquo;hésitez pas à consulter
+&lt;a href="https://github.com/CaiJimmy/hugo-theme-stack/discussions/867">ma discussion avec eux sur GitHub&lt;/a> sur le sujet.&lt;/p>
+&lt;p>Les shortcodes se placent dans &lt;code>layouts/shortcodes&lt;/code>. Dans mon cas, je l&amp;rsquo;ai nommé &lt;code>blockcontainer.html&lt;/code>.&lt;/p>
+&lt;p>Le code du &lt;em>shortcode&lt;/em>
+&lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/layouts/shortcodes/blockcontainer.html">est disponible dans mon dépôt&lt;/a>.&lt;/p>
+&lt;p>Vous pouvez modifier la classe CSS si vous le souhaitez. Mes styles sont les suivants :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">root&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--theme-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#3eaf7c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--accent-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--body-text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fdfdfe&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#858585&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6f6e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff8e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6a700&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ffebec&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e13238&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nd">root&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">data-scheme&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nt">dark&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--body-text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#858585&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fdfdfe&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6f6e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6a700&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff8e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e13238&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ffebec&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">em&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">highlight&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">gallery&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="nt">blockquote&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-title&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">bold&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-tip&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-warning&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-danger&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ensuite, j&amp;rsquo;ai créé
+&lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/.vscode/shortcodes.code-snippets">ce snippet pour Visual Studio Code&lt;/a> à utiliser très facilement dans un fichier Markdown pendant la rédaction d&amp;rsquo;une page ou d&amp;rsquo;un article.&lt;/p>
+&lt;p>Dans le fichier markdown, cela ressemble à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Le&lt;/span> &lt;span class="na">titre&lt;/span> &lt;span class="na">du&lt;/span> &lt;span class="na">bloc&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Le corps du bloc.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Pour être clair, dans l&amp;rsquo;exemple ci-dessus :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>jli-notice-warning&lt;/code> correspond à la classe CSS ajouter à la &lt;code>div&lt;/code> du bloc. Cela correspond &lt;code>$noticeType&lt;/code> dans le code du &lt;em>shortcode&lt;/em>.&lt;/li>
+&lt;li>&lt;code>Le titre du bloc&lt;/code> correspond au titre que le &lt;em>shortcode&lt;/em> génère dans le premier élément &lt;code>p&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Le corps du bloc.&lt;/code> correspond au corps du bloc du &lt;em>shortcode&lt;/em>. Cela peut être n&amp;rsquo;importe quel contenu Markdown multi-lignes valide. &lt;code>$raw&lt;/code> dans le code du &lt;em>shortcode&lt;/em> représente ce contenu.&lt;/li>
+&lt;/ul>
+&lt;p>Comme vous le voyez, les shortcodes fonctionnent comme un élément HTML, avec une balise d&amp;rsquo;ouverture et de fermeture.&lt;/p>
+&lt;p>Vous pouvez utiliser uniquement la syntaxe d&amp;rsquo;ouverture :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Juste&lt;/span> &lt;span class="na">un&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous pouvez utiliser Markdown standard pour les images et les liens dans le corps.&lt;/p>
+&lt;p>Pour les liens relatifs vers d&amp;rsquo;autres pages ou articles au sein d&amp;rsquo;un même site, veillez à ne pas utiliser le contenu markdown suivant lorsque vous êtes à l&amp;rsquo;intérieur du bloc.&lt;/p>
+&lt;p>Par exemple, avec la structure de dossier suivante dans le dossier &lt;code>content&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">content&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">post&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">un-super-article&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">index&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">md&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">un-premier-article&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">index&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">md&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous pouvez écrire le Markdown suivant :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Mon&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon super article&lt;/span>](&lt;span class="na">../mon-super-article/index.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Même si le lien fonctionnerait en dehors du &lt;em>shortcode&lt;/em>, il ne fonctionnera pas à l’intérieur… Je n’ai pas compris pourquoi.&lt;/p>
+&lt;p>Cependant, j&amp;rsquo;ai compris comment le faire fonctionner dans le &lt;em>shortcode&lt;/em>. Vous devez utiliser une référence absolue :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Mon&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon super article&lt;/span>](&lt;span class="na">/post/mon-super-article/index.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="6--mettre-à-jour-la-_frontmatter_">6- Mettre à jour la &lt;em>frontmatter&lt;/em>&lt;/h3>
+&lt;p>Premièrement, j&amp;rsquo;utilisais les propriétés &lt;code>heroImage&lt;/code> et &lt;code>heroAlt&lt;/code> (texte alternatif pour &lt;code>heroImage&lt;/code>).&lt;/p>
+&lt;p>Dans Hugo, &lt;code>heroImage&lt;/code> devient &lt;code>image&lt;/code> et cela fonctionne de la même façon et même mieux. La valeur &lt;code>image: /images/mon-image.jpg&lt;/code> signifie que l&amp;rsquo;image est sourcé dans le dossier &lt;code>static/images/&lt;/code>.&lt;/p>
+&lt;p>Toutefois, la valeur &lt;code>image: images/mon-image.jpg&lt;/code> fonctionne contrairement à Vuepress. Elle doit alors être stockée par exemple dans &lt;code>content/post/mon-article/images&lt;/code>.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Important" >
+&lt;p class="jli-notice-title">Important&lt;/p>&lt;p>Vous devez ajouter du frontmatter à chaque fichier Markdown.&lt;/p>
+&lt;p>Sinon, vous voyez l&amp;rsquo;article mais aucun titre sur lequel cliquer pour accéder à la page ou à la publication, même si vous avez &lt;code>Mon titre&lt;/code> en haut&amp;hellip;&lt;/p>&lt;/div>
+&lt;h3 id="7--les-images-dans-les-fichiers-markdown">7- Les images dans les fichiers Markdown&lt;/h3>
+&lt;p>Il vous suffit de déclarer une image de la manière habituelle :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- quand un dossier « images » existe au même niveau que le fichier Markdown --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Mon image&lt;/span>](&lt;span class="na">images/mon-image.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- quand l’image est dans &amp;#34;/static/images&amp;#34; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Mon image&lt;/span>](&lt;span class="na">/images/mon-image.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="comparaison-entre-vuepress-et-hugo">Comparaison entre Vuepress et Hugo&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Temps de génération ⇒ meilleur avec Hugo&lt;/p>
+&lt;p>pour le même contenu, cela prend moitié moins de temps&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo.png"
+width="1055"
+height="60"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="avec Hugo"
+class="gallery-image"
+data-flex-grow="1758"
+data-flex-basis="4220px"
+>&lt;/p>
+&lt;p>au lieu de&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress.png"
+width="1061"
+height="59"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="avec Vuepress"
+class="gallery-image"
+data-flex-grow="1798"
+data-flex-basis="4315px"
+>&lt;/p>
+&lt;p>Dans le site de documentation de mon équipe au travail, le temps de construction est passé d’environ 250 secondes à 5 secondes. Pas mal ;)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Les blocs de contenu ⇒ OK, en utilisant un &lt;em>shortcode&lt;/em> personnalisé.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Metadata ⇒ OK, OpenGraph + URL canonique sont générés par défaut et ils utilisent les valeurs dans le frontmatter pour les propriétés &lt;code>title&lt;/code>, &lt;code>description&lt;/code>, &lt;code>image&lt;/code> et le nom du dossier pour l’URL.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>SEO ⇒ meilleur, car j’ai le contrôle sur toutes les pages, en particulier les catégories et les étiquettes (&lt;em>tags&lt;/em>), même si je dois créer les pages pour chaque taxonomie manuellement afin d’avoir un titre et une description unique. Sinon cela prend la valeur par défaut du site web.&lt;/p>
+&lt;ul>
+&lt;li>Allez voir
+&lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">la démo du thème&lt;/a>. Vous comprendrez rapidement le principe.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Image ⇒ Je ne suis pas sûr. Bien que la documentation indique que les images peuvent être &lt;em>adaptées à la taille de l’écran&lt;/em> et que &lt;code>webp&lt;/code> est disponible, seulement la première option est possible. La transformation de &lt;code>jpg&lt;/code> à &lt;code>webp&lt;/code> n’est pas si trivial.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Je n’ai pas pu comparé Vuepress à Hugo, car LightHouse, PageSpeed.web.dev et GTMetrix me disent tous que le site Vuepress est non analysable…&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Taxonomie des catégories et étiquettes ⇒ meilleures, l’URL est normalisée à la génération du lien dans un article et la page pour chaque taxonomie est personnalisable :)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Liens relatifs vers d’autres pages dans le même site web ⇒ OK&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Une chose que j’ai dû réaliser fut de réorganiser le contenu pour ne pas dépasser les 100 caractères maximum pour chaque URL (page et article). J’utilisais cette structure pour mes articles :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">docs/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 2023/ &lt;span class="c">&amp;lt;!-- année --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 08/ &lt;span class="c">&amp;lt;!-- mois --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Je suis passé à cette structure :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 2023-08 &lt;span class="c">&amp;lt;!-- &amp;#34;année-mois&amp;#34; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>J’ai donc dû implémenter des redirections de l’ancien chemin vers le nouveau, car j’avais partagé des articles !&lt;/p>
+&lt;p>Ceci est possible avec le fichier de configuration &lt;code>netlify.toml&lt;/code>. Consultez
+&lt;a href="https://docs.netlify.com/routing/redirects/">https://docs.netlify.com/routing/redirects/&lt;/a> pour comprendre comment cela fonctionne.&lt;/p>
+&lt;p>Sinon, n’hésitez pas à utiliser
+&lt;a href="https://docs.google.com/spreadsheets/d/1cAA9Gfhx3jg3GRdvWGFvq-Gz2yXH66e8Yg4P_BFpw3Q">cette Google Sheet&lt;/a> pour construire vos redirects.&lt;/p>
+&lt;p>Aussi, vous pouvez utiliser ce script bash pour lister tous les chemins vers vos articles pour les copier dans la Google Sheet :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /docs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">find . -iname &lt;span class="s1">&amp;#39;README.md&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous voici à la fin de ce long article ! J’espère que vous l’avez trouvé utile et je vous souhaite un merveilleux voyage avec Hugo.&lt;/p></description></item><item><title>Activer l'édition du contenu de son site web</title><link>https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/</link><pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Activer l'édition du contenu de son site web" />&lt;!-- raw HTML omitted -->
+&lt;h2 id="activer-netlifycms">Activer NetlifyCMS&lt;/h2>
+&lt;p>Par défaut, le modèle de site VuePress contient le dossier &lt;code>admin&lt;/code> de base il faudra mettre à jour quelques éléments.&lt;/p>
+&lt;p>Les étapes sont assez simples.&lt;/p>
+&lt;h3 id="dans-le-dépôt-git">Dans le dépôt Git&lt;/h3>
+&lt;p>On modifie le fichier &lt;code>config.yml&lt;/code> se trouvant dans le dossier &lt;code>docs/.vuepress/public/admin&lt;/code> en mettant à jour la valeur du nom du dépôt GitHub et la langue de votre site (&lt;code>fr&lt;/code> pour Français, &lt;code>en&lt;/code> pour Anglais, etc).&lt;/p>
+&lt;p>Je ne détaillerai pas le reste, car la configuration par défaut correspond à un besoin de base. Pour plus d&amp;rsquo;information, je vous invite à visiter
+&lt;a href="https://decapcms.org/">le site DecapCMS&lt;/a>.&lt;/p>
+&lt;h3 id="dans-github">Dans GitHub&lt;/h3>
+&lt;p>Rendez-vous sur GitHub une fois que vous êtes connectés sur votre compte.&lt;/p>
+&lt;p>Naviguez sur
+&lt;a href="https://github.com/settings/developers">https://github.com/settings/developers&lt;/a> pour ajouter une nouvelle &lt;code>OAuth App&lt;/code>. Cliquez &lt;code>New OAuth App&lt;/code>.&lt;/p>
+&lt;p>Fournissez dans le formulaire comme suit :&lt;/p>
+&lt;ul>
+&lt;li>Le nom de l’application dans le champ &lt;code>Application name&lt;/code>. Ex : &lt;em>Mon site web&lt;/em>.&lt;/li>
+&lt;li>L’URL de la page d’accueil de votre site dans le champ &lt;code>Homepage URL&lt;/code>.&lt;/li>
+&lt;li>La description publique de l’application dans le champ &lt;code>Application description&lt;/code>.&lt;/li>
+&lt;li>L’URL d’autorisation dans le champ &lt;code>Authorization callback URL&lt;/code> avec la valeur &lt;code>https://api.netlify.com/auth/done&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/le-formulaire-rempli-pour-la-creation-de-lapplication-oauth-app.jpg"
+width="524"
+height="630"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_84d297401a59f8bed364f870db81f666.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_99b42dac16829558d99909d9249e4b26.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_5120fbacf88741616df7a747e08fe98a.jpg 1024w"
+loading="lazy"
+alt="Le formulaire rempli pour la création de l&amp;rsquo;application OAuth App"
+class="gallery-image"
+data-flex-grow="83"
+data-flex-basis="199px"
+>&lt;/p>
+&lt;p>Une fois validé, vous verrez le &lt;code>Client ID&lt;/code> (1) et le bouton pour générer le &lt;code>Client Secret&lt;/code> via le bouton &lt;code>Generate a new client secret&lt;/code> (2).&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-recapitulatif-de-lapplication-oauth-avec-le-bouton-pour-generer-le-client-secret.jpg"
+width="600"
+height="470"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_3a1cea4823c3fb82aa0894f83f6c65c3.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_04d81332cc5e56397dc515bc7cd75be3.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_75fc4eb0e6304769f2a82e73d9b8f18c.jpg 1024w"
+loading="lazy"
+alt="Ecran récapitulatif de l&amp;rsquo;application OAuth avec le bouton pour générer le Client Secret"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>&lt;/p>
+&lt;p>Cliquez le bouton pour générer le Client secret et copiez la valeur générée.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret.jpg"
+width="783"
+height="291"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Bouton de copie du Client Secret"
+class="gallery-image"
+data-flex-grow="269"
+data-flex-basis="645px"
+>&lt;/p>
+&lt;h3 id="dans-netlify">Dans Netlify&lt;/h3>
+&lt;p>Rendez-vous sur Netlify et allez sur &lt;code>https://app.netlify.com/sites/votre-site/settings/general&lt;/code> et cliquez &lt;code>Identity&lt;/code>&lt;/p>
+&lt;p>Cliquez &lt;code>Enable Identity&lt;/code>.&lt;/p>
+&lt;p>Modifiez-les &lt;code>Registration preferences&lt;/code> pour permettre les souscriptions sans ou avec invitations. Par défaut, configurer &lt;code>Invite only&lt;/code>.&lt;/p>
+&lt;p>Sans changer de page, descendez jusqu’à &lt;code>Git Gateway&lt;/code> et cliquez &lt;code>Enable Git Gateway&lt;/code>.&lt;/p>
+&lt;p>Dans les &lt;code>Site settings&lt;/code>, rendez-vous sur &lt;code>Access Control&lt;/code> tout en bas.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site.jpg"
+width="1232"
+height="740"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer &amp;ldquo;Access Control&amp;rdquo; du site"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="399px"
+>&lt;/p>
+&lt;p>Allez dans &lt;code>OAuth&lt;/code> et cliquez &lt;code>Install provider&lt;/code> en sélectionnant &lt;code>GitHub&lt;/code>.&lt;/p>
+&lt;p>Saisissez le &lt;em>client secret&lt;/em> copié dans GitHub et copiez-collez le client ID avant de cliquer &lt;code>Install&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify.jpg"
+width="629"
+height="414"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer la liaison entre GitHub et le site Netlify"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="364px"
+>&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Si vous n&amp;#39;avez pas copié le &amp;lt;em&amp;gt;client secret&amp;lt;/em&amp;gt;..." >
+&lt;p class="jli-notice-title">Si vous n&amp;#39;avez pas copié le &amp;lt;em&amp;gt;client secret&amp;lt;/em&amp;gt;...&lt;/p>&lt;p>Regénérez-en un, tout simplement :)&lt;/p>&lt;/div>
+&lt;p>Pour finir, rendez-vous sur &lt;code>https://mon-super-domaine.fr/admin&lt;/code> et cliquez &lt;code>Se connecter avec GitHub&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site.jpg"
+width="561"
+height="278"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ecran de connexion à NetlifyCMS sur votre site"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="484px"
+>&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Pour accéder à NetlifyCMS de votre site" >
+&lt;p class="jli-notice-title">Pour accéder à NetlifyCMS de votre site&lt;/p>&lt;p>Soyez sûr de pouvoir vous connecter à GitHub.&lt;/p>&lt;/div>
+&lt;p>L’écran suivant s’affiche où il suffit de cliquer &lt;code>Authorize VotrePseudoGitHub&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com.jpg"
+width="1179"
+height="726"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Écran d’autorisation pour netlify.com vers GitHub.com"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+>&lt;/p>
+&lt;p>Vous arrivez alors sur la page d’accueil de l’interface de gestion NetlifyCMS de votre site&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration.jpg"
+width="1471"
+height="527"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Accueil de NetlifyCMS d’un site démonstration"
+class="gallery-image"
+data-flex-grow="279"
+data-flex-basis="669px"
+>&lt;/p>
+&lt;p>Je n&amp;rsquo;irai pas dans le détail ici de comment utiliser NetlifyCMS.&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;h3 id="il-faut-apprendre-la-syntaxe-_markdown_">Il faut apprendre la syntaxe &lt;em>Markdown&lt;/em>&lt;/h3>
+&lt;p>Elle est très simple à maitriser, comme l&amp;rsquo;explique
+&lt;a href="https://www.youtube.com/watch?v=6hikjzymd0c">Grafikart sur YouTube&lt;/a>.&lt;/p>
+&lt;h3 id="les-extensions-du-thème-vuepress-ne-sont-pas-affichées-correctement">Les extensions du thème VuePress ne sont pas affichées correctement&lt;/h3>
+&lt;p>En prévisualisation, les syntaxes étendues du thème de Mister Hope ne sont pas affichées correctement, car il manque leurs interprétations en HTML.&lt;/p>
+&lt;p>Et il manque les styles CSS.&lt;/p>
+&lt;p>C&amp;rsquo;est pour cela que je travaille uniquement sur Visual Studio Code, qui permet de lancer localement le site et de visualiser les pages dans leur rendu final.&lt;/p>
+&lt;h3 id="déploiement-après-édition-dans-netlifycms">Déploiement après édition dans NetlifyCMS&lt;/h3>
+&lt;p>Une autre limitation est qu&amp;rsquo;éditer un fichier Markdown d&amp;rsquo;une page ou un article ne va pas être détecté par Netlify comme un déploiement.&lt;/p>
+&lt;p>Vous risquez de voir que la mise à jour n&amp;rsquo;est pas être déployée (le &lt;em>Build&lt;/em> est à l&amp;rsquo;état &lt;code>Canceled&lt;/code>).&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled.jpg"
+width="1289"
+height="89"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Une compilation Netlify à l&amp;rsquo;état &amp;ldquo;Canceled&amp;rdquo;"
+class="gallery-image"
+data-flex-grow="1448"
+data-flex-basis="3475px"
+>&lt;/p>
+&lt;p>Pourquoi ? Il semble que modifier uniquement un fichier &lt;code>.md&lt;/code> ne suffit pas pour lancer une compilation complète (ou &lt;em>build&lt;/em>).&lt;/p>
+&lt;p>Il faut alors sélectionner la fameuse compilation et cliquer le menu &lt;code>Rety&lt;/code> puis &lt;code>Clear cache and retry with latest branch commit&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache-pour-un-deploiement-specifique.jpg"
+width="711"
+height="308"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_ab11c1b3b94d0281e41685c8be91b9e6.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_39460e937952472e81b52e9d2ee62e1c.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_291a2feb21f0940747062e8da0f43c24.jpg 1024w"
+loading="lazy"
+alt="Forcer un déploiement avec effacement du cache pour un déploiement spécifique"
+class="gallery-image"
+data-flex-grow="230"
+data-flex-basis="554px"
+>&lt;/p>
+&lt;p>La modification est aussi soumise par NetlifyCMS à GitHub via une requête de tirage, qu&amp;rsquo;il faut alors accepter pour que le déploiement sur le site de production ait lieu.&lt;/p>
+&lt;p>L&amp;rsquo;avantage est de pouvoir vérifier sur une URL de prévisualisation que tout est bon.&lt;/p>
+&lt;p>Voici
+&lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel/pull/1">un exemple de requête de tirage&lt;/a> sur mon site de démo réalisé pour ce tutoriel.&lt;/p>
+&lt;p>Après la validation de la requête de tirage, il faut aussi forcer une compilation manuellement depuis la liste des déploiements, comme indiqué ci-dessous :&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache.jpg"
+width="1200"
+height="546"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Forcer un déploiement avec effacement du cache"
+class="gallery-image"
+data-flex-grow="219"
+data-flex-basis="527px"
+>&lt;/p>
+&lt;p>Pour lancer une compilation complète, il faut éditer le fichier &lt;code>docs/.vuepress/config.js&lt;/code> en modifiant le numéro de version en l&amp;rsquo;incrémentant par exemple.&lt;/p>
+&lt;p>Je compte réaliser un guide plus complet, dans le futur, sur l&amp;rsquo;usage de Netlify.&lt;/p>
+&lt;p>J&amp;rsquo;espère que vous avez aimé cette série et pour recevoir d&amp;rsquo;autres articles de ce type, abonnez-vous !&lt;/p></description></item><item><title>Déployer votre site web moderne pour moins de 10 euros !</title><link>https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/</link><pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Déployer votre site web moderne pour moins de 10 euros !" />&lt;p>Avec les services de Netlify, le déploiement n’a jamais été aussi simple.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="compiler-et-pousser-les-modifications-sur-github">Compiler et pousser les modifications sur GitHub&lt;/h2>
+&lt;p>Maintenant que le contenu est prêt :&lt;/p>
+&lt;ol>
+&lt;li>Lancer le terminal avec &lt;code>CTRL+ù&lt;/code>dans Visual Studio Code, s’il n’est pas déjà ouvert.&lt;/li>
+&lt;li>Lancer la commande suivante :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">npm run docs:build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>Si vous avez une erreur,
+&lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">contactez-moi&lt;/a> en fournissant l’URL du dépôt. Sinon, continuez avec :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git add -A &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git commit &lt;span class="s2">&amp;#34;pousser le contenu sur GitHub&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="commande-du-domaine-personnalisé">Commande du domaine personnalisé&lt;/h2>
+&lt;p>Sauf si vous avez besoin de mon aide, le seul coût sera celui du domaine personnalisé. Ex : &lt;code>mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;p>Je ne décris pas les étapes ici. Je vous invite à faire une petite recherche Google. Pour mes sites web,
+&lt;a href="https://www.ovhcloud.com/fr/domains/">j’utilise OVH&lt;/a>.&lt;/p>
+&lt;h3 id="mettre-à-jour-la-zone-dns-chez-votre-registar-de-domaines">Mettre à jour la zone DNS chez votre registar de domaines.&lt;/h3>
+&lt;p>Une fois que le domaine est provisionné, il faut paramétrer Netlify pour que le site web pointe sur le domaine.&lt;/p>
+&lt;p>Pour un domaine de base, il faut préalable supprimer les entrées DNS &lt;code>A&lt;/code>sur le domaine &lt;code>mon-super-domaine.fr&lt;/code>et &lt;code>wwww.mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Sur OVH…" >
+&lt;p class="jli-notice-title">Sur OVH…&lt;/p>&lt;p>J’ai eu une fois un temps de propagation de la suppression de l’entrée &lt;code>A&lt;/code>sur le sous-domaine &lt;code>www&lt;/code> qui a pris plus des dizaines de minutes.&lt;/p>
+&lt;p>Soyez patients ;)&lt;/p>&lt;/div>
+&lt;h2 id="déployer-le-site-sur-netlify">Déployer le site sur Netlify&lt;/h2>
+&lt;p>Rendez-vous sur
+&lt;a href="https://app.netlify.com">app.netlify.com&lt;/a> en vous connectant avec votre compte GitHub.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso.jpg"
+width="451"
+height="587"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Connexion netlify via github sso"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="184px"
+>&lt;/p>
+&lt;p>Vous devez alors autoriser l’accès à votre compte par Netlify (pour lire la liste des dépôts).&lt;/p>
+&lt;p>Une fois connecté, sélectionnez &lt;code>Add new site&lt;/code> puis &lt;code>Import an existing project&lt;/code> :&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site.jpg"
+width="342"
+height="181"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ajouter un site"
+class="gallery-image"
+data-flex-grow="188"
+data-flex-basis="453px"
+>&lt;/p>
+&lt;p>Sélectionnez &lt;code>GitHub&lt;/code> :&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github.jpg"
+width="801"
+height="443"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Sélectionner GitHub"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="433px"
+>&lt;/p>
+&lt;p>Rechercher et sélectionner votre dépôt :&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t.jpg"
+width="735"
+height="168"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Rechercher et sélectionner votre dépôt"
+class="gallery-image"
+data-flex-grow="437"
+data-flex-basis="1050px"
+>&lt;/p>
+&lt;p>Configurez le déploiement en modifiant :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Base directory&lt;/code> par &lt;code>docs/.vuepress&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Build command&lt;/code> par &lt;code>yarn &amp;amp;&amp;amp; npm run docs:build&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Publish directory&lt;/code> en ajouter &lt;code>dist&lt;/code> à la valeur.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement.jpg"
+width="600"
+height="647"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer le déploiement"
+class="gallery-image"
+data-flex-grow="92"
+data-flex-basis="222px"
+>&lt;/p>
+&lt;p>Le déploiement ne devrait pas prendre plus de 2 minutes.&lt;/p>
+&lt;p>En attendant, allez dans &lt;code>Site settings&lt;/code> et cliquez &lt;code>Change site name&lt;/code>.&lt;/p>
+&lt;p>La valeur par défaut est aléatoire. Je mets en général une valeur plus sympa.&lt;/p>
+&lt;p>Dans mon cas, ce sera &lt;code>mon-site-demo-tutoriel&lt;/code>. Le site est alors disponible sur &lt;code>https://mon-site-demo-tutoriel.netlify.app&lt;/code>.&lt;/p>
+&lt;h2 id="mettre-à-jour-lapplication-sur-netlify-avec-un-domaine-personnalisé">Mettre à jour l’application sur Netlify avec un domaine personnalisé&lt;/h2>
+&lt;p>Une fois la zone DNS prête,&lt;/p>
+&lt;ul>
+&lt;li>ajouter le domaine dans Netlify en sélectionnant votre site depuis
+&lt;a href="https://app.netlify.com">app.netlify.com&lt;/a>, puis en cliquant &lt;code>Site settings&lt;/code> puis &lt;code>Domain management&lt;/code>.
+&lt;ul>
+&lt;li>dans&lt;code>Production domains&lt;/code> , cliquer &lt;code>Add domain&lt;/code> et confirmer l’ajout sans passer par &lt;code>Netlify DNS&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-warning" id="Netlify DNS" >
+&lt;p class="jli-notice-title">Netlify DNS&lt;/p>&lt;p>Vous verrez sûrement l’alerte suivante :&lt;/p>
+&lt;blockquote>
+&lt;p>.fr domains can’t be registered through Netlify. You can still add mon-site.fr to your Netlify site if you already own the domain. Select Add domain to add it to your site. You can configure Netlify DNS for this domain later.&lt;/p>
+&lt;/blockquote>
+&lt;p>Cliquer &lt;code>Add domain&lt;/code> ou &lt;code>Add subdomain&lt;/code> quand même.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>une fois sur l’écran ci-dessous : &lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise.jpg"
+width="932"
+height="412"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Écran suite à l’ajout du domaine personnalisé"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="542px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Cliquez &lt;code>Awaiting External DNS&lt;/code> et suivez les instructions :&lt;/p>
+&lt;ul>
+&lt;li>pour un domaine &lt;em>racine&lt;/em>,
+&lt;ul>
+&lt;li>ajouter l’entrée &lt;code>A&lt;/code> en utilisant l’adresse IP du loadbalancer que Netlify vous fournit.&lt;/li>
+&lt;li>ajouter l’entrée &lt;code>CNAME&lt;/code> en utilisant le DNS que Netlify vous fournit. &lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/instructions-de-netlify-pour-une-configuration-par-entree-cname.jpg"
+width="770"
+height="676"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_3f5fbddb1f91655d8799ba5d2cb193b7.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_3eb5f3c13bc65d1dfcfc3651c47f2f4b.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_8dfe908d19efa1a5a24cff88af6fc1b5.jpg 1024w"
+loading="lazy"
+alt="Instructions de Netlify pour une configuration par entrée CNAME"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="273px"
+>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>pour un sous-domaine,
+&lt;ul>
+&lt;li>vous aurez seulement l’entrée &lt;code>CNAME&lt;/code> à ajouter.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Rendez-vous sur votre registar de domaines (ex : OVH) et dans la section&lt;code>Domain &amp;gt; mon-site.fr &amp;gt; DNS Zone&lt;/code> , sélectionner &lt;code>Ajouter un entrée&lt;/code> et le type selon votre besoin.&lt;/p>
+&lt;ul>
+&lt;li>pour une entrée&lt;code>CNAME&lt;/code> , ça ressemble à ceci :&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns.jpg"
+width="590"
+height="538"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Choix du type d’entrée DNS"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="263px"
+>&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns.jpg"
+width="591"
+height="544"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer l’entrée DNS"
+class="gallery-image"
+data-flex-grow="108"
+data-flex-basis="260px"
+>&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns.jpg"
+width="590"
+height="443"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Confirmer l’ajout de l’entrée DNS"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>&lt;/p>
+&lt;ul>
+&lt;li>confirmez et attendez quelques minutes (voire plus si votre registar de domaine est lent)&lt;/li>
+&lt;li>rafraichissez la page sur Netlify : quand tout est bon, le message &lt;code>Awaiting external DNS&lt;/code> doit avoir disparu.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns.jpg"
+width="670"
+height="381"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Netlify a bien détecté la mise à jour DNS"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="422px"
+>&lt;/p>
+&lt;ul>
+&lt;li>Netlify provisionne ensuite un certificat &lt;em>Let&amp;rsquo;s encrypt&lt;/em> automatiquement pour vous.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement.jpg"
+width="703"
+height="353"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Certificat Let’s Encrypt en cours de provisionnement"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="477px"
+>&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Temps de provisionnement du certificat HTTPS" >
+&lt;p class="jli-notice-title">Temps de provisionnement du certificat HTTPS&lt;/p>&lt;p>Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement.&lt;/p>&lt;/div>
+&lt;p>Une fois que le certificat est déployé, vous pourrez accéder à votre site web sécurisé ! Ex : &lt;code>https://mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-est-actif-votre-site-web-est-securise.jpg"
+width="600"
+height="562"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_3c4ede68444c3b43ed0ea4b20143e52a.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_d397974575517440ad9f64db2240978d.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_c3760278e3b0bc78112d7b725ca318e3.jpg 1024w"
+loading="lazy"
+alt="Certificat Let’s Encrypt est actif. Votre site web est sécurisé."
+class="gallery-image"
+data-flex-grow="106"
+data-flex-basis="256px"
+>&lt;/p>
+&lt;p>Si vous souhaitez éditer le contenu depuis n’importe quel PC, cela est possible avec NetlifyCMS. Je vous explique
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/">comment l’activer sur votre site web&lt;/a>.&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;p>Pour un blog de très grande taille (plus de 400 pages générées incluant les pseudos liens si vous utilisez les catégories et les tags), l’hébergement sur Netlify risque d’être limite.&lt;/p>
+&lt;p>Toutefois, l’astuce serait de déployer le dossier &lt;code>dist&lt;/code> généré sur votre PC et de le pousser sur GitHub ensuite. Cela donne le même résultat.&lt;/p>
+&lt;p>Je ne l’ai toutefois pas encore testé.&lt;/p></description></item><item><title>Construire son site moderne et rapide !</title><link>https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/</link><pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Construire son site moderne et rapide !" />&lt;p>Dans cet article, je décris les étapes concrètes pour créer, configurer le site et personnaliser son contenu.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="pré-requis">Pré-requis&lt;/h2>
+&lt;ul>
+&lt;li>Avoir réalisé
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/">l’étape de préparation de son PC&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h2 id="cloner-les-dépôts">Cloner les dépôts&lt;/h2>
+&lt;div class="jli-notice jli-notice-tip" id="Optionnellement, créer un dossier &amp;lt;em&amp;gt;Git&amp;lt;/em&amp;gt;" >
+&lt;p class="jli-notice-title">Optionnellement, créer un dossier &amp;lt;em&amp;gt;Git&amp;lt;/em&amp;gt;&lt;/p>&lt;p>A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>Lancer la commande suivante qui crée un dossier&lt;code>NomDeVotreDepot&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git clone https://github.com/VotrePseudoGitHub/NomDeVotreDepot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Dans mon cas, j’utiliserai le dépôt &lt;code>JeremieLitzler/mon-site-demo-tutoriel&lt;/code>(disponible
+&lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">ici&lt;/a>).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Lancer la commande suivant pour cloner le dépôt contenant la structure du site à réaliser.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git clone https://github.com/Puzzlout/TemplateVuepress/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le dépôt est sauvegardé dans le dossier &lt;code>TemplateVuepress&lt;/code>à l’endroit où vous stockez vos dépôts.&lt;/p>
+&lt;p>Pour moi, ce sera&lt;code>D:/Git/GitHub/&lt;/code> .&lt;/p>
+&lt;h2 id="initialiser-le-site-web-à-partir-du-modèle">Initialiser le site web à partir du modèle&lt;/h2>
+&lt;p>Maintenant que les dépôts sont clonés :&lt;/p>
+&lt;h3 id="copiez-le-tout-le-contenu-du-modèle">Copiez-le tout le contenu du modèle.&lt;/h3>
+&lt;p>On copiera les fichiers du dossier &lt;code>TemplateVuepress&lt;/code>dans le dossier&lt;code>NomDeVotreDepot&lt;/code>, incluant le dossier &lt;code>.vscode&lt;/code>pour les extraits de code permettant de rédiger son contenu plus rapidement.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Sauf le dossier &amp;lt;em&amp;gt;.git&amp;lt;/em&amp;gt; et &amp;lt;em&amp;gt;.github&amp;lt;/em&amp;gt;" >
+&lt;p class="jli-notice-title">Sauf le dossier &amp;lt;em&amp;gt;.git&amp;lt;/em&amp;gt; et &amp;lt;em&amp;gt;.github&amp;lt;/em&amp;gt;&lt;/p>&lt;/div>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot.jpg"
+width="600"
+height="463"
+srcset="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Fichiers à copier du dépôt modèle vers votre dépôt"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="311px"
+>&lt;/p>
+&lt;h3 id="personnaliser-les-fichiers-issus-du-modèle">Personnaliser les fichiers issus du modèle&lt;/h3>
+&lt;p>Au minimum les fichiers suivants doivent être personnalisés, incluants :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>les fichiers définissant l&amp;rsquo;élément &lt;code>head&lt;/code>global dans le dossier&lt;code>docs/.vuepress/configs/head&lt;/code> .&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>vous trouverez un fichier &lt;code>js&lt;/code>par locale ou langue que le site propose.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>il faut au minimum modifier, &lt;strong>par chaque fichier &lt;code>js&lt;/code>&lt;/strong> :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>la variable &lt;code>websiteDomain&lt;/code>avec l&amp;rsquo;URL de votre site. On reviendra dessous après
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">le déploiement.&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable&lt;code>titleDefault&lt;/code>, qui doit être inférieure à 60 caractères&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable&lt;code>descriptionDefault&lt;/code>, qui doit être comprise entre 50 à 160 caractères&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable &lt;code>themeColor&lt;/code>qu&amp;rsquo;on remplacera globalement avec &lt;code>CTRL+SHIF+H&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>pour le choix de la couleur, en utilisant
+&lt;a href="https://huemint.com/brand-intersection/">ce site&lt;/a> et choisissez une couleur sombre.&lt;/li>
+&lt;li>sauvegarder la palette de couleur générée dans &lt;code>docs/.vuepress/styles/palette.scss&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>la variable &lt;code>repoLink&lt;/code>où l&amp;rsquo;on remplacera globalement avec &lt;code>CTRL+SHIF+H&lt;/code>la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par &lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>concernant le tag méta&lt;code>og:url&lt;/code>, en fonction de votre langue principale, il faudra adapter l&amp;rsquo;URL :&lt;/p>
+&lt;ul>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur
+&lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les fichiers définissant l&amp;rsquo;élément &lt;code>nav&lt;/code>pour le menu de navigation dans le dossier &lt;code>docs/.vuepress/configs/navbar&lt;/code>- vous trouverez un fichier &lt;code>js&lt;/code>par locale ou langue que le site propose.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>en fonction de votre langue principale, il faudra adapter les URL :&lt;/p>
+&lt;ul>
+&lt;li>pour votre langue principale, pas besoin de mettre &lt;code>/[[locale-courte]]/ma-page&lt;/code>&lt;/li>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur
+&lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les liens peuvent s&amp;rsquo;afficher avec un texte :&lt;/p>
+&lt;ul>
+&lt;li>soit implicite, c&amp;rsquo;est-à-dire la valeur du &lt;code>title&lt;/code>dans le fichier Markdown.&lt;/li>
+&lt;li>soit explicite, c&amp;rsquo;est-à-dire la valeur &lt;code>text&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/liens-implicites-vs-liens-explicites-dans-le-menu-de-navigation.jpg"
+width="488"
+height="380"
+srcset="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_beb74221119ae90ec793ba53cc738951.jpg 360w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_ff9da06ff1828322a6f02f3fb95b2c01.jpg 600w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_3da01a393621bd67f461def4eee950a6.jpg 1024w"
+loading="lazy"
+alt="Liens implicites vs liens explicites dans le menu de navigation"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le fichier &lt;code>docs/.vuepress/public/admin/config.yml&lt;/code>définissant l&amp;rsquo;interface avec NetlifyCMS, si vous l&amp;rsquo;activez (voir plus loin comme l&amp;rsquo;activer).&lt;/p>
+&lt;ul>
+&lt;li>il faudra alors mettre à jour le nom du dépôt, normalement déjà réaliser précédemment sur le remplacement de la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par&lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les fichiers &lt;code>docs/.vuepress/public/site.webmanifest&lt;/code>et les variantes par locale, qui définissent l&amp;rsquo;application web&lt;/p>
+&lt;ul>
+&lt;li>vous trouvez ce fichier déclaré dans le fichier &lt;code>js&lt;/code>correspondant à la locale dans le dossier&lt;code>docs/.vuepress/configs/head&lt;/code> .&lt;/li>
+&lt;li>suivez les règles listées par
+&lt;a href="https://developer.mozilla.org/fr/docs/Web/Manifest">MDN Web Docs&lt;/a> sur le sujet.&lt;/li>
+&lt;li>à propos de&lt;code>start_url&lt;/code>, la même règle s&amp;rsquo;applique que précédemment concernant la présence de la locale dans l&amp;rsquo;URL.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le fichier &lt;code>docs/.vuepress/config.js&lt;/code>qui définit :&lt;/p>
+&lt;ul>
+&lt;li>la locale par défaut, à ajuster selon votre besoin.&lt;/li>
+&lt;li>les locales actives, à ajuster selon votre besoin.&lt;/li>
+&lt;li>la même règle s&amp;rsquo;applique que précédemment concernant la locale par défaut.
+&lt;ul>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur
+&lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="personnaliser-le-thème">Personnaliser le thème&lt;/h3>
+&lt;p>À travers le fichier&lt;code>docs/.vuepress/theme.ts&lt;/code>, qui définit certaines valeurs à ajuster selon votre cas, personnalisez :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le &lt;code>hostname&lt;/code>correspondant à l&amp;rsquo;URL de base de votre site.&lt;/p>
+&lt;ul>
+&lt;li>Vous pouvez réaliser un &lt;code>CTRL + SHIFT + H&lt;/code>et exécuter un remplacement de &lt;code>example.com&lt;/code>en &lt;code>votresite.fr&lt;/code>par exemple.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>author &amp;gt; name&lt;/code>correspondant à votre nom&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>repo&lt;/code>correspondant à l&amp;rsquo;identification du dépôt sur GitHub.&lt;/p>
+&lt;ul>
+&lt;li>normalement déjà réaliser précédemment sur le remplacement de la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par&lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les &lt;code>docsBranch&lt;/code>, &lt;code>docsDir&lt;/code>, &lt;code>editLinkPattern&lt;/code> n&amp;rsquo;ont pas besoin d&amp;rsquo;être modifiés.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>les valeurs &lt;code>logo&lt;/code>et &lt;code>logoDark&lt;/code>n&amp;rsquo;ont pas besoin d&amp;rsquo;être modifié si vous suivez les instructions de création de votre logo.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>logoDark&lt;/code>peut être supprimé si &lt;code>darkmode&lt;/code>n&amp;rsquo;est pas nécessaire.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>la liste des&lt;code>locales&lt;/code>, qui doit correspondre à la liste déclarée dans&lt;code>docs/.vuepress/config.js&lt;/code> .&lt;/p>
+&lt;ul>
+&lt;li>toutefois, ici, on déclare les configurations du menu de navigation par locale.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>displayFooter&lt;/code>permet d&amp;rsquo;afficher le pied de page global sur le site, en configurant la propriété &lt;code>footer&lt;/code>qui suit.&lt;/p>
+&lt;ul>
+&lt;li>le &lt;code>footer&lt;/code>peut contenir du code HTML, mais le Markdown n&amp;rsquo;est pas interprété.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les listes des &lt;code>plugins&lt;/code>est configuré de façon optimal pour un usage basique, mais reste toutefois riche. Si vous souhaitez davantage, visitez
+&lt;a href="https://theme-hope.vuejs.press/">le site du thème VuePress&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le plugin &lt;code>blog&lt;/code>fournit par le thème.&lt;/p>
+&lt;ul>
+&lt;li>l&amp;rsquo;index du blog (ex. : page &lt;code>/[locale]/article/&lt;/code>) liste tous les articles, sauf pour les fichiers &lt;code>.md&lt;/code>déclarant &lt;code>article: false&lt;/code>,&lt;/li>
+&lt;li>des catégories (ex. : &lt;code>/[locale]/category/ma-category/&lt;/code>),&lt;/li>
+&lt;li>des tags : &lt;code>/[locale]/tag/mon-tag/&lt;/code>),&lt;/li>
+&lt;li>et autres fonctionnalités associées deviennent disponibles.&lt;/li>
+&lt;li>il est possible de
+&lt;a href="https://theme-hope.vuejs.press/guide/blog/">réaliser davantage de configuration du blogging dans&lt;code>theme.ts&lt;/code>&lt;/a>, mais, personnellement, je ne les utilise pas.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>comment&lt;/code> permet d&amp;rsquo;activer l&amp;rsquo;ajout de commentaires basé l&amp;rsquo;extension GitHub nommée &lt;code>Giscus&lt;/code> qui crée des tickets dans le système de tickets GitHub de votre dépôt.&lt;/p>
+&lt;ul>
+&lt;li>je ne décris pas ici comment l&amp;rsquo;activer, car
+&lt;a href="https://theme-hope.vuejs.press/config/plugins/comment.html#intro">cela est réalisé par l&amp;rsquo;auteur du thème VuePress&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>mdEnhance&lt;/code> est configuré pour un usage normal (et je recommande de ne pas trop activer d&amp;rsquo;options pour que Netlify puisse compiler le site web au déploiement)&lt;/p>
+&lt;ul>
+&lt;li>il permet d&amp;rsquo;écrire du Markdown avec des syntaxes complémentaires, comme aligner du texte, ajouter des attributs personnalisés (ex. : une classe CSS), des classes CSS &lt;em>container&lt;/em> pour contrôler le style d&amp;rsquo;un ou plusieurs pages, etc.&lt;/li>
+&lt;li>je vous laisse découvrir.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>pwa&lt;/code> a été désactivé même s&amp;rsquo;il génère encore un fichier &lt;code>service-worker.js&lt;/code> à la racine du site (&lt;code>https://example.com/service-worker.js&lt;/code>).&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="création-du-logo-et-icônes">Création du logo et icônes&lt;/h3>
+&lt;p>Vous devrez remplacer les images dans &lt;code>docs/.vuepress/public/icons&lt;/code>&lt;/p>
+&lt;p>En utilisant
+&lt;a href="https://favicon.io/favicon-generator/">ce générateur&lt;/a>, vous pouvez créer un logo à partir de quelques caractères.&lt;/p>
+&lt;ol>
+&lt;li>Utilisez la couleur du thème choisi précédemment et une autre couleur (claire).&lt;/li>
+&lt;li>Modifiez la couleur &lt;em>Font Color&lt;/em> avec la couleur claire et &lt;em>Background color&lt;/em> avec la couleur sombre.&lt;/li>
+&lt;li>Saisissez votre texte. J&amp;rsquo;utilise en général une ou deux lettres pour que tout soit affiché. Utilisez la &lt;em>Font Size&lt;/em> pour ajuster cela.&lt;/li>
+&lt;li>Sélectionner le style &lt;em>Background&lt;/em> et la famille de police.Select the font you prefer and the font size.&lt;/li>
+&lt;li>Cliquez&lt;code>Download&lt;/code> .&lt;/li>
+&lt;li>Extrayez les fichiers en renommant &lt;code>about.txt&lt;/code> en&lt;code>about-light-over-dark.txt&lt;/code> .&lt;/li>
+&lt;li>Copiez tout &lt;strong>sauf le fichier manifest&lt;/strong> dans &lt;code>docs/.vuepress/public/icons&lt;/code> pour remplacer les fichiers existants.&lt;/li>
+&lt;li>Inverser les couleurs dans
+&lt;a href="https://favicon.io/favicon-generator/">le générateur&lt;/a>.&lt;/li>
+&lt;li>Cliquez &lt;code>Download&lt;/code> à nouveau.&lt;/li>
+&lt;li>Extrayez les fichiers et&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>renommez&lt;code>about.txt&lt;/code> en &lt;code>about-dark-over-light.txt&lt;/code>&lt;/li>
+&lt;li>préfixez toutes les images avec&lt;code>dark-&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;ol start="11">
+&lt;li>Copiez tout &lt;strong>sauf le fichier manifest&lt;/strong> dans &lt;code>docs/.vuepress/public/icons&lt;/code> pour remplacer les fichiers existants.&lt;/li>
+&lt;li>Copiez de &lt;code>docs/.vuepress/public/icons&lt;/code> le fichier &lt;code>favicon.ico&lt;/code> dans&lt;code>docs/.vuepress/public&lt;/code> .&lt;/li>
+&lt;/ol>
+&lt;h3 id="personnaliser-les-pages-par-défaut">Personnaliser les pages par défaut&lt;/h3>
+&lt;p>Je ne détaillerai pas comment créer les pages et le contenu de votre site, car cela dépend beaucoup de votre besoin.&lt;/p>
+&lt;p>Voici les exemples de sites :&lt;/p>
+&lt;ul>
+&lt;li>le présent site, où vous vous trouvez, est créé avec le modèle (en fait, il a servi de base pour le modèle).&lt;/li>
+&lt;li>le site de mon activité de microentreprise :
+&lt;a href="https://www.puzzlout.com">www.puzzlout.com&lt;/a>.&lt;/li>
+&lt;li>le site d’une productrice de quinoa que j’ai réalisé au premier semestre 2023 :
+&lt;a href="https://www.inflorescences-quinoa.fr/">www.inflorescences-quinoa.fr/&lt;/a>&lt;/li>
+&lt;li>le site de la méthode &lt;em>Passons le C.A.P&lt;/em> :
+&lt;a href="http://passonslecap.fr/">wwww.passonslecap.fr&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Pour des conseils et des besoins particuliers,
+&lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">contactez-moi&lt;/a>.&lt;/p>
+&lt;p>Sinon, continuons avec
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">l’étape de déploiement&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/">&amp;lt; Retour à la table des matières&lt;/a>&lt;/p></description></item><item><title>Préparer l'environnement pour créer son site web en 2 étapes</title><link>https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Préparer l'environnement pour créer son site web en 2 étapes" />&lt;!-- raw HTML omitted -->
+&lt;h2 id="prérequis">Prérequis&lt;/h2>
+&lt;ul>
+&lt;li>Un ordinateur personnel avec :
+&lt;ul>
+&lt;li>Windows 10 ou 11,&lt;/li>
+&lt;li>8 Go LPDDR4,&lt;/li>
+&lt;li>un disque de 256 Go SSD&lt;/li>
+&lt;li>et un processeur Intel Celeron Quad Core&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Un compte e-mail (Google ou autre) (par ici
+&lt;a href="https://accounts.google.com/">avec Gmail&lt;/a> ou
+&lt;a href="https://www.infomaniak.com/fr/email-gratuit">avec Infomaniak&lt;/a>)&lt;/li>
+&lt;li>Un compte GitHub (créé avec votre compte e-mail) en
+&lt;a href="https://github.com/signup">le créant par ici&lt;/a>&lt;/li>
+&lt;li>Un compte
+&lt;a href="https://app.netlify.com/">chez Netlify&lt;/a> (lié à votre compte GitHub)&lt;/li>
+&lt;li>Optionnellement, un compte chez un registar de domaines (OVH, Infomaniak, etc.). Cela est utile pour le nom de domaine, si vous souhaitez une URL 100 % personnalisée.&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-tip" id="Par défaut, Netlify fournit une URL publique" >
+&lt;p class="jli-notice-title">Par défaut, Netlify fournit une URL publique&lt;/p>&lt;p>Le sous-domaine est configurable, sous réserve de disponibilité.&lt;/p>
+&lt;p>L’application serait alors disponible sous&lt;code>https://mon-site.netlify.app&lt;/code> .&lt;/p>&lt;/div>
+&lt;h2 id="créer-le-dépôt-sur-github">Créer le dépôt sur GitHub&lt;/h2>
+&lt;p>Une fois que vous avez à disposition tous les prérequis, on commence par créer le dépôt depuis votre compte GitHub.&lt;/p>
+&lt;p>Pour cela, connectez-vous à votre compte GitHub et :&lt;/p>
+&lt;ol>
+&lt;li>Rendez-vous sur
+&lt;a href="https://github.com/new">https://github.com/new&lt;/a>.&lt;/li>
+&lt;li>Remplissez les champs :&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>Repository name&lt;/code>&lt;/li>
+&lt;li>&lt;code>Description&lt;/code>&lt;/li>
+&lt;li>Choisissez la visibilité : &lt;code>Public&lt;/code> ou&lt;code>Private&lt;/code> .&lt;/li>
+&lt;li>Ignorez la suite qui sera copiée du modèle&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github.jpg"
+width="749"
+height="808"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Créer le dépôt sur GitHub"
+class="gallery-image"
+data-flex-grow="92"
+data-flex-basis="222px"
+>&lt;/p>
+&lt;ol start="3">
+&lt;li>Cliquez &lt;code>Create repository&lt;/code>en bas du formulaire pour terminer.&lt;/li>
+&lt;/ol>
+&lt;h2 id="préparer-le-poste-de-développement">Préparer le poste de développement&lt;/h2>
+&lt;p>Une fois que le dépôt est prêt, je vous invite à préparer votre poste de développement.&lt;/p>
+&lt;p>Il faut :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Installer
+&lt;a href="https://git-scm.com/downloads">Git bash&lt;/a>. Allez visualiser
+&lt;a href="https://youtu.be/eHTZ-2qY19s">ma vidéo sur le sujet&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installer
+&lt;a href="https://nodejs.org/en/blog/release/v18.16.0/">NodeJS 18.16.0&lt;/a> en cliquant suivant (aucune personnalisation n’est nécessaire).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installer
+&lt;a href="https://code.visualstudio.com/download">Visual Studio Code&lt;/a> en cliquant suivant (aucune personnalisation n’est nécessaire).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Configurer l’explorateur Windows pour afficher les dossiers et fichiers cachés (ex : fichier&lt;code>.gitignore&lt;/code>, dossier&lt;code>.vscode&lt;/code>)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Ouvrez l’explorateur de fichiers et sélectionnez le menu &lt;code>Options&lt;/code>comme indiqué ci-dessous : &lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers.jpg"
+width="810"
+height="438"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ouvrir les options de visualisation des dossiers"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sélectionnez l’affichage des dossiers et fichiers cachés : &lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-loption-dafficher-les-fichiers-et-dossiers-caches.jpg"
+width="392"
+height="525"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_ffd42da62369d6abb70e893d6cec752c.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_63c74ad1136e6fd518a7867d2875b7e4.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_ca0441c177ed96d80a7c831f79880aea.jpg 1024w"
+loading="lazy"
+alt="Sélectionner l’option d’afficher les fichiers et dossiers cachés."
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="179px"
+>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-note" id=" Pour l’étape qui suit seulement…" >
+&lt;p class="jli-notice-title"> Pour l’étape qui suit seulement…&lt;/p>&lt;p>Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.&lt;/p>
+&lt;p>L’étape est là, au cas où ce n’est pas le cas.&lt;/p>
+&lt;p>Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>Lancez Visual Studio Code et saisissez &lt;code>CTRL+SHIFT+P&lt;/code>puis &lt;code>Terminal&lt;/code>pour sélectionner le profil &lt;code>Git Bash&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal.jpg"
+width="606"
+height="78"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Changer le profil du terminal"
+class="gallery-image"
+data-flex-grow="776"
+data-flex-basis="1864px"
+>&lt;/p>
+&lt;p>Et sélectionnez &lt;code>Git Bash&lt;/code>:&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash.jpg"
+width="605"
+height="166"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Sélectionner git bash"
+class="gallery-image"
+data-flex-grow="364"
+data-flex-basis="874px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tapez &lt;code>CTRL+ù&lt;/code>pour ouvrir le terminal avec &lt;code>Git Bash&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash.jpg"
+width="600"
+height="300"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Le terminal est lancé avec Git Bash"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Vous êtes prêts à cloner les dépôts !&lt;/p>
+&lt;p>Cliquez sur le lien suivant pour
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/">créer votre site web moderne et rapide&lt;/a>.&lt;/p>
+&lt;p>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/">&amp;lt; Retour à la table des matières&lt;/a>&lt;/p></description></item><item><title>Créer votre site web moderne pour moins de 10 euros !</title><link>https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Créer votre site web moderne pour moins de 10 euros !" />&lt;p>De nos jours, il existe beaucoup de méthodes pour créer son site web. J’en présente une qui ne coûte presque rien. Pour de vrai !&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="les-étapes">Les étapes&lt;/h2>
+&lt;p>Je décris en détail les étapes pour créer votre site vous-même dans les articles ci-dessous :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/">Préparer un environnement de gestion de son site web sur un PC lambda&lt;/a>,&lt;/li>
+&lt;li>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/">Créer le site web à partir du modèle&lt;/a>,&lt;/li>
+&lt;li>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">Déployer le site web sur Netlify, hébergement gratuit&lt;/a>,&lt;/li>
+&lt;li>
+&lt;a href="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/">Activer NetlifyCMS sur son site web&lt;/a> pour éditer son contenu dans le navigateur.&lt;/li>
+&lt;/ul>
+&lt;p>Si vous pensez que ce serait utile que je réalise une série de tutoriels vidéos,
+&lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">dites-le-moi&lt;/a> !&lt;/p></description></item><item><title>Comment réaliser ses propres bougies à la maison</title><link>https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/</link><pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2022-11-26-3-bougies-finies.jpg" alt="Featured image of post Comment réaliser ses propres bougies à la maison" />&lt;p>&lt;img src="https://jeremielitzLer.fr/images/2022-11-26-3-bougies-finies.jpg"
+loading="lazy"
+alt="Trois bougies réalisées à la maison"
+>&lt;/p>
+&lt;p>Avec un hiver incertain qui s’approche, j’ai décidé de me lancer de la réalisation de bougies à base de cire naturelle d’abeille qu’un collègue apiculteur m’a offerte !&lt;/p>
+&lt;p>La méthode est simple et fascinante pour les enfants. Elle leur apprend ce que les abeilles nous donnent et comment recycler nos déchets (rouleaux de papier WC à jeter)&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg"
+width="600"
+height="800"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Alyssia observe une bougie se consommer"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;h2 id="pourquoi-réaliser-des-bougies-maintenant">Pourquoi réaliser des bougies maintenant&lt;/h2>
+&lt;p>Une bougie, cela apporte de la chaleur par sa lumière et c’est toujours utile quand l’électricité se tarit ou coûte chère.&lt;/p>
+&lt;p>Donc, dans le but d’augmenter notre résilience cet hiver, j’ai décidé de créer nos propres bougies.&lt;/p>
+&lt;blockquote>
+&lt;p>Mais pourquoi ne pas les acheter ? C’est plus simple et moins cher, non ?&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="réaliser-ses-bougies-avec-ses-enfants">Réaliser ses bougies avec ses enfants&lt;/h2>
+&lt;p>Mes filles sont très curieuses. Réaliser des bougies avec elles leur apprend :&lt;/p>
+&lt;ul>
+&lt;li>que tout ne vient pas forcément d’Amazon… ou d’un magasin&lt;/li>
+&lt;li>que l’on peut construire et créer un tas de choses de nos propres mains.&lt;/li>
+&lt;/ul>
+&lt;p>Les bougies en paraffine coûtent peu, en effet, et elles sont toutes prêtes à l’emploi.&lt;/p>
+&lt;p>Mais, la paraffine pollue l’air de la maison et l’origine de la paraffine ne m’enchante pas : il s’agit d’un dérivé du pétrole et j’aimerais ne plus en dépendre… Je ne vous expliquerai pas pourquoi ici, mais vous vous doutez sûrement de la raison.&lt;/p>
+&lt;p>Mieux vaut l’éviter donc !&lt;/p>
+&lt;p>Quelle est l’alternative qui vient à l’esprit assez rapidement ? La cire d’abeille !&lt;/p>
+&lt;p>Dans mon cas, c’est même la meilleure solution, car un collègue expert Oracle se trouve être apiculteur pour son passe-temps ! Je lui ai parlé de mon projet et il m’a donné 3 kg de cire brute filtrée qui ne lui servait plus.&lt;/p>
+&lt;p>Je n’ai pas refusé !&lt;/p>
+&lt;h2 id="comment-les-réaliser">Comment les réaliser&lt;/h2>
+&lt;h3 id="ingrédients">Ingrédients&lt;/h3>
+&lt;p>C’est très simple : de la cire d’abeille à peu près pure. Une cire foncée fera l’affaire.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/cire-d-abeille-en-lingot.jpg"
+width="600"
+height="287"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/cire-d-abeille-en-lingot_hudcf9ca6d5b6b9462018572d56c6f13e9_115486_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/cire-d-abeille-en-lingot_hudcf9ca6d5b6b9462018572d56c6f13e9_115486_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/cire-d-abeille-en-lingot_hudcf9ca6d5b6b9462018572d56c6f13e9_115486_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Un lingot de cire"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="501px"
+>&lt;/p>
+&lt;h3 id="matériel">Matériel&lt;/h3>
+&lt;p>J’ai commandé
+&lt;a href="https://amzn.to/3Uem1dz">ce kit sur Amazon&lt;/a> pour &lt;em>aller vite&lt;/em>.&lt;/p>
+&lt;p>Il contient :&lt;/p>
+&lt;ul>
+&lt;li>un bol inox avec bec verseur&lt;/li>
+&lt;li>2 centreurs inox pour les mèches&lt;/li>
+&lt;li>50 mèches avec une base en métal&lt;/li>
+&lt;li>50 pastilles adhésives double face pour fixer la mèche à la base de la future bougie&lt;/li>
+&lt;li>2 petits conteneurs pour créer 2 bougies&lt;/li>
+&lt;li>une petite cuillère pour mélange la cire pendant la fonte&lt;/li>
+&lt;/ul>
+&lt;p>A cela, on ajoute :&lt;/p>
+&lt;ul>
+&lt;li>un bon couteau pour couper les lingots de cire.&lt;/li>
+&lt;li>une casserole (&lt;strong>attention :&lt;/strong> celle-ci assez grande pour accommoder le récipient dans lequel sera fondu la cire).
+&lt;ul>
+&lt;li>pour le kit cité ci-dessus, une casserole de 16 cm convient&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>une plaque à induction encastrée ou mobile&lt;/li>
+&lt;/ul>
+&lt;h3 id="quel-moule">Quel moule&lt;/h3>
+&lt;p>Pour le premier essai, nous avons utilisé les 2 moules fournis avec le kit, sauf que la bougie ne se démoule pas une fois solide.&lt;/p>
+&lt;p>Nous avons utilisé des rouleaux de papier WC vides à la seconde réalisation sur conseil de mon collègue apiculteur.&lt;/p>
+&lt;p>Ci-dessous, je vous décris la réalisation avec les moules &lt;em>low-tech&lt;/em>.&lt;/p>
+&lt;h2 id="la-réalisation">La réalisation&lt;/h2>
+&lt;h3 id="couper-la-cire">Couper la cire&lt;/h3>
+&lt;p>La cire est bien plus dure que je l’imaginais !&lt;/p>
+&lt;p>J’ai pris le coup de main au fur et à mesure.&lt;/p>
+&lt;p>On coupe bien les tranches de cire en petits morceaux pour faire rentrer le plus possible de la &lt;em>marmite&lt;/em>.&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Quelle quantité de cire faut-il préparer Je n’ai pas pesé la cire coupée, donc impossible de vous dire combien j’en ai mis…" >
+&lt;p class="jli-notice-title">Quelle quantité de cire faut-il préparer Je n’ai pas pesé la cire coupée, donc impossible de vous dire combien j’en ai mis…&lt;/p>&lt;p>Par contre, j’ai coupé au fur et à mesure que la cire fondait dans la &lt;em>marmite&lt;/em> et je l’ai bien remplie jusqu’en haut.&lt;/p>
+&lt;p>Cela a permis de réaliser les 4 bougies sans trop de surplus.&lt;/p>&lt;/div>
+&lt;h3 id="fondre-la-cire">Fondre la cire&lt;/h3>
+&lt;div class="jli-notice jli-notice-danger" id="Surtout pas de gaz" >
+&lt;p class="jli-notice-title">Surtout pas de gaz&lt;/p>&lt;p>La cire brûle très très bien ! Ne la faites pas fondre sur une cuisinière à gaz !!!&lt;/p>&lt;/div>
+&lt;p>J’utilise
+&lt;a href="https://amzn.to/3UgZ4GC">cette plaque à induction&lt;/a> sur la puissance 3.5. Cela prend un peu plus d’une demi-heure pour faire fondre toute la cire.&lt;/p>
+&lt;h3 id="préparer-les-moules">Préparer les moules&lt;/h3>
+&lt;p>J’ai pris 4 beaux rouleaux de papier WC, pas trop accidentés que j’ai posés sur une pièce de carton pour deux raisons :&lt;/p>
+&lt;ul>
+&lt;li>au cas où je verse de la cire à côté…&lt;/li>
+&lt;li>pour servir de fond au moule.&lt;/li>
+&lt;/ul>
+&lt;p>À l’aide de l’adhésif double face, j’ai fixé les mèches de façon assez espacée, car les centreurs de mèches sont assez larges.&lt;/p>
+&lt;h3 id="couler-la-cire">Couler la cire&lt;/h3>
+&lt;div class="jli-notice jli-notice-warning" id="Avant de couler la cire…" >
+&lt;p class="jli-notice-title">Avant de couler la cire…&lt;/p>&lt;p>Il faut que la mèche soit &lt;em>clipsée&lt;/em> au centreur de mèche avant de couler la cire…&lt;/p>
+&lt;p>Il faut aussi que la mèche soit tendue, car une fois la cire fondue dans le moule, tirer la mèche la séparera de la partie métallique…&lt;/p>&lt;/div>
+&lt;p>Il faut couler la cire en trois étapes dans les rouleaux de papier WC :&lt;/p>
+&lt;ul>
+&lt;li>on coule un peu de cire dans le fond pour &lt;em>sceller&lt;/em> le rouleau à la base en carton
+&lt;ul>
+&lt;li>on attend quelques minutes que la cire durcit.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>on coule jusqu’à 90 % du volume du rouleau
+&lt;ul>
+&lt;li>pourquoi ? Au refroidissement, la cire peut se fissurer et comme je n’utilise pas d’huile végétale (comme j’ai pu lire), j’ai expérimenté la façon que je décris ici.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>on coule jusqu’en haut après que la cire ait durci assez pour enlever le centreur de mèche.
+&lt;ul>
+&lt;li>&lt;strong>attention :&lt;/strong> la cire peut paraitre dure en surface, mais elle est encore liquide au centre de la bougie au bout de 10 min !&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="essai-dune-bougie">Essai d’une bougie&lt;/h2>
+&lt;p>Nous avons essayé une bougie (celle où je n’ai pas tendu la mèche assez ou je ne l&amp;rsquo;ai centrée correctement).&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/une-bougie-allumee-dans-le-noir.jpg"
+width="600"
+height="450"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/une-bougie-allumee-dans-le-noir_hu04e3897474b7bae7958f1c188b9c6a57_140224_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/une-bougie-allumee-dans-le-noir_hu04e3897474b7bae7958f1c188b9c6a57_140224_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/une-bougie-allumee-dans-le-noir_hu04e3897474b7bae7958f1c188b9c6a57_140224_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Une bougie allumée dans le noir"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer.jpg"
+width="600"
+height="800"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-alyssia-regarde-la-bougie-se-consummer_hu90e55f281e9d86e54b6fbf9561223401_245333_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Alyssia observe la bougie se consummer"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;p>Au bout de deux heures et demie, la bougie a perdu 15 g de son poids. Pour une bougie de 95 g, cela donne une autonomie de 20 heures, si bien sûr tout se passe bien jusqu’à la fin de la fonte.&lt;/p>
+&lt;h2 id="un-premier-retour-dexpérience">Un premier retour d’expérience&lt;/h2>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-3-bougies-finies.jpg"
+width="600"
+height="287"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-3-bougies-finies_hu4a5f12aefaaa8e85000040b53b4f9420_101710_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-3-bougies-finies_hu4a5f12aefaaa8e85000040b53b4f9420_101710_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/2022-11-26-3-bougies-finies_hu4a5f12aefaaa8e85000040b53b4f9420_101710_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="3 bougies de cire d’abeille"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="501px"
+>&lt;/p>
+&lt;p>Après coup, il me manque 2 centreurs en inox supplémentaire pour faire 4 bougies à la fois sans attendre que les premières refroidissent.&lt;/p>
+&lt;p>Au niveau de la coulée de la cire, l’étape 3 n’a pas donné un super résultat. Cela a créé comme un chapeau de cire peu solidaire du reste de la bougie.&lt;/p>
+&lt;p>Ça n’empêche en rien son utilisation, sauf que la mèche s’est un peu noyée au bout de 20 min. En enlevant la couronne restante de ce chapeau, après 20 min de fonte, la bougie se trouvait revigorée ! Après, il est aussi possible que cela soit dû au fait que la bougie testée n’avait pas la mèche bien centrée.&lt;/p>
+&lt;p>&lt;img src="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/4-bougies-dont-1-test%C3%A9e.jpg"
+width="600"
+height="287"
+srcset="https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/4-bougies-dont-1-test%C3%A9e_hu69cf2a34fc4fa4998a8991213dfc61b6_105870_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/4-bougies-dont-1-test%C3%A9e_hu69cf2a34fc4fa4998a8991213dfc61b6_105870_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/vos-bougies-en-cire-dabeille-et-rouleaux-de-papier-wc/images/4-bougies-dont-1-test%C3%A9e_hu69cf2a34fc4fa4998a8991213dfc61b6_105870_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="4 bougies finies avec une bougie utilisée"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="501px"
+>&lt;/p>
+&lt;p>Enfin, pour la prochaine fois, je sais que j’aurai à couper l’équivalent de quatre fois le poids d’une bougie, soit 95 g par bougie en moyenne.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item></channel></rss>
