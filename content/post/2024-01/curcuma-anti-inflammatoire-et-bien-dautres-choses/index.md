@@ -40,13 +40,13 @@ En effet, la barrière hématoencéphalique est dure à traverser. Pas pour les 
 
 On parle donc d’anti-inflammatoire _systémique_, car les constituants actifs, nommés curcuminoïdes, peuvent agir sur le système.
 
-## Antioxydant
+### Antioxydant
 
 Il protège contre nos cellules des radicaux libres, encore plus que la vitamine E et le bêtacarotène.
 
 De la même façon, cette action antioxydante est systémique.
 
-## Protège des radiations
+### Protège des radiations
 
 Des études ont montré que les constituants actifs du curcuma bloquent les modifications de chromosomes et donc bloquent le développement des cancers.
 
@@ -54,7 +54,7 @@ Concrètement, le curcuma protégerait les cellules saines de la radiothérapie 
 
 Christophe détaille [dans son article sur le curcuma](https://www.altheaprovence.com/curcuma-longa-puissant-anti-inflammatoire-et-antioxydant/) avec toutes les références pour valider cela.
 
-## Prévient contre les maladies dégénératives
+### Prévient contre les maladies dégénératives
 
 Dans notre monde moderne, tellement de maladies physiques, mentales et bien d’autres se développent à cause de l’inflammation et l’oxydation de notre corps et de nos cellules.
 
