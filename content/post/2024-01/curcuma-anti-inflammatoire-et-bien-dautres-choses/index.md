@@ -4,6 +4,7 @@ description: "Il est anti-inflammatoire naturel, arthrose, arthrite, anti-cancer
 image: images/2024-01-09-curcuma-en-racine-et-en-poudre.jpg
 imageAlt: Du curcuma en racine et en poudre
 date: 2024-01-09
+categories:
   - Santé
 tags:
   - Christophe Bernard
