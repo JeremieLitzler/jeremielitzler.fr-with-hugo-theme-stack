@@ -2,7 +2,7 @@
   --theme-color: #3eaf7c;
   --accent-color: var(--theme-color);
   --body-text-color: rgba(0, 0, 0, 0.8);
-  
+
   --notice-note-light: #fdfdfe;
   --notice-note-dark: #858585;
   --notice-tip-light: #e6f6e6;
@@ -13,9 +13,9 @@
   --notice-danger-dark: #e13238;
 }
 
-:root[data-scheme=dark] {
+:root[data-scheme='dark'] {
   --body-text-color: rgba(255, 255, 255, 0.8);
-  
+
   --notice-note-light: #858585;
   --notice-note-dark: #fdfdfe;
   --notice-tip-light: var(--theme-color);
@@ -34,7 +34,13 @@ a {
   text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   color: var(--body-text-color);
 }
 
@@ -49,6 +55,27 @@ h1, h2, h3, h4, h5, h6, p {
 .article-title a:hover {
   border: 1px dashed var(--theme-color);
 }
+
+.right-sidebar.sticky {
+  top: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+summary.section-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+summary .widget-title {
+  text-indent: 0.25em;
+  text-decoration: underline;
+}
+
+summary .widget-title-hint {
+  text-decoration: none;
+}
+
 iframe.newsletter-embed {
   width: 100%;
   height: 16em;
@@ -106,7 +133,6 @@ iframe.newsletter-embed {
   width: initial;
 }
 
-
 .jli-notice p {
   margin: 0;
 }
@@ -114,7 +140,6 @@ iframe.newsletter-embed {
 .jli-notice-title {
   font-weight: bold;
 }
-
 
 .jli-notice-note {
   background-color: var(--notice-note-light);

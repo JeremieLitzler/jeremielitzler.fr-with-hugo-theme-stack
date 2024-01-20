@@ -1,0 +1,21 @@
+{{- $context := .Context -}} {{- $limit := default 10 .Params.limit -}}
+<section class="widget tagCloud">
+  <details>
+    <summary
+      class="widget-title section-title"
+      aria-label="Cliquer pour voir les éléments"
+      title="Cliquer pour voir les éléments"
+    >
+      <span class="widget-icon">{{ partial "helper/icon" "categories" }}</span>
+      <span class="widget-title"> Catégories </span>
+      <span class="widget-title-hint">⏬⏬⏬</span>
+    </summary>
+    <div class="tagCloud-tags">
+      {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
+      <a href="{{ .Page.RelPermalink }}" class="font_size_{{ .Count }}">
+        {{ .Page.Title }}
+      </a>
+      {{ end }}
+    </div>
+  </details>
+</section>
