@@ -11,8 +11,7 @@ tags:
   - Aubépine
 ---
 
-Merci à Christophe pour le partage de son savoir !
-Cet article résume mes notes des vlogs réalisés par le chemin de la nature.
+Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes des vlogs réalisés par le chemin de la nature.
 
 Toutes les images sont extraites des vlogs.
 
@@ -40,7 +39,7 @@ L’aubépine peut vivre jusqu’à 500 ans, avec une hauteur jusqu’à 6-7 m
 
 Il existe deux espèces d’aubépine : une avec un noyau et une avec deux noyaux. Personnellement, j’ai uniquement l’espèce à un noyau autour de chez moi dans le sud de la France.
 
-![Des feuilles d’aubépine](images/des-feuilles-d-aubepine.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Des feuilles d’aubépine. Crédit : image de Olive Titus extraite sur Flickr](images/des-feuilles-d-aubepine.jpg)
 
 Si vous n’osez pas goûter le faux fruit, regardez les feuilles de plus près. Plus elles sont découpées, plus il est probable qu’il s’agisse de l’espèce à un noyau.
 
@@ -91,3 +90,5 @@ Autour de chez moi, il y en a partout et je ne les vois pas souffrir de la chale
 Du coup, en greffant un poirier sur une aubépine, il y a de plus grande chance de survie.
 
 {{< /blockcontainer >}}
+
+_Crédit : toutes les images sont extraites des vlogs de Christophe, sauf autre mention._

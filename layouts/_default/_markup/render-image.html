@@ -26,7 +26,9 @@
 	{{- end -}}
 {{- end -}}
 
-<img src="{{ $Permalink }}"
+<figure>
+
+	<img src="{{ $Permalink }}"
 	{{ with $Width }}width="{{ . }}"{{ end }}
 	{{ with $Height }}height="{{ . }}"{{ end }}
 	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
@@ -38,5 +40,11 @@
 		class="gallery-image" 
 		data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
 		data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
-	{{ end }}
->
+		{{ end }}
+		>
+	<figcaption>
+		{{ with $alt }}
+		{{ . }}
+		{{ end }}
+	</figcaption>
+</figure>

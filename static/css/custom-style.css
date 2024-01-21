@@ -76,6 +76,48 @@ summary .widget-title-hint {
   text-decoration: none;
 }
 
+/*ARTICLE styles*/
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.article-content blockquote,
+.article-content figure,
+.article-content .highlight,
+.article-content pre,
+.article-content .gallery,
+.article-content .video-wrapper,
+.article-content .table-wrapper,
+.article-content .s_video_simple {
+  margin-left: calc((var(--card-padding)) * -0); /*was -1 instead of -0*/
+  margin-right: calc((var(--card-padding)) * -0); /*was -1 instead of -0*/
+  width: calc(100% + var(--card-padding) * 0); /*was -0 instead of 0*/
+}
+.main-article img {
+  width: 100%;
+}
+
+figure {
+  background-color: var(--accent-color);
+  border: 4px solid var(--accent-color);
+  border-radius: 0.5em;
+  color: var(--accent-color-text);
+}
+
+figure img {
+  border-radius: 0.5em;
+}
+
+.article-content figure figcaption {
+  color: var(--accent-color-text);
+}
+
 iframe.newsletter-embed {
   width: 100%;
   height: 16em;
