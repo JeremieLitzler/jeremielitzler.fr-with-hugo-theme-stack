@@ -3,7 +3,7 @@ title: "Installation PV - quel retour d'expérience en 2023 ?"
 description: "En 2023, on a vu une production moins élevée d’avril à août, mais l’autoconsommation a été bien meilleure. Regardons cela ensemble."
 image: images/production-et-injection-des-2-premiers-annees.jpg
 imageAlt: 
-date: 2024-01-19
+date: 2024-01-23
 categories:
   - Energie
 ---
