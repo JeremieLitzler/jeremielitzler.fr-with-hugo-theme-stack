@@ -1,5 +1,5 @@
 ---
-title: Le curcuma
+title: "Le curcuma: anti-inflammatoire naturel de choix"
 description: "Il est anti-inflammatoire naturel, arthrose, arthrite, anti-cancer. Cette épice est très connue. Nous allons comprendre ce qu’il en retourne dans cette prise de notes."
 image: images/2024-01-09-curcuma-en-racine-et-en-poudre.jpg
 imageAlt: Du curcuma en racine et en poudre
@@ -11,8 +11,7 @@ tags:
   - Curcuma
 ---
 
-Merci à Christophe pour le partage de son savoir !
-Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
+Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Christophe sur sa chaîne Altheaprovence.
 
 <!-- more -->
 
