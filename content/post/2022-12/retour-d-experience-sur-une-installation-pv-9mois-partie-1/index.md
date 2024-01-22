@@ -97,7 +97,7 @@ Le routeur indique le comptage journalier et celui-ci est réinitialisé chaque 
 
 {{< /blockcontainer >}}
 
-Au lien d’aller directement du tableau général au cumulus, j’ai installé :
+Au lieu d’aller directement du tableau général au cumulus, j’ai installé :
 
 - un programmateur horaire à pins
   - pour contrôler le temps d’utilisation du réseau la nuit.
@@ -132,7 +132,7 @@ A ce moment-là, 1.5 h suffisaient largement pour les 5 jours où cela fut né
 
 En novembre, on a laissé le réseau presque tous les jours dû à la très mauvaise météo… J’ai augmenté à 2.5 h de chauffe la première semaine de décembre. J’ai diminué à 2h une semaine après, car cela suffisait pour les douches chaudes de mesdames 🚿
 
-==Le gros avantage== :
+**Le gros avantage** :
 
 - en novembre, on a consommé -50 % de moins du réseau par rapport aux trois dernières années malgré l’absence du soleil une bonne partie du mois.
   - avant, le cumulus tournait 4h par nuit d’hiver…
@@ -140,7 +140,7 @@ En novembre, on a laissé le réseau presque tous les jours dû à la très mauv
 
 ![Graphique de relevé Linky en février 2022](images/exemple-de-cycle-1-en-fevrier-2022.jpg 'Le pic de 4h30 correspond au cycle 1 du lave-vaisselle où le cumulus se remettant en route pour chauffer l’eau que le lave-vaisselle a utilisée. La résistance du cumulus se met en route de 22h30 à 2h00 avec le signal HP/HC pour la chauffe principale.')
 
-==Autre point important :== j’ai mis le thermostat à 5 sur 5 au lieu de 2 sur 5 en été et 3 sur 5 en hiver quand on alimentait sur le réseau uniquement.
+**Autre point important** : j’ai mis le thermostat à 5 sur 5 au lieu de 2 sur 5 en été et 3 sur 5 en hiver quand on alimentait sur le réseau uniquement.
 
 Oui, l’eau était bien chaude le printemps, l’été et l’automne. Toutefois, cela a permis d’avoir 2 à 3 jours de mauvais temps en septembre avec peu ou pas de soleil et ne pas utiliser le réseau pour chauffer l’ESC.
 
@@ -164,7 +164,7 @@ Durant l’été, l’eau fut très chaude.
 
 Le lave-vaisselle est branché sur l’eau depuis son installation.
 
-Ce que nous avons fait l’été passé fut de lancer 2 cycles _rinçage_ de 11 min pour amener l’eau chaude. En effet, la distance entre le cumulus et le lave-vaisselle est importante. Après ce cycle, la vaisselle était alors presque _propre_. Si l’on avait besoin de faire tourner le lave-vaisselle, on le lançait ensuite en programme cycle _demi-charge_ de 30 min et comme l’eau chaude était déjà là, la consommation du réseau apparaissait nulle.
+Ce que nous avons fait l’été passé fut de lancer 2 cycles _rinçage_ de 11 min pour amener l’eau chaude. En effet, il y a  15 mètres de tuyaux entre le cumulus et la cuisine. Après ce cycle, la vaisselle était alors presque _propre_. Si l’on avait besoin de faire tourner le lave-vaisselle, on le lançait ensuite en programme cycle _demi-charge_ de 30 min et comme l’eau chaude était déjà là, la consommation du réseau apparaissait nulle.
 
 Sur un cycle plus long, le mode _eco_ de 2h45, la consommation était clairement diminuée.
 
@@ -172,21 +172,19 @@ Sur un cycle plus long, le mode _eco_ de 2h45, la consommation était clairement
 
 ### Avec le lave-linge
 
-Contrairement au lave-vaisselle, je n’ai pas branché le lave-linge sur l’eau chaude, car il faut installer un mitigeur et l’arrivée d’eau chaude est trop loin ni réalisée pour que ça vaille le coup.
+Contrairement au lave-vaisselle, je n’ai pas branché le lave-linge sur l’eau chaude. Cela n'est aussi simple qu'installer un mitigeur. De plus, l’arrivée d’eau chaude est trop loin ni réalisée pour que ça vaille le coup.
 
 Par contre, nous avons profité du soleil et des jours ensoleillés pour laver le linge et consommer moins sur un cycle.
 
-![Graphique de relevé Linky du 11 août 2022](images/exemple-de-cycle-cotton-eco-40-en-aout-2022.jpg 'Le pic de 12h et la consommation continuant jusqu’à 15h correspondent au cycle « Cotton Eco » à 40 °C')
+![Graphique de relevé Linky du 11 août 2022 : Le pic de 12h et la consommation continuant jusqu’à 15h correspondent au cycle « Cotton Eco » à 40 °C](images/exemple-de-cycle-cotton-eco-40-en-aout-2022.jpg)
 
-Historiquement, nous lavions notre linge au cycle _Synthétique à 40°_. Toutefois, après avoir essayé le cycle _Cotton eco à 40°_, la consommation était réduite.
+Historiquement, nous lavions notre linge au cycle _Synthétique à 40°_. Toutefois, après avoir essayé le cycle _Cotton eco à 40°_, la consommation a été réduite, même si le cycle est bien plus long.
 
-![Graphique de relevé Linky du 12 décembre 2022](images/exemple-de-cycle-synthetique-40-en-decembre-2022.jpg 'Le pic de 12h correspond au cycle « Synthétique » à 40 °C')
-
-Nous avons donc utilisé le cycle _Cotton eco à 40°_ plus long (3h au lieu de 1h35).
+![Graphique de relevé Linky du 12 décembre 2022 : Le pic de 12h correspond au cycle « Synthétique » à 40 °C](images/exemple-de-cycle-synthetique-40-en-decembre-2022.jpg)
 
 Entre la nuit et la journée, voici la différence :
 
-![Graphique de consommation horaire enregistré par le Linky le 15 mai 2022](images/cycle-cotton-eco-nuit-journee.jpg 'Avec le soleil, on réduit de plus de moitié la consommation du réseau.')
+![Graphique de consommation horaire enregistré par le Linky le 15 mai 2022 : Avec le soleil, on réduit de plus de moitié la consommation du réseau.](images/cycle-cotton-eco-nuit-journee.jpg)
 
 - Le cycle de 0h30 à 4h est bien plus important que celui de 13h30 à 17h.
 - Le pic à 6h correspond à l’utilisation de notre pompe à eau.
@@ -199,11 +197,11 @@ En général, je n’ai jamais dépassé 3.5 sur une échelle de 10.
 
 La puissance de 3.5 correspond à 500 W.
 
-Nous avons remarqué que même à la puissance 2.5, soit 340 W, les aliments cuisaient.
+Nous avons remarqué que, même à la puissance 2.5, soit 340 W, les aliments cuisaient.
 
 Certes, cela prenait plus de temps que le feu à gaz dans la cuisine, mais en 2h, l’énergie solaire a cuit en grande partie les légumes vapeur.
 
-![Graphique de relevé Linky du 5 septembre 2022](images/exemple-de-cuisson-induction.jpg 'De 15h à 18h, nous avons fait cuire un plat à puissance 2.5, soit 340 W. Le pic de 15h montre sûrement un nuage dans le ciel à ce moment.')
+![Graphique de relevé Linky du 5 septembre 2022 : De 15h à 18h, nous avons fait cuire un plat à puissance 2.5, soit 340 W. Le pic de 15h montre sûrement un nuage dans le ciel à ce moment.](images/exemple-de-cuisson-induction.jpg)
 
 ### Avec le mini radiateur électrique
 
@@ -283,4 +281,4 @@ Encore 2 semaines de relevés et vous pourrez découvrir :
 - ce qu’a produit l’installation
 - et comment cela influe sur notre consommation et notre facture.
 
-En attendant, ==merci pour votre soutien !==
+En attendant, bravo d'avoir lu jusqu’ici !
