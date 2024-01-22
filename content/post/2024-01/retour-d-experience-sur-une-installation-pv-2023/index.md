@@ -6,6 +6,7 @@ imageAlt:
 date: 2024-01-23
 categories:
   - Energie
+draft: true
 ---
 
 ## Production
@@ -193,33 +194,64 @@ Cela correspondrait à 4 panneaux de 200 Wc, un micro-onduleur APS DS3 son câbl
 Il faudra toutefois :
 
 - Vérifier que la section de câble (6 mm²) le supporterait, car nous avons environ 80m de l'installation jusqu'à un point de jonction avec un second câble d'environ 40 m.
+
   - Le but est de ne pas dépasser la limite d'échauffement.
   - Je ne suis pas sûr si le calcul est le même si le câble est continu ou pas.
   - Dans notre cas, on peut descendre jusqu'à 1.5 kW sur 130m et 2 kW sur 100 m.
   - J'ai prévu de mesurer cet été la puissance instantanné maximum avec une pince ampèmétrique pour connaitre la marge disponible pour ne pas avoir à installer un autre câble.
-
-Source : [COMMENT DIMENSIONNER UN CABLE ÉLECTRIQUE ?](Source : https://www.electricitebleu.com/content/7-comment-dimensionner-un-cable-electrique- ou https://schema-electrique.net/section-cable-et-fil-electrique-abaques-tableau.html)
+  - Source : [COMMENT DIMENSIONNER UN CABLE ÉLECTRIQUE ?](https://www.electricitebleu.com/content/7-comment-dimensionner-un-cable-electrique)
 
 - Financer le micro-onduleur APS DS3, les panneaux et les accessoires.
 - Calculer le nouveau retour sur investissement.
 
-### Achat d'une deuxième batterie Ecoflow Delta 2
+### Achat d'une deuxième batterie à coupler avec mon Ecoflow Delta 2
+
+On a acheté l'Ecoflow Delta 2 pour couvrir les coupures d'électricité. L'hiver dernier, ça a été très un jour très froid pendant 6 heures de coupure.
 
 Le but est de couvrir la consommation pendant les vacances, mais est-ce que ça vaut le coup ?
 
-J'en doute fortement. Surtout que la capacité utile, c'est-à-dire en respectant une décharge maximum de 60% et une recharge à 90% pour augmenter la durée de vie des cellules LFP (Lithium Fer Phosphate), est d'environ 615 Wh et que l'onduleur interne consomme 25 Wh.
+**Les faits :**
 
-Ainsi, avec la seconde batterie, on dispose vraiment de [1024 Wh x 2] x 50 % = ~1230 Wh. De plus, la consommation de l'onduleur interne (environ 15-20 Wh) réduit l'autonomie de façon non négligeable.
+- La capacité utile d'une batterie LFP n'est celle que le vendeur met avant. Cela prendrait un article complet pour l'expliquer ([certains l'on déjà fait (article en anglais)](https://harveypoweress.com/lifepo4-battery-depth-of-discharge/)).
+  - En résumé, la capacité d'une batterie LFP est de 40 à 80% de sa capacité.
 
-Cela pourrait permettre de stocker le surplus de production, mais l'efficacité serait moindre. En effet, mon installation se trouve à 120 m de la maison et c'est le micro-onduleur qui transforme le courant continue des panneaux en courant alternatif.
+![Relation entre profondeur de décharge (DOD) et le nombre de cycle. Crédit : https://harveypoweress.com/lifepo4-battery-depth-of-discharge/](images/Cycle-Times-of-Lifepo4-Battery-at-Different-Depths-of-Discharge.png)
 
-La station Detla 2 possède une entrée solaire de 500W (dont une plage de tension comprise entre 11 et 60V et un courant maximum de 15A).
+- De plus, la consommation de l'onduleur interne (environ 15-20 Wh) réduit l'autonomie de façon non négligeable.
 
-{{< blockcontainer jli-notice-note "A étudier...">}}
+**Les hypothèses :**
 
-A voir comment :
+- Pour une profondeur de décharge (DOD) de 60 % (Niveau charge variant de 30% à 90%),
+- Pour un nombre de cycles égale à 5000 pour la DOD de 60 %,
+- Pour deux batteries de 1024 Wh de capacité nominale chacune coûtant 1199 euros pour l'unité principale et 549 euros pour l'unité secondaire,
+- Pour une autoconsommation de 90%,
+- Pour un production annuelle de 1600 kWh,
+- Pour un coût du kWh qui augmente de 8.36 % par an.
+- De plus, la consommation de l'onduleur interne (environ 15 Wh) réduit l'autonomie de façon non négligeable, soit 360 Wh.
 
-- l'installer à côté de l'installation en la protégeant du froid l'hiver et de la chaleur l'été
-- automatiser l'usage de la batterie ou du réseau...
+**Le retour sur investissement :**
 
-{{< /blockcontainer >}}
+- On obtient `[1024 Wh x 2] x [60 % DOD] - [360 Wh] = 868.8 Wh`.
+- On obtient 184 cycles de 868.8 Wh.
+- On obtient 160 kWh injectés à "_récupérer_".
+- On obtient 1748 euros pour les 2 batteries.
+
+Il faudrait 21 ans pour rentabiliser l'achat des batteries, ce qui est possible vu que les 5000 cycles donnent une durée de vie de 27 ans.
+
+#### Toutefois...
+
+Ce n'est pas si simple que ça. Il faudrait aussi réarranger les circuits électriques de la maiso et cela rajoute des coûts.
+
+De plus, le talon en dehors des heures de production tourne autour de 1 kWh de toute façon
+
+Enfin, le surplus injecté à utiliser n'est pas disponible au moment où on en a besoin.
+
+Du coup, je peux oublier ce projet.
+
+## Conclusion
+
+Je pense qu'on a déjà fait beaucoup et un effort de 80 % pour améliorer les 20 % restants ne vaut pas forcément le coup.
+
+Par contre, apprendre et tester d'autres appareils comme un poêle dragon ou un piège à moustiques tigres ou encore un four solaire, ça serait intéressant.
+
+A suivre...
