@@ -10,7 +10,9 @@ categories:
 
 ## Production
 
-Pour commencer, quelle a été la production annuelle ? Nous avons presque atteint 1597 kWh produits, avec un pic à 207.22 kWh en juillet et 44.60 kWh en janvier.
+Pour commencer, quelle a été la production annuelle ?
+
+Nous avons presque atteint 1597 kWh produits, avec un pic à 207.22 kWh en juillet et 44.60 kWh en janvier.
 
 En images, cela donne ceci en kWh (axe Y) par mois (axe X) :
 
@@ -98,7 +100,7 @@ La rentabilité est atteinte quand les revenus issus de la production dépassent
 
 Le coût n'a pas changé : 2083.90 €.
 
-Les revenus de productions sont les suivantes :
+Les revenus issus de la production réelle sont les suivants :
 
 | Mois                | 2022        | 2023        |
 | ------------------- | ----------- | ----------- |
@@ -124,44 +126,100 @@ Je vous explique davantage sur le sujet [dans un article de novembre dernier](..
 
 Je n'avais pas emprunté à une banque pour la réalisation de l'installation, mais j'ai quand emprunté sur notre épargne. J'aurai fini de _"nous rembourser"_ exactement 22 mois après la mise en service. Beaucoup mieux qu'emprunt de 10 ans, non ?
 
+Ainsi, sur les hypothèses suivantes :
+
+- une augmentation de 8.36 % du coût d'achat du kWh d'électricité (mesure de 2014 à 2023)
+- une production équivalent à 2023 chaque année,
+
+on obtient le retour sur investissement qui suit :
+
+| Année | Production annuelle (kWh) | Prix du kWh (optimiste) | Economie annuelle | Cumul Revenus PV | Différence revenus vs coût |
+| ----- | ------------------------- | ----------------------- | ----------------- | ---------------- | -------------------------- |
+| 2022  | -                         | -                       | 158,88 €          | 158,88 €         | -1 925,02 €                |
+| 2023  | -                         | -                       | 253,49 €          | 253,49 €         | -1 830,41 €                |
+| 2024  | 1597,00                   | 0,21 €                  | 339,85 €          | 593,34 €         | -1 490,56 €                |
+| 2025  | 1597,00                   | 0,23 €                  | 368,26 €          | 961,60 €         | -1 122,30 €                |
+| 2026  | 1597,00                   | 0,25 €                  | 399,05 €          | 1 360,65 €       | -723,25 €                  |
+| 2027  | 1597,00                   | 0,27 €                  | 432,41 €          | 1 793,06 €       | -290,84 €                  |
+| 2028  | 992,00                    | 0,29 €                  | 291,05 €          | 2 084,12 €       | 0,22 €                     |
+
+Ainsi en juillet 2028, on aura rentabilisé l'installation si l'on n'achète rien de plus d'ici là. Cela revient à une rentabilité atteinte au bout de 6 ans et 4 mois.
+
+{{< blockcontainer jli-notice-note "Au passage...">}}
+
+J'avais donné un retour sur investissement plus précose (septembre 2027) dans un article sur LinkedIn : l'erreur venait d'un décalage d'année dans mon tableau de calcul... 😋
+
+{{< /blockcontainer >}}
+
 ## Idées d'amélioration et d'évolution pour 2024
 
 ### Plus de déshydratation
 
-Depuis octobre, je travaille loin de chez moi et donc, je ne suis pas autant à la maison. Par conséquent, préparer des fruits et légumes à déshydrater tous les jours sera compliqué.
+Depuis octobre, je travaille loin de chez moi et donc, je ne suis pas autant à la maison. Par conséquent, préparer des fruits et légumes à déshydrater tous les 2 jours sera compliqué.
 
-Je pense acheté quelques étages supplémentaires du modèle que je possède à ce jour.
+Je pense acheté quelques étages supplémentaires [du modèle que je possède](https://www.google.com/search?q=d%C3%A9shydrateur+stockli) à ce jour.
 
-Cela permettra d'en préparer plus seulement 2 fois par semaine et en les séchant un plus longtemps.
-
-### Extension de 800 Wc
-
-Cela correspondrait à 4 panneaux de 200 Wc.
-
-Il faudra toutefois :
-
-- vérifier que la section de câble (6 mm²) le supporterait, car nous avons environ 80m de l'installation jusqu'à un point de jonction avec un second câble d'environ 40 m.
-
-  - Le but est de ne pas dépasser la limite d'échauffement.
-  - Dans notre cas, on peut descendre jusqu'à 1.5 kW sur 130m et 2 kW sur 100 m.
-  - J'ai prévu de mésurer cet été la puissance instantanné maximum avec une pince ampèmétrique pour connaitre la marge disponible pour ne pas avoir à installer un autre câble.
-  - Source : [COMMENT DIMENSIONNER UN CABLE ÉLECTRIQUE ?](Source : https://www.electricitebleu.com/content/7-comment-dimensionner-un-cable-electrique- ou https://schema-electrique.net/section-cable-et-fil-electrique-abaques-tableau.html)
-
-- financer le micro-onduleur APS DS3, les panneaux et les accessoires.
-- calculer le nouveau retour sur investissement.
+Cela permettra de préparer plus d'aliment à sécher et de le réaliser seulement 2 fois par semaine même s'il faut laisser sécher un peu plus longtemps.
 
 ### Achat de micro onduleur de secours
 
-Ceci est prioritaire sur l'extension, car, même si le micro-onduleur APS QS1 est sous garantie, son remplacement pourrait prendre du temps.
+Ceci est prioritaire à l'extension de puissance crête, car, même si le micro-onduleur APS QS1 est encore sous garantie 8 ans, son remplacement pourrait prendre du temps.
 
-Dans mon cas, j'aurai besoin de 2 unités APS DS3 et de 2 câbles AC Bus. Aussi, le remplacement prendrait très peu de temps.
+Dans mon cas, j'aurai besoin de 2 unités APS DS3 et de 2 câbles AC Bus dans le cas d'un défaut de fonctionnement.
 
-Il faudra calculer le nouveau retour sur investissement vu qu'on augmente la résilience du système.
+Au jour de publication de cet article,
+
+- un micro-onduleur APS DS3 coûte :
+  - entre 160 euros avec 10 ans de garantie (source : allo.solar)
+  - et 185 euros aveec une garantie de 20 ans (source : monkitsolaire.fr).
+- un câble coûte
+  - entre 14 euros (source : monkitsolaire.fr)
+  - et 18 euros (source : allo.solar).
+- les frais de ports coûtent
+  - entre 15.55 euros (source : allo.solar)
+  - et 30 euros (source : monkitsolaire.fr).
+
+Donc le nouveau retour sur investissement pour augmenter la résilience du système est le suivant :
+
+- mai 2029 si j'achète chez allo.solar.
+- juin 2029 si j'achète chez monkitsolaire.fr.
+
+Cela revient à 10 ou 11 mois de plus.
+
+### Extension de 800 Wc
+
+Cela correspondrait à 4 panneaux de 200 Wc, un micro-onduleur APS DS3 son câble AC Bus et les quelques éléments (support en bois, plots en béton, câble solaire, câble de terre visserie).
+
+Il faudra toutefois :
+
+- Vérifier que la section de câble (6 mm²) le supporterait, car nous avons environ 80m de l'installation jusqu'à un point de jonction avec un second câble d'environ 40 m.
+  - Le but est de ne pas dépasser la limite d'échauffement.
+  - Je ne suis pas sûr si le calcul est le même si le câble est continu ou pas.
+  - Dans notre cas, on peut descendre jusqu'à 1.5 kW sur 130m et 2 kW sur 100 m.
+  - J'ai prévu de mesurer cet été la puissance instantanné maximum avec une pince ampèmétrique pour connaitre la marge disponible pour ne pas avoir à installer un autre câble.
+
+Source : [COMMENT DIMENSIONNER UN CABLE ÉLECTRIQUE ?](Source : https://www.electricitebleu.com/content/7-comment-dimensionner-un-cable-electrique- ou https://schema-electrique.net/section-cable-et-fil-electrique-abaques-tableau.html)
+
+- Financer le micro-onduleur APS DS3, les panneaux et les accessoires.
+- Calculer le nouveau retour sur investissement.
 
 ### Achat d'une deuxième batterie Ecoflow Delta 2
 
 Le but est de couvrir la consommation pendant les vacances, mais est-ce que ça vaut le coup ?
 
-Cela peut aussi permettre de stocker le surplus de production, mais l'efficacité serait moindre. En effet, mon installation se trouve à 120 m de la maison et c'est le micro-onduleur qui transforme le courant continue des panneaux en courant alternatif.
+J'en doute fortement. Surtout que la capacité utile, c'est-à-dire en respectant une décharge maximum de 60% et une recharge à 90% pour augmenter la durée de vie des cellules LFP (Lithium Fer Phosphate), est d'environ 615 Wh et que l'onduleur interne consomme 25 Wh.
 
-La station Detla 2 possède une entrée solaire de 500W (dont une plage de tension comprise entre 11 et 60V et un courant maximum de 15A). A voir...
+Ainsi, avec la seconde batterie, on dispose vraiment de [1024 Wh x 2] x 50 % = ~1230 Wh. De plus, la consommation de l'onduleur interne (environ 15-20 Wh) réduit l'autonomie de façon non négligeable.
+
+Cela pourrait permettre de stocker le surplus de production, mais l'efficacité serait moindre. En effet, mon installation se trouve à 120 m de la maison et c'est le micro-onduleur qui transforme le courant continue des panneaux en courant alternatif.
+
+La station Detla 2 possède une entrée solaire de 500W (dont une plage de tension comprise entre 11 et 60V et un courant maximum de 15A).
+
+{{< blockcontainer jli-notice-note "A étudier...">}}
+
+A voir comment :
+
+- l'installer à côté de l'installation en la protégeant du froid l'hiver et de la chaleur l'été
+- automatiser l'usage de la batterie ou du réseau...
+
+{{< /blockcontainer >}}
