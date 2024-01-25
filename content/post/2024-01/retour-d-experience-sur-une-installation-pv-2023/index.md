@@ -2,11 +2,18 @@
 title: "Installation PV - quel retour d'expérience en 2023 ?"
 description: "En 2023, on a vu une production moins élevée d’avril à août, mais l’autoconsommation a été bien meilleure. Regardons cela ensemble."
 image: images/production-et-injection-des-2-premiers-annees.jpg
-imageAlt: 
+imageAlt: Production (courbes) et injection (batons) des premières années
 date: 2024-01-23
 categories:
   - Energie
 ---
+
+## La série d'articles
+
+- [Installation PV - quel retour d'expérience après 2 mois ?](../../2022-06/retour-d-experience-sur-une-installation-pv-1mois/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 1)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/index.md)
+- [Installation PV - quel retour d'expérience après 9 mois ? (partie 2)](../../2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/index.md)
+- [Installation PV - quel retour d'expérience après 1 an ?](../../2023-03/retour-d-experience-sur-une-installation-pv-1an/index.md)
 
 ## Production
 
