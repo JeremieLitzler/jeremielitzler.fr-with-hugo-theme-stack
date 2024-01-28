@@ -1,5 +1,5 @@
 ---
-title: "Photovoltaïque : mon expérience après 9 mois (partie 2)"
+title: "Retour d'expérience photovoltaïque après 9 mois (partie 2)"
 description: 'Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin Décembre 2022'
 date: 2022-12-31
 image: /images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg

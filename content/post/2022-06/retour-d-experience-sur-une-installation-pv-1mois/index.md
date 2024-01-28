@@ -1,5 +1,5 @@
 ---
-title: "Photovoltaïque : mon expérience après 2 mois"
+title: "Retour d'expérience photovoltaïque après 2 mois"
 description: 'Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin Mai 2022'
 date: 2022-06-01
 categories:
@@ -215,23 +215,17 @@ Il y a aussi des comportements bizarres sur l'efficacité du contacteur où il n
 
 ![Consommation journalière avec présence (source : Linky)](/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-present.jpg)
 
-_Consommation journalière avec présence (source : Linky)_
-
 On voit très clairement le réfrigérateur qui se met en route de façon cyclique et le pic représente le lave-vaiselle qui a tourné entre minuit et 3h du matin.
 
 ### Consommation journalière en notre absence
 
 En février 2022, nous avons été absents pendant 5 semaines. La consommation journalière moyenne était de 2.5 kWh.
 
-![Consommation journalière sans présence après la mise en service de l'installation PV (source : Linky)](/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-pv.jpg)
-
-_Consommation journalière sans présence après la mise en service de l'installation PV (source : Linky)_
+![Consommation journalière sans présence avant la mise en service de l'installation PV (source : Linky)](/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-nopv.jpg)
 
 En avril 2022, nous avons été absents pendant quelques jours. La consommation journalière moyenne est descendue à 0.7 kWh, soit -72%. Pas mal !
 
-![Consommation journalière sans présence avant la mise en service de l'installation PV (source : Linky)](/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-nopv.jpg)
-
-_Consommation journalière sans présence avant la mise en service de l'installation PV (source : Linky)_
+![Consommation journalière sans présence après la mise en service de l'installation PV (source : Linky)](/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-pv.jpg)
 
 ## Quelle est la suite
 
