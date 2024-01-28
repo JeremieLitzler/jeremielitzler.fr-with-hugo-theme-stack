@@ -135,21 +135,29 @@ En prenant les hypothèses suivantes :
 
 On obtient le retour sur investissement qui suit :
 
-| Année | Production annuelle (kWh) | Prix du kWh (optimiste) | Économie annuelle | Cumul des revenus PV | Différence entre les revenus vs le coût |
-| ----- | ------------------------- | ----------------------- | ----------------- | -------------------- | --------------------------------------- |
-| 2022  | -                         | -                       | 158,88 €          | 158,88 €             | -1 925,02 €                             |
-| 2023  | -                         | -                       | 253,49 €          | 253,49 €             | -1 830,41 €                             |
-| 2024  | 1597,00                   | 0,21 €                  | 339,85 €          | 593,34 €             | -1 490,56 €                             |
-| 2025  | 1597,00                   | 0,23 €                  | 368,26 €          | 961,60 €             | -1 122,30 €                             |
-| 2026  | 1597,00                   | 0,25 €                  | 399,05 €          | 1 360,65 €           | -723,25 €                               |
-| 2027  | 1597,00                   | 0,27 €                  | 432,41 €          | 1 793,06 €           | -290,84 €                               |
-| 2028  | 992,00                    | 0,29 €                  | 291,05 €          | 2 084,12 €           | 0,22 €                                  |
+| Année | Production annuelle | Prix du kWh (optimiste) | Economie annuelle | Cumul Revenus PV | Différence revenus vs coût |
+| ----- | ------------------- | ----------------------- | ----------------- | ---------------- | -------------------------- |
+| 2022  | -                   | -                       | 158,88 €          | 158,88 €         | -1 925,02 €                |
+| 2023  | -                   | -                       | 253,49 €          | 253,49 €         | -1 830,41 €                |
+| 2024  | 1500,00             | 0,21 €                  | 319,21 €          | 572,70 €         | -1 511,20 €                |
+| 2025  | 1500,00             | 0,23 €                  | 345,89 €          | 918,59 €         | -1 165,31 €                |
+| 2026  | 1500,00             | 0,25 €                  | 374,81 €          | 1 293,41 €       | -790,49 €                  |
+| 2027  | 1500,00             | 0,27 €                  | 406,15 €          | 1 699,55 €       | -384,35 €                  |
+| 2028  | 1310,00             | 0,29 €                  | 384,35 €          | 2 083,91 €       | 0,01 €                     |
 
-Ainsi **en juillet 2028**, on aura rentabilisé l’installation si l’on n’achète rien de plus d’ici là. Cela revient à une **rentabilité atteinte au bout de 6 ans et 4 mois**.
+Ainsi **en fin octobre 2028**, on aura rentabilisé l’installation si l’on n’achète rien de plus d’ici là. Cela revient à une **rentabilité atteinte au bout de 6 ans et 7 mois**.
 
 {{< blockcontainer jli-notice-note "Au passage...">}}
 
 J’avais donné un retour sur investissement plus précoce (septembre 2027) dans un article sur LinkedIn : l’erreur venait d’un décalage d’année dans mon tableau de calcul… 😋
+
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-note "Au passage bis...">}}
+
+Depuis la publication de l’article, je me suis rendu compte que j’avais pris en compte le total de production pour le calcul du retour sur investissement. Or, il est plus juste de prendre en compte le total d’autoconsommation !
+
+Cela a donc rallongé de 4 mois l’estimation.
 
 {{< /blockcontainer >}}
 
@@ -183,8 +191,19 @@ Au jour de publication de cet article,
 
 Donc le nouveau retour sur investissement pour augmenter la résilience du système est le suivant :
 
-- mai 2029 si j’achète chez allo.solar.
-- juin 2029 si j’achète chez monkitsolaire.fr.
+- début août 2029 si j’achète chez allo.solar (cf. le tableau ci-dessous).
+- mi-septembre 2029 si j’achète chez monkitsolaire.fr.
+
+| Année | Production annuelle | Prix du kWh (optimiste) | Economie annuelle | Cumul Revenus PV | Différence revenus vs coût |
+| ----- | ------------------- | ----------------------- | ----------------- | ---------------- | -------------------------- |
+| 2022  | -                   | -                       | 158,88 €          | 158,88 €         | -2 297,02 €                |
+| 2023  | -                   | -                       | 253,49 €          | 253,49 €         | -2 202,41 €                |
+| 2024  | 1500,00             | 0,21 €                  | 319,21 €          | 572,70 €         | -1 883,20 €                |
+| 2025  | 1500,00             | 0,23 €                  | 345,89 €          | 918,59 €         | -1 537,31 €                |
+| 2026  | 1500,00             | 0,25 €                  | 374,81 €          | 1 293,41 €       | -1 162,49 €                |
+| 2027  | 1500,00             | 0,27 €                  | 406,15 €          | 1 699,55 €       | -756,35 €                  |
+| 2028  | 1500,00             | 0,29 €                  | 440,10 €          | 2 139,65 €       | -316,25 €                  |
+| 2029  | 995,00              | 0,32 €                  | 316,34 €          | 2 455,99 €       | 0,09 €                     |
 
 Cela revient à 10 ou 11 mois de plus.
 
