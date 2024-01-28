@@ -1,5 +1,5 @@
 ---
-title: "Photovoltaïque : mon expérience après 9 mois (partie 1)"
+title: "Retour d'expérience photovoltaïque après 9 mois (partie 1)"
 description: "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons comment j'ai modifié l'installation et ajusté les appareils et les usages dans mon foyer."
 date: 2022-12-15
 image: /images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg
@@ -164,7 +164,7 @@ Durant l’été, l’eau fut très chaude.
 
 Le lave-vaisselle est branché sur l’eau depuis son installation.
 
-Ce que nous avons fait l’été passé fut de lancer 2 cycles _rinçage_ de 11 min pour amener l’eau chaude. En effet, il y a  15 mètres de tuyaux entre le cumulus et la cuisine. Après ce cycle, la vaisselle était alors presque _propre_. Si l’on avait besoin de faire tourner le lave-vaisselle, on le lançait ensuite en programme cycle _demi-charge_ de 30 min et comme l’eau chaude était déjà là, la consommation du réseau apparaissait nulle.
+Ce que nous avons fait l’été passé fut de lancer 2 cycles _rinçage_ de 11 min pour amener l’eau chaude. En effet, il y a 15 mètres de tuyaux entre le cumulus et la cuisine. Après ce cycle, la vaisselle était alors presque _propre_. Si l’on avait besoin de faire tourner le lave-vaisselle, on le lançait ensuite en programme cycle _demi-charge_ de 30 min et comme l’eau chaude était déjà là, la consommation du réseau apparaissait nulle.
 
 Sur un cycle plus long, le mode _eco_ de 2h45, la consommation était clairement diminuée.
 
