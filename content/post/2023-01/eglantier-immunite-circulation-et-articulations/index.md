@@ -85,7 +85,9 @@ Et on mentionnera l’huile essentielle de rose qui est très chère, car cela r
 
 ## Utilisation du bédégar
 
-![Bédégar de l’églantier](images/galle-eglantier.jpg 'Crédits : image extraite du site orchidee-poitou-charentes.org')
+![Bédégar de l’églantier](images/galle-eglantier.jpg)
+
+Crédits : image extraite du site orchidee-poitou-charentes.org.
 
 On la nomme aussi la _barbe de Saint-Pierre_ et il se développe à cause de la présence d’un parasite dans la plante.
 

@@ -49,21 +49,29 @@ Pour retrouver la liste originale, [c’est à la 15e seconde](https://youtu.be
 - Ajouter l’œuf et partager en 2 portions égales.
 - Mélanger les farines, le sel et le bicarbonate de sodium et partager en 2 portions égales.
 
-![Un bol de cuisine avec des noisettes, des feuilles en morceaux sur de la farine](images/Un-bol-de-cuisine-avec-des-noisettes-des-feuilles-en-morceaux-sur-de-la-farine.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Un bol de cuisine avec des noisettes, des feuilles en morceaux sur de la farine](images/Un-bol-de-cuisine-avec-des-noisettes-des-feuilles-en-morceaux-sur-de-la-farine.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - Ajouter dans l’une le lierre terrestre ciselé et les noisettes torréfiées.
 
-![Un bol de cuisine avec le chocolat, des feuilles en morceaux sur de la farine](images/Un-bol-de-cuisine-avec-le-chocolat-des-feuilles-en-morceaux-sur-de-la-farine.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Un bol de cuisine avec le chocolat, des feuilles en morceaux sur de la farine](images/Un-bol-de-cuisine-avec-le-chocolat-des-feuilles-en-morceaux-sur-de-la-farine.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - Ajouter dans l’autre l’ortie ciselée et le chocolat en poudre.
 
 - Faire une boule de chaque pâte.
 
-![2 bols avec les pâtes malaxées](images/2-bols-avec-les-pates-malaxees.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![2 bols avec les pâtes malaxées](images/2-bols-avec-les-pates-malaxees.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - Découper en petites portions chaque pâte pour ensuite joindre 2 morceaux de chaque pâte respective ensemble comme ci-dessous :
 
-![6 boules bicouleur](images/6-boules-bi-couleurs.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![6 boules bicouleur](images/6-boules-bi-couleurs.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - Ajouter des noisettes et morceaux de chocolat sur les petites boules avant d’enfourner.
 
@@ -71,4 +79,6 @@ Pour retrouver la liste originale, [c’est à la 15e seconde](https://youtu.be
 
 - Déguster !
 
-![Les boules prêtes à déguster](images/les-boules-pretes-a-deguster.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Les boules prêtes à déguster](images/les-boules-pretes-a-deguster.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.

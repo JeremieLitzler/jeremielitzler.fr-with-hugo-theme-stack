@@ -44,7 +44,9 @@ Il est aussi acaule, c’est-à-dire qu’il n’a pas de tige.
 
 Ce qu’on pense être une tige est en fait un pédoncule.
 
-![Identification du pédoncule du pissenlit](images/identification-du-pedoncule-du-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Identification du pédoncule du pissenlit](images/identification-du-pedoncule-du-pissenlit.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 C’est lui qui porte une et une seule inflorescence. Donc il n’y aura pas de ramification du pédoncule.
 
@@ -56,7 +58,9 @@ Elles peuvent être plus ou moins grandes (Personnellement, j’eus trouvé des 
 
 Leurs formes peuvent varier.
 
-![Trois feuilles de pissenlit de formes différentes](images/trois-feuilles-de-pissenlit-de-formes-differentes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Trois feuilles de pissenlit de formes différentes](images/trois-feuilles-de-pissenlit-de-formes-differentes.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Aussi, les feuilles ne présentent pas de poils, contraitement à d'autres plantes de la famille des Asteraceae. Voir [plus loin sur les confusions possibles](#precautions).
 
@@ -64,7 +68,9 @@ Aussi, les feuilles ne présentent pas de poils, contraitement à d'autres plant
 
 La nervure principale de la feuille est parfaitement ronde.
 
-![Nervure de feuille de pissenlit](images/nervure-de-feuille-de-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Nervure de feuille de pissenlit](images/nervure-de-feuille-de-pissenlit.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 {{< /blockcontainer >}}
 
@@ -72,27 +78,43 @@ La nervure principale de la feuille est parfaitement ronde.
 
 Voici la chronologie de l’inflorescence :
 
-![Une inflorescence en bouton. Ils se mangent revenus à la poêle ou macérer comme les câpres.](images/une-inflorescence-en-bouton.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une inflorescence en bouton. Ils se mangent revenus à la poêle ou macérer comme les câpres.](images/une-inflorescence-en-bouton.jpg)
 
-![Une inflorescence épanouie](images/une-inflorescence-epanouie.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+Crédits : image extraite du vlog du chemin de la nature.
 
-![Une inflorescence fanée](images/une-inflorescence-fanee.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une inflorescence épanouie](images/une-inflorescence-epanouie.jpg)
 
-![Les soies sont formées](images/les-soies-sont-formes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+Crédits : image extraite du vlog du chemin de la nature.
 
-![Infrutescence d’arkènes](images/infrutescence-darkenes.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une inflorescence fanée](images/une-inflorescence-fanee.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
+
+![Les soies sont formées](images/les-soies-sont-formes.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
+
+![Infrutescence d’arkènes](images/infrutescence-darkenes.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Un arkène est un _fruit sec_. Ci-dessous, on distingue clairement l’arkène de l’aigrette :
 
-![Vue zoomée sur les arkènes et les aigrettes, le petit parachute de l’arkène](images/vue-zoomee-sur-les-arkenes-et-les-aigrettes-le-petit-parachute-de-larkene.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Vue zoomée sur les arkènes et les aigrettes, le petit parachute de l’arkène](images/vue-zoomee-sur-les-arkenes-et-les-aigrettes-le-petit-parachute-de-larkene.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 La fleur du pissenlit n’est pas cette grosse boule jaune, qu'on appelle **le capitule**. A la base de l'inflorescence, on trouve un involucre de bractées. La bractée représente une petite feuille à la base d'un capitule.
 
-![L'involucre de bractées de l'inflorescence de pissenlit](images/linvolucre-de-bractees-de-linflorescence-de-pissenlit.jpg 'Crédits : image extraite du vlog de Le chemin de la nature')
+![L'involucre de bractées de l'inflorescence de pissenlit](images/linvolucre-de-bractees-de-linflorescence-de-pissenlit.jpg)
+
+Crédits : image extraite du vlog de Le chemin de la nature.
 
 Une seule fleur, c'est uniquement ceci :
 
-![Une fleur ligulée](images/fleur-ligulee.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Une fleur ligulée](images/fleur-ligulee.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 La fleur n’est pas ce qu’on pense, d’où le nom d’inflorescence, qui signifie _Mode de groupement des fleurs d’une plante (ex. en grappes, en ombelles…)_. Pour plus de détail, allez lire [l’article de Wikipédia](https://fr.wikipedia.org/wiki/Inflorescence).
 
@@ -106,7 +128,9 @@ Ensuite, on ajoute l'équivalent en poids d'infusion en sucre. On fait bouillir 
 
 ### Le latex dans le pissenlit
 
-![Le latex du pissenlit sur une feuille coupée](images/le-latex-du-pissenlit-sur-une-feuille-coupee.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Le latex du pissenlit sur une feuille coupée](images/le-latex-du-pissenlit-sur-une-feuille-coupee.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Sur la racine c’est la même chose quand on la coupe.
 
@@ -130,7 +154,9 @@ Christophe insiste sur le fait que l'amertume peut être facilement supprimée a
 
 {{< /blockcontainer >}}
 
-![Identification du collet sur un pissenlit](images/identification-du-collet-sur-un-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Identification du collet sur un pissenlit](images/identification-du-collet-sur-un-pissenlit.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 On vient couper les feuilles au niveau du collet, pour extraire le _bouquet_ de feuilles.
 
@@ -215,7 +241,9 @@ Pour éviter les confusions, rappelez-vous de 3 choses :
 
 Au printemps, on peut facilement distinguer le pissenlit des autres plantes lui ressemblant grâce aux jeunes inflorescences en boutons au centre de la plante.
 
-![Centre du jeune pissenlit avec des boutons d’inflorescence](images/centre-du-jeune-pissenlit-avec-des-boutons-dinflorescence.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Centre du jeune pissenlit avec des boutons d’inflorescence](images/centre-du-jeune-pissenlit-avec-des-boutons-dinflorescence.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Pour toutes les autres plantes, les inflorescences se développent une fois la tige déjà bien haute.
 
@@ -233,19 +261,25 @@ Toutefois, on évitera quand même le coquelicot et la laitue vireuse.
 
 Nom scientifique : _Capsella burso-pastoris_.
 
-![Plant de bourses-à-pasteur](images/plant-de-bourse-a-pasteur.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Plant de bourses-à-pasteur](images/plant-de-bourse-a-pasteur.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 ### Confusion avec le sisymbre officinal
 
 Nom scientifique : _Sisymbrium officinale_.
 
-![Plant de sisymbre officinal](images/plant-de-sisymbre-officinal.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Plant de sisymbre officinal](images/plant-de-sisymbre-officinal.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 ### Confusion avec les feuilles de coquelicot
 
 Les feuilles sont aussi lobées, mais le coquelicot est velu et dès que la tige sort, on ne peut pas se tromper.
 
-![Feuille de coquelicot](images/feuille-de-coquelicot.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Feuille de coquelicot](images/feuille-de-coquelicot.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 ### Confusion avec la laitue vireuse et la laitue scariole
 
@@ -253,17 +287,25 @@ Nom scientifique : _Lactuca virosa_ et _Lactuca serriola_.
 
 Les deux laitues produisent du latex, mais possèdent une tige.
 
-![Plant de laitue vireuse](images/plant-de-laitue-vireuse.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Plant de laitue vireuse](images/plant-de-laitue-vireuse.jpg)
 
-![Plant de laitue scariole](images/plant-de-laitue-scariole.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+Crédits : image extraite du vlog du chemin de la nature.
+
+![Plant de laitue scariole](images/plant-de-laitue-scariole.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Pour différencier ces laitues du pissenlit, c’est le troisième critère qui fait la différence.
 
-![Comparaison de la nervure de la feuille entre la laitue vireuse et le pissenlit](images/comparaison-de-la-nervure-de-la-feuille-entre-la-laitue-vireuse-et-le-pissenlit.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Comparaison de la nervure de la feuille entre la laitue vireuse et le pissenlit](images/comparaison-de-la-nervure-de-la-feuille-entre-la-laitue-vireuse-et-le-pissenlit.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 ### Confusion avec les laiterons
 
-![Deux espèces de laiterons](images/deux-espece-de-laiterons.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Deux espèces de laiterons](images/deux-espece-de-laiterons.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Comme les laitues, la nervure triangulaire marque la différence avec le pissenlit.
 
@@ -273,7 +315,9 @@ Ils sont comestibles. On connait le laiteron rude (la feuille est plutôt rêche
 
 Nom scientifique : _Cichorium intybus_.
 
-![Jeunes feuilles en rosette d’un plant de chicorée](images/jeunes-feuilles-en-rosette-dun-plant-de-chicoree.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Jeunes feuilles en rosette d’un plant de chicorée](images/jeunes-feuilles-en-rosette-dun-plant-de-chicoree.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Pour la différencier du pissenlit, on identifie la présence importante de poils et des tâches bordeaux.
 
@@ -281,7 +325,9 @@ Pour la différencier du pissenlit, on identifie la présence importante de poil
 
 Il y a déjà la picride fausse épervière (_Picris hieracioides_).
 
-![Plant de picride fausse épervière](images/plant-de-picride-fausse-eperviere.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Plant de picride fausse épervière](images/plant-de-picride-fausse-eperviere.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 _Hieracioides_ signigie :
 
@@ -292,7 +338,9 @@ La picride a des poils durs qui permettent d’utiliser les feuilles en magnifiq
 
 Il y a aussi la picride fausse vipèrine (_Picris echioides_).
 
-![Plant de picride fausse vipèrine](images/plant-de-picride-fausse-viperine.jpg 'Crédits : image extraite du vlog de Le chemin de la nature')
+![Plant de picride fausse vipèrine](images/plant-de-picride-fausse-viperine.jpg)
+
+Crédits : image extraite du vlog de Le chemin de la nature.
 
 _Echioides_ signigie :
 
@@ -307,7 +355,9 @@ Toutefois, quelle que soit la picride, la tige permettra d’identifier la plant
 
 Nom scientifique : _Lapsana communis_.
 
-![Plant de lampsane commune](images/plant-de-lampsane-commune.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Plant de lampsane commune](images/plant-de-lampsane-commune.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Les feuilles sont toutefois lobées et de forme arrondies avec jusqu’à 6 petits lobes sur le pétiole.
 

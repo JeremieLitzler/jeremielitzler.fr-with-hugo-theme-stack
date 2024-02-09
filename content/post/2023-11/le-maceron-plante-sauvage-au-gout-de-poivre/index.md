@@ -50,7 +50,9 @@ Pour utiliser le maceron frais, il suffit de le ciseler et de l’ajouter aux pl
 
 Quand les fleurs deviennent des graines, il nous offre des fruits noirs, comme du poivre noir.
 
-![Des fruits du maceron](images/fruits-du-maceron.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Des fruits du maceron](images/fruits-du-maceron.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 Il peut également être utilisé pour aromatiser les vinaigrettes, les sauces, ou les marinades.
 
@@ -78,7 +80,9 @@ Le maceron peut être confondu avec d’autres plantes, telles que la salicorne 
 
 {{< /blockcontainer >}}
 
-![Exemple de tige de maceron : bon ou pas bon ?](images/tige-de-maceron.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Exemple de tige de maceron : bon ou pas bon ?](images/tige-de-maceron.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 Donc :
 

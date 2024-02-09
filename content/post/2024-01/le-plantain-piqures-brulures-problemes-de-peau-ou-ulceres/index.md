@@ -27,7 +27,9 @@ Il existe 2 plantains très connus :
 
 On reconnait le premier par ces feuilles longues et fines alors que le second est reconnaissable par ses grandes feuilles de forme ovale.
 
-![Du grand plantain avec des épis de graines](images/du-grand-plantain-avec-des-fleurs-sechees.jpg 'Crédits : image extraite du vlog de AltheaProcence')
+![Du grand plantain avec des épis de graines](images/du-grand-plantain-avec-des-fleurs-sechees.jpg)
+
+Crédits : image extraite du vlog de AltheaProcence.
 
 Il existe aussi le plantain corne de cerf (_plantago coroconopus_), le plantain moyen (_plantago media_) ou le plantain des indes (_plantago ovata_) dont on extrait le psyllium blond.
 

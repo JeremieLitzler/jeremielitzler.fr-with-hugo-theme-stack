@@ -25,7 +25,9 @@ Si vous suivez Damien ou que vous avez lu mes notes sur les mois précédents, D
 
 En fin, il a bien donné 5 ans plus tard !
 
-![Le panier de pommes récoltées sur l’arbre](images/le-panier-de-pommes-recoltes-sur-l-arbre.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Le panier de pommes récoltées sur l’arbre](images/le-panier-de-pommes-recoltes-sur-l-arbre.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ### … et les semences
 
@@ -83,7 +85,9 @@ Il évite de pailler la zone avec du foin à cause des graines qu’il contient 
 
 ## Truc n° 2 : Les engrais verts
 
-![Vue aérienne du jardin en septembre](images/vue-aerienne-du-jardin-en-septembre.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Vue aérienne du jardin en septembre](images/vue-aerienne-du-jardin-en-septembre.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Généralement, en automne et en hiver, semer des engrais permet de garder le sol couvert, surtout quand l’activité de culture est ralentie dans certaines zones devenues vierges après les récoltes.
 
@@ -108,19 +112,27 @@ Toutes les _petites bêtes_ que l’on voit au jardin sont utiles.
 
 Les insectes, comme la fourmi et l’abeille, ont 6 pattes, pour **très faire simple.**
 
-![Exemples d’insectes](images/exemples-d-insectes.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples d’insectes](images/exemples-d-insectes.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Chez les arachnides, cela inclut les araignées et les tiques.
 
-![Exemples d’arachnides](images/exemples-d-arachnides.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples d’arachnides](images/exemples-d-arachnides.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Chez les crustacés, on trouve par exemple le cloporte.
 
-![Exemples de crustacés](images/exemples-de-crustaces.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples de crustacés](images/exemples-de-crustaces.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Enfin, on trouve les myriapodes avec au moins de 16 pattes.
 
-![Exemples de myriapodes](images/exemples-de-myriapodes.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples de myriapodes](images/exemples-de-myriapodes.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Selon une étude allemande, 60 % des arthropodes auraient disparu. Que cela soit juste ou pas, préserver la biodiversité est une tâche essentielle du jardinier.
 
@@ -142,7 +154,9 @@ Le but est d’avoir un maximum de biotopes.
 
 En septembre, créer des nids pour les arthropodes permet qu’ils restent sur votre jardin durant l’hiver.
 
-![Vue aérienne du mini-potager en septembre](images/vue-aerienne-du-mini-potager-en-septembre.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Vue aérienne du mini-potager en septembre](images/vue-aerienne-du-mini-potager-en-septembre.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-warning "A propos de l'hôtel à insectes">}}
 
@@ -156,15 +170,21 @@ Damien suggère de construire des nichoirs.
 
 On peut utiliser un rondin de bois dans lequel on vient percer des trous assez profonds comme l’image ci-dessous le montre.
 
-![Exemple de nichoir pour coccinelles à partir d’un morceau de bois](images/exemple-de-nichoir-pour-coquecineles-a-partir-d-un-morceau-de-bois.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemple de nichoir pour coccinelles à partir d’un morceau de bois](images/exemple-de-nichoir-pour-coquecineles-a-partir-d-un-morceau-de-bois.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Autrement, vous pouvez utiliser un nichoir d’oiseau dans lequel on fera aussi des trous. Mais surtout, il faudra boucher l’entrée aux oiseaux pour éviter que l’hôtel des arthropodes devienne une cantine pour oiseaux…
 
-![Exemple de nichoir pour arthropodes à partir d’un nichoir à oiseau](images/exemple-de-nichoir-pour-arthropodes-a-partir-d-un-nichoir-a-oiseau.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemple de nichoir pour arthropodes à partir d’un nichoir à oiseau](images/exemple-de-nichoir-pour-arthropodes-a-partir-d-un-nichoir-a-oiseau.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Enfin, un dernier exemple d’abris pour arthropodes : un _fagot_ de bambou peut faire l’affaire.
 
-![Un fagot de bambou comme nichoir pour arthropodes](images/un-fageau-de-bambou-comme-nichoir-pour-arthropodes.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Un fagot de bambou comme nichoir pour arthropodes](images/un-fageau-de-bambou-comme-nichoir-pour-arthropodes.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Ensuite, allez les installer à divers endroits de votre jardin.
 

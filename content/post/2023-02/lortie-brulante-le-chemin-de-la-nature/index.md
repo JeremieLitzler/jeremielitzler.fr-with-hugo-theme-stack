@@ -21,7 +21,9 @@ Les grandes différences avec la grande ortie :
 
 - la forme des feuilles:
 
-![Feuille de grande ortie](images/feuille-de-grande-ortie.jpg ' Comparez cette feuille à celle ci-dessus. Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Feuille de grande ortie](images/feuille-de-grande-ortie.jpg)
+
+ Comparez cette feuille à celle ci-dessus. Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - la taille : l’ortie brûlante dépassera rarement 30 cm comparés aux 2 mètres de la grande ortie.
 

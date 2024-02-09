@@ -19,7 +19,9 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=UM
 
 {{< blockcontainer jli-notice-tip "Un petit mot sur la biodiversité…" >}}
 
-![Les jardins privatifs peuvent beaucoup aider à la biodiversité](images/les-jardins-privatifs-peuvent-beaucoup-aides-a-la-biodiversite.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Les jardins privatifs peuvent beaucoup aider à la biodiversité](images/les-jardins-privatifs-peuvent-beaucoup-aides-a-la-biodiversite.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 Si chaque jardinier faisait un petit geste, l’impact serait énorme.
 
@@ -29,13 +31,17 @@ Ce qu’enseigne Damien permet de vraiment faire la différence.
 
 ## Des pots au potager
 
-![Vue aérienne du jardin de 20 m²](images/vue-aerienne-du-jardin-de-20-m2.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Vue aérienne du jardin de 20 m²](images/vue-aerienne-du-jardin-de-20-m2.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 En mars, il est en train de préparer les cultures à planter à ce moment.
 
 Il aime bien protéger les cultures du froid avec un voile.
 
-![Les demi-tonneaux couverts par des voiles maintenus par des arceaux en branche de saule.](images/les-demi-tanneaux-couverts-par-des-voiles-maintenus-par-des-arceaux-en-branche-de-saule.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Les demi-tonneaux couverts par des voiles maintenus par des arceaux en branche de saule.](images/les-demi-tanneaux-couverts-par-des-voiles-maintenus-par-des-arceaux-en-branche-de-saule.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
@@ -143,8 +149,12 @@ Je résume l’explication ainsi :
 - il faut un bon sécateur, bien aiguisé.
 - il faut nettoyer les excès de branches
 - il ne faut pas couper trop bas pour pouvoir recommencer si la greffe ne prend pas bien
-- il faut que les cambiums du greffon et du porte-greffe se touchent pour réussir la greffe. Si le greffon est plus fin que le porte-greffe, il faudra positionner le greffon sur le côté. ![Explication de ce qu’est le cambium](images/explication-de-ce-quest-le-cambium.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
-- on termine avec un élastique à greffer et du mastic à greffer ![Application de l’élastique à greffer et du mastic](images/application-de-lelastique-a-greffer-et-du-mastic.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+- il faut que les cambiums du greffon et du porte-greffe se touchent pour réussir la greffe. Si le greffon est plus fin que le porte-greffe, il faudra positionner le greffon sur le côté. ![Explication de ce qu’est le cambium](images/explication-de-ce-quest-le-cambium.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
+- on termine avec un élastique à greffer et du mastic à greffer ![Application de l’élastique à greffer et du mastic](images/application-de-lelastique-a-greffer-et-du-mastic.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 Concernant les yeux sur le greffon, plus le porte-greffe est gros, plus on peut laisser des yeux, dans la limite de 3.
 
@@ -168,7 +178,9 @@ On commence par les fruits à noyau puis on finira jusqu’à début avril pour 
 
 ## Climat et météo
 
-![Zones de rusticité](images/carte-zones-rusticite.webp 'Crédits : image issue [https://jaime-jardiner.ouest-france.fr/carte-de-rusticite/](du site J’aime jardiner de Ouest France)')
+![Zones de rusticité](images/carte-zones-rusticite.webp)
+
+Crédits : image issue [https://jaime-jardiner.ouest-france.fr/carte-de-rusticite/](du site J’aime jardiner de Ouest France).
 
 Toutefois, il est très intéressant de s’intéresser aux microclimats dans son jardin.
 

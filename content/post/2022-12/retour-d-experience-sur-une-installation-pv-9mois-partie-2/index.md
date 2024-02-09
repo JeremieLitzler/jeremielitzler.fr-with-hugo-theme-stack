@@ -12,7 +12,9 @@ tags:
   - Eau chaude sanitaire
 ---
 
-![Vue des champs Sud et Sud-Est](/images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg 'Les champs Sud et Sud-Est en position Printemps-Automne')
+![Vue des champs Sud et Sud-Est](/images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg)
+
+Les champs Sud et Sud-Est en position Printemps-Automne.
 
 En cet hiver 2022-2023, il devient de plus en plus intéressant de produire sa propre électricité. Mais quand est-il vraiment ?Dans cet article, je présente les chiffres de 9 mois de fonctionnement de notre installation photovoltaïque.
 
@@ -34,7 +36,9 @@ Elle est composée de :
 
 - huit panneaux _EGVNG_ de 190 Wc.
 
-![Label derrière un panneau solaire](images/specifications-des-panneaux.jpg 'Les spécifications techniques des panneaux')
+![Label derrière un panneau solaire](images/specifications-des-panneaux.jpg)
+
+Les spécifications techniques des panneaux.
 
 - un micro-onduleur APS QS1 4 MPPT (voir [les spécifications détaillées de l’onduleur](https://emea.apsystems.com/wp-content/uploads/2018/10/APsystems-Microinverter-QS1-For-EMEA-User-manual_10.18_French.pdf)).
 - un [routeur solaire de Robin Emley](https://mk2pvrouter.co.uk/) ([un couple français a repris fin 2022 la vente son routeur.](https://mk2pvrouter.com/)).
@@ -53,7 +57,9 @@ Le tout a acheté au prix de 2057 euros pour :
 
 Et si l’on compare la consommation en 2019, 2020 et 2021 à celle de 2022, on voit que la consommation a diminué 41 % en moyenne :
 
-![Tableau comparant les années 2019 à 2022 en consommation mensuelle en kWh](images/consommation-comparee-2019-2020-2021-2022.jpg 'Le résultat est clair, n’est-ce pas ?')
+![Tableau comparant les années 2019 à 2022 en consommation mensuelle en kWh](images/consommation-comparee-2019-2020-2021-2022.jpg)
+
+Le résultat est clair, n’est-ce pas ?.
 
 {{< blockcontainer jli-notice-tip "Remarques sur janvier, février et mars 2022" >}}
 
@@ -78,7 +84,9 @@ Dans la réalité, nous n’avons pas réduit la consommation. Nous ne l’avons
 
 La consommation optimisée de la production montre en été une consommation plus élevée, principalement due à l’ECS et le déshydrateur.
 
-![Tableau comparant les années 2019 à 2022 en consommation totale mensuelle en kWh](images/consommation-totale-comparee-2019-2020-2021-2022.jpg 'Le résultat devient nuancé en regardant le cumul de la consommation photovoltaïque et de la consommation du réseau.')
+![Tableau comparant les années 2019 à 2022 en consommation totale mensuelle en kWh](images/consommation-totale-comparee-2019-2020-2021-2022.jpg)
+
+Le résultat devient nuancé en regardant le cumul de la consommation photovoltaïque et de la consommation du réseau..
 
 On se peut ainsi se demander si nous avons fait une affaire.
 

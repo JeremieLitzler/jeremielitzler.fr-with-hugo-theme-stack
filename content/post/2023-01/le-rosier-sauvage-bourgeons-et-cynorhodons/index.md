@@ -33,7 +33,9 @@ Le rosier sauvage est aussi connu sous divers autres noms :
 - le cynorhodon, qui correspond en réalité au _faux fruit_ qui est produit après la fleuraison.
   - en fait, le vrai fruit se trouve dans le cynorhodon. Il s'agit de petits fruits secs nommés _akènes_.
 
-![cynorhodon ouvert avec plusieurs graines visibles](images/cynorrhodon-ouvert.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![cynorhodon ouvert avec plusieurs graines visibles](images/cynorrhodon-ouvert.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ## Apports nutritionnels
 
@@ -87,7 +89,9 @@ Ils ont été utilisés pour un traitement antiparasitaire : en effet, ils vienn
 
 C'est de là que vient le terme _poils à gratter_, pas à cause des poils mais des oxures.
 
-![Cynorhodon mou ouvert avec les poils et les akènes bien visibles](images/cynorrhodon-moux-ouvert-avec-les-poils-et-les-akènes-bien-visibles.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Cynorhodon mou ouvert avec les poils et les akènes bien visibles](images/cynorrhodon-moux-ouvert-avec-les-poils-et-les-akènes-bien-visibles.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ### Cuisiner le cynorhodon
 
@@ -148,7 +152,9 @@ L'arbrisseau est issu de plusieurs rameaux qui sortent du sol. Le noisetier est 
 
 ### Phytothérapie
 
-![Fleur de rosier sauvage](images/fleur-rosier-sauvage.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Fleur de rosier sauvage](images/fleur-rosier-sauvage.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 On ne peut pas se tromper entre le rosier sauvage, qui possède 5 pétales, et les rosiers ornementaux, qui possèdent plusieurs rangées de pétales.
 

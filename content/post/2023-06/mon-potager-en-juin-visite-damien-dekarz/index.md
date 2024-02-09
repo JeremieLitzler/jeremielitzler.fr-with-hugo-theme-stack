@@ -19,7 +19,9 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=6a
 
 ## Première zone de culture
 
-![Une zone de culture avec les amarantes et les courges à leurs pieds](images/une-zone-de-culture-avec-les-amarantes-et-les-courges-a-leurs-pieds.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Une zone de culture avec les amarantes et les courges à leurs pieds](images/une-zone-de-culture-avec-les-amarantes-et-les-courges-a-leurs-pieds.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Les canards coureurs indiens ne posent pas de problème au potager, sauf pour :
 
@@ -31,11 +33,15 @@ Ils peuvent aussi se coucher sur les jeunes plants.
 
 Mais au final, leur utilité contre les limaces et les escargots surpassent les problèmes qu’ils posent.
 
-![Des canards coureurs indiens dans le potager de Damien](images/des-canards-coureux-indiens-dans-le-potager-de-damien.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Des canards coureurs indiens dans le potager de Damien](images/des-canards-coureux-indiens-dans-le-potager-de-damien.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ## La tonnelle
 
-![La tonnelle recouverte de plantes](images/la-tonnelle-recouverte-de-plantes.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![La tonnelle recouverte de plantes](images/la-tonnelle-recouverte-de-plantes.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 À ce niveau, les courges de Siam et les haricots grimpants s’en donnent à cœur, créant une zone d’ombre non négligeable.
 
@@ -45,13 +51,17 @@ Avec 6 pieds, il est parti pour produire encore une grosse quantité de courges
 
 ## Le champ de seigle
 
-![Un champ de seigle](images/un-champ-de-seigle.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Un champ de seigle](images/un-champ-de-seigle.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Il sera bientôt l’heure de récolter la céréale.
 
 ## Le mini potager de 20 mètres carrés
 
-![Le mini potager plein de légumes et fruits](images/la-mini-potager-plein-de-legumes-et-fruits.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Le mini potager plein de légumes et fruits](images/la-mini-potager-plein-de-legumes-et-fruits.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Tout pousse super bien !
 
@@ -65,7 +75,9 @@ Je connais la même chose chez moi !
 
 ## Dans les bacs de culture
 
-![Quelques bacs de culture](images/quelques-bacs-de-culture.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Quelques bacs de culture](images/quelques-bacs-de-culture.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Entre les pommes de terre qui s’échappent (au centre), les 150 poireaux tout juste transplantés (à gauche) et les choux géants (à droite), la fertilité chez Damien est quelque chose d’assez incroyable !
 
@@ -75,13 +87,17 @@ Un autre avantage des bacs de cultures : ils permettent d’éviter que les cana
 
 ## Colonisation des courges
 
-![Une zone de courges](images/une-zone-de-courges.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Une zone de courges](images/une-zone-de-courges.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Quand on a un sol fertile comme celui-ci, on comprend vite pourquoi il faut planter des bâtons pour identifier les pieds des plants !
 
 ## Production de semence
 
-![Des bacs de culture de laitue et de topinambours](images/des-bacs-de-culture-de-laitue-et-de-topinambours.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Des bacs de culture de laitue et de topinambours](images/des-bacs-de-culture-de-laitue-et-de-topinambours.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Damien a une passion : la résilience en semence. Sur l’image ci-dessus, on peut voir à droite le bac de culture avec de très nombreuses laitues qui montent en graine.
 
