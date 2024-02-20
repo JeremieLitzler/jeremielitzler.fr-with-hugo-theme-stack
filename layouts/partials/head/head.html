@@ -8,6 +8,7 @@
 {{- $title := partialCached "data/title" . .RelPermalink -}}
 <title>{{ $title }}</title>
 
+<!-- https://discourse.gohugo.io/t/how-to-add-cannonical-url-to-a-blog/34670/4 -->
 {{ with .Params.relcanonical }}
   <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
 {{ else -}}
