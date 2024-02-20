@@ -7,26 +7,7 @@ date: 2023-03-14
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
   link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023-03/ortie-piqure-et-cookies-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "L'ortie : piqûres et cookies, par Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Ceci n'est pas *l'ortie de A à Z*, mais on comprendra pourquoi ça pique, comment éviter les piqûres et comment l'ortie est une bonne compagne cullinaire.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-14-titre-de-la-video-sur-fond-d-ortie.jpg,
-     },
-    ]
+relcanonical: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
 categories:
   - Jardin
 tags:
