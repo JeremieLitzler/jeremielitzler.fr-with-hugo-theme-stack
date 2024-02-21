@@ -216,13 +216,13 @@ details > summary {
 }
 
 details summary::after {
-  content: "⬇️ Click to open";
+  content: "⬇️ Cliquer pour ouvrir";
   font-size: x-small;
   margin-right: 1em;
   margin-left: auto;
 }
 details[open] summary::after {
-  content: "⬆️ Click to close";
+  content: "⬆️ Cliquer pour fermer";
   font-size: x-small;
   margin-left: auto;
 }
