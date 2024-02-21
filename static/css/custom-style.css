@@ -206,3 +206,23 @@ iframe.newsletter-embed {
   border: 1px solid var(--notice-danger-dark);
   border-left: 4px solid var(--notice-danger-dark);
 }
+
+details > summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 0.5em;
+}
+
+details summary::after {
+  content: "⬇️ Click to open";
+  font-size: x-small;
+  margin-right: 1em;
+  margin-left: auto;
+}
+details[open] summary::after {
+  content: "⬆️ Click to close";
+  font-size: x-small;
+  margin-left: auto;
+}
