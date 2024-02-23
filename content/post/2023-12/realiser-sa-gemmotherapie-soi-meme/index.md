@@ -19,7 +19,7 @@ tags:
 
 Il faudrait un alcool bien plus fort, mais, c’est très difficile à trouver légalement.
 
-De plus, je ne veux pas un alcool bourré de pesticide, donc, même si l’alcool de grains que j’utilise est bio ne garantit zéro pesticides, la concentration est sûrement plus basse.
+De plus, je ne veux pas un alcool bourré de pesticide, donc, même si l’alcool de grains que j’utilise est bio et ne garantit pas zéro pesticides, la concentration est sûrement plus basse qu'un vodka de Lidl.
 
 {{< /blockcontainer >}}
 
