@@ -3,12 +3,11 @@
   <details>
     <summary
       class="widget-title section-title"
-      aria-label="Cliquer pour voir les éléments"
-      title="Cliquer pour voir les éléments"
+      aria-label="Cliquer pour voir les étiquettes"
+      title="Cliquer pour voir les étiquettes"
     >
       <span class="widget-icon">{{ partial "helper/icon" "tag" }}</span>
       <span class="widget-title">{{ T "widget.tagCloud.title" }}</span>
-      <span class="widget-title-hint">⏬⏬⏬</span>
     </summary>
     <div class="tagCloud-tags">
       {{ range first $limit $context.Site.Taxonomies.tags.ByCount }}

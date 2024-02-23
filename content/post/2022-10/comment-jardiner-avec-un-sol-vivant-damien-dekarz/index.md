@@ -4,26 +4,7 @@ description: "Un sol vivant est le moyen le plus efficace de jardiner et ce n'es
 date: 2020-10-12
 image: '/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png'
 imageAlt: Image diagramme décrivant le cycle d'échanges entre les plantes et les mycorhizes
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2022/10/comment-jardiner-avec-un-sol-vivant-damien-dekarz/,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "Comment jardiner avec un sol vivant ?" },
-     meta,
-     {
-       "og:description": "Un sol vivant est le moyen le plus efficace de jardiner et ce n'est pas complexe à mettre en oeuvre. Par contre, il faut de la patience...",
-     },
-     meta,
-     {
-       "og:image": /images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png,
-     },
-    ]
+relcanonical: https://jeremielitzler.fr/post/2022-10/comment-jardiner-avec-un-sol-vivant-damien-dekarz/
 categories:
   - Jardin
 tags:
@@ -33,7 +14,7 @@ tags:
   - Champignons
 ---
 
-![Image diagramme décrivant le cycle d’échanges entre les plantes et les mycorhizes](/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png 'Crédits : image extraite de l’article Wikipédia [« Réseau mycorhizien »](https://fr.wikipedia.org/wiki/R%C3%A9seau_mycorhizien)')
+![Image diagramme décrivant le cycle d’échanges entre les plantes et les mycorhizes](/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png 'Crédits : image extraite de l’article Wikipédia [« Réseau mycorhizien »](https://fr.wikipedia.org/wiki/R%C3%A9seau_mycorhizien).
 
 Un sol vivant est le moyen le plus efficace de jardiner et ce n’est pas complexe à mettre en œuvre. Par contre, il faut de la patience…
 
@@ -58,7 +39,9 @@ Aussi, une vie dans le sol permet d’obtenir une bonne structure du sol, c’es
 
 Par conséquent, cela permet une bonne gestion de l’eau. Dans un sol très compacté, l’eau ne peut pas bien pénétrer. Au contraire, un sol décompacté favorise le développement des micro-organismes, comme le mycélium.
 
-![Du mycélium dans les feuilles mortes](images/micelium.jpg 'Crédits : image extraite du vlog de Damien')
+![Du mycélium dans les feuilles mortes](images/micelium.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ## Le stockage du carbone dans le sol
 
@@ -130,7 +113,7 @@ On peut avoir deux tonnes de mycélium à l’hectare.
 
 Souvent, nous pensons souvent à la partie aérienne visible (c’est la partie qui permet la reproduction ou _le sporophore_).
 
-Toutefois, il y a aussi les *ifs* : ce sont des filaments extrêmement fins, invisibles à l’œil nu, qui composent le mycélium visible.
+Toutefois, il y a aussi les _ifs_ : ce sont des filaments extrêmement fins, invisibles à l’œil nu, qui composent le mycélium visible.
 
 ### Les mycorhizes
 

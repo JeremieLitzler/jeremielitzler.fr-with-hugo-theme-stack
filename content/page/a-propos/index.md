@@ -19,8 +19,6 @@ comments: false
 
 ## Mon histoire
 
-<!--![Jérémie gravissant la viaferrata à Kandersteg, Suisse](/images/profilepic-400w.jpg 'Jérémie gravissant la viaferrata à Kandersteg, Suisse') {.author-image}-->
-
 Tout a une histoire. Voici la mienne, jusqu'à présent.
 
 J'ai créé ce site web pour sauvegarder mes notes and experiences qui pourraient vous être utile, car peut-être aurez-vous cette réaction : _"Ahhhh, je comprends maintenant"_.

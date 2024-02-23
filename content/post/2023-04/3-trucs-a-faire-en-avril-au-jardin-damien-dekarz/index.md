@@ -28,13 +28,17 @@ En avril, Damien sème, repique et plante les laitues, les radis, les carottes, 
 
 Dans une serre ou un châssis, on va semer les courges, concombres, melons, pastèques, courgettes, tournesols, basilics, laitues et tomates, car ils nécessitent une protection de la fraicheur ou même des gelées qui peuvent encore avoir lieu.
 
-![Le mini potager de 20 m2 en avril](images/le-mini-potager-de-20-m2-en-avril.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Le mini potager de 20 m2 en avril](images/le-mini-potager-de-20-m2-en-avril.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 Dans le mini potager, il a repiqué des choux, des épinards et des pois à rames.
 
 Il a aussi préparé le châssis pour continuer à faire grimper les courges et plantes grimpantes durant l’été.
 
-![Un grillage recyclé maintient des courges](images/un-grillage-recycle-maintient-des-courges.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Un grillage recyclé maintient des courges](images/un-grillage-recycle-maintient-des-courges.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
@@ -48,7 +52,9 @@ Les oiseaux s’installent pour la nouvelle saison.
 
 Les pollinisateurs s’activent sur les arbres à fruit, aussi bien cultivés que sauvages.
 
-![Une abeille butine une fleur de pêcher ou d’amandier](images/une-abeille-butine-une-fleur-de-pecher-ou-damandier.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Une abeille butine une fleur de pêcher ou d’amandier](images/une-abeille-butine-une-fleur-de-pecher-ou-damandier.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 Les insectes, comme les coccinelles, arrivent pour s’occuper des pucerons.
 
@@ -68,7 +74,9 @@ Un petit coup d’essoreuse à salade, et ils sont prêts pour consommer en tisa
 
 Le papillon _Azuré commun_, présent chez nous (cela peut varier selon les régions), ressemble à ça :
 
-![2 papillons Azuré commun, un mâle et une femelle](images/2-papillons-azure-commun-un-male-et-une-femelle.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![2 papillons Azuré commun, un mâle et une femelle](images/2-papillons-azure-commun-un-male-et-une-femelle.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 Il s’agit d’un papillon myrmécophile, c’est-à-dire qu’il sécrète une phéromone similaire à la reine d’une colonie de fourmis.
 
@@ -86,7 +94,9 @@ Une fois planter dans la terre, il couvre les plants d’un seau ou un pot en pl
 
 Il encercle ensuite le sceau ou pot du paillage qui se trouvait sur le sol.
 
-![Un plant de tomate au chaud entre du paillage et un pot en plastique](images/un-plant-de-tomate-au-chaud-entre-du-paillage-et-un-pot-en-plastique.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Un plant de tomate au chaud entre du paillage et un pot en plastique](images/un-plant-de-tomate-au-chaud-entre-du-paillage-et-un-pot-en-plastique.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 ### Gestion des limaces
 
@@ -98,7 +108,9 @@ De plus, ça lui permet d’en donner autour de lui.
 
 Il réalise un semis de laitue toutes les 3 semaines (ça doit faire un paquet de graines !)
 
-![Une myriade de laitues prêtes à repiquer](images/une-myriade-de-laitues-pretes-a-repiquer.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Une myriade de laitues prêtes à repiquer](images/une-myriade-de-laitues-pretes-a-repiquer.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 
@@ -158,13 +170,17 @@ Aussi, si vous devez arroser, faites-le le matin, pour éviter d’inviter les l
 
 Les animaux prédateurs représentent une bonne solution, mais des fois, on ne les veut pas vraiment au potager.
 
-![Liste d’animaux prédateurs des limaces.](images/liste-danimaux-predateurs-des-limaces.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Liste d’animaux prédateurs des limaces.](images/liste-danimaux-predateurs-des-limaces.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 La limace léopard est friande de limaces !
 
 Parmi les prédateurs les plus efficaces, les insectes et un vers dénommé _Leucochloridium paradoxum_ qui est un ver qui prend le contrôle du cerveau des gastéropodes.
 
-![Liste d’insectes prédateurs des limaces.](images/liste-dinsectes-predateurs-des-limaces.jpg 'Crédits: image extraite du vlog de Damien Dekarz')
+![Liste d’insectes prédateurs des limaces.](images/liste-dinsectes-predateurs-des-limaces.jpg)
+
+Crédits: image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Note personnelle"  >}}
 

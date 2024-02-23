@@ -36,7 +36,9 @@ J’ai changé 3 fois l’inclinaison des champs sur les 9 mois :
 - fin août, j’ai remonté le champ Sud à 45°
 - fin novembre, j’ai remonté tous les champs à au moins 60°
 
-![Vue des champs Sud et Sud-Est](images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg 'Les champs Sud et Sud-Est en position Printemps-Automne')
+![Vue des champs Sud et Sud-Est](images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg)
+
+Les champs Sud et Sud-Est en position Printemps-Automne.
 
 ### Nettoyage des panneaux
 
@@ -106,7 +108,7 @@ Au lieu d’aller directement du tableau général au cumulus, j’ai installé�
 - un disjoncteur derrière le compteur.
   - pour contrôler la possibilité de complètement désactiver l’utilisation du réseau pour chauffer l’eau.
 
-Dans le garage, sur le support en OSB isolant le cumulus, j’ai installé le disjoncteur 15A-4 (voir [le schéma](#reorganisation-du-tableau-routeur-solaire)).
+Dans le garage, sur le support en OSB isolant le cumulus, j’ai installé le disjoncteur 15A-4 (voir [le schéma](#réorganisation-du-tableau-routeur-solaire)).
 
 J’ai utilisé un câble triphasé du tableau du routeur solaire au cumulus :
 
@@ -138,7 +140,9 @@ En novembre, on a laissé le réseau presque tous les jours dû à la très mauv
   - avant, le cumulus tournait 4h par nuit d’hiver…
 - aussi, lorsqu’on lançait le lave-vaisselle en fin de nuit, le cumulus se remettait en route…
 
-![Graphique de relevé Linky en février 2022](images/exemple-de-cycle-1-en-fevrier-2022.jpg 'Le pic de 4h30 correspond au cycle 1 du lave-vaisselle où le cumulus se remettant en route pour chauffer l’eau que le lave-vaisselle a utilisée. La résistance du cumulus se met en route de 22h30 à 2h00 avec le signal HP/HC pour la chauffe principale.')
+![Graphique de relevé Linky en février 2022](images/exemple-de-cycle-1-en-fevrier-2022.jpg)
+
+Le pic de 4h30 correspond au cycle 1 du lave-vaisselle où le cumulus se remettant en route pour chauffer l’eau que le lave-vaisselle a utilisée. La résistance du cumulus se met en route de 22h30 à 2h00 avec le signal HP/HC pour la chauffe principale..
 
 **Autre point important** : j’ai mis le thermostat à 5 sur 5 au lieu de 2 sur 5 en été et 3 sur 5 en hiver quand on alimentait sur le réseau uniquement.
 
@@ -168,7 +172,9 @@ Ce que nous avons fait l’été passé fut de lancer 2 cycles _rinçage_ de 11
 
 Sur un cycle plus long, le mode _eco_ de 2h45, la consommation était clairement diminuée.
 
-![Graphique de relevé Linky en septembre 2022](images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022.jpg 'Le pic de 15h correspond au cycle 1 du lave-vaisselle. Normalement, le cycle 1 consomme un peu moins de 1 kWh.')
+![Graphique de relevé Linky en septembre 2022](images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022.jpg)
+
+Le pic de 15h correspond au cycle 1 du lave-vaisselle. Normalement, le cycle 1 consomme un peu moins de 1 kWh..
 
 ### Avec le lave-linge
 

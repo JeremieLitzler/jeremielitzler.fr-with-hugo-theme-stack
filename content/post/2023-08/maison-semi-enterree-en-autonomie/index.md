@@ -84,7 +84,9 @@ Le calcul de la taille de la casquette est sûrement réalisé par l’architect
 
 On peut aussi prévoir un vitrage droit plutôt qu’incliné comme chez Luc et Magalie.
 
-![Pénétration du soleil vers midi en été](images/penetration-du-soleil-vers-midi-en-ete.jpg 'Crédits : image extraite du vlog de L’Archipelle')
+![Pénétration du soleil vers midi en été](images/penetration-du-soleil-vers-midi-en-ete.jpg)
+
+Crédits : image extraite du vlog de L’Archipelle.
 
 Au solstice d’hiver, le soleil pénètre jusqu’au mur au fond des pièces.
 
@@ -104,7 +106,9 @@ Grâce aux fenêtres coulissantes entre l’intérieur de la maison et la serre,
 
 Mais l’apport calorifique par le soleil ne serait rien sans le mur nord avec une masse thermique de 2 rangées de pneus, d’un mètre de terre en épaisseur totale et d'une couche d'isolant (non nommé dans la vidéo).
 
-![Isolation en laine de bois entre la serre et l’intérieur de l’habitat](images/isolation-en-laine-de-bois-entre-la-serre-et-l-interieur-de-l-habitat.jpg 'Crédits : image extraite du vlog de L’Archipelle')
+![Isolation en laine de bois entre la serre et l’intérieur de l’habitat](images/isolation-en-laine-de-bois-entre-la-serre-et-l-interieur-de-l-habitat.jpg)
+
+Crédits : image extraite du vlog de L’Archipelle.
 
 Ils ont isolé entre la serre et l’intérieur de la maison avec de la laine de bois (je dirai entre 10 et 15 cm à vue d’œil sur la vidéo à [53:00](https://youtu.be/uZFoSpYNTFk?t=3180)).
 

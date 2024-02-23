@@ -44,7 +44,9 @@ Elles sont aussi couvertes d'épines sur leur dos, le long des nervures.
 
 ### Les fleurs
 
-![Fleur de ronce](images/fleur-de-ronce.jpg 'Credits: image extraite de https://amandebasilic.com/la-mure-sauvage/')
+![Fleur de ronce](images/fleur-de-ronce.jpg)
+
+Credits: image extraite de https://amandebasilic.com/la-mure-sauvage/.
 
 Elles sont très petites et très similaires aux rosacées :
 
@@ -56,7 +58,9 @@ De couleur blanche ou légèrement rosée, elles sont regroupées en grappes.
 
 ### Le fruit
 
-![Mûre sauvage](images/mure-sauvage.jpg 'Credits: image extraite de www.canon.photo.free.fr')
+![Mûre sauvage](images/mure-sauvage.jpg)
+
+Credits: image extraite de www.canon.photo.free.fr.
 
 On le connait sur le nom de _mûre_.
 

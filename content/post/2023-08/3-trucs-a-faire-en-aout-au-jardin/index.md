@@ -27,7 +27,9 @@ Selon ce qu'on a planté, on aura beaucoup de tomates, beaucoup de haricots, bea
 
 Et tous les deux jours, on s'affère au jardin. Il faut y retourner et récolter.
 
-![Quelques exemples de récoltes de Damien](images/quelques-exemples-de-recoltes-de-damien.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Quelques exemples de récoltes de Damien](images/quelques-exemples-de-recoltes-de-damien.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Au mois d'août, la récolte des haricots se terminent. Il est intéressant de laisser ce qu'il reste monter en graine pour avoir les semences pour l'année suivante.
 
@@ -41,7 +43,9 @@ De la même façon, j'ai récolté 14 g de graines de _JEUNE POUSSE Mizuna rouge
 
 ### La réalité du jardinage
 
-![Quelques paniers des résultes de Damien](images/quelques-paniers-des-resultes-de-damien.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Quelques paniers des résultes de Damien](images/quelques-paniers-des-resultes-de-damien.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Damien s'exprime sur les commentaires de certains jardiniers en herbe qui n'arrivent pas aux rendements ou au succès que Damien montre.
 
@@ -83,11 +87,15 @@ La conclusion de tout cela est que le monde qui nous entoure est complexe. Les i
 
 ## Truc n°1 : entretenir les greffes
 
-![La flèche rouge indique le point de greffe](images/la-fleche-rouge-indique-le-point-de-greffe.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![La flèche rouge indique le point de greffe](images/la-fleche-rouge-indique-le-point-de-greffe.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Ceci dessus, la flèche rouge représent le point de greffe. Sous ce point de greffe, on trouve le porte greffe, c'est-à-dire le système racinaire de la plante. Et au-dessus du point de greffe, nous avons le greffon ou l'arbre fruitier qui va nous donner des fruits.
 
-![Le porte-greffe et le greffon](images/le-porte-greffe-et-le-greffon.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Le porte-greffe et le greffon](images/le-porte-greffe-et-le-greffon.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Sur les jeunes arbres en particulier, on va avoir des rejets qui partent en dessous de points de greffe.
 
@@ -95,7 +103,9 @@ Si on laisse ces rejets, la sève va être distribuée en priorité sur ces reje
 
 > L'arbre n'a pas envie d'avoir une greffe sur la tête, donc il préfère être entièrement lui-même.
 
-![Exemples de rejets au pied du porte-greffe](images/exemples-de-rejets-au-pied-du-porte-greffe.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples de rejets au pied du porte-greffe](images/exemples-de-rejets-au-pied-du-porte-greffe.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Si on ne les coupe pas, sur le moyen et long terme, le pommier "_porte-greffe_" redeviendra un pommier qui, par exemple, donne des mauvaises pommes.
 
@@ -105,7 +115,9 @@ Les jeunes arbres ont tendance à faire beaucoup de rejets en dessous du point d
 
 Un autre cas de figure probable, selon le porte-greffe, c'est d'avoir des rejets qui sortent à quelques mètres de l'arbre greffé.
 
-![Exemples de rejets au plus loin du pied du porte-greffe](images/exemples-de-rejets-au-plus-loin-du-pied-du-porte-greffe.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemples de rejets au plus loin du pied du porte-greffe](images/exemples-de-rejets-au-plus-loin-du-pied-du-porte-greffe.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Damien greffe des poires sur des aubépines et, même si l'aubépine ne va pas trop prendre le dessus, il est quand même mieux de supprimer les rejets.
 
@@ -121,7 +133,9 @@ Si on regarde l'agriculture industrielle, elle produit entre 2 et 5 kilos par m�
 
 Au final, Damien arrive à 46 kilos de récolte de pommes de terre sur ces 3,69 mètres carrés, ce qui donne 12 kilos par mètre carré :O
 
-![Récolte de 46 kg de pommes de terre](images/recolte-de-46-kg-de-pommes-de-terre.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Récolte de 46 kg de pommes de terre](images/recolte-de-46-kg-de-pommes-de-terre.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Autant vous dire...">}}
 

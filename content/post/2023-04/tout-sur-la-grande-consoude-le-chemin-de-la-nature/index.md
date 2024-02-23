@@ -26,7 +26,9 @@ Le nom scientifique est _symphytum officinale_.
 
 ### Ses poils
 
-![Feuille de consoude badgée sur un t-shirt](images/feuille-de-consoude-badge-sur-un-t-shirt.jpg 'Crédits: image extraite du vlog du chemin de la nature')
+![Feuille de consoude badgée sur un t-shirt](images/feuille-de-consoude-badge-sur-un-t-shirt.jpg)
+
+Crédits: image extraite du vlog du chemin de la nature.
 
 Ses poils bien rêches permettent d’accrocher une feuille à ses vêtements.
 
@@ -40,7 +42,9 @@ Le gadge avec une feuille n’est fonctionne qu’en appliquant la face inférie
 
 ### Ses fleurs
 
-![Inflorescences de consoude](images/inflorescences-de-consoude.jpg 'Crédits: image extraite du vlog du chemin de la nature')
+![Inflorescences de consoude](images/inflorescences-de-consoude.jpg)
+
+Crédits: image extraite du vlog du chemin de la nature.
 
 Les fleurs sont regroupées, c’est ce qu’on appelle une inflorescence. Dans le cas de la consoude, il s’agit d’un type d’inflorescence scorpionidé, comme la queue d’un scorpion. Ceci est type de la famille de _Boraginaceae_ dont fait partie la consoude.
 
@@ -50,7 +54,9 @@ Au passage, la consoude est une plante mellifère.
 
 ### Ses racines
 
-![Racines de consoude](images/racines-de-consoude.jpg 'Crédits: image extraite du vlog du chemin de la nature')
+![Racines de consoude](images/racines-de-consoude.jpg)
+
+Crédits: image extraite du vlog du chemin de la nature.
 
 Ses racines sont rhizomateuses et sont en général très grosses.
 
@@ -139,7 +145,9 @@ En petite quantité régulièrement, on risque le cancer du foie.
 
 ### Plante similaire
 
-![Feuille de digitale](images/feuille-de-digitale.jpg 'Crédits: image extraite du vlog du chemin de la nature')
+![Feuille de digitale](images/feuille-de-digitale.jpg)
+
+Crédits: image extraite du vlog du chemin de la nature.
 
 ==A ne pas confondre la digitale (_Digitalis purpurea_) qui est toxique.==
 

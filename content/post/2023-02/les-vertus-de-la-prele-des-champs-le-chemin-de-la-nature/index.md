@@ -28,13 +28,17 @@ Parmi les plantes sans fleurs, on trouve les mousses, les fougères et les prêl
 
 La prêle des champs est la seule comestible.
 
-![Jeune pousse de prêle des champs](images/jeune-pousse-de-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeune pousse de prêle des champs](images/jeune-pousse-de-prele-des-champs.jpg)
+
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 Quand la prêle est jeune, elle est fertile et se reproduit à travers des spores. Vous pouvez voir [à quoi cela ressemble sur le vlog de Christophe](https://youtu.be/-qG71xpKoSY?t=80).
 
 On peut manger les jeunes pousses, mais la plante mature au mois de mai ou juin est la forme la plus communément consommée.
 
-![Une prêle mature](images/prele-mature.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Une prêle mature](images/prele-mature.jpg)
+
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ## Comment la consommer
 
@@ -80,11 +84,13 @@ Les deux premières sont toxiques.
 
 {{< /blockcontainer >}}
 
-![prele-des-marais](images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html')
+![prele-des-marais](images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html.
 
 La prêle des marais présente parfois une partie fertile à son sommet, alors que la prêle des champs n'est fertile au début.
 
-![La tige de la grande prêle](images/grande-prele.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![La tige de la grande prêle](images/grande-prele.jpg)
+
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 La grande prêle est bien plus grande, donc difficile de se tromper.
 
@@ -92,6 +98,8 @@ La meilleure façon de savoir si vous avez à faire avec la prêle des champs, i
 
 En image, cela donne ceci :
 
-![Le premier article est 2 fois plus long que la gaine](images/identification-prele-des-champs.jpg 'Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Le premier article est 2 fois plus long que la gaine](images/identification-prele-des-champs.jpg)
+
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 On effectuera une identification sur plusieurs individus pour confirmer.

@@ -19,7 +19,9 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=Oc
 
 ## Dans le petit jardin de 20-25 m²
 
-![Le jardin de 20-25 mètres carrés en juillet](images/le-jardin-de-20-25-metres-carres-en-juillet.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Le jardin de 20-25 mètres carrés en juillet](images/le-jardin-de-20-25-metres-carres-en-juillet.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Damien a réussi quelque chose d’incroyable : même avec cette petite surface, la production de légumes et de fruits dépasse ce qu’on aurait pu imaginer.
 
@@ -43,7 +45,9 @@ Mais il n’y a pas que les céréales pour nourrir les poules et canards.
 
 Les graminées apportent aussi beaucoup aux oiseaux domestiques.
 
-![Poignée de graines d’une herbe sauvage](images/poignee-de-graines-dune-herbe-sauvage.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Poignée de graines d’une herbe sauvage](images/poignee-de-graines-dune-herbe-sauvage.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Cela diminue considérablement la nécessité d’avoir à acheter des graines et surtout, cela diversifie l’alimentation des volailles.
 
@@ -74,11 +78,15 @@ La biodiversité est utile pour tous. Les papillons, les abeilles et autres inse
 
 Soyons donc respectueux.
 
-![Salicaire commune](images/salicaire-commune.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Salicaire commune](images/salicaire-commune.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Par exemple, proche des points d’eau pousse la salicaire commune. D’elle dépend une espèce d’abeille solitaire.
 
-![Mélitte de la salicaire](images/melitte-de-la-salicaire.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Mélitte de la salicaire](images/melitte-de-la-salicaire.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ## Truc n° 2 : les tomates
 
@@ -114,7 +122,9 @@ En résumé, réaliser ses propres semences, c’est :
 
 ### Truc n° 3 : observer et profiter
 
-![Un papillon butinant sur une fleur](images/un-papillon-butinant-sur-une-fleur.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Un papillon butinant sur une fleur](images/un-papillon-butinant-sur-une-fleur.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Tout simplement : prenez le temps d’observer.
 

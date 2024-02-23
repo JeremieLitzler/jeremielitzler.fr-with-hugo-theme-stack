@@ -23,7 +23,9 @@ Non, même si le jardin est au repos, nous avons un tas d’activités possible 
 
 Un tas de plantes se bouturent facilement.
 
-![Liste des plantes à bouturer](images/liste-des-plantes-a-bouturer.jpg 'Crédits : image extraite du vlog de Damien')
+![Liste des plantes à bouturer](images/liste-des-plantes-a-bouturer.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 Il est très facile de transformer quelques plants existants en véritable pépinière pour les offrir, les troquer ou les vendre.
 
@@ -36,7 +38,9 @@ Pour la bouture, Damien rend la chose vraiment facile :
 
 ## Semis de salade
 
-![Graines de laitue dans une barquette](images/graines-de-laitue-dans-une-barquette.jpg 'Crédits : image extraite du vlog de Damien')
+![Graines de laitue dans une barquette](images/graines-de-laitue-dans-une-barquette.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 Ces laitues seront à repiquer au printemps pour une consommation en cette saison.
 
@@ -48,7 +52,9 @@ Il n’est pas encore trop tard pour planter de l’ail. C’est maintenant ou j
 
 Quand vous mangez des pommes, récupérez les pépins que vous installez dans un petit godet plastique avec du terreau.
 
-![Jeune pousse issue d’un pépin de pomme](images/jeune-pousse-issue-dun-pepin-de-pomme.jpg 'Crédits : image extraite du vlog de Damien')
+![Jeune pousse issue d’un pépin de pomme](images/jeune-pousse-issue-dun-pepin-de-pomme.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 On place ensuite les pots en extérieur, à mi-ombre.
 
@@ -66,23 +72,33 @@ En janvier, vous pouvez trouver un bon nombre de plantes sauvages pour la consom
 
 - l’églantier, pour la réalisation de confiture ou des infusions.
 
-![Fruits de l’églantier](images/fruits-d-eglantier.jpg 'Crédits : image extraite du vlog de Damien')
+![Fruits de l’églantier](images/fruits-d-eglantier.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 - la roquette sauvage ou fausse roquette, tout à fait comestible en salade.
 
-![Roquette sauvage en fleurs](images/roquette-sauvaege-en-fleurs.jpg 'Crédits : image extraite du vlog de Damien')
+![Roquette sauvage en fleurs](images/roquette-sauvaege-en-fleurs.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 - La mauve, en particulier les jeunes pousses et les fleurs.
 
-![Feuilles de mauve](images/feuilles-de-mauve.jpg 'Crédits : image extraite du vlog de Damien')
+![Feuilles de mauve](images/feuilles-de-mauve.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 - Le nombril de vénus
 
-![Nombril de vénus](images/nombril-de-venus.jpg 'Crédits : image extraite du vlog de Damien')
+![Nombril de vénus](images/nombril-de-venus.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 - Le brocoli sauvage, cuisiné cru ou cuits.
 
-![Brocoli sauvage](images/brocoli-sauvage.jpg 'Crédits : image extraite du vlog de Damien')
+![Brocoli sauvage](images/brocoli-sauvage.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 {{< blockcontainer jli-notice-warning "Plus simple à reconnaitre au printemps" >}}
 
@@ -92,7 +108,9 @@ Damien nous montrera quand les plants sont en fleurs dans quelques mois.
 
 - La centranthe rouge, ou aussi appelé _lilas d’Espagne_ dont les feuilles sont moins amères en hiver qu’en été.
 
-![Centranthe rouge](images/centranthe-rouge.jpg 'Crédits : image extraite du vlog de Damien')
+![Centranthe rouge](images/centranthe-rouge.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ## Réaménager le jardin
 

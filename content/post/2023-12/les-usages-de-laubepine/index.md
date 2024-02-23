@@ -49,7 +49,9 @@ Du point de vue nutritionnel, il n’y a rien d’extraordinaire : un peu de su
 
 Son plus grand avantage réside dans ses propriétés médicinales.
 
-![Des bourgeons d’aubépine](images/des-bourgeons-d-aubepine.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Des bourgeons d’aubépine](images/des-bourgeons-d-aubepine.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 C’est les bourgeons d’aubépine qui se révèlent intéressants pour leur action sur le cœur. On parle de propriétés tonicardiaques et régulatrices du rythme cardiaque.
 
@@ -73,11 +75,15 @@ On peut aussi extraire la pulpe avec une presse ou les faire sécher pour mélan
 
 Toutefois, l’utilisation la plus commune est celle des fleurs ou des bourgeons.
 
-![Des bourgeons d’aubépine qui s’ouvrent](images/des-bourgeons-d-aubepine-qui-s-ouvrent.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Des bourgeons d’aubépine qui s’ouvrent](images/des-bourgeons-d-aubepine-qui-s-ouvrent.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 Bien que les bourgeons peuvent s’utiliser en gemmothérapie, ce sont les fleurs qui ont été les plus étudiées.
 
-![Des fleurs d’aubépine](images/des-fleurs-d-aubepine.jpg 'Crédits : image extraite du vlog du chemin de la nature')
+![Des fleurs d’aubépine](images/des-fleurs-d-aubepine.jpg)
+
+Crédits : image extraite du vlog du chemin de la nature.
 
 On peut aussi faire sécher les fleurs au mois de mai pour concocter des infusions.
 

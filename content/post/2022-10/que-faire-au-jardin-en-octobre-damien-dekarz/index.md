@@ -81,7 +81,9 @@ Si les plants fleurissent encore, il peut être bien de supprimer les fleurs pou
 
 Par exemple :
 
-![Des fleurs de topinambours](images/fleurs-de-topinambours.jpg 'Crédits : image extraite du vlog de Damien')
+![Des fleurs de topinambours](images/fleurs-de-topinambours.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ## L’automne, c’est sympa
 
@@ -91,11 +93,15 @@ Pour les abeilles, car certaines fleurs s’épanouissent à ce moment, ce qui d
 
 L’arbousier, ou arbre à fraises est très intéressant pour ces fruits remplis de vitamine C.
 
-![Un arbousier avec des fruits arrivant à maturité](images/arbousier.jpg 'Crédits : image extraite du vlog de Damien')
+![Un arbousier avec des fruits arrivant à maturité](images/arbousier.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 Aussi, s’il y a eu assez de pluie, on peut trouver des pissenlits pour les salades :
 
-![Un beau plant de pissenlit](images/plant-de-pissenlit.jpg 'Crédits : image extraite du vlog de Damien')
+![Un beau plant de pissenlit](images/plant-de-pissenlit.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ## Le potager
 
@@ -112,13 +118,17 @@ Voici quelques techniques de Damien pour ne pas travailler le sol, et qui plus e
 
 L’avantage de cette technique est qu’en 6 mois, la zone sera complètement libérée des mauvaises herbes et cela, sans aucun effort.
 
-![Une zone paillée et cartonnée](images/zone-cartonnee-et-paillee.jpg 'Crédits : image extraite du vlog de Damien')
+![Une zone paillée et cartonnée](images/zone-cartonnee-et-paillee.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ### Les bottes de paille
 
 Elles sont simplement posées sur les zones à cultiver le printemps prochain.
 
-![Quatre bottes de paille dans un champ enherbé](images/bottes-de-paille.jpg 'Crédits : image extraite du vlog de Damien')
+![Quatre bottes de paille dans un champ enherbé](images/bottes-de-paille.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 ### Les planches posées
 
@@ -130,7 +140,9 @@ Bien sûr, cela peut varier selon l’essence du bois de ces planches. On évite
 
 Utiliser toujours les outils les plus modernes !
 
-![Une brouette rouillée avec une roue en bois](images/brouette.jpg 'Crédits : image extraite du vlog de Damien')
+![Une brouette rouillée avec une roue en bois](images/brouette.jpg)
+
+Crédits : image extraite du vlog de Damien.
 
 {{< /blockcontainer >}}
 

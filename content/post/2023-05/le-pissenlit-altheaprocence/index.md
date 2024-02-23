@@ -57,7 +57,9 @@ Le pissenlit procure un effet diurétique, c’est-à-dire de permettre aux rein
 
 La feuille est plus diurétique que la racine. Plutôt sympa vu que la feuille se révèle plus simple à récolter.
 
-![Un pissenlit déraciné](images/un-pissenlit-deracine.jpg 'Crédits: image extraite du vlog de AltheaProcence')
+![Un pissenlit déraciné](images/un-pissenlit-deracine.jpg)
+
+Crédits: image extraite du vlog de AltheaProcence.
 
 Mais, pourquoi aller stimuler les reins ?
 

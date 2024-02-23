@@ -111,9 +111,9 @@ Toutefois, mon budget était bien au-dessous de ce qui est nécessaire pour alle
 
 L’investissement pour l’onduleur uniquement varie de 1200 à 1800 euros minimums, cela dépendant bien sûr de la puissance à couvrir dans la maison.
 
-![Schéma du Victron Multiplus2 GX en couplage AC](images/schema-victron-multiplus2-gx-ac-coupling.jpg 'Comment se présente une installation avec le Victron Multiplus II GX en couplage AC')
+![Schéma du Victron Multiplus2 GX en couplage AC](images/schema-victron-multiplus2-gx-ac-coupling.jpg)
 
-Allez lire sur le principe du _Couplage AC_ sur [le site Victron](https://www.victronenergy.com/live/ac_coupling:start).
+Comment se présente une installation avec le Victron Multiplus II GX en couplage AC ? Allez lire sur le principe du _Couplage AC_ sur [le site Victron](https://www.victronenergy.com/live/ac_coupling:start).
 
 Ce qui est sûr, pour un foyer comme le mien, il aurait nécessité :
 
@@ -152,7 +152,9 @@ J’ai un bon échange par courriel courant septembre.
 
 Il a été très pédagogue en m’expliquant la différence entre l’onduleur Victron MultiPlus et le MultiPlus II.
 
-![Schéma de comparaison de l'onduleur Victron MultiPlus au Victron MultiPlus II](images/victron-multiplus-vs-multiplus-2.png 'Concernant le MultiPlus, l’avantage du modèle II est qu’il possède 2 sorties. Ainsi, j’aurais pu profiter de la production des panneaux pour les 2 sorties et même celle qui ne sera pas alimentée en cas de coupure.')
+![Schéma de comparaison de l'onduleur Victron MultiPlus au Victron MultiPlus II](images/victron-multiplus-vs-multiplus-2.png)
+
+Concernant le MultiPlus, l’avantage du modèle II est qu’il possède 2 sorties. Ainsi, j’aurais pu profiter de la production des panneaux pour les 2 sorties et même celle qui ne sera pas alimentée en cas de coupure..
 
 Si je faisais le choix d’un MultiPlus simple, alors il n’aura qu’une sortie, vous y raccorderez les appareils listés à savoir le poêle et la production des panneaux ne servira que pour ces derniers.
 

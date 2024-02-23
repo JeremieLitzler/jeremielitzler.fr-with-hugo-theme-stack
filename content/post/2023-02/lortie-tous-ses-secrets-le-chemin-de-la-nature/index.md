@@ -34,7 +34,9 @@ L'ortie est une plante dioïque (_deux maisons_), c'est-à-dire qu'il y a des pi
 
 Pour reconnaître les pieds femelles, on cherchera des fleurs qui retombent.
 
-![Fleurs femelles de l'ortie](images/fleurs-femelles-de-l-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Fleurs femelles de l'ortie](images/fleurs-femelles-de-l-ortie.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 Dans le cas des mâles, les fleurs sont dressées.
 
@@ -48,7 +50,9 @@ Les organes mâles s'appellent les étamines. Les organes femelles s'appellent l
 
 La feuille de l'ortie est très proche du lamier blanc (_Lamium album_), qui ne pique pas et surtout possède des fleurs blanches bilabiées.
 
-![Lamier blanc](images/lamier-blanc.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Lamier blanc](images/lamier-blanc.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ### Pourquoi l'ortie pique
 
@@ -70,7 +74,9 @@ L'ortie pique beaucoup plus au printemps qu'à la fleuraison.
 
 Et elle est beaucoup plus goûteuse quand elle pique le plus.
 
-![Jeunes pousses d'ortie](images/jeunes-pousses-d-ortie.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Jeunes pousses d'ortie](images/jeunes-pousses-d-ortie.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ### Pesto, salades, _gaspatcho_...
 
@@ -78,11 +84,15 @@ Pour les salades, il faudra la hacher finement.
 
 Pour les pestos, la méthode est similaire au pesto de basilic : huile d'olive, câpre, sel.
 
-![Pesto d'ortie crue](images/pesto-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![Pesto d'ortie crue](images/pesto-d-ortie-crue.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 On peut aussi la consommer dans des _gaspachos_.
 
-![gaspacho d'ortie crue](images/gaspatcho-d-ortie-crue.jpg 'Credits : image extraite du vlog de Christophe sur le Chemin de la Nature')
+![gaspacho d'ortie crue](images/gaspatcho-d-ortie-crue.jpg)
+
+Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 En l'ébouillantant 2 min dans de l'eau, elle se mange aussi très bien avec un filet d'huile d'olive.
 
@@ -118,7 +128,9 @@ On utilise les racines pour les problèmes de prostates.
 
 Une bonne plante accompagnante est l'épilobe hirsute pour traiter les mêmes troubles de la prostate.
 
-![Epilobe hirsute](images/epilobe-hirsute.jpg 'On peut utiliser l'intégralité de la plante. Crédit : [Préservons la nature](https://www.preservons-la-nature.fr/flore/taxon/395.html)')
+![Epilobe hirsute](images/epilobe-hirsute.jpg)
+
+On peut utiliser l'intégralité de la plante. Crédit : [Préservons la nature](https://www.preservons-la-nature.fr/flore/taxon/395.html).
 
 La préparation en décoction permet d'extraire au mieux les propriétés de la racine.
 

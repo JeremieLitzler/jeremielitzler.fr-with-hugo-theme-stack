@@ -7,26 +7,7 @@ date: 2023-03-14
 prev:
   text: 'Toutes mes notes des vlogs de Damien Dekarz'
   link: ../../../tag/damien-dekarz/
-head:
-  - [
-      link,
-      {
-        rel: canonical,
-        href: https://jeremielitzler.fr/2023-03/ortie-piqure-et-cookies-damien-dekarz,
-      },
-     meta,
-     { "og:type": article },
-     meta,
-     { "og:title": "L'ortie : piqûres et cookies, par Damien Dekarz" },
-     meta,
-     {
-       "og:description": "Ceci n'est pas *l'ortie de A à Z*, mais on comprendra pourquoi ça pique, comment éviter les piqûres et comment l'ortie est une bonne compagne cullinaire.",
-     },
-     meta,
-     {
-       "og:image": /images/2023-03-14-titre-de-la-video-sur-fond-d-ortie.jpg,
-     },
-    ]
+relcanonical: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
 categories:
   - Jardin
 tags:
@@ -50,7 +31,9 @@ En anglais, la plante est nommée _Nettle_ qui vient de ==Needle== qui signifie 
 
 En japonais, la plante est nommée _Irkusa_ qui signifie littéralement ==herbe aux épines==.
 
-![Aperçu des aiguilles d’ortie](images/aperçu-des-aiguilles-dortie.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Aperçu des aiguilles d’ortie](images/aperçu-des-aiguilles-dortie.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 {{< blockcontainer jli-notice-tip "Fait intéressant…" >}}
 
@@ -62,7 +45,9 @@ L’ortie la plus connue est la grande ortie (_urtica dioica_), mais on trouve a
 
 La grande ortie est donc dioïque comme son nom l’indique, c’est-à-dire qu’on trouve des plants mâles et des plants femelles bien distincts.
 
-![Liste des plantes dioïques](images/liste-des-plantes-dioiques.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Liste des plantes dioïques](images/liste-des-plantes-dioiques.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ## Qu’est-ce qui pique
 
@@ -82,7 +67,9 @@ Toute la plante ne pique pas uniformément.
 
 Les points d’insertion des feuilles sont particulièrement piquants.
 
-![Aperçu zoomé de l’intersection entre la tige et les feuilles](images/aperçu-zoome-de-lintersection-entre-la-tige-et-les-feuilles.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Aperçu zoomé de l’intersection entre la tige et les feuilles](images/aperçu-zoome-de-lintersection-entre-la-tige-et-les-feuilles.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 En général, les poils sont orientés vers le haut, donc en _caressant dans le sens du poil_ la plante, on ne se pique pas.
 
@@ -96,7 +83,9 @@ Pourquoi ? Les fibres de la tige deviennent plus dures et la consommation est do
 
 L’exception est la jeune ortie où la tige est plutôt tendre donc on peut en ramasser plus.
 
-![Un panier rempli d’orties](images/un-panier-remplit-dorties.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Un panier rempli d’orties](images/un-panier-remplit-dorties.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ## Comment l’utiliser en cuisine
 
@@ -145,20 +134,26 @@ Pour 20 cookies :
    - chocolat
 7. On malaxe la pâte jusqu’à obtenir ceci :
 
-![La pâte à cookie prête pour la confection des cookies.](images/la-pate-a-cookie-prete-pour-la-confection-des-cookies.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![La pâte à cookie prête pour la confection des cookies.](images/la-pate-a-cookie-prete-pour-la-confection-des-cookies.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 8. On huile une plaque de cuisson
 9. On forme les cookies en forme de petites boules avec 2 cuillères
 10. On dispose les cookies sur la plaque
 11. On laisse cuire 15 min
 
-![Les cookies sont cuits. Dégustez sans modération.](images/les-cookies-sont-cuits-degustez-sans-moderation.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Les cookies sont cuits. Dégustez sans modération.](images/les-cookies-sont-cuits-degustez-sans-moderation.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 ## Les fausses orties, c’est quoi
 
 Dans la famille des lamiacées, le lamier blanc ou violet ou jaune ressemble aux orties, mais ne pique pas du tout.
 
-![Exemple de lamier blanc](images/exemple-de-lamier-blanc.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Exemple de lamier blanc](images/exemple-de-lamier-blanc.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Il y a aussi l’épiaire des bois ou l’ortie puante (_stachys sylvatica_) ou le galéopsis ou « ortie royale » (_galeopsis tetrahit_) qui ressemble à l’ortie, mais ne piquent pas non plus.
 
@@ -166,23 +161,31 @@ Caius Plinius, écrivain et naturaliste romain du 1er siècle, disait que les je
 
 De cela, la croyance fut qu’il y avait 2 espèces d’ortie : la piquante et la morte. Cela a perduré jusqu’au 16e siècle.
 
-![Listes des lamiacées](images/listes-des-lamiacees.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Listes des lamiacées](images/listes-des-lamiacees.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Ces plantes sont toutes comestibles sauf une : l’agripaume ou « ortie bleue ».
 
 Le plus simple moyen de savoir si l’on a à faire avec une vraie ortie, c’est d’envoyer la main et de voir si ça pique. Sinon, regardez si voyez des stipules : il y en a 4 au niveau d’où partir les feuilles à partir de la tige.
 
-![Les stipules entre chaque étage de feuilles](images/les-stipules-entre-chaque-etage-de-feuilles.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Les stipules entre chaque étage de feuilles](images/les-stipules-entre-chaque-etage-de-feuilles.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Les lamiacées ne possèdent pas de stipules.
 
 ## Pourquoi ça pique alors
 
-![Vue microscopique d’un poil urticant](images/vue-microscopique-dun-poil-urtiquant.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Vue microscopique d’un poil urticant](images/vue-microscopique-dun-poil-urtiquant.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Ils sont recouverts d’une enveloppe de silice (l’aiguille) et à la base, on trouve une _ampoule_ d’un cocktail chimique qui est à l’origine de la douleur.
 
-![Liste des éléments chimiques dans le cocktail urticant de l’ortie](images/liste-des-elements-chimiques-dans-le-cocktail-urticant-de-lortie.jpg 'Crédits : image extraite du vlog de Damien Dekarz')
+![Liste des éléments chimiques dans le cocktail urticant de l’ortie](images/liste-des-elements-chimiques-dans-le-cocktail-urticant-de-lortie.jpg)
+
+Crédits : image extraite du vlog de Damien Dekarz.
 
 Il faut 1/10000 de grammes pour créer une réaction.
 
