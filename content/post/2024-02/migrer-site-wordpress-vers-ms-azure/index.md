@@ -5,7 +5,7 @@ image: images/wordpress-app-service-diagram.png
 imageAlt: "Schéma d'architecture de WordPress sur le service d'application sur Microsoft Azure"
 date: 2024-02-26
 categories:
-  - Tutorials
+  - Tutoriels
 tags:
   - Microsoft Azure
   - WordPress
