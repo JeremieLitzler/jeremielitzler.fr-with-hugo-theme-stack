@@ -5,7 +5,7 @@ image: images/2024-02-16-typescript-code-sample.png
 imageAlt: Exemple de code TypeScript
 date: 2024-02-16
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - TypeScript
   - Astuce du jour
