@@ -1,5 +1,5 @@
 ---
-title: La romarin officinale
+title: Le romarin officinale
 description: "Avec une puissance aromatique incroyable, le romarin détient des atouts à ne pas négliger. Quand une plante de ce calibre se cultive facilement, pourquoi s’en priverait-on ? Avec Christophe d’Altheaprovence, nous allons établir le profil précis de cet ami culinaire et médicinal."
 image: images/2023-12-26-romarin-en-fleurs.jpg
 imageAlt: Romarin en fleurs
