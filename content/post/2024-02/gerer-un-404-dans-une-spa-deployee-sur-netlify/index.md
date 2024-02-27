@@ -5,7 +5,7 @@ image: images/2024-02-14-404-page-displayed-on-laptop.jpg
 imageAlt: Une page 404 affichée sur un PC portable
 date: 2024-02-14
 categories:
-  - Dévelopment Web
+  - Développement Web
 tags:
   - Netlify
   - Astuce du jour
