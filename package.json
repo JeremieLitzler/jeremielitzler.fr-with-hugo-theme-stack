@@ -4,6 +4,8 @@
   "description": "This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.",
   "main": "index.js",
   "scripts": {
+    "dev": "tinacms dev -c \"hugo server -D\"",
+    "build": "tinacms build && hugo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
