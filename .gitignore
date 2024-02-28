@@ -2,3 +2,5 @@ public
 resources
 
 *.bak
+node_modules
+.env
