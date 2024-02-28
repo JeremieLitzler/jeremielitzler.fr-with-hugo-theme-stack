@@ -1,7 +1,7 @@
 ---
 title: "Enregistrer globalement des composants dans Vue 3"
 description: "En suivant les cours sur VueSchool.io, j'ai dû trouver comment enregistrer des composants disponibles globalement avec Vue 3 et TypeScript. Voici comment procéder."
-image: images/preview-of-main.ts-file.jpg
+image: /images/2024-02/2024-02-27/preview-of-main.ts-file.jpg
 imageAlt: "Capture d'écran du main.ts où les composants globaux sont enregistrés"
 date: 2024-02-27
 categories:

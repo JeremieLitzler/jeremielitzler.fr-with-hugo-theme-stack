@@ -1,0 +1,19 @@
+{
+  "name": "jeremielitzler.fr-with-hugo-theme-stack",
+  "version": "1.0.0",
+  "description": "This is a quick start template for [Hugo theme Stack](https://github.com/CaiJimmy/hugo-theme-stack). It uses [Hugo modules](https://gohugo.io/hugo-modules/) feature to load the theme.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tinacms": "^1.5.28"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^20.11.21"
+  }
+}
