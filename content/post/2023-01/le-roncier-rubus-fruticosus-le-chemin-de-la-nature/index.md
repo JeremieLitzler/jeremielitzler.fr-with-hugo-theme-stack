@@ -1,6 +1,6 @@
 ---
 title: Le roncier avec Le chemin de la nature
-description: 'La ronce, vous connaissez ? On en a peur, car elle pique et nous enviahit. Mais, la connaissez-vous vraiment ? Christophe nous partage dans son vlog qui est vraiment cette plante.'
+description: "La ronce, vous connaissez ? On en a peur, car elle pique et nous enviahit. Mais, la connaissez-vous vraiment ? Christophe nous partage dans son vlog qui est vraiment cette plante."
 date: 2023-01-24
 image: /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg
 imageAlt: Des fleurs de mûriers se transforment en fruits
@@ -63,7 +63,7 @@ On infuse les jeunes feuilles.
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard]({{ < rel "/post/2023-01/ronce-murier-mure-bienfaits-et-usages-altheaprocence/" >}}) de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
+Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../../../post/2023-01/ronce-murier-mure-bienfaits-et-usages/index.md) de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
 
 {{< /blockcontainer >}}
 
@@ -118,7 +118,7 @@ Les affections ostéo-articulaires sont généralement caractérisées par des d
 
 {{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
 
-Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](/post/2023-01/ronce-murier-mure-bienfaits-et-usages-altheaprocence/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
+Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../../../post/2023-01/ronce-murier-mure-bienfaits-et-usages/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
 
 {{< /blockcontainer >}}
 
