@@ -71,7 +71,7 @@ export const useCategoryStore = defineStore("CategoryStore", () => {
 }) ;
 ```
 
-L’expression de fonction fléchée que vous voyez après le nom du magasin utilise la définition de la fonction avec le modèle de configuration.
+La fonction fléchée que vous voyez après le nom du magasin utilise la définition de la fonction avec le modèle de configuration.
 
 Remerciements à :
 
