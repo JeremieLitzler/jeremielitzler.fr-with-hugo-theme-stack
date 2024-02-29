@@ -388,6 +388,13 @@ to = "/post/2023-03/galette-de-sarrasin-ecolo-au-pesto-dortie-noix/"
 status = 301
 force = true
 
+[[redirects]]
+from = "/post/2023-01/ronce-murier-mure-bienfaits-et-usages-altheaprocence/"
+to = "/post/2023-01/ronce-murier-mure-bienfaits-et-usages/"
+status = 301
+force = true
+
+
 #[[headers]]
 #for = "/*"
 #[headers.values]
