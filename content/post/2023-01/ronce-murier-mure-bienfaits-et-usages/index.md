@@ -1,5 +1,5 @@
 ---
-title: 'La ronce avec Christophe Bernard'
+title: "La ronce avec Christophe Bernard"
 description: "Vous en avez sûrement chez vous si vous vivez à la campagne, proche d'une zone sauvage. On essaye souvent de s'en débarrasser. Toutefois, saviez-vous qu'il s'agit plutôt d'une ami ?"
 date: 2023-01-20
 image: /images/2023-01-20-ronce-fleurie.jpg
