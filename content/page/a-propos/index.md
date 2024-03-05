@@ -3,10 +3,10 @@ title: Qui suis-je ?
 description: Une présentation de Jérémie Litzler, son parcours professionnel, ses passe-temps et une description du contenu du site.
 date: 2021-08-10
 menu:
-    main: 
-        weight: 10
-        params:
-            icon: user
+  main:
+    weight: 10
+    params:
+      icon: user
 
 comments: false
 ---
@@ -19,38 +19,33 @@ comments: false
 
 ## Mon histoire
 
-Tout a une histoire. Voici la mienne, jusqu'à présent.
+Tout le monde a une histoire. Voici la mienne, jusqu'à présent.
 
-J'ai créé ce site web pour sauvegarder mes notes and experiences qui pourraient vous être utile, car peut-être aurez-vous cette réaction : _"Ahhhh, je comprends maintenant"_.
+J'ai créé ce blog pour partager mes notes and experiences et je suis certain que vous découvrirez qui pourraient vous être utile et peut-être aurez-vous cette réaction : _"Ahhhh, je comprends maintenant"_.
 
 ## Parcours professionnel
 
-Originaire de l'Isère, j’ai démarré ma carrière dans l’informatique en 2009. De [Trust5](https://www.trust5.com/), à Dublin en Irlande, à [Conduent Business Solutions](https://www.conduent.com/conduent-business-solutions-france/), à Guilherand-Granges en France, j’ai trouvé une passion dans le métier pour améliorer la vie quotidienne d’entreprises, d’individus et bien d’autres à travers des applications et services développés avec les technologies du Web et en particulier Microsoft .NET.
+Originaire de l'Isère, j’ai démarré ma carrière dans le développement logiciel en 2009. De [Trust5](https://www.trust5.com/), à Dublin en Irlande, à [Conduent Business Solutions](https://www.conduent.com/conduent-business-solutions-france/), à Guilherand-Granges en France, j'ai ensuite rejoint [CBTW (Collaboration Betters The World)](https://collaborationbetterstheworld.com/) fin 2023.
 
-J’ai aussi acquis un large éventail de compétences dans des métiers très divers. Chez Trust5, l’entreprise vendait des sites de vente en ligne à EA pour la diffusion de ses jeux vidéo pour téléphones mobiles historiquement et smartphones à partir de 2011. Chez Conduent, j’ai découvert et appris à maîtriser la complexité des systèmes billettiques pour les transports publics tant en gardant à l’esprit qu’une solution simple est une solution qui fonctionne.
+J’ai trouvé une passion dans ce métier où je crée chaque jour des solutions logicielles performantes pour des métiers très différents les uns des autres.
 
-Je me réjouis aussi d’acquérir de nouvelles compétences chaque jour comme les SSG (Static Site Generator) et le développement d’API et d’applications en JavaScript « vanilla » autant que possible.
+Chez Trust5, l’entreprise se spécialisait dans l'ecommerce pour la diffusion de des jeux vidéo d'Electonic Arts pour les téléphones mobiles historiquement et les smartphones à partir de 2011.
 
-Pour aller plus dans le détails, je vous invite à [lire mon CV](https://docs.google.com/document/d/1fpY1ZlgyQ8d7dabnN5FRi7WP__F-SmnH/edit?usp=drivesdk&ouid=107506689745157025692&rtpof=true&sd=true).
+Chez Conduent, j’ai découvert et maîtrisé la complexité des systèmes billettiques pour les transports publics tant en gardant à l’esprit qu’une solution simple est une solution qui fonctionne.
 
-À côté de cela, j’expérimente au jardin depuis toujours, j’adore bricoler et construire par moi-même pour comprendre et partager tout en recyclant les matériaux (panneaux solaires, palettes, etc.) pour un meilleur respect de notre environnement.
+Sur mon temps personnel, je me passionne aussi d’acquérir de nouvelles compétences chaque jour comme les SSG (Static Site Generator) et l'importance de l'expérience utilisateur (UX pour les connaisseurs) dans les solutions que je réalise.
 
-Ah, et je me déplace en vélo depuis 2007 quasiment tous les jours pour aller au bureau, totalisant plus de 115.000 km au 01/09/2023.
+Je vous invite à [lire mon CV](https://docs.google.com/document/d/1fpY1ZlgyQ8d7dabnN5FRi7WP__F-SmnH/edit?usp=drivesdk&ouid=107506689745157025692&rtpof=true&sd=true).
 
-## Qu'est-ce que ce site contient
+## Mes intérêts non technologiques
 
-Entre autres, je parlerai des sujets suivants :
-
-- La permaculture et l'agroécologie
-- Les plantes sauvages
-- Les fondamentaux du Web
-- Mes avis sur des formations auxquelles j'ai participé
-- Mes avis sur des produits ou logiciels que j'ai utilisés
-- Mes astuces et tutoriels
-
-## Et je parlerai de mes hobbies
+À côté de cela, j’expérimente beaucoup.
 
 En dehors de l'ingénierie logiciel, j'aime particulièrement apprendre comment vivre durablement, pour ma famille et moi-même.
+
+Dans le jardin, dans la cuisine, dans la nature, j’adore découvrir, bricoler et construire par moi-même pour comprendre et partager tout en recyclant les matériaux (panneaux solaires, palettes, etc.) et les ressources à ma disposition pour un meilleur respect de notre environnement.
+
+Je me déplace en vélo depuis 2007 quasiment tous les jours pour aller au travail, totalisant plus de 118.000 km au 01/03/2024.
 
 Aussi, je donnerai mon avis sur des produits que j'ai acheté, que j'utilise depuis un moment et je vous recommenderai ou pas ceux-ci.
 
@@ -79,4 +74,4 @@ Et trois chats "Maincoon" :
 
 ## Et vous ?
 
-[Dites-le maintenant !](https://twitter.com/LitzlerJeremie)
+[Dites-le maintenant !](https://twitter.com/LitzlerJeremie) ou [contactez-moi en privé](../contactez-moi/index.md).
