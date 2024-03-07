@@ -1,0 +1,1 @@
+hugo && git ac "publish article $1" && git push
