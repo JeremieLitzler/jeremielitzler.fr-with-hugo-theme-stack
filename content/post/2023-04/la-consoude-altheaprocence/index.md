@@ -1,6 +1,6 @@
 ---
-title: La consoude, par Christophe Bernard
-description: 'Très facile à cultiver au jardin, cette plante est très connue pour ses propriétés réparatrice et cicatrisante.'
+title: La consoude avec Christophe Bernard
+description: "Très facile à cultiver au jardin, cette plante est très connue pour ses propriétés réparatrice et cicatrisante."
 image: /images/2023-04-28-inflorescence-bleue-de-consoude.jpg
 imageAlt: Inflorescence bleue de consoude
 date: 2023-04-27

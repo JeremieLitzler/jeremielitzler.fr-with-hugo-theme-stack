@@ -16,17 +16,17 @@ Connaissez-vous les éléments HTML `details` et `summary` ?
 
 Vous devriez.
 
-Pour créer un accordon sans JavaScript, ce sont vos amis.
+Pour créer un accordéon sans JavaScript, ce sont vos amis.
 
-Mais il se peut que vous souhaitiez en personnaliser l'apparence.
+Mais il se peut que vous souhaitiez en personnaliser l’apparence.
 
-En utilisant la pseudo classe `::after` sur l'élément `summary`, vous pouvez ajouter du contenu avec la propriété `content`.
+En utilisant la pseudoclasse `::after` sur l’élément `summary`, vous pouvez ajouter du contenu avec la propriété `content`.
 
-Et si vous changiez le contenu en fonction de l'état de l'élément `details` (par exemple, ouvert ou fermé) ?
+Et si vous changiez le contenu en fonction de l’état de l’élément `details` (par exemple, ouvert ou fermé) ?
 
-Appliquez un style différent lorsque l'accordéon est ouvert en utilisant le sélecteur `details[open]`.
+Appliquez un style différent lorsque l’accordéon est ouvert en utilisant le sélecteur `details[open]`.
 
-Voici la démonstration que j'utilise sur mon blog [sur JSFiddle](https://jsfiddle.net/puzzlout/j09efgpn/).
+Voici la démonstration que j’utilise sur mon blog [sur JSFiddle](https://jsfiddle.net/puzzlout/j09efgpn/).
 
 Amusez-vous bien !
 
