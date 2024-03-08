@@ -5,7 +5,7 @@ image: images/2024-03-08-example-prop.jpg
 imageAlt: "Exemple de la définition d'une “prop”"
 date: 2024-03-08
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - Vue 3
   - TypeScript
