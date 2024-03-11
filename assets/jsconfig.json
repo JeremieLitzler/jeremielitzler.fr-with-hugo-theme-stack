@@ -2,7 +2,9 @@
  "compilerOptions": {
   "baseUrl": ".",
   "paths": {
-   "*": null
+   "*": [
+    "..\\themes\\hugo-theme-stack-3.23.0\\assets\\*"
+   ]
   }
  }
 }
