@@ -5,7 +5,7 @@ image: images/2024-02-11-a-vintage-accordeon.jpg
 imageAlt: "Un accordéon 'vintage'"
 date: 2024-03-11
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - HTML
   - CSS
