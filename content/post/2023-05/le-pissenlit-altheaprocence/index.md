@@ -1,6 +1,6 @@
 ---
-title: Le pissenlit, par Christophe Bernard
-description: 'Vous marchez sûrement dessus à chaque fois que vous vous promenez ! Mais connaissez-vous le pissenlit, véritable bombe nutritive ?'
+title: Le pissenlit avec Christophe Bernard
+description: "Vous marchez sûrement dessus à chaque fois que vous vous promenez ! Mais connaissez-vous le pissenlit, véritable bombe nutritive ?"
 image: /images/2023-05-02-un-parterre-de-pissenlits-en-fleurs.jpg
 imageAlt: Un parterre de pissenlits en fleurs
 date: 2023-05-05
@@ -11,8 +11,6 @@ tags:
   - Plantes
   - Pissenlit
 ---
-
-Vous marchez sûrement dessus à chaque fois que vous vous promenez ! Mais connaissez-vous le pissenlit, véritable bombe nutritive ?
 
 Merci à Christophe pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé Par Christophe sur sa chaîne Altheaprovence.
 
