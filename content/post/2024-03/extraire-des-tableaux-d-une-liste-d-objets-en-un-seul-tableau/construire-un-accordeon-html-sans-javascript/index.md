@@ -1,7 +1,7 @@
 ---
 title: "Extraire des tableaux d'une liste d'objets en un seul tableau"
 description: "Avez-vous déjà eu besoin de mettre les tableaux d'une liste d'objets dans un seul tableau ? JavaScript fournit une API native pour le faire et c'est simple."
-image: images/2024-02-13-shoes-sorted-into-trays.jpg
+image: images/2024-03-13-shoes-sorted-into-trays.jpg
 imageAlt: "Chaussures triées dans des cases"
 date: 2024-03-13
 categories:
