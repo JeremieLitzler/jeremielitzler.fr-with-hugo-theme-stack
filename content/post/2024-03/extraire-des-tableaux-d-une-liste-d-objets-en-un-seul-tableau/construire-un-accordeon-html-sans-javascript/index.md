@@ -11,22 +11,69 @@ tags:
   - Astuce du jour
 ---
 
-Connaissez-vous les éléments HTML `details` et `summary` ?
+C'est simple : utilisez la méthode `Array.prototype.flatMap()` en même temps que la décomposition de l'objet.
 
-Vous devriez.
+Par exemple, vous avez ce tableau d'objets. Chaque objet contient un tableau de valeurs primitives :
 
-Pour créer un accordéon sans JavaScript, ce sont vos amis.
+```json
+"categories": [
+    {
+      "forums": [
+        "-KpOx5Y4AqRr3sB4Ybwj",
+        "-KsjO4_W3W9Q2Z2UmuPr"
+      ],
+      "name": "Feedback & Information",
+      "slug": "feedback-and-information",
+      "id": "-KpR7vRkiRPpbUd_TVAR"
+    },
+    {
+      "forums": [
+        "-KsjPat5MWCx-dkjNVg8",
+        "-KsjPjasLh0TFtZmffEo",
+        "-Kvd1Vg_ankLYgrxC50F",
+        "-KvdCowY9mDvM0EH8Pvs",
+        "-KvhkEl6F673igPtnbso"
+      ],
+      "name": "Discussions",
+      "slug": "discussions",
+      "id": "-KsjPKA6hDuHlQK_lJWO"
+    },
+    {
+      "forums": [
+        "-Kvclvu_Qd9QdS9ciqUl",
+        "-KvcmOcppNYK8NCesmB9"
+      ],
+      "name": "Comedy",
+      "slug": "comedy",
+      "id": "-KvclpNRjpI5W-j0JQGU"
+    }
+  ],
+```
 
-Mais il se peut que vous souhaitiez en personnaliser l’apparence.
+Si vous voulez obtenir les valeurs de `forums`, l'utilisation de la décomposition d'objets et de `flatMap` vous fournira la solution :
 
-En utilisant la pseudoclasse `::after` sur l’élément `summary`, vous pouvez ajouter du contenu avec la propriété `content`.
+```tsx
+const forums = categories.flatMap(({ forums }) => forums);
+```
 
-Et si vous changiez le contenu en fonction de l’état de l’élément `details` (par exemple, ouvert ou fermé) ?
+Le résultat vous donnera :
 
-Appliquez un style différent lorsque l’accordéon est ouvert en utilisant le sélecteur `details[open]`.
+```json
+[
+  "-KpOx5Y4AqRr3sB4Ybwj",
+  "-KsjO4_W3W9Q2Z2UmuPr",
+  "-KsjPat5MWCx-dkjNVg8",
+  "-KsjPjasLh0TFtZmffEo",
+  "-Kvd1Vg_ankLYgrxC50F",
+  "-KvdCowY9mDvM0EH8Pvs",
+  "-KvhkEl6F673igPtnbso",
+  "-Kvclvu_Qd9QdS9ciqUl",
+  "-KvcmOcppNYK8NCesmB9"
+]
+```
 
-Voici la démonstration que j’utilise sur mon blog [sur JSFiddle](https://jsfiddle.net/puzzlout/j09efgpn/).
+[Consultez la démo JSFiddle](https://jsfiddle.net/puzzlout/98w7h4xL/) pour vous en convaincre.
 
-Amusez-vous bien !
+Bonne lecture !
 
-Crédit : Photo de [Gaelle Marcel](https://unsplash.com/@gaellemarcel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/brown-chest-near-wall-MwMmOtj6z2c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
+Crédit : Photo par [Alev Takil](https://unsplash.com/@alevisionco?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/assorted-color-sneakers-d-1FY75fh_s?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
