@@ -411,7 +411,3 @@ force = true
 #for = "/*"
 #[headers.values]
 #Content-Security-Policy = "default-src 'self';"
-
-# Thanks to https://answers.netlify.com/t/support-guide-how-to-use-the-ignore-command/37517
-[build]
-ignore = "exit 1"
