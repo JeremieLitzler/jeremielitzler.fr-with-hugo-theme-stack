@@ -1,0 +1,1968 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Autoconsommation on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/autoconsommation/</link><description>Recent content in Autoconsommation on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/autoconsommation/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation PV - quel retour d'expérience après 1 an</title><link>https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/</link><pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-03-31-production-par-mois-avril2022-mars2023.jpg" alt="Featured image of post Installation PV - quel retour d'expérience après 1 an" />&lt;p>La légende de l’image ci-dessus est la suivante :&lt;/p>
+&lt;ul>
+&lt;li>En bleu, il s’agit de la production totale.&lt;/li>
+&lt;li>En jaune, il s’agit de l’autoconsommation.&lt;/li>
+&lt;li>En vert, il s’agit du surplus offert au réseau, sûrement nos plus proches voisins.&lt;/li>
+&lt;/ul>
+&lt;p>Le 27 mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin de la première année.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="la-série-darticles">La série d&amp;rsquo;articles&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-06/retour-d-experience-sur-une-installation-pv-1mois/">Installation PV - quel retour d&amp;rsquo;expérience après 2 mois ?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/">Installation PV - quel retour d&amp;rsquo;expérience après 9 mois ? (partie 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/">Installation PV - quel retour d&amp;rsquo;expérience après 9 mois ? (partie 2)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="usage-du-cumulus-en-hiver">Usage du cumulus en hiver&lt;/h2>
+&lt;p>Avec le recul d’un an, on peut conclure que chauffer l’eau en hiver n’est pas exactement la même chose qu’en été.&lt;/p>
+&lt;p>Au-delà du côté logique de cette affirmation, il y a tout de même eu une baisse de consommation.&lt;/p>
+&lt;p>Ce que je n’avais pas pris en compte, c’est la température de l’eau du réseau.&lt;/p>
+&lt;p>L’été, elle dépasse facilement 20 °C donc pour monter l’eau à la température limite du thermostat du cumulus demande au moins 15 °C de moins à chauffer qu’en hiver.&lt;/p>
+&lt;p>Oui, en hiver, vous avez bien compris : l’eau du réseau descend à 5 °C.&lt;/p>
+&lt;p>Parfait pour des douches froides 🚿🥶. Mais, je l’avoue, ce n’est pas pour tout le monde.&lt;/p>
+&lt;p>Du coup, quand le routeur donne 2 kWh de surplus solaire au cumulus (pour une journée ensoleillée d’hiver), l’eau chauffe bien, mais pas assez pour mon épouse et mes jumelles, qui aiment l’eau bien chaude.&lt;/p>
+&lt;p>Après, cela a duré de novembre à février.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/production-vs-consommation-sur-12-mois.jpg"
+width="801"
+height="360"
+srcset="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/production-vs-consommation-sur-12-mois_huefb6ef9032089f1ab08a0b52e16239b2_45495_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/production-vs-consommation-sur-12-mois_huefb6ef9032089f1ab08a0b52e16239b2_45495_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/production-vs-consommation-sur-12-mois_huefb6ef9032089f1ab08a0b52e16239b2_45495_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="La production (en bleu) versus la consommation pour le cumulus (en vert)"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="534px"
+>
+&lt;/p>
+&lt;p>Nous sommes fin mars et la température de l’eau du réseau a déjà repris 2 °C et les journées sont très belles et ensoleillées.&lt;/p>
+&lt;p>En consommation du réseau pour chauffer l’eau chaude sanitaire (ECS), sur un an, on est passé de 957 kWh sur l’année 2021 à 492 kWh sur l’année 2022, &lt;strong>soit -48 %&lt;/strong>.&lt;/p>
+&lt;p>Pour le moment, je n’ai pas de retour sur expérience assez conséquent pour dire s’il est possible d’optimiser sans dépenser de grosses sommes supplémentaires.&lt;/p>
+&lt;p>Encore une fois, notre orientation et le relief ne permettent pas d’installer et rentabiliser des panneaux solaires thermiques. En effet, le coût initial est bien plus important et n’agit que sur le poste &lt;strong>&lt;em>ECS&lt;/em>&lt;/strong> alors qu’avec l’installation photovoltaïque, on agit sur tout ce qui consomme de l’électricité. Par exemple, &lt;a href="../../../tag/ortie">l’ortie est de retour&lt;/a> et on a consommé à les faire sécher.&lt;/p>
+&lt;p>Ainsi, on verra dans 8 ans pour augmenter la production photovoltaïque et donc l’autoconsommation solaire pour l’ECS.&lt;/p>
+&lt;h2 id="production-annuelle">Production annuelle&lt;/h2>
+&lt;p>La production annuelle s’élève à ==1646 kWh== et elle repartit ainsi :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>Production&lt;/th>
+&lt;th>Taux d’autoconsommation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Avril 2022&lt;/td>
+&lt;td>160,6&lt;/td>
+&lt;td>91,91 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mai 2022&lt;/td>
+&lt;td>210,4&lt;/td>
+&lt;td>88,59 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Juin 2022&lt;/td>
+&lt;td>204,3&lt;/td>
+&lt;td>89,72 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Juillet 2022&lt;/td>
+&lt;td>225,4&lt;/td>
+&lt;td>90,68 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Août 2022&lt;/td>
+&lt;td>192,7&lt;/td>
+&lt;td>80,28 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Septembre 2022&lt;/td>
+&lt;td>150,9&lt;/td>
+&lt;td>98,01 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Octobre 2022&lt;/td>
+&lt;td>109,3&lt;/td>
+&lt;td>99,09 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Novembre 2022&lt;/td>
+&lt;td>62,6&lt;/td>
+&lt;td>98,40 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Décembre 2022&lt;/td>
+&lt;td>36,3&lt;/td>
+&lt;td>97,25 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Janvier 2023&lt;/td>
+&lt;td>44,6&lt;/td>
+&lt;td>97,76 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Février 2023&lt;/td>
+&lt;td>113,7&lt;/td>
+&lt;td>99,12 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mars 2023&lt;/td>
+&lt;td>135,2&lt;/td>
+&lt;td>97,04 %&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Total&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>1646&lt;/strong>&lt;/td>
+&lt;td>&lt;strong>93,99 %&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>L’utilisation du routeur solaire apporte vraiment un plus.&lt;/p>
+&lt;p>En effet, la plupart des sources trouvées &lt;em>rapportent que, lissé sur l’année, le taux d’autoconsommation avoisine les 20 à 30 %. C’est-à-dire que les habitants n&amp;rsquo;utilisent pas 70 à 80 % de la production d’électricité solaire n’est dans leur maison.&lt;/em>&lt;/p>
+&lt;p>Sources :&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.comwatt.com/blog/photovoltaique-autoconsommation/comparatifs/difference-autoproduction-autoconsommation/#:~:text=Le%20saviez%20vous%20%3F,la%20production%20de%20vos%20panneaux.">Quelle est la différence entre autoproduction et autoconsommation ?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://terresolaire.com/Blog/autoconsommation-photovoltaique/taux-autoproduction-photovoltaique-et-consommation-electrique/">Taux d’autoproduction photovoltaïque et consommation électrique&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>En résumé, sans routeur ni obligation d’achat auprès d’EDF (car mes panneaux sont disposés au sol), j’aurai donné :&lt;/p>
+&lt;ul>
+&lt;li>entre 1155 kWh (autoconsommation à 30 %), soit ~238 euros (à 20.62&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> cts l’unité)&lt;/li>
+&lt;li>et 1320 kWh (autoconsommation à 20 %), soit ~272 euros (à 20.62 cts l’unité)&lt;/li>
+&lt;/ul>
+&lt;p>Certains diront qu’il vous faudra une installation bien plus grosse pour rentabiliser les 300 euros d’un routeur solaire comme le mien.&lt;/p>
+&lt;p>En mars 2023, un kilowatt heure acheté (en heure creuse dans mon cas) à Enedis coûte environ 16 cts d’euros.&lt;/p>
+&lt;p>En partant du principe que le nombre de kWh non achetés sur un an correspond à la différence de l’année 2021 et de l’année 2022, on obtient 465 kWh.&lt;/p>
+&lt;p>Il faudra donc 1875 kWh de surplus pour rentabiliser 300 euros à 16 cts d’euros l’unité.&lt;/p>
+&lt;p>Cela donne une rentabilité dans 4 ans avec 1.5kWc installés. De plus, le fait de consommer le maximum de la production va permettre de rentabiliser l’installation complète plus rapidement.&lt;/p>
+&lt;p>Car qui aime donner à ces entreprises qui ne nous font pas de cadeaux ? Pas moi !&lt;/p>
+&lt;h3 id="quelles-alternatives-au-routeur-solaire">Quelles alternatives au routeur solaire&lt;/h3>
+&lt;p>Il y en existe plusieurs :&lt;/p>
+&lt;ul>
+&lt;li>pour les cumulus simples (thermostat mécanique), il faudrait réduire la puissance de votre cumulus si la résistance le permet.
+&lt;ul>
+&lt;li>Solair&amp;rsquo;ethic a beaucoup d’idées sur le sujet : &lt;a href="https://www.youtube.com/@ErvannR/videos">allez les visionner sur sa chaîne YouTube&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>sans changer le cumulus, ce serait d’allumer le cumulus au moment de la journée où la production est la plus importante.
+&lt;ul>
+&lt;li>Toutefois, cette méthode ne s’adapte pas automatiquement à la production.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>La meilleure solution reste le routeur, mais il faut bien le choisir.&lt;/p>
+&lt;h2 id="consommation-annuelle">Consommation annuelle&lt;/h2>
+&lt;p>On consomme globalement toujours autant si l’on réalise la somme de toutes les sources confondues.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>Consommation 2021&lt;/th>
+&lt;th>Consommation 2022&lt;/th>
+&lt;th>Consommation 2023&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Janvier&lt;/td>
+&lt;td>320,00&lt;/td>
+&lt;td>417,00&lt;/td>
+&lt;td>248,60&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Février&lt;/td>
+&lt;td>295,00&lt;/td>
+&lt;td>100,00&lt;/td>
+&lt;td>297,70&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mars&lt;/td>
+&lt;td>260,00&lt;/td>
+&lt;td>275,30&lt;/td>
+&lt;td>277,20&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Avril&lt;/td>
+&lt;td>253,00&lt;/td>
+&lt;td>265,60&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mai&lt;/td>
+&lt;td>213,00&lt;/td>
+&lt;td>265,40&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Juin&lt;/td>
+&lt;td>156,00&lt;/td>
+&lt;td>244,30&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Juillet&lt;/td>
+&lt;td>82,00&lt;/td>
+&lt;td>255,40&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Août&lt;/td>
+&lt;td>187,00&lt;/td>
+&lt;td>219,70&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Septembre&lt;/td>
+&lt;td>58,00&lt;/td>
+&lt;td>214,90&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Octobre&lt;/td>
+&lt;td>347,00&lt;/td>
+&lt;td>186,30&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Novembre&lt;/td>
+&lt;td>298,00&lt;/td>
+&lt;td>238,60&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Décembre&lt;/td>
+&lt;td>369,00&lt;/td>
+&lt;td>263,30&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total&lt;/td>
+&lt;td>2838,00&lt;/td>
+&lt;td>2945,80&lt;/td>
+&lt;td>à venir&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Toutefois, si l’on regarde la consommation du réseau, on voit que cela a bien diminué.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/comparaison-2021-2022-2023.jpg"
+width="482"
+height="314"
+srcset="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/comparaison-2021-2022-2023_hu7ca90744f31635bf335982eac5647787_97789_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/comparaison-2021-2022-2023_hu7ca90744f31635bf335982eac5647787_97789_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/images/comparaison-2021-2022-2023_hu7ca90744f31635bf335982eac5647787_97789_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Comparaison des années 2021 à 2022 à 2023."
+class="gallery-image"
+data-flex-grow="153"
+data-flex-basis="368px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>Sur janvier, on a eu 8 jours où j’étais seul avec 1.4 kWh par jour. Ensuite, on est revenu à 8 kWh par jour.&lt;/li>
+&lt;li>En février 2023, on a consommé 85 % de plus, mais nous étions présents qu’une semaine en 2022 !&lt;/li>
+&lt;li>En mars, on a presque divisé par 2 la consommation du réseau, car le mois fut particulièrement bien ensoleillé.&lt;/li>
+&lt;/ul>
+&lt;p>Attendrons-nous les 1500 kWh annuels ? C’est très possible. Rendez-vous à la fin de l’année.&lt;/p>
+&lt;h2 id="quelles-sont-les-étapes-suivantes">Quelles sont les étapes suivantes&lt;/h2>
+&lt;h3 id="installation-solaire-secondaire-avec-batterie">Installation solaire secondaire avec batterie&lt;/h3>
+&lt;p>Je dois toujours câbler les 2 panneaux solaires de 240Wc pour les installer derrière ma maison.&lt;/p>
+&lt;p>Ils serviront à charger l’Ecoflow Delta 2.&lt;/p>
+&lt;p>L’idée est d’utiliser cet été la station d’énergie pour alimenter le réfrigérateur la nuit afin de voir l’impact sur la consommation journalière.&lt;/p>
+&lt;p>Je ne pense pas réaliser cet usage toute l’année, mais j’aimerais prendre des mesures.&lt;/p>
+&lt;p>En effet, la batterie alimentera le réfrigérateur toute la journée. Mais avec les deux panneaux et la recharge de 400 Wc pendant la journée devraient être largement suffisant pour recharger la consommation nocturne et apporter ce qu’il faut pour la journée.&lt;/p>
+&lt;p>Je suis d’accord que ce ne s’agit pas forcément d’une solution rentable, vu le prix de la batterie et la capacité que j’utilise (DOD entre 90 % et 30 %).&lt;/p>
+&lt;p>Toutefois, la batterie nous a été utile à plusieurs reprises cet hiver pour alimenter le poêle à granulés.&lt;/p>
+&lt;h3 id="nettoyage-des-panneaux-et-sécurisation-contre-le-vent">Nettoyage des panneaux et sécurisation contre le vent&lt;/h3>
+&lt;p>J’ai nettoyé les champs 3 fois en un an. Mais c’est bien l’été où il y a le plus de travail.&lt;/p>
+&lt;p>En fait, je positionne les champs, surtout celui du Sud, bien plus bas et donc les chats viennent sans problème marcher dessus.&lt;/p>
+&lt;p>Je dois aussi attacher le champ Sud-Ouest, car il y a eu un bon coup de vent il y a 15 jours et cela a déconnecté le champ du reste. Du coup, l’onduleur était en erreur.&lt;/p>
+&lt;p>J’ai réussi à remettre le tout en route rapidement.&lt;/p>
+&lt;p>En attendant le prochain rendez-vous en fin d’année 2023, ==merci d’avoir lu cet article et n’hésitez pas à me soutenir en vous abonnant !==&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Voir &lt;a href="https://particulier.edf.fr/content/dam/2-Actifs/Documents/Offres/Grille_prix_Tarif_Bleu.pdf">la grille tarifaire du tarif réglementé (PDF)&lt;/a> (&lt;a href="https://particulier.edf.fr/fr/accueil/electricite-gaz/offres-electricite/tarif-bleu.html">lien du site web EDF&lt;/a>).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Retour d'expérience photovoltaïque après 9 mois (partie 2)</title><link>https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg" alt="Featured image of post Retour d'expérience photovoltaïque après 9 mois (partie 2)" />&lt;p>
+&lt;img src="https://jeremielitzLer.fr/images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg"
+loading="lazy"
+alt="Vue des champs Sud et Sud-Est"
+>
+&lt;/p>
+&lt;p>Les champs Sud et Sud-Est en position Printemps-Automne.&lt;/p>
+&lt;p>En cet hiver 2022-2023, il devient de plus en plus intéressant de produire sa propre électricité. Mais quand est-il vraiment ?Dans cet article, je présente les chiffres de 9 mois de fonctionnement de notre installation photovoltaïque.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="la-série-darticles">La série d&amp;rsquo;articles&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-06/retour-d-experience-sur-une-installation-pv-1mois/">Installation PV - quel retour d&amp;rsquo;expérience après 2 mois ?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/">Installation PV - quel retour d&amp;rsquo;expérience après 9 mois ? (partie 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/">Installation PV - quel retour d&amp;rsquo;expérience après 1 an ?&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="quelques-rappels">Quelques rappels&lt;/h2>
+&lt;p>En mars, nous avons mis en service l’installation photovoltaïque sur ma propriété.&lt;/p>
+&lt;p>Elle est composée de :&lt;/p>
+&lt;ul>
+&lt;li>huit panneaux &lt;em>EGVNG&lt;/em> de 190 Wc.&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/specifications-des-panneaux.jpg"
+width="600"
+height="1067"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/specifications-des-panneaux_hua8f9de4522e8121c01ff6b3a7eba73ef_371854_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/specifications-des-panneaux_hua8f9de4522e8121c01ff6b3a7eba73ef_371854_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/specifications-des-panneaux_hua8f9de4522e8121c01ff6b3a7eba73ef_371854_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Label derrière un panneau solaire"
+class="gallery-image"
+data-flex-grow="56"
+data-flex-basis="134px"
+>
+&lt;/p>
+&lt;p>Les spécifications techniques des panneaux.&lt;/p>
+&lt;ul>
+&lt;li>un micro-onduleur APS QS1 4 MPPT (voir &lt;a href="https://emea.apsystems.com/wp-content/uploads/2018/10/APsystems-Microinverter-QS1-For-EMEA-User-manual_10.18_French.pdf">les spécifications détaillées de l’onduleur&lt;/a>).&lt;/li>
+&lt;li>un &lt;a href="https://mk2pvrouter.co.uk/">routeur solaire de Robin Emley&lt;/a> (&lt;a href="https://mk2pvrouter.com/">un couple français a repris fin 2022 la vente son routeur.&lt;/a>).&lt;/li>
+&lt;li>et quelques éléments électriques indispensables pour une installation photovoltaïque.&lt;/li>
+&lt;/ul>
+&lt;p>Le tout a acheté au prix de 2057 euros pour :&lt;/p>
+&lt;ul>
+&lt;li>la prestation d’Ervann de Solairethic&lt;/li>
+&lt;li>les matériaux fournis par Ervann&lt;/li>
+&lt;li>le routeur solaire envoyé du Royaume-Uni par Robin Emley et monté par Anthony, le Profes&amp;rsquo;solaire.&lt;/li>
+&lt;li>les quelques éléments pour organiser l’alimentation en sortie du routeur et pour le contrôle du cumulus.&lt;/li>
+&lt;/ul>
+&lt;h2 id="bilan-de-consommation-totale-cumulée-du-printemps-été-et-automne">Bilan de consommation totale cumulée du printemps, été et automne&lt;/h2>
+&lt;h3 id="comparaison-des-4dernières-années">Comparaison des 4 dernières années&lt;/h3>
+&lt;p>Et si l’on compare la consommation en 2019, 2020 et 2021 à celle de 2022, on voit que la consommation a diminué 41 % en moyenne :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-comparee-2019-2020-2021-2022.jpg"
+width="795"
+height="355"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-comparee-2019-2020-2021-2022_hu26415b1c0bef6858a6061175ce357e89_214632_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-comparee-2019-2020-2021-2022_hu26415b1c0bef6858a6061175ce357e89_214632_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-comparee-2019-2020-2021-2022_hu26415b1c0bef6858a6061175ce357e89_214632_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Tableau comparant les années 2019 à 2022 en consommation mensuelle en kWh"
+class="gallery-image"
+data-flex-grow="223"
+data-flex-basis="537px"
+>
+&lt;/p>
+&lt;p>Le résultat est clair, n’est-ce pas ?.&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Remarques sur janvier, février et mars 2022" >
+&lt;p class="jli-notice-title">Remarques sur janvier, février et mars 2022&lt;/p>&lt;p>En janvier 2022, on a eu notre plus grosse consommation sur les 4 années comparées.&lt;/p>
+&lt;p>En février et début mars 2022, nous étions à Siwa.&lt;/p>
+&lt;p>Il faudra attendre encore 3 mois pour voir comment l’installation aide à diminuer la consommation sur ces mois d’hiver.&lt;/p>&lt;/div>
+&lt;h3 id="conclusion">Conclusion&lt;/h3>
+&lt;ul>
+&lt;li>L’installation solaire a vraiment aidé à diminuer la consommation du réseau.&lt;/li>
+&lt;li>J’avais un objectif à passer sous les 2000 kWh consommés sur le réseau. Objectif : atteint avec 9 mois !&lt;/li>
+&lt;/ul>
+&lt;p>==Et la consommation électrique globable ?==&lt;/p>
+&lt;p>C’est bien de réduire la consommation électrique du réseau, mais quand est-il de la réduction de la consommation électrique globale, c’est-à-dire en provenance du réseau et de l’installation photovoltaïque ?&lt;/p>
+&lt;p>Dans la réalité, nous n’avons pas réduit la consommation. Nous ne l’avons pas augmenté non plus de façon significative.&lt;/p>
+&lt;p>La consommation optimisée de la production montre en été une consommation plus élevée, principalement due à l’ECS et le déshydrateur.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-totale-comparee-2019-2020-2021-2022.jpg"
+width="616"
+height="310"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-totale-comparee-2019-2020-2021-2022_huff8b0dc71d5a94146fb603a6e4ba803d_145116_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-totale-comparee-2019-2020-2021-2022_huff8b0dc71d5a94146fb603a6e4ba803d_145116_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/consommation-totale-comparee-2019-2020-2021-2022_huff8b0dc71d5a94146fb603a6e4ba803d_145116_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Tableau comparant les années 2019 à 2022 en consommation totale mensuelle en kWh"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="476px"
+>
+&lt;/p>
+&lt;p>Le résultat devient nuancé en regardant le cumul de la consommation photovoltaïque et de la consommation du réseau..&lt;/p>
+&lt;p>On se peut ainsi se demander si nous avons fait une affaire.&lt;/p>
+&lt;p>Toutefois :&lt;/p>
+&lt;ul>
+&lt;li>en juillet, j’ai utilisé tous les jours le déshydrateur pour sécher des abricots, des poires et de la verveine.&lt;/li>
+&lt;li>en septembre, nous avons consommé 7 % de plus que 2019 et 2020 (sachant qu’en 2021, nous étions absents la moitié du mois)&lt;/li>
+&lt;li>en mai, juin et août, on peut dire que les 200 litres d’eau chaude ont servi de batterie pour stocker la production.&lt;/li>
+&lt;li>d’octobre à décembre, la différence est claire, mais cela a à voir plus avec la gestion du cumulus vu l’absence de soleil, surtout les 2 derniers mois.&lt;/li>
+&lt;li>enfin, l’utilisation en journée de la plaque à induction au lieu de la cuisinière à gaz augmente la consommation électrique. Mais en été, c’est normal.&lt;/li>
+&lt;/ul>
+&lt;p>On va continuer à apprendre.&lt;/p>
+&lt;h2 id="consommation-pour-lecs">Consommation pour l’ECS&lt;/h2>
+&lt;div class="jli-notice jli-notice-tip" id="Définition de « ECS »" >
+&lt;p class="jli-notice-title">Définition de « ECS »&lt;/p>&lt;p>Il s’agit de l’eau chaude sanitaire, dans notre cas, chauffée par une résistance de 2400 W dans un cumulus de 200 litres.&lt;/p>&lt;/div>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>2020&lt;/th>
+&lt;th>2021&lt;/th>
+&lt;th>2022&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>117,00&lt;/td>
+&lt;td>120,00&lt;/td>
+&lt;td>138,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>109,00&lt;/td>
+&lt;td>106,00&lt;/td>
+&lt;td>60,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>112,00&lt;/td>
+&lt;td>93,00&lt;/td>
+&lt;td>46,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>88,00&lt;/td>
+&lt;td>83,00&lt;/td>
+&lt;td>31,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>73,00&lt;/td>
+&lt;td>81,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>84,00&lt;/td>
+&lt;td>35,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>44,00&lt;/td>
+&lt;td>8,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>18,00&lt;/td>
+&lt;td>48,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>53,00&lt;/td>
+&lt;td>12,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>64,00&lt;/td>
+&lt;td>122,00&lt;/td>
+&lt;td>14,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>107,00&lt;/td>
+&lt;td>120,00&lt;/td>
+&lt;td>78,80&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>118,00&lt;/td>
+&lt;td>129,00&lt;/td>
+&lt;td>124,50&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total&lt;/td>
+&lt;td>987,00&lt;/td>
+&lt;td>957,00&lt;/td>
+&lt;td>492,30&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="la-conclusion">La conclusion&lt;/h3>
+&lt;ul>
+&lt;li>La consommation depuis du réseau Enedis a disparu de mai à septembre, même avec le mauvais temps d’août et septembre.&lt;/li>
+&lt;li>En effet, j’ai remarqué que si le routeur solaire fournissait au moins 2 kWh au cumulus chaque jour, on n’avait pas besoin de faire l’appoint avec le réseau.&lt;/li>
+&lt;li>À partir d’octobre et surtout en novembre et décembre, la météo fut si grise qu’on a produit en moyenne 2,08 kWh par jour en novembre et à peine plus d’un kWh en décembre… :(&lt;/li>
+&lt;/ul>
+&lt;h2 id="la-production">La production&lt;/h2>
+&lt;h3 id="les-chiffres-mois-par-mois">Les chiffres mois par mois&lt;/h3>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/la-production-de-l%E2%80%99installation-sur-9-mois.jpg"
+width="847"
+height="321"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/la-production-de-l%E2%80%99installation-sur-9-mois_hu365fcb1e64c75a5c9cab9cb6d8cdb55f_50365_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/la-production-de-l%E2%80%99installation-sur-9-mois_hu365fcb1e64c75a5c9cab9cb6d8cdb55f_50365_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/la-production-de-l%E2%80%99installation-sur-9-mois_hu365fcb1e64c75a5c9cab9cb6d8cdb55f_50365_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="La production de l’installation sur 9 mois"
+class="gallery-image"
+data-flex-grow="263"
+data-flex-basis="633px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>En bleu, il s’agit de la production totale.&lt;/li>
+&lt;li>En jaune, il s’agit de l’autoconsommation.&lt;/li>
+&lt;li>En vert, il s’agit du surplus offert au réseau, sûrement nos plus proches voisins.&lt;/li>
+&lt;/ul>
+&lt;h3 id="quelle-économie-sur-9mois">Quelle économie sur 9 mois&lt;/h3>
+&lt;p>Si je prends le coût réel du kWh incluant l’abonnement mois par mois (variant de 19 centimes à 27 centimes d’euros), j’arrive à un peu plus de 300 euros en 9 mois. Cela rentabilise déjà le routeur solaire.&lt;/p>
+&lt;p>Nous sommes : ce n’est toutefois pas aussi simple, et certains me diront qu’il faut calculer autrement ou que le routeur est un achat superflu.&lt;/p>
+&lt;p>Vu la performance des deux derniers mois, je ne suis pas sûr qu’il y ait un gain important dans les trois à venir avec le routeur. Cependant, de mars à octobre, ça vaut le coup.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Month&lt;/th>
+&lt;th>Coût kWh acheté&lt;/th>
+&lt;th>Montant économisé&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;td>N/A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>0,23 €&lt;/td>
+&lt;td>1,67 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>0,23 €&lt;/td>
+&lt;td>33,83 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>0,23 €&lt;/td>
+&lt;td>43,28 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>0,23 €&lt;/td>
+&lt;td>42,56 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>0,25 €&lt;/td>
+&lt;td>50,94 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>0,25 €&lt;/td>
+&lt;td>38,55 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>0,27 €&lt;/td>
+&lt;td>40,23 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>0,27 €&lt;/td>
+&lt;td>29,46 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>0,27 €&lt;/td>
+&lt;td>16,76 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>0,19 € &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>6,60 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>303,88 €&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="retour-sur-investissement">Retour sur investissement&lt;/h2>
+&lt;p>Ce sujet risque d’être controversé auprès de certains qui ne seront pas d’accord avec ma méthode de calcul.&lt;/p>
+&lt;h3 id="les-données-théoriques-pvg">Les données théoriques PVG&lt;/h3>
+&lt;p>Pour commencer, je me suis rendu sur &lt;a href="https://re.jrc.ec.europa.eu/pvg_tools/fr/#PVP">le site PVG&lt;/a> pour estimer la production théorique, hors météo et ombre de la végétation, avec les entrées suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Emplacement [Lat/Lon] : 45 063, 4 807&lt;/li>
+&lt;li>Horizon : Calculé&lt;/li>
+&lt;li>Base de données : PVGIS-SARAH2&lt;/li>
+&lt;li>Technologie PV : Silicium cristallin&lt;/li>
+&lt;li>Puissance PV installée [kWp] : 1,52&lt;/li>
+&lt;li>Pertes du système [%] : 14,00&lt;/li>
+&lt;/ul>
+&lt;p>Le résultat m’a donné ceci :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>Production théorique (kWh/mois)&lt;/th>
+&lt;th>Angle&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>83,37&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>121,58&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>180,82&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>189,12&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>220,47&lt;/td>
+&lt;td>35°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>234,06&lt;/td>
+&lt;td>35°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>242,60&lt;/td>
+&lt;td>35°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>227,92&lt;/td>
+&lt;td>35°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>193,91&lt;/td>
+&lt;td>35°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>147,54&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>92,21&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>69,44&lt;/td>
+&lt;td>60°&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total général&lt;/td>
+&lt;td>2003,04&lt;/td>
+&lt;td>-&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Ce qui donne cette courbe :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/production-theorique-vs-production-reelle-vs-autoconsommation.jpg"
+width="821"
+height="316"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/_hu96e1f2905d0d6f5cfa71ab927865e0ba_63990_31955949fc0fe30d1ed7c791f09fc0ef.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/_hu96e1f2905d0d6f5cfa71ab927865e0ba_63990_065212c7738314a7bef8f02ebbca973b.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/images/_hu96e1f2905d0d6f5cfa71ab927865e0ba_63990_45e2eebdd2112220e15d33fe52d15c7b.jpg 1024w"
+loading="lazy"
+alt="Production théorique vs Production réelle vs Autoconsommation"
+class="gallery-image"
+data-flex-grow="259"
+data-flex-basis="623px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>En bleu, il s’agit de la production théorique.&lt;/li>
+&lt;li>En vert, il s’agit de la production réelle.&lt;/li>
+&lt;li>En rouge, il s’agit de l’autoconsommation.&lt;/li>
+&lt;li>En jaune, il s’agit du surplus offert au réseau, sûrement nos plus proches voisins.&lt;/li>
+&lt;/ul>
+&lt;p>Je peux déjà vous annoncer que je suis constamment 15 à 25 % en dessous de la théorie, voire même 33 % et 48 % en novembre et en décembre respectivement.&lt;/p>
+&lt;h3 id="calcul-de-la-production-annuelle-estimée">Calcul de la production annuelle estimée&lt;/h3>
+&lt;p>Je ne sais pas quel calcul sera le plus juste. Je pars donc sur les données réelles d’avril à décembre et sur une estimation pour janvier à mars [^fourth] pour calculer :&lt;/p>
+&lt;ul>
+&lt;li>La production mensuelle&lt;/li>
+&lt;li>Le taux d’autoconsommation&lt;/li>
+&lt;li>Le taux de production&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-tip" id="Définitions" >
+&lt;p class="jli-notice-title">Définitions&lt;/p>&lt;ul>
+&lt;li>Taux d’autoconsommation : correspond à la production consommée moins le rejet sur le réseau.&lt;/li>
+&lt;li>Taux de production : correspond à la Production réelle divisée par la Production théorique.&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;p>Cela donne :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>Taux d’autoconsommation&lt;/th>
+&lt;th>Taux de production&lt;/th>
+&lt;th>Production (kWh)&lt;/th>
+&lt;th>Production autoconsommée&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>98,00 % &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>60,00 % &lt;sup id="fnref1:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>50,02 &lt;sup id="fnref2:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>49,02 &lt;sup id="fnref3:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>98,00 % &lt;sup id="fnref4:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>70,00 % &lt;sup id="fnref5:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>85,11 &lt;sup id="fnref6:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>83,40 &lt;sup id="fnref7:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>98,00 % &lt;sup id="fnref8:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>80,00 % &lt;sup id="fnref9:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>144,66 &lt;sup id="fnref10:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;td>141,76 &lt;sup id="fnref11:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>91,91 %&lt;/td>
+&lt;td>84,92 %&lt;/td>
+&lt;td>160,60&lt;/td>
+&lt;td>147,60&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>88,59 %&lt;/td>
+&lt;td>95,43 %&lt;/td>
+&lt;td>210,40&lt;/td>
+&lt;td>186,40&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>89,72 %&lt;/td>
+&lt;td>87,29 %&lt;/td>
+&lt;td>204,30&lt;/td>
+&lt;td>183,30&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>90,68 %&lt;/td>
+&lt;td>92,91 %&lt;/td>
+&lt;td>225,40&lt;/td>
+&lt;td>204,40&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>80,28 %&lt;/td>
+&lt;td>84,55 %&lt;/td>
+&lt;td>192,70&lt;/td>
+&lt;td>154,70&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>98,01 %&lt;/td>
+&lt;td>77,82 %&lt;/td>
+&lt;td>150,90&lt;/td>
+&lt;td>147,90&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>99,09 %&lt;/td>
+&lt;td>74,08 %&lt;/td>
+&lt;td>109,30&lt;/td>
+&lt;td>108,30&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>98,40 %&lt;/td>
+&lt;td>67,89 %&lt;/td>
+&lt;td>62,60&lt;/td>
+&lt;td>61,60&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>97,25 %&lt;/td>
+&lt;td>52,28 %&lt;/td>
+&lt;td>36,30&lt;/td>
+&lt;td>35,30&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>Soit un total de :&lt;/td>
+&lt;td>1503,69 &lt;sup id="fnref12:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Soit un total de 1503,69 kWh annuels consommés.&lt;/p>
+&lt;h3 id="calcul-de-la-date-de-rentabilité-de-linstallation">Calcul de la date de rentabilité de l&amp;rsquo;installation&lt;/h3>
+&lt;p>Pour information, allez lire &lt;a href="https://jeremielitzLer.fr/post/2023-01/calculer-le-retour-sur-investissement-pv/">cet article&lt;/a> pour un calcule plus juste.&lt;/p>
+&lt;p>Avec une augmentation annuelle du prix du kWh acheté à EDF à 8 %&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>, ce qui me semble relativement optimiste vu la situation début 2023, l’installation devient rentable au bout de &lt;strong>==5 ans et 2 mois environ, soit mai 2027==&lt;/strong>.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Année&lt;/th>
+&lt;th>Production annuelle&lt;/th>
+&lt;th>Prix du kWh&lt;/th>
+&lt;th>Économie annuelle&lt;/th>
+&lt;th>Cumul&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>2023&lt;/td>
+&lt;td>1503,69&lt;/td>
+&lt;td>0,23 €&lt;/td>
+&lt;td>345,85 €&lt;/td>
+&lt;td>345,85 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2024&lt;/td>
+&lt;td>1503,69&lt;/td>
+&lt;td>0,25 €&lt;/td>
+&lt;td>373,52 €&lt;/td>
+&lt;td>719,36 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2024&lt;/td>
+&lt;td>1503,69&lt;/td>
+&lt;td>0,27 €&lt;/td>
+&lt;td>403,40 €&lt;/td>
+&lt;td>1122,76 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2025&lt;/td>
+&lt;td>1503,69&lt;/td>
+&lt;td>0,29 €&lt;/td>
+&lt;td>435,67 €&lt;/td>
+&lt;td>1558,43 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2026&lt;/td>
+&lt;td>1503,69&lt;/td>
+&lt;td>0,31 €&lt;/td>
+&lt;td>470,52 €&lt;/td>
+&lt;td>2028,95 €&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2027&lt;/td>
+&lt;td>100,00&lt;/td>
+&lt;td>0,34 €&lt;/td>
+&lt;td>33,79 €&lt;/td>
+&lt;td>&lt;strong>2062,75 €&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="quelle-est-la-suite">Quelle est la suite&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>j’aimerais trouver un moyen d’utiliser le déshydrateur sans chauffer la maison l’été 😂&lt;/p>
+&lt;ul>
+&lt;li>je pense à une rallonge qui courait de la sortie 2 du routeur jusqu’à la véranda.&lt;/li>
+&lt;li>pour y arriver, il y a de la distance à parcourir et il faudra étudier la solution sans perturber l’intérieur de la maison.&lt;/li>
+&lt;li>cela permettrait néanmoins d’amener une alimentation issue du routeur solaire à un endroit utile.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>j&amp;rsquo;aimerais réduire la résistante du chauffe-eau en fonction de ce que l’hiver nous apprendra&lt;/p>
+&lt;ul>
+&lt;li>l&amp;rsquo;objectif serait de réduire si possible de réduire l&amp;rsquo;abonnement EDF de 6 kWh à 3 kWh.&lt;/li>
+&lt;li>quelle sera la durée optimale de chauffe de l’ECS tout en gardant l’option de faire tourner une lessive ou le lave-vaisselle la même nuit, sachant qu’il faudra éviter que deux tournent ensemble pour ne pas dépasser 3 kW de puissance instannée.&lt;/li>
+&lt;li>il faut que cette modification soit simple et qu&amp;rsquo;elle permette l’ajustement rapide entre 800 W, 1600 W et 2400 W de puissance.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>j’ai aussi pensé à augmenter de 480 Wc la puissance de l’installation&lt;/p>
+&lt;ul>
+&lt;li>en effet, sur 120 m de câble en 6 mm², je peux ajouter environ cette puissance sans dépasser la limite où le câble surchaufferait.&lt;/li>
+&lt;li>toutefois, les finances sont limitées en ce moment. Certes, grâce à Solair&amp;rsquo;éthic, je peux me fournir en panneaux peu chers (50 euros pour un panneau recyclé de 240 Wc par exemple), mais il faut débourser plus de 200 euros pour un micro-onduleur.&lt;/li>
+&lt;li>je ne suis pas sûr que l’investissement nous permet de gagner beaucoup.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusion-">Conclusion :)&lt;/h2>
+&lt;p>J’espère que vous avez trouvé cela utile. Je sais que cela fait beaucoup de chiffres.&lt;/p>
+&lt;p>Mais, dans mon expérience, pour prendre de bonnes décisions, il faut des données, des mesures, sinon, c’est plus du hasard.&lt;/p>
+&lt;p>Je sais aussi que certains ont sûrement fait autrement ou qu’ils trouveront des défauts à mes calculs ou ma réflexion.&lt;/p>
+&lt;p>Partagez vos avis de façon constructive. Avant tout, ce n’est pas avoir raison à 100 % qui compte, c’est de réaliser un petit effort chez soi pour réduire la pression économique sur nos foyers.&lt;/p>
+&lt;p>En attendant le point à 12 mois, ==merci pour votre soutien !==&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>En décembre 2022, nous sommes passés à EDF au lieu d’Engie… J’aurais dû faire le changement il y a bien longtemps. Mais la hausse de 25 % sur le renouvellement du contrat annuel 2022-2023 d’Engie m’a permis de comprendre qu’EDF est bien moins cher, même avec l’augmentation prévue en février 2023.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Les valeurs sont estimées&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref4:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref5:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref6:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref7:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref8:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref9:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref10:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref11:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref12:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>8 % correspondent au taux d’augmentation &lt;em>moyen&lt;/em> du prix du kWh chaque année en 2014 et 2022, 4 à 20 % en réalité.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Retour d'expérience photovoltaïque après 9 mois (partie 1)</title><link>https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2022-12-15-tableau-pv-routeur-solaire-et-tableau-electrique.jpg" alt="Featured image of post Retour d'expérience photovoltaïque après 9 mois (partie 1)" />&lt;p>Depuis la mise en route, j’ai réalisé un bon nombre de modifications, principalement dans la maison et pour le cumulus. Regardons ensemble les détails.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="la-série-darticles">La série d&amp;rsquo;articles&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-06/retour-d-experience-sur-une-installation-pv-1mois/">Installation PV - quel retour d&amp;rsquo;expérience après 2 mois ?&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/">Installation PV - quel retour d&amp;rsquo;expérience après 9 mois ? (partie 2)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/">Installation PV - quel retour d&amp;rsquo;expérience après 1 an ?&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="ajustements-extérieurs-de-linstallation">Ajustements extérieurs de l’installation&lt;/h2>
+&lt;h3 id="orientation-verticale-des-champs-de-panneaux">Orientation verticale des champs de panneaux&lt;/h3>
+&lt;p>J’ai changé 3 fois l’inclinaison des champs sur les 9 mois :&lt;/p>
+&lt;ul>
+&lt;li>fin juin :
+&lt;ul>
+&lt;li>j’ai mis le champ Sud à 30°&lt;/li>
+&lt;li>j’ai abaissé un peu les champs Sud-Est et Sud-Ouest, mais j’étais limité et donc ils n’étaient pas aussi bas.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>fin août, j’ai remonté le champ Sud à 45°&lt;/li>
+&lt;li>fin novembre, j’ai remonté tous les champs à au moins 60°&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/2022-12-31-vue-des-champs-sud-et-sud-est.jpg"
+width="600"
+height="338"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/2022-12-31-vue-des-champs-sud-et-sud-est_huf289e8769e4eac32fdc96b07c0710158_264214_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/2022-12-31-vue-des-champs-sud-et-sud-est_huf289e8769e4eac32fdc96b07c0710158_264214_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/2022-12-31-vue-des-champs-sud-et-sud-est_huf289e8769e4eac32fdc96b07c0710158_264214_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Vue des champs Sud et Sud-Est"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>
+&lt;/p>
+&lt;p>Les champs Sud et Sud-Est en position Printemps-Automne.&lt;/p>
+&lt;h3 id="nettoyage-des-panneaux">Nettoyage des panneaux&lt;/h3>
+&lt;p>J’ai réalisé un nettoyage mensuel.&lt;/p>
+&lt;p>Avec pas mal de chats autour de la propriété, j’ai vu que certains sont venus marcher sur les panneaux, mais heureusement, les moutons s’en sont abstenus.&lt;/p>
+&lt;h2 id="ajustements-intérieurs-de-linstallation">Ajustements intérieurs de l’installation&lt;/h2>
+&lt;h3 id="réorganisation-du-tableau-_routeur-solaire_">Réorganisation du tableau &lt;em>Routeur solaire&lt;/em>&lt;/h3>
+&lt;h4 id="au-printemps">Au printemps&lt;/h4>
+&lt;p>Au mois de mai, je n’avais pas une solution optimale pour passer de l’alimentation solaire à l’alimentation réseau…&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/installation.electrique-photovoltaique-version-2022-05-23.jpg"
+width="1156"
+height="2112"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hu4a0f02f6ca515d28ec724ab8118eab77_183908_84fe978d2a4358bd1f7f3e256dfd79a5.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hu4a0f02f6ca515d28ec724ab8118eab77_183908_5b21e24d24b274dc6cc44bbfb3c194bf.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hu4a0f02f6ca515d28ec724ab8118eab77_183908_ad5bad7d09a51a7294704276f9ade7be.jpg 1024w"
+loading="lazy"
+alt="Schéma électrique du 23 mai 2022"
+class="gallery-image"
+data-flex-grow="54"
+data-flex-basis="131px"
+>
+&lt;/p>
+&lt;h4 id="a-la-fin-de-lété">A la fin de l’été&lt;/h4>
+&lt;p>Fin août 2022, j’ai enfin trouvé la configuration la plus pratique pour gérer les deux sources d’alimentation du cumulus.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/installation.electrique-photovoltaique-version-2022-08-31.jpg"
+width="1055"
+height="1859"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hub592dfe5998d0baaa4e3e3dd1f1dc897_184974_94ed55d004605979f0c52e4b56614edf.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hub592dfe5998d0baaa4e3e3dd1f1dc897_184974_5dc51c0730fbc5b1724416c233ef481e.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/_hub592dfe5998d0baaa4e3e3dd1f1dc897_184974_beb9dd6a206e9ca59cda843d27d3abb8.jpg 1024w"
+loading="lazy"
+alt="Schéma électrique à la fin de l’été 2022"
+class="gallery-image"
+data-flex-grow="56"
+data-flex-basis="136px"
+>
+&lt;/p>
+&lt;p>Ce qui a changé :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>je n’utilise plus le contacteur avec le signal HC/HP d’EDF. Il n’est plus utile et j’explique pourquoi dans les lignes suivantes.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>j’ai conservé les disjoncteurs 15A-1 et 15A-2 pour avoir un contrôle indépendant sur les sorties du routeur solaire.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>j’ai supprimé les compteurs mécaniques pour compter l’énergie utilisée sur les prises connectées aux sorties du routeur solaire. Voir &lt;a href="#branchement-du-cumulus">plus bas pourquoi&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>j’ai installé un programmateur horaire à pins pour contrôler quand et combien de temps le réseau alimente le cumulus.&lt;/p>
+&lt;ul>
+&lt;li>Le disjoncteur 15A-3 permet de couper l’alimentation réseau du cumulus quand cela est nécessaire.&lt;/li>
+&lt;li>Le compteur d’énergie mécanique me permet de continuer le suivi de la consommation du cumulus sur le réseau.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="branchement-du-cumulus">Branchement du cumulus&lt;/h3>
+&lt;p>Au départ, j’ai branché le cumulus de la mauvaise façon.&lt;/p>
+&lt;p>Je ne pouvais pas laisser le disjoncteur historique dans le garage et le disjoncteur de la sortie 1 du routeur actifs tous les deux.&lt;/p>
+&lt;p>Sinon, ça sautait, car le branchement n’était pas en parallèle.&lt;/p>
+&lt;p>Cela m’obligeait à tout éteindre au niveau du tableau général, me rendre dans le garage, activer ou désactiver l’alimentation réseau et remettre l’alimentation sur le tableau général… &lt;em>&lt;strong>Pas pratique&lt;/strong>&lt;/em>.&lt;/p>
+&lt;p>Après plus de réflexion et de l’aide d’un ami, j’ai réussi à brancher les deux sources. Le contrôle au niveau du tableau du routeur est bien plus pratique.&lt;/p>
+&lt;p>Sur la sortie routeur, j’ai enlevé les compteurs mécaniques d’énergie, car le comptage était faux.&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Note personnelle" >
+&lt;p class="jli-notice-title">Note personnelle&lt;/p>&lt;p>Je pense que cela est causé par le routeur et la façon dont il laisse passer le courant par impulsion.&lt;/p>
+&lt;p>Robin Emley m’a dit que cela dépend de &lt;a href="https://mk2pvrouter.co.uk/improved-calibration.html">la calibration de la pince ampèremétrique&lt;/a>. Pour le moment, cela ne me dérange pas.&lt;/p>
+&lt;p>Avec le compteur d’énergie numérique sur le tableau de la sortie solaire, cela m’importait peu de ne pas avoir l’information précise du surplus traversé par le routeur.&lt;/p>
+&lt;p>Le routeur indique le comptage journalier et celui-ci est réinitialisé chaque jour. Je me satisfais de ce que je peux noter chaque jour, même si en notre absence, on ne peut pas connaitre la quantité de surplus redirigée par le routeur.&lt;/p>&lt;/div>
+&lt;p>Au lieu d’aller directement du tableau général au cumulus, j’ai installé :&lt;/p>
+&lt;ul>
+&lt;li>un programmateur horaire à pins
+&lt;ul>
+&lt;li>pour contrôler le temps d’utilisation du réseau la nuit.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>un compteur d’énergie mécanique
+&lt;ul>
+&lt;li>pour compter le nombre de kWh consommés du réseau&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>un disjoncteur derrière le compteur.
+&lt;ul>
+&lt;li>pour contrôler la possibilité de complètement désactiver l’utilisation du réseau pour chauffer l’eau.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Dans le garage, sur le support en OSB isolant le cumulus, j’ai installé le disjoncteur 15A-4 (voir &lt;a href="#r%c3%a9organisation-du-tableau-routeur-solaire">le schéma&lt;/a>).&lt;/p>
+&lt;p>J’ai utilisé un câble triphasé du tableau du routeur solaire au cumulus :&lt;/p>
+&lt;ul>
+&lt;li>une phase et ligne pour l’alimentation réseau&lt;/li>
+&lt;li>une phase et ligne pour l’alimentation du routeur&lt;/li>
+&lt;/ul>
+&lt;p>Le câble de terre remonte du cumulus au tableau du routeur solaire.&lt;/p>
+&lt;p>L’entrée du disjoncteur reçoit :&lt;/p>
+&lt;ul>
+&lt;li>l’alimentation du réseau passant par le programmateur horaire&lt;/li>
+&lt;li>l’alimentation du routeur solaire&lt;/li>
+&lt;/ul>
+&lt;p>La sortie est branchée comme avant au cumulus.&lt;/p>
+&lt;h2 id="optimisation-de-la-production">Optimisation de la production&lt;/h2>
+&lt;h3 id="avec-le-cumulus">Avec le cumulus&lt;/h3>
+&lt;p>En octobre, j’ai réactivé l’alimentation du cumulus par le réseau.&lt;/p>
+&lt;p>A ce moment-là, 1.5 h suffisaient largement pour les 5 jours où cela fut nécessaire.&lt;/p>
+&lt;p>En novembre, on a laissé le réseau presque tous les jours dû à la très mauvaise météo… J’ai augmenté à 2.5 h de chauffe la première semaine de décembre. J’ai diminué à 2h une semaine après, car cela suffisait pour les douches chaudes de mesdames 🚿&lt;/p>
+&lt;p>&lt;strong>Le gros avantage&lt;/strong> :&lt;/p>
+&lt;ul>
+&lt;li>en novembre, on a consommé -50 % de moins du réseau par rapport aux trois dernières années malgré l’absence du soleil une bonne partie du mois.
+&lt;ul>
+&lt;li>avant, le cumulus tournait 4h par nuit d’hiver…&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>aussi, lorsqu’on lançait le lave-vaisselle en fin de nuit, le cumulus se remettait en route…&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-en-fevrier-2022.jpg"
+width="983"
+height="433"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-en-fevrier-2022_hu7e623cc11e425dfe49ae0e31087e213f_88904_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-en-fevrier-2022_hu7e623cc11e425dfe49ae0e31087e213f_88904_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-en-fevrier-2022_hu7e623cc11e425dfe49ae0e31087e213f_88904_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de relevé Linky en février 2022"
+class="gallery-image"
+data-flex-grow="227"
+data-flex-basis="544px"
+>
+&lt;/p>
+&lt;p>Le pic de 4h30 correspond au cycle 1 du lave-vaisselle où le cumulus se remettant en route pour chauffer l’eau que le lave-vaisselle a utilisée. La résistance du cumulus se met en route de 22h30 à 2h00 avec le signal HP/HC pour la chauffe principale..&lt;/p>
+&lt;p>&lt;strong>Autre point important&lt;/strong> : j’ai mis le thermostat à 5 sur 5 au lieu de 2 sur 5 en été et 3 sur 5 en hiver quand on alimentait sur le réseau uniquement.&lt;/p>
+&lt;p>Oui, l’eau était bien chaude le printemps, l’été et l’automne. Toutefois, cela a permis d’avoir 2 à 3 jours de mauvais temps en septembre avec peu ou pas de soleil et ne pas utiliser le réseau pour chauffer l’ESC.&lt;/p>
+&lt;p>Je l’ai remarqué principalement en août et septembre.&lt;/p>
+&lt;p>Est-ce que cela va faire vieillir la résistance ? Si vous avez la réponse, &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">partagez-la moi&lt;/a> :)&lt;/p>
+&lt;h3 id="avec-le-déshydrateur">Avec le déshydrateur&lt;/h3>
+&lt;p>Je l’ai beaucoup utilisé en juin, juillet et un peu en août et septembre.&lt;/p>
+&lt;p>Cela nous a permis de sécher les abricots, les poires, la verveine citronnée et les orties.&lt;/p>
+&lt;p>Je l’ai branché sur la sortie 2 lorsqu’on avait besoin que l’ECS soit chauffée, ce qui me conforte dans le choix de prendre un routeur avec 2 sorties.&lt;/p>
+&lt;p>L’inconvénient fut que cela chauffait l’air de la maison… Et cet été, ce n’était pas l’idéal !&lt;/p>
+&lt;h3 id="avec-le-lave-vaisselle">Avec le lave-vaisselle&lt;/h3>
+&lt;p>Durant l’été, l’eau fut très chaude.&lt;/p>
+&lt;p>Le lave-vaisselle est branché sur l’eau depuis son installation.&lt;/p>
+&lt;p>Ce que nous avons fait l’été passé fut de lancer 2 cycles &lt;em>rinçage&lt;/em> de 11 min pour amener l’eau chaude. En effet, il y a 15 mètres de tuyaux entre le cumulus et la cuisine. Après ce cycle, la vaisselle était alors presque &lt;em>propre&lt;/em>. Si l’on avait besoin de faire tourner le lave-vaisselle, on le lançait ensuite en programme cycle &lt;em>demi-charge&lt;/em> de 30 min et comme l’eau chaude était déjà là, la consommation du réseau apparaissait nulle.&lt;/p>
+&lt;p>Sur un cycle plus long, le mode &lt;em>eco&lt;/em> de 2h45, la consommation était clairement diminuée.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022.jpg"
+width="911"
+height="370"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022_hu45a488110dada5a43b4e6aedf3443ebc_86501_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022_hu45a488110dada5a43b4e6aedf3443ebc_86501_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-1-avec-eau-tres-chaude-septembre-2022_hu45a488110dada5a43b4e6aedf3443ebc_86501_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de relevé Linky en septembre 2022"
+class="gallery-image"
+data-flex-grow="246"
+data-flex-basis="590px"
+>
+&lt;/p>
+&lt;p>Le pic de 15h correspond au cycle 1 du lave-vaisselle. Normalement, le cycle 1 consomme un peu moins de 1 kWh..&lt;/p>
+&lt;h3 id="avec-le-lave-linge">Avec le lave-linge&lt;/h3>
+&lt;p>Contrairement au lave-vaisselle, je n’ai pas branché le lave-linge sur l’eau chaude. Cela n&amp;rsquo;est aussi simple qu&amp;rsquo;installer un mitigeur. De plus, l’arrivée d’eau chaude est trop loin ni réalisée pour que ça vaille le coup.&lt;/p>
+&lt;p>Par contre, nous avons profité du soleil et des jours ensoleillés pour laver le linge et consommer moins sur un cycle.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-cotton-eco-40-en-aout-2022.jpg"
+width="977"
+height="435"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-cotton-eco-40-en-aout-2022_hue058454e955131bd1a79aa37d59bc030_85574_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-cotton-eco-40-en-aout-2022_hue058454e955131bd1a79aa37d59bc030_85574_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-cotton-eco-40-en-aout-2022_hue058454e955131bd1a79aa37d59bc030_85574_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de relevé Linky du 11 août 2022 : Le pic de 12h et la consommation continuant jusqu’à 15h correspondent au cycle « Cotton Eco » à 40 °C"
+class="gallery-image"
+data-flex-grow="224"
+data-flex-basis="539px"
+>
+&lt;/p>
+&lt;p>Historiquement, nous lavions notre linge au cycle &lt;em>Synthétique à 40°&lt;/em>. Toutefois, après avoir essayé le cycle &lt;em>Cotton eco à 40°&lt;/em>, la consommation a été réduite, même si le cycle est bien plus long.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-synthetique-40-en-decembre-2022.jpg"
+width="979"
+height="433"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-synthetique-40-en-decembre-2022_huccf6b7c5532db8cd0970d9b7e5c635e7_72122_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-synthetique-40-en-decembre-2022_huccf6b7c5532db8cd0970d9b7e5c635e7_72122_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cycle-synthetique-40-en-decembre-2022_huccf6b7c5532db8cd0970d9b7e5c635e7_72122_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de relevé Linky du 12 décembre 2022 : Le pic de 12h correspond au cycle « Synthétique » à 40 °C"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="542px"
+>
+&lt;/p>
+&lt;p>Entre la nuit et la journée, voici la différence :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/cycle-cotton-eco-nuit-journee.jpg"
+width="976"
+height="432"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/cycle-cotton-eco-nuit-journee_hub73903d9ac0b18c8a124b1a14cbcc43d_77964_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/cycle-cotton-eco-nuit-journee_hub73903d9ac0b18c8a124b1a14cbcc43d_77964_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/cycle-cotton-eco-nuit-journee_hub73903d9ac0b18c8a124b1a14cbcc43d_77964_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de consommation horaire enregistré par le Linky le 15 mai 2022 : Avec le soleil, on réduit de plus de moitié la consommation du réseau."
+class="gallery-image"
+data-flex-grow="225"
+data-flex-basis="542px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>Le cycle de 0h30 à 4h est bien plus important que celui de 13h30 à 17h.&lt;/li>
+&lt;li>Le pic à 6h correspond à l’utilisation de notre pompe à eau.&lt;/li>
+&lt;/ul>
+&lt;h3 id="avec-la-plaque-à-induction-portable">Avec la plaque à induction portable&lt;/h3>
+&lt;p>De la même façon, nous avons utilisé, lorsque la production photovoltaïque le permettait, une plaque à induction portable de 2100 W de puissance pour faire cuire doucement certains plats.&lt;/p>
+&lt;p>En général, je n’ai jamais dépassé 3.5 sur une échelle de 10.&lt;/p>
+&lt;p>La puissance de 3.5 correspond à 500 W.&lt;/p>
+&lt;p>Nous avons remarqué que, même à la puissance 2.5, soit 340 W, les aliments cuisaient.&lt;/p>
+&lt;p>Certes, cela prenait plus de temps que le feu à gaz dans la cuisine, mais en 2h, l’énergie solaire a cuit en grande partie les légumes vapeur.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cuisson-induction.jpg"
+width="976"
+height="442"
+srcset="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cuisson-induction_hu7667d8351ba7f990b1db50649952a70c_91944_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cuisson-induction_hu7667d8351ba7f990b1db50649952a70c_91944_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/images/exemple-de-cuisson-induction_hu7667d8351ba7f990b1db50649952a70c_91944_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Graphique de relevé Linky du 5 septembre 2022 : De 15h à 18h, nous avons fait cuire un plat à puissance 2.5, soit 340 W. Le pic de 15h montre sûrement un nuage dans le ciel à ce moment."
+class="gallery-image"
+data-flex-grow="220"
+data-flex-basis="529px"
+>
+&lt;/p>
+&lt;h3 id="avec-le-mini-radiateur-électrique">Avec le mini radiateur électrique&lt;/h3>
+&lt;p>Nous ne l’avons pas beaucoup utilisé, mais je pense qu’il fut utile pendant notre absence début octobre (12 jours).&lt;/p>
+&lt;p>L’idée :&lt;/p>
+&lt;ul>
+&lt;li>laisser la sortie 1 du routeur solaire sur le chauffe-eau (ainsi, l’eau est bien chaude en rentrant de vacances)&lt;/li>
+&lt;li>brancher le radiateur sur le réglage à 1000 W (pour optimiser la ventilation) sur la sortie 2 du routeur solaire.&lt;/li>
+&lt;/ul>
+&lt;p>Quand l’eau chaude, le radiateur se sert dans le surplus solaire.&lt;/p>
+&lt;div class="jli-notice jli-notice-note" id="Pour rappel" >
+&lt;p class="jli-notice-title">Pour rappel&lt;/p>&lt;p>Le routeur n’alimente pas les 2 sorties en même temps.&lt;/p>
+&lt;p>Si la sortie 1 ne consomme pas, le surplus solaire alimente la sortie 2.&lt;/p>
+&lt;p>Cela se révèle très pratique dans le scénario ci-dessus !&lt;/p>&lt;/div>
+&lt;h2 id="et-loptimisation-de-la-puissance-maximum">Et l’optimisation de la puissance maximum&lt;/h2>
+&lt;h3 id="la-puissance-des-appareils">La puissance des appareils&lt;/h3>
+&lt;p>Je me suis rendu que l’on possède beaucoup d’appareils électroménagers qui consomment beaucoup :&lt;/p>
+&lt;ul>
+&lt;li>un four de 3000 W&lt;/li>
+&lt;li>une bouilloire de 2200 W&lt;/li>
+&lt;li>etc.&lt;/li>
+&lt;/ul>
+&lt;p>Et je me suis posé la question : pourquoi des grosses puissances ?&lt;/p>
+&lt;p>Pour aller plus vite pour cuire un plat ou bouillir de l’eau.&lt;/p>
+&lt;p>En réalité combien cela prend-il de faire chauffer 300 ml d’eau à 2400 W au lieu de 1000 W, par exemple ?&lt;/p>
+&lt;p>D’après &lt;a href="https://editions-petiteelisabeth.fr/calculs_transfert_chaleur_6.php">Elisabeth Petit et son calculateur&lt;/a>, cela prend :&lt;/p>
+&lt;ul>
+&lt;li>41.8 secondes pour chauffer 300 ml d’eau à 2400 W de puissance.&lt;/li>
+&lt;li>100.3 secondes pour chauffer 300 ml d’eau à 1000 W de puissance.&lt;/li>
+&lt;/ul>
+&lt;p>Soit 1 min de plus.&lt;/p>
+&lt;p>A-t-on vraiment besoin de gagner une minute pour chauffer notre eau le matin pour boire un café ou une tisane ?&lt;/p>
+&lt;p>Et lorsque votre installation photovoltaïque délivre maximum 1200 W instantanés, n’est-il pas mieux de chauffer à 1000 W plutôt que 2400 W ?&lt;/p>
+&lt;p>Je vous laisse juger pour vous-même.&lt;/p>
+&lt;h3 id="la-puissance-maximum-souscrite-auprès-du-fournisseur-délectricité">La puissance maximum souscrite auprès du fournisseur d’électricité&lt;/h3>
+&lt;p>Depuis la mise en route de l’installation photovoltaïque, j’ai noté que la puissance maximum demandée au réseau a très peu dépassé les 3 kWh.&lt;/p>
+&lt;p>La seule raison qu’on dépasse les 3 kWh instantanés est le fait de mettre le cumulus et le lave-vaisselle ou le lave-linge et le lave-vaisselle en route en même temps.&lt;/p>
+&lt;p>Autant dire que cela est possible de décaler l’un ou l’autre.&lt;/p>
+&lt;p>À voir dans le temps.&lt;/p>
+&lt;p>Pour le moment, l’abonnement 6 kWh et les heures creuses/heures pleines vont ensemble et notre profil de consommation et le tarif EDF nous permettent plus de flexibilité.&lt;/p>
+&lt;p>En 2022, cela représente :&lt;/p>
+&lt;ul>
+&lt;li>un surcoût de 20 euros par rapport un tarif de base et un abonnement de 3 kWh.&lt;/li>
+&lt;li>un gain de 13 euros par rapport un tarif de base et un abonnement de 6 kWh.&lt;/li>
+&lt;/ul>
+&lt;p>De plus, si je devais descendre en puissance, cela suppose quelques modifications sur la résistance à faire.&lt;/p>
+&lt;h2 id="quelle-est-la-suite">Quelle est la suite&lt;/h2>
+&lt;p>À la fin du mois, je publierai les chiffres.&lt;/p>
+&lt;p>Encore 2 semaines de relevés et vous pourrez découvrir :&lt;/p>
+&lt;ul>
+&lt;li>ce qu’a produit l’installation&lt;/li>
+&lt;li>et comment cela influe sur notre consommation et notre facture.&lt;/li>
+&lt;/ul>
+&lt;p>En attendant, bravo d&amp;rsquo;avoir lu jusqu’ici !&lt;/p></description></item><item><title>Retour d'expérience photovoltaïque après 2 mois</title><link>https://jeremielitzLer.fr/post/2022-06/retour-d-experience-sur-une-installation-pv-1mois/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-06/retour-d-experience-sur-une-installation-pv-1mois/</guid><description>&lt;p>Il y a 7 ans, nous avons acheté notre maison et la propriété fait environ 4000 m², en terrasse très rocheuse (AOC &lt;em>Saint Joseph&lt;/em> en Ardèche).&lt;/p>
+&lt;p>Ce n&amp;rsquo;était rien de très accueillant pour planter quelque chose (on a essayé et l&amp;rsquo;on continue d&amp;rsquo;essayer avec la méthode &lt;a href="https://www.youtube.com/c/CharlesDowding1nodig">&amp;quot;&lt;em>No Dig&lt;/em>&amp;quot; de Charles Dowding&lt;/a> et &lt;a href="https://www.youtube.com/c/permacultureetc">les conseils de Damien Dekarz&lt;/a>&amp;hellip;), mais qui semblait exploitable pour poser quelques panneaux PV.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="la-série-darticles">La série d&amp;rsquo;articles&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-1/">Photovoltaïque : mon expérience après 9 mois ? (partie 1)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2022-12/retour-d-experience-sur-une-installation-pv-9mois-partie-2/">Photovoltaïque : mon expérience après 9 mois ? (partie 2)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-03/retour-d-experience-sur-une-installation-pv-1an/">Photovoltaïque : mon expérience après 1 an ?&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;p>Nous chauffons notre eau chaude sanitaire (ECS) en heures creuses et nous avons isolé, avec 10 cm de laine de mouton brute, le cumulus de 200 litres le premier hiver, car il se trouve dans le garage et il peut y faire 8°C&amp;hellip; Je sais, ce n&amp;rsquo;est pas idéal, mais nous n&amp;rsquo;avons pas de local technique dans la maison de 72 m².&lt;/p>
+&lt;p>Cela nous avait permis de réduire de 12-13kWh pour chauffer l&amp;rsquo;ECS à 8-10kWh pour une journée et pour une consommation d&amp;rsquo;ESC équivalente.&lt;/p>
+&lt;h2 id="pourquoi-une-installation-pv">Pourquoi une installation PV&lt;/h2>
+&lt;h3 id="mesures-de-notre-consommation">Mesures de notre consommation&lt;/h3>
+&lt;p>Je suis assez regardant sur la consommation électrique et je suis d&amp;rsquo;accord avec ceux qui prônent &lt;a href="https://negawatt.org/La-sobriete-energetique">la sobriété énergétique&lt;/a> pour réduire notre impact sur l&amp;rsquo;environnement.&lt;/p>
+&lt;p>J&amp;rsquo;ai réalisé une estimation de notre consommation en 2016, en listant chaque élément électrifié, car, pour moi, connaitre la consommation du foyer et la répartition sur les équipements est le premier pas vers une meilleure efficacité et une sensibilisation à la sobriété énergétique. J&amp;rsquo;ai réalisé &lt;a href="https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/">une prise de notes&lt;/a> récemment sur un entretien de &lt;a href="https://nospiedssurterre.fr/">Rémi chez &amp;ldquo;Nos pieds sur terre&amp;rdquo;&lt;/a> réalisée par &lt;a href="https://www.youtube.com/c/LArchiPelle">l&amp;rsquo;Archipelle&lt;/a> qui valide cette première étape.&lt;/p>
+&lt;p>J&amp;rsquo;avais estimé 2900 kWh sur 1 an. Vous pouvez consulter &lt;a href="https://docs.google.com/spreadsheets/d/1-1A2I04MqVy3-zxMwQJ7Zy83OP200ruxGRUNXsHlNbQ/edit?usp=sharing">ce tableau&lt;/a> pour le détail et n&amp;rsquo;hésitez pas à copier la Google Sheets pour votre cas.&lt;/p>
+&lt;p>On voit, par exemple, j&amp;rsquo;avais estimé à 30% la part de consommation du cumulus ECS.&lt;/p>
+&lt;p>&lt;em>NB :&lt;/em> le tableau n&amp;rsquo;inclut pas le four, le lave-vaisselle et le purificateur d&amp;rsquo;air (&lt;a href="https://www.murprotec.fr/filtre-cta.php">CTA5 de Murprotec&lt;/a>) installés en 2018.&lt;/p>
+&lt;p>J&amp;rsquo;ai aussi suivi de près notre consommation avec :&lt;/p>
+&lt;ul>
+&lt;li>un relevé journalier sur le compteur numérique EDF pendant plusieurs années,&lt;/li>
+&lt;li>puis plus récemment grâce au Linky, un relevé hebdomadaire, pour connaitre notre consommation passive (p. ex. combien la maison a-t-elle besoin pendant nos absences ?), notre consommation jour et nuit,&lt;/li>
+&lt;li>et pour le cas du chauffe-eau, un comptage spécifique à partir novembre 2019 après acheter un vieux compteur numérique d&amp;rsquo;EDF.&lt;/li>
+&lt;/ul>
+&lt;p>Voici ce que ça donne depuis 2014 :&lt;/p>
+&lt;ul>
+&lt;li>notre consommation annuelle tout compris :&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Month&lt;/th>
+&lt;th>2014&lt;/th>
+&lt;th>2015&lt;/th>
+&lt;th>2016&lt;/th>
+&lt;th>2017&lt;/th>
+&lt;th>2018&lt;/th>
+&lt;th>2019&lt;/th>
+&lt;th>2020&lt;/th>
+&lt;th>2021&lt;/th>
+&lt;th>2022&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>306,00&lt;/td>
+&lt;td>331,00&lt;/td>
+&lt;td>334,00&lt;/td>
+&lt;td>273,00&lt;/td>
+&lt;td>313,00&lt;/td>
+&lt;td>305,00&lt;/td>
+&lt;td>320,00&lt;/td>
+&lt;td>417,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>452,00&lt;/td>
+&lt;td>288,00&lt;/td>
+&lt;td>250,00&lt;/td>
+&lt;td>270,00&lt;/td>
+&lt;td>270,00&lt;/td>
+&lt;td>353,00&lt;/td>
+&lt;td>295,00&lt;/td>
+&lt;td>100,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>270,00&lt;/td>
+&lt;td>296,00&lt;/td>
+&lt;td>252,00&lt;/td>
+&lt;td>188,00&lt;/td>
+&lt;td>293,00&lt;/td>
+&lt;td>310,00&lt;/td>
+&lt;td>260,00&lt;/td>
+&lt;td>268,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>157,00&lt;/td>
+&lt;td>211,00&lt;/td>
+&lt;td>81,00&lt;/td>
+&lt;td>195,00&lt;/td>
+&lt;td>141,00&lt;/td>
+&lt;td>246,00&lt;/td>
+&lt;td>253,00&lt;/td>
+&lt;td>118,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>292,00&lt;/td>
+&lt;td>221,00&lt;/td>
+&lt;td>254,00&lt;/td>
+&lt;td>200,00&lt;/td>
+&lt;td>238,00&lt;/td>
+&lt;td>217,00&lt;/td>
+&lt;td>213,00&lt;/td>
+&lt;td>79,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>265,00&lt;/td>
+&lt;td>176,00&lt;/td>
+&lt;td>88,00&lt;/td>
+&lt;td>172,00&lt;/td>
+&lt;td>182,00&lt;/td>
+&lt;td>258,00&lt;/td>
+&lt;td>156,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>123,45&lt;/td>
+&lt;td>205,00&lt;/td>
+&lt;td>191,00&lt;/td>
+&lt;td>171,00&lt;/td>
+&lt;td>191,00&lt;/td>
+&lt;td>191,00&lt;/td>
+&lt;td>82,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>213,59&lt;/td>
+&lt;td>138,00&lt;/td>
+&lt;td>194,00&lt;/td>
+&lt;td>86,00&lt;/td>
+&lt;td>132,00&lt;/td>
+&lt;td>116,00&lt;/td>
+&lt;td>187,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>137,96&lt;/td>
+&lt;td>174,00&lt;/td>
+&lt;td>182,00&lt;/td>
+&lt;td>132,00&lt;/td>
+&lt;td>204,00&lt;/td>
+&lt;td>198,00&lt;/td>
+&lt;td>58,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>265,00&lt;/td>
+&lt;td>141,00&lt;/td>
+&lt;td>164,00&lt;/td>
+&lt;td>219,00&lt;/td>
+&lt;td>139,00&lt;/td>
+&lt;td>214,00&lt;/td>
+&lt;td>347,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>373,00&lt;/td>
+&lt;td>218,00&lt;/td>
+&lt;td>254,00&lt;/td>
+&lt;td>251,00&lt;/td>
+&lt;td>304,00&lt;/td>
+&lt;td>313,00&lt;/td>
+&lt;td>277,00&lt;/td>
+&lt;td>298,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>332,00&lt;/td>
+&lt;td>358,00&lt;/td>
+&lt;td>292,00&lt;/td>
+&lt;td>291,00&lt;/td>
+&lt;td>305,00&lt;/td>
+&lt;td>382,00&lt;/td>
+&lt;td>334,00&lt;/td>
+&lt;td>369,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total&lt;/td>
+&lt;td>705,00&lt;/td>
+&lt;td>3058,00&lt;/td>
+&lt;td>2727,00&lt;/td>
+&lt;td>2532,00&lt;/td>
+&lt;td>2515,00&lt;/td>
+&lt;td>2798,00&lt;/td>
+&lt;td>3019,00&lt;/td>
+&lt;td>2838,00&lt;/td>
+&lt;td>982,00&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>notre consommation en ESC :&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>2014&lt;/th>
+&lt;th>2015&lt;/th>
+&lt;th>2016&lt;/th>
+&lt;th>2017&lt;/th>
+&lt;th>2018&lt;/th>
+&lt;th>2019&lt;/th>
+&lt;th>2020&lt;/th>
+&lt;th>2021&lt;/th>
+&lt;th>2022&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>117,00&lt;/td>
+&lt;td>120,00&lt;/td>
+&lt;td>138,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>109,00&lt;/td>
+&lt;td>106,00&lt;/td>
+&lt;td>60,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>112,00&lt;/td>
+&lt;td>93,00&lt;/td>
+&lt;td>46,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>88,00&lt;/td>
+&lt;td>83,00&lt;/td>
+&lt;td>31,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>73,00&lt;/td>
+&lt;td>81,00&lt;/td>
+&lt;td>8,00&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>84,00&lt;/td>
+&lt;td>35,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>44,00&lt;/td>
+&lt;td>8,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>18,00&lt;/td>
+&lt;td>48,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>53,00&lt;/td>
+&lt;td>12,00&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>64&lt;/td>
+&lt;td>122&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>95,00&lt;/td>
+&lt;td>107&lt;/td>
+&lt;td>120&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>0,00&lt;/td>
+&lt;td>111,00&lt;/td>
+&lt;td>118&lt;/td>
+&lt;td>129&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Total&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>206&lt;/td>
+&lt;td>987&lt;/td>
+&lt;td>957&lt;/td>
+&lt;td>283&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Cela a confirmé l&amp;rsquo;estimation de 30 % consommation par le cumulus.&lt;/p>
+&lt;h3 id="simulation-de-lensoleillement">Simulation de l&amp;rsquo;ensoleillement&lt;/h3>
+&lt;p>J&amp;rsquo;ai aussi réalisé une simulation d&amp;rsquo;ensoleillement avec l&amp;rsquo;outil &lt;a href="https://re.jrc.ec.europa.eu/pvg_tools/fr/#PVP">&amp;ldquo;PHOTOVOLTAIC GEOGRAPHICAL INFORMATION SYSTEM&amp;rdquo;&lt;/a> au niveau du toit de la maison (point le plus bas de la propriété) et au niveau de la terrasse la plus haute sur la propriété (pour le plus ensoleillé).&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Mois&lt;/th>
+&lt;th>Heures (toit de la maison) &lt;/th>
+&lt;th>Heures (terrasse)&lt;/th>
+&lt;th>Diff. en % d&amp;rsquo;ensoleillement&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>124,07&lt;/td>
+&lt;td>191,80&lt;/td>
+&lt;td>+ 35,31%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>174,13&lt;/td>
+&lt;td>230,27&lt;/td>
+&lt;td>+ 24,38%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>274,47&lt;/td>
+&lt;td>313,67&lt;/td>
+&lt;td>+ 12,50%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>328,07&lt;/td>
+&lt;td>358,20&lt;/td>
+&lt;td>+ 8,41%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>386,80&lt;/td>
+&lt;td>435,40&lt;/td>
+&lt;td>+ 11,16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>394,93&lt;/td>
+&lt;td>443,87&lt;/td>
+&lt;td>+ 11,02%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>398,93&lt;/td>
+&lt;td>450,27&lt;/td>
+&lt;td>+ 11,40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>359,47&lt;/td>
+&lt;td>398,27&lt;/td>
+&lt;td>+ 9,74%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>293,93&lt;/td>
+&lt;td>325,20&lt;/td>
+&lt;td>+ 9,61%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>228,87&lt;/td>
+&lt;td>281,20&lt;/td>
+&lt;td>+ 18,61%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>140,40&lt;/td>
+&lt;td>210,27&lt;/td>
+&lt;td>+ 33,23%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>105,33&lt;/td>
+&lt;td>162,47&lt;/td>
+&lt;td>+ 35,17%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Annuellement&lt;/td>
+&lt;td>3209,40&lt;/td>
+&lt;td>3800,87&lt;/td>
+&lt;td>+ 15,56%&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Comme vous le voyez, il n&amp;rsquo;y a pas photo !&lt;/p>
+&lt;p>Si l&amp;rsquo;on voulait produire de l&amp;rsquo;électricité avec le soleil, la terrasse est le meilleur site, même si la propriété n&amp;rsquo;a pas l&amp;rsquo;ensoleillement le plus idéal du monde vu que nous sommes sur le premier tiers des pentes d&amp;rsquo;une colline de 300 mètres d&amp;rsquo;altitude.&lt;/p>
+&lt;h2 id="pourquoi-une-réalisation-quen-2022-">Pourquoi une réalisation qu&amp;rsquo;en 2022 ?&lt;/h2>
+&lt;p>Mes prérequis au projet étaient :&lt;/p>
+&lt;ul>
+&lt;li>de respecter un budget max. de 2000 euros, avec réutilisation de panneaux pour réduire le coût et pour des soucis environnementaux.&lt;/li>
+&lt;li>de ne pas revendre le surplus, p. ex. d&amp;rsquo;autoconsommer au maximum.&lt;/li>
+&lt;li>d&amp;rsquo;être rentable avant le remplacement des éléments sensibles (onduleur)&lt;/li>
+&lt;/ul>
+&lt;p>J&amp;rsquo;ai donc beaucoup lu sur le sujet (ex.: &lt;a href="https://forum-photovoltaique.fr/">forum photovoltaïque&lt;/a>) et j&amp;rsquo;ai simulé le coût sur les divers sites marchands qui vendent du matériel PV et je ne suis pas lancé à cause&lt;/p>
+&lt;ul>
+&lt;li>du coût du matériel&lt;/li>
+&lt;li>du fait que les entreprises ne vendent que du 3kWc pour de la revente avec des tarifs de 7000 à 15000 euros.&lt;/li>
+&lt;/ul>
+&lt;p>Aussi, le fait que l&amp;rsquo;installation ne pouvait être réalisée sur le toit de la maison me bloquait, car je ne voulais pas donner l&amp;rsquo;électricité non consommée (injection sur le réseau) à des entreprises (Enedis, Engie, etc.) qui nous le revendent à un prix de plus en plus élevé.&lt;/p>
+&lt;p>En mai 2022, le réseau achète le surplus &lt;a href="https://www.insunwetrust.solar/blog/le-solaire-et-vous/tarif-rachat-photovoltaique/#:~:text=%F0%9F%92%B0%20Quel%20est%20le%20montant,0%2C10%20%E2%82%AC%20par%20kWh.">6 à 10 centimes&lt;/a> alors qu&amp;rsquo;il me le vend entre 17 et 22 centimes (mon tarif HC-HP chez Engie en mai 2022).&lt;/p>
+&lt;p>Fin 2021, je reçois un email sur mon alerte du &amp;ldquo;Leboncoin&amp;rdquo; intitulé &amp;ldquo;panneaux photovoltaïques&amp;rdquo;. Il s&amp;rsquo;agissait d&amp;rsquo;un artisan qui promouvait ses services pour utiliser la solution photovoltaïque pour l&amp;rsquo;ECS à plus ou moins 1000 euros. Je me dis &lt;em>C&amp;rsquo;est dans mon budget et l&amp;rsquo;artisan que je recherchais !&lt;/em>.&lt;/p>
+&lt;h2 id="présentation-de-linstallation">Présentation de l&amp;rsquo;installation&lt;/h2>
+&lt;p>Après quelques échanges très intéressants avec l&amp;rsquo;artisan de SolaireEthic (voir &lt;a href="https://solairethic.fr/">son site web&lt;/a> très intéressant), nous partons pour la solution suivante :&lt;/p>
+&lt;ul>
+&lt;li>1 &lt;a href="https://emea.apsystems.com/wp-content/uploads/2018/10/APsystems-Microinverter-QS1-For-EMEA-User-manual_10.18_French.pdf">micro-onduleur APSystems QS1 (4 MPPT)&lt;/a>.&lt;/li>
+&lt;li>1 ligne en AC de 6mm² enterrée de 120 m de long de la terrasse cible sur la propriété à la maison (à 50cm du tableau général)
+&lt;ul>
+&lt;li>La distance est due à la situation de la terrasse.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>8 panneaux de 190 Wc recyclés (7-8 ans d&amp;rsquo;âge), soit 1520 Wc
+&lt;ul>
+&lt;li>Si on prend en compte les 0.3 % de réduction de la production, on est plutôt entre 1484 et 1488 Wc.&lt;/li>
+&lt;li>La valeur de 0.3 % provient de l&amp;rsquo;étude faite depuis 1992 en Savoie dont je n&amp;rsquo;ai pas le lien, mais citée dans &lt;a href="https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/">ma prise de notes (§ &amp;ldquo;Dimensionner les panneaux photovoltaïques&amp;rdquo;)&lt;/a> récemment sur un entretien de &lt;a href="https://nospiedssurterre.fr/">Rémi chez &amp;ldquo;Nos pieds sur terre&amp;rdquo;&lt;/a> réalisée par &lt;a href="https://www.youtube.com/c/LArchiPelle">l&amp;rsquo;Archipelle&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>J&amp;rsquo;ai réalisé :&lt;/p>
+&lt;ul>
+&lt;li>le creusement de la tranchée (pas facile avec un sol rocheux et avec 25 mètres de différence d&amp;rsquo;altitude entre la terrasse et la maison&amp;hellip;)&lt;/li>
+&lt;li>la partie optimisation de l&amp;rsquo;autoconsommation en commandant le routeur solaire de &lt;a href="https://mk2pvrouter.co.uk/">Robin Emley&lt;/a>, monté par &lt;a href="https://sites.google.com/view/le-professolaire/">Le Profes&amp;rsquo;Solaire&lt;/a> (malheureusement, il a arrêté son service de montage, mais il semble encore proposer le soudage&amp;hellip;).&lt;/li>
+&lt;/ul>
+&lt;p>Voici &lt;a href="https://jeremielitzLer.fr/images/2022-mm-dd-retour-d-exprerience-sur-une-installation-pv-1mois-diagramme.jpg">le plan de l&amp;rsquo;installation en ligne&lt;/a>.&lt;/p>
+&lt;h2 id="que-disent-les-chiffres-après-2-mois-">Que disent les chiffres après 2 mois ?&lt;/h2>
+&lt;p>Du 1er avril et 31 mai, nous avons :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>mois&lt;/th>
+&lt;th>produit (kWh)&lt;/th>
+&lt;th>autoconsommé (kWh)&lt;/th>
+&lt;th>injecté sur le réseau (kWh)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>avril&lt;/td>
+&lt;td>160,6&lt;/td>
+&lt;td>147,6&lt;/td>
+&lt;td>13&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mai&lt;/td>
+&lt;td>210,4&lt;/td>
+&lt;td>186,4&lt;/td>
+&lt;td>24&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Nous avons donc une belle consommation de la production (&amp;gt; 90%). Il y aurait moins d&amp;rsquo;injection si :&lt;/p>
+&lt;ul>
+&lt;li>j&amp;rsquo;avais branché la pince ampère-métrique du routeur solaire dans le bon sens, ce que j&amp;rsquo;ai réalisé le 4 avril seulement !&lt;/li>
+&lt;li>nous avions un système de stockage du surplus pour soit :
+&lt;ul>
+&lt;li>consommer la nuit&lt;/li>
+&lt;li>consommer plus tard&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Si l&amp;rsquo;on compare les mêmes données de la mise en service le 27 mars au 4 avril, on voit :&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>produit (kWh)&lt;/th>
+&lt;th>autoconsommé (kWh)&lt;/th>
+&lt;th>injecté sur le réseau (kWh)&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>30.8&lt;/td>
+&lt;td>12,8&lt;/td>
+&lt;td>18&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>soit à peine 40% de consommation de la production.&lt;/p>
+&lt;p>C&amp;rsquo;est dommage vu qu&amp;rsquo;on ne peut pas revendre quand les panneaux sont installés au sol&amp;hellip; (voir § &amp;ldquo;Quelles conditions pour vendre l’électricité solaire à EDF ?&amp;rdquo; sur &lt;a href="https://www.choisir.com/energie/articles/104505/l-obligation-d-achat-solaire-d-edf">cet article&lt;/a>)&lt;/p>
+&lt;h2 id="quelles-sont-mes-observations-">Quelles sont mes observations ?&lt;/h2>
+&lt;h3 id="routeur-solaire-de-robin-emleyhttpsmk2pvroutercouk">Routeur solaire de &lt;a href="https://mk2pvrouter.co.uk/">Robin Emley&lt;/a>&lt;/h3>
+&lt;p>Il est très efficace.&lt;/p>
+&lt;p>J&amp;rsquo;ai observé qu&amp;rsquo;on injecte environ 100Wh sur le réseau avec le routeur solaire, soit 1kWh tous les 10 jours. C&amp;rsquo;est très marginal et acceptable.&lt;/p>
+&lt;p>Par contre, les compteurs mécaniques, que j&amp;rsquo;ai mis aux sorties du routeur, ne permettent pas de compter les kWh précisément si la résistance est le chauffe-eau, car la puissance produite est bien inférieure à la puissance utilisée du chauffe-eau.&lt;/p>
+&lt;p>En diminuant la résistance du cumulus pour que la &lt;code>puissance produite = puissance consommée&lt;/code>, cela fonctionnerait peut-être mieux.&lt;/p>
+&lt;p>En effet, en fonction de la puissance de l&amp;rsquo;appareil, il y avait moins de comptage à cause l&amp;rsquo;intermittence du courant envoyé par le routeur.&lt;/p>
+&lt;p>Par exemple, un déshydrateur de 700W de puissance, le décompte est plus juste.&lt;/p>
+&lt;h3 id="eau-chaude-sanitaire">Eau chaude sanitaire&lt;/h3>
+&lt;p>On a mis le chauffe-eau sur 4/5 quand on chauffe via le solaire au lieu de 3/5 quand on chauffe sur les heures creuses.&lt;/p>
+&lt;p>Avec une journée plutôt belle, le soleil chauffe largement ce qu&amp;rsquo;il faut pour la journée, si ce n&amp;rsquo;est plus.&lt;/p>
+&lt;p>Avec une journée un peu grise, on arrive à maintenir la température malgré la consommation d&amp;rsquo;ECS.&lt;/p>
+&lt;p>S&amp;rsquo;il fait plus mauvais, il y aurait 2 jours d&amp;rsquo;eau chaude en stock après une belle journée. Cela varie selon les usages d&amp;rsquo;ECS bien sûr.&lt;/p>
+&lt;p>Je me suis posé la question d&amp;rsquo;installer un deuxième cumulus de 200 litres pour stocker sous forme d&amp;rsquo;eau chaude la production solaire.&lt;/p>
+&lt;p>Toutefois, c&amp;rsquo;est un investissement de 700 à 800 euros et le besoin n&amp;rsquo;y est pas vraiment vu qu&amp;rsquo;on n&amp;rsquo;a pas d&amp;rsquo;utilité de 400 litres en réalité. Nous accueillons 2 à 3 personnes de plus que très rarement dans l&amp;rsquo;année.&lt;/p>
+&lt;h3 id="problème-de-gestion-entre-lalimentation-par-le-routeur-et-par-le-connecteur-hchp">Problème de gestion entre l&amp;rsquo;alimentation par le routeur et par le connecteur HC/HP&lt;/h3>
+&lt;p>Comme le montre le diagramme de l&amp;rsquo;installation, j&amp;rsquo;ai mis en parallèle les deux alimentations du chauffe-eau. Toutefois, il faudrait que je puisse avoir un interrupteur qui commande la source d&amp;rsquo;alimentation à côté du routeur plutôt que de le faire manuellement dans le garage.&lt;/p>
+&lt;p>Il y a aussi des comportements bizarres sur l&amp;rsquo;efficacité du contacteur où il ne reçoit pas le signal ou il y a absence du signal d&amp;rsquo;Enedis. Je ne sais pas s&amp;rsquo;il s&amp;rsquo;agit d&amp;rsquo;un mauvais branchement ou d&amp;rsquo;un souci du réseau. En effet, avant l&amp;rsquo;installation du Linky, nous avions eu des incohérences où le contacteur était &lt;em>actif&lt;/em> en journée alors qu&amp;rsquo;il était sur le mode &lt;em>Auto&lt;/em>&amp;hellip;&lt;/p>
+&lt;h3 id="consommation-journalière-avec-présence">Consommation journalière avec présence&lt;/h3>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-present.jpg"
+loading="lazy"
+alt="Consommation journalière avec présence (source : Linky)"
+>
+&lt;/p>
+&lt;p>On voit très clairement le réfrigérateur qui se met en route de façon cyclique et le pic représente le lave-vaiselle qui a tourné entre minuit et 3h du matin.&lt;/p>
+&lt;h3 id="consommation-journalière-en-notre-absence">Consommation journalière en notre absence&lt;/h3>
+&lt;p>En février 2022, nous avons été absents pendant 5 semaines. La consommation journalière moyenne était de 2.5 kWh.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-nopv.jpg"
+loading="lazy"
+alt="Consommation journalière sans présence avant la mise en service de l&amp;rsquo;installation PV (source : Linky)"
+>
+&lt;/p>
+&lt;p>En avril 2022, nous avons été absents pendant quelques jours. La consommation journalière moyenne est descendue à 0.7 kWh, soit -72%. Pas mal !&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/images/2022-05-02-retour-d-exprerience-sur-une-installation-pv-1mois-conso-jour-absent-pv.jpg"
+loading="lazy"
+alt="Consommation journalière sans présence après la mise en service de l&amp;rsquo;installation PV (source : Linky)"
+>
+&lt;/p>
+&lt;h2 id="quelle-est-la-suite">Quelle est la suite&lt;/h2>
+&lt;p>Je vais :&lt;/p>
+&lt;ol>
+&lt;li>essayer d&amp;rsquo;estimer à partir des rapports PVG et de la puissance crête installée le temps qu&amp;rsquo;il faudra pour rentabiliser l&amp;rsquo;installation.&lt;/li>
+&lt;li>réaliser un retour sur expérience courant octobre, 6 mois après la mise en service de l&amp;rsquo;installation.&lt;/li>
+&lt;li>me renseigner auprès de Rémi chez &amp;ldquo;Nos pieds sur terre&amp;rdquo; pour rendre notre installation pour un coût réduit.&lt;/li>
+&lt;/ol>
+&lt;p>À bientôt pour la suite !&lt;/p></description></item><item><title>Les bases d'une installation solaire en autonomie</title><link>https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/</link><pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/</guid><description>&lt;p>Merci à Brian et Rémi pour leur échange ! Ce qui suit sont mes notes de la vidéo publiée sur la chaîne de l&amp;rsquo;Archipelle. Vous pouvez retrouver &lt;a href="https://www.youtube.com/watch?v=WOuTv0kfwRg">la vidéo sur YouTube&lt;/a>.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="pourquoi-une-installation-solaire-en-autonomie">Pourquoi une installation solaire en autonomie&lt;/h2>
+&lt;p>Il faut se poser la question &amp;ldquo;Pourquoi&amp;rdquo;. Il y a 2 choix :&lt;/p>
+&lt;ul>
+&lt;li>pour un site isolé&lt;/li>
+&lt;li>pour un site hybride, c.-à-d. toujours connecté au réseau, mais pouvant passer en autonomie temporairement.&lt;/li>
+&lt;/ul>
+&lt;p>En particulier, les microcoupures sont gérables en système hybride si l&amp;rsquo;on souhaite rester connecté au réseau.&lt;/p>
+&lt;p>Le cas du raccordement pour vendre la production PV est hors sujet.&lt;/p>
+&lt;h2 id="connaitre-sa-consommation">Connaitre sa consommation&lt;/h2>
+&lt;p>Concrètement, il faut :&lt;/p>
+&lt;ul>
+&lt;li>lister les éléments qui consomment de l&amp;rsquo;électricité dans le logement (kWh)&lt;/li>
+&lt;li>déterminer leur puissance individuelle&lt;/li>
+&lt;/ul>
+&lt;p>Il faut savoir que pour une grosse disqueuse ou un poste à souder peut rendre compliquer le dimensionnement de l&amp;rsquo;onduleur qui devra délivrer au moins la puissance de l&amp;rsquo;élément le plus puissant dans le logement (on ne parle même pas de l&amp;rsquo;usage simultané de plusieurs appareils&amp;hellip;)&lt;/p>
+&lt;p>Il faut alors trouver une autre solution pour alimenter les gros appareils, par exemple :&lt;/p>
+&lt;ul>
+&lt;li>se brancher chez un voisin : en utilisant &lt;a href="https://www.google.com/search?q=wattmetre">un wattmètre&lt;/a>, on peut s&amp;rsquo;arranger avec le voisin pour lui payer ce qu&amp;rsquo;on utilise&lt;/li>
+&lt;li>louer un groupe électrogène à la bonne puissance : cela nous rend dépendants de l&amp;rsquo;essence sauf si le groupe est partagé&lt;/li>
+&lt;/ul>
+&lt;h3 id="comment-mesurer-la-consommation-dun-appareil">Comment mesurer la consommation d&amp;rsquo;un appareil&lt;/h3>
+&lt;p>Il faut &lt;a href="https://www.google.com/search?q=wattmetre">un wattmètre&lt;/a>. Cela donne plusieurs métriques : Wh, VA et la tension.&lt;/p>
+&lt;p>Par exemple, pour griller 10 tranches de pain, il faut 128 Wh sur quelques minutes.&lt;/p>
+&lt;p>Voir mon tableau sur le sujet &lt;a href="https://docs.google.com/spreadsheets/d/1-1A2I04MqVy3-zxMwQJ7Zy83OP200ruxGRUNXsHlNbQ/edit?usp=sharing">dans Google Sheet&lt;/a> listant les appareils les plus utilisés chez moi.&lt;/p>
+&lt;h2 id="calculer-la-consommation-en-mode-dégradé">Calculer la consommation en mode dégradé&lt;/h2>
+&lt;p>Une fois que l’on connait sa consommation globale, il faut déterminer ce qu&amp;rsquo;on peut consommer quand la production solaire est moyenne ou mauvaise. Autrement dit, il faut se poser les questions suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Qu’autorisons-nous d&amp;rsquo;utiliser dans la méthode ?&lt;/li>
+&lt;li>Devons-nous faire des concessions sur certains usages ?&lt;/li>
+&lt;li>Comment pouvons-nous remplacer un usage électrique en hiver ?&lt;/li>
+&lt;li>Comment pouvons-nous optimiser notre usage de la production PV en été ?&lt;/li>
+&lt;/ul>
+&lt;p>Ainsi, avoir des appareils électriques peut-être instéressant, selon la période de l&amp;rsquo;année. Par exemple,&lt;/p>
+&lt;ul>
+&lt;li>Utiliser une plaque électrique l&amp;rsquo;été à la place d&amp;rsquo;une cuisinière à bois est plus logique, car on ne veut pas chauffer la maison en été ! Et la plaque de cuisson électrique peut être programmée. C&amp;rsquo;est la cuisine d&amp;rsquo;été.&lt;/li>
+&lt;li>Pour faire griller le pain, si on est résilient, on utilisera le grille-pain l&amp;rsquo;été et la cuisinière à bois l&amp;rsquo;hiver.&lt;/li>
+&lt;li>Pour le four, le poêle de masse l&amp;rsquo;hiver vs le four solaire l&amp;rsquo;été.&lt;/li>
+&lt;li>Pour sécher les légumes, herbes et fruits, on utilisera le déshydrateur en été.&lt;/li>
+&lt;li>Pour couper le bois, on utilisera une tronçonneuse électrique pour couper le bois l&amp;rsquo;été.&lt;/li>
+&lt;li>Pour broyer les végétaux, pour tondre l&amp;rsquo;herbe avec des appareils électriques.&lt;/li>
+&lt;/ul>
+&lt;p>En mode résilience, on doit multiplier le matériel. Le stockage va plus loin que l&amp;rsquo;usage de batteries.&lt;/p>
+&lt;h2 id="dimensionner-les-batteries">Dimensionner les batteries&lt;/h2>
+&lt;p>On prend notre consommation en mode dégradé et on détermine le nombre de jours d&amp;rsquo;autonomie souhaités.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[consommation en mode dégradé (kWh)] x [nombre de jours] = [Puissance totale des batteries]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>À suivre sur une prochaine vidéo de l&amp;rsquo;Archipel ou &lt;a href="https://www.wattuneed.com/fr/content/56-dimensionner-votre-kit-solaire-autonomes-autoconsommation">tester la simulation de Wattuneed&lt;/a>.&lt;/p>
+&lt;h3 id="choisir-sa-technologie-de-batterie">Choisir sa technologie de batterie&lt;/h3>
+&lt;p>On a :&lt;/p>
+&lt;ul>
+&lt;li>Gel (plomb)&lt;/li>
+&lt;li>OPZS&lt;/li>
+&lt;li>Li-ion&lt;/li>
+&lt;li>Li-Ni-Fe&lt;/li>
+&lt;/ul>
+&lt;p>On doit penser aussi :&lt;/p>
+&lt;ul>
+&lt;li>À la place qu&amp;rsquo;on a pour stocker les batteries&lt;/li>
+&lt;li>De la volonté de faire de l&amp;rsquo;entretien ou pas&lt;/li>
+&lt;li>Qu&amp;rsquo;aucune technologie de batterie n&amp;rsquo;aime la chaleur !&lt;/li>
+&lt;/ul>
+&lt;h4 id="gel-plombhttpswwwgooglecomsearchqbatteriegel">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;Gel">Gel (plomb)&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Facilité d&amp;rsquo;usage et le zéro entretien&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Durée de vie et réutilisation impossible&lt;/li>
+&lt;/ul>
+&lt;h4 id="opzshttpswwwgooglecomsearchqbatterieopzv12v">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;opzv&amp;#43;12v">OPZS&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Émanations toxiques&lt;/li>
+&lt;/ul>
+&lt;h4 id="li-ionhttpswwwgooglecomsearchqbatterielithium">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;lithium">Li-ion&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Il faut penser au recyclage des batteries de PC et cie, où si une cellule est HS, l&amp;rsquo;ensemble de la batterie est HS. En réalité, sur 6 cellules, une seule est peut-être KO.&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Le recyclage, c&amp;rsquo;est toutefois long et fastidieux à démonter et tester. Il faut aussi faire attention aux cours-circuits, car les batteries sont toxiques si elles s&amp;rsquo;enflamment ou surchauffent.&lt;/li>
+&lt;li>Craint les basses températures&lt;/li>
+&lt;/ul>
+&lt;h4 id="li-ni-fehttpswwwgooglecomsearchqbatterielifepo4">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;lifepo4">Li-Ni-Fe&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Meilleure durée de vie (~26 ans) et coût sur le long terme.&lt;/li>
+&lt;li>On peut changer l&amp;rsquo;électrolyse pour restaurer la capacité originale.&lt;/li>
+&lt;li>Il y a moins de risque en cas de court-circuit.&lt;/li>
+&lt;li>Émanations non toxiques&lt;/li>
+&lt;li>Ne craint pas le Gel&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Le prix : environ 30 à 40 % de plus que les batteries Li-ion&lt;/li>
+&lt;li>Entretien obligatoire : il faut ajouter de l&amp;rsquo;eau distillée périodiquement pour que cela reste entre le niveau min. et max.&lt;/li>
+&lt;li>ça prend de la place&lt;/li>
+&lt;li>C&amp;rsquo;est très lourd&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;h2 id="dimensionner-les-panneaux-photovoltaïques">Dimensionner les panneaux photovoltaïques&lt;/h2>
+&lt;p>Plus on met de panneaux, plus les batteries vont durer et donc plus la rentabilité sera au rendez-vous.&lt;/p>
+&lt;p>On peut surdimensionner les panneaux, mais il faut surtout éviter un mauvais dimensionnement des batteries.&lt;/p>
+&lt;p>Pour information, les panneaux peuvent durer largement au-delà des 40 ans. Les premières mesures en Savoie, en 1992, montrent 0,3 % de rendement en moins par an.&lt;/p>
+&lt;p>Le nettoyage est &lt;strong>très important&lt;/strong>, plus que la perte de rendement par vieillissement.&lt;/p>
+&lt;h2 id="dimensionner-londuleur">Dimensionner l&amp;rsquo;onduleur&lt;/h2>
+&lt;p>Il doit permettre de fournir la puissance de l&amp;rsquo;appareil le plus puissant.&lt;/p>
+&lt;p>Exemple : le chauffe-eau électrique est l&amp;rsquo;appareil le plus puissant avec sa résistance de 2000 W. Il faut donc un onduleur de 2000W ou plus.&lt;/p>
+&lt;p>Il faut aussi penser à limiter son usage simultané de plusieurs appareils. Sinon, ça saute.&lt;/p>
+&lt;h2 id="remarques-diverses">Remarques diverses&lt;/h2>
+&lt;h3 id="panneaux-photovoltaïques-vs-panneaux-solaires-thermiques">Panneaux photovoltaïques vs Panneaux solaires thermiques&lt;/h3>
+&lt;p>Il y a des avantages et inconvénients aux 2 systèmes :&lt;/p>
+&lt;ul>
+&lt;li>il faut 4 fois moins de surface pour chauffer la même quantité d&amp;rsquo;eau en solaire thermique.&lt;/li>
+&lt;li>il y a des contraintes physiques sur le solaire thermique (il faut rester petit).&lt;/li>
+&lt;li>la durée de vie du photovoltaïque est bien meilleure et l&amp;rsquo;entretien réduit.&lt;/li>
+&lt;/ul>
+&lt;p>Personnellement, l’installation PV m’a coûté presque autant que le ballon thermodynamique.&lt;/p>
+&lt;p>Donc si j’ai la place, je partirai sur la même chose qu’aujourd’hui plutôt que du thermique.&lt;/p>
+&lt;p>A suivre dans le futur quand je comparerai de plus près les deux systèmes pour l’ECS.&lt;/p>
+&lt;h3 id="on-regarde-dehors-pour-faire-le-choix-dutiliser-ceci-ou-cela">&amp;ldquo;On regarde dehors pour faire le choix d&amp;rsquo;utiliser ceci ou cela&amp;rdquo;&lt;/h3>
+&lt;p>Il faut consommer quand c&amp;rsquo;est possible. Il faut choisir quand la production nécessite des choix (mode dégradé).&lt;/p>
+&lt;h3 id="coût-dautonomie">Coût d&amp;rsquo;autonomie&lt;/h3>
+&lt;p>&lt;em>Note :&lt;/em> cela coûte 50kE à 60kE de plus pour rendre une maison autonome en rénovation si réalisée par des professionnels.&lt;/p>
+&lt;h3 id="préférence-au-12v-plutôt-que-le-230v">Préférence au 12V plutôt que le 230V&lt;/h3>
+&lt;p>Pourquoi ?&lt;/p>
+&lt;p>Pour éviter de gros onduleurs quand l&amp;rsquo;éclairage, les PC, etc., on peut utiliser &lt;a href="https://www.google.com/search?q=orion&amp;#43;victron">un Victron Orion&lt;/a> (convertisseur de 48V en 12 V) pour éviter les pertes sur la transformation du courant continu en courant alternatif.&lt;/p>
+&lt;p>Exemple : un PC peut fonctionner en 12V, moyennant un variateur de tension pour transformer le 12V en ~19 V.&lt;/p>
+&lt;h3 id="photovoltaïque-et-chauffage-électrique">Photovoltaïque et chauffage électrique&lt;/h3>
+&lt;blockquote>
+&lt;p>On oublie.&lt;/p>
+&lt;/blockquote>
+&lt;p>Dans une maison classique, il faut un terrain de foot de panneaux&amp;hellip;&lt;/p></description></item></channel></rss>

@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TypeScript on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/typescript/</link><description>Recent content in TypeScript on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/typescript/index.xml" rel="self" type="application/rss+xml"/><item><title>Définir ses “props” avec Vue 3 et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</link><pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/images/2024-03-08-example-prop.jpg" alt="Featured image of post Définir ses “props” avec Vue 3 et TypeScript" />&lt;p>Voici ce que j’ai appris après avoir passé pas mal de temps à essayer et à utiliser &lt;code>defineProps&lt;/code> avec Vue 3 et TypeScript.&lt;/p>
+&lt;p>Pour rappel, en JavaScript, les &lt;em>props&lt;/em> sont définis de la manière suivante:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Options API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">props&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">required&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Composition API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>En revanche, avec TypeScript, cela devient :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Remarquez que le type &lt;em>prop&lt;/em> n’est pas le même : &lt;code>String&lt;/code> en JavaScript contre &lt;code>string&lt;/code> en TypeScript.&lt;/p>
+&lt;p>Il est important de respecter cet usage pour que le code fonctionne. Et si vous ne faites pas attention, ESLint s’assurera de vous informer de l’erreur lorsque vous écrirez en TypeScript.&lt;/p>
+&lt;p>Et lorsque vous avez besoin de définir une &lt;em>prop&lt;/em> comme non requis (implicitement, elles sont requises…), utilisez-le &lt;code>?&lt;/code> qui suit le nom de la &lt;em>prop&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id?&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Maintenant, cela va devenir plus complexe lorsque vous aurez besoin de définir des valeurs par défaut.&lt;/p>
+&lt;p>Auparavant, en utilisant JavaScript et l’API Option, vous deviez écrire :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">props&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ou si vous préférez l’API Composition, cela ressemblerait à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="jli-notice jli-notice-tip" id="Astuce" >
+&lt;p class="jli-notice-title">Astuce&lt;/p>&lt;p>Vous pouvez déstructurer les &lt;em>props&lt;/em> facilement avec &lt;code>{ propName }&lt;/code> comme montré ci-dessus.&lt;/p>&lt;/div>
+&lt;p>En utilisant TypeScript et l’API Composition, vous devrez utiliser la macro &lt;code>withDefaults&lt;/code> &lt;strong>et&lt;/strong> créer une interface pour définir les &lt;em>props&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">ThreadEditorPageProps&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title?&lt;/span> : &lt;span class="kt">string&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body?&lt;/span> : &lt;span class="kt">chaîne&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="nx">caractères&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">withDefaults&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">defineProps&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ThreadEditorPageProps&lt;/span>&lt;span class="p">&amp;gt;(),&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Décomposons le code :&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>title&lt;/code> et &lt;code>body&lt;/code> sont des &lt;em>props&lt;/em> de type &lt;code>string&lt;/code> et elles sont optionnelles.&lt;/li>
+&lt;li>ensuite (1) instanciez les &lt;em>props&lt;/em> en fournissant à la macro &lt;code>withDefaults&lt;/code> la macro &lt;code>defineProps&lt;/code> typée avec l’interface et (2) ajoutez un objet avec les &lt;em>props&lt;/em> pour lesquels vous avez besoin de définir une valeur par défaut.&lt;/li>
+&lt;/ol>
+&lt;p>Dans l’exemple, ne pas fournir de valeur par défaut signifierait que les &lt;em>props&lt;/em> seraient toutes deux égales à &lt;code>undefined&lt;/code> à cause du &lt;code>?&lt;/code>.&lt;/p>
+&lt;p>Avec des valeurs par défaut explicites, elles valent une chaîne vide.&lt;/p>
+&lt;p>Vous n’avez pas besoin de définir une valeur par défaut pour toutes les &lt;em>props&lt;/em> et elles n’ont pas besoin d’être marquées comme optionnelles pour recevoir une valeur par défaut.&lt;/p>
+&lt;p>Enfin, je recommande d’utiliser la déclaration d’interface lorsque vous avez de nombreuses &lt;em>props&lt;/em>. Extraire cette interface dans un fichier séparé rend le code du composant plus propre. Vous importerez simplement dans votre composant l’interface.&lt;/p>
+&lt;p>Pour moi, cela rend le code du composant plus propre.&lt;/p>
+&lt;p>Vous avez des questions sur le sujet ? Allez lire &lt;a href="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits">la documentation officielle&lt;/a> ou &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">posez vos questions !&lt;/a>&lt;/p></description></item><item><title>Créer un store avec Vue 3, Pinia et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/images/2024-03-01-pinia-image-from.jpg" alt="Featured image of post Créer un store avec Vue 3, Pinia et TypeScript" />&lt;p>Pinia est l’extension de gestion d’état recommandé pour les applications Vue.&lt;/p>
+&lt;p>Bien que vous puissiez l’utiliser avec la méthode « &lt;em>Option API&lt;/em> », si vous utilisez TypeScript, optez pour la méthode « &lt;em>Composition API&lt;/em> ».&lt;/p>
+&lt;p>Oui, même au sein des magasins d’états, vous pouvez utiliser le modèle &lt;code>setup&lt;/code>.&lt;/p>
+&lt;p>Avec JavaScript, vous auriez, par exemple :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">ref&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;vue&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">defineStore&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;pinia&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">useSampleData&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="s1">&amp;#39;@/composables/useSampleData&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categoriesData&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useSampleData&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">useCategoryStore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineStore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CategoryStore&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">state&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">categories&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ref&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">categoriesData&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">getters&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">categoryId&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">categories&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">category&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">Category&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">category&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">categoryId&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec TypeScript, cela devient :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">ref&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;vue&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">defineStore&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;pinia&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">useSampleData&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="s2">&amp;#34;@/composables/useSampleData&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="kr">type&lt;/span> &lt;span class="nx">Category&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;@/types/Category&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categoriesData&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useSampleData&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">useCategoryStore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineStore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;CategoryStore&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//ÉTAT
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">categories&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ref&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">categoriesData&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//GETTERS
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">categoryId&lt;/span> : &lt;span class="kt">string&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">Catégorie&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">categories&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">category&lt;/span> : &lt;span class="kt">Category&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">category&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">categoryId&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categories&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>La fonction fléchée que vous voyez après le nom du magasin utilise la définition de la fonction avec le modèle de configuration.&lt;/p>
+&lt;p>Remerciements à :&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/vuejs/pinia/discussions/983#discussioncomment-2045733">Cette discussion sur GitHub&lt;/a> pour m’avoir aidé à comprendre la technique.&lt;/li>
+&lt;li>&lt;a href="https://vueschool.io/">VueSchool.io&lt;/a> pour &lt;a href="https://github.com/vueschool/pinia-the-enjoyable-vue-store">l’image&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Utiliser le bon type sur une prop dans Vue.js</title><link>https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/</link><pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/images/2024-02-28-eslint-typescript-error-details.jpg" alt="Featured image of post Utiliser le bon type sur une prop dans Vue.js" />&lt;p>Une fois de plus, il ne m&amp;rsquo;a pas fallu longtemps pour comprendre ce qu&amp;rsquo;il me manquait, car les erreurs d&amp;rsquo;ESLint sont souvent explicites.&lt;/p>
+&lt;p>J&amp;rsquo;ai découvert ceci lorsque je codais &lt;a href="https://vueschool.io/lessons/introducing-categories-collections-of-forums">la leçon 35&lt;/a> de la MasterClass sur Vue.js fournie par l&amp;rsquo;excellent équipe de VueSchool.io.&lt;/p>
+&lt;p>Lorsque vous typez une &lt;code>prop&lt;/code>, n&amp;rsquo;utilisez pas &lt;code>String&lt;/code> mais utilisez le type primitif &lt;code>string&lt;/code>.&lt;/p>
+&lt;p>Le premier est un &lt;em>wrapper object&lt;/em>, mais pour rendre ESLint heureux, vous devez utiliser la primitive.&lt;/p>
+&lt;p>Par exemple, vous devriez éviter cette déclaration :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id?&lt;/span>: &lt;span class="kt">String&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">edit?&lt;/span>: &lt;span class="kt">boolean&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//eslint se plaindra de `props.id`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">props&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">getUserById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">props&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Il en va de même pour :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>number&lt;/code> et &lt;code>Number&lt;/code>.&lt;/li>
+&lt;li>&lt;code>boolean&lt;/code> et &lt;code>Boolean&lt;/code>.&lt;/li>
+&lt;/ul></description></item><item><title>Enregistrer globalement des composants dans Vue 3</title><link>https://jeremielitzLer.fr/post/2024-02/enregistrer-globalement-des-composants-dans-vue3-et-typescript/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/enregistrer-globalement-des-composants-dans-vue3-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2024-02/2024-02-27/preview-of-main.ts-file.jpg" alt="Featured image of post Enregistrer globalement des composants dans Vue 3" />&lt;p>Alors que le guide de style de Vue 2 donnait le code pour le faire, le guide de style de Vue 3 l’a supprimé.&lt;/p>
+&lt;p>Comment cela fonctionne-t-il sur Vue 3 et TypeScript&lt;/p>
+&lt;p>J’ai donc creusé et je suis tombé sur &lt;a href="https://zerotomastery.io/blog/how-to-auto-register-components-for-vue-with-vite/">cet article&lt;/a>.&lt;/p>
+&lt;p>Le problème avec la solution proposée : la méthode &lt;code>globEager&lt;/code> n’existe plus.&lt;/p>
+&lt;p>Pour faire la même chose, vous pouvez utiliser &lt;code>.glob(regexString, {eager : true}&lt;/code>.&lt;/p>
+&lt;p>Cela vous retourne une liste d’objets de type &lt;code>[string, unknown][]&lt;/code>.&lt;/p>
+&lt;p>En utilisant JavaScript, ESLint ne se plaindrait pas, mais avec TypeScript, vous rencontrerez un problème avec le &lt;code>unknown&lt;/code>.&lt;/p>
+&lt;p>Le code qu’ESLint n’aime pas ressemble à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Inspiré par :
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// - https://zerotomastery.io/blog/how-to-auto-register-components-for-vue-with-vite/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// - https://dev.to/jakedohm_34/auto-registering-all-your-components-in-vue-3-with-vite-4884
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">componentFiles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">glob&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;@/components/App*.vue&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">eager&lt;/span>: &lt;span class="kt">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">componentFilesEntries&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">entries&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentFiles&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">componentPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">module&lt;/span>&lt;span class="nx">Import&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">componentFilesEntries&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">componentName&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">componentPath&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.vue&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">warn&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sb">`Le nom du composant n&amp;#39;a pas pu être extrait du chemin &amp;gt; &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">componentPath&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> `&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">component&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">module&lt;/span>&lt;span class="nx">Import.default&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Composant enregistré &amp;lt;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">composantName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;gt; globalement.`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Où se situe le problème ? Sur la ligne &lt;code>app.component(componentName !, moduleImport.default) ;&lt;/code>, et plus particulièrement le &lt;code>moduleImport.default&lt;/code>.&lt;/p>
+&lt;p>Pour le résoudre, vous devez le &lt;em>typer&lt;/em>.&lt;/p>
+&lt;p>En utilisant quelques &lt;code>console.log&lt;/code>, j’ai découvert que &lt;code>moduleImport&lt;/code> est de type &lt;code>Object&lt;/code> avec une propriété &lt;code>default&lt;/code>, également de type &lt;code>Object&lt;/code>.&lt;/p>
+&lt;p>La solution est donc de déclarer une interface de &lt;code>moduleImport&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">ModuleImportInterface&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">par&lt;/span> &lt;span class="nx">défaut&lt;/span> : &lt;span class="kt">Objet&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Il n’est pas nécessaire d’être plus précis sur &lt;code>default&lt;/code> dans ce cas d’utilisation.&lt;/p>
+&lt;p>Enfin, vous devez convertir le &lt;code>moduleImport&lt;/code> de type &lt;code>unknown&lt;/code> en &lt;code>ModuleImportInterface&lt;/code> pour avoir accès à la propriété &lt;code>default&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">component&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">module&lt;/span>&lt;span class="nx">Import&lt;/span> &lt;span class="kr">as&lt;/span> &lt;span class="nx">ModuleImportInterface&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ESLint ne remonte plus d&amp;rsquo;erreur et surtout, le code fonctionne toujours !&lt;/p>
+&lt;p>C’est un excellent cas d’utilisation pour couler une variable de type inconnu.&lt;/p>
+&lt;p>N’hésitez pas à partager !&lt;/p></description></item><item><title>Utiliser des alias de chemin dans un projet Vue.js</title><link>https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/images/2024-02-19-vite.config.ts-contents.jpg" alt="Featured image of post Utiliser des alias de chemin dans un projet Vue.js" />&lt;p>Je trouve cette astuce très pratique une fois que vous l’avez mise en place.&lt;/p>
+&lt;h2 id="dans-les-projets-javascript">Dans les projets JavaScript&lt;/h2>
+&lt;p>Ajoutez l’alias dans &lt;code>jsconfig.json&lt;/code> pour avoir les super pouvoirs d’intellisense et l’avantage des chemins absolus :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;compilerOptions&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;paths&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;@/*&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./src/*&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="dans-les-projets-typescript">Dans les projets TypeScript&lt;/h2>
+&lt;ol>
+&lt;li>Installer le paquet &lt;code>@types/node&lt;/code> comme dépendance dev.&lt;/li>
+&lt;li>Ajouter les imports suivants dans &lt;code>vite.config.ts&lt;/code> :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">fileURLToPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">URL&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;node:url&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>Ajoutez l’option &lt;code>resolve&lt;/code> dans le même fichier :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">resolve&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">alias&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;@&amp;#34;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">fileURLToPath&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">URL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;./src&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>Ajoutez l’alias à &lt;code>tsconfig.json&lt;/code> pour éviter les erreurs d’ESLint et avoir les super pouvoirs d’intellisense :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;compilerOptions&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;paths&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;@/*&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./src/*&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous êtes prêts pour code plus efficacement !&lt;/p></description></item><item><title>Gérer un argument inutilisé avec TypeScript et ESLint</title><link>https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/</link><pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/2024-02-16-typescript-code-sample.png" alt="Featured image of post Gérer un argument inutilisé avec TypeScript et ESLint" />&lt;p>Je suis encore assez novice en TypeScript, mais je progresse grâce au &lt;a href="https://vueschool.io/courses">curriculum VueSchool.io&lt;/a>.&lt;/p>
+&lt;p>J’aime ce que TypeScript apporte au code et comment il vous fait réfléchir davantage sur la façon d’écrire votre code.&lt;/p>
+&lt;p>En progressant, je me suis posé une question : comment résoudre l’erreur de linting TypeScript lorsqu’on n’utilise pas un argument dans une méthode alors qu&amp;rsquo;il est obligatoire ?&lt;/p>
+&lt;p>Je suis rapidement tombé sur ce cas d’utilisation.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example.png"
+width="656"
+height="695"
+srcset="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Exemple de code non conforme à ESLint et TypeScript"
+class="gallery-image"
+data-flex-grow="94"
+data-flex-basis="226px"
+>
+&lt;/p>
+&lt;p>Dans le cas ci-dessus, je n’avais pas le choix. Le garde de navigation &lt;code>beforeEnter&lt;/code> dans &lt;code>vue-router&lt;/code> exige de fournir le second argument &lt;code>from&lt;/code>, même si je ne l’utilise pas…&lt;/p>
+&lt;p>Comment ai-je résolu le problème ? C’est simple : prêtez attention à ce que ESLint vous indique. Parfois, il fournit une solution rapide.&lt;/p>
+&lt;p>Dans mon cas, il m’a suggéré de marquer l’argument non utilisé avec un underscore (___) et voilà, ESLint est devenu heureux.&lt;/p></description></item></channel></rss>

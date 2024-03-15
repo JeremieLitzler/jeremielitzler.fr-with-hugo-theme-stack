@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Générateur De Site Statique on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/generateur-de-site-statique/</link><description>Recent content in Générateur De Site Statique on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Mon, 11 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/generateur-de-site-statique/index.xml" rel="self" type="application/rss+xml"/><item><title>Migrer de Vuepress à Hugo</title><link>https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/</link><pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/2023-08-30-accueil-du-siteweb-hugo.jpg" alt="Featured image of post Migrer de Vuepress à Hugo" />&lt;p>Au travail, la génération du site nécessite :&lt;/p>
+&lt;ul>
+&lt;li>86 secondes pour initialiser et préparer les données&lt;/li>
+&lt;li>64 secondes pour compiler&lt;/li>
+&lt;li>81 secondes pour générer les pages&lt;/li>
+&lt;/ul>
+&lt;p>Ce qui équivaut à 236 secondes au total.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/temps-de-generation-du-media-d-un-site-de-documentation-au-travail.jpg"
+width="674"
+height="233"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_4d7338119c9c8473ace9f35dc852393c.jpg 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_8eef68f0472df03c9c3574dcecc88f0d.jpg 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/_hu4b8c9f1161c3b6924b9cddee189e1c57_37470_4f0baf562c07413a0d255aada8b3213d.jpg 1024w"
+loading="lazy"
+alt="Temps de génération du média d’un site de documentation au travail…"
+class="gallery-image"
+data-flex-grow="289"
+data-flex-basis="694px"
+>
+&lt;/p>
+&lt;p>Sur une machine virtuelle sur laquelle nous travaillons, cela prend :&lt;/p>
+&lt;ul>
+&lt;li>61 secondes pour initialiser et préparer les données&lt;/li>
+&lt;li>199 secondes pour compiler&lt;/li>
+&lt;li>90 secondes pour générer les pages&lt;/li>
+&lt;/ul>
+&lt;p>Ce qui équivaut à 368 secondes au total.&lt;/p>
+&lt;p>Cela semble bien et le canal d’intégration contenu sur Azure DevOps prend environ 4 minutes, ce qui est similaire.&lt;/p>
+&lt;p>Mais deux collègues ont rapporté que cela avait pris plus de 800 secondes pour eux…&lt;/p>
+&lt;p>La raison derrière cela est détaillée ici : &lt;a href="https://github.com/orgs/Vuepress-theme-hope/discussions/2887">https://github.com/orgs/Vuepress-theme-hope/discussions/2887&lt;/a>.&lt;/p>
+&lt;p>Personnellement, sur mes sites web, j’ai plus eu des problèmes de SEO :&lt;/p>
+&lt;ul>
+&lt;li>taxonomie non normalisée,&lt;/li>
+&lt;li>pas d’accès à la personnalisation des pages de catégories et de tags,&lt;/li>
+&lt;li>frontmatter gonflé pour ajouter des liens canoniques et des méta OpenGraph.&lt;/li>
+&lt;/ul>
+&lt;h2 id="quelle-alternative">Quelle alternative&lt;/h2>
+&lt;h3 id="lobjectif">L’objectif&lt;/h3>
+&lt;p>J’avais besoin :&lt;/p>
+&lt;ul>
+&lt;li>des fonctionnalités en termes de syntaxe Markdown,&lt;/li>
+&lt;li>d’une génération performante,&lt;/li>
+&lt;li>d’une prise en charge de &amp;ldquo;blockcontainer&amp;rdquo;, par exemple pour afficher des notes, des conseils, des avertissements, etc.,&lt;/li>
+&lt;li>d’une prise en charge des métadonnées pour OpenGraph et canonique,&lt;/li>
+&lt;li>d’une taxonomie avec catégories et tags,&lt;/li>
+&lt;li>des liens &amp;ldquo;Markdown&amp;rdquo; pour lier les articles les uns aux autres.&lt;/li>
+&lt;/ul>
+&lt;p>De plus, si je pouvais avoir un support pour le référencement naturel avec la possibilité de personnaliser le titre et la description de toutes les pages (en particulier les pages de taxonomie) et de normaliser les URL pour que le référencement soit heureux, ce serait génial.&lt;/p>
+&lt;p>Ce dernier point serait possible (une belle surprise), mais je ne le savais pas lorsque j’ai commencé à enquêter sur Hugo.&lt;/p>
+&lt;h3 id="le-choix">Le choix&lt;/h3>
+&lt;p>J’ai pensé à utiliser un générateur de site statique comme Hugo pour son efficacité sur l’étape de génération.&lt;/p>
+&lt;p>Cela nécessiterait cependant d’adapter le contenu, car Vuepress et Hugo sont très différents lorsqu’il s’agit d’analyser et convertir le Markdown en HTML (le premier est en JavaScript et l’autre en Go…).&lt;/p>
+&lt;p>Et je ne connaissais rien au langage Go :O&lt;/p>
+&lt;h2 id="prérequis-avec-hugo">Prérequis avec Hugo&lt;/h2>
+&lt;p>Tout d’abord, nous avons besoin de :&lt;/p>
+&lt;ul>
+&lt;li>télécharger et installer &lt;code>Go&lt;/code> (rien de particulier à faire pendant l’installation, juste &amp;ldquo;Suivant, suivant, suivant…&amp;quot;) : &lt;a href="https://go.dev/dl/">https://go.dev/dl/&lt;/a>&lt;/li>
+&lt;li>télécharger Hugo (j’ai téléchargé la version 0.117.0) : &lt;a href="https://github.com/gohugoio/hugo/releases/">https://github.com/gohugoio/hugo/releases/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="installer-hugo">Installer Hugo&lt;/h3>
+&lt;p>Pour les utilisateurs Windows, il faut :&lt;/p>
+&lt;ul>
+&lt;li>Créer un dossier &lt;code>Hugo&lt;/code> dans &lt;code>C:\Program Files&lt;/code>&lt;/li>
+&lt;li>Copier le contenu du ZIP, téléchargé précédemment, dans &lt;code>C:\Program Files\Hugo&lt;/code>&lt;/li>
+&lt;li>Ajouter au &lt;code>PATH&lt;/code> le chemin vers le dossier content l’exécutable de Hugo : &lt;code>C:\Program Files\Hugo&lt;/code>&lt;/li>
+&lt;li>(Re)Lancer Visual Studio Code et ouvrir le terminal &lt;code>Git Bash&lt;/code> avec &lt;code>CTRL+ù&lt;/code>.&lt;/li>
+&lt;li>Exécuter la commande &lt;code>hugo&lt;/code>. Vous devriez lire le message “&lt;em>Error: Unable to locate config file or config directory. Perhaps you need to create a new site&lt;/em>”. Cela confirme qu’Hugo est bien installé :)&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-warning" id="N&amp;#39;utilisez pas Windows Prompt ou Windows PowerShell" >
+&lt;p class="jli-notice-title">N&amp;#39;utilisez pas Windows Prompt ou Windows PowerShell&lt;/p>&lt;p>Pour lancer la commande &lt;code>hugo&lt;/code>, préférez l’usage de :&lt;/p>
+&lt;ul>
+&lt;li>Git Bash, inclut avec Git par défaut.&lt;/li>
+&lt;li>Powershell 7.x ou plus récent.&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;h2 id="les-tâches-de-migration-du-contenu">Les tâches de migration du contenu&lt;/h2>
+&lt;h3 id="1--ne-pas-utiliser-les-_blocs-de-code_-avec-des-xy-suivant-la-déclaration-du-langage-de-programmation">1- Ne pas utiliser les &lt;em>blocs de code&lt;/em> avec des &amp;ldquo;{x,y,&amp;hellip;}&amp;rdquo; suivant la déclaration du langage de programmation&lt;/h3>
+&lt;p>Quelque chose comme ce qui suit ne compilera pas :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">```xml{1,26}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">... some XML ...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nettoyez ces cas si vous en avez.&lt;/p>
+&lt;h3 id="2--copier-le-contenu-de-vuepresspublic-dans-le-dossier-contentstatic">2- Copier le contenu de &lt;code>.Vuepress/public&lt;/code> dans le dossier &lt;code>content/static&lt;/code>&lt;/h3>
+&lt;p>De plus, si vous utilisez quelque chose comme Drawio et que vous utilisez la fonctionnalité &lt;em>export en HTML&lt;/em>, vous devrez ajouter ce qui suit en haut de chaque fichier HTML exporté :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">+++
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+++
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Cela permet que le site web soit généré sans erreur (voir &lt;a href="https://discourse.gohugo.io/t/solved-using-html-for-content-pages-instead-of-markdown/3374/5">cette discussion sur le forum de Hugo&lt;/a>).&lt;/p>
+&lt;h3 id="3--renommer-tous-les-readmemd-en-indexmd-si-vous-lutilisez-pour-nommer-le-fichier-racine-dune-page-ou-dun-article">3- Renommer tous les &lt;code>README.md&lt;/code> en &lt;code>index.md&lt;/code>, si vous l&amp;rsquo;utilisez pour nommer le fichier racine d&amp;rsquo;une page ou d&amp;rsquo;un article&lt;/h3>
+&lt;p>Hugo exige que les fichiers markdown d&amp;rsquo;un répertoire soient nommés &lt;code>index.md&lt;/code> lorsque vous utilisez la structure de dossiers suivante :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>J&amp;rsquo;ai vu des tutoriels où les gens les nommaient &lt;code>quelque-chose-d-autre.md&lt;/code>, mais c&amp;rsquo;est lorsque vous utilisez cette autre structure de dossiers :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Je préfère le premier, car je conserve les images spécifiques à une publication au même endroit que le fichier Markdown.&lt;/p>
+&lt;p>Le script ci-dessous doit être exécuter dans le dossier &lt;code>content&lt;/code> pour renommer les &lt;code>README.md&lt;/code> en &lt;code>index.md&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">find . -iname &lt;span class="s1">&amp;#39;README.md&amp;#39;&lt;/span> -execdir mv &lt;span class="o">{}&lt;/span> index.md &lt;span class="se">\;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4--choisir-le-thème">4- Choisir le thème&lt;/h3>
+&lt;p>J&amp;rsquo;ai tenté d&amp;rsquo;utiliser le thème suggéré par la documentation de Hugo. Toutefois, il est trop simpliste et surtout, je n&amp;rsquo;arrivais pas à afficher les pages de type &amp;ldquo;liste&amp;rdquo; à s&amp;rsquo;afficher correctement.&lt;/p>
+&lt;p>Puis, je suis tombé sur &lt;a href="https://github.com/CaiJimmy">le thème de Jimmy&lt;/a> : &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">https://github.com/CaiJimmy/hugo-theme-stack-starter&lt;/a>.&lt;/p>
+&lt;p>Il est riche, fonctionne et est documenté !&lt;/p>
+&lt;p>Avec ce thème, il me manquait les blocs de mise en avant de contenu que j&amp;rsquo;utilisais sur Vuepress pour tout ce qui est notes, astuces, avertissements et messages de danger.&lt;/p>
+&lt;h3 id="5--personnaliser-la-thème">5- Personnaliser la thème&lt;/h3>
+&lt;p>Pour être honnête, aux premiers abords, le thème recommendé par la documentation de Hugo m&amp;rsquo;a rendu confu à propos du fonctionnement de Hugo.&lt;/p>
+&lt;p>Puis, en utilisant le &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">thème de Jimmy&lt;/a>, j&amp;rsquo;ai commencé à comprendre.&lt;/p>
+&lt;p>Mon but était de conserver les liens relatifs naturels entre les différents fichiers (liens relatifs) du site web et utiliser la syntaxe Vuepress fournie dans le thème de Mr Hope pour &lt;a href="https://theme-hope.vuejs.press/guide/markdown/container.html">l&amp;rsquo;usage des blocs de mise en avant de contenu&lt;/a>.&lt;/p>
+&lt;h4 id="les-liens-relatifs">Les liens relatifs&lt;/h4>
+&lt;p>Par défaut, Hugo ne fournit pas la possibilité de générer un lien relatif d&amp;rsquo;un page ou d&amp;rsquo;un article à un autre :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon lien vers une autre page dans le site web&lt;/span>](&lt;span class="na">../page/a-propos.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le Markdown ci-dessus deviendrait en HTML ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-HTML" data-lang="HTML">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://mondomaine.com/page/a-propos/&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Mon lien vers une autre page dans le site web&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Même si les auteurs de Hugo et la documentation proposent d&amp;rsquo;utiliser le &lt;em>shortcode&lt;/em> &lt;code>{{&amp;lt; ref &amp;quot;/path/to/page-or-post/&amp;quot; &amp;gt;}}&lt;/code>, ce n&amp;rsquo;est pas du tout pratique et cela ne permet pas d&amp;rsquo;utiliser l&amp;rsquo;intellisense dans VSC pour sélectionner le fichier cible.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Si vous souhaitez afficher un exemple de blocs de mise en avant de contenu..." >
+&lt;p class="jli-notice-title">Si vous souhaitez afficher un exemple de blocs de mise en avant de contenu...&lt;/p>&lt;p>Faites ce que Joe Mooring indique &lt;a href="https://github.com/gohugoio/hugo/issues/11054#issuecomment-1572295424">dans le ticket GitHub du dépôt de Hugo&lt;/a>.&lt;/p>&lt;/div>
+&lt;p>De plus, je n&amp;rsquo;arrivais pas à trouver comment remplacer les centaines de liens relatifs sur mes sites Web pour passer de la syntaxe native markdown à la syntaxe shortcode&amp;hellip;&lt;/p>
+&lt;p>Heureusement, après un peu de recherche, j&amp;rsquo;ai trouvé un autre modèle pour écraser la logique par défaut dans &lt;code>render-link.html&lt;/code> et cela me permet de générer des liens relatifs comme je le voulais.&lt;/p>
+&lt;p>Voici le code &lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/layouts/_default/_markup/render-link.html">dans mon dépôt&lt;/a>.&lt;/p>
+&lt;p>Vous devez le mettre sous &lt;code>layouts/_default/_markup/render-link.html&lt;/code> pour écraser la logique par défaut.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="A propos des fichier qui ne sont pas nommés &amp;#34;index.md&amp;#34;" >
+&lt;p class="jli-notice-title">A propos des fichier qui ne sont pas nommés &amp;#34;index.md&amp;#34;&lt;/p>&lt;p>Cependant, pour les liens vers des fichiers qui sont pas nommés &lt;code>index.md&lt;/code>, cela ne fonctionne pas.&lt;/p>
+&lt;p>J&amp;rsquo;utilise cette organisation pour les pages ou articles de grande taille :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Markdown" data-lang="Markdown">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-1.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-2.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-N.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Pour que les liens relatifs fonctionnent, il faudrait :&lt;/p>
+&lt;ul>
+&lt;li>mettre chaque fichier dans son propre dossier.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-1/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-2/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ partie-N/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>ou fusionner les parties dans le fichier &lt;code>index.md&lt;/code>.&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;h4 id="les-blocs-de-mise-en-avant-de-contenu">Les blocs de mise en avant de contenu&lt;/h4>
+&lt;p>Ensuite, je voulais pouvoir utiliser une syntaxe similaire à ceci avec Hugo :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">:::warning Le titre du bloc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Le contenu du bloc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">:::
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec l&amp;rsquo;aide de &lt;a href="https://github.com/Lovirr">Lovirr&lt;/a> et &lt;a href="https://github.com/CaiJimmy">CaiJimmy&lt;/a>, nous avons trouvé la solution : créer un &lt;em>shortcode&lt;/em> personnalisé. N&amp;rsquo;hésitez pas à consulter &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack/discussions/867">ma discussion avec eux sur GitHub&lt;/a> sur le sujet.&lt;/p>
+&lt;p>Les shortcodes se placent dans &lt;code>layouts/shortcodes&lt;/code>. Dans mon cas, je l&amp;rsquo;ai nommé &lt;code>blockcontainer.html&lt;/code>.&lt;/p>
+&lt;p>Le code du &lt;em>shortcode&lt;/em> &lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/layouts/shortcodes/blockcontainer.html">est disponible dans mon dépôt&lt;/a>.&lt;/p>
+&lt;p>Vous pouvez modifier la classe CSS si vous le souhaitez. Mes styles sont les suivants :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;span class="lnt">72
+&lt;/span>&lt;span class="lnt">73
+&lt;/span>&lt;span class="lnt">74
+&lt;/span>&lt;span class="lnt">75
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">root&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--theme-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#3eaf7c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--accent-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--body-text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fdfdfe&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#858585&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6f6e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff8e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6a700&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ffebec&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e13238&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nd">root&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">data-scheme&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nt">dark&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--body-text-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.8&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#858585&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-note-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fdfdfe&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">theme&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-tip-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6f6e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e6a700&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-warn-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#fff8e6&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-light&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#e13238&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">--notice-danger-dark&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ffebec&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">em&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">highlight&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">gallery&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="nt">blockquote&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">initial&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice&lt;/span> &lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-title&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">bold&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-note&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">note&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-tip&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">tip&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-warning&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">warn&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">jli-notice-danger&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">light&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">notice&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">danger&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">dark&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ensuite, j&amp;rsquo;ai créé &lt;a href="https://github.com/JeremieLitzler/jeremielitzler.fr-with-hugo-theme-stack/blob/master/.vscode/shortcodes.code-snippets">ce snippet pour Visual Studio Code&lt;/a> à utiliser très facilement dans un fichier Markdown pendant la rédaction d&amp;rsquo;une page ou d&amp;rsquo;un article.&lt;/p>
+&lt;p>Dans le fichier markdown, cela ressemble à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Le&lt;/span> &lt;span class="na">titre&lt;/span> &lt;span class="na">du&lt;/span> &lt;span class="na">bloc&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Le corps du bloc.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Pour être clair, dans l&amp;rsquo;exemple ci-dessus :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>jli-notice-warning&lt;/code> correspond à la classe CSS ajouter à la &lt;code>div&lt;/code> du bloc. Cela correspond &lt;code>$noticeType&lt;/code> dans le code du &lt;em>shortcode&lt;/em>.&lt;/li>
+&lt;li>&lt;code>Le titre du bloc&lt;/code> correspond au titre que le &lt;em>shortcode&lt;/em> génère dans le premier élément &lt;code>p&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Le corps du bloc.&lt;/code> correspond au corps du bloc du &lt;em>shortcode&lt;/em>. Cela peut être n&amp;rsquo;importe quel contenu Markdown multi-lignes valide. &lt;code>$raw&lt;/code> dans le code du &lt;em>shortcode&lt;/em> représente ce contenu.&lt;/li>
+&lt;/ul>
+&lt;p>Comme vous le voyez, les shortcodes fonctionnent comme un élément HTML, avec une balise d&amp;rsquo;ouverture et de fermeture.&lt;/p>
+&lt;p>Vous pouvez utiliser uniquement la syntaxe d&amp;rsquo;ouverture :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Juste&lt;/span> &lt;span class="na">un&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous pouvez utiliser Markdown standard pour les images et les liens dans le corps.&lt;/p>
+&lt;p>Pour les liens relatifs vers d&amp;rsquo;autres pages ou articles au sein d&amp;rsquo;un même site, veillez à ne pas utiliser le contenu markdown suivant lorsque vous êtes à l&amp;rsquo;intérieur du bloc.&lt;/p>
+&lt;p>Par exemple, avec la structure de dossier suivante dans le dossier &lt;code>content&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">content&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">post&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">un-super-article&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">index&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">md&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">un-premier-article&lt;/span>&lt;span class="o">/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span>&lt;span class="nt">__&lt;/span> &lt;span class="nt">index&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">md&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous pouvez écrire le Markdown suivant :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Mon&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon super article&lt;/span>](&lt;span class="na">../mon-super-article/index.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Même si le lien fonctionnerait en dehors du &lt;em>shortcode&lt;/em>, il ne fonctionnera pas à l’intérieur… Je n’ai pas compris pourquoi.&lt;/p>
+&lt;p>Cependant, j&amp;rsquo;ai compris comment le faire fonctionner dans le &lt;em>shortcode&lt;/em>. Vous devez utiliser une référence absolue :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">blockcontainer&lt;/span> &lt;span class="na">jli-notice-warning&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">Mon&lt;/span> &lt;span class="na">titre&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[&lt;span class="nt">Mon super article&lt;/span>](&lt;span class="na">/post/mon-super-article/index.md&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">blockcontainer&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="6--mettre-à-jour-la-_frontmatter_">6- Mettre à jour la &lt;em>frontmatter&lt;/em>&lt;/h3>
+&lt;p>Premièrement, j&amp;rsquo;utilisais les propriétés &lt;code>heroImage&lt;/code> et &lt;code>heroAlt&lt;/code> (texte alternatif pour &lt;code>heroImage&lt;/code>).&lt;/p>
+&lt;p>Dans Hugo, &lt;code>heroImage&lt;/code> devient &lt;code>image&lt;/code> et cela fonctionne de la même façon et même mieux. La valeur &lt;code>image: /images/mon-image.jpg&lt;/code> signifie que l&amp;rsquo;image est sourcé dans le dossier &lt;code>static/images/&lt;/code>.&lt;/p>
+&lt;p>Toutefois, la valeur &lt;code>image: images/mon-image.jpg&lt;/code> fonctionne contrairement à Vuepress. Elle doit alors être stockée par exemple dans &lt;code>content/post/mon-article/images&lt;/code>.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Important" >
+&lt;p class="jli-notice-title">Important&lt;/p>&lt;p>Vous devez ajouter du frontmatter à chaque fichier Markdown.&lt;/p>
+&lt;p>Sinon, vous voyez l&amp;rsquo;article mais aucun titre sur lequel cliquer pour accéder à la page ou à la publication, même si vous avez &lt;code>Mon titre&lt;/code> en haut&amp;hellip;&lt;/p>&lt;/div>
+&lt;h3 id="7--les-images-dans-les-fichiers-markdown">7- Les images dans les fichiers Markdown&lt;/h3>
+&lt;p>Il vous suffit de déclarer une image de la manière habituelle :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- quand un dossier « images » existe au même niveau que le fichier Markdown --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Mon image&lt;/span>](&lt;span class="na">images/mon-image.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- quand l’image est dans &amp;#34;/static/images&amp;#34; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![&lt;span class="nt">Mon image&lt;/span>](&lt;span class="na">/images/mon-image.jpg&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="comparaison-entre-vuepress-et-hugo">Comparaison entre Vuepress et Hugo&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Temps de génération ⇒ meilleur avec Hugo&lt;/p>
+&lt;p>pour le même contenu, cela prend moitié moins de temps&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo.png"
+width="1055"
+height="60"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-hugo_hu355e05b29f84d3aca05f11bc76447683_17156_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="avec Hugo"
+class="gallery-image"
+data-flex-grow="1758"
+data-flex-basis="4220px"
+>
+&lt;/p>
+&lt;p>au lieu de&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress.png"
+width="1061"
+height="59"
+srcset="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/images/avec-vuepress_huafd06667d5227cc187a40e1916d4c21b_17950_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="avec Vuepress"
+class="gallery-image"
+data-flex-grow="1798"
+data-flex-basis="4315px"
+>
+&lt;/p>
+&lt;p>Dans le site de documentation de mon équipe au travail, le temps de construction est passé d’environ 250 secondes à 5 secondes. Pas mal ;)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Les blocs de contenu ⇒ OK, en utilisant un &lt;em>shortcode&lt;/em> personnalisé.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Metadata ⇒ OK, OpenGraph + URL canonique sont générés par défaut et ils utilisent les valeurs dans le frontmatter pour les propriétés &lt;code>title&lt;/code>, &lt;code>description&lt;/code>, &lt;code>image&lt;/code> et le nom du dossier pour l’URL.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>SEO ⇒ meilleur, car j’ai le contrôle sur toutes les pages, en particulier les catégories et les étiquettes (&lt;em>tags&lt;/em>), même si je dois créer les pages pour chaque taxonomie manuellement afin d’avoir un titre et une description unique. Sinon cela prend la valeur par défaut du site web.&lt;/p>
+&lt;ul>
+&lt;li>Allez voir &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack-starter">la démo du thème&lt;/a>. Vous comprendrez rapidement le principe.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Image ⇒ Je ne suis pas sûr. Bien que la documentation indique que les images peuvent être &lt;em>adaptées à la taille de l’écran&lt;/em> et que &lt;code>webp&lt;/code> est disponible, seulement la première option est possible. La transformation de &lt;code>jpg&lt;/code> à &lt;code>webp&lt;/code> n’est pas si trivial.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Je n’ai pas pu comparé Vuepress à Hugo, car LightHouse, PageSpeed.web.dev et GTMetrix me disent tous que le site Vuepress est non analysable…&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Taxonomie des catégories et étiquettes ⇒ meilleures, l’URL est normalisée à la génération du lien dans un article et la page pour chaque taxonomie est personnalisable :)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Liens relatifs vers d’autres pages dans le même site web ⇒ OK&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Une chose que j’ai dû réaliser fut de réorganiser le contenu pour ne pas dépasser les 100 caractères maximum pour chaque URL (page et article). J’utilisais cette structure pour mes articles :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">docs/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 2023/ &lt;span class="c">&amp;lt;!-- année --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 08/ &lt;span class="c">&amp;lt;!-- mois --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Je suis passé à cette structure :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">content/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ post/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ 2023-08 &lt;span class="c">&amp;lt;!-- &amp;#34;année-mois&amp;#34; --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ mon-article/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ index.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> |__ images/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>J’ai donc dû implémenter des redirections de l’ancien chemin vers le nouveau, car j’avais partagé des articles !&lt;/p>
+&lt;p>Ceci est possible avec le fichier de configuration &lt;code>netlify.toml&lt;/code>. Consultez &lt;a href="https://docs.netlify.com/routing/redirects/">https://docs.netlify.com/routing/redirects/&lt;/a> pour comprendre comment cela fonctionne.&lt;/p>
+&lt;p>Sinon, n’hésitez pas à utiliser &lt;a href="https://docs.google.com/spreadsheets/d/1cAA9Gfhx3jg3GRdvWGFvq-Gz2yXH66e8Yg4P_BFpw3Q">cette Google Sheet&lt;/a> pour construire vos redirects.&lt;/p>
+&lt;p>Aussi, vous pouvez utiliser ce script bash pour lister tous les chemins vers vos articles pour les copier dans la Google Sheet :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /docs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">find . -iname &lt;span class="s1">&amp;#39;README.md&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous voici à la fin de ce long article ! J’espère que vous l’avez trouvé utile et je vous souhaite un merveilleux voyage avec Hugo.&lt;/p></description></item></channel></rss>

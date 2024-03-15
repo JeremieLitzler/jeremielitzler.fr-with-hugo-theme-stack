@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/seo/</link><description>Recent content in SEO on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>Ajouter une URL canonique à chaque article avec Hugo</title><link>https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/images/2024-03-15-a-smartphone-and-a-pen-on-a-desk.jpg" alt="Featured image of post Ajouter une URL canonique à chaque article avec Hugo" />&lt;p>J’utilise le &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack">thème Hugo&lt;/a> réalisé par &lt;a href="https://jimmycai.com/">Jimmy Cai&lt;/a>.&lt;/p>
+&lt;p>Il inclut déjà dans le modèle d’en-tête le code pour ajouter un lien canonique.&lt;/p>
+&lt;p>Mais, à un moment donné, j’ai dû publier un article que j’avais déjà publié sur une plateforme en ligne.&lt;/p>
+&lt;p>Je ne pouvais donc pas laisser le thème générer un lien canonique automatiquement.&lt;/p>
+&lt;h2 id="lobjectif">L’objectif&lt;/h2>
+&lt;p>Je voulais conserver l’automatisation pour les articles publiés initialement sur mon blog.&lt;/p>
+&lt;p>Ensuite, dans certains cas, je voulais republier un article sur mon blog alors qu’il était déjà disponible sur Internet.&lt;/p>
+&lt;h2 id="pourquoi">Pourquoi&lt;/h2>
+&lt;p>En matière de référencement, les bonnes pratiques sont les suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Chaque page web doit avoir un lien canonique.&lt;/li>
+&lt;li>Une page web unique avec le même contenu doit être publiée une et une seule fois sur Internet.&lt;/li>
+&lt;/ul>
+&lt;p>Si vous ne respectez pas ces deux règles, les robots n’indexeront pas vos pages et vous perdrez du trafic.&lt;/p>
+&lt;h2 id="solution-utilisant-le-thème-hugo">Solution utilisant le thème Hugo&lt;/h2>
+&lt;p>Tout d’abord, j’ai dû trouver où le lien canonique était généré. Je l’ai trouvé dans &lt;code>layouts/partials/head/head.html&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Maintenant, comment pouvais-je spécifier dans la &lt;a href="https://docusaurus.io/fr/docs/next/create-doc#:~:text=Le%20frontmatter%20est%20utilis%C3%A9e%20pour,m%C3%A9tadonn%C3%A9es%20n%C3%A9cessaires%20sans%20le%20frontmatter.">&lt;em>frontmatter&lt;/em>&lt;/a> d’un article donné que je voulais que le lien canonique soit un lien spécifique ?&lt;/p>
+&lt;p>En cherchant un peu, j’ai trouvé &lt;a href="https://discourse.gohugo.io/t/how-to-add-cannonical-url-to-a-blog/34670/4">ce fil de discussion sur le forum Hugo&lt;/a>.&lt;/p>
+&lt;p>Les données de la &lt;em>frontmatter&lt;/em> sont accessibles via &lt;code>.Params&lt;/code> qui contient des paires clé/valeur.&lt;/p>
+&lt;p>La clé est le nom de la propriété &lt;em>frontmatter&lt;/em>.&lt;/p>
+&lt;p>Dans mon cas, j’ai nommé la propriété canonique &lt;code>relcanonical&lt;/code> et la valeur doit être une chaîne de caractères.&lt;/p>
+&lt;p>Cela donne ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">relcanonical&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://jeremielitzler.fr&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>La ligne &lt;code>head.html&lt;/code> ci-dessus doit être remplacée par ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-htm" data-lang="htm">&lt;span class="line">&lt;span class="cl">{{ with .Params.relcanonical }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . | relLangURL }}&amp;#34;&lt;/span> &lt;span class="na">itemprop&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;url&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ else -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span> &lt;span class="na">itemprop&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;url&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end -}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Dans le code ci-dessus,&lt;/p>
+&lt;ul>
+&lt;li>Lorsque le paramètre &lt;code>relcanonical&lt;/code> est défini dans la &lt;code>frontmatter&lt;/code> (&lt;code>{{ with .Params.relcanonical }}&lt;/code>)&lt;/li>
+&lt;li>On utilise sa valeur, qui est le &lt;code>.&lt;/code> dans &lt;code>{{ . }}&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-note" id="La syntaxe de la moustache est utilisée pour la programmation Go dans le modèle HTML" >
+&lt;p class="jli-notice-title">La syntaxe de la moustache est utilisée pour la programmation Go dans le modèle HTML&lt;/p>&lt;p>}&lt;/p>&lt;/div>
+&lt;p>J’espère que vous avez trouvé cela utile.&lt;/p>
+&lt;p>N’hésitez pas à partager !&lt;/p>
+&lt;p>Crédit : Photo de &lt;a href="https://unsplash.com/@steve_j?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Steve Johnson&lt;/a> sur &lt;a href="https://unsplash.com/photos/black-smartphone-beside-pen-rNYCrcjUnOA?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Stockage on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/stockage/</link><description>Recent content in Stockage on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Tue, 08 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/stockage/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimisation de l’autonomie électrique pour l'hiver</title><link>https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/</link><pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2022-09-06-optimiser-l-autonomie-electrique.jpg" alt="Featured image of post Optimisation de l’autonomie électrique pour l'hiver" />&lt;p>
+&lt;img src="https://jeremielitzLer.fr/images/2022-09-06-optimiser-l-autonomie-electrique.jpg"
+loading="lazy"
+alt="Un câble débranché devant une prise murale"
+>
+&lt;/p>
+&lt;h2 id="objectif">Objectif&lt;/h2>
+&lt;p>Obtenir tous les éléments et conseils d’un professionnel pour me permettre la réalisation du besoin décrite ci-dessous pour un budget d’environ 2000 euros.&lt;/p>
+&lt;p>Je ne savais pas si j’avais les moyens pour un onduleur Victron Multi plus II (le modèle 24V 3000VA). De plus, il semblait qu’il nécessite d’avoir un chargeur séparé.&lt;/p>
+&lt;p>Je n’ai clairement pas les moyens pour des batteries Ni-Fe (vu les prix que Perma-batteries m’a donnés), mais je ne souhaite pas non plus utiliser la techno Gel ou OPZS,&lt;/p>
+&lt;p>Donc ça laisse uniquement les LiFePO4.&lt;/p>
+&lt;h2 id="besoin">Besoin&lt;/h2>
+&lt;p>Alimenter au minimum un poêle à granuler Ravelli HR70 de fin septembre à début mai qui consomme :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>234 à 260W de puissance au démarrage (12 premières minutes),&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>puis 25W minimum en fonctionnement nominal,&lt;/p>
+&lt;ul>
+&lt;li>la visse « sans fin » crée un pic de consommation à 25W pendant 5 secondes toutes les 5 secondes,&lt;/li>
+&lt;li>le circulateur maintient une puissance de 33W supplémentaires à interval régulier pour la circulation de l&amp;rsquo;eau chaude.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Cela équivaut à environ 750 Wh par jour.&lt;/p>
+&lt;p>J’aurais aimé obtenir une autonomie de 1 à 2 jours.&lt;/p>
+&lt;p>Donc, si j’ai bien compris le calcul, une batterie de la capacité suivante est nécessaire : on prend 750 Wh divisés par 0,8 (avec une &lt;a href="https://www.google.com/search?q=profondeur&amp;#43;de&amp;#43;d%C3%A9charge">DOD ou Profondeur de décharge&lt;/a> = 80 %) = 900 Wh par jour soit&lt;/p>
+&lt;ul>
+&lt;li>2 batteries de 75 Ah en 12V&lt;/li>
+&lt;li>2 batteries de 40 Ah en 24V&lt;/li>
+&lt;/ul>
+&lt;p>Je n’exclus pas d’alimenter d’autres appareils, comme :&lt;/p>
+&lt;ul>
+&lt;li>les lumières (23 LED de max. 4W) où on en utilise 10 de 4W plus que les 13 autres, soit :
+&lt;ul>
+&lt;li>4 Wh x 10 x 6 h = 240 Wh par jour&lt;/li>
+&lt;li>4 Wh x 13 x 2 h = 104 Wh par jour&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>et une &lt;a href="https://heero.fr/guide-travaux/ventilation/vmi/qu-est-ce-que-la-vmi/">VMI ou ventilation mécanique insufflée&lt;/a> avec filtre (600 Wh sur 24 h mesurés).&lt;/li>
+&lt;/ul>
+&lt;p>Mais ce n’est pas une priorité.&lt;/p>
+&lt;p>Donc, une batterie de 2 kWh (type : Polyntech) de capacité donnerait 1 jour à 2 jours d’autonomie selon notre usage.&lt;/p>
+&lt;p>Un bonus non négligeable : permettre le chargement des batteries sur notre surplus solaire (ou une piste pour câbler cela).&lt;/p>
+&lt;h2 id="comment-ai-je-procédé">Comment ai-je procédé&lt;/h2>
+&lt;p>J’ai contacté 3 personnes et entreprises (en dehors des recherches sur Internet et mes échanges sur le forum &lt;a href="https://forum-photovoltaique.fr/">https://forum-photovoltaique.fr/&lt;/a>) :&lt;/p>
+&lt;ul>
+&lt;li>Patrick de &lt;a href="http://heol2.org/">la Maison autonome&lt;/a>&lt;/li>
+&lt;li>Rémi de &lt;a href="https://nospiedssurterre.fr/">Nos pieds sur terre&lt;/a>&lt;/li>
+&lt;li>Eliot, ingénieur chez &lt;a href="https://www.myshop-solaire.com/">My Shop Solaire&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="avec-patrick">Avec Patrick&lt;/h3>
+&lt;p>L’échange téléphonique a été court.&lt;/p>
+&lt;p>Il utilise des &lt;a href="https://www.google.com/search?q=batteries&amp;#43;Rolls&amp;#43;Royce">batteries Rolls Royce&lt;/a> (comme la marque de voiture) de 400 Ah en 24 v.&lt;/p>
+&lt;p>Il ne passe pas en dessous de 70 %.&lt;/p>
+&lt;p>Sur &lt;a href="https://www.elysun-store.fr/batterie-solaire-rolls-serie-4000-t-12-250.html">ce site&lt;/a>, on voit qu’il y a quasiment le double de cycle en décharge à 50 % vs décharge à 80 %, 3,28 ans vs 5,48 ans d’espérance de vie.&lt;/p>
+&lt;p>Son système est trop onéreux pour moi.&lt;/p>
+&lt;p>Il faut dire qu’il est autonome et il n’utilise pas beaucoup d’appareils modernes chez lui. Vous pouvez facilement le retrouver sur Internet: &lt;a href="http://heol2.org/">la Maison autonome&lt;/a>.&lt;/p>
+&lt;h3 id="avec-rémi">Avec Rémi&lt;/h3>
+&lt;p>J’ai eu un long échange par courriel début septembre.&lt;/p>
+&lt;p>Voici ce qui est en ressort :&lt;/p>
+&lt;p>Devenir autonome en électricité n’est pas simple :&lt;/p>
+&lt;ul>
+&lt;li>il faut bien connaitre son usage, autant du point de vue des équipements à alimenter, lequels sont critiques et lesquels sont du bonus et de la consommation type au jour le jour.&lt;/li>
+&lt;li>Ensuite, si l’on cherche à réaliser le projet soi-même, il faut des compétences en électricité et savoir comment on peut équilibrer le prix, le dimensionnement et le temps nécessaire pour mener à bien le projet.&lt;/li>
+&lt;/ul>
+&lt;p>Devenir autonome en électricité ne va pas vous permettre d’économiser de grosses sommes, du moins à court et moyen terme.&lt;/p>
+&lt;p>L’accent doit être mis sur la définition de l’objectif.&lt;/p>
+&lt;p>Dans mon cas, ce n’est pas le but.&lt;/p>
+&lt;p>Toutefois, je pense que devenir autonome est un projet de long terme pendant lequel vous apprenez en testant, en expérimentant et en affinant le projet.&lt;/p>
+&lt;p>Pour résoudre ma problématique, l’utilisation d’un onduleur informatique, pour sécuriser juste le poêle, doit pouvoir fonctionner. Mais il m’a conseillé de bien prendre un onduleur &lt;em>pure sinus&lt;/em>, ce qui requiert de prendre du haut de gamme et bien calculer la consommation.&lt;/p>
+&lt;p>Rémi a aussi parlé d’un système « ESS » de Victron en mode « AC Coupling ». Sur le papier, ça ressemble à la solution à long terme.&lt;/p>
+&lt;p>Je comprends qu&amp;rsquo;il s’agit :&lt;/p>
+&lt;ul>
+&lt;li>d’utiliser une ou plusieurs installations solaires et le réseau pour charger la ou les batteries&lt;/li>
+&lt;li>de permettre le fonctionnement de mon installation avec micro-onduleur comme si la maison était isolée du réseau, ce qui n’est pas possible à ce jour à cause de la norme sur les onduleurs réseau&lt;/li>
+&lt;li>de faire la bascule automatique du réseau vers les batteries quand le premier coupe.&lt;/li>
+&lt;/ul>
+&lt;p>Toutefois, mon budget était bien au-dessous de ce qui est nécessaire pour aller dans cette direction.&lt;/p>
+&lt;p>L’investissement pour l’onduleur uniquement varie de 1200 à 1800 euros minimums, cela dépendant bien sûr de la puissance à couvrir dans la maison.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/schema-victron-multiplus2-gx-ac-coupling.jpg"
+width="1040"
+height="724"
+srcset="https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/schema-victron-multiplus2-gx-ac-coupling_huc9f8275b2331b93e98cafbe24ddcae7d_63186_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/schema-victron-multiplus2-gx-ac-coupling_huc9f8275b2331b93e98cafbe24ddcae7d_63186_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/schema-victron-multiplus2-gx-ac-coupling_huc9f8275b2331b93e98cafbe24ddcae7d_63186_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Schéma du Victron Multiplus2 GX en couplage AC"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+>
+&lt;/p>
+&lt;p>Comment se présente une installation avec le Victron Multiplus II GX en couplage AC ? Allez lire sur le principe du &lt;em>Couplage AC&lt;/em> sur &lt;a href="https://www.victronenergy.com/live/ac_coupling:start">le site Victron&lt;/a>.&lt;/p>
+&lt;p>Ce qui est sûr, pour un foyer comme le mien, il aurait nécessité :&lt;/p>
+&lt;ul>
+&lt;li>un modèle de 5kVa,&lt;/li>
+&lt;li>des batteries de 48V, car, bien que des batteries en 12V ou 24V existent, des onduleurs 12V ou 24V sont plus rares et donc plus chers. Après, il est toujours possible de tomber sur une bonne affaire.&lt;/li>
+&lt;li>un kit pour le suivi de l’installation et sa configuration&lt;/li>
+&lt;li>le câblage et tous les petits accessoires.&lt;/li>
+&lt;/ul>
+&lt;p>Finalement, le coût aurait dépassé les 10 000 euros… au moins !&lt;/p>
+&lt;p>Conclusion : il m’a proposé une batterie de 2,5 kWh en 24V pour 1000 euros HT, un onduleur chargeur MultiPlus 1600/24V à environ 763 euros HT.&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Pourquoi utiliser une batterie 24V ?" >
+&lt;p class="jli-notice-title">Pourquoi utiliser une batterie 24V ?&lt;/p>&lt;p>Pour faire tourner juste le poêle à granuler, cela suffit et surtout, il n’existe pas vraiment d’onduleur 48V avec une puissance inférieure à 2000VA.&lt;/p>&lt;/div>
+&lt;p>Avec le système de monitoring (Cerbo GX) sans écran tactile (*), on dépassait mon budget avec plus de 2500 euros &lt;strong>hors temps de pose que j’aurai dû réaliser moi-même.&lt;/strong>&lt;/p>
+&lt;p>(*) : Un smartphone suffit en Bluetooth pour communiquer avec le Cerbo GX.&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Un dernier point hors du sujet de mon projet" >
+&lt;p class="jli-notice-title">Un dernier point hors du sujet de mon projet&lt;/p>&lt;p>Pour donner des conseils aux gens sur le sujet, il faut au moins réaliser sa propre installation.&lt;/p>
+&lt;p>Ensuite, il faut se former sur les solutions de sites autonomes et lire sur le sujet de la résilience qui ne doit pas se limiter au point de vue énergétique.&lt;/p>
+&lt;p>J’ai acheté &lt;a href="https://amzn.to/3fwo1iS">le livre co-écris par Rémi&lt;/a> où l’on apprend sur tous les domaines pour créer son foyer résilient. Je vous le recommande. Je réaliserai dans le futur un avis sur le livre, mais pour le moment, je l&amp;rsquo;aime beaucoup !&lt;/p>&lt;/div>
+&lt;h3 id="avec-eliot-de-my-shop-solaire">Avec Eliot de My Shop Solaire&lt;/h3>
+&lt;p>J’ai un bon échange par courriel courant septembre.&lt;/p>
+&lt;p>Il a été très pédagogue en m’expliquant la différence entre l’onduleur Victron MultiPlus et le MultiPlus II.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/victron-multiplus-vs-multiplus-2.png"
+width="980"
+height="512"
+srcset="https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/victron-multiplus-vs-multiplus-2_hu974f400156b4f5e76ae5b2ae0c714c37_127141_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/victron-multiplus-vs-multiplus-2_hu974f400156b4f5e76ae5b2ae0c714c37_127141_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2022-11/optimiser-l-autonomie-electrique/images/victron-multiplus-vs-multiplus-2_hu974f400156b4f5e76ae5b2ae0c714c37_127141_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Schéma de comparaison de l&amp;rsquo;onduleur Victron MultiPlus au Victron MultiPlus II"
+class="gallery-image"
+data-flex-grow="191"
+data-flex-basis="459px"
+>
+&lt;/p>
+&lt;p>Concernant le MultiPlus, l’avantage du modèle II est qu’il possède 2 sorties. Ainsi, j’aurais pu profiter de la production des panneaux pour les 2 sorties et même celle qui ne sera pas alimentée en cas de coupure..&lt;/p>
+&lt;p>Si je faisais le choix d’un MultiPlus simple, alors il n’aura qu’une sortie, vous y raccorderez les appareils listés à savoir le poêle et la production des panneaux ne servira que pour ces derniers.&lt;/p>
+&lt;p>J’ai posé une question supplémentaire à propos de l’alimentation d’un réfrigérateur : dans mon cas, un réfrigérateur de 300 L aurait été trop juste pour un convertisseur 800VA, d’après des tests qu’ils ont effectués. Si je voulais l’alimenter, un modèle 1200VA aurait été mieux adapté.&lt;/p>
+&lt;p>Concernant le GX Touch, il n’apporte aucune fonctionnalité supplémentaire. C’est simplement un écran tactile qui indique les informations récoltées par le Cerbo, ces mêmes informations sont disponibles en Bluetooth sur un téléphone.&lt;/p>
+&lt;h2 id="le-choix">Le choix&lt;/h2>
+&lt;p>Après environ 24 h de recherches, d’échanges et de réflexions, je n’ai pas sélectionné l’option de Rémi ni celle proposée par Eliot à cause du dépassement de budget. En effet, ce qui est vraiment indispensable pour ma famille cet hiver n&amp;rsquo;est pas En fin de compte, même 2000 euros de budget étaient plus que ce que je pouvais me permettre.&lt;/p>
+&lt;p>Mais surtout, dans mon échange sur le forum &lt;a href="https://forum-photovoltaique.fr/">https://forum-photovoltaique.fr/&lt;/a>, quelqu’un a mentionné la solution d’Ecoflow.&lt;/p>
+&lt;p>A la mi-septembre, ils étaient sur le point de lancer leur nouvelle station électrique: la nouvelle station Delta 2.&lt;/p>
+&lt;p>J’avais vu ces stations auparavant, mais elles utilisaient toujours des batteries li-ion que je ne voulais pas utiliser pour les raisons de sécurité et de durée de vie (maximum 800 cycles).&lt;/p>
+&lt;p>L’évolution majeure avec la Delta 2 est bien la chimie de la batterie. Ecoflow a décidé d&amp;rsquo;utiliser une batterie LiFePo4, permettant de passer de 800 à 3000 cycles et une durée de vie de 10 ans avec un cycle par jour.&lt;/p>
+&lt;p>Ensuite, les autres atouts qui ont retenu mon attention étaient :&lt;/p>
+&lt;ul>
+&lt;li>la recharge en courant alternatif modulable (de 200W à 1200 W), car je ne suis pas intéressé par la charge ultra rapide en 80 min.&lt;/li>
+&lt;li>la recharge en courant continu avec des panneaux solaires et les limites de 500Wc, 15A et 60V en entrée.&lt;/li>
+&lt;li>le mode « EPS » pour « Emergency Power Source » ou Source d’alimentation d’urgence qui permet de passer du réseau à la batterie sous 30 ms. Le constructeur de mon poêle à granuler Ravelli m’a confirmé qu’un changement de source d’alimentation en 30 ms est transparent pour le poêle.&lt;/li>
+&lt;li>le prix de 1200 euros pour 1 kWh de capacité, même si pour le même, j’avais 2 fois plus de capacité avec la batterie Pylontech. En effet, il faut ensuite au minimum 1200 voir 1500 euros d’investissement supplémentaires pour un système complet.&lt;/li>
+&lt;li>le fait que la station est démontable comme le montre &lt;a href="https://www.youtube.com/watch?v=OTUValSLnrQ">cette vidéo&lt;/a> d’Ecoflow. Cela semble bien pour le futur lorsqu’il faudra changer des pièces.&lt;/li>
+&lt;/ul>
+&lt;p>J’ai donc fait l’achat à la sortie de la Delta 2.&lt;/p>
+&lt;p>Rémi m’a même confirmé avoir reçu des retours d’expérience positifs sur les stations Ecoflow donc cela me conforte dans mon choix&lt;/p>
+&lt;p>Pour finir, je souhaite rappeler qu’il n’agit pas d’une solution pour passer en site isolé. Mon but est de garantir que mon poêle à granulé hydraulique fonctionne cet hiver, même en cas de coupure.&lt;/p>
+&lt;h2 id="remarques">Remarques&lt;/h2>
+&lt;p>Avec notre installation, même s’il fait moins beau, on aura de la production qui va dans le cumulus d’eau chaude.&lt;/p>
+&lt;p>Bien sûr, nous sommes toujours couplés au réseau, donc sans réseau, il n’y a rien…&lt;/p>
+&lt;p>Même s’il fait mauvais, mais des éclaircies, on chauffe l’ECS par le photovoltaïque uniquement. Toutefois, il semble qu’il soit nécessaire de produire 1,5 kWh ou 2kWc chaque jour pour subvenir au besoin de la famille (3 personnes).&lt;/p></description></item></channel></rss>

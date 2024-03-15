@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Web on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/web/</link><description>Recent content in Web on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/web/index.xml" rel="self" type="application/rss+xml"/><item><title>Activer l'édition du contenu de son site web</title><link>https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/</link><pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Activer l'édition du contenu de son site web" />&lt;!-- raw HTML omitted -->
+&lt;h2 id="activer-netlifycms">Activer NetlifyCMS&lt;/h2>
+&lt;p>Par défaut, le modèle de site VuePress contient le dossier &lt;code>admin&lt;/code> de base il faudra mettre à jour quelques éléments.&lt;/p>
+&lt;p>Les étapes sont assez simples.&lt;/p>
+&lt;h3 id="dans-le-dépôt-git">Dans le dépôt Git&lt;/h3>
+&lt;p>On modifie le fichier &lt;code>config.yml&lt;/code> se trouvant dans le dossier &lt;code>docs/.vuepress/public/admin&lt;/code> en mettant à jour la valeur du nom du dépôt GitHub et la langue de votre site (&lt;code>fr&lt;/code> pour Français, &lt;code>en&lt;/code> pour Anglais, etc).&lt;/p>
+&lt;p>Je ne détaillerai pas le reste, car la configuration par défaut correspond à un besoin de base. Pour plus d&amp;rsquo;information, je vous invite à visiter &lt;a href="https://decapcms.org/">le site DecapCMS&lt;/a>.&lt;/p>
+&lt;h3 id="dans-github">Dans GitHub&lt;/h3>
+&lt;p>Rendez-vous sur GitHub une fois que vous êtes connectés sur votre compte.&lt;/p>
+&lt;p>Naviguez sur &lt;a href="https://github.com/settings/developers">https://github.com/settings/developers&lt;/a> pour ajouter une nouvelle &lt;code>OAuth App&lt;/code>. Cliquez &lt;code>New OAuth App&lt;/code>.&lt;/p>
+&lt;p>Fournissez dans le formulaire comme suit :&lt;/p>
+&lt;ul>
+&lt;li>Le nom de l’application dans le champ &lt;code>Application name&lt;/code>. Ex : &lt;em>Mon site web&lt;/em>.&lt;/li>
+&lt;li>L’URL de la page d’accueil de votre site dans le champ &lt;code>Homepage URL&lt;/code>.&lt;/li>
+&lt;li>La description publique de l’application dans le champ &lt;code>Application description&lt;/code>.&lt;/li>
+&lt;li>L’URL d’autorisation dans le champ &lt;code>Authorization callback URL&lt;/code> avec la valeur &lt;code>https://api.netlify.com/auth/done&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/le-formulaire-rempli-pour-la-creation-de-lapplication-oauth-app.jpg"
+width="524"
+height="630"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_84d297401a59f8bed364f870db81f666.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_99b42dac16829558d99909d9249e4b26.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hue7030610e9f936a03f82bfebc2af065e_141980_5120fbacf88741616df7a747e08fe98a.jpg 1024w"
+loading="lazy"
+alt="Le formulaire rempli pour la création de l&amp;rsquo;application OAuth App"
+class="gallery-image"
+data-flex-grow="83"
+data-flex-basis="199px"
+>
+&lt;/p>
+&lt;p>Une fois validé, vous verrez le &lt;code>Client ID&lt;/code> (1) et le bouton pour générer le &lt;code>Client Secret&lt;/code> via le bouton &lt;code>Generate a new client secret&lt;/code> (2).&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-recapitulatif-de-lapplication-oauth-avec-le-bouton-pour-generer-le-client-secret.jpg"
+width="600"
+height="470"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_3a1cea4823c3fb82aa0894f83f6c65c3.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_04d81332cc5e56397dc515bc7cd75be3.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hu0254ced4d0fcaf53903fd25b60f23f98_79865_75fc4eb0e6304769f2a82e73d9b8f18c.jpg 1024w"
+loading="lazy"
+alt="Ecran récapitulatif de l&amp;rsquo;application OAuth avec le bouton pour générer le Client Secret"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>
+&lt;/p>
+&lt;p>Cliquez le bouton pour générer le Client secret et copiez la valeur générée.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret.jpg"
+width="783"
+height="291"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/bouton-de-copie-du-client-secret_hu54aa6bb446f412168e1bfe16eaa1f72c_76880_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Bouton de copie du Client Secret"
+class="gallery-image"
+data-flex-grow="269"
+data-flex-basis="645px"
+>
+&lt;/p>
+&lt;h3 id="dans-netlify">Dans Netlify&lt;/h3>
+&lt;p>Rendez-vous sur Netlify et allez sur &lt;code>https://app.netlify.com/sites/votre-site/settings/general&lt;/code> et cliquez &lt;code>Identity&lt;/code>&lt;/p>
+&lt;p>Cliquez &lt;code>Enable Identity&lt;/code>.&lt;/p>
+&lt;p>Modifiez-les &lt;code>Registration preferences&lt;/code> pour permettre les souscriptions sans ou avec invitations. Par défaut, configurer &lt;code>Invite only&lt;/code>.&lt;/p>
+&lt;p>Sans changer de page, descendez jusqu’à &lt;code>Git Gateway&lt;/code> et cliquez &lt;code>Enable Git Gateway&lt;/code>.&lt;/p>
+&lt;p>Dans les &lt;code>Site settings&lt;/code>, rendez-vous sur &lt;code>Access Control&lt;/code> tout en bas.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site.jpg"
+width="1232"
+height="740"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-access-control-du-site_hu13c30dd40a6fa073bf40e02ab7520bea_191114_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer &amp;ldquo;Access Control&amp;rdquo; du site"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="399px"
+>
+&lt;/p>
+&lt;p>Allez dans &lt;code>OAuth&lt;/code> et cliquez &lt;code>Install provider&lt;/code> en sélectionnant &lt;code>GitHub&lt;/code>.&lt;/p>
+&lt;p>Saisissez le &lt;em>client secret&lt;/em> copié dans GitHub et copiez-collez le client ID avant de cliquer &lt;code>Install&lt;/code>.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify.jpg"
+width="629"
+height="414"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/configurer-la-liaison-entre-github-et-le-site-netlify_hu93088bf9e455af1390101187f56d7b77_67196_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer la liaison entre GitHub et le site Netlify"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="364px"
+>
+&lt;/p>
+&lt;div class="jli-notice jli-notice-tip" id="Si vous n&amp;#39;avez pas copié le &amp;lt;em&amp;gt;client secret&amp;lt;/em&amp;gt;..." >
+&lt;p class="jli-notice-title">Si vous n&amp;#39;avez pas copié le &amp;lt;em&amp;gt;client secret&amp;lt;/em&amp;gt;...&lt;/p>&lt;p>Regénérez-en un, tout simplement :)&lt;/p>&lt;/div>
+&lt;p>Pour finir, rendez-vous sur &lt;code>https://mon-super-domaine.fr/admin&lt;/code> et cliquez &lt;code>Se connecter avec GitHub&lt;/code>.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site.jpg"
+width="561"
+height="278"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-de-connexion-a-netlifycms-sur-votre-site_hu817fe4ba7e747c9d9d9074b2ac48cd90_20943_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ecran de connexion à NetlifyCMS sur votre site"
+class="gallery-image"
+data-flex-grow="201"
+data-flex-basis="484px"
+>
+&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Pour accéder à NetlifyCMS de votre site" >
+&lt;p class="jli-notice-title">Pour accéder à NetlifyCMS de votre site&lt;/p>&lt;p>Soyez sûr de pouvoir vous connecter à GitHub.&lt;/p>&lt;/div>
+&lt;p>L’écran suivant s’affiche où il suffit de cliquer &lt;code>Authorize VotrePseudoGitHub&lt;/code>.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com.jpg"
+width="1179"
+height="726"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/ecran-dautorisation-pour-netlify.com-vers-github.com_hu63b0aa973c44320d59f2a8c2253e42fc_111069_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Écran d’autorisation pour netlify.com vers GitHub.com"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+>
+&lt;/p>
+&lt;p>Vous arrivez alors sur la page d’accueil de l’interface de gestion NetlifyCMS de votre site&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration.jpg"
+width="1471"
+height="527"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/accueil-de-netlifycms-dun-site-demonstration_hu1621e53753f505434f406e5c1a46d782_92838_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Accueil de NetlifyCMS d’un site démonstration"
+class="gallery-image"
+data-flex-grow="279"
+data-flex-basis="669px"
+>
+&lt;/p>
+&lt;p>Je n&amp;rsquo;irai pas dans le détail ici de comment utiliser NetlifyCMS.&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;h3 id="il-faut-apprendre-la-syntaxe-_markdown_">Il faut apprendre la syntaxe &lt;em>Markdown&lt;/em>&lt;/h3>
+&lt;p>Elle est très simple à maitriser, comme l&amp;rsquo;explique &lt;a href="https://www.youtube.com/watch?v=6hikjzymd0c">Grafikart sur YouTube&lt;/a>.&lt;/p>
+&lt;h3 id="les-extensions-du-thème-vuepress-ne-sont-pas-affichées-correctement">Les extensions du thème VuePress ne sont pas affichées correctement&lt;/h3>
+&lt;p>En prévisualisation, les syntaxes étendues du thème de Mister Hope ne sont pas affichées correctement, car il manque leurs interprétations en HTML.&lt;/p>
+&lt;p>Et il manque les styles CSS.&lt;/p>
+&lt;p>C&amp;rsquo;est pour cela que je travaille uniquement sur Visual Studio Code, qui permet de lancer localement le site et de visualiser les pages dans leur rendu final.&lt;/p>
+&lt;h3 id="déploiement-après-édition-dans-netlifycms">Déploiement après édition dans NetlifyCMS&lt;/h3>
+&lt;p>Une autre limitation est qu&amp;rsquo;éditer un fichier Markdown d&amp;rsquo;une page ou un article ne va pas être détecté par Netlify comme un déploiement.&lt;/p>
+&lt;p>Vous risquez de voir que la mise à jour n&amp;rsquo;est pas être déployée (le &lt;em>Build&lt;/em> est à l&amp;rsquo;état &lt;code>Canceled&lt;/code>).&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled.jpg"
+width="1289"
+height="89"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/un-build-netlify-a-letat-canceled_hu22e8b7f1e600e572043525acd727fab2_30649_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Une compilation Netlify à l&amp;rsquo;état &amp;ldquo;Canceled&amp;rdquo;"
+class="gallery-image"
+data-flex-grow="1448"
+data-flex-basis="3475px"
+>
+&lt;/p>
+&lt;p>Pourquoi ? Il semble que modifier uniquement un fichier &lt;code>.md&lt;/code> ne suffit pas pour lancer une compilation complète (ou &lt;em>build&lt;/em>).&lt;/p>
+&lt;p>Il faut alors sélectionner la fameuse compilation et cliquer le menu &lt;code>Rety&lt;/code> puis &lt;code>Clear cache and retry with latest branch commit&lt;/code>.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache-pour-un-deploiement-specifique.jpg"
+width="711"
+height="308"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_ab11c1b3b94d0281e41685c8be91b9e6.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_39460e937952472e81b52e9d2ee62e1c.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/_hud4b4c8bff925838e93add52e1b0c786d_78156_291a2feb21f0940747062e8da0f43c24.jpg 1024w"
+loading="lazy"
+alt="Forcer un déploiement avec effacement du cache pour un déploiement spécifique"
+class="gallery-image"
+data-flex-grow="230"
+data-flex-basis="554px"
+>
+&lt;/p>
+&lt;p>La modification est aussi soumise par NetlifyCMS à GitHub via une requête de tirage, qu&amp;rsquo;il faut alors accepter pour que le déploiement sur le site de production ait lieu.&lt;/p>
+&lt;p>L&amp;rsquo;avantage est de pouvoir vérifier sur une URL de prévisualisation que tout est bon.&lt;/p>
+&lt;p>Voici &lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel/pull/1">un exemple de requête de tirage&lt;/a> sur mon site de démo réalisé pour ce tutoriel.&lt;/p>
+&lt;p>Après la validation de la requête de tirage, il faut aussi forcer une compilation manuellement depuis la liste des déploiements, comme indiqué ci-dessous :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache.jpg"
+width="1200"
+height="546"
+srcset="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/images/forcer-un-deploiement-avec-effacement-du-cache_hua05c1921df54729048c6e528d59ef3ec_213600_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Forcer un déploiement avec effacement du cache"
+class="gallery-image"
+data-flex-grow="219"
+data-flex-basis="527px"
+>
+&lt;/p>
+&lt;p>Pour lancer une compilation complète, il faut éditer le fichier &lt;code>docs/.vuepress/config.js&lt;/code> en modifiant le numéro de version en l&amp;rsquo;incrémentant par exemple.&lt;/p>
+&lt;p>Je compte réaliser un guide plus complet, dans le futur, sur l&amp;rsquo;usage de Netlify.&lt;/p>
+&lt;p>J&amp;rsquo;espère que vous avez aimé cette série et pour recevoir d&amp;rsquo;autres articles de ce type, abonnez-vous !&lt;/p></description></item><item><title>Déployer votre site web moderne pour moins de 10 euros !</title><link>https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/</link><pubDate>Mon, 15 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Déployer votre site web moderne pour moins de 10 euros !" />&lt;p>Avec les services de Netlify, le déploiement n’a jamais été aussi simple.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="compiler-et-pousser-les-modifications-sur-github">Compiler et pousser les modifications sur GitHub&lt;/h2>
+&lt;p>Maintenant que le contenu est prêt :&lt;/p>
+&lt;ol>
+&lt;li>Lancer le terminal avec &lt;code>CTRL+ù&lt;/code>dans Visual Studio Code, s’il n’est pas déjà ouvert.&lt;/li>
+&lt;li>Lancer la commande suivante :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">npm run docs:build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>Si vous avez une erreur, &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">contactez-moi&lt;/a> en fournissant l’URL du dépôt. Sinon, continuez avec :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git add -A &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git commit &lt;span class="s2">&amp;#34;pousser le contenu sur GitHub&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="commande-du-domaine-personnalisé">Commande du domaine personnalisé&lt;/h2>
+&lt;p>Sauf si vous avez besoin de mon aide, le seul coût sera celui du domaine personnalisé. Ex : &lt;code>mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;p>Je ne décris pas les étapes ici. Je vous invite à faire une petite recherche Google. Pour mes sites web, &lt;a href="https://www.ovhcloud.com/fr/domains/">j’utilise OVH&lt;/a>.&lt;/p>
+&lt;h3 id="mettre-à-jour-la-zone-dns-chez-votre-registar-de-domaines">Mettre à jour la zone DNS chez votre registar de domaines.&lt;/h3>
+&lt;p>Une fois que le domaine est provisionné, il faut paramétrer Netlify pour que le site web pointe sur le domaine.&lt;/p>
+&lt;p>Pour un domaine de base, il faut préalable supprimer les entrées DNS &lt;code>A&lt;/code>sur le domaine &lt;code>mon-super-domaine.fr&lt;/code>et &lt;code>wwww.mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Sur OVH…" >
+&lt;p class="jli-notice-title">Sur OVH…&lt;/p>&lt;p>J’ai eu une fois un temps de propagation de la suppression de l’entrée &lt;code>A&lt;/code>sur le sous-domaine &lt;code>www&lt;/code> qui a pris plus des dizaines de minutes.&lt;/p>
+&lt;p>Soyez patients ;)&lt;/p>&lt;/div>
+&lt;h2 id="déployer-le-site-sur-netlify">Déployer le site sur Netlify&lt;/h2>
+&lt;p>Rendez-vous sur &lt;a href="https://app.netlify.com">app.netlify.com&lt;/a> en vous connectant avec votre compte GitHub.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso.jpg"
+width="451"
+height="587"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/connexion-netlify-via-github-sso_hua58de18eed2b067398d0f7630b00642e_58509_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Connexion netlify via github SSO. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="184px"
+>
+&lt;/p>
+&lt;p>Vous devez alors autoriser l’accès à votre compte par Netlify (pour lire la liste des dépôts).&lt;/p>
+&lt;p>Une fois connecté, sélectionnez &lt;code>Add new site&lt;/code> puis &lt;code>Import an existing project&lt;/code> :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site.jpg"
+width="342"
+height="181"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ajouter-un-site_hu72dc094f1ce8394d9f71b85b58dbd833_26559_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ajouter un site. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="188"
+data-flex-basis="453px"
+>
+&lt;/p>
+&lt;p>Sélectionnez &lt;code>GitHub&lt;/code> :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github.jpg"
+width="801"
+height="443"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/selectionner-github_hu1fc2883838e213f00e65a53a2706875d_121616_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Sélectionner GitHub. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="433px"
+>
+&lt;/p>
+&lt;p>Rechercher et sélectionner votre dépôt :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t.jpg"
+width="735"
+height="168"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/recherche-et-selectionner-votre-dep%C3%B4t_hua3a183aff9a5b75175461b3743bd2f57_24959_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Rechercher et sélectionner votre dépôt. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="437"
+data-flex-basis="1050px"
+>
+&lt;/p>
+&lt;p>Configurez le déploiement en modifiant :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Base directory&lt;/code> par &lt;code>docs/.vuepress&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Build command&lt;/code> par &lt;code>yarn &amp;amp;&amp;amp; npm run docs:build&lt;/code>.&lt;/li>
+&lt;li>&lt;code>Publish directory&lt;/code> en ajouter &lt;code>dist&lt;/code> à la valeur.&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement.jpg"
+width="600"
+height="647"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-le-deploiement_hu22ed589712e35eacc7ae2175161dd866_94108_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer le déploiement. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="92"
+data-flex-basis="222px"
+>
+&lt;/p>
+&lt;p>Le déploiement ne devrait pas prendre plus de 2 minutes.&lt;/p>
+&lt;p>En attendant, allez dans &lt;code>Site settings&lt;/code> et cliquez &lt;code>Change site name&lt;/code>.&lt;/p>
+&lt;p>La valeur par défaut est aléatoire. Je mets en général une valeur plus sympa.&lt;/p>
+&lt;p>Dans mon cas, ce sera &lt;code>mon-site-demo-tutoriel&lt;/code>. Le site est alors disponible sur &lt;code>https://mon-site-demo-tutoriel.netlify.app&lt;/code>.&lt;/p>
+&lt;h2 id="mettre-à-jour-lapplication-sur-netlify-avec-un-domaine-personnalisé">Mettre à jour l’application sur Netlify avec un domaine personnalisé&lt;/h2>
+&lt;p>Une fois la zone DNS prête,&lt;/p>
+&lt;ul>
+&lt;li>ajouter le domaine dans Netlify en sélectionnant votre site depuis &lt;a href="https://app.netlify.com">app.netlify.com&lt;/a>, puis en cliquant &lt;code>Site settings&lt;/code> puis &lt;code>Domain management&lt;/code>.
+&lt;ul>
+&lt;li>dans&lt;code>Production domains&lt;/code> , cliquer &lt;code>Add domain&lt;/code> et confirmer l’ajout sans passer par &lt;code>Netlify DNS&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-warning" id="Netlify DNS" >
+&lt;p class="jli-notice-title">Netlify DNS&lt;/p>&lt;p>Vous verrez sûrement l’alerte suivante :&lt;/p>
+&lt;blockquote>
+&lt;p>.fr domains can’t be registered through Netlify. You can still add mon-site.fr to your Netlify site if you already own the domain. Select Add domain to add it to your site. You can configure Netlify DNS for this domain later.&lt;/p>
+&lt;/blockquote>
+&lt;p>Cliquer &lt;code>Add domain&lt;/code> ou &lt;code>Add subdomain&lt;/code> quand même.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>une fois sur l’écran ci-dessous :
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise.jpg"
+width="932"
+height="412"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/ecran-suite-a-lajout-du-domaine-personnalise_huc265871f1b42a077a93abfe50179b848_81934_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Écran suite à l’ajout du domaine personnalisé. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="542px"
+>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Cliquez &lt;code>Awaiting External DNS&lt;/code> et suivez les instructions :&lt;/p>
+&lt;ul>
+&lt;li>pour un domaine &lt;em>racine&lt;/em>,
+&lt;ul>
+&lt;li>ajouter l’entrée &lt;code>A&lt;/code> en utilisant l’adresse IP du loadbalancer que Netlify vous fournit.&lt;/li>
+&lt;li>ajouter l’entrée &lt;code>CNAME&lt;/code> en utilisant le DNS que Netlify vous fournit.
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/instructions-de-netlify-pour-une-configuration-par-entree-cname.jpg"
+width="770"
+height="676"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_3f5fbddb1f91655d8799ba5d2cb193b7.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_3eb5f3c13bc65d1dfcfc3651c47f2f4b.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu77e491b7c75bc4d8c97ebcdb984c2052_164612_8dfe908d19efa1a5a24cff88af6fc1b5.jpg 1024w"
+loading="lazy"
+alt="Instructions de Netlify pour une configuration par entrée CNAME. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="273px"
+>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>pour un sous-domaine,
+&lt;ul>
+&lt;li>vous aurez seulement l’entrée &lt;code>CNAME&lt;/code> à ajouter.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Rendez-vous sur votre registar de domaines (ex : OVH) et dans la section&lt;code>Domain &amp;gt; mon-site.fr &amp;gt; DNS Zone&lt;/code> , sélectionner &lt;code>Ajouter un entrée&lt;/code> et le type selon votre besoin.&lt;/p>
+&lt;ul>
+&lt;li>pour une entrée&lt;code>CNAME&lt;/code> , ça ressemble à ceci :&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns.jpg"
+width="590"
+height="538"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/choix-du-type-dentree-dns_hu934d119dc694b876c6480aa0d6922716_87693_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Choix du type d’entrée DNS. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="109"
+data-flex-basis="263px"
+>
+&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns.jpg"
+width="591"
+height="544"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/configurer-lentree-dns_hu4c7914d986975030f704e9a01999aefb_94609_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Configurer l’entrée DNS. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="108"
+data-flex-basis="260px"
+>
+&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns.jpg"
+width="590"
+height="443"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/confirmer-lajout-de-lentree-dns_hud73b58ad6bae1cb2aebcbe268fb9b5b4_99517_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Confirmer l’ajout de l’entrée DNS.Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>confirmez et attendez quelques minutes (voire plus si votre registar de domaine est lent)&lt;/li>
+&lt;li>rafraichissez la page sur Netlify : quand tout est bon, le message &lt;code>Awaiting external DNS&lt;/code> doit avoir disparu.&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns.jpg"
+width="670"
+height="381"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/netlify-a-bien-detecte-la-mise-a-jour-dns_hu84d41b885be9017f17bb771be2fbe640_83725_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Netlify a bien détecté la mise à jour DNS. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="422px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>Netlify provisionne ensuite un certificat &lt;em>Let&amp;rsquo;s encrypt&lt;/em> automatiquement pour vous.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement.jpg"
+width="703"
+height="353"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-en-cours-de-provisionnement_hu068704e1c64f4dd2aef23abcecfd59f9_96953_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Certificat Let’s Encrypt en cours de provisionnement. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="477px"
+>
+&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Temps de provisionnement du certificat HTTPS" >
+&lt;p class="jli-notice-title">Temps de provisionnement du certificat HTTPS&lt;/p>&lt;p>Cela prend un peu plus de temps sur un domaine racine qu’un sous-domaine seulement.&lt;/p>&lt;/div>
+&lt;p>Une fois que le certificat est déployé, vous pourrez accéder à votre site web sécurisé ! Ex : &lt;code>https://mon-super-domaine.fr&lt;/code>.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/certificat-lets-encrypt-est-actif-votre-site-web-est-securise.jpg"
+width="600"
+height="562"
+srcset="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_3c4ede68444c3b43ed0ea4b20143e52a.jpg 360w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_d397974575517440ad9f64db2240978d.jpg 600w, https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/images/_hu0f4ce6e3b7bf0ee9d2ff159b95267e16_122598_c3760278e3b0bc78112d7b725ca318e3.jpg 1024w"
+loading="lazy"
+alt="Certificat Let’s Encrypt est actif. Votre site web est sécurisé. Crédits: image extraite du site Netlify"
+class="gallery-image"
+data-flex-grow="106"
+data-flex-basis="256px"
+>
+&lt;/p>
+&lt;p>Si vous souhaitez éditer le contenu depuis n’importe quel PC, cela est possible avec NetlifyCMS. Je vous explique &lt;a href="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/">comment l’activer sur votre site web&lt;/a>.&lt;/p>
+&lt;h2 id="limitations">Limitations&lt;/h2>
+&lt;p>Pour un blog de très grande taille (plus de 400 pages générées incluant les pseudos liens si vous utilisez les catégories et les tags), l’hébergement sur Netlify risque d’être limite.&lt;/p>
+&lt;p>Toutefois, l’astuce serait de déployer le dossier &lt;code>dist&lt;/code> généré sur votre PC et de le pousser sur GitHub ensuite. Cela donne le même résultat.&lt;/p>
+&lt;p>Je ne l’ai toutefois pas encore testé.&lt;/p>
+&lt;div class="jli-notice jli-notice-note" id="Remarque au 9 février 2024" >
+&lt;p class="jli-notice-title">Remarque au 9 février 2024&lt;/p>&lt;p>Depuis la publication de cette article, j&amp;rsquo;ai trouvé une solution pour les sites avec beaucoup de contenu.&lt;/p>
+&lt;p>J&amp;rsquo;ai publié &lt;a href="https://jeremielitzLer.fr/post/2023-09/migrer-de-vuepress-a-hugo/">un article sur le sujet&lt;/a>.&lt;/p>&lt;/div></description></item><item><title>Construire son site moderne et rapide !</title><link>https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/</link><pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Construire son site moderne et rapide !" />&lt;p>Dans cet article, je décris les étapes concrètes pour créer, configurer le site et personnaliser son contenu.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="pré-requis">Pré-requis&lt;/h2>
+&lt;ul>
+&lt;li>Avoir réalisé &lt;a href="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/">l’étape de préparation de son PC&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h2 id="cloner-les-dépôts">Cloner les dépôts&lt;/h2>
+&lt;div class="jli-notice jli-notice-tip" id="Optionnellement, créer un dossier &amp;lt;em&amp;gt;Git&amp;lt;/em&amp;gt;" >
+&lt;p class="jli-notice-title">Optionnellement, créer un dossier &amp;lt;em&amp;gt;Git&amp;lt;/em&amp;gt;&lt;/p>&lt;p>A la raine du disque C ou D de votre ordinateur ou ailleurs, cela permettra d’organiser vos dépôts locaux.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>Lancer la commande suivante qui crée un dossier&lt;code>NomDeVotreDepot&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git clone https://github.com/VotrePseudoGitHub/NomDeVotreDepot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Dans mon cas, j’utiliserai le dépôt &lt;code>JeremieLitzler/mon-site-demo-tutoriel&lt;/code>(disponible &lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">ici&lt;/a>).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Lancer la commande suivant pour cloner le dépôt contenant la structure du site à réaliser.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">git clone https://github.com/Puzzlout/TemplateVuepress/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le dépôt est sauvegardé dans le dossier &lt;code>TemplateVuepress&lt;/code>à l’endroit où vous stockez vos dépôts.&lt;/p>
+&lt;p>Pour moi, ce sera&lt;code>D:/Git/GitHub/&lt;/code> .&lt;/p>
+&lt;h2 id="initialiser-le-site-web-à-partir-du-modèle">Initialiser le site web à partir du modèle&lt;/h2>
+&lt;p>Maintenant que les dépôts sont clonés :&lt;/p>
+&lt;h3 id="copiez-le-tout-le-contenu-du-modèle">Copiez-le tout le contenu du modèle.&lt;/h3>
+&lt;p>On copiera les fichiers du dossier &lt;code>TemplateVuepress&lt;/code>dans le dossier&lt;code>NomDeVotreDepot&lt;/code>, incluant le dossier &lt;code>.vscode&lt;/code>pour les extraits de code permettant de rédiger son contenu plus rapidement.&lt;/p>
+&lt;div class="jli-notice jli-notice-warning" id="Sauf le dossier &amp;lt;em&amp;gt;.git&amp;lt;/em&amp;gt; et &amp;lt;em&amp;gt;.github&amp;lt;/em&amp;gt;" >
+&lt;p class="jli-notice-title">Sauf le dossier &amp;lt;em&amp;gt;.git&amp;lt;/em&amp;gt; et &amp;lt;em&amp;gt;.github&amp;lt;/em&amp;gt;&lt;/p>&lt;/div>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot.jpg"
+width="600"
+height="463"
+srcset="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/fichiers-a-copier-du-depot-modele-vers-votre-depot_huad301881084f2515eee72256606099b5_144001_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Fichiers à copier du dépôt modèle vers votre dépôt"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="311px"
+>
+&lt;/p>
+&lt;h3 id="personnaliser-les-fichiers-issus-du-modèle">Personnaliser les fichiers issus du modèle&lt;/h3>
+&lt;p>Au minimum les fichiers suivants doivent être personnalisés, incluants :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>les fichiers définissant l&amp;rsquo;élément &lt;code>head&lt;/code>global dans le dossier&lt;code>docs/.vuepress/configs/head&lt;/code> .&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>vous trouverez un fichier &lt;code>js&lt;/code>par locale ou langue que le site propose.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>il faut au minimum modifier, &lt;strong>par chaque fichier &lt;code>js&lt;/code>&lt;/strong> :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>la variable &lt;code>websiteDomain&lt;/code>avec l&amp;rsquo;URL de votre site. On reviendra dessous après &lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">le déploiement.&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable&lt;code>titleDefault&lt;/code>, qui doit être inférieure à 60 caractères&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable&lt;code>descriptionDefault&lt;/code>, qui doit être comprise entre 50 à 160 caractères&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>la variable &lt;code>themeColor&lt;/code>qu&amp;rsquo;on remplacera globalement avec &lt;code>CTRL+SHIF+H&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>pour le choix de la couleur, en utilisant &lt;a href="https://huemint.com/brand-intersection/">ce site&lt;/a> et choisissez une couleur sombre.&lt;/li>
+&lt;li>sauvegarder la palette de couleur générée dans &lt;code>docs/.vuepress/styles/palette.scss&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>la variable &lt;code>repoLink&lt;/code>où l&amp;rsquo;on remplacera globalement avec &lt;code>CTRL+SHIF+H&lt;/code>la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par &lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>concernant le tag méta&lt;code>og:url&lt;/code>, en fonction de votre langue principale, il faudra adapter l&amp;rsquo;URL :&lt;/p>
+&lt;ul>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur &lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les fichiers définissant l&amp;rsquo;élément &lt;code>nav&lt;/code>pour le menu de navigation dans le dossier &lt;code>docs/.vuepress/configs/navbar&lt;/code>- vous trouverez un fichier &lt;code>js&lt;/code>par locale ou langue que le site propose.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>en fonction de votre langue principale, il faudra adapter les URL :&lt;/p>
+&lt;ul>
+&lt;li>pour votre langue principale, pas besoin de mettre &lt;code>/[[locale-courte]]/ma-page&lt;/code>&lt;/li>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur &lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les liens peuvent s&amp;rsquo;afficher avec un texte :&lt;/p>
+&lt;ul>
+&lt;li>soit implicite, c&amp;rsquo;est-à-dire la valeur du &lt;code>title&lt;/code>dans le fichier Markdown.&lt;/li>
+&lt;li>soit explicite, c&amp;rsquo;est-à-dire la valeur &lt;code>text&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/liens-implicites-vs-liens-explicites-dans-le-menu-de-navigation.jpg"
+width="488"
+height="380"
+srcset="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_beb74221119ae90ec793ba53cc738951.jpg 360w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_ff9da06ff1828322a6f02f3fb95b2c01.jpg 600w, https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/images/_hudc4327daaab03b980216ebd4cae10a83_70956_3da01a393621bd67f461def4eee950a6.jpg 1024w"
+loading="lazy"
+alt="Liens implicites vs liens explicites dans le menu de navigation"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+>
+&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le fichier &lt;code>docs/.vuepress/public/admin/config.yml&lt;/code>définissant l&amp;rsquo;interface avec NetlifyCMS, si vous l&amp;rsquo;activez (voir plus loin comme l&amp;rsquo;activer).&lt;/p>
+&lt;ul>
+&lt;li>il faudra alors mettre à jour le nom du dépôt, normalement déjà réaliser précédemment sur le remplacement de la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par&lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les fichiers &lt;code>docs/.vuepress/public/site.webmanifest&lt;/code>et les variantes par locale, qui définissent l&amp;rsquo;application web&lt;/p>
+&lt;ul>
+&lt;li>vous trouvez ce fichier déclaré dans le fichier &lt;code>js&lt;/code>correspondant à la locale dans le dossier&lt;code>docs/.vuepress/configs/head&lt;/code> .&lt;/li>
+&lt;li>suivez les règles listées par &lt;a href="https://developer.mozilla.org/fr/docs/Web/Manifest">MDN Web Docs&lt;/a> sur le sujet.&lt;/li>
+&lt;li>à propos de&lt;code>start_url&lt;/code>, la même règle s&amp;rsquo;applique que précédemment concernant la présence de la locale dans l&amp;rsquo;URL.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le fichier &lt;code>docs/.vuepress/config.js&lt;/code>qui définit :&lt;/p>
+&lt;ul>
+&lt;li>la locale par défaut, à ajuster selon votre besoin.&lt;/li>
+&lt;li>les locales actives, à ajuster selon votre besoin.&lt;/li>
+&lt;li>la même règle s&amp;rsquo;applique que précédemment concernant la locale par défaut.
+&lt;ul>
+&lt;li>sur le modèle&lt;code>TemplateVuepress&lt;/code>, la langue par défaut est l&amp;rsquo;anglais.&lt;/li>
+&lt;li>sur &lt;a href="https://github.com/JeremieLitzler/mon-site-demo-tutoriel">le site construit pour le tutoriel&lt;/a>, la langue par défaut est le français.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="personnaliser-le-thème">Personnaliser le thème&lt;/h3>
+&lt;p>À travers le fichier&lt;code>docs/.vuepress/theme.ts&lt;/code>, qui définit certaines valeurs à ajuster selon votre cas, personnalisez :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le &lt;code>hostname&lt;/code>correspondant à l&amp;rsquo;URL de base de votre site.&lt;/p>
+&lt;ul>
+&lt;li>Vous pouvez réaliser un &lt;code>CTRL + SHIFT + H&lt;/code>et exécuter un remplacement de &lt;code>example.com&lt;/code>en &lt;code>votresite.fr&lt;/code>par exemple.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>author &amp;gt; name&lt;/code>correspondant à votre nom&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>repo&lt;/code>correspondant à l&amp;rsquo;identification du dépôt sur GitHub.&lt;/p>
+&lt;ul>
+&lt;li>normalement déjà réaliser précédemment sur le remplacement de la valeur &lt;code>GitHubUsername/GitRepoName&lt;/code>par&lt;code>VotrePseudoGitHub/NomDeVotreDepot&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les &lt;code>docsBranch&lt;/code>, &lt;code>docsDir&lt;/code>, &lt;code>editLinkPattern&lt;/code> n&amp;rsquo;ont pas besoin d&amp;rsquo;être modifiés.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>les valeurs &lt;code>logo&lt;/code>et &lt;code>logoDark&lt;/code>n&amp;rsquo;ont pas besoin d&amp;rsquo;être modifié si vous suivez les instructions de création de votre logo.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>logoDark&lt;/code>peut être supprimé si &lt;code>darkmode&lt;/code>n&amp;rsquo;est pas nécessaire.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>la liste des&lt;code>locales&lt;/code>, qui doit correspondre à la liste déclarée dans&lt;code>docs/.vuepress/config.js&lt;/code> .&lt;/p>
+&lt;ul>
+&lt;li>toutefois, ici, on déclare les configurations du menu de navigation par locale.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le &lt;code>displayFooter&lt;/code>permet d&amp;rsquo;afficher le pied de page global sur le site, en configurant la propriété &lt;code>footer&lt;/code>qui suit.&lt;/p>
+&lt;ul>
+&lt;li>le &lt;code>footer&lt;/code>peut contenir du code HTML, mais le Markdown n&amp;rsquo;est pas interprété.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>les listes des &lt;code>plugins&lt;/code>est configuré de façon optimal pour un usage basique, mais reste toutefois riche. Si vous souhaitez davantage, visitez &lt;a href="https://theme-hope.vuejs.press/">le site du thème VuePress&lt;/a>.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>le plugin &lt;code>blog&lt;/code>fournit par le thème.&lt;/p>
+&lt;ul>
+&lt;li>l&amp;rsquo;index du blog (ex. : page &lt;code>/[locale]/article/&lt;/code>) liste tous les articles, sauf pour les fichiers &lt;code>.md&lt;/code>déclarant &lt;code>article: false&lt;/code>,&lt;/li>
+&lt;li>des catégories (ex. : &lt;code>/[locale]/category/ma-category/&lt;/code>),&lt;/li>
+&lt;li>des tags : &lt;code>/[locale]/tag/mon-tag/&lt;/code>),&lt;/li>
+&lt;li>et autres fonctionnalités associées deviennent disponibles.&lt;/li>
+&lt;li>il est possible de &lt;a href="https://theme-hope.vuejs.press/guide/blog/">réaliser davantage de configuration du blogging dans&lt;code>theme.ts&lt;/code>&lt;/a>, mais, personnellement, je ne les utilise pas.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>comment&lt;/code> permet d&amp;rsquo;activer l&amp;rsquo;ajout de commentaires basé l&amp;rsquo;extension GitHub nommée &lt;code>Giscus&lt;/code> qui crée des tickets dans le système de tickets GitHub de votre dépôt.&lt;/p>
+&lt;ul>
+&lt;li>je ne décris pas ici comment l&amp;rsquo;activer, car &lt;a href="https://theme-hope.vuejs.press/config/plugins/comment.html#intro">cela est réalisé par l&amp;rsquo;auteur du thème VuePress&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>mdEnhance&lt;/code> est configuré pour un usage normal (et je recommande de ne pas trop activer d&amp;rsquo;options pour que Netlify puisse compiler le site web au déploiement)&lt;/p>
+&lt;ul>
+&lt;li>il permet d&amp;rsquo;écrire du Markdown avec des syntaxes complémentaires, comme aligner du texte, ajouter des attributs personnalisés (ex. : une classe CSS), des classes CSS &lt;em>container&lt;/em> pour contrôler le style d&amp;rsquo;un ou plusieurs pages, etc.&lt;/li>
+&lt;li>je vous laisse découvrir.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>le plugin &lt;code>pwa&lt;/code> a été désactivé même s&amp;rsquo;il génère encore un fichier &lt;code>service-worker.js&lt;/code> à la racine du site (&lt;code>https://example.com/service-worker.js&lt;/code>).&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="création-du-logo-et-icônes">Création du logo et icônes&lt;/h3>
+&lt;p>Vous devrez remplacer les images dans &lt;code>docs/.vuepress/public/icons&lt;/code>&lt;/p>
+&lt;p>En utilisant &lt;a href="https://favicon.io/favicon-generator/">ce générateur&lt;/a>, vous pouvez créer un logo à partir de quelques caractères.&lt;/p>
+&lt;ol>
+&lt;li>Utilisez la couleur du thème choisi précédemment et une autre couleur (claire).&lt;/li>
+&lt;li>Modifiez la couleur &lt;em>Font Color&lt;/em> avec la couleur claire et &lt;em>Background color&lt;/em> avec la couleur sombre.&lt;/li>
+&lt;li>Saisissez votre texte. J&amp;rsquo;utilise en général une ou deux lettres pour que tout soit affiché. Utilisez la &lt;em>Font Size&lt;/em> pour ajuster cela.&lt;/li>
+&lt;li>Sélectionner le style &lt;em>Background&lt;/em> et la famille de police.Select the font you prefer and the font size.&lt;/li>
+&lt;li>Cliquez&lt;code>Download&lt;/code> .&lt;/li>
+&lt;li>Extrayez les fichiers en renommant &lt;code>about.txt&lt;/code> en&lt;code>about-light-over-dark.txt&lt;/code> .&lt;/li>
+&lt;li>Copiez tout &lt;strong>sauf le fichier manifest&lt;/strong> dans &lt;code>docs/.vuepress/public/icons&lt;/code> pour remplacer les fichiers existants.&lt;/li>
+&lt;li>Inverser les couleurs dans &lt;a href="https://favicon.io/favicon-generator/">le générateur&lt;/a>.&lt;/li>
+&lt;li>Cliquez &lt;code>Download&lt;/code> à nouveau.&lt;/li>
+&lt;li>Extrayez les fichiers et&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>renommez&lt;code>about.txt&lt;/code> en &lt;code>about-dark-over-light.txt&lt;/code>&lt;/li>
+&lt;li>préfixez toutes les images avec&lt;code>dark-&lt;/code> .&lt;/li>
+&lt;/ul>
+&lt;ol start="11">
+&lt;li>Copiez tout &lt;strong>sauf le fichier manifest&lt;/strong> dans &lt;code>docs/.vuepress/public/icons&lt;/code> pour remplacer les fichiers existants.&lt;/li>
+&lt;li>Copiez de &lt;code>docs/.vuepress/public/icons&lt;/code> le fichier &lt;code>favicon.ico&lt;/code> dans&lt;code>docs/.vuepress/public&lt;/code> .&lt;/li>
+&lt;/ol>
+&lt;h3 id="personnaliser-les-pages-par-défaut">Personnaliser les pages par défaut&lt;/h3>
+&lt;p>Je ne détaillerai pas comment créer les pages et le contenu de votre site, car cela dépend beaucoup de votre besoin.&lt;/p>
+&lt;p>Voici les exemples de sites :&lt;/p>
+&lt;ul>
+&lt;li>le présent site, où vous vous trouvez, est créé avec le modèle (en fait, il a servi de base pour le modèle).&lt;/li>
+&lt;li>le site de mon activité de microentreprise : &lt;a href="https://www.puzzlout.com">www.puzzlout.com&lt;/a>.&lt;/li>
+&lt;li>le site d’une productrice de quinoa que j’ai réalisé au premier semestre 2023 : &lt;a href="https://www.inflorescences-quinoa.fr/">www.inflorescences-quinoa.fr/&lt;/a>&lt;/li>
+&lt;li>le site de la méthode &lt;em>Passons le C.A.P&lt;/em> : &lt;a href="http://passonslecap.fr/">wwww.passonslecap.fr&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Pour des conseils et des besoins particuliers, &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">contactez-moi&lt;/a>.&lt;/p>
+&lt;p>Sinon, continuons avec &lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">l’étape de déploiement&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/">&amp;lt; Retour à la table des matières&lt;/a>&lt;/p></description></item><item><title>Préparer l'environnement pour créer son site web en 2 étapes</title><link>https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/</link><pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Préparer l'environnement pour créer son site web en 2 étapes" />&lt;!-- raw HTML omitted -->
+&lt;h2 id="prérequis">Prérequis&lt;/h2>
+&lt;ul>
+&lt;li>Un ordinateur personnel avec :
+&lt;ul>
+&lt;li>Windows 10 ou 11,&lt;/li>
+&lt;li>8 Go LPDDR4,&lt;/li>
+&lt;li>un disque de 256 Go SSD&lt;/li>
+&lt;li>et un processeur Intel Celeron Quad Core&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Un compte e-mail (Google ou autre) (par ici &lt;a href="https://accounts.google.com/">avec Gmail&lt;/a> ou &lt;a href="https://www.infomaniak.com/fr/email-gratuit">avec Infomaniak&lt;/a>)&lt;/li>
+&lt;li>Un compte GitHub (créé avec votre compte e-mail) en &lt;a href="https://github.com/signup">le créant par ici&lt;/a>&lt;/li>
+&lt;li>Un compte &lt;a href="https://app.netlify.com/">chez Netlify&lt;/a> (lié à votre compte GitHub)&lt;/li>
+&lt;li>Optionnellement, un compte chez un registar de domaines (OVH, Infomaniak, etc.). Cela est utile pour le nom de domaine, si vous souhaitez une URL 100 % personnalisée.&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-tip" id="Par défaut, Netlify fournit une URL publique" >
+&lt;p class="jli-notice-title">Par défaut, Netlify fournit une URL publique&lt;/p>&lt;p>Le sous-domaine est configurable, sous réserve de disponibilité.&lt;/p>
+&lt;p>L’application serait alors disponible sous&lt;code>https://mon-site.netlify.app&lt;/code> .&lt;/p>&lt;/div>
+&lt;h2 id="créer-le-dépôt-sur-github">Créer le dépôt sur GitHub&lt;/h2>
+&lt;p>Une fois que vous avez à disposition tous les prérequis, on commence par créer le dépôt depuis votre compte GitHub.&lt;/p>
+&lt;p>Pour cela, connectez-vous à votre compte GitHub et :&lt;/p>
+&lt;ol>
+&lt;li>Rendez-vous sur &lt;a href="https://github.com/new">https://github.com/new&lt;/a>.&lt;/li>
+&lt;li>Remplissez les champs :&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>Repository name&lt;/code>&lt;/li>
+&lt;li>&lt;code>Description&lt;/code>&lt;/li>
+&lt;li>Choisissez la visibilité : &lt;code>Public&lt;/code> ou&lt;code>Private&lt;/code> .&lt;/li>
+&lt;li>Ignorez la suite qui sera copiée du modèle&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github.jpg"
+width="749"
+height="808"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/creer-le-depot-sur-github_hued7efcb9df22743195d7ba38448b1c0d_190611_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Créer le dépôt sur GitHub"
+class="gallery-image"
+data-flex-grow="92"
+data-flex-basis="222px"
+>
+&lt;/p>
+&lt;ol start="3">
+&lt;li>Cliquez &lt;code>Create repository&lt;/code>en bas du formulaire pour terminer.&lt;/li>
+&lt;/ol>
+&lt;h2 id="préparer-le-poste-de-développement">Préparer le poste de développement&lt;/h2>
+&lt;p>Une fois que le dépôt est prêt, je vous invite à préparer votre poste de développement.&lt;/p>
+&lt;p>Il faut :&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Installer &lt;a href="https://git-scm.com/downloads">Git bash&lt;/a>. Allez visualiser &lt;a href="https://youtu.be/eHTZ-2qY19s">ma vidéo sur le sujet&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installer &lt;a href="https://nodejs.org/en/blog/release/v18.16.0/">NodeJS 18.16.0&lt;/a> en cliquant suivant (aucune personnalisation n’est nécessaire).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installer &lt;a href="https://code.visualstudio.com/download">Visual Studio Code&lt;/a> en cliquant suivant (aucune personnalisation n’est nécessaire).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Configurer l’explorateur Windows pour afficher les dossiers et fichiers cachés (ex : fichier&lt;code>.gitignore&lt;/code>, dossier&lt;code>.vscode&lt;/code>)&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Ouvrez l’explorateur de fichiers et sélectionnez le menu &lt;code>Options&lt;/code>comme indiqué ci-dessous :
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers.jpg"
+width="810"
+height="438"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/ouvrir-les-options-de-visualisation-des-dossiers_hu797531e7a6c9e95296a746afdf741f5a_107321_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Ouvrir les options de visualisation des dossiers"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sélectionnez l’affichage des dossiers et fichiers cachés :
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-loption-dafficher-les-fichiers-et-dossiers-caches.jpg"
+width="392"
+height="525"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_ffd42da62369d6abb70e893d6cec752c.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_63c74ad1136e6fd518a7867d2875b7e4.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/_hu1458f46f277702854eab2cd3a218943e_145820_ca0441c177ed96d80a7c831f79880aea.jpg 1024w"
+loading="lazy"
+alt="Sélectionner l’option d’afficher les fichiers et dossiers cachés."
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="179px"
+>
+&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-note" id=" Pour l’étape qui suit seulement…" >
+&lt;p class="jli-notice-title"> Pour l’étape qui suit seulement…&lt;/p>&lt;p>Peut-être que tout est bon si vous avez suivi l’étape à l’installation de Git.&lt;/p>
+&lt;p>L’étape est là, au cas où ce n’est pas le cas.&lt;/p>
+&lt;p>Toutefois, comme j’ai le même PC depuis un moment, je veux juste être sûr qu’on a tous la même configuration de poste.&lt;/p>&lt;/div>
+&lt;ul>
+&lt;li>
+&lt;p>Lancez Visual Studio Code et saisissez &lt;code>CTRL+SHIFT+P&lt;/code>puis &lt;code>Terminal&lt;/code>pour sélectionner le profil &lt;code>Git Bash&lt;/code>&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal.jpg"
+width="606"
+height="78"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/changer-le-profil-du-terminal_hua01e1dad9aab6bc3fc124fe45267069b_24046_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Changer le profil du terminal"
+class="gallery-image"
+data-flex-grow="776"
+data-flex-basis="1864px"
+>
+&lt;/p>
+&lt;p>Et sélectionnez &lt;code>Git Bash&lt;/code>:&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash.jpg"
+width="605"
+height="166"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/selectionner-git-bash_huf65afb5400d4068c6188bb359d5ea7d0_64804_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Sélectionner git bash"
+class="gallery-image"
+data-flex-grow="364"
+data-flex-basis="874px"
+>
+&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Tapez &lt;code>CTRL+ù&lt;/code>pour ouvrir le terminal avec &lt;code>Git Bash&lt;/code>&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash.jpg"
+width="600"
+height="300"
+srcset="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_360x0_resize_q75_box.jpg 360w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_600x0_resize_q75_box.jpg 600w, https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/images/le-terminal-est-lance-avec-git-bash_hu92fed7be8110aece7b9d529b2683997a_17558_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="Le terminal est lancé avec Git Bash"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>
+&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Vous êtes prêts à cloner les dépôts !&lt;/p>
+&lt;p>Cliquez sur le lien suivant pour &lt;a href="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/">créer votre site web moderne et rapide&lt;/a>.&lt;/p>
+&lt;p>&lt;a href="https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/">&amp;lt; Retour à la table des matières&lt;/a>&lt;/p></description></item><item><title>Créer votre site web moderne pour moins de 10 euros !</title><link>https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/</link><pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2023-05/comment-realiser-son-site-moderne-et-rapide/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2023-04-19-jamstack-javascript-apis-markup.webp" alt="Featured image of post Créer votre site web moderne pour moins de 10 euros !" />&lt;p>De nos jours, il existe beaucoup de méthodes pour créer son site web. J’en présente une qui ne coûte presque rien. Pour de vrai !&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="les-étapes">Les étapes&lt;/h2>
+&lt;p>Je décris en détail les étapes pour créer votre site vous-même dans les articles ci-dessous :&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-05/preparer-un-env-pour-un-site-moderne-rapide/">Préparer un environnement de gestion de son site web sur un PC lambda&lt;/a>,&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-05/creer-son-site-moderne-rapide/">Créer le site web à partir du modèle&lt;/a>,&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-05/deployer-son-site-moderne-rapide/">Déployer le site web sur Netlify, hébergement gratuit&lt;/a>,&lt;/li>
+&lt;li>&lt;a href="https://jeremielitzLer.fr/post/2023-05/activer-netlifycms-sur-son-site-web/">Activer NetlifyCMS sur son site web&lt;/a> pour éditer son contenu dans le navigateur.&lt;/li>
+&lt;/ul>
+&lt;p>Si vous pensez que ce serait utile que je réalise une série de tutoriels vidéos, &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">dites-le-moi&lt;/a> !&lt;/p></description></item></channel></rss>

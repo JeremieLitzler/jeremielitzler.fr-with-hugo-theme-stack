@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue 3 on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/vue-3/</link><description>Recent content in Vue 3 on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/vue-3/index.xml" rel="self" type="application/rss+xml"/><item><title>Définir ses “props” avec Vue 3 et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</link><pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/images/2024-03-08-example-prop.jpg" alt="Featured image of post Définir ses “props” avec Vue 3 et TypeScript" />&lt;p>Voici ce que j’ai appris après avoir passé pas mal de temps à essayer et à utiliser &lt;code>defineProps&lt;/code> avec Vue 3 et TypeScript.&lt;/p>
+&lt;p>Pour rappel, en JavaScript, les &lt;em>props&lt;/em> sont définis de la manière suivante:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Options API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">props&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">required&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Composition API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>En revanche, avec TypeScript, cela devient :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Remarquez que le type &lt;em>prop&lt;/em> n’est pas le même : &lt;code>String&lt;/code> en JavaScript contre &lt;code>string&lt;/code> en TypeScript.&lt;/p>
+&lt;p>Il est important de respecter cet usage pour que le code fonctionne. Et si vous ne faites pas attention, ESLint s’assurera de vous informer de l’erreur lorsque vous écrirez en TypeScript.&lt;/p>
+&lt;p>Et lorsque vous avez besoin de définir une &lt;em>prop&lt;/em> comme non requis (implicitement, elles sont requises…), utilisez-le &lt;code>?&lt;/code> qui suit le nom de la &lt;em>prop&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id?&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Maintenant, cela va devenir plus complexe lorsque vous aurez besoin de définir des valeurs par défaut.&lt;/p>
+&lt;p>Auparavant, en utilisant JavaScript et l’API Option, vous deviez écrire :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">props&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ou si vous préférez l’API Composition, cela ressemblerait à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="jli-notice jli-notice-tip" id="Astuce" >
+&lt;p class="jli-notice-title">Astuce&lt;/p>&lt;p>Vous pouvez déstructurer les &lt;em>props&lt;/em> facilement avec &lt;code>{ propName }&lt;/code> comme montré ci-dessus.&lt;/p>&lt;/div>
+&lt;p>En utilisant TypeScript et l’API Composition, vous devrez utiliser la macro &lt;code>withDefaults&lt;/code> &lt;strong>et&lt;/strong> créer une interface pour définir les &lt;em>props&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">ThreadEditorPageProps&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title?&lt;/span> : &lt;span class="kt">string&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body?&lt;/span> : &lt;span class="kt">chaîne&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="nx">caractères&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">withDefaults&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">defineProps&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ThreadEditorPageProps&lt;/span>&lt;span class="p">&amp;gt;(),&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Décomposons le code :&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>title&lt;/code> et &lt;code>body&lt;/code> sont des &lt;em>props&lt;/em> de type &lt;code>string&lt;/code> et elles sont optionnelles.&lt;/li>
+&lt;li>ensuite (1) instanciez les &lt;em>props&lt;/em> en fournissant à la macro &lt;code>withDefaults&lt;/code> la macro &lt;code>defineProps&lt;/code> typée avec l’interface et (2) ajoutez un objet avec les &lt;em>props&lt;/em> pour lesquels vous avez besoin de définir une valeur par défaut.&lt;/li>
+&lt;/ol>
+&lt;p>Dans l’exemple, ne pas fournir de valeur par défaut signifierait que les &lt;em>props&lt;/em> seraient toutes deux égales à &lt;code>undefined&lt;/code> à cause du &lt;code>?&lt;/code>.&lt;/p>
+&lt;p>Avec des valeurs par défaut explicites, elles valent une chaîne vide.&lt;/p>
+&lt;p>Vous n’avez pas besoin de définir une valeur par défaut pour toutes les &lt;em>props&lt;/em> et elles n’ont pas besoin d’être marquées comme optionnelles pour recevoir une valeur par défaut.&lt;/p>
+&lt;p>Enfin, je recommande d’utiliser la déclaration d’interface lorsque vous avez de nombreuses &lt;em>props&lt;/em>. Extraire cette interface dans un fichier séparé rend le code du composant plus propre. Vous importerez simplement dans votre composant l’interface.&lt;/p>
+&lt;p>Pour moi, cela rend le code du composant plus propre.&lt;/p>
+&lt;p>Vous avez des questions sur le sujet ? Allez lire &lt;a href="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits">la documentation officielle&lt;/a> ou &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">posez vos questions !&lt;/a>&lt;/p></description></item></channel></rss>

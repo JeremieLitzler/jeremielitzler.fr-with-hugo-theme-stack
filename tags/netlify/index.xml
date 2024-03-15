@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Netlify on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/netlify/</link><description>Recent content in Netlify on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Wed, 14 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/netlify/index.xml" rel="self" type="application/rss+xml"/><item><title>Comment gérer un 404 dans une application à page unique déployée sur Netlify ?</title><link>https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/</link><pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/2024-02-14-404-page-displayed-on-laptop.jpg" alt="Featured image of post Comment gérer un 404 dans une application à page unique déployée sur Netlify ?" />&lt;p>Les applications à page unique (SPA) gèrent ce que nous appelons des &lt;em>soft 404&lt;/em>. Lorsque vous déployez Netlify, vous verrez une page comme celle-ci :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page.png"
+width="604"
+height="405"
+srcset="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Page 404 Not Found de Netlify"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="357px"
+>
+&lt;/p>
+&lt;p>Pour éviter cela, il suffit d’ajouter un fichier &lt;code>_redirects&lt;/code> dans le répertoire &lt;code>public&lt;/code> de l’application et d’ajouter ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">/* /index.html 200
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Cela permet à l’application de gérer le 404 comme un &lt;em>soft 404&lt;/em>.&lt;/p>
+&lt;p>Voir [ce fil de discussion] (&lt;a href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125&lt;/a>) pour plus d’exemples d’utilisation.&lt;/p>
+&lt;p>Crédit : l’image d’entête par &lt;a href="https://unsplash.com/@introspectivedsgn?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Erik Mclean&lt;/a> sur &lt;a href="https://unsplash.com/photos/black-asus-laptop-computer-showing-3-00-sxiSod0tyYQ?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>&lt;/p></description></item></channel></rss>

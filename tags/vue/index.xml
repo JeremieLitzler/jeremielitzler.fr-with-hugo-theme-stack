@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/vue/</link><description>Recent content in Vue on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Tue, 27 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/vue/index.xml" rel="self" type="application/rss+xml"/><item><title>Enregistrer globalement des composants dans Vue 3</title><link>https://jeremielitzLer.fr/post/2024-02/enregistrer-globalement-des-composants-dans-vue3-et-typescript/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/enregistrer-globalement-des-composants-dans-vue3-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/images/2024-02/2024-02-27/preview-of-main.ts-file.jpg" alt="Featured image of post Enregistrer globalement des composants dans Vue 3" />&lt;p>Alors que le guide de style de Vue 2 donnait le code pour le faire, le guide de style de Vue 3 l’a supprimé.&lt;/p>
+&lt;p>Comment cela fonctionne-t-il sur Vue 3 et TypeScript&lt;/p>
+&lt;p>J’ai donc creusé et je suis tombé sur &lt;a href="https://zerotomastery.io/blog/how-to-auto-register-components-for-vue-with-vite/">cet article&lt;/a>.&lt;/p>
+&lt;p>Le problème avec la solution proposée : la méthode &lt;code>globEager&lt;/code> n’existe plus.&lt;/p>
+&lt;p>Pour faire la même chose, vous pouvez utiliser &lt;code>.glob(regexString, {eager : true}&lt;/code>.&lt;/p>
+&lt;p>Cela vous retourne une liste d’objets de type &lt;code>[string, unknown][]&lt;/code>.&lt;/p>
+&lt;p>En utilisant JavaScript, ESLint ne se plaindrait pas, mais avec TypeScript, vous rencontrerez un problème avec le &lt;code>unknown&lt;/code>.&lt;/p>
+&lt;p>Le code qu’ESLint n’aime pas ressemble à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Inspiré par :
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// - https://zerotomastery.io/blog/how-to-auto-register-components-for-vue-with-vite/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// - https://dev.to/jakedohm_34/auto-registering-all-your-components-in-vue-3-with-vite-4884
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">componentFiles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">glob&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;@/components/App*.vue&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">eager&lt;/span>: &lt;span class="kt">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">componentFilesEntries&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">entries&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentFiles&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">componentPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">module&lt;/span>&lt;span class="nx">Import&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">componentFilesEntries&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">componentName&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">componentPath&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;.vue&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">warn&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="sb">`Le nom du composant n&amp;#39;a pas pu être extrait du chemin &amp;gt; &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">componentPath&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> `&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">component&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">module&lt;/span>&lt;span class="nx">Import.default&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Composant enregistré &amp;lt;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">composantName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;gt; globalement.`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Où se situe le problème ? Sur la ligne &lt;code>app.component(componentName !, moduleImport.default) ;&lt;/code>, et plus particulièrement le &lt;code>moduleImport.default&lt;/code>.&lt;/p>
+&lt;p>Pour le résoudre, vous devez le &lt;em>typer&lt;/em>.&lt;/p>
+&lt;p>En utilisant quelques &lt;code>console.log&lt;/code>, j’ai découvert que &lt;code>moduleImport&lt;/code> est de type &lt;code>Object&lt;/code> avec une propriété &lt;code>default&lt;/code>, également de type &lt;code>Object&lt;/code>.&lt;/p>
+&lt;p>La solution est donc de déclarer une interface de &lt;code>moduleImport&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">ModuleImportInterface&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">par&lt;/span> &lt;span class="nx">défaut&lt;/span> : &lt;span class="kt">Objet&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Il n’est pas nécessaire d’être plus précis sur &lt;code>default&lt;/code> dans ce cas d’utilisation.&lt;/p>
+&lt;p>Enfin, vous devez convertir le &lt;code>moduleImport&lt;/code> de type &lt;code>unknown&lt;/code> en &lt;code>ModuleImportInterface&lt;/code> pour avoir accès à la propriété &lt;code>default&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">component&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">componentName&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">module&lt;/span>&lt;span class="nx">Import&lt;/span> &lt;span class="kr">as&lt;/span> &lt;span class="nx">ModuleImportInterface&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="k">default&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>ESLint ne remonte plus d&amp;rsquo;erreur et surtout, le code fonctionne toujours !&lt;/p>
+&lt;p>C’est un excellent cas d’utilisation pour couler une variable de type inconnu.&lt;/p>
+&lt;p>N’hésitez pas à partager !&lt;/p></description></item></channel></rss>

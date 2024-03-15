@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Astuce Du Jour on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/astuce-du-jour/</link><description>Recent content in Astuce Du Jour on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/astuce-du-jour/index.xml" rel="self" type="application/rss+xml"/><item><title>Ajouter une URL canonique à chaque article avec Hugo</title><link>https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/</link><pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/ajouter-une-url-canonique-a-chaque-article-avec-hugo/images/2024-03-15-a-smartphone-and-a-pen-on-a-desk.jpg" alt="Featured image of post Ajouter une URL canonique à chaque article avec Hugo" />&lt;p>J’utilise le &lt;a href="https://github.com/CaiJimmy/hugo-theme-stack">thème Hugo&lt;/a> réalisé par &lt;a href="https://jimmycai.com/">Jimmy Cai&lt;/a>.&lt;/p>
+&lt;p>Il inclut déjà dans le modèle d’en-tête le code pour ajouter un lien canonique.&lt;/p>
+&lt;p>Mais, à un moment donné, j’ai dû publier un article que j’avais déjà publié sur une plateforme en ligne.&lt;/p>
+&lt;p>Je ne pouvais donc pas laisser le thème générer un lien canonique automatiquement.&lt;/p>
+&lt;h2 id="lobjectif">L’objectif&lt;/h2>
+&lt;p>Je voulais conserver l’automatisation pour les articles publiés initialement sur mon blog.&lt;/p>
+&lt;p>Ensuite, dans certains cas, je voulais republier un article sur mon blog alors qu’il était déjà disponible sur Internet.&lt;/p>
+&lt;h2 id="pourquoi">Pourquoi&lt;/h2>
+&lt;p>En matière de référencement, les bonnes pratiques sont les suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Chaque page web doit avoir un lien canonique.&lt;/li>
+&lt;li>Une page web unique avec le même contenu doit être publiée une et une seule fois sur Internet.&lt;/li>
+&lt;/ul>
+&lt;p>Si vous ne respectez pas ces deux règles, les robots n’indexeront pas vos pages et vous perdrez du trafic.&lt;/p>
+&lt;h2 id="solution-utilisant-le-thème-hugo">Solution utilisant le thème Hugo&lt;/h2>
+&lt;p>Tout d’abord, j’ai dû trouver où le lien canonique était généré. Je l’ai trouvé dans &lt;code>layouts/partials/head/head.html&lt;/code> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Maintenant, comment pouvais-je spécifier dans la &lt;a href="https://docusaurus.io/fr/docs/next/create-doc#:~:text=Le%20frontmatter%20est%20utilis%C3%A9e%20pour,m%C3%A9tadonn%C3%A9es%20n%C3%A9cessaires%20sans%20le%20frontmatter.">&lt;em>frontmatter&lt;/em>&lt;/a> d’un article donné que je voulais que le lien canonique soit un lien spécifique ?&lt;/p>
+&lt;p>En cherchant un peu, j’ai trouvé &lt;a href="https://discourse.gohugo.io/t/how-to-add-cannonical-url-to-a-blog/34670/4">ce fil de discussion sur le forum Hugo&lt;/a>.&lt;/p>
+&lt;p>Les données de la &lt;em>frontmatter&lt;/em> sont accessibles via &lt;code>.Params&lt;/code> qui contient des paires clé/valeur.&lt;/p>
+&lt;p>La clé est le nom de la propriété &lt;em>frontmatter&lt;/em>.&lt;/p>
+&lt;p>Dans mon cas, j’ai nommé la propriété canonique &lt;code>relcanonical&lt;/code> et la valeur doit être une chaîne de caractères.&lt;/p>
+&lt;p>Cela donne ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">relcanonical&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://jeremielitzler.fr&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>La ligne &lt;code>head.html&lt;/code> ci-dessus doit être remplacée par ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-htm" data-lang="htm">&lt;span class="line">&lt;span class="cl">{{ with .Params.relcanonical }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . | relLangURL }}&amp;#34;&lt;/span> &lt;span class="na">itemprop&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;url&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ else -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canonical&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Permalink }}&amp;#34;&lt;/span> &lt;span class="na">itemprop&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;url&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end -}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Dans le code ci-dessus,&lt;/p>
+&lt;ul>
+&lt;li>Lorsque le paramètre &lt;code>relcanonical&lt;/code> est défini dans la &lt;code>frontmatter&lt;/code> (&lt;code>{{ with .Params.relcanonical }}&lt;/code>)&lt;/li>
+&lt;li>On utilise sa valeur, qui est le &lt;code>.&lt;/code> dans &lt;code>{{ . }}&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;div class="jli-notice jli-notice-note" id="La syntaxe de la moustache est utilisée pour la programmation Go dans le modèle HTML" >
+&lt;p class="jli-notice-title">La syntaxe de la moustache est utilisée pour la programmation Go dans le modèle HTML&lt;/p>&lt;p>}&lt;/p>&lt;/div>
+&lt;p>J’espère que vous avez trouvé cela utile.&lt;/p>
+&lt;p>N’hésitez pas à partager !&lt;/p>
+&lt;p>Crédit : Photo de &lt;a href="https://unsplash.com/@steve_j?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Steve Johnson&lt;/a> sur &lt;a href="https://unsplash.com/photos/black-smartphone-beside-pen-rNYCrcjUnOA?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>.&lt;/p></description></item><item><title>Extraire des tableaux d'une liste d'objets en un seul tableau</title><link>https://jeremielitzLer.fr/post/2024-03/extraire-des-tableaux-d-une-liste-d-objets-en-un-seul-tableau/</link><pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/extraire-des-tableaux-d-une-liste-d-objets-en-un-seul-tableau/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/extraire-des-tableaux-d-une-liste-d-objets-en-un-seul-tableau/images/2024-03-13-shoes-sorted-into-trays.jpg" alt="Featured image of post Extraire des tableaux d'une liste d'objets en un seul tableau" />&lt;p>C&amp;rsquo;est simple : utilisez la méthode &lt;code>Array.prototype.flatMap()&lt;/code> en même temps que la décomposition de l&amp;rsquo;objet.&lt;/p>
+&lt;p>Par exemple, vous avez ce tableau d&amp;rsquo;objets. Chaque objet contient un tableau de valeurs primitives :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;categories&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;forums&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KpOx5Y4AqRr3sB4Ybwj&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjO4_W3W9Q2Z2UmuPr&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Feedback &amp;amp; Information&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;slug&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;feedback-and-information&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;-KpR7vRkiRPpbUd_TVAR&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;forums&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjPat5MWCx-dkjNVg8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjPjasLh0TFtZmffEo&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-Kvd1Vg_ankLYgrxC50F&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvdCowY9mDvM0EH8Pvs&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvhkEl6F673igPtnbso&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Discussions&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;slug&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;discussions&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;-KsjPKA6hDuHlQK_lJWO&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;forums&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-Kvclvu_Qd9QdS9ciqUl&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvcmOcppNYK8NCesmB9&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Comedy&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;slug&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;comedy&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;-KvclpNRjpI5W-j0JQGU&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Si vous voulez obtenir les valeurs de &lt;code>forums&lt;/code>, l&amp;rsquo;utilisation de la décomposition d&amp;rsquo;objets et de &lt;code>flatMap&lt;/code> vous fournira la solution :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">forums&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">categories&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">flatMap&lt;/span>&lt;span class="p">(({&lt;/span> &lt;span class="nx">forums&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">forums&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Le résultat vous donnera :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KpOx5Y4AqRr3sB4Ybwj&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjO4_W3W9Q2Z2UmuPr&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjPat5MWCx-dkjNVg8&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KsjPjasLh0TFtZmffEo&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-Kvd1Vg_ankLYgrxC50F&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvdCowY9mDvM0EH8Pvs&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvhkEl6F673igPtnbso&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-Kvclvu_Qd9QdS9ciqUl&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;-KvcmOcppNYK8NCesmB9&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a href="https://jsfiddle.net/puzzlout/98w7h4xL/">Consultez la démo JSFiddle&lt;/a> pour vous en convaincre.&lt;/p>
+&lt;p>Bonne lecture !&lt;/p>
+&lt;p>Crédit : Photo par &lt;a href="https://unsplash.com/@alevisionco?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Alev Takil&lt;/a> sur &lt;a href="https://unsplash.com/photos/assorted-color-sneakers-d-1FY75fh_s?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>.&lt;/p></description></item><item><title>Construire un accordéon HTML sans JavaScript</title><link>https://jeremielitzLer.fr/post/2024-03/construire-un-accordeon-html-sans-javascript/</link><pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/construire-un-accordeon-html-sans-javascript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/construire-un-accordeon-html-sans-javascript/images/2024-02-11-a-vintage-accordeon.jpg" alt="Featured image of post Construire un accordéon HTML sans JavaScript" />&lt;p>Connaissez-vous les éléments HTML &lt;code>details&lt;/code> et &lt;code>summary&lt;/code> ?&lt;/p>
+&lt;p>Vous devriez.&lt;/p>
+&lt;p>Pour créer un accordéon sans JavaScript, ce sont vos amis.&lt;/p>
+&lt;p>Mais il se peut que vous souhaitiez en personnaliser l’apparence.&lt;/p>
+&lt;p>En utilisant la pseudoclasse &lt;code>::after&lt;/code> sur l’élément &lt;code>summary&lt;/code>, vous pouvez ajouter du contenu avec la propriété &lt;code>content&lt;/code>.&lt;/p>
+&lt;p>Et si vous changiez le contenu en fonction de l’état de l’élément &lt;code>details&lt;/code> (par exemple, ouvert ou fermé) ?&lt;/p>
+&lt;p>Appliquez un style différent lorsque l’accordéon est ouvert en utilisant le sélecteur &lt;code>details[open]&lt;/code>.&lt;/p>
+&lt;p>Voici la démonstration que j’utilise sur mon blog &lt;a href="https://jsfiddle.net/puzzlout/j09efgpn/">sur JSFiddle&lt;/a>.&lt;/p>
+&lt;p>Amusez-vous bien !&lt;/p>
+&lt;p>Crédit : Photo de &lt;a href="https://unsplash.com/@gaellemarcel?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Gaelle Marcel&lt;/a> sur &lt;a href="https://unsplash.com/photos/brown-chest-near-wall-MwMmOtj6z2c?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>.&lt;/p></description></item><item><title>Définir ses “props” avec Vue 3 et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</link><pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/definir-ses-props-avec-vue-3-et-typescript/images/2024-03-08-example-prop.jpg" alt="Featured image of post Définir ses “props” avec Vue 3 et TypeScript" />&lt;p>Voici ce que j’ai appris après avoir passé pas mal de temps à essayer et à utiliser &lt;code>defineProps&lt;/code> avec Vue 3 et TypeScript.&lt;/p>
+&lt;p>Pour rappel, en JavaScript, les &lt;em>props&lt;/em> sont définis de la manière suivante:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Options API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">props&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">required&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Composition API
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>En revanche, avec TypeScript, cela devient :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Remarquez que le type &lt;em>prop&lt;/em> n’est pas le même : &lt;code>String&lt;/code> en JavaScript contre &lt;code>string&lt;/code> en TypeScript.&lt;/p>
+&lt;p>Il est important de respecter cet usage pour que le code fonctionne. Et si vous ne faites pas attention, ESLint s’assurera de vous informer de l’erreur lorsque vous écrirez en TypeScript.&lt;/p>
+&lt;p>Et lorsque vous avez besoin de définir une &lt;em>prop&lt;/em> comme non requis (implicitement, elles sont requises…), utilisez-le &lt;code>?&lt;/code> qui suit le nom de la &lt;em>prop&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id?&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Maintenant, cela va devenir plus complexe lorsque vous aurez besoin de définir des valeurs par défaut.&lt;/p>
+&lt;p>Auparavant, en utilisant JavaScript et l’API Option, vous deviez écrire :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">props&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ou si vous préférez l’API Composition, cela ressemblerait à ceci :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="jli-notice jli-notice-tip" id="Astuce" >
+&lt;p class="jli-notice-title">Astuce&lt;/p>&lt;p>Vous pouvez déstructurer les &lt;em>props&lt;/em> facilement avec &lt;code>{ propName }&lt;/code> comme montré ci-dessus.&lt;/p>&lt;/div>
+&lt;p>En utilisant TypeScript et l’API Composition, vous devrez utiliser la macro &lt;code>withDefaults&lt;/code> &lt;strong>et&lt;/strong> créer une interface pour définir les &lt;em>props&lt;/em> :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">ThreadEditorPageProps&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title?&lt;/span> : &lt;span class="kt">string&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body?&lt;/span> : &lt;span class="kt">chaîne&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="nx">caractères&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">withDefaults&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">defineProps&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ThreadEditorPageProps&lt;/span>&lt;span class="p">&amp;gt;(),&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">title&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Décomposons le code :&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>title&lt;/code> et &lt;code>body&lt;/code> sont des &lt;em>props&lt;/em> de type &lt;code>string&lt;/code> et elles sont optionnelles.&lt;/li>
+&lt;li>ensuite (1) instanciez les &lt;em>props&lt;/em> en fournissant à la macro &lt;code>withDefaults&lt;/code> la macro &lt;code>defineProps&lt;/code> typée avec l’interface et (2) ajoutez un objet avec les &lt;em>props&lt;/em> pour lesquels vous avez besoin de définir une valeur par défaut.&lt;/li>
+&lt;/ol>
+&lt;p>Dans l’exemple, ne pas fournir de valeur par défaut signifierait que les &lt;em>props&lt;/em> seraient toutes deux égales à &lt;code>undefined&lt;/code> à cause du &lt;code>?&lt;/code>.&lt;/p>
+&lt;p>Avec des valeurs par défaut explicites, elles valent une chaîne vide.&lt;/p>
+&lt;p>Vous n’avez pas besoin de définir une valeur par défaut pour toutes les &lt;em>props&lt;/em> et elles n’ont pas besoin d’être marquées comme optionnelles pour recevoir une valeur par défaut.&lt;/p>
+&lt;p>Enfin, je recommande d’utiliser la déclaration d’interface lorsque vous avez de nombreuses &lt;em>props&lt;/em>. Extraire cette interface dans un fichier séparé rend le code du composant plus propre. Vous importerez simplement dans votre composant l’interface.&lt;/p>
+&lt;p>Pour moi, cela rend le code du composant plus propre.&lt;/p>
+&lt;p>Vous avez des questions sur le sujet ? Allez lire &lt;a href="https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits">la documentation officielle&lt;/a> ou &lt;a href="https://jeremielitzLer.fr/page/contactez-moi/">posez vos questions !&lt;/a>&lt;/p></description></item><item><title>Différences entre les types de variables en JavaScript</title><link>https://jeremielitzLer.fr/post/2024-03/types-de-variables-en-javascript/</link><pubDate>Wed, 06 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/types-de-variables-en-javascript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/types-de-variables-en-javascript/images/2024-03-06-list-of-variable-types.png" alt="Featured image of post Différences entre les types de variables en JavaScript" />&lt;p>Je prendrai l’exemple du langage de programmation JavaScript dans cet article, mais il en va de même dans de nombreux langages de programmation, comme C#.&lt;/p>
+&lt;p>Fondamentalement, il existe deux familles de types de variables : les primitives et les objets.&lt;/p>
+&lt;p>Dans chacune d’entre elles, on trouve les types bien connus énumérés dans l’image du haut.&lt;/p>
+&lt;p>Ce qu’il est important de comprendre, c’est que vous pouvez copier des primitives &lt;strong>par valeur&lt;/strong> ou des objets &lt;strong>par référence&lt;/strong>.&lt;/p>
+&lt;h2 id="types-de-valeur">Types de valeur&lt;/h2>
+&lt;p>Par exemple :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">greeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Bonjour&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">newGreeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">gretting&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">newGreeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Bonjour&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>L’affectation &lt;code>newGreeting = &amp;quot;Bonjour&amp;quot; ;&lt;/code> ne change pas la valeur de la variable &lt;code>gretting&lt;/code>.&lt;/p>
+&lt;p>Les types de valeur stockent la valeur réelle en mémoire. Et le code ci-dessus montre qu’une copie distincte de la valeur &lt;code>gretting&lt;/code> est créée pour initialiser &lt;code>newGreeting&lt;/code>.&lt;/p>
+&lt;p>&lt;strong>Vous n’avez aucun lien entre les deux variables.&lt;/strong>&lt;/p>
+&lt;h2 id="types-de-référence">Types de référence&lt;/h2>
+&lt;p>Lorsque vous créez un objet, il est stocké en mémoire et le JavaScript utilise une référence ou &lt;em>son adresse en mémoire&lt;/em> pour trouver la valeur.&lt;/p>
+&lt;p>Cette référence est utilisée pour manipuler l’objet.&lt;/p>
+&lt;p>Par exemple :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">greeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">message&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Hello&amp;#34;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">newGreeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">gretting&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">newGreeting&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">message&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Bonjour&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>L’affectation &lt;code>newGreeting.message = &amp;quot;Bonjour&amp;quot; ;&lt;/code> change la valeur de la propriété, &lt;code>gretting.message&lt;/code> car les deux &lt;strong>variables partagent la même référence en mémoire&lt;/strong> !&lt;/p>
+&lt;p>Pour éviter cela, vous devez créer une vraie copie de &lt;code>greeting&lt;/code>.&lt;/p>
+&lt;p>Cela peut être facilement réalisé avec l’opérateur &lt;code>spread&lt;/code> (pour un objet &lt;em>plat&lt;/em> uniquement, les objets imbriqués nécessitent plus de code…) :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">greeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">message&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Hello&amp;#34;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">newGreeting&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">greeting&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">newGreeting&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">message&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Bonjour&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec &lt;code>{...greeting}&lt;/code>, nous assignons un nouvel objet et le moteur JavaScript crée donc une nouvelle référence pour stocker &lt;code>newGreeting&lt;/code>.&lt;/p>
+&lt;p>Par conséquent, &lt;code>newGreeting.message = 'Bonjour';&lt;/code> n’affectera pas la valeur de &lt;code>greeting.message&lt;/code>.&lt;/p></description></item><item><title>Utiliser Pinia dans un intercepteur de navigation</title><link>https://jeremielitzLer.fr/post/2024-03/utiliser-pinia-dans-un-intercepteur-de-navigation/</link><pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/utiliser-pinia-dans-un-intercepteur-de-navigation/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/utiliser-pinia-dans-un-intercepteur-de-navigation/images/2024-03-01-pinia-image-from.jpg" alt="Featured image of post Utiliser Pinia dans un intercepteur de navigation" />&lt;p>Si vous construisez une application de taille moyenne, vous finirez par utiliser des gardes de navigation pour parcourir les différentes pages de votre application.&lt;/p>
+&lt;p>Le cas d’utilisation classique : vous souhaitez vérifier qu’un objet existe bien avant de charger ses détails (par exemple sur l’intercepteur &lt;code>beforeEnter&lt;/code>).&lt;/p>
+&lt;p>Maintenant, si vous construisez l’application avec Vue 3 et Pinia, c’est en interrogeant un magasin que vous lisez cet objet.&lt;/p>
+&lt;p>Cependant, l’application ne charge pas Pinia avant l’appel &lt;code>mount&lt;/code> et vous chargez le routeur avant cela…&lt;/p>
+&lt;p>Par conséquent, Pinia lancera une erreur &lt;em>« getActivePinia() » a été appelé mais il n’y avait pas de Pinia actif. Essayez-vous d’utiliser un magasin avant d’appeler « app.use(pinia) » ? Consultez &lt;a href="https://pinia.vuejs.org/core-concepts/outside-component-usage.html">https://pinia.vuejs.org/core-concepts/outside-component-usage.html&lt;/a> pour obtenir de l’aide. Cela échouera en production.&lt;/em>&lt;/p>
+&lt;p>Quelle est la solution ? J’ai suivi les étapes de &lt;a href="https://stackoverflow.com/a/70714477">cette réponse Stackoverflow&lt;/a>.&lt;/p>
+&lt;ol>
+&lt;li>Créez un fichier &lt;code>pinia.ts&lt;/code> pour instancier Pinia. Placez-le dans le même endroit que vous avez mis vos magasins.&lt;/li>
+&lt;li>Importez-le et appelez &lt;code>use&lt;/code> sur l’instance d’application dans &lt;code>main.ts&lt;/code>&lt;/li>
+&lt;li>Importez-le aussi dans &lt;code>src/router/index.ts&lt;/code> et fournissez-le à votre instance de magasin qui vous permet de lire l’objet cible : &lt;code>const store = useStore( pinia )&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>La signature du store &lt;code>useStory&lt;/code> n’a pas besoin d’être modifiée. Fournir l’instance &lt;code>pinia&lt;/code> à &lt;code>useStore()&lt;/code> est suffisant pour que cela fonctionne.&lt;/p></description></item><item><title>Créer un store avec Vue 3, Pinia et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-03/creer-un-store-avec-vue-3-pinia-et-typescript/images/2024-03-01-pinia-image-from.jpg" alt="Featured image of post Créer un store avec Vue 3, Pinia et TypeScript" />&lt;p>Pinia est l’extension de gestion d’état recommandé pour les applications Vue.&lt;/p>
+&lt;p>Bien que vous puissiez l’utiliser avec la méthode « &lt;em>Option API&lt;/em> », si vous utilisez TypeScript, optez pour la méthode « &lt;em>Composition API&lt;/em> ».&lt;/p>
+&lt;p>Oui, même au sein des magasins d’états, vous pouvez utiliser le modèle &lt;code>setup&lt;/code>.&lt;/p>
+&lt;p>Avec JavaScript, vous auriez, par exemple :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">ref&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;vue&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">defineStore&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;pinia&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">useSampleData&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="s1">&amp;#39;@/composables/useSampleData&amp;#39;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categoriesData&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useSampleData&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">useCategoryStore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineStore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;CategoryStore&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">state&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">categories&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ref&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">categoriesData&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">getters&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">categoryId&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">categories&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">category&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">Category&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">category&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">categoryId&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec TypeScript, cela devient :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-tsx" data-lang="tsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">ref&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;vue&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">defineStore&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;pinia&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="nx">useSampleData&lt;/span> &lt;span class="nx">de&lt;/span> &lt;span class="s2">&amp;#34;@/composables/useSampleData&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="kr">type&lt;/span> &lt;span class="nx">Category&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;@/types/Category&amp;#34;&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categoriesData&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useSampleData&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">useCategoryStore&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineStore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;CategoryStore&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//ÉTAT
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">categories&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ref&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">categoriesData&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//GETTERS
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">categoryId&lt;/span> : &lt;span class="kt">string&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">Catégorie&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">categories&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">category&lt;/span> : &lt;span class="kt">Category&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="nx">category&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">categoryId&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">match&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">categories&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">getCategoryById&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>La fonction fléchée que vous voyez après le nom du magasin utilise la définition de la fonction avec le modèle de configuration.&lt;/p>
+&lt;p>Remerciements à :&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/vuejs/pinia/discussions/983#discussioncomment-2045733">Cette discussion sur GitHub&lt;/a> pour m’avoir aidé à comprendre la technique.&lt;/li>
+&lt;li>&lt;a href="https://vueschool.io/">VueSchool.io&lt;/a> pour &lt;a href="https://github.com/vueschool/pinia-the-enjoyable-vue-store">l’image&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Utiliser le bon type sur une prop dans Vue.js</title><link>https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/</link><pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/utiliser-le-bon-type-sur-une-prop-dans-vuejs/images/2024-02-28-eslint-typescript-error-details.jpg" alt="Featured image of post Utiliser le bon type sur une prop dans Vue.js" />&lt;p>Une fois de plus, il ne m&amp;rsquo;a pas fallu longtemps pour comprendre ce qu&amp;rsquo;il me manquait, car les erreurs d&amp;rsquo;ESLint sont souvent explicites.&lt;/p>
+&lt;p>J&amp;rsquo;ai découvert ceci lorsque je codais &lt;a href="https://vueschool.io/lessons/introducing-categories-collections-of-forums">la leçon 35&lt;/a> de la MasterClass sur Vue.js fournie par l&amp;rsquo;excellent équipe de VueSchool.io.&lt;/p>
+&lt;p>Lorsque vous typez une &lt;code>prop&lt;/code>, n&amp;rsquo;utilisez pas &lt;code>String&lt;/code> mais utilisez le type primitif &lt;code>string&lt;/code>.&lt;/p>
+&lt;p>Le premier est un &lt;em>wrapper object&lt;/em>, mais pour rendre ESLint heureux, vous devez utiliser la primitive.&lt;/p>
+&lt;p>Par exemple, vous devriez éviter cette déclaration :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">props&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">defineProps&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="nx">id?&lt;/span>: &lt;span class="kt">String&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">edit?&lt;/span>: &lt;span class="kt">boolean&lt;/span> &lt;span class="p">}&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//eslint se plaindra de `props.id`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">props&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">getUserById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">props&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Il en va de même pour :&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>number&lt;/code> et &lt;code>Number&lt;/code>.&lt;/li>
+&lt;li>&lt;code>boolean&lt;/code> et &lt;code>Boolean&lt;/code>.&lt;/li>
+&lt;/ul></description></item><item><title>Simplifiez vos ifs en JavaScript et TypeScript</title><link>https://jeremielitzLer.fr/post/2024-02/simplifiez-vos-ifs-en-javascript-et-typescript/</link><pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/simplifiez-vos-ifs-en-javascript-et-typescript/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/simplifiez-vos-ifs-en-javascript-et-typescript/images/2024-02-23-code-sample.jpg" alt="Featured image of post Simplifiez vos ifs en JavaScript et TypeScript" />&lt;p>Supposons que vous ayez ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Comment le transformer en une ligne sans écrire &lt;code>if&lt;/code> ?&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-jsx" data-lang="jsx">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value1&lt;/span> &lt;span class="o">??&lt;/span> &lt;span class="nx">value2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>OK, vous gagnez 3 lignes, mais avant de l&amp;rsquo;utiliser partout, pensez à 2 choses pour vos cas d&amp;rsquo;utilisation :&lt;/p>
+&lt;ol>
+&lt;li>Cela change-t-il quelque chose à la performance de votre application ?&lt;/li>
+&lt;li>Cela est-il lisible par n&amp;rsquo;importe qui, aussi bien expérimenté que débutant ?&lt;/li>
+&lt;/ol>
+&lt;p>Peut-être que, dans l&amp;rsquo;exemple, il est correct d&amp;rsquo;utiliser l&amp;rsquo;opérateur de &lt;em>Nullish coalescing&lt;/em>.&lt;/p>
+&lt;p>Je dirais que ce n&amp;rsquo;est pas toujours le cas.&lt;/p>
+&lt;p>Veuillez lire l&amp;rsquo;[article MDN sur l&amp;rsquo;opérateur de &lt;em>Nullish coalescing&lt;/em>] (&lt;a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing&lt;/a>) à ce sujet.&lt;/p>
+&lt;p>Jetez également un coup d&amp;rsquo;œil à cet article &lt;a href="https://www.javascripttutorial.net/es-next/javascript-nullish-coalescing-operator/">&lt;em>javascripttutorial.net&lt;/em>&lt;/a> que j&amp;rsquo;ai bien aimé. Il va dans le détail avec des cas d&amp;rsquo;utilisation intéressants.&lt;/p>
+&lt;p>Merci pour votre lecture.&lt;/p></description></item><item><title>Utiliser des alias de chemin dans un projet Vue.js</title><link>https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/</link><pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/utiliser-des-alias-de-chemin-dans-un-projet-vuejs/images/2024-02-19-vite.config.ts-contents.jpg" alt="Featured image of post Utiliser des alias de chemin dans un projet Vue.js" />&lt;p>Je trouve cette astuce très pratique une fois que vous l’avez mise en place.&lt;/p>
+&lt;h2 id="dans-les-projets-javascript">Dans les projets JavaScript&lt;/h2>
+&lt;p>Ajoutez l’alias dans &lt;code>jsconfig.json&lt;/code> pour avoir les super pouvoirs d’intellisense et l’avantage des chemins absolus :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;compilerOptions&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;paths&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;@/*&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./src/*&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="dans-les-projets-typescript">Dans les projets TypeScript&lt;/h2>
+&lt;ol>
+&lt;li>Installer le paquet &lt;code>@types/node&lt;/code> comme dépendance dev.&lt;/li>
+&lt;li>Ajouter les imports suivants dans &lt;code>vite.config.ts&lt;/code> :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">fileURLToPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">URL&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;node:url&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>Ajoutez l’option &lt;code>resolve&lt;/code> dans le même fichier :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">resolve&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">alias&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;@&amp;#34;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">fileURLToPath&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">URL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;./src&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">import&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>Ajoutez l’alias à &lt;code>tsconfig.json&lt;/code> pour éviter les erreurs d’ESLint et avoir les super pouvoirs d’intellisense :&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;#34;compilerOptions&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;paths&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;@/*&amp;#34;&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;./src/*&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Vous êtes prêts pour code plus efficacement !&lt;/p></description></item><item><title>Gérer un argument inutilisé avec TypeScript et ESLint</title><link>https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/</link><pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/2024-02-16-typescript-code-sample.png" alt="Featured image of post Gérer un argument inutilisé avec TypeScript et ESLint" />&lt;p>Je suis encore assez novice en TypeScript, mais je progresse grâce au &lt;a href="https://vueschool.io/courses">curriculum VueSchool.io&lt;/a>.&lt;/p>
+&lt;p>J’aime ce que TypeScript apporte au code et comment il vous fait réfléchir davantage sur la façon d’écrire votre code.&lt;/p>
+&lt;p>En progressant, je me suis posé une question : comment résoudre l’erreur de linting TypeScript lorsqu’on n’utilise pas un argument dans une méthode alors qu&amp;rsquo;il est obligatoire ?&lt;/p>
+&lt;p>Je suis rapidement tombé sur ce cas d’utilisation.&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example.png"
+width="656"
+height="695"
+srcset="https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2024-02/gerer-un-argument-inutilise-avec-typescript-et-eslint/images/code-example_hub8ca63ca0be980cfd6778dc0561f73ac_56822_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Exemple de code non conforme à ESLint et TypeScript"
+class="gallery-image"
+data-flex-grow="94"
+data-flex-basis="226px"
+>
+&lt;/p>
+&lt;p>Dans le cas ci-dessus, je n’avais pas le choix. Le garde de navigation &lt;code>beforeEnter&lt;/code> dans &lt;code>vue-router&lt;/code> exige de fournir le second argument &lt;code>from&lt;/code>, même si je ne l’utilise pas…&lt;/p>
+&lt;p>Comment ai-je résolu le problème ? C’est simple : prêtez attention à ce que ESLint vous indique. Parfois, il fournit une solution rapide.&lt;/p>
+&lt;p>Dans mon cas, il m’a suggéré de marquer l’argument non utilisé avec un underscore (___) et voilà, ESLint est devenu heureux.&lt;/p></description></item><item><title>Comment gérer un 404 dans une application à page unique déployée sur Netlify ?</title><link>https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/</link><pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/</guid><description>&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/2024-02-14-404-page-displayed-on-laptop.jpg" alt="Featured image of post Comment gérer un 404 dans une application à page unique déployée sur Netlify ?" />&lt;p>Les applications à page unique (SPA) gèrent ce que nous appelons des &lt;em>soft 404&lt;/em>. Lorsque vous déployez Netlify, vous verrez une page comme celle-ci :&lt;/p>
+&lt;p>
+&lt;img src="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page.png"
+width="604"
+height="405"
+srcset="https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_360x0_resize_box_3.png 360w, https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_600x0_resize_box_3.png 600w, https://jeremielitzLer.fr/post/2024-02/gerer-un-404-dans-une-spa-deployee-sur-netlify/images/netlify-404-page_hu6b4b90d0cb86c1bc52d18263bb8ac2f0_79648_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Page 404 Not Found de Netlify"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="357px"
+>
+&lt;/p>
+&lt;p>Pour éviter cela, il suffit d’ajouter un fichier &lt;code>_redirects&lt;/code> dans le répertoire &lt;code>public&lt;/code> de l’application et d’ajouter ce qui suit :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">/* /index.html 200
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Cela permet à l’application de gérer le 404 comme un &lt;em>soft 404&lt;/em>.&lt;/p>
+&lt;p>Voir [ce fil de discussion] (&lt;a href="https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125">https://answers.netlify.com/t/support-guide-i-ve-deployed-my-site-but-i-still-see-page-not-found/125&lt;/a>) pour plus d’exemples d’utilisation.&lt;/p>
+&lt;p>Crédit : l’image d’entête par &lt;a href="https://unsplash.com/@introspectivedsgn?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Erik Mclean&lt;/a> sur &lt;a href="https://unsplash.com/photos/black-asus-laptop-computer-showing-3-00-sxiSod0tyYQ?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash">Unsplash&lt;/a>&lt;/p></description></item></channel></rss>

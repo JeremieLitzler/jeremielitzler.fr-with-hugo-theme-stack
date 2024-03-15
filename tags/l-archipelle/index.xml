@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>L Archipelle on Jérémie Litzler</title><link>https://jeremielitzLer.fr/tags/l-archipelle/</link><description>Recent content in L Archipelle on Jérémie Litzler</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Thu, 26 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeremielitzLer.fr/tags/l-archipelle/index.xml" rel="self" type="application/rss+xml"/><item><title>Les bases d'une installation solaire en autonomie</title><link>https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/</link><pubDate>Thu, 26 May 2022 00:00:00 +0000</pubDate><guid>https://jeremielitzLer.fr/post/2022-05/les-bases-d-une-installation-solaire-en-autonomie/</guid><description>&lt;p>Merci à Brian et Rémi pour leur échange ! Ce qui suit sont mes notes de la vidéo publiée sur la chaîne de l&amp;rsquo;Archipelle. Vous pouvez retrouver &lt;a href="https://www.youtube.com/watch?v=WOuTv0kfwRg">la vidéo sur YouTube&lt;/a>.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h2 id="pourquoi-une-installation-solaire-en-autonomie">Pourquoi une installation solaire en autonomie&lt;/h2>
+&lt;p>Il faut se poser la question &amp;ldquo;Pourquoi&amp;rdquo;. Il y a 2 choix :&lt;/p>
+&lt;ul>
+&lt;li>pour un site isolé&lt;/li>
+&lt;li>pour un site hybride, c.-à-d. toujours connecté au réseau, mais pouvant passer en autonomie temporairement.&lt;/li>
+&lt;/ul>
+&lt;p>En particulier, les microcoupures sont gérables en système hybride si l&amp;rsquo;on souhaite rester connecté au réseau.&lt;/p>
+&lt;p>Le cas du raccordement pour vendre la production PV est hors sujet.&lt;/p>
+&lt;h2 id="connaitre-sa-consommation">Connaitre sa consommation&lt;/h2>
+&lt;p>Concrètement, il faut :&lt;/p>
+&lt;ul>
+&lt;li>lister les éléments qui consomment de l&amp;rsquo;électricité dans le logement (kWh)&lt;/li>
+&lt;li>déterminer leur puissance individuelle&lt;/li>
+&lt;/ul>
+&lt;p>Il faut savoir que pour une grosse disqueuse ou un poste à souder peut rendre compliquer le dimensionnement de l&amp;rsquo;onduleur qui devra délivrer au moins la puissance de l&amp;rsquo;élément le plus puissant dans le logement (on ne parle même pas de l&amp;rsquo;usage simultané de plusieurs appareils&amp;hellip;)&lt;/p>
+&lt;p>Il faut alors trouver une autre solution pour alimenter les gros appareils, par exemple :&lt;/p>
+&lt;ul>
+&lt;li>se brancher chez un voisin : en utilisant &lt;a href="https://www.google.com/search?q=wattmetre">un wattmètre&lt;/a>, on peut s&amp;rsquo;arranger avec le voisin pour lui payer ce qu&amp;rsquo;on utilise&lt;/li>
+&lt;li>louer un groupe électrogène à la bonne puissance : cela nous rend dépendants de l&amp;rsquo;essence sauf si le groupe est partagé&lt;/li>
+&lt;/ul>
+&lt;h3 id="comment-mesurer-la-consommation-dun-appareil">Comment mesurer la consommation d&amp;rsquo;un appareil&lt;/h3>
+&lt;p>Il faut &lt;a href="https://www.google.com/search?q=wattmetre">un wattmètre&lt;/a>. Cela donne plusieurs métriques : Wh, VA et la tension.&lt;/p>
+&lt;p>Par exemple, pour griller 10 tranches de pain, il faut 128 Wh sur quelques minutes.&lt;/p>
+&lt;p>Voir mon tableau sur le sujet &lt;a href="https://docs.google.com/spreadsheets/d/1-1A2I04MqVy3-zxMwQJ7Zy83OP200ruxGRUNXsHlNbQ/edit?usp=sharing">dans Google Sheet&lt;/a> listant les appareils les plus utilisés chez moi.&lt;/p>
+&lt;h2 id="calculer-la-consommation-en-mode-dégradé">Calculer la consommation en mode dégradé&lt;/h2>
+&lt;p>Une fois que l’on connait sa consommation globale, il faut déterminer ce qu&amp;rsquo;on peut consommer quand la production solaire est moyenne ou mauvaise. Autrement dit, il faut se poser les questions suivantes :&lt;/p>
+&lt;ul>
+&lt;li>Qu’autorisons-nous d&amp;rsquo;utiliser dans la méthode ?&lt;/li>
+&lt;li>Devons-nous faire des concessions sur certains usages ?&lt;/li>
+&lt;li>Comment pouvons-nous remplacer un usage électrique en hiver ?&lt;/li>
+&lt;li>Comment pouvons-nous optimiser notre usage de la production PV en été ?&lt;/li>
+&lt;/ul>
+&lt;p>Ainsi, avoir des appareils électriques peut-être instéressant, selon la période de l&amp;rsquo;année. Par exemple,&lt;/p>
+&lt;ul>
+&lt;li>Utiliser une plaque électrique l&amp;rsquo;été à la place d&amp;rsquo;une cuisinière à bois est plus logique, car on ne veut pas chauffer la maison en été ! Et la plaque de cuisson électrique peut être programmée. C&amp;rsquo;est la cuisine d&amp;rsquo;été.&lt;/li>
+&lt;li>Pour faire griller le pain, si on est résilient, on utilisera le grille-pain l&amp;rsquo;été et la cuisinière à bois l&amp;rsquo;hiver.&lt;/li>
+&lt;li>Pour le four, le poêle de masse l&amp;rsquo;hiver vs le four solaire l&amp;rsquo;été.&lt;/li>
+&lt;li>Pour sécher les légumes, herbes et fruits, on utilisera le déshydrateur en été.&lt;/li>
+&lt;li>Pour couper le bois, on utilisera une tronçonneuse électrique pour couper le bois l&amp;rsquo;été.&lt;/li>
+&lt;li>Pour broyer les végétaux, pour tondre l&amp;rsquo;herbe avec des appareils électriques.&lt;/li>
+&lt;/ul>
+&lt;p>En mode résilience, on doit multiplier le matériel. Le stockage va plus loin que l&amp;rsquo;usage de batteries.&lt;/p>
+&lt;h2 id="dimensionner-les-batteries">Dimensionner les batteries&lt;/h2>
+&lt;p>On prend notre consommation en mode dégradé et on détermine le nombre de jours d&amp;rsquo;autonomie souhaités.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[consommation en mode dégradé (kWh)] x [nombre de jours] = [Puissance totale des batteries]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>À suivre sur une prochaine vidéo de l&amp;rsquo;Archipel ou &lt;a href="https://www.wattuneed.com/fr/content/56-dimensionner-votre-kit-solaire-autonomes-autoconsommation">tester la simulation de Wattuneed&lt;/a>.&lt;/p>
+&lt;h3 id="choisir-sa-technologie-de-batterie">Choisir sa technologie de batterie&lt;/h3>
+&lt;p>On a :&lt;/p>
+&lt;ul>
+&lt;li>Gel (plomb)&lt;/li>
+&lt;li>OPZS&lt;/li>
+&lt;li>Li-ion&lt;/li>
+&lt;li>Li-Ni-Fe&lt;/li>
+&lt;/ul>
+&lt;p>On doit penser aussi :&lt;/p>
+&lt;ul>
+&lt;li>À la place qu&amp;rsquo;on a pour stocker les batteries&lt;/li>
+&lt;li>De la volonté de faire de l&amp;rsquo;entretien ou pas&lt;/li>
+&lt;li>Qu&amp;rsquo;aucune technologie de batterie n&amp;rsquo;aime la chaleur !&lt;/li>
+&lt;/ul>
+&lt;h4 id="gel-plombhttpswwwgooglecomsearchqbatteriegel">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;Gel">Gel (plomb)&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Facilité d&amp;rsquo;usage et le zéro entretien&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Durée de vie et réutilisation impossible&lt;/li>
+&lt;/ul>
+&lt;h4 id="opzshttpswwwgooglecomsearchqbatterieopzv12v">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;opzv&amp;#43;12v">OPZS&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Émanations toxiques&lt;/li>
+&lt;/ul>
+&lt;h4 id="li-ionhttpswwwgooglecomsearchqbatterielithium">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;lithium">Li-ion&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Il faut penser au recyclage des batteries de PC et cie, où si une cellule est HS, l&amp;rsquo;ensemble de la batterie est HS. En réalité, sur 6 cellules, une seule est peut-être KO.&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Le recyclage, c&amp;rsquo;est toutefois long et fastidieux à démonter et tester. Il faut aussi faire attention aux cours-circuits, car les batteries sont toxiques si elles s&amp;rsquo;enflamment ou surchauffent.&lt;/li>
+&lt;li>Craint les basses températures&lt;/li>
+&lt;/ul>
+&lt;h4 id="li-ni-fehttpswwwgooglecomsearchqbatterielifepo4">&lt;a href="https://www.google.com/search?q=batterie&amp;#43;lifepo4">Li-Ni-Fe&lt;/a>&lt;/h4>
+&lt;p>Avantanges :&lt;/p>
+&lt;ul>
+&lt;li>Meilleure durée de vie (~26 ans) et coût sur le long terme.&lt;/li>
+&lt;li>On peut changer l&amp;rsquo;électrolyse pour restaurer la capacité originale.&lt;/li>
+&lt;li>Il y a moins de risque en cas de court-circuit.&lt;/li>
+&lt;li>Émanations non toxiques&lt;/li>
+&lt;li>Ne craint pas le Gel&lt;/li>
+&lt;/ul>
+&lt;p>Inconvénients :&lt;/p>
+&lt;ul>
+&lt;li>Le prix : environ 30 à 40 % de plus que les batteries Li-ion&lt;/li>
+&lt;li>Entretien obligatoire : il faut ajouter de l&amp;rsquo;eau distillée périodiquement pour que cela reste entre le niveau min. et max.&lt;/li>
+&lt;li>ça prend de la place&lt;/li>
+&lt;li>C&amp;rsquo;est très lourd&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;h2 id="dimensionner-les-panneaux-photovoltaïques">Dimensionner les panneaux photovoltaïques&lt;/h2>
+&lt;p>Plus on met de panneaux, plus les batteries vont durer et donc plus la rentabilité sera au rendez-vous.&lt;/p>
+&lt;p>On peut surdimensionner les panneaux, mais il faut surtout éviter un mauvais dimensionnement des batteries.&lt;/p>
+&lt;p>Pour information, les panneaux peuvent durer largement au-delà des 40 ans. Les premières mesures en Savoie, en 1992, montrent 0,3 % de rendement en moins par an.&lt;/p>
+&lt;p>Le nettoyage est &lt;strong>très important&lt;/strong>, plus que la perte de rendement par vieillissement.&lt;/p>
+&lt;h2 id="dimensionner-londuleur">Dimensionner l&amp;rsquo;onduleur&lt;/h2>
+&lt;p>Il doit permettre de fournir la puissance de l&amp;rsquo;appareil le plus puissant.&lt;/p>
+&lt;p>Exemple : le chauffe-eau électrique est l&amp;rsquo;appareil le plus puissant avec sa résistance de 2000 W. Il faut donc un onduleur de 2000W ou plus.&lt;/p>
+&lt;p>Il faut aussi penser à limiter son usage simultané de plusieurs appareils. Sinon, ça saute.&lt;/p>
+&lt;h2 id="remarques-diverses">Remarques diverses&lt;/h2>
+&lt;h3 id="panneaux-photovoltaïques-vs-panneaux-solaires-thermiques">Panneaux photovoltaïques vs Panneaux solaires thermiques&lt;/h3>
+&lt;p>Il y a des avantages et inconvénients aux 2 systèmes :&lt;/p>
+&lt;ul>
+&lt;li>il faut 4 fois moins de surface pour chauffer la même quantité d&amp;rsquo;eau en solaire thermique.&lt;/li>
+&lt;li>il y a des contraintes physiques sur le solaire thermique (il faut rester petit).&lt;/li>
+&lt;li>la durée de vie du photovoltaïque est bien meilleure et l&amp;rsquo;entretien réduit.&lt;/li>
+&lt;/ul>
+&lt;p>Personnellement, l’installation PV m’a coûté presque autant que le ballon thermodynamique.&lt;/p>
+&lt;p>Donc si j’ai la place, je partirai sur la même chose qu’aujourd’hui plutôt que du thermique.&lt;/p>
+&lt;p>A suivre dans le futur quand je comparerai de plus près les deux systèmes pour l’ECS.&lt;/p>
+&lt;h3 id="on-regarde-dehors-pour-faire-le-choix-dutiliser-ceci-ou-cela">&amp;ldquo;On regarde dehors pour faire le choix d&amp;rsquo;utiliser ceci ou cela&amp;rdquo;&lt;/h3>
+&lt;p>Il faut consommer quand c&amp;rsquo;est possible. Il faut choisir quand la production nécessite des choix (mode dégradé).&lt;/p>
+&lt;h3 id="coût-dautonomie">Coût d&amp;rsquo;autonomie&lt;/h3>
+&lt;p>&lt;em>Note :&lt;/em> cela coûte 50kE à 60kE de plus pour rendre une maison autonome en rénovation si réalisée par des professionnels.&lt;/p>
+&lt;h3 id="préférence-au-12v-plutôt-que-le-230v">Préférence au 12V plutôt que le 230V&lt;/h3>
+&lt;p>Pourquoi ?&lt;/p>
+&lt;p>Pour éviter de gros onduleurs quand l&amp;rsquo;éclairage, les PC, etc., on peut utiliser &lt;a href="https://www.google.com/search?q=orion&amp;#43;victron">un Victron Orion&lt;/a> (convertisseur de 48V en 12 V) pour éviter les pertes sur la transformation du courant continu en courant alternatif.&lt;/p>
+&lt;p>Exemple : un PC peut fonctionner en 12V, moyennant un variateur de tension pour transformer le 12V en ~19 V.&lt;/p>
+&lt;h3 id="photovoltaïque-et-chauffage-électrique">Photovoltaïque et chauffage électrique&lt;/h3>
+&lt;blockquote>
+&lt;p>On oublie.&lt;/p>
+&lt;/blockquote>
+&lt;p>Dans une maison classique, il faut un terrain de foot de panneaux&amp;hellip;&lt;/p></description></item></channel></rss>
