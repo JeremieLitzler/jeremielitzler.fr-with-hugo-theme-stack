@@ -1,3 +1,15 @@
+# Thanks to https://answers.netlify.com/t/support-guide-how-to-use-the-ignore-command/37517
+[build]
+ignore = "exit 1"
+publish = "public"
+
+[[plugins]]
+package = "netlify-plugin-hugo-cache-resources"
+
+[plugins.inputs]
+# If it should show more verbose logs (optional, default = true)
+debug = true
+ 
 [[redirects]]
 from = "/post/2023-11/realiser-sa-gemmotherapie-soi-meme/"
 to = "/post/2023-12/realiser-sa-gemmotherapie-soi-meme/"
