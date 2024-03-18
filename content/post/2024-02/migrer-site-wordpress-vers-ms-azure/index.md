@@ -247,32 +247,36 @@ Abstenez-vous également d’effectuer des modifications (en dehors des mises à
 
 ### Utiliser les _slots_ de déploiement
 
-Rendez-vous sur le menu `Deployment slots` dans le menu vertical.
+Lorsque vous possédez un _App Service_ en cours d’exécution, rendez-vous sur le menu `Backups`.
 
-![Disponible dans les _App Services_](images/deployment-slots-blade.jpg)
+![Disponible dans les lames App Service](images/backups-blade.jpg)
 
-Une fois dans le tableau de bord, vous pouvez créer un _slot_ à partir de `Add Slot` :
+Une fois dans le tableau de bord, vous pouvez effectuer une restauration à partir de la dernière sauvegarde automatique :
 
-![Le tableau de bord des _slots_ de déploiement](images/deployment-slots-dashboard.jpg)
+![Le tableau de bord des sauvegardes](images/bakcups-dashboard.jpg)
 
-Vous devrez :
+Pour ce faire, vous devez :
 
-- Saisir le nom du _slot_. Ci-dessous, je partage la façon dont je le nomme.
-- Sélectionner l’_App Service_ parent à partir duquel vous souhaitez cloner les paramètres.
+- Cliquer sur _Create new_ sous Deployment slot pour personnaliser le nom du _slot_ (optionnel) (étapes 1 à 3 sur l’image ci-dessous).
+  - Saisir le nom du _slot_. Ci-dessous, je vous explique comment je le nomme.
+- Sélectionner la restauration de la configuration du site (étape 4) pour cloner les paramètres dans le _slot_.
+- Confirmez en cliquant sur « *Restore* ».
 
-![Configuration du _slot_](images/configuring-the-slot.jpg)
+![Les 5 étapes pour restaurer le service applicatif dans un *slot*](images/configuring-the-slot.jpg)
 
-- Confirmez en cliquant sur `Add`.
+Après quelques minutes, le tableau de bord de déploiement des _slots_ (Voir la _lame des slots de déploiement_) est mis à jour :
 
-Après quelques secondes, le tableau de bord des _slots_ de déploiement est mis à jour :
+![Le tableau de bord des *slots* de déploiement mis à jour avec un *slot*](images/deployment-slots-dashboard-updated.jpg)
 
-![Le tableau de bord des _slots_ de déploiement mis à jour avec un _slot_](images/deployment-slots-dashboard-updated.jpg)
+{{< blockcontainer jli-notice-warning "Problème en cours sur le portail">}}}
 
-{{< blockcontainer jli-notice-note "Jusqu'en janvier 2024">}}
+Vous devez ajouter le réseau virtuel au _slot_ , car il n’est pas _copié_ avec la méthode de restauration. L’action est simple : il suffit de cliquer sur _Not configured_ pour _Virtual network integration_ à droite de l’écran et sélectionner le réseau qui convient.
 
-Il fallait ajouter le réseau virtuel au _slot_, car il n’était pas _copié_ par défaut.
+![Configuration du réseau](images/configuration-du-reseau.jpg)
 
-Microsoft semble avoir résolu ce problème ! Hourra 🎆
+Attendez bien 5 à 10 minutes avant de l’ajouter, car cela échouera sur le _slot_ n’a pas terminé son déploiement.
+
+Et n’utilisez pas la méthode _Add slot_ à partir du tableau de bord de déploiement des _slots_ car elle ne fonctionne pas. En fait, elle crée un site WordPress vierge et il y a trop de choses à faire…
 
 {{< /blockcontainer >}}
 
