@@ -257,7 +257,7 @@ Une fois dans le tableau de bord, vous pouvez effectuer une restauration à part
 
 Pour ce faire, vous devez :
 
-- Cliquer sur _Create new_ sous Deployment slot pour personnaliser le nom du _slot_ (optionnel) (étapes 1 à 3 sur l’image ci-dessous).
+- Cliquer sur _Create new_ sous _Deployment slot_ pour personnaliser le nom du _slot_ (optionnel) (étapes 1 à 3 sur l’image ci-dessous).
   - Saisir le nom du _slot_. Ci-dessous, je vous explique comment je le nomme.
 - Sélectionner la restauration de la configuration du site (étape 4) pour cloner les paramètres dans le _slot_.
 - Confirmez en cliquant sur « *Restore* ».
@@ -268,15 +268,21 @@ Après quelques minutes, le tableau de bord de déploiement des _slots_ (Voir la
 
 ![Le tableau de bord des *slots* de déploiement mis à jour avec un *slot*](images/deployment-slots-dashboard-updated.jpg)
 
-{{< blockcontainer jli-notice-warning "Problème en cours sur le portail">}}}
+{{< blockcontainer jli-notice-warning "Problème en cours sur le portail">}}
 
-Vous devez ajouter le réseau virtuel au _slot_ , car il n’est pas _copié_ avec la méthode de restauration. L’action est simple : il suffit de cliquer sur _Not configured_ pour _Virtual network integration_ à droite de l’écran et sélectionner le réseau qui convient.
+Vous devez ajouter le réseau virtuel au _slot_ , car il n’est pas _copié_ avec la méthode de restauration.
+
+L’action est simple : il suffit de cliquer sur _Not configured_ sur la ligne _Virtual network integration_ à droite de l’écran et sélectionner le réseau qui convient.
 
 ![Configuration du réseau](images/configuration-du-reseau.jpg)
 
-Attendez bien 5 à 10 minutes avant de l’ajouter, car cela échouera sur le _slot_ n’a pas terminé son déploiement.
+**Attendez bien 5 à 10 minutes avant de l’ajouter**, car cela échouera si le _slot_ n’a pas terminé son déploiement.
 
-Et n’utilisez pas la méthode _Add slot_ à partir du tableau de bord de déploiement des _slots_ car elle ne fonctionne pas. En fait, elle crée un site WordPress vierge et il y a trop de choses à faire…
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-danger "">}}
+
+Et n’utilisez pas la méthode _**Add slot**_ à partir du tableau de bord de déploiement des _slots_ car elle ne fonctionne pas. En fait, elle crée un site WordPress vierge et il y a trop de choses à faire…
 
 {{< /blockcontainer >}}
 
