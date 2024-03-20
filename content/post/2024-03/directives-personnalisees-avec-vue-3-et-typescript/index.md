@@ -3,7 +3,7 @@ title: "Directives personnalisées avec Vue 3 et TypeScript"
 description: "Parfois, vous serez amener à créer des directives personnalisées avec Vue.js. Voyons comment vous pouvez le faire en utilisant TypeScript."
 image: images/2024-03-22-example-of-a-custom-directive.png
 imageAlt: "Exemple d'une directive personnalisée."
-date: 2024-03-20
+date: 2024-03-22
 categories:
   - Développment Web
 tags:
