@@ -8,6 +8,7 @@ log("Starting recurring-publish function...");
  * @see https://docs.netlify.com/functions/get-started/?fn-language=ts#environment-variables
  */
 let RECURRING_BUILD_HOOK = Netlify.env.get("RECURRING_BUILD_HOOK");
+let RECURRING_PUBLISH_CRON = Netlify.env.get("RECURRING_PUBLISH_CRON");
 
 log("Got RECURRING_BUILD_HOOK variable =>", RECURRING_BUILD_HOOK);
 const handler = async (event) => {
@@ -31,7 +32,7 @@ const handler = async (event) => {
   }
 };
 
-module.exports.handler = schedule("0 6 * * *", handler);
+module.exports.handler = schedule(RECURRING_PUBLISH_CRON, handler);
 
 // // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 // const handler = async (event) => {
