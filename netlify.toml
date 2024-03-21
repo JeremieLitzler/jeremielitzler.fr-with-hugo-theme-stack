@@ -2,6 +2,7 @@
 [build]
 ignore = "exit 1"
 publish = "public"
+functions = "functions"
 
 [[plugins]]
 package = "netlify-plugin-hugo-cache-resources"
