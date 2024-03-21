@@ -32,7 +32,8 @@ const handler = async (event) => {
 };
 
 let RECURRING_PUBLISH_CRON = Netlify.env.get("RECURRING_PUBLISH_CRON");
-module.exports.handler = schedule("*/15 * * * *", handler);
+//module.exports.handler = schedule("*/15 * * * *", handler);
+module.exports.handler = schedule("0 6 * * *", handler);
 
 // // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 // const handler = async (event) => {
