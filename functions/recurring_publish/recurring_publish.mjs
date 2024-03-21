@@ -1,17 +1,16 @@
 import { schedule } from "@netlify/functions";
 import { log } from "console";
 log("Starting recurring-publish function...");
-/**
- * Environment variables aren't retrieve via process.env
- * but the global object `Netlify.env`.
- *
- * @see https://docs.netlify.com/functions/get-started/?fn-language=ts#environment-variables
- */
-let RECURRING_BUILD_HOOK = Netlify.env.get("RECURRING_BUILD_HOOK");
-let RECURRING_PUBLISH_CRON = Netlify.env.get("RECURRING_PUBLISH_CRON");
 
 log("Got RECURRING_BUILD_HOOK variable =>", RECURRING_BUILD_HOOK);
 const handler = async (event) => {
+  /**
+   * Environment variables aren't retrieve via process.env
+   * but the global object `Netlify.env`.
+   *
+   * @see https://docs.netlify.com/functions/get-started/?fn-language=ts#environment-variables
+   */
+  let RECURRING_BUILD_HOOK = Netlify.env.get("RECURRING_BUILD_HOOK");
   log("Fetching as POST the RECURRING_BUILD_HOOK...");
   /**
    * Note: because functions use the standard Fetch API,
@@ -32,10 +31,8 @@ const handler = async (event) => {
   }
 };
 
-module.exports.handler = schedule(
-  RECURRING_PUBLISH_CRON || "0 6 * * *",
-  handler
-);
+let RECURRING_PUBLISH_CRON = Netlify.env.get("RECURRING_PUBLISH_CRON");
+module.exports.handler = schedule("* 1 * * *", handler);
 
 // // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
 // const handler = async (event) => {
