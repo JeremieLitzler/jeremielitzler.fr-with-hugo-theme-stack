@@ -9,7 +9,14 @@ const handler = async (event) => {
    *
    * @see https://docs.netlify.com/functions/get-started/?fn-language=ts#environment-variables
    */
-  let RECURRING_BUILD_HOOK = Netlify.env.get("RECURRING_BUILD_HOOK");
+  log('process', process)
+  log('Netlify', Netlify)
+  let RECURRING_BUILD_HOOK = null;
+  if (Netlify === undefined) {
+   RECURRING_BUILD_HOOK = process.env.RECURRING_BUILD_HOOK; 
+  } else {
+   RECURRING_BUILD_HOOK = Netlify.env.get("RECURRING_BUILD_HOOK");
+  }
   log("Got RECURRING_BUILD_HOOK variable =>", RECURRING_BUILD_HOOK);
   log("Fetching as POST the RECURRING_BUILD_HOOK...");
   /**
