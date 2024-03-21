@@ -38,7 +38,7 @@ const handler = async (event) => {
   }
 };
 
-let RECURRING_PUBLISH_CRON = Netlify.env.get("RECURRING_PUBLISH_CRON");
+let RECURRING_PUBLISH_CRON = process.env.RECURRING_PUBLISH_CRON;
 log("Got RECURRING_PUBLISH_CRON variable =>", RECURRING_PUBLISH_CRON);
 module.exports.handler = schedule("*/5 * * * *", handler);//every 5 min
 //module.exports.handler = schedule("0 6 * * *", handler);//every day at 6am GMT
