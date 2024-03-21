@@ -12,11 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@netlify/functions": "^2.6.0",
-    "tinacms": "^1.5.28"
+    "@netlify/functions": "^2.6.0"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.39",
-    "@types/node": "^20.11.21"
+    "@types/node": "^20.11.21",
+    "netlify-cli": "^17.19.6"
   }
 }
