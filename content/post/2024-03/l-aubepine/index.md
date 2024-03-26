@@ -2,7 +2,7 @@
 title: "L'aubépine : la plante du coeur"
 description: "Arbuste très résilient que l’on trouve très facilement en France, c’est aussi une plante utile pour certains maux dont nous souffrons et une quantité incroyable de nourriture pour les oiseaux l’hiver."
 image: images/2024-03-28-deux-baies-d-aubepine.jpg
-imageAlt: Deux baies d'aubépine mûres
+imageAlt: "Deux baies d'aubépine mûres"
 date: 2024-03-26
 categories:
   - Plantes
