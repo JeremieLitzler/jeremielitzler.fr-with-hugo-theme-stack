@@ -5,8 +5,7 @@ image: images/2024-03-28-deux-baies-d-aubepine.jpg
 imageAlt: Deux baies d'aubépine mûres
 date: 2024-03-26
 categories:
-  - Santé
-  - Jardin
+  - Plantes
 tags:
   - Christophe Bernard
   - Aubépine
