@@ -5,8 +5,7 @@ image: images/2024-03-19-feuilles-d-eucalyptus.png
 imageAlt: Feuilles d'eucalyptus
 date: 2024-03-19
 categories:
-  - Santé
-  - Jardin
+  - Plantes
 tags:
   - Christophe Bernard
   - Eucalyptus
