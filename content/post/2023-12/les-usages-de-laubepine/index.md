@@ -1,6 +1,6 @@
 ---
 title: L’aubépine
-description: "Il s’aigt d’un arbuste à laquelle on pense pour prendre soin du cœur. On utilise surtout ses fleurs en mai, en gemmothérapie. C’est à ce moment que vous trouverez les bourgeons puis en septembre, les faux fruits rouges pourront être dégustés. Belle découverte !"
+description: "Il s’agit d’un arbuste à laquelle on pense pour prendre soin du cœur. On utilise surtout ses fleurs en mai, en gemmothérapie. C’est à ce moment que vous trouverez les bourgeons puis en septembre, les faux fruits rouges pourront être dégustés. Belle découverte !"
 image: images/2013-12-19-des-faux-fruits-d-aubepine.jpg
 imageAlt: Des faux fruits d'aubépine
 date: 2023-12-19
