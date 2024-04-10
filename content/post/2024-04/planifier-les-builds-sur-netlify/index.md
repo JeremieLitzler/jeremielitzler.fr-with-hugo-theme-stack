@@ -44,7 +44,7 @@ Grâce à [Talves](https://answers.netlify.com/u/talves) sur [ce fil de discussi
 
 - Ajoutez une nouvelle variable d'environnement que vous appellerez `RECURRING_PUBLISH` et collez l'URL copiée comme valeur.
 
-{{< blockcontainer jli-notice-warning "Si vous nommez la variable différemment, veuillez ajuster le script de la fonction.">}}}
+{{< blockcontainer jli-notice-warning "Si vous nommez la variable différemment, veuillez ajuster le script de la fonction.">}}
 
 {{< /blockcontainer >}}
 
@@ -164,7 +164,7 @@ log("RECURRING_PUBLISH>Done registering");
 
 A la fin du _build_, vérifiez la lame _Logs > Functions_ sous votre application :
 
-![Exemple sur mon site français](images/2024-04-12-running-recurring-function.jpg)
+![Exemple sur mon site français](images/2024-04-10-running-recurring-function.jpg)
 
 La fonction _recurring_publish_ devrait apparaître et vous dire qu'elle s'exécutera au prochain `cron` paramétré dans la fonction, dans l'exemple à 4:00 GMT.
 
