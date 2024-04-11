@@ -181,3 +181,5 @@ Cette procédure fonctionne le 8 avril 2024.
 Comme je l'utilise pour mes deux blogs, si elle nécessite des ajustements, je mettrai à jour cet article en conséquence.
 
 Merci d'avoir lu jusqu'ici et profitez de vos _builds_ planifiés sur Netlify.
+
+Crédit : photo d'entête par [Lukas Blazek](https://unsplash.com/@goumbik?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/person-holding-white-mini-bell-alarmclock-UAvYasdkzq8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
