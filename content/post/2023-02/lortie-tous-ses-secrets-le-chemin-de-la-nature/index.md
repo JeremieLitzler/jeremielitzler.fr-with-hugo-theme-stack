@@ -36,7 +36,7 @@ Pour reconnaître les pieds femelles, on cherchera des fleurs qui retombent.
 
 ![Fleurs femelles de l'ortie](images/fleurs-femelles-de-l-ortie.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 Dans le cas des mâles, les fleurs sont dressées.
 
@@ -52,7 +52,7 @@ La feuille de l'ortie est très proche du lamier blanc (_Lamium album_), qui ne 
 
 ![Lamier blanc](images/lamier-blanc.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ### Pourquoi l'ortie pique
 
@@ -76,7 +76,7 @@ Et elle est beaucoup plus goûteuse quand elle pique le plus.
 
 ![Jeunes pousses d'ortie](images/jeunes-pousses-d-ortie.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 ### Pesto, salades, _gaspatcho_...
 
@@ -86,13 +86,13 @@ Pour les pestos, la méthode est similaire au pesto de basilic : huile d'olive,
 
 ![Pesto d'ortie crue](images/pesto-d-ortie-crue.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 On peut aussi la consommer dans des _gaspachos_.
 
 ![gaspacho d'ortie crue](images/gaspatcho-d-ortie-crue.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 En l'ébouillantant 2 min dans de l'eau, elle se mange aussi très bien avec un filet d'huile d'olive.
 
