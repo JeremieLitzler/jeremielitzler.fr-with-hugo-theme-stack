@@ -1,8 +1,8 @@
 ---
 title: "Planifier les builds sur Netlify"
 description: "La planification des tâches est un besoin courant dans le développement de logiciels. Avec mes blogs générés par Hugo, j'avais besoin d'une telle tâche pour automatiser le flux de publication de mes articles."
-image: images/2024-04-10-running-recurring-function.jpg
-imageAlt: "Une fonction récurrent en cours d'exécution"
+image: images/2024-04-10-a-clock-in-the-hand-of-someone.jpg
+imageAlt: "Une horloge dans la main de quelqu'un"
 date: 2024-04-10
 categories:
   - Développement Web
