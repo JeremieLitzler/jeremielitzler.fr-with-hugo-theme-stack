@@ -126,6 +126,6 @@ Vous devrez ouvrir la boîte aux lettres Yopmail en utilisant l’adresse e-mail
 
 Le code complet est disponible [sur GitHub] (https://github.com/JeremieLitzler/vueschool-course/tree/forum-vite).
 
-J’espère que vous avez apprécié cet article. Si vous avez des questions, comme toujours, [contactez-moi](../../../page/contact-me/index.md) et je verrai si je peux vous aider.
+J’espère que vous avez apprécié cet article. Si vous avez des questions, comme toujours, [contactez-moi](../../../page/contactez-moi/index.md) et je verrai si je peux vous aider.
 
 Crédit : photo d’entête par [Mathyas Kurmann](https://unsplash.com/@mathyaskurmann?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/six-assorted-color-mail-boxes-fb7yNPbT0l8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
