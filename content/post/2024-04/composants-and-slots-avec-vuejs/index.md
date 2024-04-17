@@ -1,5 +1,5 @@
 ---
-title: "Composants et « slots » avec Vue.js"
+title: "Composants et « slots scopés » avec Vue.js"
 description: "Il m’a fallu de nombreux exemples et beaucoup de pratique pour comprendre les « slots ». Qu’il s’agisse de « slots » simples, de « slots » nommés ou de « slots scopés », vous découvrirez qu’il s’agit d’une fonctionnalité puissante dans Vue. C’est parti !"
 image: images/2024-04-22-a-red-slots-sign-on-the-dark.jpg
 imageAlt: "Un panneau rouge indiquant « Slots » dans l’obscurité."
