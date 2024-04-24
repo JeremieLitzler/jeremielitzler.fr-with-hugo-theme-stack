@@ -84,7 +84,9 @@ Les deux premières sont toxiques.
 
 {{< /blockcontainer >}}
 
-![prele-des-marais](images/prele-des-marais.webp 'Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html.
+![prele-des-marais](images/prele-des-marais.webp)
+
+Crédits : Application PictureThis sur https://www.picturethisai.com/fr/wiki/Equisetum_palustre.html
 
 La prêle des marais présente parfois une partie fertile à son sommet, alors que la prêle des champs n'est fertile au début.
 
