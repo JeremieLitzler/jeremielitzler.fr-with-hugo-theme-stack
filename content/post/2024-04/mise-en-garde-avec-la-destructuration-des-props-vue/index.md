@@ -11,6 +11,8 @@ tags:
   - Vue
 ---
 
+## Le problème
+
 Je vais expliquer mon cas d’utilisation. Un composant `PostList` sur une application de forum avait besoin d’être utilisé selon deux scénarios :
 
 - l’un avait besoin que les messages soient classés dans l’ordre croissant,
@@ -44,6 +46,8 @@ const orderedPosts = computed(() => {
 Lorsque j’ai testé ce code, l’ajout d’un nouveau message a fonctionné, mais il ne s’est pas affiché dans la liste.
 
 En utilisant Vue DevTools, j’ai vu l’état de Pinia se mettre à jour et le composant parent du composant `PostList` a bien fourni la liste complète…
+
+## La raison et solution
 
 Pourquoi le nouveau message n’apparaîssait-il pas ?
 
