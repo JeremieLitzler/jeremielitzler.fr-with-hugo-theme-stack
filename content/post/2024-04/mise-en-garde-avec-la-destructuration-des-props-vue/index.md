@@ -65,6 +65,34 @@ const orderedPosts = computed(() => {
 });
 ```
 
-La déstructuration se révèle très utile, mais avec Vue, il faut l’utiliser avec précaution, en particulier si vous utilisez des `computed` 🙂.
+## Utilisation de `toRefs`
+
+Si vous insistez à déstructurer vos _props_, assurez-vous de les rendre _réactives_.
+
+Pour cela, Vue fournit un utilitaire pour l’occasion :`toRefs` .
+
+Le code se présente comme suit :
+
+```tsx
+import { toRefs } from "vue";
+
+const props = withDefaults(defineProps<PostListProps>(), {
+  orderBy: OrderByDirection.Asc,
+});
+
+// `posts` et `orderBy` sont maintenant réactives.
+const { posts, orderBy } = toRefs(props);
+
+const orderedPosts = computed(() => {
+  if (orderBy === OrderByDirection.Asc) {
+    return posts;
+  }
+  return [...posts].sort((first, next) =>
+    first.publishedAt! < next.publishedAt! ? 1 : -1
+  );
+});
+```
+
+La déstructuration se révèle très utile, mais avec Vue, il faut l’utiliser avec précaution, en particulier si vous utilisez des `computed` 🙂. Merci, `toRefs`!
 
 Crédit : Photo de [Scott McNiel](https://www.pexels.com/photo/lego-blocks-on-white-plastic-container-7662317/) sur [Pexels](https://www.pexels.com/).
