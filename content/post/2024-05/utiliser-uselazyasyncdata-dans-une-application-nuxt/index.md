@@ -17,7 +17,9 @@ Alors que je suivais le cours « Nuxt 3 Fundamentals » sur [Vueschool.io](ht
 
 Dans les docs de Nuxt, j’ai trouvé cet exemple que je n’ai pas suivi jusqu’au bout, dommage, mais qui m’a permis de comprendre le mécanisme.
 
-Prenons l’exemple du projet de la formation que j’ai codé :
+## L’exemple
+
+Prenons l’exemple du projet de la formation que j’ai codé :
 
 ```tsx
 import { ref } from "vue";
@@ -65,7 +67,9 @@ Je l’ai utilisé sur une page de recherche de films et à chaque fois que j’
 
 Si je naviguais d’abord sur la page d’accueil, par exemple, puis sur la page de recherche, j’obtenais une page blanche…
 
-Pourquoi ?
+Pourquoi ?
+
+## La solution
 
 Le problème se situe à la dernière ligne de la méthode `search`.
 
@@ -75,9 +79,9 @@ C’est logique puisqu’il s’agit d’un chargement `lazy` des données deman
 
 Quand `fetchIsPending` deviendra une valeur vraie, `apiSearchResponse` contiendra une instance de `ApiSearchResponse`.
 
-Comment _surveiller_ le moment de ce changement ?
+Comment _surveiller_ le moment de ce changement ?
 
-De la manière suivante :
+De la manière suivante :
 
 ```tsx
 watch(apiSearchResponse, (finalResponse) => {
@@ -91,7 +95,7 @@ Si vous vous arrêtez en ajoutant le `watch`, que vous naviguez vers une autre p
 
 En fait, Nuxt retourne la réponse en cache, mais le code n’utilise pas cette valeur en cache.
 
-Il faut donc ajouter une vérification :
+Il faut donc ajouter une vérification :
 
 ```tsx
 if (!fetchIsPending.value) {
@@ -99,6 +103,6 @@ if (!fetchIsPending.value) {
 }
 ```
 
-Voilà : vous traitez à la fois la première demande et la demande mise en cache et l’utilisateur est heureux d’utiliser votre application !
+Voilà : vous traitez à la fois la première demande et la demande mise en cache et l’utilisateur est heureux d’utiliser votre application !
 
-Crédit : Photo par [Priscilla Du Preez](https://unsplash.com/@priscilladupreez?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/black-pug-puppy-on-brown-wooden-chair-dOnEFhQ7ojs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
+Crédit : Photo par [Priscilla Du Preez](https://unsplash.com/@priscilladupreez?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/black-pug-puppy-on-brown-wooden-chair-dOnEFhQ7ojs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
