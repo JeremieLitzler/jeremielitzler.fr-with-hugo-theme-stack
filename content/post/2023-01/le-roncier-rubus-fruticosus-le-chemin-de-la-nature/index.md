@@ -37,8 +37,6 @@ Cru, s'il n'y a pas d'âpreté et que vous sentez un petit goût de mûres, c'es
 
 ![Jeune rameau de ronce dans les mains de Christophe](images/jeune-rameau-de-ronce.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
-
 La jeune tige de ronce est très riche en eau, c'est frais quand on se promène en forêt.
 
 ### Les mûres
@@ -55,23 +53,19 @@ Quand j'étais jeune, on ramassait de belles quantités et à la fin de la réco
 
 ![Feuille de ronce avec cinq folioles](images/feuille-de-ronce-avec-cinq-folioles.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
-
 Pour les gargarismes, elles se révèlent utiles en cas de maux de gorge.
 
 On infuse les jeunes feuilles.
 
-{{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
+{{< blockcontainer jli-notice-warning "Attention, la ronce est astringente." >}}
 
 Voir [mes notes, sur la ronce, issue du vlog de Christophe Bernard](../../../post/2023-01/ronce-murier-mure-bienfaits-et-usages/index.md) de la chaine Altheaprovence, sur le sujet avant de démarrer les gargarismes.
 
 {{< /blockcontainer >}}
 
-### LEs jeunes pousses
+### Les jeunes pousses
 
 ![Jeune pousse de ronce](images/jeune-pousse-de-ronce.jpg)
-
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 En gemmothérapie, les jeunes pousses sont utiles.
 
@@ -116,7 +110,7 @@ Aussi, les problèmes ostéo-articulaires peuvent être traités par la gemmoth�
 
 Les affections ostéo-articulaires sont généralement caractérisées par des douleurs (souvent persistantes) et des limitations de la mobilité, de la dextérité et du niveau global de fonctionnement, et réduisent donc la possibilité de travailler (source : [OMS](https://www.who.int/fr/news-room/fact-sheets/detail/musculoskeletal-conditions#:~:text=Les%20affections%20ost%C3%A9o%2Darticulaires%20et%20musculaires%20sont%20g%C3%A9n%C3%A9ralement%20caract%C3%A9ris%C3%A9es%20par,donc%20la%20possibilit%C3%A9%20de%20travailler.)).
 
-{{< blockcontainer jli-notice-warning "Attention La ronce est astringente." >}}
+{{< blockcontainer jli-notice-warning "Attention, la ronce est astringente." >}}
 
 Voir [mes notes, sur la ronce, issues du vlog de Christophe Bernard](../../../post/2023-01/ronce-murier-mure-bienfaits-et-usages/index.md), de la chaine Altheaprovence, sur le sujet avant de démarrer une prise de ronce en gemmothérapie. Il ne faut pas faire n'importe quoi.
 
@@ -138,8 +132,6 @@ Pour la ronce bleue, la fleur prend toujours une couleur blanche et plus petite.
 
 ![Rameau de ronce bleue](images/rameau-de-ronce-bleue.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
-
 Les rameaux semblent aussi blanchâtres, ce qui permet de la différencier un peu plus de la ronce commune.
 
 Les feuilles sont trifoliées, comme les framboisiers, mais le dessous des folioles sont bien vertes, contrairement aux framboisiers qui sont blancs.
@@ -147,8 +139,6 @@ Les feuilles sont trifoliées, comme les framboisiers, mais le dessous des folio
 ### Famille
 
 ![Fleur de ronce](images/fleur-de-ronce.jpg)
-
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 La ronce appartient à la famille de _Rosaceae_.
 
@@ -161,8 +151,6 @@ On identifie la famille facilement par la fleur :
 
 ![Fleur de ronce se transformant en fruit](images/fleur-de-ronce-se-transformant-en-fruit.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
-
 Au printemps, c'est la pleine saison de la floraison.
 
 Cela donne beaucoup de nourriture aux pollinisateurs.
@@ -173,8 +161,6 @@ On attendra mi-août pour déguster les fruits, riches en antioxydants et vitami
 
 ![Une grappe de mûres](images/grappe-de-mures.jpg)
 
-Credits : image extraite du vlog de Christophe sur le Chemin de la Nature.
-
 Ce qu'on connait comme un fruit de ronce se compose en fait de plusieurs petits fruits, comme on peut le voir ci-dessus.
 
 On appelle chaque petit fruit _une drupe_.
@@ -182,3 +168,5 @@ On appelle chaque petit fruit _une drupe_.
 ## Conclusion
 
 Allez, cette année, qui est votre amie ?
+
+_Crédits : toutes les images sont extraites des vlogs de Christophe sur le Chemin de la Nature._
