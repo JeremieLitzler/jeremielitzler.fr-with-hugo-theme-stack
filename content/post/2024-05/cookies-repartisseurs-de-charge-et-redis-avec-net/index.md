@@ -3,7 +3,7 @@ title: "Cookies, répartisseurs de charge et Redis avec .NET"
 description: "Un de mes collègues a récemment travaillé sur un problème de cookie pour une application “backend” .NET en utilisant le cookie pour valider une certaine logique commerciale. Voici comment procéder."
 image: images/2024-05-17-some-started-to-eat-a-cookie.jpg
 imageAlt: "Quelqu’un a commencé à manger un cookie."
-date: 2024-05-15
+date: 2024-05-17
 categories:
   - Développement Web
 tags:
