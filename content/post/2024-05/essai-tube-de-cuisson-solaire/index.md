@@ -43,7 +43,7 @@ Ensuite, on se construit un support en bois.
 J’ai pris :
 
 - pour la base : une chute de contre-plaqué un peu plus long que le tube et presque aussi large que long,
-- pour le fond : une chute d’agglomérée un peu plus haut que le tube
+- pour le fond : une chute d’agglomérée deux fois plus haut que le tube
 - pour le « boost » énergétique : une chute d’isolant thermique en film aluminisé double face à bulles de 3 mm pour optimiser les performances.
 - pour les pieds du support : des chutes de tasseaux de sapin
 - pour la porte :
@@ -71,7 +71,7 @@ Pour la porte, j’ai découpé un morceau de la planche de sapin au diamètre d
 
 J’ai fait deux trous :
 
-- un pour insérer le thermomètre.
+- un pour insérer le thermomètre afin de mesurer la température en cours de cuisson.
 - un pour insérer le câble pour maintenir la porte fermée.
 
 ![Détails des trous dans la porte](images/details-des-trous-dans-la-porte.jpg)
@@ -100,7 +100,7 @@ Au bout de 1 h 30, on a gagné 10 °C de plus et les pommes de terre du dessu
 
 Au bout de 2 h 30, la cuisson se termine et la température a atteint 155 °C. Les pommes de terre du fond manquent un petit peu de cuisson, mais globalement, ça se mange bien.
 
-Alors, oui, ce n’est pas croustillant, car l’humidité de la cuisson est restée à l’intérieur et il n’y a pas de « résistance ».
+Alors, oui, ce n’est pas croustillant, car l’humidité de la cuisson est restée à l’intérieur et il n’y a pas de « résistance » pour griller l'aliment.
 
 Toutefois, d’après David, tant qu’il y a de l’humidité (j’avais mis un peu d’eau au fond du plat), aucun risque de rater la préparation.
 
@@ -122,4 +122,4 @@ Je sais aussi qu’il faudra le mettre dès le matin et une bonne partie de la j
 
 Avant cet essai, on va essayer de cuire un clafoutis. Il y aura moins de risque et on connait cette préparation.
 
-Si vous aimez ce que j’écris, n’hésitez pas à me le dire [sur X](http://www.twitter.com/share) ou [en m’apportant votre aide](../../../page/soutenez-moi/index.md). Merci.
+Si vous aimez ce que j’écris, n’hésitez pas à me le dire [sur X](http://www.twitter.com/share) ou [en m’apportant votre aide](../../../page/soutenez-moi/index.md). Merci 👏.
