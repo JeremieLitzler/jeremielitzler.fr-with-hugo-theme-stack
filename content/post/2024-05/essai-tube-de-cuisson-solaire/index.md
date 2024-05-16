@@ -2,7 +2,7 @@
 title: "Essai d’un tube solaire pour la cuisson comme au four"
 description: "Cuire les aliments sans énergie électrique et des températures supérieures à 150°c ? C’est possible ! Voici comment s’y prendre."
 image: images/2024-05-22-tube-de-cuisson.jpg
-imageAlt:
+imageAlt: "Le tube de cuisson sur son support"
 date: 2024-05-22
 categories:
   - Avis De Produits
