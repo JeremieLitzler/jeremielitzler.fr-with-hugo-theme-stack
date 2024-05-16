@@ -52,7 +52,7 @@ J’ai pris :
 
 Le support en bois simple à construire.
 
-_PHOTO PAR DESSOUS A PRENDRE_
+![Sous le support](images/sous-le-support.jpg)
 
 J’ai coupé les tasseaux à la largeur de la plaque de contre-plaqué pour les utiliser comme pieds.
 
@@ -64,6 +64,9 @@ Ensuite, j’ai agrafé l’isolant thermique en film aluminisé sur l’intégr
 
 J’ai coupé en deux l’une des protections en mousse qui sont fournies avec le tube pour stabiliser le tube. Je les ai ensuite agrafées sur la base en contre-plaqué.
 
+![Vue des cales avant](images/cales-du-tube-avant.jpg)
+![Vue des cales arrière](images/cales-du-tube-arriere.jpg)
+
 Pour la porte, j’ai découpé un morceau de la planche de sapin au diamètre du tube puis j’ai découpé la moitié supérieure pour épouser la forme du tube.
 
 J’ai fait deux trous :
@@ -71,7 +74,7 @@ J’ai fait deux trous :
 - un pour insérer le thermomètre.
 - un pour insérer le câble pour maintenir la porte fermée.
 
-_PHOTO A PRENDRE_
+![Détails des trous dans la porte](images/details-des-trous-dans-la-porte.jpg)
 
 Pour finir, j’ai installé le câble électrique pour maintenir la porte bien fermée en utilisant la planche d’aggloméré qui de fond vertical.
 
@@ -103,7 +106,7 @@ Toutefois, d’après David, tant qu’il y a de l’humidité (j’avais mis un
 
 ## Conclusion
 
-![Les pommes de terre sont cuites](images/pommes-de-terre-cuites.jpg)
+![Les pommes de terre sont cuites 🍽️](images/pommes-de-terre-cuites.jpg)
 
 Une cuisson de 2 h devrait suffire la prochaine fois, car, en ayant ouvert et fermé 3 fois pour vérifier la cuisson, on a perdu la chaleur à chaque fois.
 
