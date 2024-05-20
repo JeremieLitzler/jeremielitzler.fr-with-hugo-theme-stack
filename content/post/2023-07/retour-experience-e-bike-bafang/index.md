@@ -298,7 +298,7 @@ J’ai toutefois configuré il y a 2 ans un peu différemment et j’avais bien
 
 Il faut que je retrouve la configuration pour cela, mais avec cette configuration, j’ai une meilleure sensation d’assistance plus proche de celle de Bosch, sans être égale.
 
-Vous pouvez aussi visionner [une vidéo (en anglais) sur le sujet](Video: https://www.youtube.com/watch?v=Cy2RFpWLeZ4).
+Vous pouvez aussi visionner [une vidéo (en anglais) sur le sujet](https://www.youtube.com/watch?v=Cy2RFpWLeZ4).
 
 ### L'entretien régulier
 
