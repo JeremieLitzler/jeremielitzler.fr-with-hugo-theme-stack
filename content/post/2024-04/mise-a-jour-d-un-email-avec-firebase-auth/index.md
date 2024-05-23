@@ -124,7 +124,7 @@ Pour les étapes suivantes, je vous laisse suivre le déroulement des actions.
 
 Vous devrez ouvrir la boîte aux lettres Yopmail en utilisant l’adresse e-mail fournie dans la demande de mise à jour. Là, vous pourrez ouvrir l’e-mail de vérification.
 
-Le code complet est disponible [sur GitHub] (https://github.com/JeremieLitzler/vueschool-course/tree/forum-vite).
+Le code complet est disponible [sur GitHub](https://github.com/JeremieLitzler/vueschool-course/tree/forum-vite).
 
 J’espère que vous avez apprécié cet article. Si vous avez des questions, comme toujours, [contactez-moi](../../../page/contactez-moi/index.md) et je verrai si je peux vous aider.
 
