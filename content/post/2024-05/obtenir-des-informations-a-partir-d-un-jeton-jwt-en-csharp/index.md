@@ -1,5 +1,5 @@
 ---
-title: "Obtenir des informations à partir d’un jeton JWT en C#"
+title: "Obtenir des informations dans un jeton JWT en C#"
 description: "L’authentification JWT est un mécanisme d'authentification sans état basé sur un jeton. Il est couramment utilisé et il est généralement encodé et signé. Mais comment le décoder ? Voyons ce qu’il en est en C#."
 image: images/2024-05-24-html-code-handling-the-failed-on-authentication.jpg
 imageAlt: "Code HTML gérant une authentification qui a échoué"
