@@ -141,4 +141,4 @@ Crédits: image extraite du vlog de L’énergie autrement.
 
 Il n’y a plus étaler le pesto et se régaler 😋
 
-Vous avez aimé ? [Abonnez-vous à la chaîne de Barnabé](https://www.youtube.com/@chaillotbarnabe2986) !
+Vous avez aimé ? [Abonnez-vous à la chaîne de Barnabé](https://www.youtube.com/channel/UCg7HRuQ93hl9v8dTSt_XDHA) !

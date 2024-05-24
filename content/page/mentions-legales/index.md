@@ -24,7 +24,7 @@ En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance
 
 **Webmaster** : Jeremie Litzler – "jeremie . litzler @ gmail . com"
 
-**Hébergeur** : Netlify, Inc. – 44 Montgomery Street, Suite 300 94104 San Francisco, California [support@netlify.com](support@netlify.com)
+**Hébergeur** : Netlify, Inc. – 44 Montgomery Street, Suite 300 94104 San Francisco, California [support@netlify.com](mailto:support@netlify.com)
 
 **Délégué à la protection des données** : Jérémie Litzler – "jeremie . litzler @ gmail . com"
 
@@ -116,7 +116,7 @@ France
 
 Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles qu’il souhaiterait que [https://jeremielitzler.fr](https://jeremielitzler.fr) corrige, mette à jour ou supprime, en s’identifiant précisément avec une copie d’une pièce d’identité (carte d’identité ou passeport).
 
-Les demandes de suppression de Données Personnelles seront soumises aux obligations qui sont imposées à [https://jeremielitzler.fr](https://jeremielitzler.fr) par la loi, notamment en matière de conservation ou d’archivage des documents. Enfin, les Utilisateurs de [https://jeremielitzler.fr](https://jeremielitzler.fr) peuvent déposer une réclamation auprès des autorités de contrôle, et notamment de la CNIL (https://www.cnil.fr/fr/plaintes).
+Les demandes de suppression de Données Personnelles seront soumises aux obligations qui sont imposées à [https://jeremielitzler.fr](https://jeremielitzler.fr) par la loi, notamment en matière de conservation ou d’archivage des documents. Enfin, les Utilisateurs de [https://jeremielitzler.fr](https://jeremielitzler.fr) peuvent déposer une réclamation auprès des autorités de contrôle, et notamment de la CNIL ([https://www.cnil.fr/fr/plaintes](https://www.cnil.fr/fr/plaintes)).
 
 ### 7.4 Non-communication des données personnelles
 

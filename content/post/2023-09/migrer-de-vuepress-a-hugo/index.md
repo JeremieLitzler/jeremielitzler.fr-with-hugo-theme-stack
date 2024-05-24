@@ -100,6 +100,7 @@ Quelque chose comme ce qui suit ne compilera pas :
 ````markdown
 ```xml{1,26}
 ... some XML ...
+```
 ````
 
 Nettoyez ces cas si vous en avez.
@@ -121,18 +122,18 @@ Hugo exige que les fichiers markdown d'un répertoire soient nommés `index.md` 
 
 ```md
 content/
-    |__ post/
-        |__ mon-article/
-            |__ index.md
-            |__ images/
+|** post/
+|** mon-article/
+|** index.md
+|** images/
 ```
 
 J'ai vu des tutoriels où les gens les nommaient `quelque-chose-d-autre.md`, mais c'est lorsque vous utilisez cette autre structure de dossiers :
 
 ```md
 content/
-    |__ post/
-        |__ mon-article.md
+|** post/
+|** mon-article.md
 ```
 
 Je préfère le premier, car je conserve les images spécifiques à une publication au même endroit que le fichier Markdown.
@@ -159,7 +160,7 @@ Pour être honnête, aux premiers abords, le thème recommendé par la documenta
 
 Puis, en utilisant le [thème de Jimmy](https://github.com/CaiJimmy/hugo-theme-stack-starter), j'ai commencé à comprendre.
 
-Mon but était de conserver les liens relatifs naturels entre les différents fichiers (liens relatifs) du site web et utiliser la syntaxe Vuepress fournie dans le thème de Mr Hope pour [l'usage des blocs de mise en avant de contenu](https://theme-hope.vuejs.press/guide/markdown/container.html).
+Mon but était de conserver les liens relatifs naturels entre les différents fichiers (liens relatifs) du site web et utiliser la syntaxe Vuepress fournie dans le thème de Mr Hope pour [l'usage des blocs de mise en avant de contenu](https://theme-hope.vuejs.press/guide/layout/page.html#customize-container-class).
 
 #### Les liens relatifs
 
@@ -216,18 +217,17 @@ Pour que les liens relatifs fonctionnent, il faudrait :
 
 ```markdown
 content/
-    |__ post/
-        |__ mon-article/
-            |__ images/
-            |__ index.md
-            |__ partie-1/
-                |__ index.md
-            |__ partie-2/
-                |__ index.md
-            ...
-            |__ partie-N/
-                |__ index.md
-
+|** post/
+|** mon-article/
+|** images/
+|** index.md
+|** partie-1/
+|** index.md
+|** partie-2/
+|** index.md
+...
+|** partie-N/
+|** index.md
 ```
 
 - ou fusionner les parties dans le fichier `index.md`.
@@ -270,7 +270,7 @@ root {
   --notice-danger-dark: #e13238;
 }
 
-:root[data-scheme=dark] {
+:root[data-scheme="dark"] {
   --body-text-color: rgba(255, 255, 255, 0.8);
 
   --notice-note-light: #858585;
@@ -297,7 +297,6 @@ root {
   width: initial;
 }
 
-
 .jli-notice p {
   margin: 0;
 }
@@ -305,7 +304,6 @@ root {
 .jli-notice-title {
   font-weight: bold;
 }
-
 
 .jli-notice-note {
   background-color: var(--notice-note-light);
@@ -417,9 +415,11 @@ Il vous suffit de déclarer une image de la manière habituelle :
 
 ```markdown
 <!-- quand un dossier « images » existe au même niveau que le fichier Markdown -->
+
 ![Mon image](images/mon-image.jpg)
 
 <!-- quand l’image est dans "/static/images" -->
+
 ![Mon image](/images/mon-image.jpg)
 ```
 
@@ -457,22 +457,22 @@ Une chose que j’ai dû réaliser fut de réorganiser le contenu pour ne pas d�
 
 ```md
 docs/
-    |__ 2023/ <!-- année -->
-        |__ 08/ <!-- mois -->
-            |__ mon-article/
-                |__ index.md
-                |__ images/
+|** 2023/ <!-- année -->
+|** 08/ <!-- mois -->
+|** mon-article/
+|** index.md
+|\_\_ images/
 ```
 
 Je suis passé à cette structure :
 
 ```md
 content/
-    |__ post/
-        |__ 2023-08 <!-- "année-mois" -->
-            |__ mon-article/
-                |__ index.md
-                |__ images/
+|** post/
+|** 2023-08 <!-- "année-mois" -->
+|** mon-article/
+|** index.md
+|\_\_ images/
 ```
 
 J’ai donc dû implémenter des redirections de l’ancien chemin vers le nouveau, car j’avais partagé des articles !

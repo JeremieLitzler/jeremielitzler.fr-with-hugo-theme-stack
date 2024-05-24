@@ -1,5 +1,5 @@
 ---
-title: 'Prêle des champs avec Christophe Bernard'
+title: "Prêle des champs avec Christophe Bernard"
 description: "La prêle se trouve dans les zones humides et j'ai le bonheur d'en avoir juste à côté de chez moi. Nous l'utilisons pour le jardin et la santé. Dans ce dernier domaine, Christophe nous détaille son usage."
 date: 2023-01-31
 image: /images/2023-01-31-champ-de-prele.jpg
@@ -282,7 +282,7 @@ Pour le silicium, en plus de la prêle, on peut utiliser l’ortie et la paille 
 
 Faites votre choix et décidez si vous voulez être dépendant ou l’inverse.
 
-La prêle apporte plus que _juste le silicium_ : comme [décrit plus haut](#riche-en-mineraux), tous les autres constituants en font sûrement une meilleure option que les produits pharmaceutiques…
+La prêle apporte plus que *juste le silicium* : comme [décrit plus haut](#riche-en-mineraux), tous les autres constituants en font sûrement une meilleure option que les produits pharmaceutiques…
 
 ## Récolte et transformation
 
@@ -354,6 +354,6 @@ Avez-vous de la prêle chez vous ?
 
 Savez-vous qu’elle est aussi, comme l’ortie, très utile au jardin ?
 
-On en reparlera avec [Damien Dekarz](../../../tag/damien-dekarz).
+On en reparlera avec [Damien Dekarz](../../../tags/damien-dekarz).
 
 En attendant…

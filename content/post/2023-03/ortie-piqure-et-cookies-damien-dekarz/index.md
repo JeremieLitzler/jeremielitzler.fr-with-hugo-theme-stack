@@ -4,9 +4,6 @@ description: "Ceci n'est pas *l'ortie de A à Z*, mais on comprendra pourquoi ç
 image: /images/2023-03-14-titre-de-la-video-sur-fond-d-ortie.jpg
 imageAlt: Le titre de la vidéo sur fond d'ortie
 date: 2023-03-14
-prev:
-  text: 'Toutes mes notes des vlogs de Damien Dekarz'
-  link: ../../../tag/damien-dekarz/
 relcanonical: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
 categories:
   - Jardin
@@ -211,7 +208,7 @@ Je suis d’accord avec David l’eau ne calme pas la douleur !
 
 ## Vertues médicinales
 
-J’ai déjà écrit pas mal de choses sur les propriétés médicinales dans les articles déjà disponibles : [voir le tag « Ortie »](../../../tag/ortie).
+J’ai déjà écrit pas mal de choses sur les propriétés médicinales dans les articles déjà disponibles : [voir le tag « Ortie »](../../../tags/ortie).
 
 David m’a fait connaitre l’utilisation de l’ortie par friction ou fouettement.
 

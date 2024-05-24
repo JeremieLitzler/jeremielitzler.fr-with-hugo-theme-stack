@@ -1,6 +1,6 @@
 ---
 title: "Installation PV - quel retour d'expérience après 1 an"
-description: 'Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin de la première année.'
+description: "Fin Mars 2022, nous avons mis en service notre installation photovoltaïque. Regardons les données et les conclusions à la fin de la première année."
 date: 2023-03-31
 image: /images/2023-03-31-production-par-mois-avril2022-mars2023.jpg
 imageAlt: "Production par mois d'avril 2022 à mars 2023"
@@ -54,7 +54,7 @@ En consommation du réseau pour chauffer l’eau chaude sanitaire (ECS), sur un 
 
 Pour le moment, je n’ai pas de retour sur expérience assez conséquent pour dire s’il est possible d’optimiser sans dépenser de grosses sommes supplémentaires.
 
-Encore une fois, notre orientation et le relief ne permettent pas d’installer et rentabiliser des panneaux solaires thermiques. En effet, le coût initial est bien plus important et n’agit que sur le poste **_ECS_** alors qu’avec l’installation photovoltaïque, on agit sur tout ce qui consomme de l’électricité. Par exemple, [l’ortie est de retour](../../../tag/ortie) et on a consommé à les faire sécher.
+Encore une fois, notre orientation et le relief ne permettent pas d’installer et rentabiliser des panneaux solaires thermiques. En effet, le coût initial est bien plus important et n’agit que sur le poste **_ECS_** alors qu’avec l’installation photovoltaïque, on agit sur tout ce qui consomme de l’électricité. Par exemple, [l’ortie est de retour](../../../tags/ortie) et on a consommé à les faire sécher.
 
 Ainsi, on verra dans 8 ans pour augmenter la production photovoltaïque et donc l’autoconsommation solaire pour l’ECS.
 

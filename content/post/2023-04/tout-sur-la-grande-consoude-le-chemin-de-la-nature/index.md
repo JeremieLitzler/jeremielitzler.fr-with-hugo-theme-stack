@@ -1,6 +1,6 @@
 ---
 title: La consoude consolide et cicatrise
-description: 'Feuille musicale, la consoude se révèle surtout utile pour guérir depuis des millénaires.'
+description: "Feuille musicale, la consoude se révèle surtout utile pour guérir depuis des millénaires."
 image: /images/2023-04-25-feuille-de-consoude-officinale.jpg
 imageAlt: Feuille de consoude officinale
 date: 2023-04-25
@@ -109,7 +109,7 @@ Vous pouvez ensuite l’utiliser en externe où vous en avez besoin.
 
 On l’utilise au jardin en paillage et sous forme de liquide fermenté.
 
-Pour plus d’informations, si vous parlez anglais, [rendez-vous sur mon blog anglais](https://iamjeremie.me/tag/comfrey/) où je parle de la consoude, ou _comfrey_.
+Pour plus d’informations, si vous parlez anglais, [rendez-vous sur mon blog anglais](https://iamjeremie.me/tags/comfrey/) où je parle de la consoude, ou _comfrey_.
 
 Si vous souhaitez que je traduise un article, [faites un don](https://buy.stripe.com/cN25m1foh6VTaPe6oq) et je créerai l’article sur le site français.
 

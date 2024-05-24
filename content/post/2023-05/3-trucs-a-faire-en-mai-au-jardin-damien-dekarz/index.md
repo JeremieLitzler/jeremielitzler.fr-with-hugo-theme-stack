@@ -95,7 +95,7 @@ Damien récolte régulièrement dans le mini potager pour cultiver au maximum, m
 
 Dans ce potager, les techniques d’arrosage en goutte-à-goutte et de protection en extérieur s’y appliquent bien.
 
-Par contre, pour du maraîchage, on doit procéder autrement. [Le film _Une ferme sur sol vivant_](https://www.youtube.com/watch?v=T6cFPxLRkTs) est un très bon début pour un projet de maraîchage. J’ai aussi écrit [plusieurs articles sur le sujet grâce aux vlogs du _Dutch Farmer_](https://iamjeremie.me/tag/the-dutch-farmer/).
+Par contre, pour du maraîchage, on doit procéder autrement. [Le film _Une ferme sur sol vivant_](https://www.youtube.com/watch?v=T6cFPxLRkTs) est un très bon début pour un projet de maraîchage. J’ai aussi écrit [plusieurs articles sur le sujet grâce aux vlogs du _Dutch Farmer_](https://iamjeremie.me/tags/the-dutch-farmer/).
 
 {{< blockcontainer jli-notice-tip "Note personnelle" >}} Je pratique la culture sur sol vivant depuis 3 ans en couvrant tout mon jardin chaque hiver 20 cm de feuilles mortes.
 

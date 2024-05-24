@@ -24,7 +24,7 @@ Pour commencer, vous devez :
 
 L’architecture du service d’application WordPress sur Microsoft Azure est la suivante :
 
-![Diagramme de Microsoft Learn](images/wordpress-app-service-diagramme-avec-soulignements.png)
+![Diagramme de Microsoft Learn](images/wordpress-app-service-diagram-with-highlights.png)
 
 Crédit : image tirée de [cet article](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/wordpress-app-service) sur Microsoft Learn.
 

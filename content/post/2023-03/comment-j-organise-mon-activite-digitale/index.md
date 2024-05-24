@@ -1,6 +1,6 @@
 ---
 title: "Comment j'organise mon activité digitale ?"
-description: 'En 2023, il existe toute une myriade de solutions pour développer sa présence digitale. Dans cet article, je vais présenter mon organisation actuelle.'
+description: "En 2023, il existe toute une myriade de solutions pour développer sa présence digitale. Dans cet article, je vais présenter mon organisation actuelle."
 date: 2023-03-30
 image: /images/2023-03-30-a-laptop-and-notebook-on-a-desk.jpg
 imageAlt: Un PC portable et un bloc-notes sur un bureau
@@ -12,7 +12,7 @@ categories:
 
 {{< blockcontainer jli-notice-note "For the english version of this article" >}}
 
-[Continue here](https://iamjeremie.me/2023-03/how-is-setup-my-digital-presence-today/)
+[Continue here](https://iamjeremie.me/post/2023-03/how-is-setup-my-digital-presence-today/)
 
 {{< /blockcontainer >}}
 
@@ -51,7 +51,7 @@ J’ai créé un [dépôt modèle avec support multilangue](https://github.com/P
 À ce jour, j’utilise cette solution pour :
 
 - ce site web, qui est mon blog personnel
-- [ce site de démonstration pour un producteur de quinoa](https://demo-inflorescences.netlify.app/) en Normandie.
+- [ce site pour un producteur de quinoa](https://inflorescences-quinoa.fr/) en Normandie.
 - [mon activité pour former les particuliers aux techniques pour réduire leur facture d’électricité](https://www.passonslecap.fr/).
 - [mon site historique, pour mon activité de microentreprise,](https://puzzlout.com/fr) que j’ai récemment migré d’un build avec Gulp et des fichiers HTML à plat.
 

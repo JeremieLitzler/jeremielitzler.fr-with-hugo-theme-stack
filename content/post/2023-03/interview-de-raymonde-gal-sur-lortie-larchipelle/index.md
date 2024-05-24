@@ -73,6 +73,6 @@ Si vous infestez par le lichen, essayez comme Raymonde d’épandre de la macér
 
 Elles sont utiles pour les règles douloureuses, en plus de côtés préventifs pour les problèmes de prostates chez l’homme.
 
-Je vous invite à lire [l’ensemble des notes que j’ai prises sur l’ortie](../../../tag/ortie).
+Je vous invite à lire [l’ensemble des notes que j’ai prises sur l’ortie](../../../tags/ortie).
 
 Dans un autre domaine tout à fait différent, les racines peuvent s’utiliser en phytoépuration, car elles absorbent les déchets organiques.
