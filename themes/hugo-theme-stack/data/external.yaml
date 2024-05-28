@@ -1,36 +1,36 @@
 Vibrant:
-  - src: js/vibrant.3.1.6.min.js
+  - src: /js/vibrant.3.1.6.min.js
     integrity: sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=
     type: script
 
 PhotoSwipe:
-  - src: js/photoswipe.4.1.3.min.js
+  - src: /js/photoswipe.4.1.3.min.js
     integrity: sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=
     type: script
     defer: true
 
-  - src: js/photoswipe-ui-default.4.1.3.min.js
+  - src: /js/photoswipe-ui-default.4.1.3.min.js
     integrity: sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=
     type: script
     defer: true
 
-  - src: css/default-skin.4.1.3.min.css
+  - src: /css/photoswipe-default-skin.4.1.3.min.css
     type: style
 
-  - src: css/photoswipe.4.1.3.min.css
+  - src: /css/photoswipe.4.1.3.min.css
     type: style
 
 KaTeX:
-  - src: css/katex.0.16.9.min.css
+  - src: /css/katex.0.16.9.min.css
     integrity: sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV
     type: style
 
-  - src: js/katex.0.16.9.min.js
+  - src: /js/katex.0.16.9.min.js
     integrity: sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8
     type: script
     defer: true
 
-  - src: js/katex-auto-render.0.16.9.min.js
+  - src: /js/katex-auto-render.0.16.9.min.js
     integrity: sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05
     type: script
     defer: true
