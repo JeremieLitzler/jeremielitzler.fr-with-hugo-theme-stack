@@ -3,7 +3,7 @@ title: "Une autre approche des composants fonctionnels dans Vue"
 description: "J’ai écrit un article qui introduisait les composants fonctionnels il y a quelque temps et j’ai découvert par la suite que vous pouviez l’écrire d’une autre manière."
 image: images/2024-05-17-a-kid-building-something-with-lego-blocks.jpg
 imageAlt: "Un enfant construit quelque chose avec des blocs LEGO."
-date: 2024-05-28
+date: 2024-05-31
 categories:
   - Développement Web
 tags:

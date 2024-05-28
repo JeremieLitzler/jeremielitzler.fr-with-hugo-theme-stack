@@ -3,7 +3,7 @@ title: L'Achillée millefeuille, avec Christophe Bernard
 description: "Plante commun en France, parfois pietinnée sans le savoir, l'achillée est une plante de la féminité. Découvrons-la avec Christophe Bernard d'Altheaprovence."
 image: images/2024-05-29-fleurs-d-achillee.jpg
 imageAlt: "Fleurs d’achillée"
-date:
+date: 2024-05-28
 categories:
   - Plantes
 tags:
