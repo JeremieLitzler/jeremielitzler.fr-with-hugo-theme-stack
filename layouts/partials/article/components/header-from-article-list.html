@@ -1,3 +1,7 @@
+ {{- $pageIndex := .Scratch.Get "pageIndex" }}
+ {{- $outOfVisibleViewPort := ge (int $pageIndex) 3 }}
+ <span style="display:none">pageIndex = {{ $pageIndex }}</span>
+ <span style="display:none">outOfVisibleViewPort = {{ $outOfVisibleViewPort }}</span>
 <header class="article-header">
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{ if $image.exists }}
@@ -21,11 +25,18 @@
                     <img src="{{ $Permalink }}"
                         {{ with $Srcset }}srcset="{{ . }}"{{ end }}
                         width="{{ $Width }}" 
-                        height="{{ $Height }}" 
+                        height="{{ $Height }}"
+						{{ with $outOfVisibleViewPort }}
                         loading="lazy"
+						{{ end }}
                         alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
+                    <img 
+						src="{{ $image.permalink }}" 
+						{{ with $outOfVisibleViewPort }}
+                        loading="lazy"
+						{{ end }}
+						alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
                 {{ end }}
             </a>
         </div>

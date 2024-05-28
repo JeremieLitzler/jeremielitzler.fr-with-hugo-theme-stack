@@ -6,6 +6,7 @@
 
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
+			{{ .Scratch.Set "pageIndex" $index }}
             {{ partial "article-list/default" . }}
         {{ end }}
     </section>
