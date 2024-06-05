@@ -23,9 +23,13 @@
                         {{ with $Srcset }}srcset="{{ . }}"{{ end }}
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
-                        alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
+                        alt="{{ .Params.imageAlt }}" 
+						title="{{ .Params.imageAlt }}" />
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
+                    <img src="{{ $image.permalink }}" 
+						loading="lazy" 
+						alt="{{ .Params.imageAlt }}" 
+						title="{{ .Params.imageAlt }}" />
                 {{ end }}
             </a>
         </div>

@@ -29,14 +29,14 @@
 						{{ with $outOfVisibleViewPort }}
                         loading="lazy"
 						{{ end }}
-                        alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
+                        alt="{{ .Params.imageAlt }}" />
                 {{ else }}
                     <img 
 						src="{{ $image.permalink }}" 
 						{{ with $outOfVisibleViewPort }}
                         loading="lazy"
 						{{ end }}
-						alt="{{ .Site.Params.article.featureImgAltPrefix }} '{{ .Title }}'" />
+						alt="{{ .Params.imageAlt }}" />
                 {{ end }}
             </a>
         </div>

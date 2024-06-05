@@ -14,7 +14,7 @@
                 {{ with .Params.description }}
                     <p class="section-description">{{ . }}</p>
                 {{ end }}
-				<p class="section-count">Contient {{ T "list.page" (len .Pages) }}</p>
+                <p class="section-count">Contient {{ T "list.page" (len .Pages) }}</p>
             </div>
     
             {{- $image := partialCached "helper/image" (dict "Context" . "Type" "section") .RelPermalink "section" -}}

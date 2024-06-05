@@ -21,11 +21,17 @@
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
                         loading="lazy"
-                        alt="{{ .Site.Params.article.featureImgAltPrefix }} {{ .context.Title }}"
+                        alt="{{ .context.Params.imageAlt }}" 
+						title="{{ .context.Params.imageAlt }}"
                         {{ with .context.Slug }}data-key="{{ . }}" {{ end }}
                         data-hash="{{ $imageRaw.Data.Integrity }}">
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" data-key="{{ .context.Slug }}" data-hash="{{ $image.permalink }}" alt="{{ .Site.Params.article.featureImgAltPrefix }} {{ .context.Title }}"/>
+                    <img src="{{ $image.permalink }}" 
+						loading="lazy" 
+						data-key="{{ .context.Slug }}" 
+						data-hash="{{ $image.permalink }}" 
+						alt="{{ .context.Params.imageAlt }}" 
+						title="{{ .context.Params.imageAlt }}" />
                 {{ end }}
             </div>
         {{ end }}
