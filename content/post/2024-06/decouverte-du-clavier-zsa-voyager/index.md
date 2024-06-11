@@ -1,174 +1,183 @@
 ---
-title: "Getting started with a ZSA keyboard"
-description: "Regular keyboards are what we are all used to. But some years ago, someone decided it didn’t make sense to use the imposed layouts. ZSA has taken the concept to enable us to fully configure a split keyboard."
-image: images/2024-06-12-a-laptop-the-voyager-keyboard.webp
-imageAlt: A laptop on a desk connected to a ZSA Voyager split keyboard..
+title: "Découverte du clavier ZSA Voyager"
+description: "Nous sommes tous habitués aux claviers ordinaires. Mais il y a quelques années, une entreprise a décidé qu'il n'était pas logique d'utiliser les dispositions imposées. ZSA a poussé le concept au maximum pour nous permettre de configurer entièrement un clavier divisé."
+image: images/2024-06-12-the-voyager-keyboard.webp
+imageAlt: Le clavier divisé ZSA Voyager.
 date: 2024-06-12
 categories:
-  - Product Reviews
+  - Avis De Produits
 tags:
-  - Ergonomics
+  - Ergonomisme
 ---
 
-## Why a Split Keyboard
+## Pourquoi un clavier divisé
 
-Since I started the job in Geneva, I had to learn the Swiss French layout on a regular Logitech keyboard. Though it was difficult the first couple of weeks, I can say that I have switched successfully on this layout. I find it more developer-friendly because of the position of the special characters.
+Depuis que j’ai commencé à travailler à Genève, j’ai dû apprendre la disposition du clavier franco-suisse sur un clavier Logitech ordinaire. Bien que cela ait été difficile les deux premières semaines, je peux dire que j’ai réussi à adopter à cette disposition. Je la trouve plus sympa pour les développeurs en raison de la position des caractères spéciaux.
 
-A colleague of mine has been using a ZSA Moonlander, a larger model with an extra row and I thought it would be interesting to try a split keyboard.
+Un de mes collègues utilise un ZSA Moonlander depuis un petit moment, un modèle plus grand que le Voyager, avec une rangée supplémentaire, et j’ai pensé qu’il serait intéressant d’essayer un clavier divisé.
 
-Since ZSA keyboards are very popular, if I can’t get used to the layout, I could sell it back easily in Europe.
+Comme les claviers ZSA sont très populaires, si je ne parviens pas à m’habituer à la disposition, je pourrai facilement le revendre en Europe.
 
-I’m mostly interested to see if it could help me position my hands, arms and shoulders to avoid the long-term issues that could occur from a day-long typing job.
+Ce qui m’intéresse surtout, c’est de voir s’il peut m’aider à positionner mes mains, mes bras et surtout mes épaules. Cela doit éviter les problèmes sur le long terme qui peuvent survenir à la suite de longues journées de travail à écrire sur l’ordinateur.
 
-## Why the Voyager model
+## Pourquoi le modèle Voyager
 
-My colleague told me that some of the keys he almost never used. Since ZSA Technology Labs sells both Moonlander and Voyager at the same price, I thought I’d be better off using a more restricted keyboard while leveraging the fully configurable features to get the layouts needed for my usual typing habits.
+Mon collègue m’a dit qu’il n’utilisait presque jamais certaines touches.
 
-## First Configuration
+Comme ZSA Technology Labs vend le Moonlander et le Voyager au même prix, j’ai pensé qu’il valait mieux utiliser un clavier plus restreint, tout en profitant des fonctions entièrement configurables pour obtenir les dispositions nécessaires à mes habitudes.
 
-If you’re like me and you use an international layout (French, Swiss, etc.), then read [this article from ZSA](https://blog.zsa.io/international-setup/#:~:text=This%20setting%20is%20usually%20in,our%20article%20about%20unsupported%20languages) first. It explains a few points to keep in mind while configuring your layouts.
+## Première configuration
 
-Once you enabled your internalization and made sure your system is using the matching language, here are the few things to understand:
+Si vous êtes comme moi et que vous utilisez une disposition internationale (française, suisse, etc.), lisez d’abord [cet article de ZSA (en anglais)](https://blog.zsa.io/international-setup/#:~:text=Ce%20setting%20is%20usually%20in,our%20article%20about%20unsupported%20languages). Il explique quelques points à garder à l’esprit lors de la configuration de vos mises en page.
 
-### The Keys Don’t Display The “SHIFT” or “ALT-GR” Character But There Are Present
+Une fois que vous avez activé votre internalisation et que vous vous êtes assuré que votre système utilise la langue correspondante, voici les quelques points d’attention :
 
-The key that comes with the Voyager are minimalist. ZSA has printed a single character on each, sometimes a big top dot.
+### Les touches n’affichent pas les caractères « SHIFT » ou « ALT-GR » mais ils sont bien présents
 
-For example, the numeric row on a French Swiss keyboard has special characters available when pressing any shift key.
+Les touches fournies avec le Voyager sont minimalistes. ZSA a imprimé un seul caractère sur chacune d’entre elles, parfois un gros point en haut pour les touches neutres.
 
-They’re also available on your ZSA keyboard, by default.
+Par exemple, la rangée numérique d’un clavier franco-suisse comporte des caractères spéciaux disponibles en appuyant sur n’importe quelle touche combinée à une touche _SHIFT_.
 
-The same is true with “AltGr” or “Right Alt”-enabled characters.
+Ils sont également disponibles sur votre clavier ZSA, par défaut.
 
-### The Reassignment Of a Key Using The Language-specific Code Is Important
+Il en va de même pour les caractères activés par « *AltGr* » ou « *Right Alt* ».
 
-For example, when using a French Swiss keyboard, the Z and Y must be swapped.
+### La réaffectation d’une touche internationale à l’aide du code spécifique à la langue est importante
 
-To do so, you need to assign “Y (fr-CH)” to the usual Z key and “Z (fr-CH)” to the usual Y key.
+Par exemple, lors de l’utilisation d’un clavier franco-suisse, les touches Z et Y doivent être interverties.
 
-![Example of the Y key assignments](images/international-setup-caveat.webp)
+Pour ce faire, il faut attribuer « Y **(fr-CH)** » à la touche Z habituelle et « Z **(fr-CH)** » à la touche Y habituelle.
 
-If you use the plain “Y” and “Z” key in the swap, you will get two Y when using the Swiss French system language…
+![Exemple d’affectation des touches Y](images/international-setup-caveat.webp)
 
-This is true for all other keys that have a “fr-CH” equivalent.
+Si vous utilisez les touches « Y » et « Z » dans l’échange, vous obtiendrez deux Y lorsque vous utiliserez la langue du système suisse romand… Pourquoi ? Car le code de la touche « Y » et « Y **(fr-CH)** » diffèrent dans la langue système « Français (Suisse) » de Windows.
 
-So be mindful about this when you configure your layouts.
+Ceci est vrai pour toutes les autres touches qui ont un équivalent « fr-CH ».
 
-## Organizing the Layouts With Special Characters
+Soyez donc attentif à ce point lorsque vous configurez vos schémas.
 
-This was the most challenging part because with only 52 keys, you have to think a bit more about how to make it the most efficient for a day-to-day use.
+## Organiser les « couches » du clavier
 
-In my case, I write a lot of articles and I code daily for work so how did I combine the two?
+C’est la partie la plus difficile, car avec seulement 52 touches, il faut bien réfléchir à la façon de rendre le système le plus efficace possible pour une utilisation quotidienne.
 
-### First layer
+Dans mon cas, j’écris beaucoup et je code quotidiennement pour mon travail, alors comment ai-je combiné les deux ?
 
-![First layer](images/layer-1.webp)
+### Première couche
 
-This is the layer for the most common characters and the numerical top row.
+![Première couche](images/layer-1.webp)
 
-I tried to use as much as possible the SHIFT-enabled keys available on the top row.
+Il s’agit du couche pour les caractères les plus courants et la ligne supérieure numérique.
 
-Also, I left the ALT GR-enabled keys as it works by default.
+J’ai essayé de laisser autant que possible les touches _SHIFT_ disponibles sur la ligne supérieure.
 
-After a couple weeks of using the keyboard and not performing well in the training area, I noticed that my SHIFT-enabled keys showed a lot of errors. I think it’s due to my lack of flexibility to stretch the pinky finger all the way to any shift key.
+J’ai également laissé les touches activées par _ALT GR_ telles qu’elles fonctionnent par défaut.
 
-From there, I decided to configure all keys on the first layer to output the SHIFT+key character when I held press the key.
+Après quelques semaines d’utilisation du clavier et de mauvaises performances dans la zone de formation sur le site de ZSA, j’ai remarqué que mes touches activées par la touche _SHIFT_ affichaient beaucoup d’erreurs.
 
-![Tap to output a lowercase character, hold the key to output the uppercase character](images/layer-1-help-setup.webp)
+Je pense que c’est dû à mon manque de flexibilité pour étirer le petit doigt jusqu’à n’importe quelle touche de majuscule.
 
-So tapping the A key output “a” and helding on the A key output “A”.
+À partir de là, j’ai décidé de configurer toutes les touches de la première couche pour qu’elles produisent le caractère _MAJ+touche_ lorsque je maintiens la touche enfoncée un peu longtemps.
 
-I made the changes on all keys except (circled in red below):
+![Appuyez pour obtenir un caractère minuscule, maintenez la touche enfoncée pour obtenir le caractère majuscule](images/layer-1-help-setup.webp)
 
-- the 4 four thumb keys,
-- the 4 keys of the first column (ESC, TAB, SHIFT LEFT and CTRL LEFT),
-- the 3 keys of the last column (BACKSPACE, SHIFT RIGHT, CTRL RIGHT),
-- the ATLGR key positioned to the right of the right shift.
+Ainsi, en tapant sur la touche A, on obtient « a » et en maintenant la touche A enfoncée, on obtient « A ».
 
-With this change, the accuracy of the SHIFT-enabled characters improved a lot and I don’t mind the extra time spend of pressing any key to output the shift character.
+J’ai effectué les changements sur toutes les touches sauf :
 
-### Second layer
+- les 4 touches inférieures assignées au pouce,
+- les 4 touches de la première colonne (ESC, TAB, SHIFT LEFT et CTRL LEFT),
+- les 3 touches de la dernière colonne (BACKSPACE, SHIFT RIGHT, CTRL RIGHT),
+- la touche ATLGR positionnée à droite du _SHIFT_ droit.
 
-![Second layer](images/layer-2.webp)
+Avec ce changement, la précision des caractères activés par la touche _SHIFT_ s’est beaucoup améliorée. Je ne vois pas d’inconvénient à passer plus de temps à appuyer sur n’importe quelle touche pour produire le caractère correspondant.
 
-Next, I tackled the next layer: the accents and special characters.
+### Deuxième couche
 
-On this layer, I also included the navigation keys that I use a lot: _Ins_, _Home, End_, _Page Up_ and _Page Down_ on the left pad with the special accents just below.
+![Deuxième couche](images/layer-2.webp)
 
-The right pad is reserved for the coding characters and the remaining accentuated characters (é, à and è).
+Ensuite, je me suis attaqué à la couche suivante : les accents et les caractères spéciaux.
 
-The top row allows me to hold press the key to get the usual “SHITF+key” character at this level.
+Sur cette couche, j’ai également inclus les touches de navigation que j’utilise beaucoup : _Ins_, _Home, End_, _Page Up_ et _Page Down_ sur le pavé gauche avec les accents spéciaux sur la rangée en dessous.
 
-So far, I haven’t trained enough to say if the setup work well. However, the grouped bracket characters helped with coding I get used to the split keyboard… 😛
+Le pavé droit est réservé aux caractères de codage et aux caractères accentués restants (é, à et è).
 
-### Third layer
+La rangée supérieure me permet de maintenir la touche enfoncée pour obtenir le caractère « SHITF+touche » habituel à ce niveau.
 
-![Third layer](images/layer-3.webp)
+Jusqu’à présent, je ne me suis pas suffisamment entraîné pour dire si la configuration fonctionne bien. Cependant, le regroupement des caractères va m’aider à coder, une fois habitué au clavier divisé… 😛
 
-Here, I grouped the function keys on the left pad in rows of four and the numeric pad on the right.
+### Troisième couche
 
-I disabled every key that would have been transparent, e.g., the keys of the first layer would work.
+![Troisième couche](images/layer-3.webp)
 
-I’m not sure it’s the best setup.
+Ici, j’ai regroupé les touches de fonction sur le pavé gauche en rangées de quatre et le pavé numérique sur le pavé droit.
 
-But I left the left CTRL and SHIFT enabled to do combos like `CTRL+F5`, for example.
+J’ai désactivé toutes les touches qui auraient été actives par transparence, c’est-à-dire que les touches de la première couche fonctionneraient même en ayant la couche 3 active.
 
-### Fourth layer
+Je ne suis pas sûr que ce soit la meilleure configuration.
 
-![Fourth layer](images/layer-4.webp)
+Mais j’ai laissé les touches CTRL et SHIFT de gauche activées pour faire des combinaisons comme `CTRL+F5`, par exemple.
 
-This is the media and macro layer. Though I don’t use a lot of media keys, I use a lot of shortcuts…
+### Quatrième couche
 
-Basically, things like:
+![Quatrième couche](images/layer-4.webp)
 
-- Reverse Tab with “_SHIFT+TAB”_ to go back on the focus.
-- The language swap with “_SHIFT+ALT”._
-- The emoji dialog with “_WINDOWS+dot character”_
-- Windows lock with _“WINDOWS+L”_.
-- The navigation in the browser tab with _“CTRL+SHIFT+TAB”_ (previous tab) or _“SHIFT+TAB”_ (next tab).
-- The various print screen shortcuts when using PicPick, for example.
-- The creation of a new file in Visual Studio Code when using the “advanced-new-file” extension. I use that a ton when coding!
+Il s’agit de la couche média et des macros. Bien que je n’utilise pas beaucoup de touches média, j’utilise beaucoup de raccourcis !
 
-Note: I left the ability to do the standard “CTRL+ATL+SUPPR” (for locking the Windows session) or “CTRL+ALT+INS” (for unlocking the VMWare running on my work station) because the combo key with those keys wasn’t working.
+En gros, des choses comme :
 
-The two right thumb keys therefore enable me to switch temporarily to the layout (as long as I hold the top thumb key) or activates the layer (as I hold the bottom thumb key).
+- L’inversion de la tabulation avec « *SHIFT+TAB »* pour revenir en arrière sur le focus.
+- Le changement de langue avec « *SHIFT+ALT »*.
+- La boîte de dialogue des emoji avec « *WINDOWS+caractère point »*.
+- Le verrouillage de Windows avec _« WINDOWS+L »_.
+- La navigation dans l’onglet du navigateur avec _« CTRL+SHIFT+TAB »_ (onglet précédent) ou _« SHIFT+TAB »_ (onglet suivant).
+- Les différents raccourcis de l’écran d’impression lors de l’utilisation de PicPick, par exemple.
+- La création d’un nouveau fichier dans Visual Studio Code en utilisant l’extension « advanced-new-file ». Je m’en sers beaucoup pour coder !
 
-## Coloring the layers
+Note : J’ai laissé la possibilité d’utiliser les touches standard « CTRL+ATL+SUPPR » (pour verrouiller la session Windows) ou « CTRL+ALT+INS » (pour déverrouiller VMWare qui tourne sur mon poste de travail) parce que la touche combo avec ces touches ne fonctionnait pas.
 
-The framework I used was to pick 5 colors that are very distinct to see visually the layer I’m in:
+Les deux touches du pouce droit me permettent donc :
 
-- Yellow for the first,
-- Purple for the second,
-- Blue for the third,
-- Orange for the fourth,
+- de passer temporairement à la disposition (tant que je maintiens la touche supérieure du pouce droit)
+- ou d’activer la couche (tant que je maintiens la touche inférieure du pouce droit).
 
-Then I made sure the transparent keys on layers 2 to 4 were the color of the layer 1.
+## Coloration des couches
 
-All the macro keys or keys that were different than the theme on a layer used the green color.
+La logique que j’ai utilisée a été de choisir 4 couleurs très distinctes pour voir visuellement la couche dans lequel je me trouve :
 
-That helps a lot I find those on layers 2 and 4.
+- Jaune pour la première,
+- violet pour la deuxième,
+- Bleu pour la troisième,
+- Rouge pour la quatrième,
 
-At the time of writing this, I use the 2 thumb keys on the left and the first thumb key on the right to activate the layer on hold. I use the bottom thumb keys on the right to activate the fourth layer temporarily or fully.
+Ensuite, je me suis assuré que les touches transparentes des couches 2 à 4 étaient de la même couleur que la couche 1.
 
-I use the same color as the layer for the layer switch. It helps me to know quickly where the layer I need is.
+Toutes les touches macro ou les touches différentes du thème d’une couche utilisent la couleur verte.
 
-And finally, all deactivated keys used no color.
+Cela m’aide beaucoup à les trouver sur les couches 2 et 4.
 
-## Training and first test
+Au moment où j’écris ces lignes, j’utilise les deux touches de gauche et la première touche de droite pour activer avec le pouce correspond une couche.
 
-ZSA website is awesome and provides the tools to train. It includes training for:
+J’utilise la même couleur que le calque pour le changement de couche. Cela me permet de savoir rapidement où se trouve la couche dont j’ai besoin.
 
-- Prose, starting with _Alice in Wonderland_
-- Book Excerpts
-- Numbers & Symbols
-- The _Whack-a-key_ mode, which is good for learning special characters.
-- Code
-- and custom text or free typing
+Enfin, toutes les touches désactivées n’utilisent aucune couleur.
 
-While the prose and book excerpts took me an hour to see progress, the Numbers & Symbols prompted me to rethink my first approach on how I organized the layers.
+## Formation et premier test
 
-I’ll spend the next weeks training and use it in real life scenarios to see if I see a difference.
+Le site web de ZSA est génial et fournit les outils nécessaires à la formation.
 
-In the meantime, thanks for reading thus far and if you’re interested in my layout, here is [the public link](https://configure.zsa.io/voyager/layouts/GoJRR/latest).
+Il comprend des formations pour :
 
-Thanks for reading.
+- La prose, en commençant par _Alice au pays des merveilles_.
+- Extraits de livres
+- Les chiffres et les symboles
+- Le mode _Whack-a-key_, qui permet d’apprendre les caractères spéciaux.
+- Le code
+- et texte personnalisé ou saisie libre
+
+Alors que la prose et les extraits de livres m’ont pris une heure pour voir des progrès, les chiffres et les symboles m’ont incité à revoir ma première approche sur la façon dont j’ai organisé les couches, comme je l’ai décrit ci-dessus.
+
+Je vais passer les prochaines semaines à m’entraîner et à l’utiliser dans des scénarios réels pour voir si je vois une différence.
+
+En attendant, merci d’avoir lu jusqu’ici et si vous êtes intéressé par ma mise en page, voici [le lien public](https://configure.zsa.io/voyager/layouts/GoJRR/latest).
+
+Merci d’avoir lu jusqu’à la fin.
