@@ -181,3 +181,5 @@ Je vais passer les prochaines semaines à m’entraîner et à l’utiliser dans
 En attendant, merci d’avoir lu jusqu’ici et si vous êtes intéressé par ma mise en page, voici [le lien public](https://configure.zsa.io/voyager/layouts/GoJRR/latest).
 
 Merci d’avoir lu jusqu’à la fin.
+
+Crédits : l'image d'entête est issue du site de ZSA sur la [page du produit _ZSA Voyager_](https://www.zsa.io/voyager).

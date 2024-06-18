@@ -3,7 +3,7 @@ title: "L’achillée millefeuille, avec David Bricout"
 description: "L’Achillée millefeuille (Achillea millefolium L.) est une espèce de plantes herbacées vivaces de la famille des Astéracées, originelle de l’hémisphère Nord. Elle est comestible (les feuilles, à goût astringent et à faible odeur camphrée). Il s’agit d’une des plantes le plus couramment utilisées en médecine traditionnelle depuis plus de 3 000 ans."
 image: images/2024-06-19-macro-de-fleurs-d-achillee-mille-feuille.jpg
 imageAlt: "Macro de fleurs d'achillée millefeuille"
-date: 2024-06-05
+date: 2024-06-19
 categories:
   - Plantes
 tags:

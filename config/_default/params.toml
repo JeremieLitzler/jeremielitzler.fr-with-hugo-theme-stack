@@ -5,7 +5,7 @@ rssFullContent = true
 favicon = "/favicon.ico"
 
 [footer]
-since = 2021
+since = 2020
 customText = 'License GPLv3 | <a href="https://jeremielitzler.fr/page/mentions-legales/" title="Lire les mentions légales">Mentions légales</a>'
 
 [dateFormat]
