@@ -80,8 +80,8 @@ En utilisant TypeScript et l’API Composition, vous devrez utiliser la macro `w
 
 ```typescript
 interface ThreadEditorPageProps {
-  title? : string ;
-  body? : chaîne de caractères ;
+  title? : string;
+  body? : string;
 }
 
 const props = withDefaults(defineProps<ThreadEditorPageProps>(), {
