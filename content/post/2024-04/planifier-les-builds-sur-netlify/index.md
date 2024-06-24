@@ -21,7 +21,7 @@ Je pouvais facilement déclencher un _build_ manuellement à partir du tableau d
 
 Grâce à [Talves](https://answers.netlify.com/u/talves) sur [ce fil de discussion](https://answers.netlify.com/t/scheduling-builds-and-deploys-with-netlify/2563/5) qui m'a orienté vers [ce guide](https://www.raymondcamden.com/2022/02/04/an-early-look-at-netlify-scheduled-functions) (même si la solution est un peu obsolète), j'ai réussi à trouver la solution à partir de ce point de départ.
 
-## Les étapes :
+## Les étapes
 
 ### Sur le tableau de bord de Netlify
 
@@ -34,7 +34,7 @@ Grâce à [Talves](https://answers.netlify.com/u/talves) sur [ce fil de discussi
   - Cliquez sur `Add build book`.
   - Donnez un nom à votre hook comme _Daily publish_ et sélectionnez la branche que vous voulez cibler.
 
-  ![Ajouter un hook de construction](images/build-hook-form.jpg)
+  ![Ajouter un hook de "build"](images/build-hook-form.jpg)
 
   - Cliquez sur _Save_ et copiez l'URL.
 
