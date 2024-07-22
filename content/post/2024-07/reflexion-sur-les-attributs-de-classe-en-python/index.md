@@ -8,7 +8,6 @@ categories:
   - Développement Web
 tags:
   - Python
-draft: true
 ---
 
 ## Le projet
