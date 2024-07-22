@@ -46,7 +46,7 @@ J’ai utilisé Visual Studio Code parce qu’il est flexible et gratuit.
 
 Je recommande également de créer un profil spécifique à Python pour être sûr de ne pas se retrouver avec un jeu d’extension en pagaille. J’ai personnellement 3 profils pour mes activités quotidiennes :
 
-- Writing : quand j’écris, c’est essentiellement en Markdown.
+- Ecriture : quand j’écris, c’est essentiellement en Markdown.
 - Vue : lorsque je développe des applications Vue.
 - Python : lorsque je développe des applications Python.
 
