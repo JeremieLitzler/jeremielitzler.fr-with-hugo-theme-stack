@@ -1,6 +1,6 @@
 ---
 title: "Réflexion sur les attributs de classe en Python"
-description: "Je dois admettre qu'au moment où j'écris ces lignes, je commence tout juste à coder avec Python. Pourtant, je voulais appliquer un code propre tel que je l'ai appris."
+description: "Je dois admettre qu’au moment où j’écris ces lignes, je commence tout juste à coder avec Python. Pourtant, je voulais appliquer un code propre tel que je l’ai appris."
 image: images/2024-07-31-3d-python-programming-book.jpg
 imageAlt: "Livre de programmation Python"
 date: 2024-07-31
@@ -28,7 +28,7 @@ J’ai utilisé Gemini jusqu’au bout pour coder le squelette de l’API.
 
 L’IA se révèle utile et peut vous aider, mais à la fin, la solution finale est votre responsabilité.
 
-Aussi, vous aurez besoin des compétences comme les bases du langage de programmation.
+Aussi, vous aurez besoin de connaitre les bases du langage de programmation.
 
 Si vous commencez par des questions fondamentales, vous comprendrez mieux comment formuler les questions plus complexes par la suite.
 
