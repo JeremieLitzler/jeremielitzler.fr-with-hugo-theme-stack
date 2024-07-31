@@ -12,7 +12,7 @@ tags:
 
 ## Le projet
 
-Je voulais me familiariser avec Python et construire une API simple pour enregistreur le temps passé sur les divers projets que je traite personnellement.
+Je voulais me familiariser avec Python et construire une API simple pour enregistrer le temps passé sur les divers projets que je traite personnellement.
 
 L’application est organisée en projets. Les projets définissent des tâches et chaque fois que je travaille sur une tâche, j’enregistre le temps passé.
 
