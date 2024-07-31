@@ -1,6 +1,6 @@
 ---
 title: "Réflexion sur les attributs de classe en Python"
-description: "Je dois admettre qu’au moment où j’écris ces lignes, je commence tout juste à coder avec Python. Pourtant, je voulais appliquer un code propre tel que je l’ai appris."
+description: "Je dois admettre qu’au moment où j’ai écrit ces lignes, je commençais tout juste à coder avec Python. J’ai toutefois pu appliquer le code propre que j’ai appris à écrire."
 image: images/2024-07-31-3d-python-programming-book.jpg
 imageAlt: "Livre de programmation Python"
 date: 2024-07-31
