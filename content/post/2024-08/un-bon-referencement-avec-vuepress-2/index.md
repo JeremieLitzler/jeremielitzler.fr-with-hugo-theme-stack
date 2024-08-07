@@ -10,4 +10,4 @@ tags:
   - SEO
 ---
 
-Crédit : Photo by [Pixabay](https://www.pexels.com/photo/three-white-and-black-scrabble-tiles-on-brown-wooden-surface-270637/)
+Crédit : Photo de [Pixabay](https://www.pexels.com/photo/three-white-and-black-scrabble-tiles-on-brown-wooden-surface-270637/)
