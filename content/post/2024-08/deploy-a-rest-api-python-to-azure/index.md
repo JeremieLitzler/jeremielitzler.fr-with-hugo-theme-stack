@@ -210,31 +210,32 @@ Note : si l'examen de la configuration échoue avec l'erreur suivante, cela sign
 
 > Le client `youraccount@example.com` avec l'objet id "xxx" n'a pas l'autorisation d'effectuer l'action "**Microsoft.App/register/action**" sur l'étendue "/subscriptions/yyy" ou l'étendue n'est pas valide. Si l'accès a été récemment accordé, veuillez rafraîchir vos informations d'identification. (Code : AuthorizationFailed) (Code : AuthorizationFailed)
 
-### Configure the Container Apps Environment
+### Configurer le _Container Apps Environment_
 
-Once Azure has created the _Container App_, go straight to the _Container Apps Environment_ to link the file shares to it.
+Une fois qu'Azure a créé le _Container Apps Environment_, allez directement dedans pour y lier les _File shares_.
 
-To do so, retrieve the name and access key under the _Storage Account:_
+Pour ce faire, récupérez le nom et la clé d'accès sous le _Storage account_.
 
-- go to _Security + networking_ and select the _Access keys_ blade.
-- copy
-  - one of the keys.
-  - the Storage account name.
-  - the file share names created earlier (found under the _File shares_ blade).
+- allez dans _Security + networking_ et sélectionnez la lame _Access keys_.
+- copier
 
-Back on the Container Apps Environment:
+  - l'une des clés.
+  - le nom du _Storage account_.
+  - les noms des _File shares_ créés précédemment (sous la lame _File shares_).
 
-- go to _Settings_ and the _Azure Files_ blade.
-- set the name to `azure-files-[designation]` (`designation` would be `db`, `logs`, etc.)
-- add a new one and fill the field by pasting the values copied previously.
-- set the _Access mode_ to _Read/Write_ or _Read only_ (I do that for the files I need the application not to write).
-- repeat for all the file shares you need the _Container App_ to use.
+De retour sur _Container Apps Environment_ :
 
-What will we use that for? In the REST API, you may use a SQLLite database where the database is a file and you need to persist it.
+- se rendre dans _Settings_ et dans la lame _Azure Files_.
+- définisser le nom avec ce modèle : `azure-files-[designation]` (`designation` serait `db`, `logs`, etc.)
+- ajouter une nouvelle entrée et remplissez le champ en collant les valeurs copiées précédemment du _Storage account_.
+- définisser le _Access mode_ sur _Read/Write_ ou _Read only_ (je le fais pour les fichiers que l'application ne doit pas écrire).
+- répéter l'opération pour tous les _File shares_ que l'application _Container App_ utilise.
 
-The same goes for file logging.
+À quoi cela va-t-il servir ? Dans l'API REST, vous pouvez utiliser une base de données SQLLite lorsque la base de données est un fichier et que vous devez la conserver.
 
-You could write the files in the container image. But, as it restarts on a new deploy, you’ll lose the data…
+Il en va de même pour l'enregistrement des fichiers.
+
+Vous pourriez écrire les fichiers dans l'image du conteneur. Mais, lorsqu'il redémarre lors d'un nouveau déploiement, vous perdrez les données...
 
 ### Configure the _Container App_ Deploy Settings
 
