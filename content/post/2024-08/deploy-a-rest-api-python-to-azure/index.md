@@ -208,7 +208,7 @@ Dans l'onglet _Ingress_, vous devrez configurer la partie TCP pour que l'API RES
 
 Note : si l'examen de la configuration échoue avec l'erreur suivante, cela signifie probablement que vous n'avez pas la permission de créer la ressource :
 
-> Le client 'youraccount@example.com' avec l'objet id "xxx" n'a pas l'autorisation d'effectuer l'action "**Microsoft.App/register/action**" sur l'étendue "/subscriptions/yyy" ou l'étendue n'est pas valide. Si l'accès a été récemment accordé, veuillez rafraîchir vos informations d'identification. (Code : AuthorizationFailed) (Code : AuthorizationFailed)
+> Le client `youraccount@example.com` avec l'objet id "xxx" n'a pas l'autorisation d'effectuer l'action "**Microsoft.App/register/action**" sur l'étendue "/subscriptions/yyy" ou l'étendue n'est pas valide. Si l'accès a été récemment accordé, veuillez rafraîchir vos informations d'identification. (Code : AuthorizationFailed) (Code : AuthorizationFailed)
 
 ### Configure the Container Apps Environment
 
