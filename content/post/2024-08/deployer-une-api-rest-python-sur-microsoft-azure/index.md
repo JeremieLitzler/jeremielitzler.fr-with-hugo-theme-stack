@@ -1,11 +1,11 @@
 ---
 title: "Déployer une API REST Python sur Microsoft Azure"
-description: "C'est bien de créer une application. C'est encore mieux de la déployer et de voir qu'elle fonctionne. Voyons comment faire cela avec Microsoft Azure."
+description: "C’est bien de créer une application. C’est encore mieux de la déployer et de voir qu’elle fonctionne. Voyons comment faire cela avec Microsoft Azure."
 image: images/2024-07-24-logos-ms-azure-and-python.jpeg
 imageAlt: "Logos de Microsoft Azure et de Python"
 date: 2024-08-12
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - Python
 ---
