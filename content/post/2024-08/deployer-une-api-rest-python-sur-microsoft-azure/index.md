@@ -8,7 +8,6 @@ categories:
   - Web Development
 tags:
   - Python
-draft: true
 ---
 
 ## Introduction
