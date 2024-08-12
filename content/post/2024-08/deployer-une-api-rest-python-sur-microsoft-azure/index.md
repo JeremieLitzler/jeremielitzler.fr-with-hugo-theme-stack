@@ -412,7 +412,7 @@ Si vous avez lu jusqu’ici, bravo et merci !
 
 Je continuerai à partager mes expériences Python et Azure au fur et à mesure que je travaille avec eux.
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
 Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
