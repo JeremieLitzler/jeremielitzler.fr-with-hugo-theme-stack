@@ -10,5 +10,17 @@
       "{{< /blockcontainer >}}"
     ],
     "description": "Add a block container with a title and type to choose (WARNING : images don't currently work...)"
+  },
+  "Shortcode for follow me CTA": {
+    "scope": "markdown",
+    "prefix": "follow me",
+    "body": [
+      "{{< blockcontainer jli-notice-tip \"Follow me\">}}",
+      "",
+      "Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.",
+      "",
+      "{{< /blockcontainer >}}"
+    ],
+    "description": "Add a block container with CTA to follow me"
   }
 }
