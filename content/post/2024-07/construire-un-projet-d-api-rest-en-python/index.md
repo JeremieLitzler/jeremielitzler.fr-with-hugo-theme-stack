@@ -12,9 +12,11 @@ tags:
 
 Je n’avais aucune expérience sur Python auparavant. J’ai donc utilisé Gemini AI pour m’aider à démarrer.
 
-{{< blockcontainer jli-notice-warning "About using AI">}}
+{{< blockcontainer jli-notice-warning "A propos d’utiliser l’IA">}}
 
 Bien que cela ait été utile, il faut vérifier ce que l’IA vous répond et de demander la validation d’un développeur plus expérimenté, si besoin.
+
+Aussi, il faut taper le code soi-même pour bien comprendre ce qu’il génère et comment cela fonctionne.
 
 {{< /blockcontainer >}}
 
@@ -30,7 +32,7 @@ Elle utilise généralement plusieurs **méthodes HTTP** pour définir les actio
 
 En 2024, le format de données le plus couramment utilisé pour l’échange de données entre les clients et les serveurs est le JSON. Vous pouvez encore trouver du XML dans les services web historiques ou dans des intégrations spécifiques avec des tiers qui attendent toujours du XML.
 
-## Choisir un cadre Web
+## Choisir la _Framework_ Web
 
 Flask fournit tous les outils nécessaires pour commencer. On le décrit comme léger et flexible, idéal pour les petits projets.
 
@@ -76,7 +78,7 @@ Une fois que vous avez créé votre profil Python, installez :
         }
       ```
 
-{{< blockcontainer jli-notice-note "About PyCharm">}}
+{{< blockcontainer jli-notice-note "A propos de PyCharm">}}
 
 J’ai ajouté cette note 2 mois après que j’ai écrit le contenu original de cet article.
 
