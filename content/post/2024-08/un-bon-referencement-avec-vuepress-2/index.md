@@ -10,7 +10,7 @@ tags:
   - SEO
 ---
 
-Lorsqu’il s’agit d’écrire des articles, j’ai longtemps cherché une méthode simple et de facile à utiliser.
+Lorsqu’il s’agit d’écrire des articles, j’ai longtemps cherché une méthode simple et de facile à maintenir.
 
 J’ai essayé WordPress. Mais on finit toujours par payer soit un plugin, soit un expert pour atteindre près de 100 sur les scores Lighthouse, **dans toutes les catégories**.
 
@@ -25,21 +25,21 @@ Vuepress est le moteur SSG (Générateur de Site Statique, ou _Static Site Gener
 Il évolue grâce à [_Mr Hope_](https://github.com/Mister-Hope) et [_meteorlxy_](https://github.com/meteorlxy) principalement (site web : https://v2.vuepress.vuejs.org/) et je l’ai utilisé pour plusieurs projets simples :
 
 - [Un site web construit pour une productrice de quinoa en Normandie](https://inflorescences-quinoa.fr/)
-- [Un projet personnel pour enseigner l’optimisation de la consommation et la production d’énergie](https://passonslecap.fr/)
+- [Un projet personnel pour enseigner l’optimisation de la consommation et la production d’électricité](https://passonslecap.fr/)
 
-Auparavant, mes blogs utilisaient Vuepress, mais je suis passé à Hugo pour des raisons de performance.
+Mes blogs utilisaient Vuepress, mais je suis passé à Hugo pour des raisons de performance l'été 2023.
 
 Pourquoi ? Quand on atteint un certain nombre de pages et d’articles, Vuepress, basé sur Node, montre ses limites (plus d’informations à ce sujet dans [cette discussion](https://github.com/orgs/vuepress-theme-hope/discussions/2887)).
 
 ### Que permet Vuepress ?
 
-Il prend simplement un contenu en Markdown et l’analyse pour générer des fichiers HTML à l’aide d’un thème JavaScript, dans le cas de Vuepress, il est construit sur Vue 3.
+Il prend simplement des fichiers de contenu rédigés en Markdown et les analyse pour générer des fichiers HTML à l’aide d’un thème JavaScript. Dans le cas de Vuepress, il s’agit sur Vue 3.
 
-Vuepress s’étend par le biais de plugins ou de thèmes plus ou moins riches en options. Par exemple, le thème de Mr Hope ajoute des extensions de syntaxe Markdown vraiment sympas qui enrichissent votre Markdown et in fine, le HTML généré.
+Vuepress s’étend par le biais d'extensions ou de thèmes plus ou moins riches en options. Par exemple, le thème de Mr Hope ajoute des extensions de syntaxe Markdown vraiment sympas qui enrichissent votre Markdown et in fine, le HTML généré.
 
 N’hésitez pas à visiter [cette page](https://theme-hope.vuejs.press/) pour plus de détails.
 
-## Comment utiliser _frontmatter_ pour le référencement
+## Comment utiliser _frontmatter_ pour un bon référencement naturel
 
 Maintenant, je vais partager un cas d’utilisation avec le thème de Mr Hope. Il est possible que d’autres thèmes supportent ou non cette fonctionnalité.
 
@@ -151,7 +151,7 @@ J’ai donc créé un _snippet_ pour remplir le _frontmatter_ plus rapidement. V
 
 Vous pouvez l’utiliser directement dans votre _frontmatter_ pour ajouter les métatags à votre convenance.
 
-Vous pouvez ajouter au _snippet_ le lien `canonical`, recommandé sur toutes les pages et les métatags `twitter`.
+Vous pouvez aussi ajouter au _snippet_ le lien `canonical`, recommandé sur toutes les pages et les métatags `twitter` et utilise des variables pour écrire une fois le titre ou la description.
 
 ## Conclusion
 
