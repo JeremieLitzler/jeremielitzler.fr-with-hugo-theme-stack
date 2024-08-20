@@ -5,9 +5,13 @@ image: images/2024-08-28-3d-lettres-de-scrabble-formant-le-mot-seo.jpg
 imageAlt: 'Lettres de Scrabble formant le mot "SEO"'
 date: 2024-08-21
 categories:
-  - Développement Web
+  - Développement
 tags:
   - SEO
+  - Go
+  - Hugo
+  - Générateur de sites statiques
+  - JAMStack
 ---
 
 Lorsqu’il s’agit d’écrire des articles, j’ai longtemps cherché une méthode simple et de facile à maintenir.
