@@ -3,7 +3,7 @@ title: "Un bon référencement avec Vuepress 2"
 description: "Une chose dont j’avais besoin sur mon blog était d’atteindre un référencement sur mes articles. Voyons comment j’ai procédé avec Vuepress 2."
 image: images/2024-08-28-3d-lettres-de-scrabble-formant-le-mot-seo.jpg
 imageAlt: 'Lettres de Scrabble formant le mot "SEO"'
-date: 2024-08-28
+date: 2024-08-21
 categories:
   - Développement Web
 tags:
@@ -155,7 +155,9 @@ Vous pouvez aussi ajouter au _snippet_ le lien `canonical`, recommandé sur tout
 
 ## Conclusion
 
-Voilà, c’est fait. Pas de plugin fantaisiste ni d’installation complexe. Vous pouvez utiliser Vuepress et le thème de Mr Hope et construire aujourd’hui votre blog avec un bon référencement prêt à l’emploi !
+Voilà, c’est fait. Pas de plugin fantaisiste ni d’installation complexe.
+
+Vous pouvez utiliser Vuepress et le thème de Mr Hope et construire aujourd’hui votre blog avec un bon référencement prêt à l’emploi !
 
 J’ai construit un kit de démarrage [ici](https://github.com/Puzzlout/TemplateVuepress) pour les anglophones et [là](https://github.com/JeremieLitzler/mon-site-demo-tutoriel) pour les francophones.
 
