@@ -76,7 +76,7 @@ On prend notre consommation en mode dégradé et on détermine le nombre de jour
 [consommation en mode dégradé (kWh)] x [nombre de jours] = [Puissance totale des batteries]
 ```
 
-À suivre sur une prochaine vidéo de l'Archipel ou [tester la simulation de Wattuneed](https://www.wattuneed.com/fr/content/56-dimensionner-votre-kit-solaire-autonomes-autoconsommation).
+À suivre sur une prochaine vidéo de l'Archipel ou [tester la simulation de Wattuneed](https://www.wattuneed.com/fr/content/19-calculer-ses-besoins-en-electricite).
 
 ### Choisir sa technologie de batterie
 

@@ -99,4 +99,4 @@ const orderedPosts = computed(() => {
 
 La déstructuration se révèle très utile, mais avec Vue, il faut l’utiliser avec précaution, en particulier si vous utilisez des `computed` 🙂. Merci, `toRefs`!
 
-Crédit : Photo de [Scott McNiel](https://www.pexels.com/photo/lego-blocks-on-white-plastic-container-7662317/) sur [Pexels](https://www.pexels.com/).
+Crédit : Photo de [Scott McNiel](https://www.pexels.com/@scott-mcniel-1364193/) sur [Pexels](https://www.pexels.com/).

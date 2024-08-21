@@ -127,7 +127,7 @@ J'ai donc beaucoup lu sur le sujet (ex.: [forum photovoltaïque](https://forum-p
 
 Aussi, le fait que l'installation ne pouvait être réalisée sur le toit de la maison me bloquait, car je ne voulais pas donner l'électricité non consommée (injection sur le réseau) à des entreprises (Enedis, Engie, etc.) qui nous le revendent à un prix de plus en plus élevé.
 
-En mai 2022, le réseau achète le surplus [6 à 10 centimes](https://www.insunwetrust.solar/blog/le-solaire-et-vous/tarif-rachat-photovoltaique/#:~:text=%F0%9F%92%B0%20Quel%20est%20le%20montant,0%2C10%20%E2%82%AC%20par%20kWh.) alors qu'il me le vend entre 17 et 22 centimes (mon tarif HC-HP chez Engie en mai 2022).
+En mai 2022, le réseau achète le surplus 6 à 10 centimes alors qu'il me le vend entre 17 et 22 centimes (mon tarif HC-HP chez Engie en mai 2022).
 
 Fin 2021, je reçois un email sur mon alerte du "Leboncoin" intitulé "panneaux photovoltaïques". Il s'agissait d'un artisan qui promouvait ses services pour utiliser la solution photovoltaïque pour l'ECS à plus ou moins 1000 euros. Je me dis _C'est dans mon budget et l'artisan que je recherchais !_.
 

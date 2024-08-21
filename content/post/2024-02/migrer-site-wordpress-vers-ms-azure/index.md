@@ -153,7 +153,7 @@ Pour l’activer, voici les étapes à suivre :
 - Faites défiler vers le bas pour trouver le paramètre HTTP/2 et réglez-le sur `2.0`.
 - Sauvegardez et redémarrez l’_App Service_.
 
-Vous pouvez également trouver la configuration brute de l’_App Service_ dans [Azure Resource Explorer](https://resources.azure.com), mais il est plus délicat de l’éditer.
+Vous pouvez également trouver la configuration brute de l’_App Service_ dans Azure Resource Explorer (`https://resources.azure.com`), mais il est plus délicat de l’éditer.
 
 Si vous êtes intéressés, rendez-vous sous _subscriptions > Microsoft Azure Sponsorship > resourceGroup > RG-YourOrg-Websites > providers > Microsoft.Web > sites > YourWebsiteName (c’est-à-dire le nom de votre \_\_\_\_App Service_.
 

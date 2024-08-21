@@ -9,7 +9,7 @@ categories:
 tags:
   - Astuce Du Jour
   - Redis
-  - .NET Core
+  - DotNet Core
 ---
 
 ## Le contexte du problème

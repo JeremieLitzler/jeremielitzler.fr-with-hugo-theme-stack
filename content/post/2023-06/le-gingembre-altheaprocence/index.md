@@ -66,7 +66,7 @@ Cela aide aussi les personnes qui développent de la plaque artérielle.
 
 ### Pour les nausées
 
-Que ce soit les nausées du transport, des chimiothérapies, [de nombreuses études ont validé](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7585712/#:~:text=En%20%C3%A9tudiant%20l'efficacit%C3%A9%20du,r%C3%A9duire%20les%20naus%C3%A9es%20de%2040%20%25.) cela.
+Que ce soit les nausées du transport, des chimiothérapies, de nombreuses études ont validé (`https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7585712/#:~:text=En%20%C3%A9tudiant%20l'efficacit%C3%A9%20du,r%C3%A9duire%20les%20naus%C3%A9es%20de%2040%20%25.`) cela.
 
 Vous verrez des études plus ou moins concluantes, donc essayez et voyez par vous-mêmes.
 

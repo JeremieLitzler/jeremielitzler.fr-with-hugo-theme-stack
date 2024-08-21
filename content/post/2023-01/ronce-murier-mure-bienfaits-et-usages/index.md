@@ -60,7 +60,7 @@ De couleur blanche ou légèrement rosée, elles sont regroupées en grappes.
 
 ![Mûre sauvage](images/mure-sauvage.jpg)
 
-Credits: image extraite de www.canon.photo.free.fr.
+Credits: image extraite de `www.canon.photo.free.fr`.
 
 On le connait sur le nom de _mûre_.
 

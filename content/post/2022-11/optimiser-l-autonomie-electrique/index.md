@@ -2,7 +2,7 @@
 title: "Optimisation de l’autonomie électrique pour l'hiver"
 description: "La première étape est de rendre autonomes mon poêle à granulés, les LED et la VMI pour l’hiver 2022-2023. Étudions ensemble comment je vais m’y prendre."
 date: 2022-11-08
-image: '/images/2022-09-06-optimiser-l-autonomie-electrique.jpg'
+image: "/images/2022-09-06-optimiser-l-autonomie-electrique.jpg"
 imageAlt: Un câble débranchée devant une prise murale
 categories:
   - Energie
@@ -72,7 +72,7 @@ Il utilise des [batteries Rolls Royce](https://www.google.com/search?q=batteries
 
 Il ne passe pas en dessous de 70 %.
 
-Sur [ce site](https://www.elysun-store.fr/batterie-solaire-rolls-serie-4000-t-12-250.html), on voit qu’il y a quasiment le double de cycle en décharge à 50 % vs décharge à 80 %, 3,28 ans vs 5,48 ans d’espérance de vie.
+Sur [ce site](https://www.batterie-solaire.com/236-batterie-rolls-serie-4000), on voit qu’il y a quasiment le double de cycle en décharge à 50 % vs décharge à 80 %, 3,28 ans vs 5,48 ans d’espérance de vie.
 
 Son système est trop onéreux pour moi.
 
