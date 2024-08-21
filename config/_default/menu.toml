@@ -11,6 +11,7 @@
 identifier = "github"
 name = "GitHub"
 url = "https://github.com/JeremieLitzler"
+weight = 20
 
 [social.params]
 icon = "brand-github"
@@ -19,14 +20,25 @@ icon = "brand-github"
 identifier = "linkedin"
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/jeremielitzler/"
+weight = 10
 
 [social.params]
 icon = "brand-linkedin"
 
 [[social]]
 identifier = "twitter"
-name = "Twitter"
+name = "X"
 url = "https://twitter.com/LitzlerJeremie"
+weight = 30
 
 [social.params]
 icon = "brand-x"
+
+[[social]]
+identifier = "en_website"
+name = "English website"
+url = "https://iamjeremie.me"
+weight = 400
+
+[social.params]
+icon = "language"
