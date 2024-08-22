@@ -90,7 +90,7 @@ Elles ne doivent pas compromettre l’expérience de l’utilisateur ou la viabi
 
 En outre, les réductions ne doivent pas empêcher l’extensibilité future ou compromettre les objectifs commerciaux.
 
-## 4. La phase de décélération
+## 4. Phase de décélération
 
 On se trouve ici dans la fin du cycle.
 
