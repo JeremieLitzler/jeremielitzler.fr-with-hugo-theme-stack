@@ -112,7 +112,7 @@ Au total, vous prenez 8 semaines pour compléter un cycle et cela semble suffis
 
 J’ai hâte de l’essayer.
 
-{{< blockcontainer jli-notice-tip « Suivez-moi »>}}
+{{< blockcontainer jli-notice-tip "Suivez-moi">}}
 
 Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et de marquer mon blog d’un signet pour lire d’autres articles à l’avenir.
 
