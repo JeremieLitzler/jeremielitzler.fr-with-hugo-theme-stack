@@ -189,7 +189,7 @@ Similarly, `hugo-theme-stack-master\layouts\partials\head\opengraph\provider\twi
 
 There, you have it. No fancy plugin, no dependency (except for Go and Hugo), no complex setup. You can use Hugo and Jimmy’s theme and build today your blog with good SEO out-of-the-box!
 
-I have yet to build a boilerplate. [Let me know if you need help](../../../page/contact-me/index.md).
+I have yet to build a boilerplate. [Let me know if you need help](../../../page/contactez-moi/index.md).
 
 Start blogging today and forget WordPress!
 
