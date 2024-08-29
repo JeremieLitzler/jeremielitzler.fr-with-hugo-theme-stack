@@ -200,7 +200,7 @@ Je n’ai pas encore construit de kit de démarrage. [Faites-moi savoir si vous 
 
 Commencez à bloguer dès aujourd’hui et oubliez WordPress !
 
-{{< blockcontainer jli-notice-tip "Suivez-moi !">}}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
 Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
