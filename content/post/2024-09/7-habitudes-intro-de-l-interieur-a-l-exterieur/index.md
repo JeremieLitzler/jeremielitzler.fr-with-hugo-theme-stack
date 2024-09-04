@@ -1,13 +1,14 @@
 ---
 title: "7 Habitutes de Stephen R. Covey - De l’intérieur à l’extérieur"
 description: "La consistance est essentielle, à la maison, au travail, partout. Ce que j’aime dans l’approche De l’intérieur à l’extérieur, c'est qu'elle vous rend responsable. Entrons dans le vif du sujet."
-date: 2024-09-16
+date: 2024-10-16
 image: images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg
 imageAlt: Principes et modèles de comportement intériorisés
 categories:
   - Livres
 tags:
   - 7 habitudes des gens efficaces
+draft: true
 ---
 
 ## Changement de paradigme
