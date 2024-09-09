@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant Client
+    participant Serveur
+
+    Note over Client,Serveur: Echange de la clé RSA
+    Client->>Client: Génère 46 octets aléatoires
+    Client->>Client: Positionne dans les 2 premiers octets la version TLS
+    Client->>Serveur: Encrypte le secret Pré-Maître avec la clé SSL publique du serveur
+    Serveur->>Serveur: Décrypte le secret Pré-Maître avec sa clé SSL privé
+
+    Note over Client,Serveur: OU
+
+    Note over Client,Serveur: Echange de clé "Diffie-Hellman"
+    Client->>Serveur: Envoie sa valeur DH publique
+    Serveur->>Client: Envoie sa valeur DH publique
+    Client->>Client: Génère le secret partagé
+    Serveur->>Serveur: Génère le secret partagé
+
+    Note over Client,Serveur: Les deux méthodes continuent...
+    Client->>Client: Déduit le secret maître
+    Serveur->>Serveur: Déduit le secret maître
+    Note over Client,Serveur: Utilise le secret maître pour générer les clés de session
