@@ -3,7 +3,7 @@ title: "Wise et transférer de l'argent à l'international"
 description: "Wise, anciennement connu sous le nom de TransferWise, est une société financière fondée en 2011 par les entrepreneurs estoniens Kristo Käärmann et Taavet Hinrikus."
 image: images/2024-08-19-inside-look-of-wise-android-app.jpg
 imageAlt: "Aperçu dans l'application Android de Wise"
-date: 2024-08-19
+date: 2024-09-10
 categories:
   - Avis De Produits
 tags:
