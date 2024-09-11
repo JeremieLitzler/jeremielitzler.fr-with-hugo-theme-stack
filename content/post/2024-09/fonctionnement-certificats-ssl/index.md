@@ -3,7 +3,7 @@ title: "Comment les certificats SSL fonctionnent-ils ?"
 description: "Ils sont utilisés pour sécuriser toutes nos activités en ligne, empêchant les pirates et les personnes malveillantes de voler des informations sensibles."
 image: images/2024-09-02-handshake-between-two-individuals.jpg
 imageAlt: Poignée de main entre deux personnes
-date: 2024-09-09
+date: 2024-09-11
 categories:
   - Développement Web
 tags:
