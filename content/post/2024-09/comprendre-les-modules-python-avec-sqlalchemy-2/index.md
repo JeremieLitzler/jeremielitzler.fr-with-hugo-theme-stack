@@ -10,6 +10,10 @@ tags:
   - Python
 ---
 
+Comprendre les modules en Python est une étape importante pour l’apprentissage du langage de programmation.
+
+Dans cet article, je ne prétends pas expliquer tout le concept, mais j’explique comment, dans un scénario très précis, j’ai compris que cela ne fonctionnait pas comment le C#, par exemple.
+
 ## Le contexte
 
 Il y a quelques mois, je travaillais sur une simple API REST pour acquérir les compétences de développement backend avec Python, Flask 3 et SQL Alchemy 2.
