@@ -1,5 +1,5 @@
 ---
-title: "Comprendre l’usage des entités avec SQLAlchemy 2.0"
+title: "Comprendre l’usage des modules Python avec SQLAlchemy 2.0"
 description: "J’ai rencontré un petit problème en essayant de diviser mes modèles de base de données en fichiers séparés sur une API REST en utilisant Python et SQLAlchemy. Passons en revue le problème et sa solution."
 image: images/2024-07-30-a-green-bug.jpg
 imageAlt: "Un insecte vert"
