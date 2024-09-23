@@ -5,18 +5,18 @@
   <rect width="500" height="300" fill="#f0f8ff" opacity="0.7"/>
   
   <!-- Words (same as before) -->
-  <text x="250" y="150" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" font-size="40" fill="#1e90ff" text-anchor="middle">BE PROACTIVE</text>
+  <text x="250" y="150" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif" font-size="40" fill="#1e90ff" text-anchor="middle">PROACTIVITÉ</text>
   
-  <text x="100" y="80" font-family="Georgia, serif" font-size="24" fill="#4169e1" text-anchor="middle">Compétence</text>
+  <text x="100" y="90" font-family="Georgia, serif" font-size="24" fill="#4169e1" text-anchor="middle">Compétence</text>
   <text x="400" y="80" font-family="'Trebuchet MS', sans-serif" font-size="24" fill="#4169e1" text-anchor="middle">Choix</text>
   
-  <text x="150" y="220" font-family="'Courier New', monospace" font-size="20" fill="#1e90ff" text-anchor="middle">Conscience de soi</text>
-  <text x="350" y="220" font-family="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif" font-size="20" fill="#1e90ff" text-anchor="middle">Capacité de réaction</text>
+  <text x="120" y="220" font-family="'Courier New', monospace" font-size="20" fill="#1e90ff" text-anchor="middle">Conscience de soi</text>
+  <text x="370" y="220" font-family="'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif" font-size="20" fill="#1e90ff" text-anchor="middle">Capacité de réaction</text>
   
   <text x="50" y="150" font-family="'Brush Script MT', cursive" font-size="18" fill="#4682b4" text-anchor="middle" transform="rotate(-30 50,150)">Initiative</text>
   <text x="450" y="150" font-family="Verdana, sans-serif" font-size="18" fill="#4682b4" text-anchor="middle" transform="rotate(30 450,150)">Axé sur les valeurs</text>
   
-  <text x="200" y="50" font-family="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" font-size="16" fill="#6495ed" text-anchor="middle">Zone d'influence</text>
+  <text x="200" y="70" font-family="'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" font-size="16" fill="#6495ed" text-anchor="middle">Zone d'influence</text>
   <text x="300" y="250" font-family="'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" font-size="16" fill="#6495ed" text-anchor="middle">Zone de préoccupation</text>
   
   <text x="100" y="280" font-family="'Comic Sans MS', 'Comic Sans', cursive" font-size="14" fill="#87cefa" text-anchor="middle">Langue</text>
