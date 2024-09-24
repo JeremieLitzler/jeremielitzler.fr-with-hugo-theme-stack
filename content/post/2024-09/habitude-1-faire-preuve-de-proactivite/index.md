@@ -30,9 +30,9 @@ Lisez [_comment Viktor Frankl a survécu à l’Holocauste_](https://www.legends
 
 Entre le stimulus et la réponse correspondante, il y a quatre [compétences](https://www.merriam-webster.com/dictionary/endowment) que l’on peut utiliser :
 
-1. La conscience
+1. La prise de conscience
 2. L’imagination
-3. La conscience
+3. Le for intérieur
 4. La volonté indépendante
 
 Tous ces éléments nous rendent uniques par rapport aux animaux. **Nous avons la liberté de choisir**.
