@@ -22,6 +22,20 @@ Je laisse les noms des lames et des onglets en anglais, car j’ai écrit l’ar
 
 Pour le nommage des ressources, vous pouvez utiliser le [guide officiel](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) à ce sujet.
 
+## Configuration du groupe de ressources
+
+Avant de créer une ressource Azure, je vous recommande de créer un groupe de ressources.
+
+Pourquoi ?
+
+Tout d'abord, cela vous permettra d'affiner les autorisations au sein de votre organisation. En effet, vous ne voulez pas toujours donner à tout le monde l'accès à toutes les ressources.
+
+Deuxièmement, cela permet d'organiser les ressources en fonction d'un domaine ou d'un besoin métier précis, afin d'éviter le désordre ou la confusion. Dans cet article, nous allons créer un grand nombre de ressources.
+
+Troisièmement, les balises ou _tags_ que vous pouvez appliquer au groupe de ressources peuvent vous aider à organiser vos ressources de manière à ce que vous puissiez contrôler les coûts et les factures plus facilement.
+
+Pour créer un groupe de ressources, naviguez sur le portail Azure et recherchez _Resource Groups_, donnez-lui un nom, marquez-le avec une balise, si nécessaire (par exemple `awesome_python_application`), et créez toutes les ressources ci-dessous en utilisant ce groupe de ressources.
+
 ## Configuration du coffre-fort
 
 ### Créer le _Key Vault_ (coffre-fort de clés)
