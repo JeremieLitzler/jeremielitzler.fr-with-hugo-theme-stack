@@ -26,11 +26,11 @@ Pour le nommage des ressources, vous pouvez utiliser le [guide officiel](https:/
 
 Avant de créer une ressource Azure, je vous recommande de créer un groupe de ressources.
 
-Pourquoi ?
+Pourquoi ?
 
-Tout d'abord, cela vous permettra d'affiner les autorisations au sein de votre organisation. En effet, vous ne voulez pas toujours donner à tout le monde l'accès à toutes les ressources.
+Tout d’abord, cela vous permettra d’affiner les autorisations au sein de votre organisation. En effet, vous ne voulez pas toujours donner à tout le monde l’accès à toutes les ressources.
 
-Deuxièmement, cela permet d'organiser les ressources en fonction d'un domaine ou d'un besoin métier précis, afin d'éviter le désordre ou la confusion. Dans cet article, nous allons créer un grand nombre de ressources.
+Deuxièmement, cela permet d’organiser les ressources en fonction d’un domaine ou d’un besoin métier précis, afin d’éviter le désordre ou la confusion. Dans cet article, nous allons créer un grand nombre de ressources.
 
 Troisièmement, les balises ou _tags_ que vous pouvez appliquer au groupe de ressources peuvent vous aider à organiser vos ressources de manière à ce que vous puissiez contrôler les coûts et les factures plus facilement.
 
