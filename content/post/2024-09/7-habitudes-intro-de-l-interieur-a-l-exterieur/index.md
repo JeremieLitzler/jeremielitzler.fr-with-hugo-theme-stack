@@ -8,7 +8,6 @@ categories:
   - Livres
 tags:
   - 7 habitudes des gens efficaces
-draft: true
 ---
 
 ## Changement de paradigme
@@ -17,55 +16,55 @@ draft: true
 >
 > ~ Stephen R. Covey
 
-CORPS ⇒ PENSÉ ⇒ CŒUR ⇒ ESPRIT
+CORPS ⇒ PENSÉE ⇒ CŒUR ⇒ ESPRIT
 
 Demandez-vous : comment est-ce que je perçois mon attitude ?
 
-Il n’y a pas de raccourcis dans la vie. Si vous en prenez un, vous obtiendrez un succès à court terme, mais vous récolterez probablement des problèmes à long terme....
+Il n’y a pas de raccourcis dans la vie. Si vous en prenez un, vous obtiendrez peut-être un succès à court terme, mais vous récolterez probablement des difficultés sur le long terme....
 
 > Ce que nous sommes est bien plus éloquent que tout ce que nous pouvons dire ou faire.
 >
 > ~ Stephen R. Covey
 
-Quelles sont mes conceptions sur « la façon dont les choses sont » (réalités) et « la façon dont les choses devraient être » (valeurs) ?
+Quelles sont les conceptions sur « la façon dont les choses sont » (réalités) et « la façon dont les choses devraient être » (valeurs) ?
 
-Une série d’images étonnantes pour remettre en question votre point de vue personnel](images/3-femmes-dans-un-dessin.png)
+[Une série d’images étonnantes pour remettre en question votre point de vue personnel](images/3-femmes-dans-un-dessin.png)
 
 Combien de jeunes femmes distinguez-vous ? Et combien de femmes âgées ?
 
-À la page 39 du livre, le changement de paradigme est intéressant à observer au moment où j’ai l’impression que mes enfants sont bruyants :
+À la page 39 du livre, le changement de paradigme est intéressant à observer au moment où on peut avoir l’impression que des enfants sont bruyants autour de nous :
 
 > Un homme et ses enfants sont entrés dans le métro, les enfants étaient très bruyants et dérangeaient les autres passagers. Le père ne semblait pas s’en préoccuper.
 >
-> Stephen R. Covey est venu le voir et lui a demandé de les contrôler pour qu’ils gênent les autres passagers. L’homme vient de voir sa femme mourir il y a une heure.
+> Stephen R. Covey est venu le voir et lui a demandé de les contrôler pour qu’ils gênent les autres passagers. L’homme venait de voir sa femme mourir il y a une heure.
 
-Réfléchissez à ce paradigme : vaut-il la peine de crier et de se mettre en colère après les enfants lorsqu’ils vous *ennuient* ? Certainement pas.
+Réfléchissez à ce paradigme : vaut-il la peine de crier et de se mettre en colère auprès d'enfants lorsqu’ils vous *ennuient* ou vous _dérangent_ ? Certainement pas.
 
-Voir la citation de Thoreau :
+Voir une citation de Thoreau :
 
 > « Pour chaque millier de coups portés aux feuilles du mal, il y en a un qui frappe à la racine »
 
 Comme l’a dit Stephen R. Covey :
 
-> Nous ne pouvons obtenir que des améliorations partielles dans nos vies si nous nous attaquons aux feuilles de nos attitudes et de nos comportements et si nous travaillons sur la racine, les paradigmes à partir desquels nos attitudes et nos comportements se développent.
+> Nous ne pouvons obtenir que des améliorations partielles dans nos vies si nous nous attaquons aux feuilles de nos attitudes et de nos comportements et si nous travaillons sur la racine [du problème], les paradigmes à partir desquels nos attitudes et nos comportements se développent.
 
 ## Principes
 
 Il s’agit des éléments suivants :
 
-- équité
+- l’équité
 - l’intégrité
 - l’honnêteté
 - le service
-- qualité/excellence
-- dignité humaine
-- patience
-- bienveillance
-- encouragement
+- la qualité/excellence
+- la dignité humaine
+- la patience
+- la bienveillance
+- l’encouragement
 
 Il y a un processus à suivre pour aller de A à B.
 
-Aucun raccourci n’est possible. Je sais de quoi je parle : dans mon métier d’ingénieur logiciel, lorsque nous sautons une étape _juste pour gagner du temps_ ou _pour livrer plus vite_, nous payons plus cher par la suite.
+Aucun raccourci n’est possible. Je sais de quoi je parle : dans mon métier d’ingénieur logiciel, lorsque nous sautons une étape _juste pour gagner du temps_ ou _pour livrer plus vite_, nous le payons plus cher par la suite.
 
 Cela est encore plus vrai dans nos relations.
 
@@ -73,7 +72,7 @@ Aussi, pour grandir, nous devons faire des pas dans la bonne direction.
 
 Les relations interpersonnelles impliquent d’écouter. Et pour écouter, il faut de la force émotionnelle.
 
-Regardez à nouveau le dessin :
+Regardez et étudiez ce dessin :
 
 [Les principes intériorisés et les modèles de comportement font nos habitudes](images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg)
 
@@ -81,16 +80,16 @@ Quelles sont donc les 7 habitudes ?
 
 Elles vous permettent de passer :
 
-- premièrement, de la dépendance à l’indépendance
-- deuxièmement, de l’indépendance à l’interdépendance
+- premièrement, de la dépendance à l’indépendance.
+- deuxièmement, de l’indépendance à l’interdépendance.
 
 Je pense que je suis trop axé sur l’indépendance. En lisant les pages 57 et 58, je vois que je peux continuer à essayer de m’améliorer seul, mais je ne me sentirai ni satisfait ni efficace.
 
 J’ai besoin d’aide : l’interdépendance, c’est continuer à grandir avec les autres.
 
-Trop d’indépendance est souvent un signe de dépendance dans la réalité.
+En réalité, trop d’indépendance est souvent un signe de dépendance.
 
-On pourrait comparer cela à la récolte d’une culture après l’avoir plantée au lieu de faire le contraire, ce qui est évidemment impossible.
+On pourrait comparer cela à la récolte d’une culture avant l’avoir plantée au lieu du contraire, ce qui est évidemment impossible.
 
 ## Efficience définie
 
@@ -102,7 +101,7 @@ PC signifie « Production Capabilities » ou Capacités de production en fran�
 
 Si l’un des deux manque, cela ne peut pas fonctionner.
 
-Par exemple, dans son livre, Stephen R. Covey raconte l’histoire de la poule aux œufs d’or. Le fermier la tue lorsqu’il devient trop gourmand pour attendre le lendemain afin d’obtenir l’œuf d’or. Il pensait qu’en « ouvrant la poule », il obtiendrait plus d’œufs d’or. Mais en fin de compte, il n’en aura aucun, pour le reste de sa vie.
+Par exemple, dans son livre, Stephen R. Covey raconte l’histoire de la poule aux œufs d’or. Le fermier la tue lorsqu’il devient trop gourmand pour attendre le lendemain afin d’obtenir l’œuf d’or. Il pensait qu’en « ouvrant la poule », il obtiendrait plus d’œufs d’or. Mais en fin de compte, il n’en aura plus jamais un seul.
 
 Le principe P/PC s’applique à trois types d’actifs :
 
@@ -129,8 +128,6 @@ Permettez-moi de citer deux paragraphes :
 > Ou alors, vous pouvez vous laisser aller. Vous pouvez vous laisser tenter par les œufs d’or de la popularité, en leur faisant plaisir, en leur donnant toujours ce qu’ils veulent. Ils grandissent alors sans aucun sens interne des normes ou des attentes, sans engagement personnel à être disciplinés ou responsables.
 >
 > ~ Stephen R. Covey
-
-En résumé, prenez soin de l’oie — la qualité de la relation — et elle sera bien nourrie et en bonne santé.
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
