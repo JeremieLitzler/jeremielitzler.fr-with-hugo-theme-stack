@@ -74,7 +74,7 @@ Les relations interpersonnelles impliquent d’écouter. Et pour écouter, il fa
 
 Regardez et étudiez ce dessin :
 
-[Les principes intériorisés et les modèles de comportement font nos habitudes](images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg)
+![Les principes intériorisés et les modèles de comportement font nos habitudes](images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg)
 
 Quelles sont donc les 7 habitudes ?
 
