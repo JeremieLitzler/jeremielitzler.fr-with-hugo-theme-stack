@@ -7,7 +7,7 @@ date: 2024-09-23
 categories:
   - Livres
 tags:
-  - 7 Habitudes
+  - 7 habitudes des gens efficaces
 ---
 
 Cela commence par la conscience de soi et des autres.
