@@ -94,4 +94,10 @@ Voir le code complet de cet exemple dans [l’environnement de démonstration de
 
 Il y a plus d’informations sur l’utilisation des transitions, comme [les modes de transition](https://vuejs.org/guide/built-ins/transition.html#transition-modes), [les transitions entre composants](https://vuejs.org/guide/built-ins/transition.html#transition-between-components) ou [les transitions dynamiques](https://vuejs.org/guide/built-ins/transition.html#dynamic-transitions), alors n’hésitent pas à consulter la documentation.
 
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
+
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
+
+{{< /blockcontainer >}}
+
 Crédits: l’image d’en-tête provient de [Federico Beccari](https://unsplash.com/@federize?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/time-lapse-photography-of-square-containers-at-night-ahi73ZN5P0Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
