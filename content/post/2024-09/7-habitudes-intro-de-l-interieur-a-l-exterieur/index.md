@@ -28,7 +28,7 @@ Il n’y a pas de raccourcis dans la vie. Si vous en prenez un, vous obtiendrez 
 
 Quelles sont les conceptions sur « la façon dont les choses sont » (réalités) et « la façon dont les choses devraient être » (valeurs) ?
 
-[Une série d’images étonnantes pour remettre en question votre point de vue personnel](images/3-femmes-dans-un-dessin.png)
+![Une série d’images étonnantes pour remettre en question votre point de vue personnel](images/3-femmes-dans-un-dessin.png)
 
 Combien de jeunes femmes distinguez-vous ? Et combien de femmes âgées ?
 
@@ -74,7 +74,7 @@ Les relations interpersonnelles impliquent d’écouter. Et pour écouter, il fa
 
 Regardez et étudiez ce dessin :
 
-[Les principes intériorisés et les modèles de comportement font nos habitudes](images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg)
+![Les principes intériorisés et les modèles de comportement font nos habitudes](images/2023-09-31-internalized-principles-and-patterns-of-behavior.jpg)
 
 Quelles sont donc les 7 habitudes ?
 
