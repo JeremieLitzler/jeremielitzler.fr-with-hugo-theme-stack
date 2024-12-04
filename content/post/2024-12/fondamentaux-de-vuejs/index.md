@@ -22,7 +22,7 @@ Le cours est **gratuit** et disponible [ici](https://vueschool.io/courses/vuejs-
 
 {{< /blockcontainer >}}
 
-## Comprendre les crochets du cycle de vie dans Vue.js
+## Comprendre les étapes du cycle de vie dans Vue.js
 
 Vous pouvez trouver le diagramme du cycle de vie [ici](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram).
 
