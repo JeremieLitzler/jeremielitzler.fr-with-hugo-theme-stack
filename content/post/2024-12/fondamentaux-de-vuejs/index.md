@@ -10,7 +10,7 @@ tags:
   - Vue
 ---
 
-Vue, c’est le pied !
+Vue.js, c’est le pied !
 
 J’ai travaillé un peu avec React. Mais je n’ai pas aimé l’approche JSX. Pour moi, elle brise le concept de séparation des préoccupations.
 
