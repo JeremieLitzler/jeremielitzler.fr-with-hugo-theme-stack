@@ -5,7 +5,7 @@ image: images/2024-11-29-ladder-leaning-on-bookshelf.jpg
 imageAlt: Échelle en bois appuyée sur une étagère
 date: 2024-12-09
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - Entity Framework
   - Modèles de conception
