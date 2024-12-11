@@ -2,7 +2,7 @@
 title: "Comment enregistrer un fichier avec du JavaScript?"
 description: "Parfois, il est pratique de sauvegarder du contenu directement depuis le code JavaScript vers un fichier physique. Voici la solution !"
 image: do-something-great-sign.jpg
-imageAlt: 'Un panneau « Do Something Great » dans l'obscurité'
+imageAlt: "Un panneau « Do Something Great » dans l'obscurité"
 date: 2024-12-11
 categories:
   - Développement Web
@@ -35,8 +35,6 @@ function downloadFile(filename, textData, dataType = "text/plain") {
 ## La démo sur jsFiddle
 
 Voici une démonstration en direct [sur jsfiddle](https://jsfiddle.net/puzzlout/ehyqajLr/3/).
-
-{{< blockcontainer jli-notice-tip « Suivez-moi »>}}}
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
