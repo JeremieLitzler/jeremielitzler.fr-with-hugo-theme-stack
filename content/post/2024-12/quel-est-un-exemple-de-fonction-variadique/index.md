@@ -1,5 +1,5 @@
 ---
-title: "Quel est un exemple de fonction variadique ?"
+title: "Un exemple de fonction variadique ?"
 description: "La fonction variadique permettent de passer un nombre variable d'arguments à une méthode."
 image: 2024-12-02-exemple-de-code-pour-une-fonction-variadique.jpg
 imageAlt: Exemple de code pour une fonction variadique
