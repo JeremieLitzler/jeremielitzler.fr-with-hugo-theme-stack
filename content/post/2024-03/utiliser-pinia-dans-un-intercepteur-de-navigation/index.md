@@ -29,7 +29,6 @@ Quelle est la solution ? J’ai suivi les étapes de [cette réponse Stackoverfl
 
 La signature du store `useStory` n’a pas besoin d’être modifiée. Fournir l’instance `pinia` à `useStore()` est suffisant pour que cela fonctionne.
 
-Si vous voulez apprendre à utiliser Pinia, [VueSchool.io](https://vueschool.io/courses/) propose [un excellent cours](https://vueschool.io/courses/pinia-the-enjoyable-vue-store) sur le sujet ! Je vous le recommande.  
+Si vous voulez apprendre à utiliser Pinia, [VueSchool.io](https://vueschool.io/courses/) propose [un excellent cours](https://vueschool.io/courses/pinia-the-enjoyable-vue-store) sur le sujet ! Je vous le recommande.
 
 Crédit : image tirée du cours de VueSchool sur Pinia.
- 
