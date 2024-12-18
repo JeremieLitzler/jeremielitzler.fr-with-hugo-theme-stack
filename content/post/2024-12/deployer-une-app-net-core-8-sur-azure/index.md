@@ -8,6 +8,7 @@ categories:
   - Développement Web
 tags:
   - Microsoft Azure
+draft: true
 ---
 
 Je travaille avec Microsoft Azure depuis un certain temps maintenant, et j'ai constaté que la configuration des journaux n'était pas triviale.
@@ -71,70 +72,70 @@ Sous l'onglet _Tags_, définissez les tags pour organiser vos ressources. Vous d
 
 Terminez par _Review + create_ et confirmez la création de la ressource.
 
-## Deploy the Application to Microsoft Azure
+## Déployer l'application sur Microsoft Azure
 
-Now, let’s deploy the application to the newly created _App Service_.
+Maintenant, déployons l'application vers la ressource _App Service_ nouvellement créé.
 
-Right-click on the project and select _Publish._
+Faites un clic droit sur le projet et sélectionnez _Publish._.
 
-You’ll need to create a publish profile, so click _Add a publish profile_.
+Vous devrez créer un profil de publication, donc cliquez sur _Add a publish profile_.
 
-On the modal,
+Dans la fenêtre qui vient de s'ouvrir,
 
-- Select _Azure_ as the _Target._
-- Select _Azure App Service (Linux)_ as the _Specific target_
-- Select the _App Service_ you just created. You need to be connected in Visual Studio to the same account you used to create the resource in Azure. Otherwise, you won’t see it.
-- Select _Publish (generatates pubxml file)_ as the _Deployment type_.
+- Sélectionnez _Azure_ comme _Target_.
+- Sélectionnez _Azure App Service (Linux)_ comme _Specific target_.
+- Sélectionnez la ressource _App Service_ que vous venez de créer. Vous devez être connecté dans Visual Studio au même compte Microsoft que celui que vous avez utilisé pour créer la ressource dans Azure. Sinon, vous ne le verrez pas.
+- Sélectionnez _Publish (generatates pubxml file)_ comme _Deployment type_.
 
-Close the modal and hit _Publish_.
+Fermez la fenêtre modale et cliquez sur _Publish_.
 
-After a couple of minutes, the application should be deployed to Azure. Use the _Overview_ blade of the _App Service_ on Azure to browse the Web API: it should be something like `demowebapinetcore8-fcg3bqdgbme3dchd.westeurope-01.azurewebsites.net`. Add `/weatherforecast` to validate the API is working.
+Après quelques minutes, l'application devrait être déployée sur Azure. Utilisez la lame _Overview_ de la ressource _App Service_ sur Azure pour naviguer sur l'API Web : elle devrait ressembler à `demowebapinetcore8-fcg3bqdgbme3dchd.westeurope-01.azurewebsites.net`. Ajoutez `/weatherforecast` pour valider le fonctionnement de l'API.
 
-## Enable the Application Logs to the FileSystem
+## Activer les traces applicatives dans le système de fichiers
 
-On the Azure portal, browse your _App Service_ resource and search for the _App Service Logs_ blade.
+Sur le portail Azure, rendez-vous sur votre ressource _App Service_ et recherchez la lame _App Service Logs_.
 
-Enable the _Application logging_ to _File System_ and set the _Retention Period_ to _7 days_.
+Activez l'option _Application logging_ to _File System_ et définissez la _Retention Period_ sur _7 days_.
 
-Save the changes.
+Enregistrez les modifications.
 
-To check it is working, search for the _Advanced Tools_ blade and click _Go_.
+Pour vérifier le fonctionnement, recherchez la lame _Outils avancés_ et cliquez sur _Go_.
 
-In the new browser tab that opened, select the _Bash_ tab to load a SSH client, also known as the _Kudu_.
+Dans le nouvel onglet du navigateur qui s'est ouvert, sélectionnez l'onglet _Bash_ pour charger un client SSH, également connu sous le nom de _Kudu_.
 
-Type the following command:
+Saisissez la commande suivante :
 
 ```bash
 ls -l LogFiles
 ```
 
-You should see a file named `yyyy_mm_dd_[some_hash_value]_default_docker.log`. This is where the logs you add in your application will go.
+Cela devrait lister un fichier nommé `yyyy_mm_dd_[some_hash_value]_default_docker.log`. C'est là qu'iront les tracent de votre application.
 
-### About the LogStream
+### À propos de la lame _LogStream_
 
-You may have come across YouTube video or articles that tells you that you can view the logs live in the _LogStream._ Maybe, it was possible or is still possible in certain conditions. I find that it is not reliable. I’ve tried many things and it often remains stuck with the message “Connected!”…
+Vous avez peut-être vu des vidéos ou des articles sur YouTube qui vous disent que vous pouvez voir les journaux en direct dans le _LogStream._ Peut-être que c'était possible ou que c'est encore possible dans certaines conditions. Je trouve personnellement que ce n'est pas fiable. J'ai essayé beaucoup de choses et ça reste souvent bloqué avec le message « _Connected!_ »...
 
-### Modify `Program.cs` to Add Your First Log
+### Modifier `Program.cs` pour ajouter votre première trace applicative
 
-First, before your instanciate the builder, add the following lines:
+Tout d'abord, avant d'instancier le constructeur, ajoutez les lignes suivantes :
 
 ```csharp
 using var loggerFactory = LoggerFactory.Create(loggingBuilder => loggingBuilder
     .SetMinimumLevel(LogLevel.Trace)
-    .AddConsole());
+    .AddConsole()) ;
 
-ILogger logger = loggerFactory.CreateLogger<Program>();
-logger.LogInformation("Program.cs logger ready :)");
+ILogger logger = loggerFactory.CreateLogger<Program>() ;
+logger.LogInformation(" Logger Program.cs ready :) ") ;
 
-logger.LogInformation("Program.cs > init builder...");
-var builder = WebApplication.CreateBuilder(args);
+logger.LogInformation(" Program.cs > init builder... ") ;
+var builder = WebApplication.CreateBuilder(args) ;
 ```
 
-This way, you can debug errors while your application starts.
+De cette manière, vous pouvez déboguer les erreurs pendant le démarrage de votre application.
 
-Let me tell you how important it is when it will come to debug the _OpenIddict_ integration (well, for you, it might not if you follow exactly the same steps as I describe here).
+Laissez-moi vous dire à quel point c'est important lorsqu'il s'agit de déboguer l'intégration de _OpenIddict_ (enfin, pour vous, ce ne sera peut-être pas le cas si vous suivez exactement les mêmes étapes que celles que je décris ici).
 
-To test this, hit _Publish_ again and wait that the _App Service_ restarts. In the log file, you should see the two lines of log near the end of the file:
+Pour tester cela, appuyez sur _Publish_ à nouveau et attendez que l'_App Service_ redémarre. Dans le fichier de traces applicatives, vous devriez voir les deux lignes de log vers la fin du fichier :
 
 ```bash
 cat LogFiles/yyy_mm_dd_[some_hash_value]_default_docker.log
@@ -144,9 +145,9 @@ cat LogFiles/yyy_mm_dd_[some_hash_value]_default_docker.log
 # 2024-12-10T10:37:19.5366935Z       Program.cs > init builder...
 ```
 
-### Modify `WeatherForecastController.cs` to Add a Log
+### Modifier `WeatherForecastController.cs` pour ajouter une trace applicative
 
-In the controller file, use dependency injection to use the logger:
+Dans le fichier du contrôleur, utilisez l'injection de dépendance pour utiliser le logger :
 
 ```csharp
         private readonly ILogger<WeatherForecastController> _logger;
@@ -164,18 +165,20 @@ In the controller file, use dependency injection to use the logger:
         }
 ```
 
-To test this, hit _Publish_ again and wait that the _App Service_ restarts. Request the `/weatherforecast` endpoint and check the logs as described above.
+Pour tester cela, appuyez à nouveau sur _Publish_ et attendez que le _App Service_ redémarre. Naviguer sur `/weatherforecast` et vérifiez la présence des traces ajoutées dans le contrôleur.
 
 ## Conclusion
 
-That’s it. I've longed so much to understand where those log files where. Somehow, the articles and vlogs outthere show outdated information and this article is what you may be looking for.
+Voilà, c'est fait. J'ai tellement cherché à comprendre où se trouvaient ces fichiers de traces applicatives. D'une manière ou d'une autre, les articles et les vlogs montrent des informations obsolètes et cet article est ce que vous recherchez.
 
-Again, [subscribe to know more](https://iamjeremie.substack.com/) when I release the article about integrating _OpenIddict_ to the application.
+A savoir : chaque solution logicielle, WordPress, Flask, ASP.NET, a sa propre interface pour ajouter des traces applicatives. Si vous trouvez comment les mettre en oeuvre, elles seront ajoutées dans le fichier cité dans cet article.
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+Encore une fois, [abonnez-vous pour la suite] (https://iamjeremie.substack.com/). J'ai prévu un article sur l'intégration de _OpenIddict_ à l'application construite ensemble aujourd'hui.
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
+
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
 
-Credit: Photo by [Craig Adderley](https://www.pexels.com/photo/rustic-woodpile-in-a-lush-forest-clearing-29162610/) on Pexels.
+Crédit: Photo de [Craig Adderley](https://www.pexels.com/photo/rustic-woodpile-in-a-lush-forest-clearing-29162610/) sur Pexels.
