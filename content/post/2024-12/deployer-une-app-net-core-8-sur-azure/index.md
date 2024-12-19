@@ -14,7 +14,7 @@ Je travaille avec Microsoft Azure depuis un certain temps maintenant, et j’ai 
 
 J’ai eu une expérience avec WordPress. Dans cet article, je vais démontrer c’est en réalité simple avec une API web .NET Core 8.
 
-## Conditions préalables
+## Les prérequis
 
 Vous aurez besoin de :
 
@@ -172,7 +172,7 @@ Voilà, c’est fait. J’ai tellement cherché à comprendre où se trouvaient 
 
 À savoir : chaque solution logicielle, WordPress, Flask, ASP.NET, a sa propre interface pour ajouter des traces applicatives. Si vous trouvez comment les mettre en œuvre, elles seront ajoutées dans le fichier cité dans cet article.
 
-Encore une fois, [abonnez-vous pour la suite] (https://iamjeremie.substack.com/). J’ai prévu un article sur l’intégration de _OpenIddict_ à l’application construite ensemble aujourd’hui.
+Encore une fois, [abonnez-vous pour la suite](https://iamjeremie.substack.com/). J’ai prévu un article sur l’intégration de _OpenIddict_ à l’application construite ensemble aujourd’hui.
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
