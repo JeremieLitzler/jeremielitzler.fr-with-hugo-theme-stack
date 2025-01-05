@@ -1,3 +1,5 @@
+ignoreLogs = ['warning-goldmark-raw-html']
+
 #On 2024-03-12
 #Updated build timeout to 60s instead of the default 30s
 #Netlify build reached just > 30s
@@ -6,7 +8,9 @@ timeout = "60s"
 # Change baseurl before deploy
 baseurl = "https://jeremielitzLer.fr"
 languageCode = "fr-fr"
-paginate = 8
+[pagination]
+pagerSize = 8
+
 title = "Jérémie Litzler"
 description = "Je partage ici mes notes et experiences qui, je suis sûr, seront utiles pour au moins une personne. Bonne lecture !"
 
