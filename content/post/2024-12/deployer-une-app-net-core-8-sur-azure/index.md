@@ -164,15 +164,15 @@ Dans le fichier du contrôleur, utilisez l’injection de dépendance pour utili
         }
 ```
 
-Pour tester cela, appuyez à nouveau sur _Publish_ et attendez que le _App Service_ redémarre. Naviguer sur `/weatherforecast` et vérifiez la présence des traces ajoutées dans le contrôleur.
+Pour tester cela, appuyez à nouveau sur _Publish_ et attendez que le _App Service_ redémarre. Naviguez sur `/weatherforecast` et vérifiez la présence des traces ajoutées dans le contrôleur.
 
 ## Conclusion
 
-Voilà, c’est fait. J’ai tellement cherché à comprendre où se trouvaient ces fichiers de traces applicatives. D’une manière ou d’une autre, les articles et les vlogs montrent des informations obsolètes et cet article est ce que vous recherchez.
+Voilà, c’est fait. J’ai tellement cherché à comprendre où se trouvaient ces fichiers de traces applicatives. D’une manière ou d’une autre, les articles et les vlogs montrent des informations obsolètes, et c’est exactement ce que vous recherchiez.
 
-À savoir : chaque solution logicielle, WordPress, Flask, ASP.NET, a sa propre interface pour ajouter des traces applicatives. Si vous trouvez comment les mettre en œuvre, elles seront ajoutées dans le fichier cité dans cet article.
+Chaque application logicielle, que ce soit WordPress, Flask ou ASP.NET, possède une méthode spécifique pour intégrer des traces d’application. Si vous trouvez comment les mettre en œuvre, elles seront ajoutées dans le fichier cité dans cet article.
 
-Encore une fois, [abonnez-vous pour la suite](https://iamjeremie.substack.com/). J’ai prévu un article sur l’intégration de _OpenIddict_ à l’application construite ensemble aujourd’hui.
+Pour la suite, [abonnez-vous pour la suite](https://iamjeremie.substack.com/). J’ai prévu un article sur l’intégration de _OpenIddict_ à l’application construite ensemble aujourd’hui.
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
