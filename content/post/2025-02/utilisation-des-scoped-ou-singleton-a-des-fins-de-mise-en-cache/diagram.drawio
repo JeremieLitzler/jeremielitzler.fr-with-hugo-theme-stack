@@ -1,0 +1,94 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="1PlVf4wnUZVhLs4Grf8J">
+    <mxGraphModel dx="1674" dy="836" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-1" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="280" as="sourcePoint" />
+            <mxPoint x="1390" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-4" value="Instance Singleton" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+          <mxGeometry x="190" y="300" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-5" value="Durée de vie de l&#39;application" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="658" y="238" width="285" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="440" as="sourcePoint" />
+            <mxPoint x="780" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-7" value="Instance&amp;nbsp;Scoped" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
+          <mxGeometry x="190" y="460" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-8" value="Requête HTTP 1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="390" y="400" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-9" value="Instance&amp;nbsp;Scoped" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
+          <mxGeometry x="800" y="460" width="590" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-10" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="440" as="sourcePoint" />
+            <mxPoint x="1390" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-11" value="Requête HTTP 2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1000" y="400" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-12" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="600" as="sourcePoint" />
+            <mxPoint x="480" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-13" value="Instance&amp;nbsp;Transient" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="190" y="620" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-14" value="Injection contrôleur&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="236" y="560" width="198" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-18" value="Instance&amp;nbsp;Transient" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="490" y="620" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-19" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="600" as="sourcePoint" />
+            <mxPoint x="780" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-20" value="Injection vue" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="540" y="560" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-21" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="600" as="sourcePoint" />
+            <mxPoint x="1090" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-22" value="Instance&amp;nbsp;Transient" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="800" y="620" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-24" value="Instance&amp;nbsp;Transient" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="620" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-25" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=default;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1100" y="600" as="sourcePoint" />
+            <mxPoint x="1390" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vxutp4oGIfr7QXqwvSs-26" value="Injection vue" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="1150" y="560" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fBDVT5kyKwmUfIP_IJP9-1" value="Injection contrôleur&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fillColor=none;fontColor=#FFFFFF;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="846" y="560" width="198" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
