@@ -8,7 +8,9 @@ categories:
   - Web Development
 ---
 
-It all depends on the scope and duration of the cache’s validity.
+Which to choose? It all depends on the scope and duration of the cache’s validity.
+
+Let’s me explain a little bit when to use Scoped lifetime and when to use the Singleton lifetime in this new article.
 
 ## Caching per Request (Scoped Lifetime)
 
