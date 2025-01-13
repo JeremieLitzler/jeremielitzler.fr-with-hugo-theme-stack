@@ -8,11 +8,12 @@ timeout = "60s"
 # Change baseurl before deploy
 baseurl = "https://jeremielitzLer.fr"
 languageCode = "fr-fr"
-[pagination]
-pagerSize = 8
 
 title = "Jérémie Litzler"
 description = "Je partage ici mes notes et experiences qui, je suis sûr, seront utiles pour au moins une personne. Bonne lecture !"
+
+[pagination]
+pagerSize = 8
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
