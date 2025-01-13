@@ -35,9 +35,13 @@
                         <img src="{{ $Permalink }}" 
                             width="{{ $Width }}"
                             height="{{ $Height }}" 
-                            loading="lazy">
+							alt="{{ .Params.imageAlt }}"
+							title="{{ .Params.imageAlt }}" />
                     {{ else }}
-                        <img src="{{ $image.permalink }}" loading="lazy" />
+                        <img src="{{ $image.permalink }}" 
+							loading="lazy" 
+							alt="{{ .Params.imageAlt }}"
+							title="{{ .Params.imageAlt }}" />
                     {{ end }}
                 </div>
             {{ end }}
