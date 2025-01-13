@@ -1,6 +1,6 @@
 ---
 title: "Composables vs Pinia vs Provide/Inject"
-description: "Let me break down the key differences and use cases for each approach to state management in Vue 3."
+description: "Permettez-moi de présenter les principales différences et les cas d'utilisation de chaque approche de la gestion des états dans Vue 3."
 image: 2025-01-13-sea-current-stone-pile.jpg
 imageAlt: Sea current stone pile
 date: 2025-01-15
@@ -11,11 +11,11 @@ tags:
 draft: true
 ---
 
-When using Vue, composables, Pinia stores and the provide/inject functionality each play a role in specific use cases.
+Avec Vue.js, les composables, les magasins Pinia et la fonctionnalité provide/inject jouent chacun un rôle dans des cas d'utilisation spécifiques.
 
-I’ll share in this article what I’ve learned about them while working on Vue.js projects.
+Je vais partager dans cet article ce que j'ai appris à leur sujet en travaillant sur plusieurs projets Vue.js.
 
-## The Differences
+## Les differences
 
 ### Composables
 
