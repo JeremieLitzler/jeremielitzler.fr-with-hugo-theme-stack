@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce Du Jour
-  - Vue
+  - Vue.js
 ---
 
 Je vais être 100 % honnête : le composant fonctionnel se situe à un autre niveau. Il utilise la fonction _render_ `h()` dans Vue.js.
@@ -61,9 +61,9 @@ const ListComponent = (props: Props, { emit }) => {
           // ... et l'enregistrement de l'emit `toggle`
           // sur le `onclick`
           onClick: () => emit("toggle", index),
-        }
-      )
-    )
+        },
+      ),
+    ),
   );
 };
 

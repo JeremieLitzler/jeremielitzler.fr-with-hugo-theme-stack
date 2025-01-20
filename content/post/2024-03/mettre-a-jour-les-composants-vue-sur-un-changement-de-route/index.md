@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce du jour
-  - Vue
+  - Vue.js
 ---
 
 Pendant que je travaillais sur [le cours Masterclass de Vueschool.io](https://vueschool.io/the-vuejs-master-class), j’ai construit cette pagination géniale à partir de rien pour me mettre au défi :

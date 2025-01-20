@@ -7,7 +7,7 @@ date: 2024-12-04
 categories:
   - Développement Web
 tags:
-  - Vue
+  - Vue.js
 ---
 
 Vue.js, c’est le pied !

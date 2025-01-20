@@ -8,7 +8,7 @@ categories:
   - Développement Web
   - Tutorials
 tags:
-  - Vue
+  - Vue.js
 draft: true
 ---
 

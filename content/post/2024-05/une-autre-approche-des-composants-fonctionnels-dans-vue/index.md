@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce Du Jour
-  - Vue
+  - Vue.js
 ---
 
 ## Introduction
@@ -44,7 +44,7 @@ const MyButton = defineComponent(
           onClick: () => emit("custom-click"),
         },
         // transmet le contenu du slot à l'élément
-        slots.default?.()
+        slots.default?.(),
       );
     };
   },
@@ -58,7 +58,7 @@ const MyButton = defineComponent(
     },
     // définition des `emits`
     emits: ["custom-click"],
-  }
+  },
 );
 export default MyButton;
 ```

@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce Du Jour
-  - Vue
+  - Vue.js
 ---
 
 Dans [l’ancienne version de la masterclass de VueSchool.io](https://vueschool.io/courses/the-vuejs-3-options-api-master-class), j’ai utilisé le `@invalid-submit` dans le template pour gérer les erreurs remontées par VeeValidate.

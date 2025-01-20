@@ -7,7 +7,7 @@ date: 2024-02-27
 categories:
   - Tutoriels
 tags:
-  - Vue
+  - Vue.js
   - TypeScript
 #draft: true
 ---
@@ -46,7 +46,7 @@ for (const [componentPath, moduleImport] of componentFilesEntries) {
 
   if (!componentName) {
     console.warn(
-      `Le nom du composant n'a pas pu être extrait du chemin > ${componentPath} `
+      `Le nom du composant n'a pas pu être extrait du chemin > ${componentPath} `,
     );
     continue;
   }

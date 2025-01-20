@@ -7,7 +7,7 @@ date: 2024-03-08
 categories:
   - Développement Web
 tags:
-  - Vue 3
+  - Vue.js
   - TypeScript
   - Astuce du jour
 ---

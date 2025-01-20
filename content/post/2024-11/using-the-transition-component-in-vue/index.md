@@ -7,7 +7,7 @@ date: 2024-11-25
 categories:
   - Développement Web
 tags:
-  - Vue
+  - Vue.js
   - Animation
 ---
 

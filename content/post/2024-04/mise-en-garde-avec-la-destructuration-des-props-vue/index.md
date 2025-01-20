@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce du jour
-  - Vue
+  - Vue.js
 ---
 
 ## Le problème
@@ -38,7 +38,7 @@ const orderedPosts = computed(() => {
     return posts;
   }
   return [...posts].sort((first, next) =>
-    first.publishedAt! < next.publishedAt! ? 1 : -1
+    first.publishedAt! < next.publishedAt! ? 1 : -1,
   );
 });
 ```
@@ -64,7 +64,7 @@ const orderedPosts = computed(() => {
     return props.posts;
   }
   return [...props.posts].sort((first, next) =>
-    first.publishedAt! < next.publishedAt! ? 1 : -1
+    first.publishedAt! < next.publishedAt! ? 1 : -1,
   );
 });
 ```
@@ -92,7 +92,7 @@ const orderedPosts = computed(() => {
     return posts;
   }
   return [...posts].sort((first, next) =>
-    first.publishedAt! < next.publishedAt! ? 1 : -1
+    first.publishedAt! < next.publishedAt! ? 1 : -1,
   );
 });
 ```

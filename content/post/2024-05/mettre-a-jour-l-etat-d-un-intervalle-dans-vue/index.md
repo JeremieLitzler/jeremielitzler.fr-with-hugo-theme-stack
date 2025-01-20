@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce Du Jour
-  - Vue
+  - Vue.js
 ---
 
 ## Cahier des charges
@@ -93,7 +93,7 @@ Ensuite, nous voulons obtenir le temps restant en secondes jusqu’au Nouvel An 
 ```tsx
 const ONE_SECOND = 1000;
 const timeLeftSeconds = computed(
-  () => (nextNewYear.getTime() - rightNow.value.getTime()) / ONE_SECOND
+  () => (nextNewYear.getTime() - rightNow.value.getTime()) / ONE_SECOND,
 );
 ```
 
@@ -102,22 +102,24 @@ Ensuite, nous pouvons commencer à calculer les `daysLeft`, les `hoursLeft`, les
 ```tsx
 // nous extrayons le nombre arrondi de jours à partir de `timeLeftSeconds`
 const daysLeft = computed(() =>
-  Math.floor(timeLeftSeconds.value / oneDayInSeconds)
+  Math.floor(timeLeftSeconds.value / oneDayInSeconds),
 );
 // et nous calculons le nombre exact de secondes à partir du nombre de jours...
 const daysLeftSeconds = computed(() => daysLeft.value * oneDayInSeconds);
 
 //et ainsi de suite pour l'heure...
 const hoursLeft = computed(() =>
-  Math.floor((timeLeftSeconds.value - daysLeftSeconds.value) / oneHourInSeconds)
+  Math.floor(
+    (timeLeftSeconds.value - daysLeftSeconds.value) / oneHourInSeconds,
+  ),
 );
 const hoursLeftSeconds = computed(() => hoursLeft.value * oneHourInSeconds);
 //... et les minutes...
 const minutesLeft = computed(() =>
   Math.floor(
     (timeLeftSeconds.value - daysLeftSeconds.value - hoursLeftSeconds.value) /
-      oneMinInSeconds
-  )
+      oneMinInSeconds,
+  ),
 );
 const minutesLeftSeconds = computed(() => minutesLeft.value * oneMinInSeconds);
 //... et finalement les secondes...
@@ -126,8 +128,8 @@ const secondsLeft = computed(() =>
     timeLeftSeconds.value -
       daysLeftSeconds.value -
       hoursLeftSeconds.value -
-      minutesLeftSeconds.value
-  )
+      minutesLeftSeconds.value,
+  ),
 );
 ```
 

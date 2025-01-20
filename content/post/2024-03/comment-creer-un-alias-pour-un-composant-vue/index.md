@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce du jour
-  - Vue
+  - Vue.js
 ---
 
 Je me suis retrouvé à utiliser la bibliothèque VeeValidate dans la [Masterclass de VueSchool.io](https://vueschool.io/courses/the-vuejs-3-master-class).

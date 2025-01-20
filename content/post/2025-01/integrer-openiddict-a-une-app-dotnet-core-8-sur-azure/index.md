@@ -9,7 +9,7 @@ categories:
 tags:
   - Authentification
   - Microsoft Azure
-  - Dot Net Core
+  - DotNet Core
 ---
 
 J’avais besoin de créer une application RESTFul simple permettant de simuler un service web fourni par un client, mais inaccessible depuis mon environnement pour des raisons de sécurité.

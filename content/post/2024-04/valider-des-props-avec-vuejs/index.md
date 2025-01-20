@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce Du Jour
-  - Vue
+  - Vue.js
 ---
 
 Lorsque j’ai écrit sur [la fonctionnalité Vue concernant les _props_ avec TypeScript](../../2024-03/definir-ses-props-avec-vue-3-et-typescript/index.md), je n’ai présenté qu’un exemple simple où les _props_ étaient des primitives.

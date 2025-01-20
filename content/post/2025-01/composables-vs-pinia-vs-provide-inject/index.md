@@ -7,7 +7,7 @@ date: 2025-01-15
 categories:
   - Développement Web
 tags:
-  - Vue
+  - Vue.js
 ---
 
 Avec Vue.js, les composables, les magasins Pinia et la fonctionnalité `provide/inject` jouent chacun un rôle dans des cas d’utilisation spécifiques.

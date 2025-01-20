@@ -7,7 +7,7 @@ date: 2023-09-11
 categories:
   - Tutoriels
 tags:
-  - Générateur de site statique
+  - Générateur De Sites Statiques
 ---
 
 Au travail, la génération du site nécessite :

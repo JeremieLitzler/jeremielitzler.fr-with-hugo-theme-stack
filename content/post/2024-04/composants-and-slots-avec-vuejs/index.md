@@ -8,7 +8,7 @@ categories:
   - Développement Web
 tags:
   - Astuce du jour
-  - Vue
+  - Vue.js
 ---
 
 ## Le défi
