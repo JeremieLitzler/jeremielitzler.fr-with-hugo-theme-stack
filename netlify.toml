@@ -12,6 +12,54 @@ package = "netlify-plugin-hugo-cache-resources"
 debug = true
 
 [[redirects]]
+from = "https://jeremielitzler.fr/categories/books/index.xml"
+to = "/categories/livres/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/post/2024-06/utiliser-le-composant-de-transition-dans-vue/"
+to = "/post/2024-11/utiliser-le-composant-de-transition-dans-vue/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/post/2024-11/using-the-transition-component-in-vue/"
+to = "/post/2024-11/utiliser-le-composant-de-transition-dans-vue/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tags/prele/"
+to = "/tags/prêle/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tags/agilite/"
+to = "/tags/agilité/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/post/2024-09/how-does-ssl-certificates-work/"
+to = "/post/2024-09/fonctionnement-certificats-ssl/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/page/16/"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/post/2024-10/habitude-1-faire-preuve-de-proactivite/"
+to = "/post/2024-09/habitude-1-faire-preuve-de-proactivite/"
+status = 301
+force = true
+
+[[redirects]]
 from = "/categories/developpement/"
 to = "/categories/développement-web/"
 status = 301
