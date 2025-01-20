@@ -51,14 +51,14 @@ widget:
   tagCloud:
     title: Top {{ .MaxInCloud }} Tags
     accessibleLabel: Click here to view the tags
-    allTagsParagraph: Missing tag ? Only the first {{ .MaxInCloud }} most used are listed.
-    allTagsLinkText: View all tags
+    allDivParagraph: Missing tag ? Only the first {{ .MaxInCloud }} most used are listed.
+    allDivLinkText: View all tags
 
   categoriesCloud:
     title: Top {{ .MaxInCloud }} Categories
     accessibleLabel: Click here to view the categories
-    allTagsParagraph: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
-    allTagsLinkText: View all categories
+    allDivParagraph: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
+    allDivLinkText: View all categories
 
 search:
   title:
