@@ -12,7 +12,7 @@ tags:
 
 Vous avez entendu parler des _composables_ Vue.js et vous voulez écrire les vôtres ? Peut-être avez-vous déjà utilisé des _composables_ écrits par d’autres, mais vous doutez de la démarche à suivre commencer à en créer un pour vous-même. C’est l’objet de cet article !
 
-## Qu’est-ce qu’un `*composable*` dans Vue.js
+## Qu’est-ce qu’un _composable_ dans Vue.js
 
 Un _composable_ Vue s’apparente à un utilitaire, avec une différence importante : il contient un état, c'est-à-dire des données définies avec la fonction `reactive` ou `ref` de Vue.
 
