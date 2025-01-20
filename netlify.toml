@@ -12,6 +12,12 @@ package = "netlify-plugin-hugo-cache-resources"
 debug = true
 
 [[redirects]]
+from = "/categories/developpement/"
+to = "/categories/développement/"
+status = 301
+force = true
+
+[[redirects]]
 from = "/post/2023-11/realiser-sa-gemmotherapie-soi-meme/"
 to = "/post/2023-12/realiser-sa-gemmotherapie-soi-meme/"
 status = 301
