@@ -90,7 +90,7 @@ taxoMisc:
     executeBtnTitle:
       other: Lancer la recherche
     placeholder:
-      other: Saisissez votre mot clé...
+      other: Saisissez votre recherche...
 
 clouds:
   open:
