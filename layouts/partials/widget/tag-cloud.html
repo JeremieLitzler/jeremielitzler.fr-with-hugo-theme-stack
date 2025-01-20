@@ -21,9 +21,7 @@
         <p>
           {{ T "widget.tagCloud.allDivParagraph" (dict "MaxInCloud" $limit) | safeHTML }}
         </p>
-        <a
-          href="{{ urlize "/tags/" }}"
-          title="{{ T "widget.tagCloud.allTags" }}"
+        <a href="{{ urlize "/tags/" }}"
           ><strong>⏩ {{ T "widget.tagCloud.allDivLinkText" }} ⏪</strong>
         </a>
       </div>
