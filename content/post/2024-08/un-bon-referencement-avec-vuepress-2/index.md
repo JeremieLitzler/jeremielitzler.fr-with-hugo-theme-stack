@@ -5,7 +5,7 @@ image: images/2024-08-28-3d-lettres-de-scrabble-formant-le-mot-seo.jpg
 imageAlt: 'Lettres de Scrabble formant le mot "SEO"'
 date: 2024-08-21
 categories:
-  - Développement
+  - Développement Web
 tags:
   - SEO
   - Go
