@@ -55,8 +55,7 @@ widget:
     allTagsLinkText: View all tags
 
   categoriesCloud:
-    title:
-      other: Top {{ .MaxInCloud }} Categories
+    title: Top {{ .MaxInCloud }} Categories
     accessibleLabel: Click here to view the categories
     allTagsParagraph: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
     allTagsLinkText: View all categories
