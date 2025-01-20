@@ -53,7 +53,7 @@ widget:
     accessibleLabel:
       other: Cliquer pour voir les mots clés
     allDivParagraph:
-      other: Mot clé manquant ? Seuls les 10 plus utilisés sont listés ici.
+      other: Mot clé manquant ? Seuls les {{ .MaxInCloud }} plus utilisés sont listés ici.
     allDivLinkText:
       other: Consulter tous les mots clés
   categoriesCloud:
@@ -62,7 +62,7 @@ widget:
     accessibleLabel:
       other: Cliquer pour voir les catégories
     allDivParagraph:
-      other: Catégorie manquante ? Seules les 10 plus utilisées sont listées ici.
+      other: Catégorie manquante ? Seules les {{ .MaxInCloud }} plus utilisées sont listées ici.
     allDivLinkText:
       other: Consulter toutes les catégories
 

@@ -54,7 +54,7 @@ widget:
     accessibleLabel:
       other: Click here to view the tags
     allTagsParagraph:
-      other: Missing tag ? Only the first 10 most used are listed.
+      other: Missing tag ? Only the first {{ .MaxInCloud }} most used are listed.
     allTagsLinkText:
       other: View all tags
 
@@ -64,7 +64,7 @@ widget:
     accessibleLabel:
       other: Click here to view the categories
     allTagsParagraph:
-      other: Missing category ? Only the first 10 most used are listed.
+      other: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
     allTagsLinkText:
       other: View all categories
 
