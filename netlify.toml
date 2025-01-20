@@ -13,7 +13,7 @@ debug = true
 
 [[redirects]]
 from = "/categories/developpement/"
-to = "/categories/développement/"
+to = "/categories/développement-web/"
 status = 301
 force = true
 
