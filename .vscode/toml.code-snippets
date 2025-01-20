@@ -1,0 +1,14 @@
+{
+  "Add redirect TOML": {
+    "scope": "toml",
+    "prefix": "add netlify redirect",
+    "body": [
+      "[[redirects]]",
+      "from = \"$1\"",
+      "to = \"$2\"",
+      "status = 301",
+      "force = true",
+    ],
+    "description": "add a redirect handled by Netlify",
+  },
+}
