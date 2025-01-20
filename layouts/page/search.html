@@ -1,35 +1,45 @@
 {{ define "body-class" }}template-search{{ end }}
 {{ define "head" }}
-    {{- with .OutputFormats.Get "json" -}} 
-        <link rel="preload" href="{{ .RelPermalink }}" as="fetch" crossorigin="anonymous">
-    {{- end -}}
+  {{- with .OutputFormats.Get "json" -}}
+    <link
+      rel="preload"
+      href="{{ .RelPermalink }}"
+      as="fetch"
+      crossorigin="anonymous" />
+  {{- end -}}
 {{ end }}
 {{ define "main" }}
-<h1>{{- .Title -}}</h1>
-<p>{{- .Description -}}</p>
-<form action="{{ .RelPermalink }}" class="search-form"{{ with .OutputFormats.Get "json" -}} data-json="{{ .RelPermalink }}"{{- end }}>
+  <h1>{{- .Title -}}</h1>
+  <p>{{- .Description -}}</p>
+  <form
+    action="{{ .RelPermalink }}"
+    class="search-form"
+    {{ with .OutputFormats.Get "json" -}}
+      data-json="{{ .RelPermalink }}"
+    {{- end }}>
     <p>
-        <label>{{ T "search.title" }}</label>
-        <input name="keyword" placeholder="{{ T `search.placeholder` }}" />
+      <label>{{ T "search.title" }}</label>
+      <input name="keyword" placeholder="{{ T `search.placeholder` }}" />
     </p>
 
     <button title="{{ T `search.title` }}">
-        {{ partial "helper/icon" "search" }}
+      {{ partial "helper/icon" "search" }}
     </button>
-</form>
+  </form>
 
-<div class="search-result">
+  <div class="search-result">
     <h3 class="search-result--title section-title"></h3>
-    <div class="search-result--list article-list--compact"></div>
-</div>
+    <div class="search-result--list article-list--compact search-result"></div>
+  </div>
 
 <script>
     window.searchResultTitleTemplate = "{{ T `search.resultTitle` }}"
-</script>
+</script> {{- $opts := dict "minify" hugo.IsProduction "JSXFactory" "createElement" -}}
+  {{- $searchScript := resources.Get "ts/search.tsx" | js.Build $opts -}}
+  <script
+    type="text/javascript"
+    src="{{ $searchScript.RelPermalink }}"
+    defer></script>
 
-{{- $opts := dict "minify" hugo.IsProduction "JSXFactory" "createElement" -}}
-{{- $searchScript := resources.Get "ts/search.tsx" | js.Build $opts -}}
-<script type="text/javascript" src="{{ $searchScript.RelPermalink }}" defer></script>
-
-{{ partialCached "footer/footer" . }}
+  {{ partialCached "footer/footer" . }}
 {{ end }}

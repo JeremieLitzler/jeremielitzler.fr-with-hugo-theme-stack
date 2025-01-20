@@ -94,7 +94,7 @@
   {{ $paginator :=
     .Paginate $pages
   }}
-  <section class="article-list--compact">
+  <section class="article-list--compact list">
     {{ range $paginator.Pages }}{{ partial "article-list/compact" . }}{{ end }}
   </section>
 
