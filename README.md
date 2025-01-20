@@ -40,6 +40,8 @@ Then, add a `.prettierrc` file with:
 }
 ```
 
+**MAKE SURE TO run `hugo build` before pushing !**
+
 ### Deploy somewhere else than Netilf?
 
 If you want to build this site using another static page hosting, you need to make sure they have Go installed in the machine.
