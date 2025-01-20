@@ -48,23 +48,15 @@ widget:
       other: Autres
 
   tagCloud:
-    title:
-      other: Mots clés
-    accessibleLabel:
-      other: Cliquer pour voir les mots clés
-    allDivParagraph:
-      other: Mot clé manquant ? Seuls les {{ .MaxInCloud }} plus utilisés sont listés ici.
-    allDivLinkText:
-      other: Consulter tous les mots clés
+    title: Top {{ .MaxInCloud }} mots clés
+    accessibleLabel: Cliquer pour voir les mots clés
+    allDivParagraph: Mot clé manquant ? Seuls les {{ .MaxInCloud }} plus utilisés sont listés ici.
+    allDivLinkText: Consulter tous les mots clés
   categoriesCloud:
-    title:
-      other: Catégories
-    accessibleLabel:
-      other: Cliquer pour voir les catégories
-    allDivParagraph:
-      other: Catégorie manquante ? Seules les {{ .MaxInCloud }} plus utilisées sont listées ici.
-    allDivLinkText:
-      other: Consulter toutes les catégories
+    title: Top {{ .MaxInCloud }} catégories
+    accessibleLabel: Cliquer pour voir les catégories
+    allDivParagraph: Catégorie manquante ? Seules les {{ .MaxInCloud }} plus utilisées sont listées ici.
+    allDivLinkText: Consulter toutes les catégories
 
 search:
   title:

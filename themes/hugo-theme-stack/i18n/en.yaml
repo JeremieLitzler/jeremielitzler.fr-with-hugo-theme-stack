@@ -49,24 +49,17 @@ widget:
       other: More
 
   tagCloud:
-    title:
-      other: Tags
-    accessibleLabel:
-      other: Click here to view the tags
-    allTagsParagraph:
-      other: Missing tag ? Only the first {{ .MaxInCloud }} most used are listed.
-    allTagsLinkText:
-      other: View all tags
+    title: Top {{ .MaxInCloud }} Tags
+    accessibleLabel: Click here to view the tags
+    allTagsParagraph: Missing tag ? Only the first {{ .MaxInCloud }} most used are listed.
+    allTagsLinkText: View all tags
 
   categoriesCloud:
     title:
-      other: Categories
-    accessibleLabel:
-      other: Click here to view the categories
-    allTagsParagraph:
-      other: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
-    allTagsLinkText:
-      other: View all categories
+      other: Top {{ .MaxInCloud }} Categories
+    accessibleLabel: Click here to view the categories
+    allTagsParagraph: Missing category ? Only the first {{ .MaxInCloud }} most used are listed.
+    allTagsLinkText: View all categories
 
 search:
   title:

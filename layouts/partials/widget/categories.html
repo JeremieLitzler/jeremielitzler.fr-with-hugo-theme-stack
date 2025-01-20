@@ -7,7 +7,9 @@
       aria-label="{{ T "widget.categoriesCloud.accessibleLabel" }}"
       title="{{ T "widget.categoriesCloud.accessibleLabel" }}">
       <span class="widget-icon">{{ partial "helper/icon" "categories" }}</span>
-      <span class="widget-title"> {{ T "widget.categoriesCloud.title" }} </span>
+      <span class="widget-title">
+        {{ T "widget.categoriesCloud.title"  (dict "MaxInCloud" $limit) | safeHTML }}
+      </span>
     </summary>
     <div class="tagCloud-tags">
       {{ range first $limit $context.Site.Taxonomies.categories.ByCount }}
@@ -20,9 +22,7 @@
           {{ T "widget.categoriesCloud.allDivParagraph" (dict "MaxInCloud" $limit) | safeHTML }}
         </p>
         <a href="{{ urlize "/categories/" }}"
-          ><strong
-            >⏩ {{ T "widget.categoriesCloud.allDivLinkText" }} ⏪</strong
-          >
+          ><strong>{{ T "widget.categoriesCloud.allDivLinkText" }}</strong>
         </a>
       </div>
     </div>
