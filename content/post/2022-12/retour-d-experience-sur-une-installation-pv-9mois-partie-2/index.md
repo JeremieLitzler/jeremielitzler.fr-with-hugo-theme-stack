@@ -41,7 +41,7 @@ Elle est composée de :
 Les spécifications techniques des panneaux.
 
 - un micro-onduleur APS QS1 4 MPPT (voir [les spécifications détaillées de l’onduleur](https://www.google.com/search?q=aps+qs1+fiche+technique)).
-- un [routeur solaire de Robin Emley](https://openenergymonitor.org/mk2pvrouter/) ([un couple français a repris fin 2022 la vente son routeur.](https://mk2pvrouter.com/)).
+- un [routeur solaire de Robin Emley](https://openenergymonitor.org/mk2pvrouter/) (un couple français a repris fin 2022 la vente son routeur > `https://mk2pvrouter.com/`).
 - et quelques éléments électriques indispensables pour une installation photovoltaïque.
 
 Le tout a acheté au prix de 2057 euros pour :
