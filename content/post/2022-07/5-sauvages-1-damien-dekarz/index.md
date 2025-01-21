@@ -86,7 +86,7 @@ Ses utilités :
 
 ![Fleurs de bouton d'or](images/bouton-dor.jpg)
 
-Crédits de l'image : [Troyes Champagne Tourisme](https://www.troyeslachampagne.com/le-luxueux-et-rutilant-bouton-dor/)
+Crédits de l'image : Troyes Champagne Tourisme.
 
 ![Feuille de bouton d'or ou renoncule rampante](images/bouton-dor-feuille.jpg)
 
