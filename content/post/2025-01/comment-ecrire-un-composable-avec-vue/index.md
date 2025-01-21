@@ -80,7 +80,7 @@ const { current } = useCycleElements("Bonjour", "cher", "lecteur !");
 console.log(current); // logs "Bonjour"
 ```
 
-### La fonction `next`
+### Les fonctions `next` et `prev`
 
 La fonction exposée `next` permettrait au consommateur du _composable_ de passer à la valeur suivante dans la liste. Ainsi, avec le code suivant, `current` devient `cher` puis `lecteur !`.
 
@@ -92,6 +92,8 @@ console.log(current); // logs "cher"
 next();
 console.log(current); // logs "lecteur !"
 ```
+
+La fonction `prev` réalise l'inverse de `next`.
 
 ## Flux de conception des _composables_
 
