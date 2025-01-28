@@ -145,7 +145,7 @@ Après quelques échanges très intéressants avec l'artisan de SolaireEthic (vo
 J'ai réalisé :
 
 - le creusement de la tranchée (pas facile avec un sol rocheux et avec 25 mètres de différence d'altitude entre la terrasse et la maison...)
-- la partie optimisation de l'autoconsommation en commandant le routeur solaire de [Robin Emley](https://mk2pvrouter.co.uk/), monté par [Le Profes'Solaire](https://sites.google.com/view/le-professolaire/) (malheureusement, il a arrêté son service de montage, mais il semble encore proposer le soudage...).
+- la partie optimisation de l'autoconsommation en commandant le routeur solaire de [Robin Emley](https://openenergymonitor.org/mk2pvrouter/), monté par [Le Profes'Solaire](https://sites.google.com/view/le-professolaire/) (malheureusement, il a arrêté son service de montage, mais il semble encore proposer le soudage...).
 
 Voici [le plan de l'installation en ligne](/images/2022-mm-dd-retour-d-exprerience-sur-une-installation-pv-1mois-diagramme.jpg).
 
@@ -177,7 +177,7 @@ C'est dommage vu qu'on ne peut pas revendre quand les panneaux sont installés a
 
 ## Quelles sont mes observations ?
 
-### Routeur solaire de [Robin Emley](https://mk2pvrouter.co.uk/)
+### Routeur solaire de [Robin Emley](https://openenergymonitor.org/mk2pvrouter/)
 
 Il est très efficace.
 

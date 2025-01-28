@@ -130,7 +130,7 @@ Je réaliserai un avis complet avec plusieurs mois de recul.
 
 Vous pouvez éviter de payer des frais bancaires en 2024 en utilisant un service comme Wise. Savez-vous combien vous payez avec votre banque ?
 
-La clarté des frais de Wise est appréciable. Si vous voulez essayer, voici [un lien affilié pour vous inscrire](https://wise.com/invite/dic/jeremiel25). Si vous effectuez jusqu’à 500 euros comme premier transfert vers n’importe quelle devise aujourd’hui, vous ne paierez pas de frais. De plus, si le transfert est supérieur à 250 euros, j’obtiendrai un point pour recevoir un bonus. J’ai besoin de trois points pour obtenir le bonus. Merci d’avance 😁
+La clarté des frais de Wise est appréciable. Si vous voulez essayer, voici un lien affilié pour vous inscrire (`https://wise.com/invite/dic/jeremiel25`). Si vous effectuez jusqu’à 500 euros comme premier transfert vers n’importe quelle devise aujourd’hui, vous ne paierez pas de frais. De plus, si le transfert est supérieur à 250 euros, j’obtiendrai un point pour recevoir un bonus. J’ai besoin de trois points pour obtenir le bonus. Merci d’avance 😁
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 

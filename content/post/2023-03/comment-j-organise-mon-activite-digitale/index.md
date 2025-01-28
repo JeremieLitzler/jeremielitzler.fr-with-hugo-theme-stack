@@ -88,21 +88,13 @@ Allez lire leur article sur le sujet [disponible sur leur site web](https://www.
 
 ### WordPress avec Divi hébergé sur Cloudways
 
-J’utilise WordPress avec Divi (dont je détiens une licence personnelle) et j’héberge sur un [Serveur virtuel privé (VPS en anglais) de Cloudways](https://www.cloudways.com/en/?id=174912) tous mes sites web de démonstrations :
-
-- [Un site pour un groupe musical ou un orchestre](https://music-demo-wp.puzzlout.com/) (que j’ai utilisé pour l’Ensemble Instrumental Tournon-Tain).
-- [Un site pour les fleuristes](https://fleuriste-demo.puzzlout.com/)
-- [Un site pour une école de danse](https://ecole-de-danse-demo.puzzlout.com/)
-- [Un modèle très basique démontrant WordPress et Divi](https://blank-template-fr.madebyjeremie.fr/)
-- [Une vitrine pour des producteurs locaux](https://magasin-producteurs-demo.puzzlout.com/)
-  - Le terme _vitrine_ signifie que j’utilise Woocommerce, mais que les commandes et les paiements ne sont pas possibles.
-- [Une boutique en ligne pour des producteurs locaux](https://boutique-producteurs-demo.puzzlout.com/)
-
-  - Le terme _boutique_ signifie que j’utilise Woocommerce et les commandes et les paiements sont possibles.
-
-- [Un site pour les autoécoles](https://auto-moto-ecole.puzzlout.com/)
+J’utilise WordPress avec Divi (dont je détiens une licence personnelle) et j’héberge sur un [Serveur virtuel privé (VPS en anglais) de Cloudways](https://www.cloudways.com/en/?id=174912) tous mes sites web de démonstrations.
 
 Pourquoi Cloudways dans ces cas ? Infomaniak est plus onéreux et moins performant pour une demi-douzaine de sites de démonstrations qu’un VPS.
+
+{{< blockcontainer jli-notice-note "Les sites de démonstrations ont été discontinués.">}}
+
+{{< /blockcontainer >}}
 
 Cela me revient à **$11.34 par mois** pour maintenir un serveur de taille minimum. Cloudways prend soin de la maintenance du serveur à ma place.
 

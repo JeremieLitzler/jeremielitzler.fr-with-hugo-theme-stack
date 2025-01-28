@@ -239,10 +239,10 @@ Le but serait de couvrir la consommation pendant les vacances, mais est-ce que �
 
 **Les faits :**
 
-- La capacité utile d’une batterie Lithium Fer Phosphate (LFP) n’est celle que le vendeur met avant. Cela prendrait un article complet pour l’expliquer (et [certains l’on déjà fait (article en anglais)](https://harveypoweress.com/lifepo4-battery-depth-of-discharge/)).
+- La capacité utile d’une batterie Lithium Fer Phosphate (LFP) n’est celle que le vendeur met avant. Cela prendrait un article complet pour l’expliquer (et [certains l’on déjà fait (article en anglais)](https://www.google.com/search?q=harveypoweress+Lifepo4+Battery+Depth+Of+Discharge%3A+Best+Usable+Capacity+To+Maximizing+Battery+Life)).
   - En résumé, la capacité utile d’une batterie LFP varie entre de 40 à 80 % de sa capacité maximum.
 
-![Relation entre la profondeur de décharge (DOD) et le nombre de cycles. Crédit : https://harveypoweress.com/lifepo4-battery-depth-of-discharge/](images/Cycle-Times-of-Lifepo4-Battery-at-Different-Depths-of-Discharge.png)
+![Relation entre la profondeur de décharge (DOD) et le nombre de cycles. Crédit : site "harveypoweress.com"](images/Cycle-Times-of-Lifepo4-Battery-at-Different-Depths-of-Discharge.png)
 
 - De plus, la consommation de l’onduleur interne (environ 15-20 Wh) réduit l’autonomie de façon non négligeable.
 

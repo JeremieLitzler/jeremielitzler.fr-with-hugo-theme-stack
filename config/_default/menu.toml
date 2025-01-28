@@ -19,7 +19,7 @@ icon = "brand-github"
 [[social]]
 identifier = "linkedin"
 name = "LinkedIn"
-url = "https://www.linkedin.com/in/jeremielitzler/"
+url = "https://www.google.com/search?q=linkedin+jeremie+litzler"
 weight = 10
 
 [social.params]
