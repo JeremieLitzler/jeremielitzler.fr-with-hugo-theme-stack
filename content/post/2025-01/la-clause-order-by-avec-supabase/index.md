@@ -1,135 +1,128 @@
 ---
-title: "The “Order By” Clause With Supabase"
-description: "With Supabase, performing ordering of recordsets is simple and intuitive. But there is a caveat."
+title: "La clause “Order By” avec Supabase"
+description: "Avec Supabase, l’ordonnancement d’une liste d’enregistrements est simple et intuitif. Mais il y a un point à connaître."
 image: 2025-01-27-objects-ordered-by-size.jpg
-imageAlt: Objects ordered by size
+imageAlt: Objets classés par taille
 date: 2025-01-29
 categories:
-  - Web Development
+  - Développement Web
 tags:
   - Supabase
-draft: true
 ---
 
-I’m writing this small tip of the day to describe the behavior when you order a query result and null values exist on a target column.
+J’écris cette petite astuce du jour pour décrire le comportement lorsque vous ordonnez le résultat d’une requête et que des valeurs nulles existent sur une colonne cible.
 
-## The Use Case
+## Le cas d’utilisation
 
-Let’s say we have a table with a `created_at` column and another named `in_progress_at`.
+Disons que nous avons une table `entities` avec une colonne `created_at` et une autre nommée `in_progress_at`.
 
-The first column never equals to `null` while the second can until the record is updated.
+La première colonne ne vaut jamais `null` alors que la seconde peut-être égale à `null` jusqu’à ce qu’on mette à jour l’enregistrement.
 
-Now, the business logic want to order records in descending order with the updated records first and then the rest.
+Maintenant, la logique métier veut classer les enregistrements par ordre décroissant, en commençant par les derniers enregistrements mis à jour et en terminant par les autres.
 
-If you order in descending order on the `in_progress_at` first and then on `created_at` also in descending order, what will happen if you have a record without a `in_progress_at` set and another with no value on `in_progress_at`?
+Si vous ordonnez par ordre décroissant sur `in_progress_at` d’abord et ensuite sur `created_at` également par ordre décroissant, que se passera-t-il si vous avez un enregistrement sans `in_progress_at` défini et un autre sans valeur sur `in_progress_at` ?
 
-Well, the record with the null value on `in_progress_at` will come before first.
+Tout simplement, l’enregistrement dont la valeur de `in_progress_at` est nulle sera listée en premier.
 
-And what if you add a new record and update an existing one? Well, the new record will stay on top…
+Et si vous ajoutez un nouvel enregistrement et mettez à jour un enregistrement existant ? Eh bien, le nouvel enregistrement restera en tête…
 
-What about ascending order? It’s the opposite: the record with a null value comes second.
+Qu’en est-il de l’ordre croissant ? C’est l’inverse : l’enregistrement avec une valeur nulle arrive en deuxième position.
 
-## Testing With Supabase Dashboard
+## Tester avec l’éditeur SQL de Supabase
 
-It’s easy:
+C’est simple :
 
-- Create a [Supabase account](https://supabase.com/) and a project.
-- Create a table `entities` with the two date columns described above.
-- Insert a few records
-- Use the SQL editor to test it:
+- Créez un [compte Supabase] (https://supabase.com/) et un projet.
+- Créer une table `entities` avec les deux colonnes de dates décrites ci-dessus.
+- Insérer quelques enregistrements.
+- Naviguer sur l’éditeur SQL pour tester les requêtes suivantes :
 
 ```sql
 select * from entities order by updated_at desc, created_at desc
 ```
 
-The query above will give the following result:
+La requête ci-dessus donnera le résultat suivant :
 
-![Query ordered descending](query-ordered-descending.jpg)
+![Requête ordonnée décroissante](query-ordered-descending.jpg)
 
 ```sql
 select * from entities order by updated_at asc, created_at asc
 ```
 
-The query above will give the following result:
+La requête ci-dessus donnera le résultat suivant :
 
-![Query ordered ascending](query-ordered-ascending.jpg)
+![Requête ordonnée ascendante](query-ordered-ascending.jpg)
 
-Neither achieve the result expected. The entity 12 should arrive second and the entity 5 first.
+Aucun des deux ne donne le résultat escompté. L’entité 12 devrait arriver en deuxième position et l’entité 5 en premier.
 
-## Solution With SQL
+## Solution en SQL
 
-The SQL solution is simple:
+La solution SQL est simple :
 
 ```sql
-select * from entities order by COALESCE( updated_at, created_at) desc nulls first;
+select * from entities
+-- ordonner par `updated_at` si non null, ou `created_at`
+order by COALESCE( updated_at, created_at) desc;
 ```
 
-We get the right result:
+Nous obtenons le bon résultat :
 
-![Correct query result](correct-query-result.jpg)
+![Résultat correct de la requête](correct-query-result.jpg)
 
-## Issue Using Supabase Public API
+## Problème lié à l’utilisation de l’API publique de Supabase
 
-But how do you that using Supabase JavaScript client?
+Mais comment s’y prendre avec le client JavaScript de Supabase ?
 
-Not like that!
+Clairement pas de la façon suivante !
 
 ```ts
 export const allEntitiesQuery = supabase
   .from("entities")
   .select()
-  // TODO > about ordering with Supabase !
   .order("coalesce(updated_at, created_at)", {
     ascending: false,
-    nullsFirst: false,
   });
 ```
 
-You get an error:
+Pour le code ci-dessus, vous obtenez une erreur :
 
 ```plaintext
-failed to parse order (coalesce(updated_at, created_at).desc.nullslast)" (line 1, column 9) ;
+failed to parse order (coalesce(updated_at, created_at).desc)" (line 1, column 9) ;
 
 Details: unexpected '(' expecting letter, digit, "-", "->>", "->", delimiter (.), "," or end of input" with the following code: PGRST100
 ```
 
-How we solve that?
+Comment résoudre ce problème ?
 
-## Solution Using Supabase Public API
+## Solution utilisant l’API publique de Supabase
 
-The answer: Postgres functions!
+La réponse : Les fonctions Postgres !
 
-In our case, it’ll look as follows:
+Dans notre cas, cela se présente comme suit. On déclare tout d’abord une fonction Postgres :
 
 ```sql
 CREATE OR REPLACE FUNCTION coalesce_updated_at_or_created_at_sort(
     target_table text,
     selected_columns text DEFAULT '*',
     sort_direction text DEFAULT 'DESC',
-    --
-    nulls_position text DEFAULT 'FIRST'
 ) RETURNS SETOF json AS $$
 BEGIN
     IF sort_direction NOT IN ('ASC', 'DESC') THEN
         RAISE EXCEPTION 'sort_direction must be either ASC or DESC';
     END IF;
-    IF nulls_position NOT IN ('FIRST', 'LAST') THEN
-        RAISE EXCEPTION 'nulls_position must be either FIRST or LAST';
-    END IF;
 
     RETURN QUERY EXECUTE format(
-        'SELECT row_to_json(t) FROM (SELECT %s FROM %I ORDER BY COALESCE(updated_at, created_at) %s NULLS %s) t',
+        'SELECT row_to_json(t) FROM (SELECT %s FROM %I ORDER BY COALESCE(updated_at, created_at) %s) t',
         selected_columns,
         target_table,
-        sort_direction,
-        nulls_position
+        sort_direction
     );
 END;
 $$
  LANGUAGE plpgsql SECURITY DEFINER;
 ```
 
-To use it, run the SQL above, generate your TypeScript types using the CLI and update the TypScript code:
+Pour l’utiliser, exécutez le code SQL ci-dessus sur l’éditeur SQL de Supabase, générez vos types TypeScript à l’aide de la _CLI_ de Supabase et mettez à jour le code TypScript :
 
 ```ts
 export const allEntitiesQuery = supabase.rpc(
@@ -138,28 +131,28 @@ export const allEntitiesQuery = supabase.rpc(
     target_table: "entities",
     selected_columns: "*",
     sort_direction: "DESC",
-    nulls_position: "LAST",
   },
 );
 ```
 
-I could improve it, but it solves my business logic.
+Je pourrais l’améliorer, mais il résout la logique métier à réaliser.
 
-You can read more in the official Supabase documentation about:
+Pour en savoir plus, consultez la documentation officielle de Supabase :
 
-- [Ordering records](https://supabase.com/docs/reference/javascript/order)
-- [Postgres functions](https://supabase.com/docs/guides/database/functions)
+- [Ordonner les enregistrements](https://supabase.com/docs/reference/javascript/order)
+- [Fonctions Postgres](https://supabase.com/docs/guides/database/functions)
+- [Fonction `RPC`](https://supabase.com/docs/reference/javascript/rpc)
 
 ## Conclusion
 
-That was a tricky one. I had written a draft of this article and while completing it, I realized that I was far from the goal!
+C’était un sujet délicat, car je ne connaissais pas les fonctions Postgres. J’avais écrit un brouillon de cet article et en le complétant, j’ai réalisé que j’étais loin du but !
 
-Did you learn something today? I sure did!
+Avez-vous appris quelque chose aujourd’hui ? Ce fut clairement mon cas !
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
 
-Photo by [Pavel Danilyuk](https://www.pexels.com/photo/fashion-creative-girl-pattern-6461495/).
+Photo de [Pavel Danilyuk](https://www.pexels.com/photo/fashion-creative-girl-pattern-6461495/).
