@@ -14,7 +14,7 @@ Que choisir ? Tout dépend de la portée et de la durée de validité du cache.
 
 Laissez-moi vous expliquer un peu quand utiliser la durée de vie `Scoped` et quand utiliser la durée de vie `Singleton` dans ce nouvel article.
 
-## Mise en cache par demande (durée de vie délimitée)
+## Mise en cache par demande (durée de vie par requête)
 
 Quels sont les cas d’utilisation de la durée de vie `Scoped` ?
 
