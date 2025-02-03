@@ -141,7 +141,7 @@ Pour en savoir plus, consultez la documentation officielle de Supabase :
 
 - [Ordonner les enregistrements](https://supabase.com/docs/reference/javascript/order)
 - [Fonctions Postgres](https://supabase.com/docs/guides/database/functions)
-- [Fonction `RPC`](https://supabase.com/docs/reference/javascript/rpc)
+- [Fonction `rpc`](https://supabase.com/docs/reference/javascript/rpc)
 
 ## Conclusion
 
