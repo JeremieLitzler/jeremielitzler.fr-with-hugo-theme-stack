@@ -41,7 +41,7 @@ Quand j’ai essayé de l’utiliser dans mon fichier `netlify.toml`, `add netli
 
 Pourquoi ? La raison se trouve sur cet écran. Vous la voyez ?
 
-![Problème démontré](problème-démontré.png)
+![Problème démontré](issue-demonstrated.png)
 
 Oui, le « _Plain Text_ » en bas à droite. Puisque j’ai défini le champ d’application de l’extrait de code pour travailler sur du code `toml`, son absence s'explique facilement… L’extrait de code ne spécifie pas « _Plain text_ » dans son champ d’application.
 
