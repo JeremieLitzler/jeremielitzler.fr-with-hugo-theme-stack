@@ -60,6 +60,12 @@ status = 301
 force = true
 
 [[redirects]]
+from = "/categories/developpement-web/"
+to = "/categories/développement-web/"
+status = 301
+force = true
+
+[[redirects]]
 from = "/categories/developpement/"
 to = "/categories/développement-web/"
 status = 301
