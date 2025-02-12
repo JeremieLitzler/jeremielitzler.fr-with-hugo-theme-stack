@@ -3,7 +3,7 @@ title: "Comment appeler une API externe avec un CORS valide ?"
 description: "Avez-vous déjà eu besoin d’appeler une API tierce qui réside sur un domaine différent ? Vous avez probablement rencontré des problèmes de CORS."
 image: 2024-08-02-matrix-like-background.jpg
 imageAlt: Arrière-plan de type « Matrix »
-date: 2024-08-02
+date: 2025-02-12
 categories:
   - Développement Web
 tags:
