@@ -60,4 +60,10 @@ Cette option est la même que la précédente, mais vous l'écrivez différemmen
 
 Veillez également à nommer le fichier `_redirects` et à le placer dans le répertoire `public` pour Netlify le prenne en compte.
 
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
+
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
+
+{{< /blockcontainer >}}
+
 Crédit : Photo de [Markus Spiske](https://unsplash.com/@markusspiske?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) sur [Unsplash](https://unsplash.com/photos/matrix-movie-still-iar-afB0QQw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
