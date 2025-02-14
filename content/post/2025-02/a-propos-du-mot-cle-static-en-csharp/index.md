@@ -8,7 +8,6 @@ categories:
   - Développement Web
 tags:
   - Csharp
-draft: true
 ---
 
 Voici les principaux cas d'utilisation et exemples d'utilisation du mot-clé `static` en C# :
