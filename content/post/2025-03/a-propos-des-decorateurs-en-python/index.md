@@ -3,7 +3,7 @@ title: "A propos des décorateurs en Python"
 description: "Les décorateurs en Python sont équivalents aux attributs personnalisés en C#. Découvrons comment ils fonctionnent."
 image: 2025-03-03-4-colored-brushes.jpg
 imageAlt: 4 pinceaux de couleurs différentes
-date: 2025-03-03
+date: 2025-03-07
 categories:
   - Développement Web
 tags:
