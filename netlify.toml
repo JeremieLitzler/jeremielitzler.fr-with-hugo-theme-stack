@@ -12,6 +12,12 @@ package = "netlify-plugin-hugo-cache-resources"
 debug = true
 
 [[redirects]]
+from = "https://jeremielitzler.fr/post/2025-02/parsing-json-payload-on-rest-api-call-with-flask/"
+to = "/post/2025-02/analyse-des-donnees-json-sur-appel-api-rest-flask/"
+status = 301
+force = true
+
+[[redirects]]
 from = "https://jeremielitzler.fr/categories/books/index.xml"
 to = "/categories/livres/"
 status = 301
