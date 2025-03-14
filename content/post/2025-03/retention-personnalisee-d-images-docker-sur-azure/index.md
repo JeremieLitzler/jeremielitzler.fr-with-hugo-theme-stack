@@ -16,9 +16,9 @@ tags:
 Sur un projet [Python](../../../tags/python/_index.md) l’année dernière, j’avais mis en place un pipeline Azure DevOps avec la logique de construire une image Docker d’une application web Python suivant la logique suivante :
 
 - Lorsqu’une fonctionnalité était développée, je tirais une branche de `develop` et effectuais les développements.
-- Quand j’ai fini la fonctionnalité, je créais un PR (_Pull Request_ ou Requête de tirage en Français) pour fusionner cette fonctionnalité dans `develop`.
-- Une fois la PR fusionnée, la politique de branche de `develop` déclencherait l’exécution du pipeline et la génération d’une image Docker taguée `ready-qa` à déployer dans l’environnement de test dans Azure.
-- Après après tester l’application, je fusionnerais `develop` vers `main`, ce qui déclencherait un autre build et générait une nouvelle image Docker en lui assignant le tag `latest` et `$(buildId)`. Ce serait l’image à déployer dans l’environnement de production sur Azure.
+- Quand j’avais fini la fonctionnalité, je créais un PR (_Pull Request_ ou Requête de tirage en Français) pour fusionner cette fonctionnalité dans `develop`.
+- Une fois la PR fusionnée, la politique de branche de `develop` déclenchait l’exécution du pipeline et la génération d’une image Docker taguée `ready-qa` à déployer dans l’environnement de test dans Azure.
+- Après après tester l’application, je fusionnais `develop` vers `main`, ce qui déclenchait un autre build et générait une nouvelle image Docker en lui assignant le tag `latest` et `$(buildId)`. Il s’agissait de l’image à déployer dans l’environnement de production sur Azure.
 
 Cela a créé beaucoup d’images Docker car, en plus de `ready-qa` ou `latest`, la pipeline créait aussi un tag `$(build_id)` pour chaque exécution sur la branche `main`.
 
