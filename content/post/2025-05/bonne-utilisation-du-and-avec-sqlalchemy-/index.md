@@ -1,5 +1,5 @@
 ---
-title: "Proper “And” Syntax With SQLAlchemy"
+title: "Proper ‘And’ Syntax With SQLAlchemy"
 description: "Voici une nouvelle petite astuce pour tous ceux qui apprennent à utiliser SQLAlchemy."
 image: 2025-04-02-a-child-hand-on-an-adult-hand.jpg
 imageAlt: Une main d'enfant sur celle d'un adulte
@@ -36,7 +36,7 @@ Vous ne devez pas déclarer votre requête SQLAlchemy de la façon suivante :
             )
 ```
 
-Il produira l'instruction SQL suivante :
+Il produira l’instruction SQL suivante :
 
 ```sql
 SELECT * FROM event
@@ -48,7 +48,7 @@ Le `0 != 1` est la façon dont SQLAlchemy crée une condition qui renvoie toujou
 
 ## Bonne syntaxe
 
-Au lieu de cela, utilisez SQLAlchemy comme ceci, en enveloppant vos conditions avec l'opérateur `and_` :
+Au lieu de cela, utilisez SQLAlchemy comme ceci, en enveloppant vos conditions avec l’opérateur `and_` :
 
 ```python
             from sqlalchemy import and_
@@ -62,11 +62,11 @@ Au lieu de cela, utilisez SQLAlchemy comme ceci, en enveloppant vos conditions a
             )
 ```
 
-C'est tout pour cette fois !
+C’est tout pour cette fois !
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
+Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
 
