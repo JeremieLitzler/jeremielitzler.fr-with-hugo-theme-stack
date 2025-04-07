@@ -14,6 +14,8 @@ tags:
 
 Lorsque nous trions des données, nous devons prendre en compte les valeurs NULL. J’aimerais partager quelque chose que j’ai appris à travers un exemple pratique lors de la construction d’une application Python.
 
+## SQL
+
 Par exemple, pour construire cette requête SQL :
 
 ```sql
@@ -25,6 +27,8 @@ created_at <= p_cutoff_datetime
 ORDER BY
 coalesce(in_progress_at, created_at) DESC NULLS LAST
 ```
+
+## L’équivalent Python
 
 Rédigez l’instruction SQLAlchemy de la manière suivante :
 
