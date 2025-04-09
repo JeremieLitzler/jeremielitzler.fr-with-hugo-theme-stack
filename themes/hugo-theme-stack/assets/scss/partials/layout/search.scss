@@ -1,82 +1,94 @@
 .search-form {
-    position: relative;
-    --button-size: 80px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 
-    &.widget {
-        --button-size: 60px;
-
-        label {
-            font-size: 1.3rem;
-            top: 10px;
-        }
-
-        input {
-            font-size: 1.5rem;
-            padding: 30px 20px 15px 20px;
-        }
-    }
-
+  &.widget {
+    align-items: initial;
     p {
-        position: relative;
-        margin: 0;
+      display: flex;
     }
-
-    label {
-        position: absolute;
-        top: 15px;
-        inset-inline-start: 20px;
-        font-size: 1.4rem;
-        color: var(--card-text-color-tertiary);
+    .search-form p:first-child {
+      flex-grow: initial;
     }
-
-    input {
-        padding: 40px 20px 20px;
-        border-radius: var(--card-border-radius);
-        background-color: var(--card-background);
-        box-shadow: var(--shadow-l1);
-        color: var(--card-text-color-main);
-        width: 100%;
-        border: 0;
-        -webkit-appearance: none;
-
-        transition: box-shadow 0.3s ease;
-
-        font-size: 1.8rem;
-
-        &:focus {
-            outline: 0;
-            box-shadow: var(--shadow-l2);
-        }
-    }
-
     button {
-        position: absolute;
-        inset-inline-end: 0;
-        top: 0;
-        height: 100%;
-        width: var(--button-size);
-        cursor: pointer;
-        background-color: transparent;
-        border: 0;
-
-        padding: 0 10px;
-
-        &:focus {
-            outline: 0;
-
-            svg {
-                stroke-width: 2;
-                color: var(--accent-color);
-            }
-        }
-
-        svg {
-            color: var(--card-text-color-secondary);
-            stroke-width: 1.33;
-            transition: all 0.3s ease;
-            width: 20px;
-            height: 20px;
-        }
+      height: 6em;
     }
+  }
+}
 
+@media screen and (min-width: 75em) {
+  .search-form {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-form p {
+    width: 100%;
+  }
+  .search-form button {
+    height: 7em;
+  }
+}
+
+.search-form p:first-child {
+  flex-grow: 2;
+}
+.search-form p label {
+  margin-bottom: 0;
+}
+
+.search-form p:first-child label {
+  position: absolute;
+  padding-left: 1em;
+  padding-top: 0.75em;
+}
+.search-form label + input {
+  display: block;
+}
+
+.search-form label {
+  margin-bottom: 1em;
+}
+
+.search-form input {
+  height: 6em;
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-background);
+  box-shadow: var(--shadow-l1);
+  color: var(--card-text-color-main);
+  width: 100%;
+  border: 0;
+  padding-left: 1em;
+  transition: box-shadow 0.3s ease;
+}
+.search-form input:-internal-autofill-selected {
+  background-color: var(--card-background) !important;
+}
+
+.search-form button {
+  color: white;
+  background-color: transparent;
+  inset-inline-end: 0;
+  width: var(--button-size);
+  cursor: pointer;
+  border: 0;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 2em;
+  justify-content: center;
+}
+
+.search-form input[type="checkbox"] {
+  border: 0;
+  inset: 0;
+  height: 1em;
+  max-width: 2em;
+}
+
+.flex-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 0.5em;
 }

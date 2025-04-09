@@ -13,7 +13,7 @@
   --notice-danger-dark: #e13238;
 }
 
-:root[data-scheme='dark'] {
+:root[data-scheme="dark"] {
   --body-text-color: rgba(255, 255, 255, 0.8);
 
   --notice-note-light: #858585;
@@ -129,7 +129,9 @@ iframe.newsletter-embed {
   border-radius: 0.5rem;
   color: var(--theme-color);
   font-size: 1.2rem;
-  transition: color var(--color-transition), color var(--color-transition);
+  transition:
+    color var(--color-transition),
+    color var(--color-transition);
 }
 
 .participate .action-button.primary {

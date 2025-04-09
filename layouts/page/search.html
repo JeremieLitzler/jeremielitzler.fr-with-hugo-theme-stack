@@ -18,10 +18,20 @@
       data-json="{{ .RelPermalink }}"
     {{- end }}>
     <p>
-      <label>{{ T "search.title" }}</label>
-      <input name="keyword" placeholder="{{ T `search.placeholder` }}" />
+      <label>Saisissez votre recherche :</label>
+      <input
+        type="text"
+        name="keyword"
+        placeholder="{{ T `search.placeholder` }}" />
     </p>
-
+    <p>
+      <label class="flex-checkbox">
+        <input type="checkbox" id="exact-match-checkbox" checked />
+        <span>
+          Exécuter la recherche <em>"avec les termes exacts de la saisie"</em>.
+        </span>
+      </label>
+    </p>
     <button title="{{ T `search.title` }}">
       {{ partial "helper/icon" "search" }}
     </button>
