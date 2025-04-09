@@ -1,5 +1,5 @@
 ---
-title: "Ordonnancement des 2 colonnes avec SQLAlchemy"
+title: "Ordonnancement sur 2 colonnes avec SQLAlchemy"
 description: "Il ne s’agit pas seulement de trier par ordre alphabétique ou chronologique."
 image: 2025-04-07-boxes-sorting-stuff.jpg
 imageAlt: Boîtes de triage
