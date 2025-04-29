@@ -3,7 +3,7 @@ title: "Améliorer l'expérience de développement avec les alias Bash"
 description: "Vous avez plusieurs CLI dans votre projet ? Activons l'autocomplétion des commandes."
 image: 2025-05-02-example-of-autocomplete.jpg
 imageAlt: Exemple d'autocomplétion
-date: 2025-07-16
+date: 2025-05-02
 categories:
   - Développement logiciel
 tags:
