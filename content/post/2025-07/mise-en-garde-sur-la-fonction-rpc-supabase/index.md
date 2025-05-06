@@ -3,7 +3,7 @@ title: "Mise en garde concernant la fonction RPC de Supabase"
 description: "L'utilisation de la méthode RPC sur le client Supabase nécessite une étape supplémentaire et l'utilisation de TypeScript."
 image: 2025-04-23-illuminated-road-work-cone.jpg
 imageAlt: Cône de chantier éclairé dans l'obscurité
-date: 2025-04-23
+date: 2025-07-09
 categories:
   - Développement Web
 tags:
