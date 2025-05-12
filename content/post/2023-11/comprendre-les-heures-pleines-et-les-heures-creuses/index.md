@@ -47,7 +47,7 @@ Avant de souscrire à cette option, il est conseillé :
 - de faire une évaluation de vos habitudes de consommation pour déterminer si vous pouvez décaler des consommations dans la plage horaire des heures creuses,
 - de comparer les tarifs proposés par les différents fournisseurs d’énergie.
 
-{{< blockcontainer jli-notice-note "Mon retour d'expérience sur le sujet">}}
+## Mon retour d'expérience sur le sujet
 
 Il y a un certain effort à faire pour consommer plus en heures creuses qu’en heures pleines.
 
@@ -60,8 +60,6 @@ En comparaison, avec [une installation photovoltaïque de 8 panneaux de 190 Wc
 De plus, avec une telle installation, d’avril à septembre, on ne consomme très peu, voire aucun kWh d’électricité du réseau pour l’eau sanitaire.
 
 Du coup, est-il encore utile de garder le tarif HC/HP ? Pas sûr…
-
-{{< /blockcontainer >}}
 
 ## Favoriser la consommation la nuit, c’est favoriser le nucléaire
 
