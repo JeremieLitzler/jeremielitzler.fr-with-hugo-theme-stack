@@ -6,7 +6,7 @@
       "---",
       "title: \"$1\"",
       "description: \"$7\"",
-      "image: images/$2-$3.jpg",
+      "image: $2-$3.jpg",
       "imageAlt: $4",
       "date: $2",
       "categories:",
@@ -20,8 +20,8 @@
       "$7",
       "",
       "<!-- more -->",
-      ""
+      "",
     ],
-    "description": "Set fronmatter to the new post"
-  }
+    "description": "Set fronmatter to the new post",
+  },
 }
