@@ -1,5 +1,5 @@
 ---
-title: "Proper ‘And’ Syntax With SQLAlchemy"
+title: "Bonne utilisation du “And” avec SQLAlchemy"
 description: "Voici une nouvelle petite astuce pour tous ceux qui apprennent à utiliser SQLAlchemy."
 image: 2025-04-02-a-child-hand-on-an-adult-hand.jpg
 imageAlt: Une main d'enfant sur celle d'un adulte
