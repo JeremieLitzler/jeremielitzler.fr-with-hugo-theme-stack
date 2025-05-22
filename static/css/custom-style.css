@@ -59,9 +59,11 @@ p {
 .right-sidebar.sticky {
   top: 0;
   height: 100vh;
-  overflow-y: scroll;
 }
-
+.right-sidebar-scroll
+ {
+  overflow-y: scroll;
+ }
 summary.section-title {
   display: flex;
   align-items: center;
