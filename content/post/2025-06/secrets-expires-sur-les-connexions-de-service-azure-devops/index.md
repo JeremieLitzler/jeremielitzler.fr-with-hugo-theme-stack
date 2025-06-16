@@ -1,6 +1,6 @@
 ---
 title: "Secrets expirés sur les services de connexion Azure DevOps"
-description: "J'ai passé une demi-journée à résoudre un problème de secret expiré dans une application enregistrée automatiquement par Azure DevOps dans Microsoft Azure. Voici comment résoudre le problème et ce que j'en retiens."
+description: "J’ai consacré une demi-journée à régler un problème de secret expiré dans une application enregistrée automatiquement sur Azure DevOps. Voici comment j’ai procédé et ce que j’ai appris."
 image: 2025-06-16-expired-secrets-on-azure-devops.jpg
 imageAlt: Secrets expirés sur Azure DevOps
 date: 2025-06-20
