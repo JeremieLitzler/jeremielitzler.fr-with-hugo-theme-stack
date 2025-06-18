@@ -51,9 +51,9 @@ Note : `$1` fait référence au numéro capturé à l’intérieur des crochets.
 
 ## Exemple
 
-| Texte original | Regex de recherche | Valeur de remplacement | Résultat            |
-| -------------- | ------------------ | ---------------------- | ------------------- |
-| [1],,[456]     | \[(\d+)\]          | [^$1]                  | [^1], [^23], [^456] |
+| Texte original   | Regex de recherche | Valeur de remplacement | Résultat            |
+| ---------------- | ------------------ | ---------------------- | ------------------- |
+| [1], [23], [456] | \[(\d+)\]          | [^$1]                  | [^1], [^23], [^456] |
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
