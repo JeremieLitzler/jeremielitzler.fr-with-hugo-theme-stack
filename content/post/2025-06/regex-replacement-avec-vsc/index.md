@@ -1,7 +1,7 @@
 ---
 title: "Expressions régulières sur le remplacement dans Visual Studio Code"
 description: "Un jour, j’ai eu l’occasion de devoir remplacer de nombreux [n] par des [^n] dans un document."
-image: 2025-04-16-vsc-with-regex-on-string-replacement.svg
+image: 2025-04-16-vsc-with-regex-on-string-replacement.jpg
 imageAlt: Visual Studio Code et Expressions Régulières Pour le Replacement de Chaînes de Caractères
 date: 2025-06-18
 categories:
