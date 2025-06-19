@@ -3,7 +3,7 @@ title: "Upgrading TailwindCSS v3 to v4"
 description: "Though the TailwindCSS team provides a great tool to upgrade, it is likely that some of you will not fit in that box because of customization. Let’s check out how I did it."
 image: 2025-06-04-colored-pencils.jpg
 imageAlt: Colored pencils
-date: 2025-009-05
+date: 2025-09-05
 categories:
   - Web Development
 tags:
