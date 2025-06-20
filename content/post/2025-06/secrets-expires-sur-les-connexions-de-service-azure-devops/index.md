@@ -11,7 +11,7 @@ tags:
   - Microsoft Azure
 ---
 
-Dans l’article où je décris [le déploiement d’une application Python sur Microsoft Azure](../../2024-08/deployer-une-api-rest-python-sur-microsoft-azure/index.md), j’explique brièvement comment configurer la poussée d’une image Docker vers un registre de conteneurs azur (ACR dans les paragraphes suivants).
+Dans l’article où je décris [le déploiement d’une application Python sur Microsoft Azure](../../2024-08/deployer-une-api-rest-python-sur-microsoft-azure/index.md), j’explique brièvement comment configurer la poussée d’une image Docker vers un registre de conteneurs Azure (ACR dans les paragraphes suivants).
 
 ## Le problème
 
