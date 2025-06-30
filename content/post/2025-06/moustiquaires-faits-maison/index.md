@@ -136,13 +136,13 @@ Alors, là, ça dépend :
 
 ![Assemblage en cours](assemblage-en-cours.jpg)
 
-Au final, le résultat est plutôt propre et remarquablement solide, surtout que le tourillon a été à insérer.
+Au final, le résultat est plutôt propre et remarquablement solide, surtout une fois les deux tourillon insérés.
 
 ![Assemblage terminé](assemblage-termine.jpg)
 
 ## Fixer la moustiquaire sur le cadre
 
-J’ai utilisé des [agrafes de 10 mm](https://www.amazon.fr/Rapid-construction-disolation-galvanis%C3%A9-performance/dp/B0002Z0206) pour [agrafeuse murale](https://www.amazon.fr/Agrafeuse-Rapid-Bricolage-Tapisserie-Ergonomique/dp/B0DTYDT29M). Ça permet de tenir solidement tous les 10 cm. Au niveau des jointures de tasseaux, j’ai mis 3 agrafes pour garantir une jonction durable.
+J’ai utilisé des [agrafes de 10 mm](https://www.amazon.fr/Rapid-construction-disolation-galvanis%C3%A9-performance/dp/B0002Z0206) pour [agrafeuse murale](https://www.amazon.fr/Agrafeuse-Rapid-Bricolage-Tapisserie-Ergonomique/dp/B0DTYDT29M). Ça permet de tenir solidement la moustiquaire en inox tous les 10 cm. Au niveau des jointures de tasseaux, j’ai mis 3 agrafes pour garantir une jonction durable.
 
 ![Zoom sur l’agrafage](zoom-sur-l-agraffage.jpg)
 
