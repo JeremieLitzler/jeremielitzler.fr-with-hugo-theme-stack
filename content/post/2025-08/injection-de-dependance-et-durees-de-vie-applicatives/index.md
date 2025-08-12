@@ -1,27 +1,26 @@
 ---
 title: "Injection de dépendance et durées de vie applicatives"
-description: "Dans le développement de logiciels, en particulier dans le contexte de l'injection de dépendances, les durées de vie des services déterminent combien de temps une instance d'une classe est maintenue en vie."
+description: "Dans le développement de logiciels, en particulier dans le contexte de l’injection de dépendances, les durées de vie des services déterminent combien de temps une instance d’une classe est maintenue en vie."
 image: 2025-05-19-dependency-injection-and-lifetimes.jpg
-imageAlt: « Dependency Injection and Lifetimes » sur un fond dégradé
+imageAlt: "« Dependency Injection and Lifetimes » sur un fond dégradé"
 date: 2025-08-15
 categories:
-  - Software Development
+  - Développement Logiciel
 tags:
   - CSharp
-draft: true
 ---
 
-Il existe 3 durées de vie possibles quand on utilise l'injection de dépendance : `Transient`, `Scoped` et `Singleton`.
+Il existe 3 durées de vie possibles quand on utilise l’injection de dépendance : `Transient`, `Scoped` et `Singleton`.
 
-Détaillons chacune d'entre elles avec une définition, ses cas d'utilisation respectifs et un exemple.
+Détaillons chacune d’entre elles avec une définition, ses cas d’utilisation respectifs et un exemple.
 
 ## Transient
 
-Si vous avez besoin d'une nouvelle instance à chaque fois que vous demandez le service, `Transient` répond à vos besoins.
+Si vous avez besoin d’une nouvelle instance à chaque fois que vous demandez un service, `Transient` répond à vos besoins.
 
-C'est ce que nous appelons des services sans état, où chaque opération est indépendante des opérations précédentes.
+C’est ce que nous appelons des services sans état, où chaque opération est indépendante des opérations précédentes.
 
-### Exemple de code d'un Transient
+### Exemple de code d’un `Transient`
 
 Prenons un exemple très trivial avec la programmation C# :
 
@@ -43,41 +42,41 @@ public class TransientService : ITransientService
 services.AddTransient<ITransientService, TransientService>();
 ```
 
-### Cas d'utilisation courants pour un transitoire
+### Cas d’utilisation courants pour un `Transient`
 
-En général, les cas d'utilisation les plus courants sont les suivants :
+En général, les cas d’utilisation les plus courants sont les suivants :
 
-- **Services d'utilitaire**, qui n'ont pas besoin de maintenir un état entre les appels.
+- **Services d’utilitaire**, qui n’ont pas besoin de maintenir un état entre les appels.
 - **Services de formatage**, tels que la conversion de données dans un format de chaîne spécifique.
-- **Services de calcul**, lorsque vous devez effectuer des calculs ou des transformations de données sans avoir à maintenir d'état.
-- **Services d'opération**, qui effectuent une opération spécifique indépendamment chaque fois qu'ils sont appelés, comme l'envoi d'un courrier électronique ou l'enregistrement d'un événement.
+- **Services de calcul**, lorsque vous devez effectuer des calculs ou des transformations de données sans avoir à maintenir d’état.
+- **Services d’opération**, qui effectuent une opération spécifique indépendamment chaque fois qu’ils sont appelés, comme l’envoi d’un courrier électronique ou l’enregistrement d’un événement.
 
-Bien sûr, tous ces usages supposent que l'on a besoin d'une instanciation de classe.
+Bien sûr, tous ces usages supposent que l’on a besoin d’une instanciation de classe. Dans le cas de classes statiques, vous n’avez pas besoin de `Transient`.
 
 ## Scoped
 
-Lorsque vous devez maintenir un état au cours d'une seule requête, mais pas au cours de plusieurs requêtes, l'utilisation du `Scoped` correspond à la durée de vie à utiliser.
+Lorsque vous devez maintenir un état au cours d’une seule requête, mais pas au cours de plusieurs requêtes, l’utilisation du `Scoped` correspond à la durée de vie à utiliser.
 
-Dans une application web, nous créons une nouvelle instance pour chaque requête HTTP, et nous pouvons l'utiliser pendant toute la durée de vie de la requête.
+Dans une application web, nous créons une nouvelle instance pour chaque requête HTTP, et nous pouvons l’utiliser pendant toute la durée de vie de la requête.
 
-### Cas d'utilisation courants pour un `Scoped`
+### Cas d’utilisation courants pour un `Scoped`
 
-Voici quelques cas d'utilisation courants :
+Voici quelques cas d’utilisation courants :
 
-- **Entity Framework DbContext**, qui garantit une instance unique du DbContext utilisée tout au long d'une requête pour gérer les opérations de base de données, évitant ainsi les problèmes de concurrence et garantissant que toutes les modifications sont suivies et conservées correctement.
-- **Le modèle d'unité de travail**, qui permet de gérer une unité de travail unique englobant plusieurs opérations de référentiel au sein d'une même requête.
-- **La mise en cache par requête**, pour mettre en cache les données qui sont coûteuses à récupérer ou à calculer et qui doivent être réutilisées au sein d'une même requête, mais pas au-delà.
-- **Données spécifiques à la demande** : Stockage de données spécifiques à une demande, telles que les informations d'authentification de l'utilisateur, qui doivent être accessibles par plusieurs composants au cours du traitement de la demande.
+- **Le `DbContext` d’_Entity Framework_**, qui garantit une instance unique du `DbContext` utilisée tout au long d’une requête pour gérer les opérations de base de données. Cela évite ainsi les problèmes de concurrence et garantissant que toutes les modifications sont suivies et conservées correctement.
+- **Le modèle d’unité de travail**, qui permet de gérer une unité de travail unique englobant plusieurs opérations de référentiel au sein d’une même requête.
+- **La mise en cache par requête**, pour mettre en cache les données qui sont coûteuses à récupérer ou à calculer et qui doivent être réutilisées au sein d’une même requête, mais pas au-delà.
+- **Données spécifiques à la demande** : pour le stockage de données spécifiques à une demande, telles que les informations d’authentification de l’utilisateur, qui doivent être accessibles par plusieurs composants au cours du traitement de la demande.
 
-### Code Example of a Scoped
+### Exemple de code pour un `Scoped`
 
-Let’s consider a scenario where we have a web application that handles user authentication and authorization. We need to access user-specific data multiple times during a single request to ensure that the user has the correct permission to access various resources.
+Considérons un scénario dans lequel nous avons une application web qui gère l’authentification et l’autorisation des utilisateurs. Nous devons accéder à plusieurs reprises aux données spécifiques à l’utilisateur au cours d’une seule requête afin de nous assurer que l’utilisateur dispose des autorisations nécessaires pour accéder à diverses ressources.
 
-We can use a scoped service to store and manage this user data.
+Nous pouvons utiliser un service à portée pour stocker et gérer ces données utilisateur.
 
-1. Let’s create a `UserContextService` and its interface:
+1. Créons un `UserContextService` et son interface.:
 
-   It holds user-specific data for the duration of a single request.
+   Il contient des données spécifiques à l’utilisateur pendant la durée d’une seule requête.
 
    ```csharp
    public interface IUserContextService
@@ -119,11 +118,11 @@ We can use a scoped service to store and manage this user data.
    }
    ```
 
-2. Next, let’s register the Scoped Service:
+2. Ensuite, enregistrons le service en tant que service `Scoped` :
 
-   In an `IocHelper` class (or wherever you configure your services that you call from `Program.cs`), register the `UserContextService` with a scoped lifetime.
+   Dans une classe `IocHelper` (ou à l’endroit où vous configurez vos services que vous appelez depuis `Program.cs`), enregistrez le `UserContextService` avec une durée de vie limitée.
 
-   Below, we use an extension method registering the `UserContextService`.
+   Ci-dessous, nous utilisons une méthode d’extension `ConfigureServices` qui enregistre le `UserContextService`.
 
    ```csharp
    public class IocHelper
@@ -131,17 +130,15 @@ We can use a scoped service to store and manage this user data.
        public void ConfigureServices(this IServiceCollection services)
        {
            services.AddScoped<IUserContextService, UserContextService>();
-
-           // Other service registrations...
+           // Autres enregistrements de services peuvent suivre...
        }
 
-       // Other methods...
    }
    ```
 
-3. We continue with the implementation of a Middleware to populate `UserContextService`
+3. Nous poursuivons la mise en œuvre d’un middleware pour alimenter `UserContextService`
 
-   We create a middleware to populate the `UserContextService` with user data at the beginning of each request.
+   Nous créons un middleware pour remplir le `UserContextService` avec les données utilisateur au début de chaque requête.
 
    ```csharp
    public class UserContextMiddleware
@@ -166,23 +163,23 @@ We can use a scoped service to store and manage this user data.
    }
    ```
 
-4. Then, you register the middleware:
+4. Ensuite, nous enregistrons le middleware.:
 
    ```csharp
    public class AppConfigurationHelper
    {
-   		// Register the middleware
+   		// Enregistrer le middleware
    		public void RegisterMiddlwares(this IApplicationBuilder app)
    		{
    		    app.UseMiddleware<UserContextMiddleware>();
-   		    // Other middleware registrations...
+   		    // Autres enregistrements de middleware...
    		}
    }
    ```
 
-5. Finally, use `UserContextService` in a Controller.
+5. Enfin, on peut aussi utiliser `UserContextService` dans un contrôleur.
 
-   In a controller, you can inject the `IUserContextService` and use it to access user-specific data during the request.
+   Dans un contrôleur, vous pouvez injecter le `IUserContextService` et l’utiliser pour accéder aux données spécifiques à l’utilisateur pendant la requête.
 
    ```csharp
    public class HomeController : Controller
@@ -199,34 +196,34 @@ We can use a scoped service to store and manage this user data.
            var userName = _userContextService.GetUserName();
            var roles = string.Join(", ", _userContextService.GetRoles());
 
-           return Content($"Hello {userName}, you have the following roles: {roles.Join(',')}");
+           return Content($"Bonjour {userName}, Vous avez les rôles suivants : {roles.Join(',')}");
        }
    }
    ```
 
 ## Singleton
 
-If you need to maintain shared state across the entire application lifetime, using a Singleton is a good choice.
+Si vous avez besoin de maintenir un état partagé pendant toute la durée de vie de l’application, l’utilisation d’un singleton est un bon choix.
 
-It’s created once on the first request or at application startup. Every subsequent request will use the same instance.
+Il est créé une seule fois lors de la première requête ou au démarrage de l’application. Chaque requête suivante utilisera la même instance.
 
-### Common Use Cases of a Singleton
+### Cas d’utilisation courants d’un `Singleton`
 
-You will find that using a Singleton commonly falls into the following use cases:
+Vous rencontrerez une utilisation de singletons dans les cas d’utilisation suivants :
 
-- **Configuration Services,** which provide application-wide configuration settings read once and used throughout the application’s lifetime.
-- **Logging Services**: Centralized logging services that need to maintain a single instance to collect and process log entries from various parts of the application.
-- **Caching Services,** that need to cache data globally to avoid repeating expensive operations, such as fetching **static data** or configuration from a database.
+- **Services de configuration**, qui fournissent des paramètres de configuration à l’échelle de l’application, lus une seule fois et utilisés tout au long du cycle de vie de l’application.
+- **Services de journalisation** : services de journalisation centralisés qui doivent maintenir une instance unique pour collecter et traiter les entrées de journal provenant de différentes parties de l’application.
+- **Services de mise en cache**, qui doivent mettre en cache les données de manière globale afin d’éviter de répéter des opérations coûteuses. Par exemple, la récupération de **données statiques** ou de configurations à partir d’une base de données.
 
-### Example of a Singleton
+### Exemple de code pour un `Singleton`
 
-The most common usage will be our example: we have a web application that needs to log activities across different modules. We want to use a single logging service that collects and processes all log entries, ensuring that log data is centralized and managed efficiently.
+L’utilisation la plus courante sera notre exemple : nous avons une application web qui doit enregistrer les activités dans différents modules. Nous voulons utiliser un service de journalisation unique qui collecte et traite toutes les entrées de journal, garantissant ainsi que les données de journalisation sont centralisées et gérées efficacement.
 
-1. Let’s start with the implementation of a `LoggingService`
+1. Commençons par la mise en œuvre d’un `LoggingService`
 
-   The `LoggingService` below logs messages to a centralized log store.
+   Le `LoggingService` enregistre les messages dans un magasin de journaux centralisé.
 
-   The service should be a singleton to ensure that all components use the same instance.
+   Le service doit être un singleton afin de garantir que tous les composants utilisent la même instance.
 
    ```csharp
    public interface ILoggingService
@@ -251,9 +248,9 @@ The most common usage will be our example: we have a web application that needs 
    }
    ```
 
-2. Next, we register the Singleton Service
+2. Ensuite, nous enregistrons le service Singleton.
 
-   In an `IocHelper` class (or wherever you configure your services that you call from `Program.cs`), register the `LoggingService` with a singleton lifetime.
+   Dans une classe `IocHelper` (ou à l’endroit où vous configurez vos services que vous appelez depuis `Program.cs`), enregistrez le `LoggingService` avec une durée de vie singleton.
 
    ```csharp
    public class IocHelper
@@ -261,17 +258,13 @@ The most common usage will be our example: we have a web application that needs 
        public void ConfigureServices(this IServiceCollection services)
        {
            services.AddSingleton<ILoggingService, LoggingService>();
-
-           // Other service registrations...
        }
-
-       // Other methods...
    }
    ```
 
-3. Finally, use `LoggingService` in Controllers
+3. Enfin, utilisez `LoggingService` dans les contrôleurs ou les services.
 
-   In a controller, you can inject the `ILoggingService` into the constructor and use it to log messages.
+   Dans un contrôleur, vous pouvez injecter le `ILoggingService` dans le constructeur et l’utiliser pour enregistrer des messages.
 
    ```csharp
    public class HomeController : Controller
@@ -297,35 +290,35 @@ The most common usage will be our example: we have a web application that needs 
    }
    ```
 
-### En savoir plus sur les durées de vie
+## En savoir plus sur les durées de vie
 
-Si vous souhaitez approfondir le sujet, vous trouverez ci-dessous quelques sources en ligne :
+Si vous souhaitez approfondir le sujet, vous trouverez ci-dessous quelques ressources en ligne :
 
 - **Microsoft Documentation**:
-  - [Durée de vie des services dans le cadre de l'injection de dépendances](https://learn.microsoft.com/fr-fr/aspnet/core/fundamentals/dependency-injection#service-lifetimes)
-  - Cet article explique les trois durées de vie (Transient, Scoped, Singleton) et fournit des conseils sur le moment où il convient d'utiliser chacune d'entre elles.
-- **Module Microsoft Learn sur l'injection de dépendances dans .NET**:
+  - [Durée de vie des services dans le cadre de l’injection de dépendances](https://learn.microsoft.com/fr-fr/aspnet/core/fundamentals/dependency-injection#service-lifetimes)
+  - Cet article explique les trois durées de vie (Transient, Scoped, Singleton) et fournit des conseils sur le moment où il convient d’utiliser chacune d’entre elles.
+- **Module Microsoft Learn sur l’injection de dépendances dans .NET**:
   - [Injection de dépendances en .NET](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)
-  - Ce module propose un examen approfondi de l'injection de dépendances dans .NET, y compris des exemples et des bonnes pratiques pour l'utilisation de différentes durées de vie de services.
+  - Ce module propose un examen approfondi de l’injection de dépendances dans .NET, y compris des exemples et des bonnes pratiques pour l’utilisation de différentes durées de vie de services.
 - **Stack Overflow**:
   - [When to use AddTransient vs AddScoped vs AddSingleton in ASP.NET Core?](https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences)
-  - Ce fil de discussion aborde les scénarios pratiques et les implications de l'utilisation de différentes durées de vie, à l'aide d'exemples et de points de vue fournis par la communauté.
-- **Article de blog sur l'injection de dépendance**:
+  - Ce fil de discussion aborde les scénarios pratiques et les implications de l’utilisation de différentes durées de vie, à l’aide d’exemples et de points de vue fournis par la communauté.
+- **Article de blog sur l’injection de dépendance**:
   - [Understanding Dependency Injection in .NET Core](https://auth0.com/blog/dependency-injection-in-dotnet-core/)
-  - Cet article de blog couvre les bases de l'injection de dépendances dans .NET Core et explique les différentes durées de vie à l'aide d'exemples pratiques.
+  - Cet article de blog couvre les bases de l’injection de dépendances dans .NET Core et explique les différentes durées de vie à l’aide d’exemples pratiques.
 
 ## Summary
 
-Use **Transient** for stateless services that **can be recreated as needed** and **don’t hold a state**.
+Utilisez **Transient** pour les services sans état qui **peuvent être recréés selon les besoins** et **ne conservent pas d’état**.
 
-Use **scoped** for services that should be **unique to a single request or scope,** holding state that shouldn’t persist beyond that scope.
+Utilisez **Scoped** pour les services qui doivent être **uniques à une seule requête HTTP**, conservant un état qui ne doit pas persister au-delà de cette requête HTTP.
 
-Use **Singleton** for services that need to **maintain a state across the entire application lifecycle** and all requests and users can access it through the various services.
+Utilisez **Singleton** pour les services qui doivent **conserver un état tout au long du cycle de vie de l’application** et auxquels toutes les requêtes et tous les utilisateurs peuvent accéder via les différents services.
 
-I hope this short summary helped you understand the usage of each lifetime next time you work a new service for your applications.
+J’espère que ce bref résumé vous aura aidé à comprendre l’utilisation de chaque durée de vie la prochaine fois que vous travaillerez sur un nouveau service pour vos applications.
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
