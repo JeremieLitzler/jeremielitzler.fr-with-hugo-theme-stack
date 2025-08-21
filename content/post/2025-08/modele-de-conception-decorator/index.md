@@ -3,7 +3,7 @@ title: "Le modèle de conception “Decorateur”"
 description: "Le modèle de conception “Decorateur” est un modèle de conception structurelle utilisé pour étendre la fonctionnalité des objets d’une manière flexible et réutilisable."
 image: 2025-05-23-4-colored-paint-brushes.jpg
 imageAlt: 4 pinceaux de couleur
-date: 2025-08-22
+date: 2025-08-21
 categories:
   - Développement logiciel
 tags:
@@ -27,6 +27,8 @@ public interface INotifier
 
 ## Étape 2 : Créer un composant concret
 
+Ce composant implémente l’interface que nous avons définie précédemment.
+
 ```csharp
 public class EmailNotifier : INotifier
 {
@@ -35,10 +37,13 @@ public class EmailNotifier : INotifier
         Console.WriteLine($"Sending Email: {message}");
     }
 }
-
 ```
 
 ## Étape 3 : Création de la classe décoratrice de base
+
+La classe décoratrice de base nous sert de base pour implémenter le modèle de conception.
+
+En utilisant l’injection de dépendance avec une instance de `INotifier` fournit au constructeur, on déclare une méthode virtuelle que chaque classe décoratrice concrète viendra surchargé.
 
 ```csharp
 public class NotifierDecorator : INotifier
@@ -59,6 +64,8 @@ public class NotifierDecorator : INotifier
 ```
 
 ## Étape 4 : Créer des décorateurs concrets
+
+Dans les décorateurs concrets, on hérite de `NotifierDecorator` et on l’a surchargé la méthode `Send` tout en s’assurant que la méthode de la classe parent est bien appelé.
 
 ```csharp
 public class SMSNotifier : NotifierDecorator
@@ -86,8 +93,9 @@ public class FacebookNotifier : NotifierDecorator
         Console.WriteLine($"And posting on Facebook: {message}");
     }
 }
-
 ```
+
+Du coup, à quoi ressemble l’utilisation des classes `Notifier` ? Quel résultat obtient-on ?
 
 ## Étape 5: Utiliser les décorateurs
 
@@ -138,7 +146,7 @@ And posting on Facebook: Hello World!
 
 Le premier test est simple. Il n’y a rien de particulier à expliquer.
 
-Les deuxième, troisième et quatrième tests montrent le modèle de conception _Decorator_ en action.
+Les deuxième, troisième et quatrième tests démontrent le modèle de conception _Decorator_ en action.
 
 Si vous regardez le troisième test, `facebookNotifier` enveloppe `smsNotifier`, qui lui-même enveloppe `emailNotifier`.
 
@@ -150,7 +158,7 @@ Si vous regardez le troisième test, `facebookNotifier` enveloppe `smsNotifier`,
 
 - Donc `EmailNotifier.Send` est appelé et affiche « Sending Email : Hello World ! » dans la console de sortie.
 
-- Ensuite, le contrôle retourne à `SMSNotifier.Send`, qui affiche « And sending SMS : Hello World ! » dans la console de sortie.
+- Ensuite, le contrôle retourne à `SMSNotifier.Send`, qui affiche « And sending SMS : Hello World ! » dans la console de sortie.
 - Enfin, le contrôle retourne à `FacebookNotifier.Send`, qui affiche « And posting on Facebook : Hello World ! » dans la console de sortie.
 
 Chaque décorateur ajoute son propre comportement après avoir appelé la méthode de l’objet enveloppé.
@@ -162,7 +170,6 @@ FacebookNotifier.Send
             (prints "Sending Email: Hello World!")
         (prints "And sending SMS: Hello World!")
     (prints "And posting on Facebook: Hello World!")
-
 ```
 
 ## Cas d’utilisation courants
@@ -181,6 +188,7 @@ Les ressources ci-dessous permettent d’approfondir le sujet et ses application
 - **Design Patterns : Elements of Reusable Object-Oriented Software** par Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides (_Gang of Four_)
 - **Head First Design Patterns** par Eric Freeman, Elisabeth Robson
 - [Microsoft Documentation on the Decorator Pattern](https://learn.microsoft.com/en-us/archive/msdn-magazine/2008/october/design-patterns-the-decorator-pattern)
+- **Why Adding Features Shouldn’t Break Your Code: Meet the Decorator Pattern** par Maxim Gorin explique très bien le concept de décorateur que j’ai partagé ici. Je vous invite à [sa série sur les modèles de conception](https://maxim-gorin.medium.com/list/design-patterns-b183b417384c) qui est très complète.
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
