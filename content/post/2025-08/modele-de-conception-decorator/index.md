@@ -3,7 +3,7 @@ title: "Le modèle de conception “Decorateur”"
 description: "Le modèle de conception “Decorateur” est un modèle de conception structurelle utilisé pour étendre la fonctionnalité des objets d’une manière flexible et réutilisable."
 image: 2025-05-23-4-colored-paint-brushes.jpg
 imageAlt: 4 pinceaux de couleur
-date: 2025-08-21
+date: 2025-08-22
 categories:
   - Développement logiciel
 tags:
