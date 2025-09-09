@@ -141,7 +141,7 @@ Après quelques minutes, vérifiez le volet _Revisions and replicas_ (Révisions
 
 Bien que cela fonctionne, j’ai mis en place un autre workflow qui s’appuie sur une branche `main` pour les builds de production et `develop` pour les builds d’assurance qualité. Ainsi, nous ne dépendons pas du type de CI (par exemple, `CI individuelle` ou `Pull Request`), mais du nom de la branche.
 
-Vous pouvez lire [cet article décrivant les étapes à suivre pour configurer le pipeline de cette manière](../configure-docker-image-in-azure-devops/index.md).
+Vous pouvez lire [cet article décrivant les étapes à suivre pour configurer le pipeline de cette manière](../configurer-la-balise-image-docker-az-devops/index.md).
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
