@@ -3,7 +3,7 @@ title: "Concevoir une classe fermée en C#"
 description: "Pour empêcher une classe d'être derivée par une autre classe en C#, vous pouvez utiliser un mot-clé. Voyons lequel, comment l'utiliser et pourquoi."
 image: 2025-09-15-sealed-keyword-in-dotnet-and-csharp.jpg
 imageAlt: "Image avec ‘Modificateur Sealed en .NET et C#’"
-date: 2025-11-04
+date: 2025-11-05
 categories:
   - Développement web
 tags:
