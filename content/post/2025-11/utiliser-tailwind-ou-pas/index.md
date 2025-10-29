@@ -1,6 +1,6 @@
 ---
 title: "Tailwind CSS ou pas ?"
-description: "Les avis divergent quant à l'utilisation ou non de Tailwind."
+description: "Les avis divergent quant à l’utilisation ou non de Tailwind CSS.."
 image: 2025-09-19-example-of-tailwind-css.png
 imageAlt: Exemple de Tailwind CSS
 date: 2025-11-19
@@ -10,22 +10,22 @@ tags:
   - Tailwind CSS
 ---
 
-Que vous aimiez son approche axée sur les classes utilitaires ou que vous détestiez ses listes de classes encombrées dans l'HTML, Tailwind CSS suscite des opinions très tranchées parmi les développeurs.
+Que vous aimiez son approche axée sur les classes utilitaires ou que vous détestiez ses listes de classes encombrées dans de l’HTML, Tailwind CSS suscite des opinions très tranchées parmi les développeurs.
 
 Examinons de plus près ce qui le rend à la fois puissant et controversé.
 
-## Tailwind CSS en vaut-il la peine ?
+## Tailwind CSS en vaut-il la peine ?
 
-Franchement, la première chose qui m'a frappé, c'est le code HTML vraiment brouillé, comme beaucoup d'entre vous, j'en suis sûr. Il y a tellement de classes CSS !
+Franchement, la première chose qui m’a frappé, c’est le code HTML vraiment brouillé, comme beaucoup d’entre vous, j’en suis sûr. Il y a tellement de classes CSS !
 
-Cependant, [voici les problèmes](https://www.youtube.com/watch?v=lHZwlzOUOZ4) qu'il tente de résoudre en utilisant du CSS standard, selon [Fireship](https://www.youtube.com/@Fireship) :
+Cependant, [voici les problèmes](https://www.youtube.com/watch?v=lHZwlzOUOZ4) qu’il tente de résoudre en utilisant du CSS standard, selon [Fireship](https://www.youtube.com/@Fireship) :
 
-- Colocation :
-  - Avec le CSS classique, nous avons décidé d'appliquer une séparation des responsabilité entre le balisage (HTML) et les styles (CSS). Cela nécessite de nommer les classes, ce que nous, les humains, ne savons pas bien faire. De plus, le nom de la classe ne vous renseigne pas sur les styles qui se cachent derrière.
-  - Avec Tailwind, nous utilisons des classes utilitaires qui explicitent les styles dans le balisage. C'est ce qui crée le HTML brut qui affiche un attribut de classe avec des tonnes de classes, on est d'accord...
+- Colocation :
+  - Avec le CSS classique, nous avons décidé d’appliquer une séparation des responsabilités entre le balisage (HTML) et les styles (CSS). Cela nécessite de nommer les classes, ce que nous, les humains, ne savons pas bien faire. De plus, le nom de la classe ne vous renseigne pas sur les styles qui se cachent derrière.
+  - Avec Tailwind, nous utilisons des classes utilitaires qui explicitent les styles dans le balisage. C’est ce qui crée le HTML brut qui affiche un attribut de classe avec des tonnes de classes, on est d’accord…
 - Verbosité
   - Avec le CSS classique, la verbosité est une réalité. Par exemple, pour positionner un élément, vous devez définir les propriétés `position`, `top`, `right`, `bottom` et `left`.
-  - Avec Tailwind, il suffit d'utiliser `inset-0`, vous n'avez pas besoin d'écrire toutes ces propriétés.
+  - Avec Tailwind, il suffit d’utiliser `inset-0`, vous n'avez pas besoin d'écrire toutes ces propriétés.
 - Trop de puissance
   - Avec le CSS vanilla, vous avez trop de contrôle sur l'interface utilisateur, et si vous ne comprenez pas bien le fonctionnement du CSS, vous pouvez en souffrir.
   - Avec Tailwind, nous nous situons à mi-chemin entre le CSS vanille (utilisant la convention) et Bootstrap (utilisant la configuration).
@@ -41,72 +41,70 @@ Pourquoi ? Parce qu'il vous fera gagner du temps.
 
 Allons-y.
 
-## The Problems Tailwind Tries to Solve
+## Les problèmes que Tailwind tente de résoudre
 
-### Separation of Concern
+### Séparation des responsabilités
 
-The standard for the last 20 years has been to separate the markup from the style. And it requires naming CSS classes that you’ll see in the HTML (which is hard).
+Depuis 20 ans, la norme consiste à séparer le balisage du style. Cela nécessite de nommer les classes CSS que vous verrez dans le HTML (ce qui est difficile).
 
-But, more importantly, several weeks later, you’d come back to your code and you’d have forgotten what is the style applied to these classes just by looking at the HTML. So you go back the styles.
+Mais, plus important encore, quelques semaines ou mois plus tard, lorsque vous revenez sur votre code, vous avez oublié quel style est appliqué à ces classes rien qu'en regardant le HTML. Vous devez donc revenir aux styles.
 
-Plus, you might use those CSS classes in multiple places and changing their style could break things where you don’t expect…
+De plus, vous pouvez utiliser ces classes CSS à plusieurs endroits et modifier leur style pourrait causer des dysfonctionnements là où vous ne vous y attendez pas...
 
-With Tailwind CSS, you don’t have that problem.
+Avec Tailwind CSS, vous n'avez pas ce problème.
 
-![Screenshot from “**Tailwind CSS is the worst…**” by Fireship.](https://prod-files-secure.s3.us-west-2.amazonaws.com/56cdf79b-bb9b-43db-829f-e971e65ed439/8636ad6e-4cb5-4196-8580-a39ce4e63b51/44086F81-7F47-43D0-A818-1D17D83D027C.png)
+![Capture d'écran tirée de « **Tailwind CSS is the worst…** » par Fireship](2025-09-19-example-of-tailwind-css.png)
 
-Credit: Screenshot from “**Tailwind CSS is the worst…**” by Fireship.
+C'est vrai, cela peut donner lieu à du code HTML surchargé, que nous avons tous vu et qui nous fait dire : « BURK ! »
 
-True, this can result in the bolded HTML we’ve all seen and say: “BURK!”
+Avec Visual Studio Code, vous pouvez utiliser l'extension nommée « Inline fold » pour plier et déplier cette liste de classes Tailwind.
 
-With Visual Studio Code, you can use the extension “Inline fold” to minimize those inline Tailwind CSS classes.
+Vous pouvez également utiliser le regroupement avec la directive `@apply` dans le CSS de votre composant. Toutefois, cela ne résoudra pas le problème du code HTML brouillé lorsque vous consultez le code HTML dans les outils de développement de votre navigateur. En effet, le code généré contiendra la longue liste de classes CSS.
 
-Alternatively, you can use the `@apply` grouping in your component’s CSS, but that won’t solve the problem of blotted HTML when you look at the HTML in your browser DevTools.
+### Verbosité
 
-### Verbosity
+Le CSS est verbeux. Avec les classes Tailwind CSS, vous tapez beaucoup plus de caractères.
 
-CSS is verbose. With Tailwind CSS classes, you type a lot more characters.
+Oui, il est toujours préférable d’utiliser directement la plateforme. Avec Tailwind CSS, vous devez apprendre une abstraction en plus du CSS. Cela représente un travail supplémentaire si vous débutez.
 
-Yes, it’s always better to use the platform directly. With Tailwind CSS, you have to learn an abstraction on top of the CSS. It’s additional work if you’re getting started.
+Je dirais qu’il faut bien comprendre le CSS avant de décider d’utiliser Tailwind CSS.
 
-I’d say that you need a good understanding of CSS before you decide to use Tailwind CSS.
+### Trop de pouvoir
 
-### Too Much Power
+Le CSS vous donne trop de contrôle sur l’interface utilisateur. Et vous connaissez probablement BootStrap, n’est-ce pas ? Eh bien, il est difficile à personnaliser et n’offre pas suffisamment de flexibilité.
 
-While CSS gives you too much control over the UI. And you probably know BootStrap, right? Well, it’s difficult to customize and doesn’t give enough power.
+Tailwind CSS est le compromis entre ces deux solutions.
 
-Tailwind CSS falls right in the middle of these.
-
-It gives a standard set of constraints that you can use to design a good-looking and consistent UI.
+Il fournit un ensemble standard de contraintes que vous pouvez utiliser pour concevoir une interface utilisateur esthétique et cohérente.
 
 ### Zombies
 
-Who has written a CSS class that ends up not being used at all? I have.
+Qui a déjà écrit une classe CSS qui, finalement, devient non utilisée ? Je suis coupable.
 
-With Tailwind CSS, you know that the tool will strip off everything that you don’t use, generating a smaller bundle in the end.
+Avec Tailwind CSS, vous savez que l’outil supprimera tout ce que vous n’utilisez pas, générant ainsi un ensemble de code CSS plus compact au final.
 
-Yes, the drawback is that you need to follow at least 5 steps to set Tailwind CSS up in your project. So it might be better to use it on large projects.
+Oui, l’inconvénient est de suivre au moins 5 étapes pour configurer Tailwind CSS dans votre projet. Il peut donc être préférable de l’utiliser pour des projets de grande envergure.
 
-For smaller projects, consider [PicoCss](https://picocss.com/). I’ll give some feedback on this framework later if I use it.
+Pour les projets plus modestes, pensez à [PicoCss](https://picocss.com/). Je donnerai mon avis sur ce framework plus tard si je l’utilise.
 
-## My Conclusion: Know CSS Before Learning Tailwind CSS
+## Ma conclusion : apprenez le CSS avant d’apprendre Tailwind CSS
 
-When I discovered Tailwind CSS, the thought that came after a few weeks of using it was:
+Lorsque j’ai découvert Tailwind CSS, après quelques semaines d’utilisation, je me suis dit :
 
-> You need to understand CSS no matter what.
+> Il faut absolument comprendre le CSS pour bien l’utiliser.
 
-If you don’t understand Flexbox, you won’t know how to use Tailwind CSS Flexbox classes. And so on…
+Si vous ne comprenez pas Flexbox ou Grid par exemple, vous ne saurez pas comment utiliser les classes Flexbox ou Grid de Tailwind CSS. Et ainsi de suite…
 
-This is what [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) also tells web developers.
+C’est également ce que [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) recommande aux développeurs web.
 
-## Sources I Reviewed For This Article
+## Sources consultées pour cet article
 
-- [Tailwind CSS is the worst, by Fireship](https://www.youtube.com/watch?v=lHZwlzOUOZ4)
-- [Why developers HATE TailwindCSS, by James Luterek](https://www.youtube.com/watch?v=mznsLAWVnOI)
-- [Should You Use Tailwind CSS, by Web Dev Simplified](https://www.youtube.com/watch?v=hdGsFpZ0J2E)
+- [Tailwind CSS est le pire, de Fireship](https://www.youtube.com/watch?v=lHZwlzOUOZ4)
+- [Pourquoi les développeurs HAïSSENT TailwindCSS, de James Luterek](https://www.youtube.com/watch?v=mznsLAWVnOI)
+- [Devriez-vous utiliser Tailwind CSS, de Web Dev Simplified](https://www.youtube.com/watch?v=hdGsFpZ0J2E)
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
