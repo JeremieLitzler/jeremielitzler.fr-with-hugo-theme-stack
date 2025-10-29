@@ -10,19 +10,19 @@ tags:
   - Tailwind CSS
 ---
 
-J'ai suivi une formation Vue.js en décembre dernier et le projet utilisait TailwindCSS v3. Moins de trois mois plus tard, l'équipe Tailwind a lancé la v4 et de nombreux éléments demandaient une adaptation sur les projets existants.
+J’ai suivi une formation Vue.js en décembre dernier et le projet utilisait TailwindCSS v3. Moins de trois mois plus tard, l’équipe Tailwind a lancé la v4 et de nombreux éléments demandaient une adaptation sur les projets existants.
 
-Je n'avais jamais effectué de mise à niveau TailwindCSS auparavant et j'ai suivi le [guide officiel de mise à niveau](https://tailwindcss.com/docs/upgrade-guide). Cela n'a pas fonctionné, car la configuration de Tailwind CSS v3 était trop personnalisée pour être mise à niveau automatiquement.
+Je n’avais jamais effectué de mise à niveau TailwindCSS auparavant et j’ai suivi le [guide officiel de mise à niveau](https://tailwindcss.com/docs/upgrade-guide). Cela n’a pas fonctionné, car la configuration de Tailwind CSS v3 était trop personnalisée pour être mise à niveau automatiquement.
 
-J'ai essayé de le faire manuellement, mais je ne comprenais pas pourquoi les classes utilitaires ne fonctionnaient pas.
+J’ai essayé de le faire manuellement, mais je ne comprenais pas pourquoi les classes utilitaires ne fonctionnaient pas.
 
-Voici comment j'ai finalement réussi à effectuer la mise à niveau.
+Voici comment j’ai finalement réussi à effectuer la mise à niveau.
 
 ## Ma situation initiale
 
-Je devais migrer le projet de TailwindCSS v3 vers v4.
+Je devais migrer le projet de TailwindCSS v3 vers v4.
 
-Je ne pouvais pas effectuer la mise à niveau à l'aide de l'outil de mise à niveau en raison d'un fichier `tailwind.config.js` personnalisé.
+Je ne pouvais pas effectuer la mise à niveau à l’aide de l’outil de mise à niveau en raison d’un fichier `tailwind.config.js` personnalisé.
 
 Le projet utilisait également le traitement PostCSS :
 
@@ -37,27 +37,27 @@ Le projet utilisait également le traitement PostCSS :
 
 ## Les premières étapes
 
-J'ai installé `@tailwindcss/vite` et les paquets `tailwindcss` les plus récents en tant que dépendances de développement.
+J’ai installé `@tailwindcss/vite` et les paquets `tailwindcss` les plus récents en tant que dépendances de développement.
 
-Ensuite, j'ai mis à jour la configuration de Vite afin d'utiliser le plugin `@tailwindcss/vite` dans la section `plugins` et j'ai supprimé complètement la section `css`.
+Ensuite, j’ai mis à jour la configuration de Vite afin d’utiliser le plugin `@tailwindcss/vite` dans la section `plugins` et j’ai supprimé complètement la section `css`.
 
 Les autres mises à jour ont été effectuées soit dans le fichier CSS principal, soit dans les styles des composants.
 
-J'ai donc mis à jour le fichier `index.css` avec les directives `@import "tailwindcss";` au lieu de `@tailwind`, comme le suggère la mise à jour manuelle.
+J’ai donc mis à jour le fichier `index.css` avec les directives `@import "tailwindcss";` au lieu de `@tailwind`, comme le suggère la mise à jour manuelle.
 
 Cela signifiait que je devais remplacer `@layer base` par `@layer utilities`.
 
-J'ai également vérifié tous les [utilitaires renommés](https://tailwindcss.com/docs/upgrade-guide#renamed-utilities) et [supprimés](https://tailwindcss.com/docs/upgrade-guide#removed-deprecated-utilities) dans la liste fournie par l'équipe TailwindCSS dans son guide de mise à niveau.
+J’ai également vérifié tous les [utilitaires renommés](https://tailwindcss.com/docs/upgrade-guide#renamed-utilities) et [supprimés](https://tailwindcss.com/docs/upgrade-guide#removed-deprecated-utilities) dans la liste fournie par l’équipe TailwindCSS dans son guide de mise à niveau.
 
-Jusqu'ici, tout allait bien, mais la partie la plus difficile à comprendre venait ensuite.
+Jusqu’ici, tout allait bien, mais la partie la plus difficile à comprendre venait ensuite.
 
-## Qu'en est-il de `tailwind.config.js` ?
+## Qu’en est-il de `tailwind.config.js` ?
 
-Dans la version 4, on utilise beaucoup moins ce fichier. Cela dépend de votre niveau de personnalisation.
+Dans la version 4, on utilise beaucoup moins ce fichier. Cela dépend de votre niveau de personnalisation.
 
-Je ne dirais pas « complètement inutilisé », car nous en avons toujours besoin pour indiquer où nous voulons activer la complétion automatisée afin d'ajouter des classes utilitaires au HTML.
+Je ne dirais pas « complètement inutilisé », car nous en avons toujours besoin pour indiquer où nous voulons activer la complétion automatisée afin d’ajouter des classes utilitaires au HTML.
 
-Voici ce que j'ai laissé dans ce fichier :
+Voici ce que j’ai laissé dans ce fichier :
 
 ```css
 export default {
@@ -70,9 +70,9 @@ export default {
 }
 ```
 
-Mais comment convertir l'objet `theme` que nous avions dans la version 3 ?
+Mais comment convertir l’objet `theme` que nous avions dans la version 3 ?
 
-Commençons par l'objet `container`. Si vous avez :
+Commençons par l’objet `container`. Si vous avez :
 
 ```jsx
     container: {
@@ -83,7 +83,7 @@ Commençons par l'objet `container`. Si vous avez :
     },
 ```
 
-Il s'agit du code CSS que vous ajoutez à votre fichier CSS principal :
+Il s’agit du code CSS que vous ajoutez à votre fichier CSS principal :
 
 ```css
 @theme {
@@ -182,7 +182,7 @@ Vous devrez utiliser la directive `@theme` :
 }
 ```
 
-Qu'en est-il des `keyframes` ? La méthode est très similaire. À partir de ceci :
+Qu’en est-il des `keyframes` ? La méthode est très similaire. À partir de ceci :
 
 ```jsx
 extend: {
@@ -252,13 +252,13 @@ Vous ajoutez ce qui suit avec la directive `@keyframes` :
 
 Nous arrivons maintenant à la dernière partie.
 
-Dans un modèle, j'ai rencontré ce type d'erreur lorsque j'ai exécuté la commande de compilation. Par exemple :
+Dans un modèle, j’ai rencontré ce type d’erreur lorsque j’ai exécuté la commande de compilation. Par exemple :
 
 ```plaintext
 [@tailwindcss/vite:generate:build] Cannot apply unknown utility class: text-slate-500"
 ```
 
-Le style dans le composant à l'origine de l'erreur était le suivant :
+Le style dans le composant à l’origine de l’erreur était le suivant :
 
 ```css
 .pencil {
@@ -274,7 +274,7 @@ Vous avez trois options :
 
 1. Il vous suffit de copier vos classes utilitaires personnalisées depuis vos composants vers les `composants @layer` de votre fichier CSS principal. Mais cela va à l'encontre de l'objectif recherché et ne fonctionnera pas si vous utilisez l'option `:deep` des composants imbriqués de Vue dans vos styles.
 2. Vous utilisez la directive `@utility` pour définir une nouvelle classe utilitaire dans votre fichier CSS principal.
-3. Vous importez votre feuille de style principale pour référence dans vos composants. Vous devez le faire dans tous les fichiers où vous utilisez `@apply` pour créer une classe CSS personnalisée qui applique les classes utilitaires Tailwind. Aucune classe utilitaire Tailwind utilisée dans les modèles de vos composants ne nécessite d'ajustements.
+3. Vous importez votre feuille de style principale pour référence dans vos composants. Vous devez le faire dans tous les fichiers où vous utilisez `@apply` pour créer une classe CSS personnalisée qui applique les classes utilitaires Tailwind. Aucune classe utilitaire Tailwind utilisée dans les modèles de vos composants ne nécessite d’ajustements.
 
    ```css
    /* Importez votre CSS principal dans le composant */
@@ -286,21 +286,21 @@ Vous avez trois options :
    }
    ```
 
-J'ai choisi la troisième option où j'ai utilisé les sélecteurs CSS `:deep` de Vue et pour le reste, j'ai opté pour la première option.
+J’ai choisi la troisième option où j’ai utilisé les sélecteurs CSS `:deep` de Vue et pour le reste, j’ai opté pour la première option.
 
 {{< blockcontainer jli-notice-danger "FAITES ATTENTION si vous utilisez la troisième option partout.">}}
 
-Je ne suis pas sûr qu'il soit judicieux de l'utiliser partout. Pour en savoir plus sur ce sujet, consultez la [documentation sur les directives TailwindCSS](https://tailwindcss.com/docs/functions-and-directives).
+Je ne suis pas sûr qu’il soit judicieux de l’utiliser partout. Pour en savoir plus sur ce sujet, consultez la [documentation sur les directives TailwindCSS](https://tailwindcss.com/docs/functions-and-directives).
 
 {{< /blockcontainer >}}
 
 ## Conclusion
 
-Je suis encore en train de me familiariser avec TailwindCSS. D'une certaine manière, je trouve cela intéressant. Vous pouvez rapidement transformer une mise en page à l'aide de la mise en page `flexbox` ou `grid`.
+Je suis encore en train de me familiariser avec TailwindCSS. D’une certaine manière, je trouve cela intéressant. Vous pouvez rapidement transformer une mise en page à l’aide de la mise en page `flexbox` ou `grid`.
 
-Comme beaucoup d'autres, je m'interroge sur le code HTML _brouillé_ avec ces classes utilitaires. De plus, quelle est la logique pour ajouter les classes ? Est-ce similaire aux fichiers CSS où vous placez d'abord les plus génériques, puis la typographie et enfin la mise en page ?
+Comme beaucoup d’autres, je m’interroge sur le code HTML _brouillé_ avec ces classes utilitaires. De plus, quelle est la logique pour ajouter les classes ? Est-ce similaire aux fichiers CSS où vous placez d’abord les plus génériques, puis la typographie et enfin la mise en page ?
 
-La version 4 utilise [la fonctionnalité @layer du CSS vanilla](https://developer.mozilla.org/fr-FR/docs/Web/CSS/@layer). À première vue, la cascade s'applique de la même manière que pour les styles habituels. Vous pouvez toutefois modifier explicitement l'ordre de la cascade :
+La version 4 utilise [la fonctionnalité @layer du CSS vanilla](https://developer.mozilla.org/fr-FR/docs/Web/CSS/@layer). À première vue, la cascade s’applique de la même manière que pour les styles habituels. Vous pouvez toutefois modifier explicitement l’ordre de la cascade :
 
 ```css
 /* Bien que la couche `state` soit définie en premier et doive être remplacée par la couche de module, la balise `@layer module, state` redéfinit l'ordre de la cascade de styles, en appliquant d'abord le module, puis l'état, ce qui rend la couleur d'arrière-plan de la classe `.alert` marron au lieu de jaune. */
@@ -328,7 +328,7 @@ La version 4 utilise [la fonctionnalité @layer du CSS vanilla](https://develope
 }
 ```
 
-Plus d'informations sur ce sujet prochainement...
+Plus d’informations sur ce sujet prochainement…
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
