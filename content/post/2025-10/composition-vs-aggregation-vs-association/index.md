@@ -3,7 +3,7 @@ title: "Composition vs Agrégation vs Association"
 description: "Plongeons-nous dans les trois concepts de la programmation orientée objet."
 image: 2025-07-14-a-notebook-with-wireframes.jpg
 imageAlt: Un cahier avec des wireframes
-date: 2025-07-14
+date: 2025-10-22
 categories:
   - Développement logiciel
 tags:
