@@ -24,14 +24,14 @@
             </main>
         </div>
         {{ partial "footer/include.html" . }}
-    </body>
-    <script>
-        const rightSideBar = document.querySelector('.right-sidebar')
-        const summaries = document.querySelectorAll('summary');
-        summaries.forEach(summary => {
-            summary.addEventListener('click', (event) => {
-                rightSideBar.classList.toggle('right-sidebar-scroll')
+        <script>
+            const rightSideBar = document.querySelector('.right-sidebar')
+            const summaries = document.querySelectorAll('summary');
+            summaries.forEach(summary => {
+                summary.addEventListener('click', (event) => {
+                    rightSideBar.classList.toggle('right-sidebar-scroll')
+                })
             })
-        })
-    </script>
+        </script>    
+    </body>
 </html>

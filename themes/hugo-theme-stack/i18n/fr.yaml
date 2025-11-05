@@ -74,7 +74,6 @@ footer:
 
   designedBy:
     other: Thème {{ .Theme }} conçu par {{ .DesignedBy }}
-
 taxoMisc:
   searchForm:
     title:
