@@ -1,6 +1,6 @@
 ---
 title: "Concevoir une classe fermée en C#"
-description: "Pour empêcher une classe d'être derivée par une autre classe en C#, vous pouvez utiliser un mot-clé. Voyons lequel, comment l'utiliser et pourquoi."
+description: "Pour empêcher une classe d’être derivée par une autre classe en C#, vous pouvez utiliser un mot-clé. Voyons lequel, comment l’utiliser et pourquoi."
 image: 2025-09-15-sealed-keyword-in-dotnet-and-csharp.jpg
 imageAlt: "Image avec ‘Modificateur Sealed en .NET et C#’"
 date: 2025-11-05
@@ -11,11 +11,11 @@ tags:
   - Programmation orientée objet
 ---
 
-## How
+## Comment
 
-To prevent a class from being subclassed in C#, you can use the `sealed` keyword. When a class is marked as `sealed`, it can’t be inherited by any other class. This is useful when you want to ensure that your class’s implementation remains unchanged and that no further subclasses are created to modify its behavior.
+Pour empêcher une classe d’être sous-classée en C#, vous pouvez utiliser le mot-clé ``sealed`. Lorsqu’une classe est marquée comme `sealed`, elle ne peut être héritée par aucune autre classe. Cela est utile lorsque vous souhaitez vous assurer que l’implémentation de votre classe reste inchangée et qu’aucune autre sous-classe n’est créée pour modifier son comportement.
 
-Here is an example of how to design a class to prevent it from being subclassed:
+Voici un exemple de conception d’une classe afin d’empêcher l’héritage :
 
 ```csharp
 public sealed class SealedClass
@@ -30,101 +30,101 @@ public sealed class SealedClass
 
 ```
 
-In this example, `SealedClass` is marked as `sealed`, so no other class can inherit from it. If you try to create a subclass of `SealedClass`, the C# compiler will generate an error.
+Dans cet exemple, `SealedClass` est marquée comme `sealed`, donc aucune autre classe ne peut en hériter. Si vous essayez de créer une sous-classe héritant de `SealedClass`, le compilateur C# générera une erreur.
 
-Here’s an example demonstrating the compiler error:
+Voici un exemple illustrant l’erreur du compilateur :
 
 ```csharp
 public class DerivedClass : SealedClass
 {
-    // This will cause a compiler error because SealedClass is sealed
+    // Cela provoquera une erreur de compilation car SealedClass est scellé.
 }
 
 ```
 
-Attempting to compile the above code will result in a compiler error similar to:
+Tenter de compiler le code ci-dessus entraînera une erreur de compilation similaire à celle-ci :
 
 ```
 error CS0509: 'DerivedClass': cannot derive from sealed type 'SealedClass'
 ```
 
-Using the `sealed` keyword is a straightforward and effective way to ensure that a class can’t be subclassed in C#.
+L’utilisation du mot-clé `sealed` est un moyen simple et efficace de garantir qu’une classe ne peut pas être dérivée en C#.
 
-## Why
+## Pourquoi
 
-Using the `sealed` keyword in C# to prevent a class from being subclassed can be particularly useful in several scenarios. Here are some common use cases:
+L’utilisation du mot-clé `sealed` en C# pour empêcher l’héritage d’une classe peut s’avérer particulièrement utile dans plusieurs scénarios. Voici quelques cas d’utilisation courants :
 
-### 1. **Ensuring Security and Integrity**
+### 1. **Garantir la sécurité et l’intégrité**
 
-When a class handles sensitive data or security-critical operations, sealing the class can prevent accidental or malicious modifications that could compromise the system’s security.
+Lorsqu’une classe traite des données sensibles ou des opérations critiques pour la sécurité, utiliser `sealed` de la classe permet d’empêcher des modifications accidentelles susceptibles de compromettre la sécurité du système.
 
-For example, a class that manages encryption keys or performs authentication checks falls into that category.
+Par exemple, une classe qui gère des clés de chiffrement ou effectue des vérifications d’authentification entre dans cette catégorie.
 
-Feel free to review the [Microsoft Documentation on Secure Coding Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/security/secure-coding-guidelines) to dive deeper into the topic.
+N’hésitez pas à consulter la [documentation Microsoft sur les directives de codage sécurisé](https://docs.microsoft.com/en-us/dotnet/standard/security/secure-coding-guidelines) pour approfondir le sujet.
 
-### 2. **Preserving Class Invariants**
+### 2. **Préserver les invariants de classe**
 
-If a class has complex internal logic and invariants that must always be maintained, sealing the class ensures that derived classes don’t unintentionally break these invariants.
+Si une classe possède une logique interne complexe et des invariants qui doivent toujours être conservés, utiliser `sealed` garantit que les classes dérivées ne rompent pas involontairement ces invariants.
 
-For example, a class that manages a complex financial transaction process can benefit from the sealed mechanism.
+Par exemple, une classe qui gère un processus de transaction financière complexe peut tirer parti du mécanisme.
 
-[Microsoft’s Documentation on Class Design Guidelines](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/class-design) can help to deepen the concept.
+La documentation Microsoft sur [les directives de conception des classes](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/class-design) peut vous aider à approfondir ce concept.
 
-### 3. **Performance Optimization**
+### 3. **Optimisation des performances**
 
-Sealing a class can lead to performance optimizations because the runtime can make certain assumptions about the class, such as avoiding virtual method dispatch overhead.
+Utiliser `sealed` peut entraîner des optimisations de performances, car le runtime peut émettre certaines hypothèses sur la classe, comme éviter la surcharge liée à la distribution des méthodes virtuelles.
 
-For example, frequently used utility classes or data structures where performance is critical do benefit from sealing classes.
+Par exemple, les classes utilitaires fréquemment utilisées ou les structures de données pour lesquelles les performances sont essentielles tirent profit du scellement des classes.
 
-Read more in the [Microsoft Documentation on Performance Considerations](https://docs.microsoft.com/en-us/dotnet/framework/performance/performance-tips) to understand the detailed impacts.
+Pour en savoir plus sur les impacts détaillés, consultez la [documentation Microsoft sur les considérations relatives aux performances](https://docs.microsoft.com/en-us/dotnet/framework/performance/performance-tips).
 
-### 4. **API Design Stability**
+### 4. **Stabilité de la conception des API**
 
-When designing public APIs, sealing classes can help ensure that the behavior of the class remains stable and predictable, avoiding issues that might arise from incorrect subclassing.
+Lors de la conception d’API publiques, utiliser `sealed` peut aider à garantir que le comportement de la classe reste stable et prévisible, évitant ainsi les problèmes pouvant découler d’un héritage incorrect ou involontaire.
 
-An example would be framework classes that are widely used by other developers.
+Les classes de framework largement utilisées par d’autres développeurs rentrent dans cette catégorie.
 
-[Microsoft Documentation on API Design](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/) explains why in detail.
+[La documentation Microsoft sur la conception d’API](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/) explique en détail pourquoi.
 
-### 5. **Preventing Misuse**
+### 5. **Prévention des utilisations abusives**
 
-Sealing a class can prevent users from inheriting and misusing the class in ways that weren’t intended by the original design.
+Enfin, utiliser `sealed` peut empêcher les utilisateurs d’hériter et d’utiliser la classe de manière abusive, contrairement à l’intention initiale de la conception.
 
-This is the case for non-static utility classes that provide static methods where inheritance doesn’t make sense.
+C’est le cas des classes utilitaires non statiques qui fournissent des méthodes statiques pour lesquelles l’héritage n’a pas de sens.
 
-You can read “[.NET Sealed Classes - Example 2: Utility Classes](https://www.compilenrun.com/docs/framework/dotnet/net-object-oriented-programming/net-sealed-classes/)” to verify this.
+Vous pouvez lire « [Classes scellées .NET — Exemple 2 : classes utilitaires](https://www.compilenrun.com/docs/framework/dotnet/net-object-oriented-programming/net-sealed-classes/) » pour vérifier cela.
 
-## Example Scenario
+## Exemple de scénario
 
-Consider a class `CorePaymentProcessor` that handles financial transactions. This class might involve complex logic to ensure transactional integrity and security. To prevent any subclass from potentially compromising these aspects, the class can be sealed:
+Prenons l’exemple d’une classe `CorePaymentProcessor` qui gère les transactions financières. Cette classe peut impliquer une logique complexe pour garantir l’intégrité et la sécurité des transactions. Afin d’empêcher toute sous-classe de compromettre ces aspects, la classe peut être scellée :
 
 ```csharp
 public sealed class CorePaymentProcessor
 {
-    // Members and methods to process payments securely
+    // Membres et méthodes pour traiter les paiements en toute  sécurité
 
     public void ProcessPayment(decimal amount)
     {
-        // Payment processing logic
+        // Logique de traitement des paiements
     }
 }
 ```
 
-If someone tries to subclass `CorePaymentProcessor`, they will encounter a compiler error:
+Si quelqu’un tente de créer une sous-classe de `CorePaymentProcessor`, il rencontrera une erreur de compilation :
 
 ```csharp
 public class OtherPaymentProcessor : CorePaymentProcessor
 {
-    // This will cause a compiler error because CorePaymentProcessor is sealed
+    // Cela provoquera une erreur de compilation car CorePaymentProcessor est scellé.
 }
 ```
 
 ## Conclusion
 
-There you have it! Were you using the `sealed` keyword before? Now, you might need to review your code to make your code safer.
+Et voilà ! Utilisez-vous déjà le mot-clé `sealed` ? Vous devrez peut-être vérifier votre code afin d’évaluer si certaines parties ne tombent pas dans un cas d’usage décrit plus haut.
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+Merci d'avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d'ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
