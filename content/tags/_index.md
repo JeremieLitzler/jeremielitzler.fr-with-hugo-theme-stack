@@ -1,6 +1,6 @@
 ---
 title: "Tous les mots clés"
-description: "Les mots clés sont groupés par nombre d'articles et il sont listés alphabétiquement."
+description: "Les mots clés sont listés alphabétiquement et groupés par nombre d'articles."
 image: images/pleins-de-tags-en-metal.jpg
 imageAlt: Pleins de tags en métal
 layout: taxonomy-cloud-page
