@@ -1,12 +1,12 @@
 ---
 title: Astuces rapides
 description: Courts articles sur un sujet avec le scénario, l'exemple et sa documentation.
-image: desktop-productivity-layout.png
+image: images/desktop-productivity-layout.png
 imageAlt: Disposition pour une productivité optimale sur le bureau
 
 # Badge style
 style:
-  background: "#9d2a2a"
+  background: "#4dc5d4ff"
   color: "#fff"
 ---
 

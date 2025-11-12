@@ -1,7 +1,7 @@
 ---
 title: "Python - Supprimer le premier élément d'une liste"
 description: "Vous pouvez supprimer le premier élément de trois façons différentes."
-imageAlt: /tips/a-real-python.jpg
+imageAlt: /astuces/images/a-real-python.jpg
 image: Un python vert
 date: 2025-11-14
 categories:
@@ -32,6 +32,12 @@ my_list = my_list[1:]
 my_list = [1, 2, 3, 4, 5]
 del my_list[0]
 ```
+
+## Documentation
+
+- [function pop](https://python-reference.readthedocs.io/en/latest/docs/list/pop.html)
+- [slicing](https://python-reference.readthedocs.io/en/latest/docs/brackets/slicing.html)
+- [del keyword](https://www.w3schools.com/python/ref_keyword_del.asp)
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
