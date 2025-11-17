@@ -1,5 +1,5 @@
 ---
-title: "Patrons de conception : Usine simple vs méthode d’usine"
+title: "Usine simple vs méthode d’usine"
 description: "L’Usine simple et la Méthode d’usine sont tous deux des modèles de conception créative utilisés pour créer des objets, mais ils le font de manière différente."
 image: 2025-05-13-simple-factory-pattern-vs-factory-method-pattern-image.jpg
 imageAlt: « Usine simple vs méthode d’usine » sur un fond dégradé
@@ -7,7 +7,7 @@ date: 2025-07-23
 categories:
   - Développement logiciel
 tags:
-  - Patrons de Conception
+  - Modèles de Conception
 ---
 
 ## Modèle d’usine simple
