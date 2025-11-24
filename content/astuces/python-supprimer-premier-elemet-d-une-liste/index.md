@@ -1,8 +1,8 @@
 ---
 title: "Python - Supprimer le premier élément d'une liste"
 description: "Vous pouvez supprimer le premier élément de trois façons différentes."
-imageAlt: /astuces/images/a-real-python.jpg
-image: Un python vert
+image: /astuces/images/a-real-python.jpg
+imageAlt: Un python vert
 date: 2025-11-14
 categories:
   - Développement Web
