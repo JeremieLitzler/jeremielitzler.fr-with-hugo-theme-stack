@@ -5,7 +5,7 @@ image: 2025-12-01-someone-handing-over-a-key.jpg
 imageAlt: Someone handing over a key
 date: 2025-12-05
 categories:
-  - Tools
+  - Outils
 tags:
   - Azure DevOps
 ---
