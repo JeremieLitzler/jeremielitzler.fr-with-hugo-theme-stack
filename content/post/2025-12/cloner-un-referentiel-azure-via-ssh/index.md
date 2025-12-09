@@ -1,8 +1,8 @@
 ---
-title: "Cloner un référentiel à partir d'Azure à l'aide d'une clé SSH"
-description: "Cloner un référentiel peut sembler facile si vous disposez d'identifiants avec un mot de passe, mais ce n'est pas toujours possible."
+title: "Cloner un référentiel à partir d’Azure à l’aide d’une clé SSH"
+description: "Cloner un référentiel peut sembler facile si vous pouvez utiliser vos identifiants avec un mot de passe, mais ce n’est pas toujours possible."
 image: 2025-12-01-someone-handing-over-a-key.jpg
-imageAlt: Someone handing over a key
+imageAlt: Quelqu’un remettant une clé
 date: 2025-12-05
 categories:
   - Outils
