@@ -3,7 +3,7 @@ title: "How to Efficiently Update Scoop’s Apps"
 description: "It helps to stay up-to-date and we can achieve it using a PowerShell script."
 image: 2025-12-08-a-man-and-a-woman-scooping-into-a-watermelon.jpg
 imageAlt: A man and a woman scooping into a watermelon
-date: 2025-12-08
+date: 2025-12-12
 categories:
   - Tools
 tags:
