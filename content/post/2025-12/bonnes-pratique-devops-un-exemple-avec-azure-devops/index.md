@@ -3,7 +3,7 @@ title: "Bonnes pratiques DevOps : un exemple d'optimisation avec Azure DevOps"
 description: "Un guide étape par étape des bonnes pratiques DevOps pour l'automatisation des déclencheurs de pipeline et des workflows avec un exemple."
 image: 2025-12-22-devops-best-practices-a-example-with-azure-devops.svg
 imageAlt: "Bonnes pratiques DevOps : un exemple d'optimisation avec Azure DevOps"
-date: 2025-12-23
+date: 2025-12-26
 categories:
   - Développement logiciel
 tags:
