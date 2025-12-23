@@ -1,28 +1,28 @@
 ---
-title: "DevOps Best Practices: An Optimization Example With Azure DevOps"
-description: "A step-by-step guide to the best practices of DevOps of automating pipeline triggers and workflows with an example."
-image: 2025-12-22-devops-best-practices-a-example-with-azure-devops.jpg
-imageAlt: DevOps Best Practices: A Example With Azure DevOps
-date: 2025-12-26
+title: "Bonnes pratiques DevOps : un exemple d'optimisation avec Azure DevOps"
+description: "Un guide étape par étape des bonnes pratiques DevOps pour l'automatisation des déclencheurs de pipeline et des workflows avec un exemple."
+image: 2025-12-22-devops-best-practices-a-example-with-azure-devops.svg
+imageAlt: "Bonnes pratiques DevOps : un exemple d'optimisation avec Azure DevOps"
+date: 2025-12-23
 categories:
-  - Software Development
+  - Développement logiciel
 tags:
   - Azure DevOps
 ---
 
-Last February, I encountered a problem. I noticed that my *Pull Request (PR) Validation* pipeline had significantly increased in execution time, nearing 10 minutes.
+En février dernier, j’ai rencontré un problème. J’ai remarqué que le temps d’exécution de mon pipeline *Pull Request (PR) Validation* avait considérablement augmenté, atteignant près de dix minutes.
 
-In addition, I had an occurrence when the Docker image build wasn’t taking into account the latest dependencies and consequently, with new code and related tests, the build would fail.
+De plus, il m’est arrivé que la création de l’image Docker ne tienne pas compte des dernières dépendances et, par conséquent, les tests associés au nouveau code échouaient.
 
-I noticed that the step `Install dependencies` was guilty.
+J’ai remarqué que l’étape *Installer les dépendances* était la coupable.
 
-Let’s see how I resolved the issue with the guidance of a colleague and expert in DevOps work.
+Voyons comment j’ai résolu le problème avec l’aide d’un collègue expert en DevOps.
 
-## The Cause
+## La cause
 
-I didn't find the root cause in my *Pull Request (PR) Validation* pipeline, but rather where I built the Docker image.
+Je n’ai pas trouvé la cause profonde dans mon pipeline *Pull Request (PR) Validation*, mais plutôt là où je construisais l’image Docker.
 
-The guilty step in the second pipeline consisted of the following script:
+L’étape en cause dans le deuxième pipeline consistait au script suivant :
 
 ```yaml
   - script: |
@@ -31,9 +31,9 @@ The guilty step in the second pipeline consisted of the following script:
     displayName: 'Install dependencies'
 ```
 
-This wouldn’t run on the PR trigger. It’d only run once I'd merge the code into `develop` when the pipeline building the new Docker image would be executed.
+On n’exécutait pas cette étape sur le pipeline *Pull Request (PR) Validation*, mais qu’une fois que j’avais fusionné le code dans `develop`, lorsque le pipeline créant la nouvelle image Docker s’exécutait.
 
-Another issue existed in the python version of my *Pull Request (PR) Validation* pipeline:
+Un autre problème existait dans la version python de mon pipeline *Pull Request (PR) Validation* :
 
 ```yaml
   - task: UsePythonVersion@0
@@ -42,80 +42,80 @@ Another issue existed in the python version of my *Pull Request (PR) Validation*
       addToPath: true
 ```
 
-So, if we had python `3.13` available, the build could run against a different python version over time, always equal or higher than `3.11`.
+Ainsi, si nous disposions de Python `3.13`, la compilation pouvait s'exécuter sur une version différente de Python au fil du temps, toujours égale ou supérieure à `3.11`.
 
-On the pipeline *Build Image For Deployment*, we strictly used python 3.11 so that it couldn't cause issues between my code and dependency incompatibilities.
+Dans le pipeline *Build Image For Deployment*, nous avons strictement utilisé Python 3.11 afin d'éviter tout problème d'incompatibilité entre mon code et les dépendances.
 
-That brings me to the better DevOps best practices.
+Cela m'amène aux bonnes pratiques DevOps.
 
-## Which Best Practices
+## Mais quelles bonnes pratiques ?
 
-To guarantee consitent behavior on the development environments (your PC, mine, a VDI, production, etc.), the validation environments (e.g. the VM where Azure DevOps runs its agent to execute the unit tests, which is the present use case of this article) or in the deployment environments (e.g. QA, Production), we need a consistent baseline.
+Pour garantir un comportement cohérent sur les environnements de développement (votre PC, le mien, un VDI, etc.), les environnements de validation (par exemple, la machine virtuelle sur laquelle Azure DevOps exécute son agent pour exécuter les tests unitaires, qui est le cas d'utilisation présent dans cet article) ou dans les environnements de déploiement (par exemple, QA, production), nous avons besoin d'une base de référence cohérente.
 
-So first, in the problematic steps above, the *PR Validation* pipeline and the *Build Image For Deployment* pipeline used a different python version and would generate headaches, especially in tests.
+Tout d'abord, dans les étapes problématiques ci-dessus, le pipeline *PR Validation* et le pipeline *Build Image For Deployment* pouvaient utiliser une version différente de Python, ce qui causait des maux de tête en cas de problème, en particulier lors des tests.
 
-Also, anytime I'd add a new package, the *PR Validation* pipeline would fail because the new code referenced the new package and it would throw an execution error. In fact, the Docker image used in that pipeline didn't yet contain the new package.
+De plus, chaque fois que j'ajoutais et utilisais dans le code un nouveau package, le pipeline *PR Validation* échouait car le nouveau code faisait référence au nouveau package et générait une erreur d'exécution. En fait, l'image Docker utilisée dans ce pipeline ne contenait pas encore le nouveau package.
 
-So let’s normalize the docker images.
+Normalisons donc les images Docker.
 
-## Creating the “Build Image For CI Purposes” Pipeline
+## Création du pipeline « Build Image For CI Purposes » (Créer une image à des fins d'intégration continue)
 
-The goal was to run the pipeline on triggers that would take into account file modification indicating that a new Docker image was needed.
+L'objectif était d'exécuter le pipeline sur des déclencheurs qui tiendraient compte des modifications de fichiers indiquant que nous avions besoin d'une nouvelle image Docker.
 
-### The `Dockerfile`
+### Le fichier `Dockerfile`
 
-First, we needed a seperate `Dockerfile` from the `Dockerfile` used to build the application image. Just to avoid breaking the existing pipeline. However, we kept the almost some of the same content.
+Tout d'abord, nous avions besoin d'un fichier `Dockerfile` distinct du fichier `Dockerfile` utilisé pour créer l'image de l'application. Ceci afin d'éviter de perturber le pipeline existant. Cependant, nous avons conservé presque tout le contenu.
 
 ```yaml
-# This docker file is used to optimize the CI process
-# It uses the base that we use on the "Build Image For Deployment" pipeline
+# Ce fichier Docker est utilisé pour optimiser le processus d'intégration continue (CI).
+# Il utilise la base que nous utilisons dans le pipeline « Créer une image pour le déploiement ».
 
-# This makes the python consitent.
+# Cela rend Python cohérent.
 FROM python:3.11-slim
 
-# Install timezone data first
+# Installez d'abord les données relatives au fuseau horaire.
 RUN apt-get update && apt-get install -y tzdata && rm -rf /var/lib/apt/lists/*
 
-# Then set timezone
+# Ensuite, définissez le fuseau horaire.
 ENV TZ=Europe/Zurich
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-#set work directory early so remaining paths can be relative
+# Définir le répertoire de travail dès le début afin que les chemins restants puissent être relatifs
 WORKDIR /project-container
 
-# Adding requirements file to current directory, e.g. /app
-# just this file first to cache the pip install step when code changes
+# Ajout du fichier d'exigences au répertoire actuel, par exemple /app.
+# Seulement ce fichier dans un premier temps afin de mettre en cache l'étape d'installation pip lorsque le code change.
 COPY requirements.txt .
 
-# Install deps
+# Installer les dépendances
 RUN pip install -r requirements.txt
 ```
 
-If you read [my initial article on deploying a Python application](../2024-07/deploy-a-rest-api-python-to-azure/), you’ll notice I simply removed all the code specific to the application we deploy.
+Si vous avez lu [mon article initial sur le déploiement d'une application Python](../../2024-08/deployer-une-api-rest-python-sur-microsoft-azure/index.md), vous remarquerez que j'ai simplement supprimé tout le code spécifique à l'application que nous déployons.
 
-### Build The New Pipeline
+### Créer le nouveau pipeline
 
-We then add the new pipeline definition under `.azure-pipelines` folder. I’ll explain the YAML code additions I made step-by-step. I took the *Build Image For Deployment* as a starting point. For the rest, please read my article quoted above.
+Nous ajoutons ensuite la nouvelle définition du pipeline dans le dossier `.azure-pipelines`. Je vais vous expliquer étape par étape les ajouts que j’ai apportés au code YAML. Je suis parti de la section *Build Image For Deployment* (créer une image pour le déploiement). Pour le reste, veuillez vous reporter à mon article cité ci-dessus.
 
-The goal was to build an image not only for QA or production, but also when we had dependency changes in the application so that we could run new unit tests with the latest dependencies.
+L’objectif était de créer une image non seulement pour l’assurance qualité ou la production, mais aussi lorsque nous avions des changements de dépendances dans l’application afin de pouvoir exécuter de nouveaux tests unitaires avec les dernières dépendances.
 
-Here are the details.
+Voici les détails.
 
-First, we trigger the pipeline only if the `requirements.txt`, or `/docker/Dockerfile.ci` or `’/.azure-pipelines/ap-build-ci-container.yml'’ file changes. In fact, the image only changes when I add a dependency or modify the pipeline or the `Dockerfile`.
+Tout d’abord, nous ne déclenchons le pipeline que si le fichier `requirements.txt`, `/docker/Dockerfile.ci` ou `/.azure-pipelines/ap-build-ci-container.yml` est modifié. En fait, l’image ne change que lorsque j’ajoute une dépendance ou que je modifie le pipeline ou le fichier `Dockerfile`.
 
 ```yaml
 name: Build_Image_For_CI_Purposes
 trigger:
   paths:
     include:
-      # The following are absolute paths to files
-      # at the root of the project
+      # Voici les chemins absolus vers les fichiers
+      # à la racine du projet
       - 'requirements.txt'
       - '/docker/Dockerfile.ci'
       - '/.azure-pipelines/ap-build-ci-container.yml'
 ```
 
-Next, let’s update the `imageRepository` variable to a distinct name. This is where we’ll store the images used for CI purposes.
+Ensuite, mettons à jour la variable `imageRepository` avec un nom distinct des images pour le déploiement. C’est là que nous stockerons les images utilisées à des fins d’intégration continue **uniquement**.
 
 ```yaml
 variables
@@ -123,7 +123,7 @@ variables
     value: 'myapp-ci'
 ```
 
-Next, we need to specify to use the new `Dockerfile`.
+Ensuite, nous devons spécifier qu’on utilise le nouveau fichier `Dockerfile`.
 
 ```yaml
 variables:
@@ -131,13 +131,13 @@ variables:
     value: '$(Build.SourcesDirectory)/docker/Dockerfile.ci'
 ```
 
-I removed the `semantic-version` variable, since we don’t need it the Docker image we’re setting up.
+J’ai supprimé la variable `semantic-version`, car nous n’en avons pas besoin dans l’image Docker que nous configurons.
 
-In the *Build and push stage* stage, we find the biggest changes.
+C’est dans l’étape *Build and push* que nous trouvons les changements les plus importants.
 
-First, we remove the semantic release version, not needed here, but we keep it for the other pipeline that takes care of creating the image we deploy to QA or production. 
+Tout d’abord, nous supprimons la version sémantique, qui n’est pas nécessaire ici, mais nous la conservons pour l’autre pipeline qui se charge de créer l’image que nous déployons en QA ou en production. 
 
-Therefore, the task `Set version and image tags` is renamed `Set image tags` and the code executed becomes:
+Par conséquent, la tâche *Set version and image tags* est renommée *Set image tags* et le code exécuté devient :
 
 ```yaml
             displayName: Set image tags
@@ -163,53 +163,59 @@ Therefore, the task `Set version and image tags` is renamed `Set image tags` and
             name: setImageTagsStep
 ```
 
-Basically,
+En gros,
 
-- If the `$(Build.SourceBranch)` is `develop`, then the image tag is `ready-qa`.
-- If the `$(Build.SourceBranch)` is `main`, then the image tag is `latest`.
-- Otherwise, we’re on a development branch and therefore the image tag is `branch-[branch name]`.
+- Si `$(Build.SourceBranch)` est `develop`, alors la balise d’image est `ready-qa`.
+- Si `$(Build.SourceBranch)` est `main`, alors la balise d’image est `latest`.
+- Sinon, nous sommes sur une branche de développement et la balise d’image est donc `branch-[nom de la branche]`.
 
-Remember: the pipeline runs **ONLY** if the trigger has a match. A new feature not triggering the pipeline when you push the related branch to the remote repository won’t trigger an update of the image when you merge the feature to `develop` or `main`.
+Rappel : le pipeline s’exécute **UNIQUEMENT** si le déclencheur trouve une modification sur les fichiers listés dans le déclencheur. Une nouvelle fonctionnalité, qui ne déclenche pas le pipeline lorsque vous poussez la branche associée vers le référentiel distant, ne déclenchera pas de mise à jour de l’image lorsque vous fusionnerez la fonctionnalité vers `develop` ou `main`.
 
-The last change appears in the build task, where we remove the arguments passed to the build command containing the semantic version value.
+La dernière modification apparaît dans la tâche de génération, où nous supprimons les arguments passés à la commande de génération contenant la valeur de version sémantique.
 
 ```yaml
               arguments: --build-arg VERSION=$(setVersionStep.fullVersion)
 ```
 
-Finally, we keep the *Push image to container registry* task as it is.
+Enfin, nous conservons la tâche *Push image to container registry* telle quelle.
 
-## Test the New Pipeline
+## Tester le nouveau pipeline
 
-First, you may need to merge into `develop` and `main` to add the pipeline to Azure DevOps. And, if it isn’t automatically picked up by Azure DevOps, follow those steps:
+Tout d’abord, vous devrez peut-être fusionner dans `develop` et `main` pour ajouter le pipeline à Azure DevOps. Et, si Azure DevOps le détecte pas automatiquement, suivez ces étapes :
 
-- Select *Pipelines* blade twice and click *New pipeline*.
-- Select *Azure Repos Git*
-- Select the repository that contains your YAML file
-- Select *Existing Azure Pipelines YAML file*
-- Select the file from `develop` branch
-- Save to finish.
+- Sélectionnez deux fois l’onglet « Pipelines » et cliquez sur « Nouveau pipeline ».
+- Sélectionnez *Azure Repos Git*.
+- Sélectionnez le référentiel qui contient votre fichier YAML.
+- Sélectionnez *Fichier YAML Azure Pipelines existant*.
+- Sélectionnez le fichier dans la branche « develop ».
+- Enregistrez pour terminer.
 
-Then, to test it, you need to push a new branch to the repository with a change to `requirements.txt` (an extra space or comment will suffice). This should trigger the new pipeline.
+{{< blockcontainer jli-notice-note "">}}
 
-Once the build ran successfully, you should see a new repository `myapp-ci` in the *Azure Container Registry (ACR)* with an image tagged `branch-[your branch name]`.
+J’écris cet article un an après les faits, et même si j’ai pris beaucoup de notes, j’ai un doute sur le point ci-dessus.
 
-## Update the “PR Validation” Pipeline
+{{< /blockcontainer >}}
 
-Now that we have a Docker image, we can update the *PR Validation* pipeline to use the appropriate image from the `myapp-ci` ACR’s repository.
+Ensuite, pour le tester, vous devez pousser une nouvelle branche vers le référentiel avec une modification dans `requirements.txt` (un espace supplémentaire ou un commentaire suffira). Cela devrait déclencher le nouveau pipeline.
 
-Again, I’ll explain the updates below.
+Une fois la compilation terminée, vous devriez voir un nouveau référentiel `myapp-ci` dans le *Azure Container Registry (ACR)* avec une image taguée `branch-[nom de votre branche]`.
 
-### New Variables
+## Mettre à jour le pipeline *PR Validation*
 
-First, add new variables that help pull the target image:
+Maintenant que nous disposons d’une image Docker, nous pouvons mettre à jour le pipeline *PR Validation* afin d’utiliser l’image appropriée du référentiel ACR `myapp-ci`.
+
+Je vous explique tout en détail dans ce qui suit.
+
+### Nouvelles variables
+
+Commencez par ajouter de nouvelles variables qui permettent d’extraire l’image cible :
 
 ```yaml
   - name: dockerRegistryServiceConnection
     value: '[uid of dockerRegistryServiceConnection in DevOps]'
 ```
 
-becomes:
+devient :
 
 ```yaml
   # ARM = Azure Resource Manager type of service connection
@@ -218,13 +224,13 @@ becomes:
     value: '[app registration Id]' 
 ```
 
-This is required in the first stage of the update *PR Validation* pipeline. This is due to the fact that there is extra step to read the ACR registry through the Azure CLI.
+Cela est nécessaire dans la première étape du pipeline de mise à jour *PR Validation*. En effet, une étape supplémentaire est nécessaire pour lire le registre d’image via l’interface CLI Azure.
 
-### New Stage
+### Nouvelle étape
 
-We need a new stage containing a step of type “`AzureCLI` script” that will help us save the image tag to use.
+Nous avons besoin d’une nouvelle étape contenant une étape de type *script `AzureCLI`* qui nous aidera à assigner la variable contenant la balise d’image à utiliser.
 
-The script is just a bash script parsing the output of querying the Azure CLI.
+Le script est simplement un script `bash` qui analyse la sortie de la requête de l’interface CLI Azure.
 
 ```yaml
 stages:
@@ -264,7 +270,7 @@ stages:
             condition: always() # Continue even if it fails
 ```
 
-Then, we use the `imageTag` variable in the next stage:
+Ensuite, nous utilisons la variable `imageTag` dans l’étape suivante :
 
 ```yaml
     jobs:
@@ -272,31 +278,31 @@ Then, we use the `imageTag` variable in the next stage:
         displayName: Execute Unit Tests
         pool:
           vmImage: 'ubuntu-latest'
-        # Initialize the container to use in the job from previous stage.
+        # Initialiser le conteneur à utiliser dans la tâche à partir de l'étape précédente.
         container:
           image: "$(containerRegistry)/$(imageRepository):$(imageTag)"
           endpoint: mycontainerregistry.azurecr.io
-        # Then run the job's steps (nothing changes beyond this point)
+        # Exécutez ensuite les étapes du travail (rien ne change à partir de ce stade).
         steps:
         # ...
 ```
 
-## Test the Updated Pipeline
+## Tester le pipeline mis à jour
 
-To test, you might need to merge to `develop` first and test that the appropriate image is successfully pulled and the unit tests are run without any issue.
+Pour tester, vous devrez peut-être d’abord fusionner avec `develop` et vérifier que l’image appropriée est correctement extraite et que les tests unitaires s’exécutent sans problème.
 
-Try with and without a change to the three files marked as trigger to validate the whole process.
+Essayez avec et sans modification des trois fichiers marqués comme déclencheurs pour valider l’ensemble du processus.
 
 ## Conclusion
 
-Now, your pull request workflow handles both developments that change the dependencies or CI or none.
+Désormais, votre processus de requêtes de tirage gère à la fois les développements qui modifient les dépendances ou la CI, et ceux qui ne le font pas.
 
-With that, you don’t need to worry about ever having to run unit tests against an outdated Docker image nor think about having the image ready before that.
+Grâce à cela, vous n’avez plus à vous soucier d’exécuter des tests unitaires sur une image Docker obsolète ni à penser à préparer l’image avant cela.
 
-As a bonus, you only create new up-to-date Docker images when *it’s needed*. A logical next step would be to [update the automation account](../../2024-10/build-your-own-acr-retention-policy/index.md) that cleans up the repository of obsolete images. Can you do it?
+En prime, vous ne créez de nouvelles images Docker à jour que lorsque *cela est nécessaire*. La prochaine étape logique serait de [mettre à jour le compte d’automatisation](../../2025-03/retention-personnalisee-d-images-docker-sur-azure//index.md) qui nettoie le référentiel des images obsolètes. En êtes-vous capable ? J’en suis sûr !
 
-{{< blockcontainer jli-notice-tip "Follow me">}}
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
-Thanks for reading this article. Make sure to [follow me on X](https://x.com/LitzlerJeremie), [subscribe to my Substack publication](https://iamjeremie.substack.com/) and bookmark my blog to read more in the future.
+Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}

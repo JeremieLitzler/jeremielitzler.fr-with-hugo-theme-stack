@@ -12,17 +12,17 @@
   
   <!-- Visual Studio Code Text (centered) -->
   <text x="600" y="300" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="white" text-anchor="middle">
-    DevOps Best Practices:
+    Bonnes pratiques DevOps :
   </text>
   
   <!-- With Text (half size and centered) -->
   <text x="600" y="400" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="white" text-anchor="middle">
-    A Example
+    un exemple
   </text>
   
   <!-- Regex Text (centered) -->
   <text x="600" y="540" font-family="Arial, sans-serif" font-size="84" font-weight="bold" fill="white" text-anchor="middle">
-    With Azure DevOps
+    avec Azure DevOps
   </text>
 
 </svg>
