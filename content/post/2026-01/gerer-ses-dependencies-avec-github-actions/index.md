@@ -1,7 +1,7 @@
 ---
 title: "Comment gérer les dépendances JavaScript avec GitHub Actions"
 description: "La mise à jour des dépendances peut s'avérer difficile et fastidieuse sur un projet JavaScript. GitHub Actions peuvent vous aider à l'automatiser."
-image: 2026-01-06-steel-cogs.jpg
+image: 2026-01-05-steel-cogs.jpg
 imageAlt: Pignons en acier
 date: 2026-01-09
 categories:
