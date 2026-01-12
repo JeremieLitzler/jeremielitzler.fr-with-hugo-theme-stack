@@ -38,7 +38,7 @@ Cette configuration :
 
 Mais ce n’est pas ce que vous utiliseriez.
 
-J’utilise une configuration personnalisée, alors regardons mon exemple de configurations avancées, qui fonctionne bien si vous avez suivi les [étapes de cet article précédent](../../2025-12/configure-ci-steps-with-github/index.md).
+J’utilise une configuration personnalisée, alors regardons mon exemple de configurations avancées, qui fonctionne bien si vous avez suivi les [étapes de cet article précédent](../configurer-etapes-ci-avec-github/index.md).
 
 ## Configuration avancée
 
