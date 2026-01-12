@@ -69,7 +69,7 @@ updates:
     open-pull-requests-limit: 5
 ```
 
-Lorsqu’une mise à jour d’un package existe, `dependabot` crée une branche et soumet une nouvelle PR pour fusionner la mise à jour dans `develop`, si vous avez suivi les [étapes de cet article précédent](../../2025-12/configure-ci-steps-with-github/index.md).
+Lorsqu’une mise à jour d’un package existe, `dependabot` crée une branche et soumet une nouvelle PR pour fusionner la mise à jour dans `develop`, si vous avez suivi les [étapes de cet article précédent](../configurer-etapes-ci-avec-github/index.md).
 
 Par conséquent, il exécutera également le CI pour vérifier que le projet compile toujours avec la nouvelle version du package mis à jour.
 
