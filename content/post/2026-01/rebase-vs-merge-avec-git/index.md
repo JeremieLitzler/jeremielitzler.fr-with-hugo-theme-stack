@@ -298,9 +298,8 @@ Quand j’ai commencé à utiliser `rebase`, j’avais l’impression de résoud
 ### Règles importantes
 
 1. Ne jamais réaliser de `rebase` les branches sur lesquelles d’autres personnes travaillent.
-2. Toujours utiliser `-no-ff` pour les fusions de fonctionnalités importantes.
-3. Créer des messages de validation significatifs.
-4. **Toujours** tester après un `rebase` ou un `merge`.
+2. Créer des messages de validation significatifs.
+3. **Toujours** tester après un `rebase` ou un `merge`.
 
 ## Sources
 
