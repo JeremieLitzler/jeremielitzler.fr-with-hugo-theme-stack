@@ -122,7 +122,7 @@ git commit -am "Add feature C"
 
 # Fusionner d'abord feature/parallel-1 (simulation de fusion PR)
 git checkout develop
-git merge --no-ff feature/parallel-1
+git merge feature/parallel-1
 
 # La fonctionnalité feature/parallel-2 doit maintenant être mise à jour.
 git checkout feature/parallel-2
@@ -163,13 +163,13 @@ git checkout -b feature/bad-feature
 echo "Bad feature content" >> file.txt
 git commit -am "Add bad feature"
 git checkout develop
-git merge --no-ff feature/bad-feature
+git merge feature/bad-feature
 
 # Create new feature from reverted develop
 git checkout -b feature/fixed-feature
 # Annuler la fusion
 git revert -m 1 HEAD
-git merge --no-ff feature/fixed-feature
+git merge feature/fixed-feature
 ```
 
 ### Scénario 5 : Revenir en arrière avec Rebase
