@@ -3,7 +3,7 @@ title: "Rebase vs. Merge avec Git"
 description: "Comprendre ces deux concepts vous aidera à savoir quand utiliser l’un ou l’autre avec Git."
 image: 2026-01-12-a-forest-with-trees.jpg
 imageAlt: Une forêt avec des arbres
-date: 2026-01-12
+date: 2026-01-16
 categories:
   - Développement logiciel
 tags:
