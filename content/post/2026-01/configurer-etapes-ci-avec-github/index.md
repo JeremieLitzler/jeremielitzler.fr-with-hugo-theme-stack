@@ -5,9 +5,10 @@ image: 2025-12-29-steel-cogs.jpg
 imageAlt: Pignons en acier
 date: 2026-01-02
 categories:
-  - DevOps
+  - Développement logiciel
 tags:
   - GitHub
+  - DevOps
   - Intégration Continue
 ---
 
