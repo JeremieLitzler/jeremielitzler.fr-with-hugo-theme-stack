@@ -1,0 +1,68 @@
+<!-- See for fixed implementation: https://github.com/CaiJimmy/hugo-theme-stack/issues/1213 -->
+{{ if .Store.Get "hasMermaid" }}
+  {{ $cfg := site.Params.article.mermaid | default dict }}
+  {{ $version := $cfg.version | default "11" }}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@{{ $version }}/+esm';
+
+    const lightTheme = '{{ $cfg.lightTheme | default "default" }}';
+    const darkTheme = '{{ $cfg.darkTheme | default "neutral" }}';
+
+    // Theme variables for customization (only works with 'base' theme)
+    const lightThemeVariables = {{ with $cfg.lightThemeVariables }}{{ . | jsonify }}{{ else }}{}{{ end }};
+    const darkThemeVariables = {{ with $cfg.darkThemeVariables }}{{ . | jsonify }}{{ else }}{}{{ end }};
+
+    function isDarkMode() {
+        return document.documentElement.dataset.scheme === 'dark';
+    }
+
+    function getTheme() {
+        return isDarkMode() ? darkTheme : lightTheme;
+    }
+
+    function getThemeVariables() {
+        return isDarkMode() ? darkThemeVariables : lightThemeVariables;
+    }
+
+    function initMermaid() {
+        const config = {
+            startOnLoad: false,
+            securityLevel: '{{ $cfg.securityLevel | default "strict" }}',
+            theme: getTheme(),
+            htmlLabels: {{ if eq ($cfg.htmlLabels | default true) false }}false{{ else }}true{{ end }},
+            look: '{{ $cfg.look | default "classic" }}',
+        };
+
+        // Add theme variables if customizing with 'base' theme
+        const themeVars = getThemeVariables();
+        if (Object.keys(themeVars).length > 0) {
+            config.themeVariables = themeVars;
+        }
+
+        mermaid.initialize(config);
+    }
+
+    async function renderMermaid() {
+        // Reset to unprocessed state for re-rendering
+        document.querySelectorAll('.mermaid').forEach(el => {
+            if (el.dataset.processed) {
+                el.removeAttribute('data-processed');
+                el.innerHTML = el.dataset.originalCode || el.innerHTML;
+            }
+        });
+        initMermaid();
+        await mermaid.run();
+    }
+
+    // Store original code for re-rendering on theme change
+    document.querySelectorAll('.mermaid').forEach(el => {
+        el.dataset.originalCode = el.innerHTML;
+    });
+
+    // Initial render
+    renderMermaid();
+
+    // Re-render on theme change
+    window.addEventListener('onColorSchemeChange', renderMermaid);
+</script>
+{{ end }}

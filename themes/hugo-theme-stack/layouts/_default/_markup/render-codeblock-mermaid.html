@@ -1,0 +1,5 @@
+<!-- See for fixed implementation: https://github.com/CaiJimmy/hugo-theme-stack/issues/1213 -->
+<pre class="mermaid">
+  {{ .Inner | htmlEscape | safeHTML }}
+</pre>
+{{ .Page.Store.Set "hasMermaid" true }}
