@@ -16,7 +16,7 @@
                         {{- $Width = $thumbnail.Width -}}
                         {{- $Height = $thumbnail.Height -}}
                     {{- end -}}
-                    
+                    <!-- customized JLI -->
                     <img src="{{ $Permalink }}" 
                         width="{{ $Width }}" 
                         height="{{ $Height }}" 
@@ -26,6 +26,7 @@
                         {{ with .context.Slug }}data-key="{{ . }}" {{ end }}
                         data-hash="{{ $imageRaw.Data.Integrity }}">
                 {{ else }}
+				    <!-- customized JLI -->
                     <img src="{{ $image.permalink }}" 
 						loading="lazy" 
 						data-key="{{ .context.Slug }}" 

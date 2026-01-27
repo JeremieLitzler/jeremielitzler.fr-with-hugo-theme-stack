@@ -10,6 +10,7 @@
                     {{- $Srcset := "" -}}
                     
                     {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
+						/* customized JLI */
                         {{- $small := $image.resource.Resize "360x" -}}
                         {{- $medium := $image.resource.Resize "600x" -}}
                         {{- $large := $image.resource.Resize "1024x" -}}
@@ -34,6 +35,7 @@
             </a>
         </div>
     {{ end }}
+	<!-- customized JLI -->
     <!-- 25/08/23 : I add to "duplicate" the header partial because somehow,
                     the "isHome" variable is evaluate to true on the home first
                     and the posts seems to inherit from the value "true" even though

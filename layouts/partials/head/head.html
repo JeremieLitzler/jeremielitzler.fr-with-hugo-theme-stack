@@ -12,6 +12,7 @@
 {{- $title := partialCached "data/title" . .RelPermalink -}}
 <title>{{ $title }}</title>
 
+<!-- customized JLI -->
 <!-- https://discourse.gohugo.io/t/how-to-add-cannonical-url-to-a-blog/34670/4 -->
 {{ with .Params.relcanonical }}
   <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
@@ -24,22 +25,20 @@
 {{- partial "head/opengraph/include.html" . -}}
 
 {{- range .AlternativeOutputFormats -}}
-  <link
-    rel="{{ .Rel }}"
-    type="{{ .MediaType.Type }}"
-    href="{{ .Permalink | safeURL }}" />
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{- end -}}
 
 {{ with .Site.Params.favicon }}
   <link rel="shortcut icon" href="{{ . | relURL }}" />
 {{ end }}
 
-{{- template "_internal/google_analytics.html" . -}}
+<!-- customized JLI -->
+<!--{{- partial "google_analytics.html" . -}}-->
 {{- partial "head/custom.html" . -}}
-
+<!-- customized JLI -->
 {{ range .Site.Params.custom_css -}}
   <link rel="stylesheet" href="{{ . | absURL }}" />
 {{- end }}
 
-
+<!-- customized JLI -->
 <meta name="author" content="Jérémie Litzler" />
