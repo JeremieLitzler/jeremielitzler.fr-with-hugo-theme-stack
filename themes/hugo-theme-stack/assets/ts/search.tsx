@@ -148,22 +148,25 @@ class Search {
         .toLowerCase(); // Convert to lowercase
     }
 
-    private async searchKeywords(keywords: string[]) {
+    private async searchKeywords(
+        keywords: string[],
+        exactMatch: boolean = false)
+    {
         const rawData = await this.getData();
         const results: pageData[] = [];
         /* customized JLI */
-	// Normalize keywords for consistent matching
-	const normalizedKeywords = keywords.map(this.normalizeString);
-        /* customized JLI */
-	const regex = exactMatch
-	  ? new RegExp(`\\b${keywords.map(escapeRegExp).join("\\b.*\\b")}\\b`, "gi") // Matches all words in any order
-	  : new RegExp(
-	    normalizedKeywords
-	    .filter((v) => v.trim() !== "")
-	    .map(escapeRegExp)
-	            .join("|"),
-	          "gi",
-	        );
+		// Normalize keywords for consistent matching
+		const normalizedKeywords = keywords.map(this.normalizeString);
+	        /* customized JLI */
+		const regex = exactMatch
+		  ? new RegExp(`\\b${keywords.map(escapeRegExp).join("\\b.*\\b")}\\b`, "gi") // Matches all words in any order
+		  : new RegExp(
+		    normalizedKeywords
+		    .filter((v) => v.trim() !== "")
+		    .map(escapeRegExp)
+		            .join("|"),
+		          "gi",
+		        );
 
         for (const item of rawData) {
             const titleMatches: match[] = [],
