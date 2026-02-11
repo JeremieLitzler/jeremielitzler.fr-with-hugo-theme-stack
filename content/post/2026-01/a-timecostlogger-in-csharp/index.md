@@ -117,7 +117,7 @@ Le `TimeCostLogger` ci-dessous vous offre cette visibilité ciblée là où vous
             }
       }
 
-```’
+````
 
 ## Conclusion
 
@@ -133,6 +133,4 @@ Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/
 
 {{< /blockcontainer >}}
 
-
 Photo de [William Warby](https://www.pexels.com/photo/close-up-of-a-heuer-mechanical-stopwatch-19730401/).
-````
