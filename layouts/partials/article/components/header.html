@@ -1,48 +1,50 @@
 <header class="article-header">
-    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
-    {{ if $image.exists }}
-        <div class="article-image">
-            <a href="{{ .RelPermalink }}">
-                {{ if $image.resource }}
-                    {{- $Permalink := $image.resource.RelPermalink -}}
-                    {{- $Width := $image.resource.Width -}}
-                    {{- $Height := $image.resource.Height -}}
-                    {{- $Srcset := "" -}}
-                    
-                    {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
-						/* customized JLI */
-                        {{- $small := $image.resource.Resize "360x" -}}
-                        {{- $medium := $image.resource.Resize "600x" -}}
-                        {{- $large := $image.resource.Resize "1024x" -}}
-                        {{- $Srcset = printf "%s 360w, %s 600w, %s 1024w" $small.RelPermalink $medium.RelPermalink $large.RelPermalink -}}
-                        {{- $Permalink = $medium.RelPermalink -}}
-                        {{- $Width = $medium.Width -}}
-                        {{- $Height = $medium.Height -}}
-                    {{- end -}}
-					<!-- {{ $Srcset }} -->
-                    <img src="{{ $Permalink }}"
-                        {{ with $Srcset }}srcset="{{ . }}"{{ end }}
-                        width="{{ $Width }}" 
-                        height="{{ $Height }}" 
-                        alt="{{ .Params.imageAlt }}" 
-						title="{{ .Params.imageAlt }}" />
-                {{ else }}
-                    <img src="{{ $image.permalink }}" 
-						loading="lazy" 
-						alt="{{ .Params.imageAlt }}" 
-						title="{{ .Params.imageAlt }}" />
-                {{ end }}
-            </a>
-        </div>
-    {{ end }}
-	<!-- customized JLI -->
-    <!-- 25/08/23 : I add to "duplicate" the header partial because somehow,
+  {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+  {{ if $image.exists }}
+    <div class="article-image">
+      <a href="{{ .RelPermalink }}">
+        {{ if $image.resource }}
+          {{- $Permalink := $image.resource.RelPermalink -}}
+          {{- $Width := $image.resource.Width -}}
+          {{- $Height := $image.resource.Height -}}
+          {{- $Srcset := "" -}}
+
+          {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
+            <!-- customized JLI -->
+            {{- $small := $image.resource.Resize "360x" -}}
+            {{- $medium := $image.resource.Resize "600x" -}}
+            {{- $large := $image.resource.Resize "1024x" -}}
+            {{- $Srcset = printf "%s 360w, %s 600w, %s 1024w" $small.RelPermalink $medium.RelPermalink $large.RelPermalink -}}
+            {{- $Permalink = $medium.RelPermalink -}}
+            {{- $Width = $medium.Width -}}
+            {{- $Height = $medium.Height -}}
+          {{- end -}}
+          <!-- {{ $Srcset }} -->
+          <img
+            src="{{ $Permalink }}"
+            {{ with $Srcset }}srcset="{{ . }}"{{ end }}
+            width="{{ $Width }}"
+            height="{{ $Height }}"
+            alt="{{ .Params.imageAlt }}"
+            title="{{ .Params.imageAlt }}" />
+        {{ else }}
+          <img
+            src="{{ $image.permalink }}"
+            loading="lazy"
+            alt="{{ .Params.imageAlt }}"
+            title="{{ .Params.imageAlt }}" />
+        {{ end }}
+      </a>
+    </div>
+  {{ end }}
+  <!-- customized JLI -->
+  <!-- 25/08/23 : I add to "duplicate" the header partial because somehow,
                     the "isHome" variable is evaluate to true on the home first
                     and the posts seems to inherit from the value "true" even though
                     it is not supposed to be.
                     
                     Not clean, but it works!
     -->
-    {{ .Scratch.Set "parentIsArticle" true}}  
-    {{ partial "article/components/details" . .RelPermalink }}
+  {{ .Scratch.Set "parentIsArticle" true }}
+  {{ partial "article/components/details" . .RelPermalink }}
 </header>
