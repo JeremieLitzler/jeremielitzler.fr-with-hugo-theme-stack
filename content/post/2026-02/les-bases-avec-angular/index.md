@@ -1,5 +1,5 @@
 ---
-title: "Ce que j'ai appris dans un cours de 4 heures sur Angular"
+title: "Ce que j’ai appris dans un cours de 4 heures sur Angular"
 description: "Angular est un framework concurrent de Vue.js. Que préférez-vous ?"
 image: 2026-02-16-angular-logo-in-the-hand-of-someone.jpg
 imageAlt: Le logo Angular dans la main de quelqu’un
@@ -10,23 +10,23 @@ tags:
   - Angular
 ---
 
-J'aime beaucoup Vue.js, mais apprendre un autre framework JavaScript peut m'être utile dans les missions auxquelles je participe.
+J’aime beaucoup Vue.js, mais apprendre un autre framework JavaScript peut m’être utile dans les missions auxquelles je participe.
 
-J'ai décidé d'approfondir mes connaissances d'Angular grâce à un cours YouTube de 4 heures.
+J’ai décidé d’approfondir mes connaissances d’Angular grâce à un cours YouTube de 4 heures.
 
-Le cours est basé sur Angular 17, mais j'ai travaillé avec Angular 19 au moment où je l'ai suivi, ce qui m'a permis de me familiariser avec l'API plus récente fournie par Angular.
+Le cours est basé sur Angular 17, mais j’ai travaillé avec Angular 19 au moment où je l’ai suivi, ce qui m’a permis de me familiariser avec l’API plus récente fournie par Angular.
 
-## Installation de l'environnement de développement
+## Installation de l’environnement de développement
 
 ### Installer NodeJS
 
-Pour Windows, utilisez Scoop :
+Pour Windows, utilisez Scoop :
 
 ```powershell
 scoop install main/nodejs-lts
 ```
 
-Remarque : installez la version LTS pour éviter les messages « _Avertissement : la version actuelle de Node (23.9.0) n'est pas prise en charge par Angular._ » provenant d'Angular à l'étape suivante.
+Remarque : installez la version LTS pour éviter les messages « *Avertissement : la version actuelle de Node (23.9.0) n’est pas prise en charge par Angular* » provenant d’Angular à l’étape suivante.
 
 ### Installer Angular
 
@@ -36,11 +36,11 @@ ng version
 # Doit afficher la dernière version d'Angular.
 ```
 
-**IMPORTANT :** Au moment où j'ai écris ces lignes, Angular était à la version 19, alors que le cours a été dispensé dans Angular 17 et 18.
+**IMPORTANT :** Au moment où j’ai écrit ces lignes, Angular était à la version 19, alors que le cours a été dispensé dans Angular 17 et 18.
 
 ### Extensions VSCode
 
-Personnellement, j'utilise les extensions suivantes :
+Personnellement, j’utilise les extensions suivantes :
 
 - [https://marketplace.visualstudio.com/items?itemName=1tontech.angular-material](https://marketplace.visualstudio.com/items?itemName=1tontech.angular-material)
 - [https://marketplace.visualstudio.com/items?itemName=alexiv.vscode-angular2-files](https://marketplace.visualstudio.com/items?itemName=alexiv.vscode-angular2-files)
@@ -78,7 +78,7 @@ Voir [mes notes concernant le dossier `assets` supprimé sous `src`](https://git
 
 ## Les composants
 
-Pour créer un composant, utilisez cette commande :
+Pour créer un composant, utilisez cette commande :
 
 ```bash
 # forme abrégée de `ng generate component components/playing-card`
@@ -87,46 +87,46 @@ ng g c components/playing-card
 
 Ce qui précède crée un nouveau sous-dossier `components/playing-card` sous `app`. Le composant échafaudé est défini avec les fichiers `.css`, `.html`, `ts` et `spec.ts`.
 
-Pour ignorer la génération des fichiers de test, il suffit d'ajouter le drapeau `--skip-tests` à la commande ci-dessus.
+Pour ignorer la génération des fichiers de test, il suffit d’ajouter le drapeau `--skip-tests` à la commande ci-dessus.
 
-## Entrées et signaux d'entrée
+## Entrées et signaux d’entrée
 
-La première manière de déclarer des entrées utlise le décorateur :
+La première manière de déclarer des entrées utilise le décorateur :
 
 ```tsx
   @Input() name: string = 'Default Name';
 ```
 
-Vous pouvez ensuite l'utiliser dans le composant parent qui l'utilise :
+Vous pouvez ensuite l’utiliser dans le composant parent qui l’utilise :
 
 ```html
 <app-playing-card name="My custom name" />
 ```
 
-Cependant, j'ai appris que si vous définissez une entrée avec un type différent d'une `chaîne`, alors vous devez utiliser le `[ ]`.
+Cependant, j’ai appris que, si vous définissez une entrée avec un type différent d’une `chaîne`, alors vous devez utiliser le `[ ]`.
 
-Par exemple :
+Par exemple :
 
 ```html
 <app-playing-card [hp]="20" />
 ```
 
-Il peut également contenir une simple expression JavaScript :
+Il peut également contenir une simple expression JavaScript :
 
 ```html
 <!-- will output 54 as HP value -->
 <app-playing-card [hp]="20+34" />
 ```
 
-De même, nous pouvons transmettre des objets :
+De même, nous pouvons transmettre des objets :
 
 ```html
 <app-playing-card [card]="pik" />
 ```
 
-Pour fonctionner, vous devriez utiliser la bonne pratique de créer une classe `model` que vous utilisez pour initialiser `pik` et définir le type d'entrée de `app-playing-card` avec le nom de la classe.
+Pour fonctionner, vous devriez utiliser la bonne pratique de créer une classe `model` que vous utilisez pour initialiser `pik` et définir le type d’entrée de `app-playing-card` avec le nom de la classe.
 
-Par exemple, je pourrais avoir cette classe :
+Par exemple, je pourrais avoir cette classe :
 
 ```tsx
 export class Card {
@@ -140,7 +140,7 @@ export class Card {
 }
 ```
 
-Je l'utilise pour déclarer `pik` dans mon `app.component` :
+Je l’utilise pour déclarer `pik` dans mon `app.component` :
 
 ```tsx
 export class AppComponent {
@@ -160,15 +160,15 @@ export class AppComponent {
 ```
 
 {{< blockcontainer jli-notice-note "A propos du `!`">}}
-Le `!` est l'opérateur d'assertion de l'assignation définie.
+Le `!` est l’opérateur d’assertion de l’assignation définie.
 
-Il indique au compilateur TypeScript "_Je sais que cette propriété semble ne pas être initialisée, mais faites-moi confiance, une valeur lui sera attribuée avant qu'elle ne soit utilisée_".
+Il indique au compilateur TypeScript « *Je sais que cette propriété semble ne pas être initialisée, mais faites-moi confiance, une valeur lui sera attribuée avant qu’elle ne soit utilisée* ».
 
-Sans lui, TypeScript remonterait une erreur car l'objet `pik` est déclaré mais n'est pas immédiatement initialisé lors de la déclaration. Puisque vous l'assignez au constructeur, le `!` supprime cette erreur.
+Sans lui, TypeScript émettrait une erreur, car l’objet `pik` est déclaré, mais n’est pas immédiatement initialisé lors de la déclaration. Puisque vous l’assignez au constructeur, le `!` supprime cette erreur.
 
 {{< /blockcontainer >}}
 
-Et je l'utilise pour saisir les données du composant de mon enfant :
+Et je l’utilise pour saisir les données du composant de mon enfant :
 
 ```tsx
 export class PlayingCardComponent {
@@ -176,7 +176,7 @@ export class PlayingCardComponent {
 }
 ```
 
-Une autre caractéristique du décorateur `@Input` est sa configuration : vous pouvez faire en sorte que l'entrée de la carte soit requise :
+Une autre caractéristique du décorateur `@Input` est sa configuration : vous pouvez faire en sorte que l’entrée de la carte soit requise :
 
 ```tsx
   @Input({
@@ -185,13 +185,13 @@ Une autre caractéristique du décorateur `@Input` est sa configuration : vous p
   card: Card = new Card();
 ```
 
-Et TypeScript vous dira ce qui suit :
+Et TypeScript vous dira ce qui suit :
 
-![Exemple d'alerte TypeScript](exemple-dalerte-typescript.png)
+![Exemple d’alerte TypeScript](exemple-dalerte-typescript.png)
 
-Vous pouvez personnaliser le nom de l'attribut avec `alias` ou transformer votre objet d'entrée avec `transform`, mais je ne vois pas de bon cas d'utilisation pour donner un exemple pour cela.
+Vous pouvez personnaliser le nom de l’attribut avec `alias` ou transformer votre objet d’entrée avec `transform`, mais je ne vois pas de bon cas d’utilisation pour donner un exemple pour cela.
 
-Maintenant, depuis Angular 17, vous pouvez utiliser les signaux d'entrée de la manière suivante :
+Maintenant, depuis Angular 17, vous pouvez utiliser les signaux d’entrée de la manière suivante :
 
 ```tsx
 export class PlayingCardComponent {
@@ -199,7 +199,7 @@ export class PlayingCardComponent {
 }
 ```
 
-Dans le code HTML, vous devrez ajouter `()` pour accéder aux propriétés de l'entrée.
+Dans le code HTML, vous devrez ajouter `()` pour accéder aux propriétés de l’entrée.
 
 ```html
 <!-- With @Input() -->
@@ -210,9 +210,9 @@ Dans le code HTML, vous devrez ajouter `()` pour accéder aux propriétés de l'
 
 ## Sorties, signaux de sorties et modèles
 
-Lorsque nous avons besoin de communiquer des données d'un composant enfant à son parent, nous pouvons utiliser le décorateur `@Output`. Nous l'appelons aussi _événement émis_.
+Lorsque nous avons besoin de communiquer des données d’un composant enfant à son parent, nous pouvons utiliser le décorateur `@Output`. Nous l’appelons aussi _événement émis_.
 
-Un exemple très simple ressemblerait à ceci :
+Un exemple très simple ressemblerait à ceci :
 
 ```tsx
 // dans le fichier TS de votre composant enfant
@@ -225,7 +225,7 @@ searchClick() {
 }
 ```
 
-Dans le fichier HTML du composant de votre enfant, vous pouvez ajouter le `searchClick` à un bouton :
+Dans le fichier HTML du composant de votre enfant, vous pouvez ajouter le `searchClick` à un bouton :
 
 ```html
 <button (click)="searchClick()">
@@ -240,11 +240,11 @@ Ensuite, dans le fichier TS de votre composant parent, vous ajoutez une proprié
 <p>Search click count: {{ searchClickCount }}</p>
 ```
 
-Souvent, nous transmettons les données vers le haut de l'hiérarchie des composents, ce qui n'est pas le cas dans l'exemple ci-dessus.
+Souvent, nous transmettons les données vers le haut de la hiérarchie des composants, ce qui n’est pas le cas dans l’exemple ci-dessus.
 
 Disons que nous voulons afficher le terme recherché dans le composant parent.
 
-Nous devons d'abord mettre à jour le fichier TS du composant enfant :
+Nous devons d’abord mettre à jour le fichier TS du composant enfant :
 
 ```tsx
   @Input() searchTerm = '';
@@ -471,7 +471,7 @@ Avec les conditions, nous pouvons utiliser différentes approches :
   </p>
   ```
 
-- un seul `*ngIf` avec un élément `<ng-template>`. Cela me fait penser aux slots, mais ce n'est pas la même chose.
+- un seul `*ngIf` avec un élément `<ng-template>`. Cela me fait penser aux slots, mais ce n’est pas la même chose.
 
   ```html
   <p
@@ -533,7 +533,7 @@ De même, nous réécrivons la boucle :
 
 Que signifie `track` ? Angular l'utilise pour _tracer_ les mises à jour du DOM au minimum lorsque les données changent.
 
-En ce qui concerne `@for`, vous pouvez l'utiliser avec `@empty' de sorte que notre code précédent le `@if...@else` devient :
+En ce qui concerne `@for`, vous pouvez l'utiliser avec `@empty' de sorte que notre code précédent le `@if...@else` devient :
 
 ```html
 <div class="cards">
@@ -552,9 +552,9 @@ En ce qui concerne `@for`, vous pouvez l'utiliser avec `@empty' de sorte que not
 }
 ```
 
-`@for` fournit quelques variables supplémentaires que vous pouvez utiliser : `$index`, `$first`, `$last`, `$odd`, `$event` et `$count`. [Lisez la documentation](https://angular.dev/api/core/@for#index-and-other-contextual-variables) pour plus de détails.
+`@for` fournit quelques variables supplémentaires que vous pouvez utiliser : `$index`, `$first`, `$last`, `$odd`, `$event` et `$count`. [Lisez la documentation](https://angular.dev/api/core/@for#index-and-other-contextual-variables) pour plus de détails.
 
-Si vous deviez coder des `@for` imbriqués, l'accès à ces variables intégrées pourrait devenir délicat. Vous pouvez nommer chaque variable d'un `@for` après le `track` comme suit :
+Si vous deviez coder des `@for` imbriqués, l’accès à ces variables intégrées pourrait devenir délicat. Vous pouvez nommer chaque variable d’un `@for` après le `track` comme suit :
 
 ```html
 @for (card of filteredCards(); track card; let i = $index;) {
@@ -566,17 +566,17 @@ The same exists on `*ngFor` but you must declare a local variable if you need to
 
 ## Services
 
-Un service dans Angular permet de séparer la logique de l'interface utilisateur des données et de la logique commerciale.
+Un service dans Angular permet de séparer la logique de l’interface utilisateur des données et de la logique commerciale.
 
 Nous utilisons les services comme des singletons injectables.
 
-Vous pouvez créer le service en utilisant le CLI :
+Vous pouvez créer le service en utilisant le CLI :
 
 ```bash
 ng g s services/card
 ```
 
-Avant Angular 14, vous pouviez injecter des services dans les composants à travers les constructeurs, d'où le nom _Constructor Dependency Injection_ que de nombreux ingénieurs logiciels utilisent lors de la mise en œuvre des principes _S.O.L.I.D_.
+Avant Angular 14, vous pouviez injecter des services dans les composants à travers les constructeurs, d’où le nom _Constructor Dependency Injection_ que de nombreux ingénieurs logiciels utilisent lors de la mise en œuvre des principes _S.O.L.I.D_.
 
 ```tsx
 export class AppComponent {
@@ -586,7 +586,7 @@ export class AppComponent {
 }
 ```
 
-Cependant, cette méthode rend l'héritage complexe. Au lieu de cela, vous pouvez maintenant utiliser la nouvelle méthode `inject` :
+Cependant, cette méthode rend l’héritage complexe. Au lieu de cela, vous pouvez maintenant utiliser la nouvelle méthode `inject` :
 
 ```tsx
 export class AppComponent {
@@ -597,11 +597,11 @@ export class AppComponent {
 }
 ```
 
-Les services Angular relient les composants à la source de données, quelle qu'elle soit pour votre application.
+Les services Angular relient les composants à la source de données, quelle qu’elle soit pour votre application.
 
 Il peut contenir des [méthodes CRUD](https://www.google.com/search?q=CRUD) ou toute logique métier permettant de préparer les données pour vos composants.
 
-Par exemple :
+Par exemple :
 
 ```tsx
   getAll() {
@@ -659,13 +659,13 @@ Par exemple :
 
 ## Routes
 
-Cela ressemble beaucoup à [Vue Router](https://router.vuejs.org/), bien que, depuis que j'ai suivi [Masterclass 2024 de VueSchool](https://vueschool.io/the-vuejs-3-master-class), j'aime davantage l'approche de [Nuxt](https://nuxt.com/) avec [Unplugin Vue Router](https://www.npmjs.com/package/unplugin-vue-router) qui utilise un routage basé sur l'arborescence de fichiers.
+Cela ressemble beaucoup à [Vue Router](https://router.vuejs.org/), bien que, depuis que j’ai suivi [Masterclass 2024 de VueSchool](https://vueschool.io/the-vuejs-3-master-class), j’aime davantage l’approche de [Nuxt](https://nuxt.com/) avec [Unplugin Vue Router](https://www.npmjs.com/package/unplugin-vue-router) qui utilise un routage basé sur l’arborescence de fichiers.
 
 ### Ajouter une route
 
-Le processus de création de l'application vous fournit un fichier `app.routes.ts` qui reste vide par défaut.
+Le processus de création de l’application vous fournit un fichier `app.routes.ts` qui reste vide par défaut.
 
-Vous ajoutez une route avec ce qui suit :
+Vous ajoutez une route avec ce qui suit :
 
 ```tsx
 import { Routes } from "@angular/router";
@@ -679,13 +679,13 @@ export const routes: Routes = [
 ];
 ```
 
-Ensuite, vous ajoutez à `import : []` sur le fichier `app.component.ts` le `RouterOutlet` pour l'ajouter au fichier `app.component.html` :
+Ensuite, vous ajoutez à `import : []` sur le fichier `app.component.ts` le `RouterOutlet` pour l’ajouter au fichier `app.component.html` :
 
 ```html
 <router-outlet></router-outlet>
 ```
 
-Si vous avez besoin de rediriger un chemin vers une autre route, disons `/` vers `/home`, vous pouvez définir la route comme suit :
+Si vous avez besoin de rediriger un chemin vers une autre route, disons `/` vers `/home`, vous pouvez définir la route comme suit :
 
 ```tsx
   {
@@ -696,7 +696,7 @@ Si vous avez besoin de rediriger un chemin vers une autre route, disons `/` vers
   },
 ```
 
-### Qu'en est-il de la gestion des routes inconnues ?
+### Qu’en est-il de la gestion des routes inconnues ?
 
 ```tsx
   {
@@ -705,11 +705,11 @@ Si vous avez besoin de rediriger un chemin vers une autre route, disons `/` vers
   },
 ```
 
-Cependant, tout comme avec Vue Router, l'ordre a de l'importance, alors mettez cette route en bas de la liste... 😁
+Cependant, tout comme avec Vue Router, l’ordre a de l’importance, alors mettez cette route en bas de la liste… 😁
 
-### Gestion des paramètres d'une route
+### Gestion des paramètres d’une route
 
-Encore une fois, c'est très similaire à Vue Router :
+Encore une fois, c’est très similaire à Vue Router :
 
 ```tsx
   {
@@ -719,7 +719,7 @@ Encore une fois, c'est très similaire à Vue Router :
   },
 ```
 
-Mais qu'en est-il si vous avez des routes similaires ? Par exemple, la précédente et celle qui suit :
+Mais qu’en est-il si vous avez des routes similaires ? Par exemple, la précédente et celle qui suit :
 
 ```tsx
   {
@@ -729,7 +729,7 @@ Mais qu'en est-il si vous avez des routes similaires ? Par exemple, la précéde
   },
 ```
 
-Vous pouvez les regrouper de la manière suivante :
+Vous pouvez les regrouper de la manière suivante :
 
 ```tsx
   {
@@ -746,15 +746,15 @@ Vous pouvez les regrouper de la manière suivante :
   },
 ```
 
-### Comment lire les paramètres d'une route ?
+### Comment lire les paramètres d’une route ?
 
-En prenant la route `/card/:id` définie précédemment, vous devez charger la route courante en injectant la route `ActivatedRoute` dans le composant cible `CardComponent` :
+En prenant la route `/card/:id` définie précédemment, vous devez charger la route courante en injectant la route `ActivatedRoute` dans le composant cible `CardComponent` :
 
 ```tsx
   private route = inject(ActivatedRoute);
 ```
 
-Avec cette variable `route`, vous pouvez extraire du tableau `params` l'identifiant `id` :
+Avec cette variable `route`, vous pouvez extraire du tableau `params` l’identifiant `id` :
 
 ```tsx
   cardId = signal<number | undefined>(undefined);
@@ -767,11 +767,11 @@ Avec cette variable `route`, vous pouvez extraire du tableau `params` l'identifi
 
 Vous pouvez ensuite utiliser le signal `cardId` dans le fichier HTML.
 
-### Comment naviguer vers une route ?
+### Comment naviguer vers une route ?
 
-Prenons un exemple avec un bouton de navigation « Next » sur la route `/card/:id`. Nous voulons incrémenter le `cardId` à chaque clic.
+Prenons un exemple avec un bouton de navigation « Next » sur la route `/card/:id`. Nous voulons incrémenter le `cardId` à chaque clic.
 
-La méthode `next()` que nous utiliserons dans le fichier HTML ressemblera à ceci :
+La méthode `next()` que nous utiliserons dans le fichier HTML ressemblera à ceci :
 
 ```tsx
   next() {
@@ -781,15 +781,15 @@ La méthode `next()` que nous utiliserons dans le fichier HTML ressemblera à ce
   }
 ```
 
-Mais... vous remarquerez peut-être un problème. Lorsque vous cliquez sur le premier suivant, la route change, mais pas le code HTML. Et si vous cliquez à nouveau, rien ne change.
+Mais… vous remarquerez peut-être un problème. Lorsque vous cliquez sur le premier suivant, la route change, mais pas le code HTML. Et si vous cliquez à nouveau, rien ne change.
 
-Pourquoi ?
+Pourquoi ?
 
-Parce que nous utilisons un _snapshot_ de `params` et qu'il n'est pas suivi. De plus, Angular n'exécute pas le `ngOnInit` à nouveau. Par conséquent, `cardId` n'est pas mis à jour.
+Parce que nous utilisons un _snapshot_ de `params` et qu’il n’est pas suivi. De plus, Angular n’exécute pas le `ngOnInit` à nouveau. Par conséquent, `cardId` n’est pas mis à jour.
 
-Pour résoudre ce problème, j'ai fait allusion à la solution : nous devons nous abonner (sujet détaillé plus en détails ci-dessous) au changement de `params` de la route.
+Pour résoudre ce problème, j’ai fait allusion à la solution : nous devons nous abonner (sujet détaillé plus en détails ci-dessous) au changement de `params` de la route.
 
-Je vais fournir la solution dans l'extrait de code suivant :
+Je vais fournir la solution dans l’extrait de code suivant :
 
 ```tsx
   routeSubscription: Subscription | null = null;
@@ -805,20 +805,20 @@ Je vais fournir la solution dans l'extrait de code suivant :
   }
 ```
 
-Avec ce code, le HTML est mis à jour et vous pouvez cliquer sur suivant à l'infini.
+Avec ce code, le HTML est mis à jour et vous pouvez cliquer sur suivant à l’infini.
 
 ## Formulaires réactifs
 
-Nous avons plusieurs types de gestion de formulaires dans Angular :
+Nous avons plusieurs types de gestion de formulaires dans Angular :
 
 - _Template Driven Forms_ : avec cette méthode, nous utilisons la liaison bidirectionnelle des données avec `ngModel` dans le fichier HTML.
-- _Formulaires réactifs_ : avec cette méthode, le comportement du formulaire est déclaré dans le fichier TS.
+- *Formulaires réactifs* : avec cette méthode, le comportement du formulaire est déclaré dans le fichier TS.
 
 Examinons la méthode _Formulaires réactifs_.
 
 ### Les bases
 
-Pour commencer, nous devons ajouter le module `ReactiveFormsModule` au fichier TS pour commencer à ajouter un nouveau `FormControl` qui représente les entrées individuelles :
+Pour commencer, nous devons ajouter le module `ReactiveFormsModule` au fichier TS pour commencer à ajouter un nouveau `FormControl` qui représente les entrées individuelles :
 
 ```tsx
 name = new FormControl("", [Validators.required]);
@@ -831,7 +831,7 @@ hp = new FormControl(0, [
 
 La valeur par défaut est `required` et vous pouvez ajouter des validateurs en utilisant la classe `Validators` fournie par Angular Forms.
 
-Pendant que nous sommes dans le fichier TS, ajoutons la méthode `submit` qui reçoit les données soumises :
+Pendant que nous sommes dans le fichier TS, ajoutons la méthode `submit` qui reçoit les données soumises :
 
 ```tsx
   submit(event: Event) {
@@ -840,7 +840,7 @@ Pendant que nous sommes dans le fichier TS, ajoutons la méthode `submit` qui re
   }
 ```
 
-Maintenant, dans le fichier HTML, nous pouvons déclarer le nouveau formulaire :
+Maintenant, dans le fichier HTML, nous pouvons déclarer le nouveau formulaire :
 
 ```html
 <form (submit)="submit($event)">
@@ -863,19 +863,19 @@ Maintenant, dans le fichier HTML, nous pouvons déclarer le nouveau formulaire :
 </form>
 ```
 
-Dans le code ci-dessus, de bas en haut :
+Dans le code ci-dessus, de bas en haut :
 
 - le bouton `submit` est désactivé tant que les deux champs ne sont pas valides.
-- pour chaque champ, nous lions le contrôle de formulaire à l'entrée
-- l'élément de formulaire lie la méthode `submit` à l'événement `submit`.
+- pour chaque champ, nous lions le contrôle de formulaire à l’entrée
+- l’élément de formulaire lie la méthode `submit` à l’événement `submit`.
 
-Vous voudrez probablement me dire qu'il n'est pas pratique de vérifier chaque champ sur le bouton submit. C'est là que `FormGroup` entre en scène !
+Vous voudrez probablement me dire qu’il n’est pas pratique de vérifier chaque champ sur le bouton submit. C’est là que `FormGroup` entre en scène !
 
 ### Utilisation de `FormGroup`
 
-Pour rendre l'article plus court, je vais limiter l'exemple à deux champs :
+Pour rendre l’article plus court, je vais limiter l’exemple à deux champs :
 
-- Dans le fichier TS, vous définissez le groupe de formulaires :
+- Dans le fichier TS, vous définissez le groupe de formulaires :
 
   ```tsx
   form = new FormGroup({
@@ -888,7 +888,7 @@ Pour rendre l'article plus court, je vais limiter l'exemple à deux champs :
   });
   ```
 
-- Dans le fichier HTML, vous devez adapter quelques éléments :
+- Dans le fichier HTML, vous devez adapter quelques éléments :
 
   ```html
   <!-- first, add `[formGroup]="form"` to the form element -->
@@ -958,7 +958,7 @@ Dans le cas d'une champ de type fichier, vous devrez gérer le changement de fic
 <input id="image" name="image" type="file" (change)="onFileChange($event)" />
 ```
 
-Et la fonction `onFileChange` se charge de mettre à jour le champ du formulaire cible :
+Et la fonction `onFileChange` se charge de mettre à jour le champ du formulaire cible :
 
 ```tsx
   onFileChange(event: Event) {
@@ -978,7 +978,7 @@ Et la fonction `onFileChange` se charge de mettre à jour le champ du formulaire
 
 ### Gérer des validateurs multiples
 
-La façon la plus simple d'y parvenir est la suivante :
+La façon la plus simple d’y parvenir est la suivante :
 
 ```html
 @if (isFieldValid('hp')) { @if (formGroup.get('hp')?.hasError('required')) {
@@ -992,15 +992,15 @@ La façon la plus simple d'y parvenir est la suivante :
 
 ## Angular Material
 
-Angular Material est la bibliothèque de composants d'interface utilisateur officielle de Google pour Angular. Elle met en œuvre les principes du Material Design.
+Angular Material est la bibliothèque de composants d’interface utilisateur officielle de Google pour Angular. Elle met en œuvre les principes du Material Design.
 
-Vous pouvez l'installer avec la commande suivante :
+Vous pouvez l’installer avec la commande suivante :
 
 ```bash
 ng add @angular/material
 ```
 
-Et vous devrez répondre à certaines questions :
+Et vous devrez répondre à certaines questions :
 
 ```bash
 ✔ Choose a prebuilt theme name, or "custom" for a custom theme (list of 4 presets)
@@ -1009,11 +1009,11 @@ Et vous devrez répondre à certaines questions :
 
 Ensuite, rendez-vous sur [Angular Material website](https://material.angular.io/components/categories) pour faire votre choix de composants.
 
-Dans l'exemple précédent, nous pouvons mettre à jour les entrées `text`, `number` et `select`.
+Dans l’exemple précédent, nous pouvons mettre à jour les entrées `text`, `number` et `select`.
 
 Pour ce faire, nous devons
 
-- importer les modules nécessaires :
+- importer les modules nécessaires :
 
   ```tsx
     imports: [
@@ -1027,7 +1027,7 @@ Pour ce faire, nous devons
 
   ```
 
-- pour intégrer les modules dans le code HTML :
+- pour intégrer les modules dans le code HTML :
 
   ```html
   <!-- replaces the `<div class="form-field">` -->
@@ -1056,7 +1056,7 @@ Pour ce faire, nous devons
   </mat-form-field>
   ```
 
-Maintenant, Angular Material ne fournit aucun composant pour l'entrée de fichiers. Sergio prend l'option intelligente d'afficher un bouton pour simuler le clic sur « Choose file » tout en cachant l'entrée de type `file`.
+Maintenant, Angular Material ne fournit aucun composant pour l’entrée de fichiers. Sergio prend l’option intelligente d’afficher un bouton pour simuler le clic sur « Choose file » tout en cachant l’entrée de type `file`.
 
 ```html
 <!-- Vous ajoutez le bouton -->
@@ -1074,7 +1074,7 @@ Maintenant, Angular Material ne fournit aucun composant pour l'entrée de fichie
 />
 ```
 
-Ensuite, nous implémentons la méthode de mise à jour du bouton :
+Ensuite, nous implémentons la méthode de mise à jour du bouton :
 
 ```tsx
   getUploadImageButtonLabel(imageInput: HTMLInputElement) {
@@ -1087,13 +1087,13 @@ Ensuite, nous implémentons la méthode de mise à jour du bouton :
   }
 ```
 
-## Gestion de l'authentification
+## Gestion de l’authentification
 
 ### Introduction
 
-Nous devons commencer par ajouter un fournisseur, puisque l'authentification nécessitera l'utilisation d'une API REST à travers un client HTTP.
+Nous devons commencer par ajouter un fournisseur, puisque l’authentification nécessitera l’utilisation d’une API REST à travers un client HTTP.
 
-Pour cela, ajoutons ce fournisseur à `app.config.ts` :
+Pour cela, ajoutons ce fournisseur à `app.config.ts` :
 
 ```tsx
 import { provideHttpClient } from "@angular/common/http";
@@ -1107,7 +1107,7 @@ export const appConfig: ApplicationConfig = {
 
 ### Créer le `AuthService`
 
-L'étape suivante consiste à créer un nouveau `AuthService` et à importer le `HttpClient` pour l'utiliser dans votre nouveau service :
+L’étape suivante consiste à créer un nouveau `AuthService` et à importer le `HttpClient` pour l’utiliser dans votre nouveau service :
 
 ```tsx
 export class AuthService {
@@ -1119,19 +1119,19 @@ export class AuthService {
 }
 ```
 
-Ensuite, nous ajoutons la propriété `user` au service qui sera un signal de type `User | null | undefined`.
+Ensuite, nous ajoutons la propriété `user` au service, qui sera un signal de type `User | null | undefined`.
 
 ```tsx
 user = signal<User | null | undefined>(undefined);
 ```
 
-En matière d'authentification, nous avons généralement besoin
+En matière d’authentification, nous avons généralement besoin
 
-- d'une méthode `login` qui reçoit les informations d'identification.
-- d'une méthode `logout` qui met fin à la session.
-- d'une méthode `getUser` qui récupère les informations de l'utilisateur.
+- d’une méthode `login` qui reçoit les informations d’identification.
+- d’une méthode `logout` qui met fin à la session.
+- d’une méthode `getUser` qui récupère les informations de l’utilisateur.
 
-Codons leur signature :
+Codons leur signature :
 
 ```tsx
   login(credentials: ICredentials): Observable<User | null | undefined> {
@@ -1148,7 +1148,7 @@ Codons leur signature :
   }
 ```
 
-Nous devons ajouter l'interface `ICredentials` :
+Nous devons ajouter l’interface `ICredentials` :
 
 ```tsx
 // L'ajouter au début de l'AuthService
@@ -1163,7 +1163,7 @@ export interface ILoginResult {
 }
 ```
 
-Et le modèle `User` :
+Et le modèle `User` :
 
 ```tsx
 // Ajouter le fichier `user.model.ts` à `/app/models`
@@ -1174,7 +1174,7 @@ export class User {
 }
 ```
 
-Nous continuons avec l'appel à la méthode de connexion de l'API. L'API de Sergio utilise une méthode de connexion qui renvoie un jeton que nous devons stocker en local afin de pouvoir l'utiliser ultérieurement.
+Nous continuons avec l’appel à la méthode de connexion de l’API. L’API de Sergio utilise une méthode de connexion qui renvoie un jeton que nous devons stocker en local afin de pouvoir l’utiliser ultérieurement.
 
 ```tsx
 return (
@@ -1207,13 +1207,13 @@ return (
 );
 ```
 
-Pourquoi y a-t-il trois types de méthodes `login` et `getUser` ?
+Pourquoi y a-t-il trois types de méthodes `login` et `getUser` ?
 
-- `undefined` identifie le cas d'utilisation « Nous ne savons pas encore si l'utilisateur est connecté ».
-- `null` identifie le cas d'utilisation « Nous savons que l'utilisateur n'est pas connecté ».
-- `User` identifie le cas d'utilisation « L'utilisateur est connecté ».
+- `undefined` identifie le cas d’utilisation « Nous ne savons pas encore si l’utilisateur est connecté ».
+- `null` identifie le cas d’utilisation « Nous savons que l’utilisateur n’est pas connecté ».
+- `User` identifie le cas d’utilisation « L’utilisateur est connecté ».
 
-Voici maintenant l'implémentation des méthodes `getUser` et `logout` :
+Voici maintenant l’implémentation des méthodes `getUser` et `logout` :
 
 ```tsx
   // Très similaire à login, mais nous récupérons simplement l'utilisateur
@@ -1244,17 +1244,17 @@ PS : La méthode `tap` est un opérateur RxJS qui effectue des effets (comme la 
 
 ### Utiliser le `AuthService` sur le composant de connexion
 
-Tout d'abord, nous devons injecter les dépendances :
+Tout d’abord, nous devons injecter les dépendances :
 
 - le nouveau `AuthService` pour utiliser la méthode `login`.
-- le routeur pour gérer la navigation si l'action de connexion est réussie.
+- le routeur pour gérer la navigation si l’action de connexion est réussie.
 
 ```tsx
   private authService = inject(AuthService);
   private router = inject(Router);
 ```
 
-Ensuite, implémentons la méthode `login` :
+Ensuite, implémentons la méthode `login` :
 
 ```tsx
   // le groupe de formulaires avec les informations d'identification
@@ -1292,7 +1292,7 @@ Ensuite, implémentons la méthode `login` :
   }
 ```
 
-Si vous vous interrogez sur le `logout`, c'est très simple :
+Si vous vous interrogez sur le `logout`, c’est très simple :
 
 ```tsx
   // Vous mettriez dans app.component.ts si vous ajoutiez un menu dans ce HTML
@@ -1313,23 +1313,23 @@ Si vous vous interrogez sur le `logout`, c'est très simple :
   }
 ```
 
-Cependant, vous avez peut-être remarqué que le point de terminaison `logout` ne prend aucun paramètre. Alors comment dire à l'API REST qui se déconnecte ?
+Cependant, vous avez peut-être remarqué que le point de terminaison `logout` ne prend aucun paramètre. Alors, comment dire à l’API REST qui se déconnecte ?
 
 ### Intercepteurs
 
 Les intercepteurs permettent de modifier une requête HTTP pour ajouter, par exemple, un en-tête HTTP.
 
-C'est ce que nous devons faire si nous voulons appeler l'API REST parce qu'elle attend le jeton reçu lors de la connexion.
+C’est ce que nous devons faire si nous voulons appeler l’API REST. En effet, elle attend le jeton reçu lors de la connexion.
 
-Pour créer un nouvel intercepteur, exécutez la commande Angular ci-dessous :
+Pour créer un nouvel intercepteur, exécutez la commande Angular ci-dessous :
 
 ```bash
 ng generate interceptor interceptors/auth-token
 ```
 
-Dans le système d'authentification fourni par Sergio, le backend requiert un en-tête HTTP `Authorization : Token {valeur du Token}`.
+Dans le système d’authentification fourni par Sergio, le backend requiert un en-tête HTTP `Authorization : Token {valeur du Token}`.
 
-L'intercepteur agit comme un proxy pour ajouter des données aux requêtes HTTP, dans notre cas un en-tête HTTP :
+L’intercepteur agit comme un proxy pour ajouter des données aux requêtes HTTP, dans notre cas un en-tête HTTP :
 
 ```tsx
 import { HttpInterceptorFn } from "@angular/common/http";
@@ -1356,23 +1356,23 @@ export const authTokenInterceptor: HttpInterceptorFn = (req, next) => {
 };
 ```
 
-Désormais, toute requête à l'API REST reçoit le jeton dans l'en-tête et le point de terminaison logout peut le récupérer pour déconnecter la session associée.
+Désormais, toute requête à l’API REST reçoit le jeton dans l’en-tête et le point de terminaison `logout` peut le récupérer pour déconnecter la session associée.
 
-Il reste une dernière étape pour terminer tout ce travail : indiquer au client HTTP comment utiliser l'intercepteur que nous avons créé.
+Il reste une dernière étape pour terminer tout ce travail : indiquer au client HTTP comment utiliser l’intercepteur que nous avons créé.
 
-Nous le faisons en mettant à jour le `provideHttpClient` pour qu'il l'utilise :
+Nous le faisons en mettant à jour le `provideHttpClient` pour qu’il l’utilise :
 
 ```tsx
 provideHttpClient(withInterceptors([authTokenInterceptor])),
 ```
 
-Nous avons presque terminé ! La dernière chose à coder est d'empêcher les utilisateurs de voir les pages nécessitant un statut « authentifié ».
+Nous avons presque terminé ! La dernière chose à coder est d’empêcher les utilisateurs de voir les pages nécessitant un statut « authentifié ».
 
 ### Gardes
 
 Les gardes nous aideront pour la dernière partie.
 
-Les gardes fonctionnent sur la base d'un cas d'utilisation sélectionné. Ces cas d'utilisation sont listés lors de la création d'un garde :
+Les gardes fonctionnent sur la base d’un cas d’utilisation sélectionné. Ces cas d’utilisation sont listés lors de la création d’un garde :
 
 ```bash
 ng generate guard guards/is-logged-in
@@ -1384,7 +1384,7 @@ ng generate guard guards/is-logged-in
  ◯ CanMatch
 ```
 
-Dans notre cas d'utilisation, lorsqu'une route est _activée_, nous devons exécuter un code pour vérifier si l'utilisateur actuel peut naviguer sur la page.
+Dans notre cas d’utilisation, lorsqu’une route est _activée_, nous devons exécuter un code pour vérifier si l’utilisateur actuel peut naviguer sur la page.
 
 ```tsx
 export const isLoggedInGuard: CanActivateFn = () => {
@@ -1418,7 +1418,7 @@ export const isLoggedInGuard: CanActivateFn = () => {
 };
 ```
 
-Pour utiliser la garde, nous devons mettre à jour les itinéraires :
+Pour utiliser la garde, nous devons mettre à jour les itinéraires :
 
 ```tsx
 import { isLoggedInGuard } from "./guards/is-logged-in.guard";
@@ -1433,15 +1433,15 @@ export const routes: Routes = [
 ];
 ```
 
-## Intégration de l'API REST
+## Intégration de l’API REST
 
-Maintenant que nous avons implémenté l'API d'authentification, l'implémentation d'une API de données ne sera pas difficile.
+Maintenant que nous avons implémenté l’API d’authentification, l’implémentation d’une API de données ne sera pas difficile.
 
-Je vais simplement partager une meilleure pratique concernant la communication entre l'application Angular et l'API que vous consommez.
+Je vais simplement partager une meilleure pratique concernant la communication entre l’application Angular et l’API que vous consommez.
 
-### Mettre à jour le service existant avec des appels d'API
+### Mettre à jour le service existant avec des appels d’API
 
-Dans notre exemple d'application, l'API renvoie des cartes, donc tout d'abord, nous allons devoir créer un fichier `interfaces/card.interface.ts` pour définir le contrat entre le Frontend et le Backend :
+Dans notre exemple d’application, l’API renvoie des cartes, donc tout d’abord, nous allons devoir créer un fichier `interfaces/card.interface.ts` pour définir le contrat entre le Frontend et le Backend :
 
 ```tsx
 import { CardType } from "../utils/card.utils";
@@ -1459,9 +1459,9 @@ export interface ICard {
 }
 ```
 
-Ensuite, nous modifions le fichier `card.model.ts` pour que :
+Ensuite, nous modifions le fichier `card.model.ts` pour que :
 
-- il implémente l'interface.
+- il implémente l’interface.
 
   ```tsx
   export class Card implements ICard {}
@@ -1487,7 +1487,7 @@ Ensuite, nous modifions le fichier `card.model.ts` pour que :
     }
   ```
 
-Ensuite, nous pouvons mettre à jour `CardService` pour interroger l'API REST :
+Ensuite, nous pouvons mettre à jour `CardService` pour interroger l’API REST :
 
 ```tsx
   private http = inject(HttpClient);
@@ -1540,7 +1540,7 @@ Ensuite, nous pouvons mettre à jour `CardService` pour interroger l'API REST :
 
 ### Mettre à jour les composants de la liste
 
-Dans les composants de la liste de cartes, nous avons ceci :
+Dans les composants de la liste de cartes, nous avons ceci :
 
 ```tsx
   cards = signal<Card[]>([]);
@@ -1550,13 +1550,13 @@ Dans les composants de la liste de cartes, nous avons ceci :
   }
 ```
 
-Mais ESLint nous dit :
+Mais ESLint nous dit :
 
 ```plaintext
 Argument of type 'Observable<Card[]>' is not assignable to parameter of type 'Card[]'.
 ```
 
-Nous pourrions utiliser un `subscribe` sur le résultat de `getAll` pour convertir le `Observable<Card[]>` en `Card[]`, mais Angular fournit en fait une méthode plus simple appelée `toSignal` :
+Nous pourrions utiliser un `subscribe` sur le résultat de `getAll` pour convertir le `Observable<Card[]>` en `Card[]`, mais Angular fournit en fait une méthode plus simple appelée `toSignal` :
 
 ```tsx
 import { toSignal } from "@angular/core/rxjs-interop";
@@ -1571,7 +1571,7 @@ Par conséquent, vous pouvez supprimer le code du constructeur.
 
 ### Mettre à jour le composant de la carte unique
 
-Dans ce cas, l'adaptation du code nécessite une approche différente, mais encore une fois, pour éviter les `subscribe` imbriqués, Sergio montre l'utilisation de `switchMap` dans un `pipe` :
+Dans ce cas, l’adaptation du code nécessite une approche différente, mais encore une fois, pour éviter les `subscribe` imbriqués, Sergio montre l’utilisation de `switchMap` dans un `pipe` :
 
 ```tsx
 this.routeSubscription = this.route.params
@@ -1597,9 +1597,9 @@ this.routeSubscription = this.route.params
   });
 ```
 
-De cette façon, nous n'avons besoin de désabonner qu'un seul abonnement.
+De cette façon, nous n’avons besoin de désabonner qu’un seul abonnement.
 
-Pour la méthode `submit`, nous devons adapter le code :
+Pour la méthode `submit`, nous devons adapter le code :
 
 ```tsx
   saveSubscription: Subscription | null = null;
@@ -1629,7 +1629,7 @@ Pour la méthode `submit`, nous devons adapter le code :
 
 ```
 
-En ce qui concerne `deleteCard`, nous devons également adapter le code :
+En ce qui concerne `deleteCard`, nous devons également adapter le code :
 
 ```tsx
   deleteSubscription: Subscription | null = null;
@@ -1655,25 +1655,25 @@ En ce qui concerne `deleteCard`, nous devons également adapter le code :
 
 ## Conclusion
 
-Personnellement, je préfère la syntaxe de Vue. Mais par rapport à React, l'utilisation d'Angular me semble plus structurée.
+Personnellement, je préfère la syntaxe de Vue. Mais par rapport à React, l’utilisation d’Angular me semble plus structurée.
 
-En ce qui concerne [le cours sur YouTube](https://www.youtube.com/watch?v=U71TQN68QGU), je pense que Sergio a fait un excellent travail et j'ai appris tout ce dont j'avais besoin pour vraiment comprendre les bases d'Angular.
+En ce qui concerne [le cours sur YouTube](https://www.youtube.com/watch?v=U71TQN68QGU), je pense que Sergio a fait un excellent travail et j’ai appris tout ce dont j’avais besoin pour vraiment comprendre les bases d’Angular.
 
-De plus, ayant une expérience avec Vue 3, j'ai compris les concepts de signal plus rapidement, car je pouvais relier la syntaxe et l'API équivalentes avec Vue.
+De plus, ayant une expérience avec Vue 3, j’ai compris les concepts de signal plus rapidement, car je pouvais relier la syntaxe et l’API équivalentes avec Vue.
 
-J'ai besoin de pratiquer régulièrement maintenant, surtout en ce qui concerne les `pipe`, `subscribe`, `tap`, `map`. Il enseigne la partie RxJs dans une autre vidéo que je suiverai bientôt.
+J’ai besoin de pratiquer régulièrement maintenant, surtout en ce qui concerne les `pipe`, `subscribe`, `tap`, `map`. Il enseigne la partie RxJs dans une autre vidéo que je suivrai bientôt.
 
 ### RxJs plus en détails
 
 À la fin du cours, Sergio partage une astuce sur les bonnes pratiques lorsque vous gérez plusieurs abonnements dans un seul composant.
 
-En fait, au lieu d'utiliser un abonnement par cas d'utilisation, nous pouvons déclarer une seule variable de type `Subscription` pour tous :
+En fait, au lieu d’utiliser un abonnement par cas d’utilisation, nous pouvons déclarer une seule variable de type `Subscription` pour tous :
 
 ```tsx
 subscriptions: Subscription = new Subscription();
 ```
 
-Ensuite, dans chaque cas d'utilisation, nous effectuons ce qui suit :
+Ensuite, dans chaque cas d’utilisation, nous effectuons ce qui suit :
 
 ```tsx
   ngOnInit(): void {
@@ -1701,13 +1701,13 @@ Ensuite, dans chaque cas d'utilisation, nous effectuons ce qui suit :
   }
 ```
 
-Et nous mettons à jour le corps `ngOnDestroy` avec ceci :
+Et nous mettons à jour le corps `ngOnDestroy` avec ceci :
 
 ```tsx
 this.subscriptions.unsubscribe();
 ```
 
-Pour plus d'informations sur le sujet, je recommande les vlogs de Sergio sur le sujet.
+Pour plus d’informations sur le sujet, je recommande les vlogs de Sergio sur le sujet.
 
 - [Intro à RxJS - Observables, Observers, Subscriptions](https://www.youtube.com/watch?v=fQeZSSK2SOM)
 - [RxJS / Angular : Opérateurs et exemples concrets](https://www.youtube.com/watch?v=hh3Xdukr42g)
