@@ -1,23 +1,21 @@
-{{- $pages := "" -}}
+{{- $pages := slice -}}
 
 {{- if .IsHome -}}
-    {{ $pages = where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
-    {{ $pages = where $pages "Params.hidden" "!=" true }}
-{{- else if eq .Kind "term" -}}
-    {{ $pages = where .Pages "Params.hidden" "!=" true }}
-{{- else if or (eq .Kind "section") (eq .Kind "taxonomy") -}}
-    {{ $subsections := .Sections }}
-    {{ $pages = .Pages | complement $subsections }}
-    {{ $pages = where $pages "Params.hidden" "!=" true }}
+  {{ $pages = where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+  {{ $pages = where $pages "Params.hidden" "!=" true }}
+{{- else if or (eq .Kind "section") (eq .Kind "taxonomy") (eq .Kind "term") -}}
+  {{ $subsections := .Sections }}
+  {{ $pages = .Pages | complement $subsections }}
+  {{ $pages = where $pages "Params.hidden" "!=" true }}
 
-    {{- if eq (len $pages) 0 -}}
-        {{/* See complete logic in list.html */}}
-        {{- $pages = $subsections -}}
-    {{- end -}}
+  {{- if eq (len $pages) 0 -}}
+    {{/* See complete logic in list.html */}}
+    {{- $pages = $subsections -}}
+  {{- end -}}
 {{- end -}}
 
-{{- if $pages -}}
-    {{ $pages = .Paginate $pages }}
+{{- if or .IsHome (eq .Kind "section") (eq .Kind "taxonomy") (eq .Kind "term") -}}
+  {{ $pages = .Paginate $pages }}
 {{- end -}}
 
 {{ return $pages }}
