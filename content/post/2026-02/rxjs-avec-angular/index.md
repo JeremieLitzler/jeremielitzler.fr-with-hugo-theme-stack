@@ -1,6 +1,6 @@
 ---
 title: "RxJS avec Angular"
-description: "RxJS est une bibliothèque utilitaire réactive JavaScript, qui gère des flux de données asynchrones à l'aide d'observables."
+description: "RxJS est une bibliothèque utilitaire réactive JavaScript, qui gère des flux de données asynchrones à l’aide d’observables."
 image: 2026-02-23-a-pair-of-vintage-binoculars.jpg
 imageAlt: Une paire de jumelles anciennes
 date: 2026-02-27
@@ -11,40 +11,40 @@ tags:
   - RxJs
 ---
 
-Suite au [cours sur Angular 18](../les-bases-avec-angular/index.md), j'ai décidé de me plonger plus profondément dans les concepts et l'utilisation de RxJs.
+Suite au [cours sur Angular 18](../les-bases-avec-angular/index.md), j’ai décidé de me plonger plus profondément dans les concepts et l’utilisation de RxJs.
 
-Grâce à [Sergio de SimpleTech](https://www.youtube.com/@SimpleTechProd), je comprends mieux les façons de l'utiliser.
+Grâce à [Sergio de SimpleTech](https://www.youtube.com/@SimpleTechProd), je comprends mieux les façons de l’utiliser.
 
-Entrons dans le vif du sujet !
+Entrons dans le vif du sujet !
 
 ## Le commencement
 
-### Qu'est-ce que RxJS ?
+### Qu’est-ce que RxJS ?
 
-C'est l'abréviation de _Reactive Extensions for JavaScript_. Cette bibliothèque permet de traiter les événements asynchrones de manière réactive. Pour comprendre tout cela, vous devez comprendre 2 choses :
+C’est l’abréviation de _Reactive Extensions for JavaScript_. Cette bibliothèque permet de traiter les événements asynchrones de manière réactive. Pour comprendre tout cela, vous devez comprendre 2 choses :
 
-1. Qu'est-ce qu'un événement asynchrone ?
-2. Qu'est-ce que la réactivité ?
+1. Qu’est-ce qu’un événement asynchrone ?
+2. Qu’est-ce que la réactivité ?
 
 On peut définir les événements asynchrones comme des événements qui peuvent se produire à tout moment, comme un clic sur un bouton, une réponse à une requête HTTP ou la saisie sur un clavier.
 
-L'objectif est de créer des interfaces plus dynamiques et un code plus facile à comprendre et à maintenir. Nous avons tous connu l'enfer du callback, n'est-ce pas ?
+L’objectif est de créer des interfaces plus dynamiques et un code plus facile à comprendre et à maintenir. Nous avons tous connu _l’enfer du callback_, n’est-ce pas ?
 
-Comment cela fonctionne-t-il avec RxJS ?
+Comment cela fonctionne-t-il avec RxJS ?
 
-RxJS fournit une API appelée `Observable`. Elle correspond à une sorte d'enveloppe autour d'événements asynchrones, par exemple, une enveloppe autour d'un appel HTTP ou d'un clic .
+RxJS fournit une API appelée `Observable`. Elle correspond à une sorte d’enveloppe autour d’événements asynchrones, par exemple, une enveloppe autour d’un appel HTTP ou d’un clic.
 
-Pour s'abonner à un observable, nous utiliserons la méthode `subscribe`, à laquelle nous passerons un observateur en paramètre.
+Pour s’abonner à un observable, nous utiliserons la méthode `subscribe`, à laquelle nous passerons un observateur en paramètre.
 
-Vous pouvez considérer un observateur comme une collection d'une ou plusieurs des méthodes suivantes :
+Vous pouvez considérer un observateur comme une collection d’une ou plusieurs des méthodes suivantes :
 
-- la méthode `next` qu'on utilise pour recevoir les événements en paramètres que notre observable va envoyer.
-- la méthode `error` qui perment à l'observable d'envoyer l'erreur et de lui indiquer qu'il doit arrêter son exécution. La méthode `error` prend en paramètre l'objet error.
-- la méthode `complete` indique à l'observable qu'il a fini de s'exécuter et qu'il n'émettra plus de valeur.
+- la méthode `next` qu’on utilise pour recevoir les événements en paramètres que notre observable va envoyer.
+- la méthode `error` qui permet à l’observable d’envoyer l’erreur et de lui indiquer qu’il doit arrêter son exécution. La méthode `error` prend en paramètre l’objet `Error`.
+- la méthode `complete` indique à l’observable qu’il a fini de s’exécuter et qu’il n’émettra plus de valeur.
 
-## L'exemple de code
+## L’exemple de code
 
-Prenons l'exemple de code suivant, fortement commenté pour vous aider à comprendre :
+Prenons l’exemple de code suivant, fortement commenté pour vous aider à comprendre :
 
 ```tsx
 import { Component, OnDestroy } from "@angular/core";
@@ -139,7 +139,7 @@ Si nous imprimons la `letterSpoken`, nous verrons toutes les lettres affichées 
 <p>{{ letterSpoken }}</p>
 ```
 
-Nous pouvons obtenir le même comportement avec un `AsyncPipe` de `@angular/common` :
+Nous pouvons obtenir le même comportement avec un `AsyncPipe` de `@angular/common` :
 
 ```tsx
 import { AsyncPipe } from "@angular/common";
@@ -179,24 +179,24 @@ export class RxJsDemosComponent {
 }
 ```
 
-Nous pouvons alors utiliser l'observable directement dans le code HTML :
+Nous pouvons alors utiliser l’observable directement dans le code HTML :
 
 ```html
 <!-- async  -->
 <p>{{ anotherSpeaker$ | async }}</p>
 ```
 
-Mais où sont les appels `subscribe` et `unsubsribe` ?
+Mais où sont les appels `subscribe` et `unsubsribe` ?
 
-`AsyncPipe` s'en occupe pour nous :
+`AsyncPipe` s’en occupe pour nous :
 
-1. Il prend en charge l'abonnement,
+1. Il prend en charge l’abonnement,
 2. Il récupère les valeurs envoyées
-3. Et lorsque le modèle n'est plus utilisé, il s'occupe même de la désinscription pour nous.
+3. Et lorsque le modèle n’est plus utilisé, il s’occupe même de la désinscription pour nous.
 
 Maintenant, essayons ceci avec un formulaire et affichons le texte saisi en dessous.
 
-Le TypeScript deviendrait :
+Le code TypeScript deviendrait :
 
 ```tsx
 import { AsyncPipe } from "@angular/common";
@@ -217,18 +217,18 @@ export class RxJsDemosComponent {
 }
 ```
 
-Ensuite, dans le modèle, vous avez :
+Ensuite, dans le modèle, vous avez :
 
 ```html
 <div><input [formControl]="textFormControl" /></div>
 <p>{{ textTyped$ | async }}</p>
 ```
 
-Au fur et à mesure que vous tapez dans le champ de saisi, `textTyped$` se met à jour. `async` de `AsyncPipe` gère l'abonnement et le désabonnement et remplit la balise `p` avec la valeur.
+Au fur et à mesure que vous tapez dans le champ de saisi, `textTyped$` se met à jour. `async` de `AsyncPipe` gère l’abonnement et le désabonnement et remplit la balise `p` avec la valeur.
 
 ## Opérateurs RxJS
 
-Nous pouvons utiliser une variété d'opérateurs comme les listes de son site web :
+Nous pouvons utiliser une variété d’opérateurs comme les listes de son site web :
 
 - [Opérateurs de création](https://rxjs.dev/guide/operators#creation-operators-1)
 - [Opérateurs de création de jointures](https://rxjs.dev/guide/operators#join-creation-operators)
@@ -243,9 +243,9 @@ Nous pouvons utiliser une variété d'opérateurs comme les listes de son site w
 
 Supposons que nous voulions construire un composant de recherche pour filtrer une liste de personnes.
 
-Nous avons :
+Nous avons :
 
-- ce code TypeScript :
+- ce code TypeScript :
 
   ```tsx
   import { Component, inject, OnDestroy } from "@angular/core";
@@ -299,7 +299,7 @@ Nous avons :
   }
   ```
 
-- ce code HTML :
+- ce code HTML :
 
   ```html
   <div>
@@ -319,7 +319,7 @@ Nous avons :
   </div>
   ```
 
-- Un service permettant d'interroger des données statiques :
+- Un service permettant d’interroger des données statiques :
 
   ```tsx
   import { Injectable } from "@angular/core";
@@ -353,22 +353,22 @@ Nous avons :
   }
   ```
 
-Mais lorsque nous l'utilisons, nous remarquons deux choses :
+Mais lorsque nous l’utilisons, nous remarquons deux choses :
 
-1. Rien n'est affiché par défaut. Cela ne devrait pas arriver.
-2. Le résultat de la recherche pour `a` renvoie des valeurs qui ne devraient pas apparaître...
+1. Rien n’est affiché par défaut. Cela ne devrait pas arriver.
+2. Le résultat de la recherche pour `a` renvoie des valeurs qui ne devraient pas apparaître…
 
-Pourquoi ?
+Pourquoi ?
 
-La façon dont le code du composant est écrit, par exemple avec des `subscribe` imbriqués, ne garantit pas que le résultat contiendra le résultat attendu parce que les valeurs de l'exécution précédente entreront en collision avec les ensembles de résultats les plus récents.
+La façon dont le code du composant est écrit, par exemple avec des `subscribe` imbriqués, ne garantit pas que le résultat contiendra le résultat attendu parce que les valeurs de l’exécution précédente entreront en collision avec les ensembles de résultats les plus récents.
 
 ### La meilleure implémentation
 
-Les problèmes décrits précédemment nous donnent l'opportunité de comprendre la méthode `pipe`. Pour moi, c'est comme appeler `fetch` et être capable d'enchaîner plusieurs méthodes `then`, tant que vous retournez une Promise à la fin de chaque `then`.
+Les problèmes décrits précédemment nous donnent l’opportunité de comprendre la méthode `pipe`. Pour moi, c’est comme appeler `fetch` et être capable d’enchaîner plusieurs méthodes `then`, tant que vous retournez une `Promise` à la fin de chaque `then`.
 
-Un `then` est équivalent à l'opérateur que vous utiliserez dans `pipe`.
+Un `then` est équivalent à l’opérateur que vous utiliserez dans `pipe`.
 
-Jetons un coup d'oeil au code refactoré :
+Jetons un coup d’œil au code réécrit :
 
 ```tsx
 import { Component, inject } from "@angular/core";
@@ -400,11 +400,11 @@ export class SearchPageComponent {
 }
 ```
 
-L'opérateur `switchMap` prend les valeurs d'un Observable et retourne un nouvel Observable à partir de ces valeurs. Il se charge d'annuler tout Observable précédent.
+L’opérateur `switchMap` prend les valeurs d’un Observable et retourne un nouvel Observable à partir de ces valeurs. Il se charge d’annuler tout Observable précédent.
 
-Dans l'exemple, il retourne un Observable du `PersonService` en utilisant le terme de recherche actuel. Mais si vous tapez quelque chose de nouveau (deuxième recherche) avant que le premier appel à `PersonService` ne soit terminé, alors le premier appel est annulé.
+Dans l’exemple, il retourne un Observable du `PersonService` en utilisant le terme de recherche actuel. Mais si vous tapez quelque chose de nouveau (deuxième recherche) avant que le premier appel à `PersonService` ne soit terminé, alors le premier appel est annulé.
 
-Le code HTML devient alors :
+Le code HTML devient alors :
 
 ```html
 <!-- Nous devons utiliser `async` afin d'utiliser la valeur de `searchResult$` -->
@@ -416,11 +416,11 @@ Le code HTML devient alors :
 }
 ```
 
-### Chaînage d'opérateurs
+### Chaînage d’opérateurs
 
-L'autre problème de l'exemple est que le point de départ n'affiche rien lorsque l'entrée est vide. Nous devrions avoir toutes les personnes affichées.
+L’autre problème de l’exemple est que le point de départ n’affiche rien lorsque l’entrée est vide. Nous devrions avoir toutes les personnes affichées.
 
-En utilisant l'opérateur `startWith`, nous pouvons résoudre ce problème. Cet opérateur permet d'émettre une valeur initiale :
+En utilisant l’opérateur `startWith`, nous pouvons résoudre ce problème. Cet opérateur permet d’émettre une valeur initiale :
 
 ```tsx
 import { switchMap, Observable, startWith } from "rxjs";
@@ -437,11 +437,11 @@ export class SearchPageComponent {
 
 {{< blockcontainer jli-notice-warning "⚠️ L'ordre importe">}}
 
-Placez les opérateurs dans l'ordre dans lequel votre logique métier doit s'exécuter !
+Placez les opérateurs dans l’ordre dans lequel votre logique métier doit s’exécuter !
 
 {{< /blockcontainer >}}
 
-Voyons deux derniers opérateurs qui donnent de l'air au `PersonService` et améliorent l'UX 🌟
+Voyons deux derniers opérateurs qui donnent de l’air au `PersonService` et améliorent l’UX 🌟
 
 ```tsx
 import { switchMap, Observable, startWith, debounceTime, tap } from 'rxjs';
@@ -465,7 +465,7 @@ export class SearchPageComponent {
 }
 ```
 
-Dans le code HTML, cela ressemble à ceci :
+Dans le code HTML, cela ressemble à ceci :
 
 ```html
 <!-- afficher le "spinner"... -->
@@ -484,9 +484,9 @@ Dans le code HTML, cela ressemble à ceci :
 }
 ```
 
-## Un observable dépendant d'un autre
+## Un observable dépendant d’un autre
 
-Dans le composant, nous avons ajouté un compteur de résultats, mais il ne fonctionne pas après le premier refactor. C'est l'occasion de présenter un nouvel Observable dépendant de notre Observable existant :
+Dans le composant, nous avons ajouté un compteur de résultats, mais il ne fonctionne pas. C’est l’occasion de présenter un nouvel Observable dépendant de notre Observable existant :
 
 ```tsx
 import { switchMap, Observable, startWith, debounceTime, tap, map } from "rxjs";
@@ -497,7 +497,7 @@ export class SearchPageComponent {
 }
 ```
 
-Une fois que l'observable `searchResult$` est résolu, nous pouvons évaluer `searchResultCount$` et l'utiliser dans le HTML :
+Une fois que l’observable `searchResult$` est résolu, nous pouvons évaluer `searchResultCount$` et l’utiliser dans le HTML :
 
 ```html
 <div>Nombre de résultats : {{ searchResultCount$ | async }}</div>
@@ -505,9 +505,9 @@ Une fois que l'observable `searchResult$` est résolu, nous pouvons évaluer `se
 
 ## Conclusion
 
-Qu'avez-vous appris ? RxJs a du sens maintenant ? Grâce à Sergio, c'était le cas pour moi et j'ai hâte de mettre cela en pratique sur quelques projets.
+Qu’avez-vous appris ? RxJs a du sens maintenant ? Grâce à Sergio, c’était le cas pour moi et j’ai hâte de mettre cela en pratique sur quelques projets.
 
-Comme toujours...
+Comme toujours…
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
