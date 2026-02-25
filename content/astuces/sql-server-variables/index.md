@@ -1,7 +1,7 @@
 ---
 title: "SQL Server - Variables"
 description: "Utilisation d’une variable simple avec un exemple"
-image: /quick-tips/images/sql-server.webp
+image: /actuces/images/sql-server.webp
 imageAlt: Logo de Microsoft SQL Server
 date: 2025-12-04
 categories:

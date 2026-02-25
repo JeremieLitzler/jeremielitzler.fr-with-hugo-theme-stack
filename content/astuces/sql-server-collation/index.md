@@ -1,7 +1,7 @@
 ---
 title: "SQL Server - Résoudre le conflit de collation"
 description: "Les collations dans le moteur de base de données SQL Server fournissent des règles de tri, de la casse et des propriétés de sensibilité aux accents pour vos données."
-image: /quick-tips/images/sql-server.webp
+image: /actuces/images/sql-server.webp
 imageAlt: Logo de Microsoft SQL Server
 date: 2025-12-04
 categories:

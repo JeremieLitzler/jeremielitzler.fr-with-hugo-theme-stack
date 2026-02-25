@@ -1,7 +1,7 @@
 ---
 title: "Windows - Déplacer AppData du lecteur C vers un lecteur de données"
 description: "Le dossier AppData peut devenir très volumineux."
-image: /quick-tips/images/Microsoft_Windows-Logo.png
+image: /actuces/images/Microsoft_Windows-Logo.png
 imageAlt: Logo de Microsoft Windows
 date: 2025-12-06
 categories:
