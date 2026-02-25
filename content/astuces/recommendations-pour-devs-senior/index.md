@@ -1,7 +1,7 @@
 ---
 title: "Recommendations : Devenir un bon développeur expérimenté"
 description: "L’ingénieur qui déploie le plus de code n’est pas toujours celui qui est promu."
-image: /actuces/images/an-organized-desk.jpg
+image: /astuces/images/an-organized-desk.jpg
 imageAlt: Un bureau organisé
 date: 2026-02-24
 categories:
