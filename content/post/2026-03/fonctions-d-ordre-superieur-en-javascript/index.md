@@ -192,6 +192,6 @@ Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/
 
 {{< /blockcontainer >}}
 
-Crédit : cet article est une traduction partielle de [cet article](https://www.freecodecamp.org/news/higher-order-functions-in-javascript-explained/) écrit par [Sobit Prasad](https://www.freecodecamp.org/news/author/sobitprasad/) et publié sur le blog de [Freecodecamp.org](https://www.freecodecamp.org/news/). [L'exemple de code](#exemples-concrets) sur la fin est ma contribution.
+Crédit : cet article est une traduction partielle de [cet article](https://www.freecodecamp.org/news/higher-order-functions-in-javascript-explained/), écrit par [Sobit Prasad](https://www.freecodecamp.org/news/author/sobitprasad/) et originallement publié sur le blog de [Freecodecamp.org](https://www.freecodecamp.org/news/). [Cet exemple de code](#exemples-concrets) sur la fin est ma contribution.
 
 Photo de _cottonbro studio_ sur _Pexels.com_ (`https://www.pexels.com/photo/2-blue-and-yellow-ceramic-owl-figurines-4966171/`).
