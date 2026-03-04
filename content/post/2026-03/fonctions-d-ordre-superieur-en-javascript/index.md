@@ -3,7 +3,7 @@ title: "Fonctions d’ordre supérieur en JavaScript"
 description: "En tant que développeur web, vous devez toujours vous efforcer d’apprendre de nouvelles techniques et de découvrir des moyens de travailler plus intelligemment avec JavaScript."
 image: 2026-03-04-poupees-russe.jpg
 imageAlt: Poupées russe
-date: 2026-02-04
+date: 2026-03-04
 categories:
   - Développement Web
 tags:
