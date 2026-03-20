@@ -1,7 +1,7 @@
 ---
 title: "SQL Server — Collation, accents et contraintes d’unicité"
 description: "Les collations permettent de gérer la sensibilité à la casse et de définir diverses contraintes."
-image: /quick-tips/images/sql-server.webp
+image: /astuces/images/sql-server.webp
 imageAlt: Logo de Microsoft SQL Server
 date: 2026-03-18
 categories:
