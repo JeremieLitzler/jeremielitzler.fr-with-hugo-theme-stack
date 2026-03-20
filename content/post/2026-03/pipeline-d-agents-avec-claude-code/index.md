@@ -70,7 +70,7 @@ project/
     └── agent-4-git.md
 ```
 
-Les fichiers dans `.agent-output` sont vides au départ et se remplissent au fur et à mesure que le sous-agent fonctionne. Si vous avez lu [mon article précédent](../organizing-specifications-with-claude-code/index.md), le répertoire `.agents-output` est similaire à `docs/prompts/tasks`.
+Les fichiers dans `.agent-output` sont vides au départ et se remplissent au fur et à mesure que le sous-agent fonctionne. Si vous avez lu [mon article précédent](../developpement-par-specifications-avec-claude-code/index.md), le répertoire `.agents-output` est similaire à `docs/prompts/tasks`.
 
 Le fichier `.agents-brain` est la partie la plus importante que vous devez adapter à vos sensibilités et à vos habitudes.
 
