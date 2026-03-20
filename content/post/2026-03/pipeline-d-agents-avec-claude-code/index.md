@@ -3,7 +3,7 @@ title: "Pipeline d'agents avec Claude Code"
 description: "Tout comme nous, l'IA est plus performante lorsqu'elle est spécialisée. Une seule responsabilité par agent et le résultat obtenu s'en trouve bien meilleur."
 image: 2026-03-09-white-robot-looking-at-the-camera.jpg
 imageAlt: Un robot blanc qui regarde l'appareil photo
-date: 2026-03-16
+date: 2026-03-20
 categories:
   - Intelligence artificielle
 tags:
