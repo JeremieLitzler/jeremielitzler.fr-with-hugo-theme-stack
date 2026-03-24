@@ -11,7 +11,8 @@ tags:
 ---
 
 Le 29 janvier dernier, j’ai partagé une astuce pour [utiliser les fonctions Postgres](../../2025-01/la-clause-order-by-avec-supabase/index.md) pour effectuer un triage avancé sur une table.
-Let me show you the error I didn’t catch right away.
+
+Je vais vous montrer l'erreur que je n'ai pas remarquée tout de suite.
 
 ## Le problème
 
