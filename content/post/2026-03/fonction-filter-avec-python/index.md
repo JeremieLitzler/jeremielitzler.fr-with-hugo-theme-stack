@@ -3,9 +3,9 @@ title: "Fonction Filter() avec Python"
 description: "Python n'est pas JavaScript. Je vais vous le montrer à l'aide d'exemples illustrant la fonction `filter` en Python."
 image: /images/2024-08-23-a-real-python.jpg
 imageAlt: A real python
-date: 2026-04-03
+date: 2026-03-27
 categories:
-  - Web Development
+  - Développement web
 tags:
   - Python
 ---

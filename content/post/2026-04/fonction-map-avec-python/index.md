@@ -3,7 +3,7 @@ title: "Fonction Map() avec Python"
 description: "Python n'est pas JavaScript. Je vais vous le montrer à l'aide d'exemples illustrant la fonction `map` en Python."
 image: /images/2024-08-23-a-real-python.jpg
 imageAlt: Un vrai python
-date: 2026-03-27
+date: 2026-04-02
 categories:
   - Développement web
 tags:
