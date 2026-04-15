@@ -10,7 +10,7 @@ tags:
   - Python
 ---
 
-La semaine dernière, nous avons lancé une nouvelle série consacrée aux fonctions, telles que [`map()`](../../2026-03/fonction-map-avec-python/index.md), qui permettent de manipuler des tableaux ou des listes en Python.
+La semaine dernière, nous avons lancé une nouvelle série consacrée aux fonctions, telles que [`map()`](../../2026-04/fonction-map-avec-python/index.md), qui permettent de manipuler des tableaux ou des listes en Python.
 
 Aujourd’hui, nous allons nous intéresser à la fonction `filter()` à travers quelques exemples.
 
