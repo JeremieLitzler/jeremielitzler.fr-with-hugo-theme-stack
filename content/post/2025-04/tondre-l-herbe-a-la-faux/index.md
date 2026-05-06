@@ -14,9 +14,19 @@ En 2024, [j’ai acheté ce coupe-bordure sans fil](https://www.amazon.fr/dp/B08
 
 Il a super bien fonctionné pour mon ancienne propriété, même si les ronces et les pierres consomment beaucoup de lames plastiques…
 
+Aujourd'hui, on change de domaine.
+
+En 2024, j’ai acheté ce coupe-bordure sans fil, car j’étais déjà équipé d'une batterie de la même marque.
+
+Il a très bien fonctionné pour mon ancienne propriété, même si les ronces et les pierres consomment beaucoup de lames plastiques…
+
+Mais dans notre nouvelle maison, il y a beaucoup de surface plane et d’herbe. Vraiment beaucoup.
+
+J’ai donc décidé de tenter une expérience…
+
 ## Nouvelle propriété, nouveaux problèmes
 
-le 23 avril 2025, j’ai acheté cet [\*\*ensemble de couteaux en métal pour coupe-bordure sans fil](https://www.amazon.fr/dp/B088P29JFF) (et potentiellement [ces lames de rechanges](https://www.amazon.fr/dp/B0CZ3FPQ57)) pour le coupe-bordure, mais… ça consomme énormément de batteries par rapport à la lame plastique ! Et il faut faire vraiment attention aux pierres ou même aux branches dures qui trainent…
+Le 23 avril 2025, j’ai acheté cet [ensemble de couteaux en métal pour coupe-bordure sans fil](https://www.amazon.fr/dp/B088P29JFF) (et potentiellement [ces lames de rechanges](https://www.amazon.fr/dp/B0CZ3FPQ57)) pour le coupe-bordure, mais… ça consomme énormément de batteries par rapport à la lame plastique ! Et il faut faire vraiment attention aux pierres ou même aux branches dures qui trainent…
 
 De plus, sur de l’herbe haute (> 20 cm), ça peine… et il faut donc « couper en étages ». Pas très efficace, je vous l’avoue…
 
