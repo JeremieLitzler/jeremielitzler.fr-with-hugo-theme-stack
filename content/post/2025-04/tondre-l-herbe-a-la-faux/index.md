@@ -12,12 +12,6 @@ tags:
 
 En 2024, [j’ai acheté ce coupe-bordure sans fil](https://www.amazon.fr/dp/B08LQHKBNT), car j’étais déjà équipé de batterie Einhell.
 
-Il a super bien fonctionné pour mon ancienne propriété, même si les ronces et les pierres consomment beaucoup de lames plastiques…
-
-Aujourd'hui, on change de domaine.
-
-En 2024, j’ai acheté ce coupe-bordure sans fil, car j’étais déjà équipé d'une batterie de la même marque.
-
 Il a très bien fonctionné pour mon ancienne propriété, même si les ronces et les pierres consomment beaucoup de lames plastiques…
 
 Mais dans notre nouvelle maison, il y a beaucoup de surface plane et d’herbe. Vraiment beaucoup.
