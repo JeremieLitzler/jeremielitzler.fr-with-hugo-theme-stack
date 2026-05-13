@@ -38,7 +38,7 @@ En décalant sa consommation d’électricité vers les heures creuses, les cons
 
 Sur votre tableau électrique, vous trouverez un contacteur HP/HC, qui se trouve en position « auto ». Généralement en amont du disjoncteur qui alimente votre cumulus, il est branché au signal du réseau qui indique quand les heures creuses démarrent et s’arrêtent.
 
-{{< blockcontainer jli-notice-warning "Si vous forcez sur "off"...">}}
+{{< blockcontainer jli-notice-warning "Si vous forcez sur 'off'...">}}
 
 Sachez que le contacteur reviendra en position « auto » la journée suivante…
 
@@ -67,10 +67,9 @@ Si l’on regarde le tableau, à partir de 30 % de HC, on est gagnant… Bon OK
 
 Pour moi, et ce n’est que mon avis, essayer de tirer le ratio HP/HC pour que le pourcentage de HC soit le plus haut ajoutait plus de charges mentales qu’autre chose…
 
-Du coup, on a arrêté et on essaye de consommer mieux.
-Pour moi, il n’y a pas vraiment d’avantages à ce système et je me sens plus léger à ne plus microéconomiser sur les HP/HC.
+Du coup, on a arrêté et on essaye de consommer au mieux. Il n’y a pas vraiment d’avantages à ce système et je me sens plus léger à ne plus microéconomiser sur les HP/HC.
 
-J’en parle en détail dans [mon retour d’expérience sur le sujet](../../2023-11/comprendre-les-heures-pleines-et-les-heures-creuses/#mon-retour-dexpérience-sur-le-sujet) dans un article de 2023.
+J’en parle en détail dans [mon retour d’expérience sur le sujet](../../2023-11/comprendre-les-heures-pleines-et-les-heures-creuses/index.md#mon-retour-dexpérience-sur-le-sujet) dans un article de 2023.
 
 Et vous, quelle tarification utilisez-vous ?
 
