@@ -5,7 +5,7 @@ image: 2025-05-16-an-alarm-clock-displaying-23h53.jpg
 imageAlt: Un réveil affichant 23h53
 date: 2025-08-06
 categories:
-  - Mes tutoriels
+  - Tutoriels
 tags:
   - Google Sheets
 ---
