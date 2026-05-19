@@ -46,11 +46,11 @@ Le mercure des amalgames se diffuse principalement sous forme de :
 - Infiltration dans les tissus dentaires : comme évoqué précédemment, la dentine est poreuse et le mercure peut s’infiltrer dans les tubules dentinaires.
 - Passage systémique : le mercure passe par les poumons dans le sang, contaminant ainsi quasiment tous les organes [^3], et peut également passer de la muqueuse buccale directement dans les vaisseaux lymphatiques.
 
-Si l’on regarde du côté des quantités mesurées, une étude de l’OMS a établi une fourchette d’absorption allant de 2 à 27 µg/jour, certains individus pouvant présenter des valeurs supérieures à 100 µg/jour. L’OMS retient une fourchette de 3 à 17 µg/jour avec une valeur moyenne de 10 µg/jour.
+Si l’on regarde du côté des quantités mesurées, une étude de l’OMS [^4] a établi une fourchette d’absorption allant de 2 à 27 µg/jour, certains individus pouvant présenter des valeurs supérieures à 100 µg/jour. L’OMS retient une fourchette de 3 à 17 µg/jour avec une valeur moyenne de 10 µg/jour.
 
 Une étude de 2016 basée sur 14 703 personnes a conclu que le mercure total sanguin, le mercure inorganique et le méthylmercure sont significativement plus élevés dans le sang des sujets porteurs d’amalgames dentaires.
 
-Bon à savoir si on vous dit « Votre niveau sanguin de mercure reste bas ». En effet, le mercure est rapidement retenu par les tissus, ce qui indique que le taux sanguin de mercure n’est pas un indicateur fiable d’intoxication ou de la charge corporelle totale en mercure. Le mercure s’accumule dans les organes plutôt que de rester dans le sang[^5] [^6] [^7].
+Bon à savoir si on vous dit « Votre niveau sanguin de mercure reste bas ». En effet, le mercure est rapidement retenu par les tissus, ce qui indique que le taux sanguin de mercure n’est pas un indicateur fiable d’intoxication ou de la charge corporelle totale en mercure. Le mercure s’accumule dans les organes plutôt que de rester dans le sang [^5] [^6] [^7].
 
 ### Position des autorités sanitaires
 
@@ -133,7 +133,7 @@ Des quantités mesurables de BPA ont été trouvées par lessivage des composite
 
 Point important : l’Inra et l’École nationale vétérinaire de Toulouse ont démontré l’absorption du BPA par les muqueuses très fines et vascularisées de la zone sublinguale, avec des concentrations relevées dans le sang 100 fois supérieur à celles attendues lorsque le BPA est avalé [^8]
 
-Une étude sur environ 500 enfants a révélé des résultats préoccupants : une plus grande exposition aux restaurations dentaires en composites à base de Bis-GMA était associée à une altération de la fonction psychosociale chez les enfants[^9].
+Une étude sur environ 500 enfants a révélé des résultats préoccupants : une plus grande exposition aux restaurations dentaires en composites à base de Bis-GMA était associée à une altération de la fonction psychosociale chez les enfants [^9].
 
 ### Position des autorités
 
@@ -164,12 +164,20 @@ Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/
 
 Crédit : Photo de Kauzio — Travail personnel, Domaine public, `https://commons.wikimedia.org/w/index.php?curid=6734744`.
 
-- [^1] : [https://fr.wikipedia.org/wiki/Amalgame_dentaire](https://fr.wikipedia.org/wiki/Amalgame_dentaire)
-- [^2] : (en) Nylander M, Friberg L, Lind B. « Mercury concentrations in the human brain and kidneys in relation to exposure from dental amalgam fillings » Swedish dental journal 1987;11(5):179
-- [^3] : [rapport SCENIHR de l'UE (2008)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025977/)
-- [^4] : WHO (1991) - "Environmental Health Criteria 118: Inorganic Mercury"
-- [^5] : [https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/](https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/)
-- [^6] : Friberg et Vostal, "Mercury in the Environment" (référence citée dans le document IAOMT)
-- [^7] : Mutter J, Naumann J, Guethlin C. "Is dental amalgam safe for humans? The opinion of the scientific committee of the European Commission" Journal of Occupational Medicine and Toxicology 2011
-- [^8] : ""High Bioavailability of Bisphenol A from Sublingual Exposure", Environmental Health Perspectives, Volume 121(8), pages 951–956, Publié en ligne le 12 juin 2013, DOI : 10.1289/ehp.1206339
-- [^9] : Maserejian NN, Trachtenberg FL, Hauser R, McKinlay S, Shrader P, Bellinger DC. (2012). "Dental Composite Restorations and Psychosocial Function in Children." Pediatrics, 130(2):e328-338.
+- [^1]: [https://fr.wikipedia.org/wiki/Amalgame_dentaire](https://fr.wikipedia.org/wiki/Amalgame_dentaire)
+
+- [^2]: (en) Nylander M, Friberg L, Lind B. « Mercury concentrations in the human brain and kidneys in relation to exposure from dental amalgam fillings » Swedish dental journal 1987;11(5):179
+
+- [^3]: [rapport SCENIHR de l'UE (2008)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025977/)
+
+- [^4]: WHO (1991) - "Environmental Health Criteria 118: Inorganic Mercury"
+
+- [^5]: [https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/](https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/)
+
+- [^6]: Friberg et Vostal, "Mercury in the Environment" (référence citée dans le document IAOMT)
+
+- [^7]: Mutter J, Naumann J, Guethlin C. "Is dental amalgam safe for humans? The opinion of the scientific committee of the European Commission" Journal of Occupational Medicine and Toxicology 2011
+
+- [^8]: ""High Bioavailability of Bisphenol A from Sublingual Exposure", Environmental Health Perspectives, Volume 121(8), pages 951–956, Publié en ligne le 12 juin 2013, DOI : 10.1289/ehp.1206339
+
+- [^9]: Maserejian NN, Trachtenberg FL, Hauser R, McKinlay S, Shrader P, Bellinger DC. (2012). "Dental Composite Restorations and Psychosocial Function in Children." Pediatrics, 130(2):e328-338.
