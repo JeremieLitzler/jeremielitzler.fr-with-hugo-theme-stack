@@ -1,6 +1,6 @@
 ---
 title: "Composition d'un amalgame dentaire"
-description: ""
+description: "La réalité peut vous surprendre. Ou pas. Cela dépend de votre sensibilité à votre santé."
 image: 2026-05-18-un-amalgame-sur-un-molaire.jpg
 imageAlt: Un amalgame sur une molaire
 date: 2026-05-18
