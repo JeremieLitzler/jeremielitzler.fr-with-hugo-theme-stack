@@ -164,12 +164,12 @@ Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/
 
 Crédit : Photo de Kauzio — Travail personnel, Domaine public, `https://commons.wikimedia.org/w/index.php?curid=6734744`.
 
-[^1] : https://fr.wikipedia.org/wiki/Amalgame_dentaire
-[^2] : (en) Nylander M, Friberg L, Lind B. « Mercury concentrations in the human brain and kidneys in relation to exposure from dental amalgam fillings » Swedish dental journal 1987;11(5):179
-[^3] : [rapport SCENIHR de l'UE (2008)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025977/)
-[^4] : WHO (1991) - "Environmental Health Criteria 118: Inorganic Mercury"
-[^5] : [https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/](https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/)
-[^6] : Friberg et Vostal, "Mercury in the Environment" (référence citée dans le document IAOMT)
-[^7] : Mutter J, Naumann J, Guethlin C. "Is dental amalgam safe for humans? The opinion of the scientific committee of the European Commission" Journal of Occupational Medicine and Toxicology 2011
-[^8] : ""High Bioavailability of Bisphenol A from Sublingual Exposure", Environmental Health Perspectives, Volume 121(8), pages 951–956, Publié en ligne le 12 juin 2013, DOI : 10.1289/ehp.1206339
-[^9] : Maserejian NN, Trachtenberg FL, Hauser R, McKinlay S, Shrader P, Bellinger DC. (2012). "Dental Composite Restorations and Psychosocial Function in Children." Pediatrics, 130(2):e328-338.
+- [^1] : [https://fr.wikipedia.org/wiki/Amalgame_dentaire](https://fr.wikipedia.org/wiki/Amalgame_dentaire)
+- [^2] : (en) Nylander M, Friberg L, Lind B. « Mercury concentrations in the human brain and kidneys in relation to exposure from dental amalgam fillings » Swedish dental journal 1987;11(5):179
+- [^3] : [rapport SCENIHR de l'UE (2008)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3025977/)
+- [^4] : WHO (1991) - "Environmental Health Criteria 118: Inorganic Mercury"
+- [^5] : [https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/](https://iaomt.org/resources/dental-mercury-facts/understanding-risk-assessment-mercury-dental-amalgam/)
+- [^6] : Friberg et Vostal, "Mercury in the Environment" (référence citée dans le document IAOMT)
+- [^7] : Mutter J, Naumann J, Guethlin C. "Is dental amalgam safe for humans? The opinion of the scientific committee of the European Commission" Journal of Occupational Medicine and Toxicology 2011
+- [^8] : ""High Bioavailability of Bisphenol A from Sublingual Exposure", Environmental Health Perspectives, Volume 121(8), pages 951–956, Publié en ligne le 12 juin 2013, DOI : 10.1289/ehp.1206339
+- [^9] : Maserejian NN, Trachtenberg FL, Hauser R, McKinlay S, Shrader P, Bellinger DC. (2012). "Dental Composite Restorations and Psychosocial Function in Children." Pediatrics, 130(2):e328-338.
