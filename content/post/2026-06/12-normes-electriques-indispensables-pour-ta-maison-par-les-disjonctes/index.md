@@ -3,7 +3,7 @@ title: 12 Normes Electriques Indispensables pour ta maison, par les Disjonctés
 description: "Cet article résume le vlog de la chaîne “Les Disjonctés” sur la NF C 15-100."
 image: 2026-06-05-nf_c_15_100_1220x800.svg
 imageAlt: Résumé des points évoqués dans l'article
-date: 2026-06-03
+date: 2026-06-05
 categories:
   - Tutoriels
 tags:
