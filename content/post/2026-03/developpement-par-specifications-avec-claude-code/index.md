@@ -1,7 +1,7 @@
 ---
 title: "Organisation des spécifications avec Claude Code"
 description: "Coder avec des agents IA a pris beaucoup d'ampleur en 2025 et, pour m'assurer de rester au niveau de ce qui se fait, j'ai essayé Claude Code le mois dernier."
-image: 2026-03-09-white-robot-looking-at-the-camera.jpg
+image: /images/2026-03-09-white-robot-looking-at-the-camera.jpg
 imageAlt: Un robot blanc regardant la caméra
 date: 2026-03-13
 categories:
