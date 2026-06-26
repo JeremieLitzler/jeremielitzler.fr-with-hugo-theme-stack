@@ -1,13 +1,14 @@
 ---
 title: 12 idées reçues sur l'électricité domestique, par les Disjonctés
-description: ""
-image: images/2026-06-26-.jpg
-imageAlt:
+description: "L'étricité, ce n'est pas une mince affaire et peut s'avérer complexe et les avis peuvent varier. Rémy remet chaque idée reçue dans son contexte."
+image: 2026-06-26-installation-electrique-complexe.jpg
+imageAlt: Installation électrique complexe
 date: 2026-06-26
 categories:
   - Tutoriels
 tags:
   - Electricité
+seoNoIndex: true
 ---
 
 Non, le voyant de ton Linky n'est pas une caméra.
@@ -191,3 +192,5 @@ Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=Eh
 Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
 
 {{< /blockcontainer >}}
+
+_Photo de ranjeet sur Pexels._
