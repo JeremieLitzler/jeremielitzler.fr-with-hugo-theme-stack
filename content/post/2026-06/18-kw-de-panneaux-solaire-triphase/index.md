@@ -8,6 +8,8 @@ categories:
   - Tutoriels
 tags:
   - Electricité
+  - Chaîne Les Disjonctés
+seoNoIndex: true
 ---
 
 Je tiens à remercier Rémy, auteur de la chaîne « les Disjonctés » pour son partage sur le sujet !

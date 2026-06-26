@@ -8,6 +8,8 @@ categories:
   - Tutoriels
 tags:
   - Electricité
+  - Chaîne Les Disjonctés
+seoNoIndex: true
 ---
 
 Cette vidéo est un condensé des normes électriques françaises (NF C 15-100) les plus utiles pour l’habitat résidentiel.

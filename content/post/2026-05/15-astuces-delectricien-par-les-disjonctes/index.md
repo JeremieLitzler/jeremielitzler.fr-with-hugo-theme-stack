@@ -8,6 +8,7 @@ categories:
   - Tutoriels
 tags:
   - Chaîne Les Disjonctés
+seoNoIndex: true
 ---
 
 Aujourd'hui, on va parler électricité. Je suis la chaîne "Les Disjonctés" depuis un moment.
