@@ -14,7 +14,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const PUBLIC_DIR = "public";
-const BASE_URL = "https://iamjeremie.me";
+const BASE_URL = "https://jeremielitzler.fr"; // must match config.toml
 
 // Files to validate. `sitemap: true` enables the urlset/<loc> assertions.
 const TARGETS = [
