@@ -7,6 +7,7 @@ date: 2023-03-21
 
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Ortie

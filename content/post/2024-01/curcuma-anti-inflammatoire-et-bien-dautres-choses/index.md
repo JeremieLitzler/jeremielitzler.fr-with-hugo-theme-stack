@@ -6,6 +6,7 @@ imageAlt: Du curcuma en racine et en poudre
 date: 2024-01-09
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Curcuma

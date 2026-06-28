@@ -6,6 +6,7 @@ imageAlt: Fleurs de maceron
 date: 2023-11-29
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Maceron

@@ -6,6 +6,7 @@ imageAlt: Une prairie garnie de fleurs variées
 date: 2022-07-20
 categories:
   - Alimentation
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Plantes sauvages

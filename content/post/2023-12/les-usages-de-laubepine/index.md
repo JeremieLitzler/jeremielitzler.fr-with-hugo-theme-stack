@@ -6,6 +6,7 @@ imageAlt: Des faux fruits d'aubépine
 date: 2023-12-19
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Aubépine

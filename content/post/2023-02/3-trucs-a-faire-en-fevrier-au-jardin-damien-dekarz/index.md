@@ -1,11 +1,12 @@
 ---
 title: 3 Trucs à faire en Février au Jardin, avec Damien Dekarz
-description: 'Il y a beaucoup de choses à faire en février et dans cet article, nous regardons ensemble ce que Damien suggère.'
+description: "Il y a beaucoup de choses à faire en février et dans cet article, nous regardons ensemble ce que Damien suggère."
 image: /images/2023-02-21-graines-de-courges-a-planter-pour-la-nouvelle-annee.jpg
 imageAlt: Des graines de courges à planter pour la nouvelle année au jardin.
 date: 2023-02-21
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Février

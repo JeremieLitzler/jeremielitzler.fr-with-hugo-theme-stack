@@ -6,6 +6,7 @@ imageAlt: Un homme ramasse des radis dans un jardin surélevé
 date: 2023-05-16
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Mai

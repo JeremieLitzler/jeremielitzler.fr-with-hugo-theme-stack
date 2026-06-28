@@ -9,6 +9,7 @@ tags:
   - Photovoltaique
   - Autoconsommation
   - Résilience
+seoNoIndex: true
 ---
 
 Merci à Brian et Rémi pour leur échange ! Ce qui suit sont mes notes de la vidéo publiée sur la chaîne de l'Archipelle. Vous pouvez retrouver [la vidéo sur YouTube](https://www.youtube.com/watch?v=WOuTv0kfwRg).

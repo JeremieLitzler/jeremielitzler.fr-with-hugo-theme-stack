@@ -6,6 +6,7 @@ imageAlt: Titre de la vidéo sur fond de jardin avec de l'amaranthe.
 date: 2023-09-05
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En septembre

@@ -6,6 +6,7 @@ image: /images/2023-01-20-ronce-fleurie.jpg
 imageAlt: Ronce fleurie
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantes sauvages
@@ -164,19 +165,16 @@ On utilisera une cuillère à café pour 250 ml de décoction.
 Pour la gastrite au niveau de l'estomac ou des diarrhées aiguës dans l'intestin, on utilise des combinaisons :
 
 - Pour l'estomac, on peut combiner :
-
   - la ronce et la réglisse, qui est anti-inflammatoire et antiulcéreuse (mais contre-indiqué si vous avez une hypertension artérielle).
   - la ronce et le souci
   - la ronce et le plantain
 
 - Pour l'intestin,
-
   - le mieux est de laisser sortir
   - mais on peut tempérer les choses, si la personne est trop éprouvée ou si la situation dure trop longtemps, avec un mélange de ronce et de plantes mucilagineuses (c'est-à-dire de calmer l'inflammation, d'adoucir la muqueuse).
   - par exemple, la fleur de mauve ou le plantain.
 
 - Pour un tonique du retour veineux
-
   - Encore une fois, dans ce cas, les tissus ont besoin d'être tonifiés.
   - Le mélange de la ronce avec la vigne rouge, le marronnier d'inde ou le fragon petit houx.
 

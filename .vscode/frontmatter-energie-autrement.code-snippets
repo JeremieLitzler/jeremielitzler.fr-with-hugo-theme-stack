@@ -14,6 +14,7 @@
       "tags:",
       "  - Barnabé Chaillot",
       "  - $5",
+      "seoNoIndex: true",
       "---",
       "",
       "Merci à Barnabé pour le partage de son savoir et de ses astuces !",
@@ -21,8 +22,8 @@
       "",
       "<!-- more -->",
       "",
-      "Vous pouvez retrouver [la vidéo sur YouTube]($6)."
+      "Vous pouvez retrouver [la vidéo sur YouTube]($6).",
     ],
-    "description": "Set fronmatter to the new post"
-  }
+    "description": "Set fronmatter to the new post",
+  },
 }

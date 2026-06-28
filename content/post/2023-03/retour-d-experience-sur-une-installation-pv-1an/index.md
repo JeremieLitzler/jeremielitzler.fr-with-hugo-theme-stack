@@ -10,6 +10,7 @@ tags:
   - Photovoltaique
   - Autoconsommation
   - Eau chaude sanitaire
+seoNoIndex: true
 ---
 
 La légende de l’image ci-dessus est la suivante :

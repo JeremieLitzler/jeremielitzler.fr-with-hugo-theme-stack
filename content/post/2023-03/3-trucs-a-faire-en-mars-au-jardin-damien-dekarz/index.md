@@ -1,11 +1,12 @@
 ---
 title: 3 Trucs à faire en Mars au Jardin, avec Damien Dekarz
-description: 'Que peut-on faire en mars au jardin ? Damien nous détaille 3 actions concrètes en ce premier mois de printemps :)'
+description: "Que peut-on faire en mars au jardin ? Damien nous détaille 3 actions concrètes en ce premier mois de printemps :)"
 image: /images/2023-03-20-une-branche-avec-2-bourgeons.jpg
 imageAlt: Une branche avec 2 bourgeons.
 date: 2023-03-20
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Mars
@@ -152,6 +153,7 @@ Je résume l’explication ainsi :
 - il faut que les cambiums du greffon et du porte-greffe se touchent pour réussir la greffe. Si le greffon est plus fin que le porte-greffe, il faudra positionner le greffon sur le côté. ![Explication de ce qu’est le cambium](images/explication-de-ce-quest-le-cambium.jpg)
 
 Crédits: image extraite du vlog de Damien Dekarz.
+
 - on termine avec un élastique à greffer et du mastic à greffer ![Application de l’élastique à greffer et du mastic](images/application-de-lelastique-a-greffer-et-du-mastic.jpg)
 
 Crédits: image extraite du vlog de Damien Dekarz.

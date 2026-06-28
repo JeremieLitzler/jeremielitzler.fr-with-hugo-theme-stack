@@ -6,6 +6,7 @@ imageAlt: Ortie femelle avec de longs pistiles
 date: 2023-02-15
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Ortie

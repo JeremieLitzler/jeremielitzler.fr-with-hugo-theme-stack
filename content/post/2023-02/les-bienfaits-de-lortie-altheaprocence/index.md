@@ -1,11 +1,12 @@
 ---
-title: 'Les bienfaits de l’ortie avec Christophe Bernard'
+title: "Les bienfaits de l’ortie avec Christophe Bernard"
 description: "Il y a tellement de choses à dire sur l'ortie ! Ces notes seront un concentré d'informations sur cette plante incroyable."
 image: /images/2023-02-28-ortie-femelle-et-ses-pistils.jpg
 imageAlt: Ortie femelle et ses pistils
 date: 2023-02-28
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantes

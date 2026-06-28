@@ -9,6 +9,7 @@ categories:
 tags:
   - Brian Ejarque
   - Ortie
+seoNoIndex: true
 ---
 
 Merci à Brian pour le partage ! Cet article résume mes notes du vlog réalisé par Brian sur sa chaîne _L’Archi'Pelle_.

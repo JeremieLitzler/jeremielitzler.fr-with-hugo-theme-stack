@@ -8,6 +8,7 @@ categories:
   - Plantes
 tags:
   - David Bricout
+seoNoIndex: true
 ---
 
 Merci à David Bricout et Damien Dekarz pour le partage de ce savoir !

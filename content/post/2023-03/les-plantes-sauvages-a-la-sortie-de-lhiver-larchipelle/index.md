@@ -9,6 +9,7 @@ categories:
 tags:
   - Saison Hiver
   - Plantes sauvages
+seoNoIndex: true
 ---
 
 Merci à Brian et [Rémi du jardin d’émerveille](https://www.youtube.com/channel/UC9Q8WeyCb3yxySC3P3mGpBw) ([site Internet de Rémi](https://www.lejardindemerveille.net/)) pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Brian sur sa chaîne _L’Archi'Pelle_.
@@ -70,18 +71,15 @@ Aussi, certaines ne sont pas forcément consommées comme aliment, mais peuvent 
 
 - Les violettes ([Wikipedia](<https://fr.wikipedia.org/wiki/Viola_(genre_v%C3%A9g%C3%A9tal)>)) : les fleurs et les feuilles se mangent.
 - La primevère ou aussi _le coucou_ comme je les appelais quand j’étais petit
-
   - Les fleurs et les feuilles se mangent.
   - Les fleurs aident à donner de la couleur au beurre fait maison.
 
 - Les jeunes pousses de ronces épluchées
 - Les chatons de noisetier
-
   - Le noisetier est une plante monoïque
 
 - La pâquerette : les fleurs et les feuilles se mangent
 - Le gaillet gratteron se consomme bien avec des œufs en omelette
-
   - On consomme les extrémités de tiges et on le coupe finement.
   - cru, il serait très intéressant, mais bon, il est un peu rêche... 😅
 
@@ -95,16 +93,16 @@ Crédits: image extraite du vlog de L’Archipelle.
 
 Crédits: image extraite du vlog de L’Archipelle.
 
-  - Le goût est fort à cause du soufre qu’elle contient.
+- Le goût est fort à cause du soufre qu’elle contient.
 
 - La valériane, pour bien dormir pour les humains, mais attention, ça excite les chats ! On consomme la racine. ![Des feuilles de valériane](images/des-feuilles-de-valeriane.jpg)
 
 Crédits: image extraite du vlog de L’Archipelle.
 
-  - La valériane (Valeriana officinalis) est une plante commune et réputée en Europe.
-  - Elle doit sa réputation à ses parties souterraines qui renferment des principes actifs aux propriétés relaxantes.
-  - Ces derniers contribuent à apaiser l’organisme, lutter contre la nervosité et prévenir les troubles du sommeil.
-  - Source : [Dieti Natura](<https://www.dieti-natura.com/plantes-actifs/valeriane.html#:~:text=La%20val%C3%A9riane%20(Valeriana%20officinalis)%20est,pr%C3%A9venir%20les%20troubles%20du%20sommeil.>)
+- La valériane (Valeriana officinalis) est une plante commune et réputée en Europe.
+- Elle doit sa réputation à ses parties souterraines qui renferment des principes actifs aux propriétés relaxantes.
+- Ces derniers contribuent à apaiser l’organisme, lutter contre la nervosité et prévenir les troubles du sommeil.
+- Source : [Dieti Natura](<https://www.dieti-natura.com/plantes-actifs/valeriane.html#:~:text=La%20val%C3%A9riane%20(Valeriana%20officinalis)%20est,pr%C3%A9venir%20les%20troubles%20du%20sommeil.>)
 
 - Le lierre terrestre, pour confectionner les sirops pour la toux et à consommer en cuisine. ![Du lierre terrestre](images/du-lierre-terrestre.jpg)
 
@@ -116,7 +114,7 @@ Crédits: image extraite du vlog de L’Archipelle.
 
 Crédits: image extraite du vlog de L’Archipelle.
 
-  - Elle aide à cicatriser.
+- Elle aide à cicatriser.
 
 ## Le principe du Totum
 

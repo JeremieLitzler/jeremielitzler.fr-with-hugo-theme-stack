@@ -6,6 +6,7 @@ imageAlt: Plant de pourpier
 date: 2024-01-16
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Pourpier

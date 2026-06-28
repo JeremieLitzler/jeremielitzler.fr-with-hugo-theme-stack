@@ -2,11 +2,12 @@
 title: Comment jardiner avec un sol vivant ?
 description: "Un sol vivant est le moyen le plus efficace de jardiner et ce n'est pas complexe à mettre en oeuvre. Par contre, il faut de la patience..."
 date: 2020-10-12
-image: '/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png'
+image: "/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png"
 imageAlt: Image diagramme décrivant le cycle d'échanges entre les plantes et les mycorhizes
 relcanonical: https://jeremielitzler.fr/post/2022-10/comment-jardiner-avec-un-sol-vivant-damien-dekarz/
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Vie du sol
@@ -113,7 +114,7 @@ On peut avoir deux tonnes de mycélium à l’hectare.
 
 Souvent, nous pensons souvent à la partie aérienne visible (c’est la partie qui permet la reproduction ou _le sporophore_).
 
-Toutefois, il y a aussi les _ifs_ : ce sont des filaments extrêmement fins, invisibles à l’œil nu, qui composent le mycélium visible.
+Toutefois, il y a aussi les *ifs* : ce sont des filaments extrêmement fins, invisibles à l’œil nu, qui composent le mycélium visible.
 
 ### Les mycorhizes
 

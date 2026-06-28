@@ -6,6 +6,7 @@ imageAlt: Une feuille de pissenlit par une personne
 date: 2023-05-09
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Pissenlit

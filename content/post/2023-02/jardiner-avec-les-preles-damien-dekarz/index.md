@@ -1,12 +1,13 @@
 ---
 title: Jardiner avec les Prêles et Damien Dekarz
-description: 'Damien nous parle ici de la prêle dans son application au jardin.'
+description: "Damien nous parle ici de la prêle dans son application au jardin."
 date: 2023-02-03
 image: /images/2023-02-03-jeune-prele-qui-sort-au-printemps.jpg
 imageAlt: Jeunes prêles qui sortent au printemps
 categories:
   - Jardin
   - Biodiversité et Agroécologie
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Prêle

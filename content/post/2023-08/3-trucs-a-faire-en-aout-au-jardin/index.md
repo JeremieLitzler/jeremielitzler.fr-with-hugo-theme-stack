@@ -6,6 +6,7 @@ alt: Vue aérienne du jardin de Damien en août
 date: 2023-08-11
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En août

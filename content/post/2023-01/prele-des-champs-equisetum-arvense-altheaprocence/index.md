@@ -6,6 +6,7 @@ image: /images/2023-01-31-champ-de-prele.jpg
 imageAlt: Champ de prêles
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Prêle

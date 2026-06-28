@@ -8,6 +8,7 @@ categories:
   - Développement web
 tags:
   - Angular
+seoNoIndex: true
 ---
 
 J’aime beaucoup Vue.js, mais apprendre un autre framework JavaScript peut m’être utile dans les missions auxquelles je participe.

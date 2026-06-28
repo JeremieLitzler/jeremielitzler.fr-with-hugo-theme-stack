@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D\"",
-    "build": "tinacms build && hugo",
     "netlify": "netlify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "hugo --gc --minify",
+    "test:xml": "node scripts/validate-xml-output.mjs",
+    "build:ci": "npm run build && npm run test:xml"
   },
   "keywords": [],
   "author": "",

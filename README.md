@@ -59,3 +59,19 @@ amazon-linux-extras install golang1.11 && hugo --gc --minify
 Make sure also to specify Hugo version in the environment variable `HUGO_VERSION` (Use the latest version of Hugo extended):
 
 ![Environment variable](https://user-images.githubusercontent.com/5889006/156917212-afb7c70d-ab85-480f-8288-b15781a462c0.png)
+
+## Validating generated XML outputs
+
+A mismatched Hugo version once emitted a blank line before the `<?xml` declaration in `sitemap.xml`, which made browsers refuse to render it (the HTTP status and `Content-Type` were fine, hiding the problem).
+
+To catch this on every build, `scripts/validate-xml-output.mjs` is a zero-dependency Node script that checks `public/sitemap.xml` and `public/index.xml` for:
+
+- the `<?xml` declaration being the first bytes (no BOM, whitespace, or blank line),
+- well-formedness (balanced tags), and
+- sitemap `<loc>` URLs being absolute under the site base URL.
+
+It runs after the Hugo build via `npm run build:ci` (the Netlify build command), so a malformed file fails the deploy. Run it locally with:
+
+```sh
+npm run build:ci
+```

@@ -1,12 +1,13 @@
 ---
 title: En janvier, ne semez RIEN avec Le potager d'Olivier
-description: 'En janvier, la température est trop basse pour planter quoi que ce soit. Olivier nous explique sa stratégie.'
+description: "En janvier, la température est trop basse pour planter quoi que ce soit. Olivier nous explique sa stratégie."
 date: 2023-01-06
 categories:
   - Jardin
 tags:
-  - Potager d Olivier
   - En janvier
+  - Potager d Olivier
+seoNoIndex: true
 ---
 
 Merci à Olivier pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Olivier sur sa chaîne _Le Potager d'Olivier_.

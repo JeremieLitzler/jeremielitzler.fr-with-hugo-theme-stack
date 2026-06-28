@@ -6,6 +6,7 @@ image: /images/2023-01-25-cynorhodons-matures.jpg
 imageAlt: cynorhodons matures prêts à cueillir
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Cynorhodon

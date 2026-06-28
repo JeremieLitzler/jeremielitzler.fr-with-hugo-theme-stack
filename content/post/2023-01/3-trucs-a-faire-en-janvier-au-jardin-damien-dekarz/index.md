@@ -6,6 +6,7 @@ image: /images/2023-01-04-un-chien-des-bottes-de-pailles-enneigees.jpg
 imageAlt: Un chien des bottes de paille enneigées
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En janvier
@@ -108,7 +109,7 @@ Encore une fois, le gros avantage est de la possibilité de transformer des zone
 
 Je pense que je peux trouver un arbre sur mon terrain assez haut (pour être hors de portée des brebis).
 
-## _Truc 2_ : Réaliser un nichoir à chiroptère
+## *Truc 2* : Réaliser un nichoir à chiroptère
 
 Mais c'est quoi un chiroptère ? Une chauve-souris.
 
@@ -204,7 +205,7 @@ Malheureusement, nos chats ont réussi à en attraper 2, dont 1 a été relâch�
 
 {{< /blockcontainer >}}
 
-## _Truc 3_ : Structure au potager
+## *Truc 3* : Structure au potager
 
 ![Vue aérienne du potager de Damien](images/vue-aerienne-potager-damien.jpg)
 
@@ -219,7 +220,6 @@ Crédits : image extraite du vlog de Damien.
 Pour optimiser l'espace, Damien va :
 
 - renforcer les clôtures pour qu'elles puissent supporter des végétaux grimpants
-
   - pour la clôture, Damien utilise :
     - des piquets de 2 m reliés par un câble métallique tous les 1.5 m environ (à vue d'œil 😁)
     - et de la ganivelle en bois de châtaigner de moins d'un mètre

@@ -6,6 +6,7 @@ image: /images/2023-01-24-fleurs-de-murier-se-transforment-en-fruits.jpg
 imageAlt: Des fleurs de mûriers se transforment en fruits
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Ronce

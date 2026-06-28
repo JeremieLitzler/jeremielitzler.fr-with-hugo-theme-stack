@@ -6,6 +6,7 @@ imageAlt: Un morceau de gingembre
 date: 2023-06-13
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantes

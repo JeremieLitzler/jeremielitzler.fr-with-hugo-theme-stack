@@ -11,6 +11,7 @@ tags:
   - Barnabe Chaillot
   - Ortie
   - Sarrasin
+seoNoIndex: true
 ---
 
 Merci à Barnabé pour le partage de son savoir et de ses astuces ! Cet article résume mes notes du vlog réalisé par Barnabé sur sa chaîne _Energie autrement_.

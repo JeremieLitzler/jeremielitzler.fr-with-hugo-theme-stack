@@ -6,6 +6,7 @@ imageAlt: Feuilles d'eucalyptus
 date: 2024-03-19
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Eucalyptus

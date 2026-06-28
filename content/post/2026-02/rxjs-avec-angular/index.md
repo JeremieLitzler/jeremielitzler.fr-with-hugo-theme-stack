@@ -9,6 +9,7 @@ categories:
 tags:
   - Angular
   - RxJs
+seoNoIndex: true
 ---
 
 Suite au [cours sur Angular 18](../les-bases-avec-angular/index.md), j’ai décidé de me plonger plus profondément dans les concepts et l’utilisation de RxJs.

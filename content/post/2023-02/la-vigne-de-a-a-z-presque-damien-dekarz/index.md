@@ -1,11 +1,12 @@
 ---
 title: La Vigne de A à Z (ou presque) avec Damien Dekarz
-description: 'Damien nous explique tout sur le vigne, comment la cultiver, comment les tailler et quelles variétés sont à privilégier.'
+description: "Damien nous explique tout sur le vigne, comment la cultiver, comment les tailler et quelles variétés sont à privilégier."
 image: /images/2023-02-22-une-vigne-et-ses-grappes-de-raisin-blanc.jpg
 imageAlt: Une vigne et ses grappes de raisin blanc
 date: 2023-02-22
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Vigne

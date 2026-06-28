@@ -7,6 +7,7 @@ date: 2023-03-14
 relcanonical: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - Ortie

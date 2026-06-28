@@ -3,6 +3,9 @@
 ignore = "exit 1"
 publish = "public"
 functions = "functions"
+# Build Hugo, then validate the generated XML outputs (sitemap.xml, index.xml).
+# A malformed file (e.g. a stray newline before <?xml) fails the deploy.
+command = "npm run build:ci"
 
 [[plugins]]
 package = "netlify-plugin-hugo-cache-resources"

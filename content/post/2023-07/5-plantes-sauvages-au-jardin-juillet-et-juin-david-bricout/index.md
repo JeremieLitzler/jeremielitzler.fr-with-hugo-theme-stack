@@ -9,6 +9,7 @@ categories:
 tags:
   - David Bricout
   - Plantes sauvages
+seoNoIndex: true
 ---
 
 Merci à Damien pour le partage de son savoir ! Cet article résume mes notes du vlog réalisé par Damien sur sa chaîne _Permaculture, agroécologie, etc_.

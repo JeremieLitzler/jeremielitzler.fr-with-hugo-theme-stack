@@ -6,6 +6,7 @@ imageAlt: Inflorescence bleue de consoude
 date: 2023-04-27
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantes

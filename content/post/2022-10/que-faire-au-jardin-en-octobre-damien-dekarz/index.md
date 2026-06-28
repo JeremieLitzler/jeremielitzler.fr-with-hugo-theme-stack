@@ -2,10 +2,11 @@
 title: Que faire au jardin en Octobre
 description: "L’automne s’installe et les dernières récoltes se terminent. Mais ce n’est pas pour cela que le jardinier devient inactif. Damien nous détaille les tâches à réaliser ce mois-ci."
 date: 2022-10-11
-image: '/images/2022-10-11-une-courge-verte-raillee-sur-du-paillage.jpg'
+image: "/images/2022-10-11-une-courge-verte-raillee-sur-du-paillage.jpg"
 imageAlt: Une courge verte raillée sur du paillage
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Octobre

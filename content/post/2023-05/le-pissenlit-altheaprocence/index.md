@@ -6,6 +6,7 @@ imageAlt: Un parterre de pissenlits en fleurs
 date: 2023-05-05
 categories:
   - Santé
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantes
@@ -64,7 +65,6 @@ Mais, pourquoi aller stimuler les reins ?
 Peut-être que votre corps :
 
 - retient tout d’eau, qui se ressent par une sensation de gonflement, aux alentours règles mensuelles, ou après un changement d’altitude.
-
   - avec des infusions de feuilles de pissenlit, pendant quelques jours, l’effet de gonflement peut alors diminuer.
 
 - aide à réduire l’hypertension, sans toutefois que celle-ci soit trop haute ou fluctuante dans la journée.
@@ -95,7 +95,6 @@ En parallèle, la racine vient aider la digestion, en particulier l’assimilati
 Par exemple, on utilisera la racine dans les situations suivantes :
 
 - sensation de lourdeur dans le système digestif.
-
   - avec une cure de racines de pissenlit, pendant une dizaine de jours (pas plus), la digestion s’en trouvera soulagée.
   - on réalise pour cela une décoction d’un litre d’eau avec 30 grammes de racines sèches.
 

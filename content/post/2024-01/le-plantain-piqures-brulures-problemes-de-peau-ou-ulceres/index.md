@@ -6,6 +6,7 @@ imageAlt: Du plantain lancéolé
 date: 2024-01-03
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Plantain

@@ -6,6 +6,7 @@ image: /images/2023-01-05-une-myriade-de-boutures.jpg
 imageAlt: Une myriade de boutures dans des pots
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En janvier

@@ -1,11 +1,12 @@
 ---
 title: La prêle des champs avec Le chemin de la nature
-description: 'Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile.'
+description: "Avec Christophe De Hody, comprenons comment reconnaitre la prêle, comment la consommer et en quoi il peut nous être utile."
 date: 2023-02-02
 image: /images/2023-02-02-une-prele-des-champs.jpg
 imageAlt: Une prêle des champs
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Prêle

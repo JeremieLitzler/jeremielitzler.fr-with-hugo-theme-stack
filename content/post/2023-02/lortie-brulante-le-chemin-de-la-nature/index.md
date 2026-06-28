@@ -6,6 +6,7 @@ imageAlt: Feuille d'ortie brûlante
 date: 2023-02-14
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Ortie
@@ -23,7 +24,7 @@ Les grandes différences avec la grande ortie :
 
 ![Feuille de grande ortie](images/feuille-de-grande-ortie.jpg)
 
- Comparez cette feuille à celle ci-dessus. Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
+Comparez cette feuille à celle ci-dessus. Crédits : image extraite du vlog de Christophe sur le Chemin de la Nature.
 
 - la taille : l’ortie brûlante dépassera rarement 30 cm comparés aux 2 mètres de la grande ortie.
 

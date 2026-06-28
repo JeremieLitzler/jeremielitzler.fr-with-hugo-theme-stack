@@ -7,6 +7,7 @@ imageAlt: Faux fruit de cynorhodon ouvert
 categories:
   - Santé
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Cynorhodon
@@ -191,3 +192,9 @@ Voilà, cela conclut mes notes sur l’églantier ou le rosier sauvage.
 Encore une fois, [l’article](../le-rosier-sauvage-bourgeons-et-cynorhodons/index.md#gemmothérapie), que j’ai réalisé sur le cynorhodon sur les bases des vlogs d’un autre Christophe, auteur du Chemin de la Nature, complétera bien celui-ci.
 
 Et comment toujours, pour ne rien rater...
+
+{{< blockcontainer jli-notice-tip "Suivez-moi !">}}
+
+Assurez-vous de [me suivre sur X](https://x.com/LitzlerJeremie), de [vous abonner à ma publication Substack](https://iamjeremie.substack.com/) et d’ajouter mon blog à vos favoris pour ne pas manquer les prochains articles.
+
+{{< /blockcontainer >}}

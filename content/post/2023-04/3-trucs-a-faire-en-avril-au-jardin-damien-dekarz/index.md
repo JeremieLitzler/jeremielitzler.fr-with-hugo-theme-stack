@@ -1,12 +1,13 @@
 ---
 title: 3 Trucs à faire en Avril au Jardin, avec Damien Dekarz
-description: 'En avril, on repique, on sème, on plante.'
+description: "En avril, on repique, on sème, on plante."
 image: /images/2023-04-17-titre-de-la-video-de-damien.jpg
 imageAlt: Titre de la video de Damien
 date: 2023-04-17
 
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Avril

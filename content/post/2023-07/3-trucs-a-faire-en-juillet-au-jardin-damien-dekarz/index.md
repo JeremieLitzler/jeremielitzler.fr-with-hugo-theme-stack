@@ -6,6 +6,7 @@ imageAlt: Vue aérienne du jardin de Damien
 date: 2023-07-11
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Juillet

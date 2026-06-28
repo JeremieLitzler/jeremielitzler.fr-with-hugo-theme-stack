@@ -6,6 +6,7 @@ imageAlt: "Fleurs d’achillée mille-feuille"
 date: 2024-05-28
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
 ---

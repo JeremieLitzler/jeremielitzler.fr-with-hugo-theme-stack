@@ -6,6 +6,7 @@ imageAlt: Titre du vlog
 date: 2023-06-26
 categories:
   - Jardin
+seoNoIndex: true
 tags:
   - Damien Dekarz
   - En Juin

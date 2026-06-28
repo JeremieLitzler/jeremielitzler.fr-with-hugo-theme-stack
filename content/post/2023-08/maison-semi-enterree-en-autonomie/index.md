@@ -10,6 +10,7 @@ tags:
   - Brian Ejarque
   - Earthship
   - Géonef
+seoNoIndex: true
 ---
 
 Merci à Brian pour le partage de cette expérience !

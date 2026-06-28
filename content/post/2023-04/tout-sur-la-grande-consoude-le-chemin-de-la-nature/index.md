@@ -6,6 +6,7 @@ imageAlt: Feuille de consoude officinale
 date: 2023-04-25
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Consoude

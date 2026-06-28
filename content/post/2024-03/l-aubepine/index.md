@@ -6,6 +6,7 @@ imageAlt: "Deux baies d'aubépine mûres"
 date: 2024-03-26
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Aubépine

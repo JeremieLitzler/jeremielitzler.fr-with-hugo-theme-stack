@@ -6,6 +6,7 @@ imageAlt: Message sur une ardoise posée sur un plan de travail
 date: 2023-02-13
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Chemin de la Nature
   - Recettes

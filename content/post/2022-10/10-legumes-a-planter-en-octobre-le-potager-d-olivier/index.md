@@ -2,13 +2,14 @@
 title: 10 légumes à planter en octobre au potager
 description: C’est l’automne et le potager est encore bien actif. Que peut-on planter ce mois-ci ? Olivier nous détaille cela !
 date: 2022-10-05
-image: '/images/2022-10-05-10-legumes-a-planter-en-octobre-au-potager-le-potager-d-olivier-hero.jpg'
+image: "/images/2022-10-05-10-legumes-a-planter-en-octobre-au-potager-le-potager-d-olivier-hero.jpg"
 imageAlt: Des semis de divers choux
 categories:
   - Jardin
 tags:
   - En Octobre
   - Potager d Olivier
+seoNoIndex: true
 ---
 
 [Des semis de divers choux](/images/2022-10-05-10-legumes-a-planter-en-octobre-au-potager-le-potager-d-olivier-hero.jpg)

@@ -6,6 +6,7 @@ imageAlt: Romarin en fleurs
 date: 2023-12-26
 categories:
   - Plantes
+seoNoIndex: true
 tags:
   - Christophe Bernard
   - Romarin

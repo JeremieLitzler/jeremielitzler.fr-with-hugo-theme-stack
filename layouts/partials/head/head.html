@@ -19,18 +19,26 @@
 {{ else -}}
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 {{ end -}}
-
+<!-- customized JLI -->
+<!-- Skip indexing this page on search engines when seoNoIndex is set -->
+{{ if .Params.seoNoIndex }}
+  <meta name="robots" content="noindex, follow" />
+{{ end -}}
 {{- partial "head/style.html" . -}}
 {{- partial "head/script.html" . -}}
 {{- partial "head/opengraph/include.html" . -}}
 
 {{- range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .Permalink | safeURL }}" />
 {{- end -}}
 
 {{ with .Site.Params.favicon }}
   <link rel="shortcut icon" href="{{ . | relURL }}" />
 {{ end }}
+
 
 <!-- customized JLI -->
 <!--{{- partial "google_analytics.html" . -}}-->
@@ -39,6 +47,7 @@
 {{ range .Site.Params.custom_css -}}
   <link rel="stylesheet" href="{{ . | absURL }}" />
 {{- end }}
+
 
 <!-- customized JLI -->
 <meta name="author" content="Jérémie Litzler" />
