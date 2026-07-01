@@ -14,7 +14,7 @@ Ces concepts décrivent les relations entre les objets dans une hiérarchie de c
 
 Nous allons les détailler un par un ci-dessous.
 
-### Association
+## Association
 
 L’association représente une relation « *utilise-un* » ou « *possède-un* » entre deux classes distinctes, où une classe utilise l’autre. Elle définit une relation entre des objets où un objet peut accéder à un autre.
 
@@ -44,7 +44,7 @@ public class Program
 }
 ```
 
-### Agrégation
+## Agrégation
 
 L’agrégation est une forme spécialisée d’association avec une relation « tout-partie », mais la durée de vie des parties est indépendante de celle du tout. En d’autres termes, la partie peut exister sans le tout.
 
@@ -96,7 +96,7 @@ Les départements sont créés à l’extérieur de la compagnie, ils existent i
 
 Les objets `Department` peuvent potentiellement appartenir à plusieurs `Company` (même si ce n’est pas illustré ci-dessus). Ils ne sont pas « possédés exclusivement » par une seule compagnie.
 
-### Composition
+## Composition
 
 La composition est une forme plus forte d’agrégation avec une relation « partie-tout » où la partie ne peut exister sans le tout. Si le tout est détruit, les parties sont également détruites.
 
