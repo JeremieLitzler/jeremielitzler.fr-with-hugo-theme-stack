@@ -76,5 +76,5 @@ Merci d’avoir lu cet article. Assurez-vous de [me suivre sur X](https://x.com/
 
 {{< /blockcontainer >}}
 
-- [^1]: stomadentlab.com (https://stomadentlab.com/zirlux-acetal-partial-dentures/)
-- [^2]: [Acetal Resin - A quantum leap in aesthetic restorative dentistry : A Review](https://www.researchgate.net/publication/279476114_Acetal_Resin_-_A_quantum_leap_in_aesthetic_restorative_dentistry_A_Review)
+[^1]: stomadentlab.com (https://stomadentlab.com/zirlux-acetal-partial-dentures/)
+[^2]: [Acetal Resin - A quantum leap in aesthetic restorative dentistry : A Review](https://www.researchgate.net/publication/279476114_Acetal_Resin_-_A_quantum_leap_in_aesthetic_restorative_dentistry_A_Review)
