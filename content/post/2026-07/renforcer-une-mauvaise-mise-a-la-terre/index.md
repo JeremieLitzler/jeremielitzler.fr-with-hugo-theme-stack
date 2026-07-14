@@ -1,5 +1,5 @@
 ---
-title: Installation d’une nouvelle terre avec des piquets, par les Disjonctés
+title: Renforcer une mauvaise mise à la terre, avec les Disjonctés
 description: "Une bonne mise à la terre permet d'être en sécurité dans votre logement."
 image: 2026-07-01-un-homme-enterrant-un-cable-de-terre.jpg
 imageAlt: Un homme enterrant un câble de terre
