@@ -5,7 +5,7 @@ image: 2026-07-20-un-vrai-labyrinthe.jpg
 imageAlt: Un vrai labyrinthe
 date: 2026-07-20
 categories:
-  - Software Development
+  - Développement logiciel
 tags:
   - Visual Studio
 ---
