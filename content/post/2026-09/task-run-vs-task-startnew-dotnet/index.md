@@ -1,7 +1,7 @@
 ---
 title: "Task.Run ou Task.Factory.StartNew"
 description: "Lequel choisir, quand et pourquoi?"
-image: 2026-09-14-une-cassette-magnetique-deroulee.jpg
+image: /images/2026-09-14-une-cassette-magnetique-deroulee.jpg
 imageAlt: Une cassette magnétique déroulée
 date: 2026-09-14
 categories:
