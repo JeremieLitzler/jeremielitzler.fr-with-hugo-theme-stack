@@ -13,15 +13,15 @@ tags:
 
 Quand passer le `CancellationToken` à `Task.Run` ?
 
-La réponse courte : toujours au code du délégué, et idéalement aussi à `Task.Run`, mais sans croire que ce second passage suffit à annuler le travail en cours.
+La réponse courte : toujours au code du délégué, et idéalement aussi à `Task.Run`, mais ne croyez pas que ce second passage suffit à annuler le travail en cours.
 
-Voici pourquoi et comment bien l'utiliser.
+Voici pourquoi et comment bien l’utiliser.
 
 ## Le piège du `CancellationToken` dans `Task.Run`
 
-Le `CancellationToken` passé à `Task.Run` n'agit que sur la planification du délégué sur le `ThreadPool` : si l'annulation est demandée avant que le délégué démarre (y compris pendant qu'il attend dans la file), il n'est pas exécuté et la tâche passe à l'état `Canceled`. Une fois que le délégué s'exécute (ce qui se produit presque immédiatement), ce token n'interrompt plus rien.
+Le `CancellationToken` passé à `Task.Run` n’agit que sur la planification du délégué sur le `ThreadPool` : si l’annulation est demandée avant que le délégué démarre (y compris pendant qu’il attend dans la file), il n’est pas exécuté et la tâche passe à l’état `Canceled`. Une fois que le délégué s’exécute (ce qui se produit presque immédiatement), ce token n’interrompt plus rien.
 
-Beaucoup de développeurs écrivent ceci en pensant à tort que le délégué sera annulé :
+Beaucoup de développeurs écrivent ceci en pensant à tort que le délégué sera annulé :
 
 ```csharp
 // ⚠️ INSUFFISANT - Le token n'interrompt PAS le délégué en cours d'exécution
@@ -33,7 +33,7 @@ await Task.Run(() => {
 
 ## La bonne approche
 
-Passez d'abord le token au code à l'intérieur du délégué : c'est ce qui permet réellement d'interrompre le travail.
+Passez d’abord le token au code à l’intérieur du délégué : c’est ce qui permet réellement d’interrompre le travail.
 
 ```csharp
 // ✅ Le token est utilisé ICI, dans le code du délégué
@@ -42,7 +42,7 @@ await Task.Run(() => {
 });
 ```
 
-Cela rend explicite qu'il revient au code du délégué d'honorer l'annulation de l'opération. L'annulation est coopérative : rien ne tue le délégué de l'extérieur.
+Cela rend explicite qu’il revient au code du délégué d’honorer l’annulation de l’opération. L’annulation est coopérative : rien ne tue le délégué de l’extérieur.
 
 Passez ensuite le même token à `Task.Run` :
 
@@ -53,14 +53,14 @@ await Task.Run(() => {
 }, cancellationToken);
 ```
 
-Ce second passage a deux effets utiles :
+Ce second passage a deux effets utiles :
 
-- Si le token est déjà annulé avant le démarrage, le délégué n'est pas lancé.
+- Si le token est déjà annulé avant le démarrage, le délégué n’est pas lancé.
 - Si le délégué lève une `OperationCanceledException` portant le même token, la tâche passe à `Canceled`. Sans cela, le token ne correspond pas à celui de la tâche, qui passe à `Faulted`. Un `await` lève dans les deux cas une `OperationCanceledException`, mais `IsCanceled`, `IsFaulted` et les continuations (`OnlyOnCanceled`, etc.) se comportent différemment.
 
 ## Les trois usages du CancellationToken
 
-Prenons l'exemple suivant :
+Prenons l’exemple suivant :
 
 ```csharp
 using var cts = new CancellationTokenSource();
@@ -78,19 +78,19 @@ catch (OperationCanceledException) {
 }
 ```
 
-1. Dans le délégué : c'est là que ça compte vraiment. Il arrête l'exécution de `DoSomething`, à condition que la méthode soit écrite pour honorer les demandes d'annulation.
-2. Dans `Task.Run` : il annule la tâche si le token est annulé AVANT que le délégué commence (ce qui est rare), et il permet à la tâche de se terminer à l'état `Canceled` plutôt que `Faulted`.
-3. Dans `WaitAsync()` (ou `Wait()`) : il annule uniquement le processus d'attente de la tâche, sans réellement annuler la tâche elle-même.
+1. Dans le délégué : c’est là que ça compte vraiment. Il arrête l’exécution de `DoSomething`, à condition que la méthode soit écrite pour honorer les demandes d’annulation.
+2. Dans `Task.Run` : il annule la tâche si le token est annulé AVANT que le délégué commence (ce qui est rare), et il permet à la tâche de se terminer à l’état `Canceled` plutôt que `Faulted`.
+3. Dans `WaitAsync()` (ou `Wait()`) : il annule uniquement le processus d’attente de la tâche, sans réellement annuler la tâche elle-même.
 
 {{< blockcontainer jli-notice-note "Version de .NET">}}
 
-`Task.WaitAsync(CancellationToken)` n'existe que depuis .NET 6. Avec une version antérieure, utilisez `Task.WhenAny(task, Task.Delay(Timeout.Infinite, token))` pour obtenir un effet comparable.
+`Task.WaitAsync(CancellationToken)` n’existe que depuis .NET 6. Avec une version antérieure, utilisez `Task.WhenAny(task, Task.Delay(Timeout.Infinite, token))` pour obtenir un effet comparable.
 
 {{< /blockcontainer >}}
 
-Attention si vous utilisez la version synchrone : `task.Wait()` enveloppe l'annulation de la tâche dans une `AggregateException` (contenant une `TaskCanceledException`). Seule l'annulation de l'attente via `Wait(token)` lève directement une `OperationCanceledException`. Un `catch (OperationCanceledException)` autour de `Wait()` peut donc rater l'annulation. Préférez `await`, qui extrait l'exception qu'on souhaite vraiment.
+Attention si vous utilisez la version synchrone : `task.Wait()` enveloppe l’annulation de la tâche dans une `AggregateException` (contenant une `TaskCanceledException`). Seule l’annulation de l’attente via `Wait(token)` lève directement une `OperationCanceledException`. Un `catch (OperationCanceledException)` autour de `Wait()` peut donc rater l’annulation. Préférez `await`, qui extrait l’exception qu’on souhaite vraiment.
 
-## Comment implémenter l'annulation dans votre code
+## Comment implémenter l’annulation dans votre code
 
 ```csharp
 async Task DoSomethingAsync(CancellationToken token) {
@@ -104,12 +104,12 @@ async Task DoSomethingAsync(CancellationToken token) {
 }
 ```
 
-## Les Bonnes pratiques
+## Les bonnes pratiques
 
 - Passez toujours `CancellationToken` aux méthodes asynchrones.
-- Vérifiez l'annulation dans les opérations longues.
+- Vérifiez l’annulation dans les opérations longues.
 - Utilisez `ThrowIfCancellationRequested` pour simplifier le code.
-- Créez le `CancellationTokenSource` là où se prend la décision d'annuler (interface, délai, requête HTTP) et ne transmettez que le `CancellationToken`.
+- Créez le `CancellationTokenSource` là où se prend la décision d’annuler (interface, délai, requête HTTP) et ne transmettez que le `CancellationToken`.
 - Disposez correctement de `CancellationTokenSource`.
 
 ```csharp
@@ -127,11 +127,11 @@ await RunAsync(cts.Token);
 
 ## Disposer correctement le `CancellationTokenSource`
 
-`CancellationTokenSource` implémente `IDisposable` : il peut détenir un minuteur (après `CancelAfter`) et des enregistrements auprès d'autres tokens (sources liées). Ne pas le disposer retarde leur libération.
+`CancellationTokenSource` implémente `IDisposable` : il peut détenir un minuteur (après `CancelAfter`) et des enregistrements auprès d’autres tokens (sources liées). Ne pas le disposer retarde leur libération.
 
-### Cas 1
+### Cas 1
 
-Une source locale, avec `using` :
+Une source locale, avec `using` :
 
 ```csharp
 using var cts = new CancellationTokenSource();
@@ -141,9 +141,9 @@ await DoSomethingAsync(cts.Token);
 // cts est disposé en sortant de la portée
 ```
 
-### Cas 2
+### Cas 2
 
-Une source liée à un token parent, à disposer elle aussi sinon son enregistrement auprès du parent subsiste :
+Une source liée à un token parent, à disposer elle aussi, sinon son enregistrement auprès du parent subsiste :
 
 ```csharp
 async Task RunAsync(CancellationToken parentToken) {
@@ -154,9 +154,9 @@ async Task RunAsync(CancellationToken parentToken) {
 }
 ```
 
-### Cas 3
+### Cas 3
 
-Une source détenue par un objet de longue durée, qui devient `IDisposable` à son tour :
+Une source détenue par un objet de longue durée, qui devient `IDisposable` à son tour :
 
 ```csharp
 public sealed class Worker : IDisposable {
@@ -173,7 +173,7 @@ public sealed class Worker : IDisposable {
 }
 ```
 
-Ne disposez jamais la source tant que des opérations utilisent encore son token : demander `cts.Token` après le `Dispose` lève une `ObjectDisposedException`. Annulez, attendez la fin des opérations, puis disposez.
+Ne disposez jamais la source tant que des opérations utilisent encore son token : demander `cts.Token` après le `Dispose` lève une `ObjectDisposedException`. Annulez, attendez la fin des opérations, puis disposez.
 
 {{< blockcontainer jli-notice-tip "Suivez-moi !">}}
 
