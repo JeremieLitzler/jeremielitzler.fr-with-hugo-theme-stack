@@ -24,7 +24,7 @@ Voici pourquoi et les alternatives appropriées.
 
 ### 1. Fire-and-forget est dangereux dans ASP.NET
 
-Les tâches fire-and-forget continuent à s'exécuter après que la requête HTTP est terminée, et à ce moment-là, les services scopés seront déjà disposés. Si votre application ASP.NET redémarre pendant l'envoi (déploiement, recyclage du pool d'applications), l'email ne sera jamais envoyé.
+Les tâches fire-and-forget continuent à s'exécuter après que la requête HTTP est terminée, et à ce moment-là, les objets liés à la requête (`HttpContext.Current`, un `DbContext` créé pour la durée de la requête) ne sont plus disponibles. Si votre application ASP.NET redémarre pendant l'envoi (déploiement, recyclage du pool d'applications), l'email ne sera jamais envoyé.
 
 ### 2. Aucune garantie d'exécution
 
@@ -40,12 +40,15 @@ public void CreateUser(User user) {
 }
 ```
 
-### 3. Problèmes avec les services scopés
+### 3. Problèmes avec les objets liés à la requête
 
 ```csharp
-// ERREUR - ObjectDisposedException
+// ERREURS - NullReferenceException et ObjectDisposedException
 Task.Run(() => {
-    // DbContext est déjà disposé après la fin de la requête
+    // HttpContext.Current est null en dehors du thread de la requête
+    var userName = HttpContext.Current.User.Identity.Name; // BOOM!
+
+    // Le DbContext, créé pour la durée de la requête, est déjà disposé
     _dbContext.Users.Find(userId); // BOOM!
 });
 ```
@@ -67,27 +70,26 @@ public async Task CreateUser(User user) {
 }
 ```
 
-Puis un worker indépendant (Azure Function, BackgroundService, Hangfire) traite la queue.
+Puis un worker indépendant (service Windows, Azure Function, Hangfire) traite la queue.
 
 Alors, oui, il existe d'autres problématiques quand on commence à travailler avec des processus distribués, mais cela sera sûrement le sujet d'un autre article. En attendant, voici [une vidéo par une personne plus compétente que moi](https://vimeo.com/111998645) pour expliquer les problématiques que j'ai en tête.
 
-### Option 2 : IHostedService avec BackgroundService
+### Option 2 : HostingEnvironment.QueueBackgroundWorkItem
 
-Pour des emails non critiques dans une application qui ne redémarre pas souvent :
+Pour des emails non critiques dans une application qui ne redémarre pas souvent, .NET Framework 4.5.2 a introduit `HostingEnvironment.QueueBackgroundWorkItem` :
 
 ```csharp
-public class EmailBackgroundService : BackgroundService {
-    private readonly Channel<EmailMessage> _queue;
+public void CreateUser(User user) {
+    _repository.Save(user);
 
-    protected override async Task ExecuteAsync(CancellationToken ct) {
-        await foreach (var email in _queue.Reader.ReadAllAsync(ct)) {
-            using var scope = _serviceProvider.CreateScope();
-            var emailService = scope.ServiceProvider.GetRequiredService<IEmailService>();
-            await emailService.SendAsync(email, ct);
-        }
-    }
+    // ASP.NET suit cette tâche et tente de retarder l'arrêt de l'AppDomain jusqu'à sa fin
+    HostingEnvironment.QueueBackgroundWorkItem(async ct => {
+        await _emailService.SendAsync(user.Email, ct);
+    });
 }
 ```
+
+Contrairement à un simple `Task.Run`, ASP.NET sait que la tâche tourne. Quand l'application s'arrête, il signale le `CancellationToken` et tente de retarder l'arrêt jusqu'à la fin de la tâche. Ce n'est qu'une tentative, pas une garantie : si le processus plante ou si l'arrêt n'attend pas assez longtemps, l'email est perdu.
 
 ### Option 3 : Attendre simplement l'envoi
 
@@ -113,13 +115,13 @@ public void CreateUser(User user) {
 
 ### Résumé
 
-| Approche           | Fiabilité      | Complexité  | Cas d'usage                    |
-| ------------------ | -------------- | ----------- | ------------------------------ |
-| Task.Run           | ❌ Très faible | Faible      | Jamais                         |
-| Await direct       | ✅ Haute       | Très faible | Email non-critique, API rapide |
-| Queue + Worker     | ✅ Très haute  | Haute       | Production, emails critiques   |
-| Hangfire           | ✅ Haute       | Moyenne     | Jobs avec retry                |
-| BackgroundService  | ⚠️ Moyenne     | Moyenne     | Tâches internes non-critiques  |
+| Approche                | Fiabilité      | Complexité  | Cas d'usage                    |
+| ----------------------- | -------------- | ----------- | ------------------------------ |
+| Task.Run                | ❌ Très faible | Faible      | Jamais                         |
+| Await direct            | ✅ Haute       | Très faible | Email non-critique, API rapide |
+| Queue + Worker          | ✅ Très haute  | Haute       | Production, emails critiques   |
+| Hangfire                | ✅ Haute       | Moyenne     | Jobs avec retry                |
+| QueueBackgroundWorkItem | ⚠️ Moyenne     | Faible      | Tâches internes non-critiques  |
 
 ## Sources
 
