@@ -10,7 +10,7 @@ tags:
   -
 ---
 
-L'année dernière, une API a été remontée comme très lente. En analysant le temps passé par tous les éléments dans la chaîne du code, l'envoi d'email est ressorti comme problématique.
+L'année dernière, une API a été remontée comme très lente sur un environnement de non-production. En analysant le temps passé par tous les éléments dans la chaîne du code, l'envoi d'email est ressorti comme problématique.
 
 Dans le contexte projet à ce moment, il n'y avait _pas de temps_ pour changer le code, surtout qu'on était en pleine migration en plusieurs étapes de .NET Framework vers .NET.
 
