@@ -124,9 +124,12 @@ Attention : ce n'est rapide que si l'API l'est. Si l'envoi passe par un composan
 // ✅ FIABLE avec retry automatique
 public void CreateUser(User user) {
     _repository.Save(user);
-    BackgroundJob.Enqueue(() => SendEmailJob(user.Email));
+    // Hangfire remplace CancellationToken.None par son propre token à l'exécution
+    BackgroundJob.Enqueue<IEmailService>(x => x.SendAsync(user.Email, CancellationToken.None));
 }
 ```
+
+Hangfire enregistre le job dans son stockage (SQL Server par exemple), puis obtient un `IEmailService` au moment de l'exécuter, via son activateur de jobs branché sur votre conteneur d'injection. Aucun objet de la requête n'est donc capturé.
 
 ### Résumé
 
