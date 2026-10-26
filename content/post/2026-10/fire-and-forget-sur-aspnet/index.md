@@ -148,8 +148,8 @@ Hangfire enregistre le job dans son stockage (SQL Server par exemple), puis obti
 ## Sources
 
 - [Microsoft Community Hub - Fire-and-Forget Methods in C#](https://techcommunity.microsoft.com/blog/educatordeveloperblog/fire-and-forget-methods-in-c-%E2%80%94-best-practices--pitfalls/4299605)
-- [Stephen Cleary - AspNetBackgroundTasks](https://techcommunity.microsoft.com/blog/educatordeveloperblog/fire-and-forget-methods-in-c-%E2%80%94-best-practices--pitfalls/4299605)
-- [Microsoft Learn - Background tasks with IHostedService](https://techcommunity.microsoft.com/blog/educatordeveloperblog/fire-and-forget-methods-in-c-%E2%80%94-best-practices--pitfalls/4299605)
+- [Stephen Cleary - AspNetBackgroundTasks](https://github.com/StephenCleary/AspNetBackgroundTasks)
+- [Microsoft Learn - HostingEnvironment.QueueBackgroundWorkItem](https://learn.microsoft.com/dotnet/api/system.web.hosting.hostingenvironment.queuebackgroundworkitem)
 
 ## Conclusion
 
