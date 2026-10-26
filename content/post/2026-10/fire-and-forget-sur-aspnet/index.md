@@ -14,9 +14,9 @@ L'année dernière, une API a été remontée comme très lente. En analysant le
 
 Dans le contexte projet à ce moment, il n'y avait _pas de temps_ pour changer le code, surtout qu'on était en pleine migration en plusieurs étapes de .NET Framework vers .NET.
 
-Les solutions recommandées ci-dessous ne pouvaient être implémentées dans les temps. Toutefois, dans une requête de tirage qui tentait de solutionner l'anomalie, nous avons discuté d'utiliser ou pas la technique "Fire & Forget" avec `Task.Run`. Mais que devions-nous passer comme `CancellationToken` ?
+Les solutions recommandées ci-dessous ne pouvaient être implémentées dans les temps. Toutefois, dans une requête de tirage qui tentait de solutionner l'anomalie, nous avons discuté d'utiliser ou pas la technique "Fire & Forget" : lancer l'envoi de l'email avec `Task.Run` sans attendre la fin de la tâche, pour rendre la main tout de suite à l'appelant.
 
-Passer `default` (= CancellationToken.None) dans une méthode synchrone pour déporter un envoi d'email avec `Task.Run` est une MAUVAISE idée.
+Dans une application ASP.NET, c'est une MAUVAISE idée.
 
 Voici pourquoi et les alternatives appropriées.
 
@@ -36,7 +36,7 @@ public void CreateUser(User user) {
     _repository.Save(user);
 
     // Si l'app crash ou redémarre, l'email est perdu
-    Task.Run(() => SendEmail(user.Email), default);
+    Task.Run(() => SendEmail(user.Email));
 }
 ```
 
@@ -47,7 +47,7 @@ public void CreateUser(User user) {
 Task.Run(() => {
     // DbContext est déjà disposé après la fin de la requête
     _dbContext.Users.Find(userId); // BOOM!
-}, default);
+});
 ```
 
 ## Quelles solutions sont recommandées
@@ -115,7 +115,7 @@ public void CreateUser(User user) {
 
 | Approche           | Fiabilité      | Complexité  | Cas d'usage                    |
 | ------------------ | -------------- | ----------- | ------------------------------ |
-| Task.Run + default | ❌ Très faible | Faible      | Jamais                         |
+| Task.Run           | ❌ Très faible | Faible      | Jamais                         |
 | Await direct       | ✅ Haute       | Très faible | Email non-critique, API rapide |
 | Queue + Worker     | ✅ Très haute  | Haute       | Production, emails critiques   |
 | Hangfire           | ✅ Haute       | Moyenne     | Jobs avec retry                |
