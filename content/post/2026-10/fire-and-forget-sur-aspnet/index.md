@@ -102,17 +102,19 @@ public void CreateUser(User user) {
 
 Contrairement à un simple `Task.Run`, ASP.NET sait que la tâche tourne. Quand l'application s'arrête, il signale le `CancellationToken` et tente de retarder l'arrêt jusqu'à la fin de la tâche. Ce n'est qu'une tentative, pas une garantie : si le processus plante ou si l'arrêt n'attend pas assez longtemps, l'email est perdu.
 
-### Option 3 : Attendre simplement l'envoi
+### Option 3 : Attendre simplement l'envoi via une API dédiée
 
-La plupart des fournisseurs d'email fonctionnent en plaçant les emails envoyés dans une queue, et la livraison réelle se produit plus tard. L'appel API est souvent rapide (< 100ms).
+Les services d'envoi d'email (SendGrid, Mailjet, Amazon SES, etc.) exposent une API qui empile la demande d'envoi et répond rapidement. La livraison réelle se fait plus tard, de leur côté. On peut donc simplement attendre cet appel dans la requête.
 
 ```csharp
 // ✅ SIMPLE ET FIABLE
 public async Task CreateUser(User user) {
     await _repository.SaveAsync(user);
-    await _emailService.SendAsync(user.Email); // Rapide, juste met en queue
+    await _emailService.SendAsync(user.Email); // L'API empile la demande et répond rapidement
 }
 ```
+
+Attention : ce n'est rapide que si l'API l'est. Si l'envoi passe par un composant lent, attendre l'appel déplace la lenteur dans la requête. C'est ce qui nous est arrivé, comme expliqué en conclusion.
 
 ### Option 4 : Hangfire (Si vous avez besoin d'un système de jobs)
 
