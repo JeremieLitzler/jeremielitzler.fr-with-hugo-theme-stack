@@ -22,13 +22,11 @@ Voici pourquoi et les alternatives appropriées.
 
 ## Pourquoi est-ce problématique
 
-### 1. Fire-and-forget est dangereux dans ASP.NET
+Une tâche fire-and-forget continue à s'exécuter après la fin de la requête HTTP, sans que personne ne l'attende. Cela pose trois problèmes.
 
-Les tâches fire-and-forget continuent à s'exécuter après que la requête HTTP est terminée, et à ce moment-là, les objets liés à la requête (`HttpContext.Current`, un `DbContext` créé pour la durée de la requête) ne sont plus disponibles. Si votre application ASP.NET redémarre pendant l'envoi (déploiement, recyclage du pool d'applications), l'email ne sera jamais envoyé.
+### 1. Aucune garantie d'exécution
 
-### 2. Aucune garantie d'exécution
-
-Cette solution est dangereuse car elle n'est pas fiable ; il n'y a aucune garantie que le travail en arrière-plan sera réellement effectué.
+Cette solution est dangereuse car elle n'est pas fiable ; il n'y a aucune garantie que le travail en arrière-plan sera réellement effectué. Si votre application ASP.NET redémarre pendant l'envoi (déploiement, recyclage du pool d'applications), l'email ne sera jamais envoyé.
 
 ```csharp
 // DANGEREUX - L'email peut ne jamais être envoyé
@@ -40,7 +38,9 @@ public void CreateUser(User user) {
 }
 ```
 
-### 3. Problèmes avec les objets liés à la requête
+### 2. Problèmes avec les objets liés à la requête
+
+Quand la tâche s'exécute, la requête est peut-être déjà terminée. Les objets qui lui sont liés (`HttpContext.Current`, un `DbContext` créé pour la durée de la requête) ne sont alors plus disponibles.
 
 ```csharp
 // ERREURS - NullReferenceException et ObjectDisposedException
@@ -53,7 +53,7 @@ Task.Run(() => {
 });
 ```
 
-### 4. Les exceptions sont perdues
+### 3. Les exceptions sont perdues
 
 Personne n'attend la tâche lancée par `Task.Run`, donc personne n'observe son exception. Si le serveur SMTP est injoignable, l'appelant reçoit quand même une réponse en succès, rien n'est loggé et personne ne sait que l'email n'est jamais parti.
 
