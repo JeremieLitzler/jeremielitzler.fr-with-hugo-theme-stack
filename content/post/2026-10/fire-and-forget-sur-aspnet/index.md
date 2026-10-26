@@ -34,7 +34,7 @@ public void CreateUser(User user) {
     _repository.Save(user);
 
     // Si l'app crash ou redémarre, l'email est perdu
-    Task.Run(() => SendEmail(user.Email));
+    Task.Run(() => _emailService.SendAsync(user.Email));
 }
 ```
 
@@ -59,7 +59,7 @@ Personne n'attend la tâche lancée par `Task.Run`, donc personne n'observe son 
 
 ```csharp
 // SILENCIEUX - L'exception n'est jamais observée
-Task.Run(() => SendEmail(user.Email)); // SmtpException perdue, aucun log
+Task.Run(() => _emailService.SendAsync(user.Email)); // SmtpException perdue, aucun log
 ```
 
 Depuis .NET Framework 4.5, une exception non observée ne fait plus planter le processus. Sauf si vous écoutez l'événement `TaskScheduler.UnobservedTaskException`, elle disparaît en silence.
