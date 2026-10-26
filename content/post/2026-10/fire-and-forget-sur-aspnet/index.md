@@ -66,6 +66,10 @@ Depuis .NET Framework 4.5, une exception non observée ne fait plus planter le p
 
 ## Quelles solutions sont recommandées
 
+Le code d'origine était synchrone, et les exemples ci-dessous le reflètent. Les options 2 et 4 se contentent d'enregistrer le travail à faire : elles gardent donc une signature synchrone. Les options 1 et 3 attendent un appel réseau avec `await` : la méthode devient `async`, et ce changement remonte toute la chaîne d'appels jusqu'au contrôleur.
+
+Sur du code existant, c'est un coût à prendre en compte. Bloquer avec `.Result` ou `.Wait()` pour l'éviter est risqué sur ASP.NET classique, car cela peut provoquer un interblocage avec le contexte de synchronisation de la requête.
+
 ### Option 1 : Queue fiable + Worker (Recommandé pour la production)
 
 ```csharp
