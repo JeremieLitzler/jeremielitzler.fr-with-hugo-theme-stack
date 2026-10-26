@@ -95,7 +95,9 @@ public void CreateUser(User user) {
 
     // ASP.NET suit cette tâche et tente de retarder l'arrêt de l'AppDomain jusqu'à sa fin
     HostingEnvironment.QueueBackgroundWorkItem(async ct => {
-        await _emailService.SendAsync(user.Email, ct);
+        // Créer le service dans la tâche : les objets liés à la requête seront disposés
+        var emailService = new EmailService();
+        await emailService.SendAsync(user.Email, ct);
     });
 }
 ```
