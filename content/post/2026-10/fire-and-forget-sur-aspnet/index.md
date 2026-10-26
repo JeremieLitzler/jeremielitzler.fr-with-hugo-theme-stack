@@ -53,6 +53,17 @@ Task.Run(() => {
 });
 ```
 
+### 4. Les exceptions sont perdues
+
+Personne n'attend la tâche lancée par `Task.Run`, donc personne n'observe son exception. Si le serveur SMTP est injoignable, l'appelant reçoit quand même une réponse en succès, rien n'est loggé et personne ne sait que l'email n'est jamais parti.
+
+```csharp
+// SILENCIEUX - L'exception n'est jamais observée
+Task.Run(() => SendEmail(user.Email)); // SmtpException perdue, aucun log
+```
+
+Depuis .NET Framework 4.5, une exception non observée ne fait plus planter le processus. Sauf si vous écoutez l'événement `TaskScheduler.UnobservedTaskException`, elle disparaît en silence.
+
 ## Quelles solutions sont recommandées
 
 ### Option 1 : Queue fiable + Worker (Recommandé pour la production)
