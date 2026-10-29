@@ -7,7 +7,7 @@ date: 2025-08-15
 categories:
   - Développement Logiciel
 tags:
-  - CSharp
+  - Csharp
 ---
 
 Il existe 3 durées de vie possibles quand on utilise l’injection de dépendance : `Transient`, `Scoped` et `Singleton`.
