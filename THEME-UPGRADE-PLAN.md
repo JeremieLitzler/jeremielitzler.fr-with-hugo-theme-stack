@@ -51,4 +51,5 @@ Issue #2 says "Idem à" [iamjeremie.me #9](https://github.com/JeremieLitzler/iam
 
   {{< /blockcontainer >}}
   ```
+
 - **D3, taxonomy filter placeholder.** Recommended: add "Filtrer..." (it is blank today). Alternative: leave it undefined so the output is unchanged.
