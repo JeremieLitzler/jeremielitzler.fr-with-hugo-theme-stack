@@ -65,7 +65,7 @@ La ligne `head.html` ci-dessus doit être remplacée par ce qui suit :
 
 ```htm
 {{ with .Params.relcanonical }}
-<link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
+<link rel="canonical" href="{{ . | absLangURL }}" itemprop="url" />
 {{ else -}}
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 {{ end -}}
