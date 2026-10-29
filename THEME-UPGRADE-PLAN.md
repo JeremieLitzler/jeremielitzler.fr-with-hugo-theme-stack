@@ -1,6 +1,6 @@
 # Theme upgrade plan: hugo-theme-stack v3.34.x to v4.0.3 (issue #2)
 
-**Status: plan v1, awaiting review.** Nothing outside this file has changed yet.
+**Status: implemented.** Decisions: D1 use v4's built-in Mermaid, D2 note wording as below, D3 corrected (see below). `hugo --minify` and `npm run build:ci` pass, with only the libsass deprecation warning left for issues #5 to #8.
 
 Issue #2 says "Idem à" [iamjeremie.me #9](https://github.com/JeremieLitzler/iamjeremie.me-with-hugo-theme-stack/issues/9). That upgrade landed as commit [`38e4f9b`](https://github.com/JeremieLitzler/iamjeremie.me-with-hugo-theme-stack/commit/38e4f9b), and its full inventory and decisions are in that repo's [`THEME-UPGRADE-PLAN.md`](https://github.com/JeremieLitzler/iamjeremie.me-with-hugo-theme-stack/blob/master/THEME-UPGRADE-PLAN.md). This plan does not repeat it: it lists what is the same here, and only details what differs on jeremielitzler.fr.
 
@@ -28,7 +28,7 @@ Issue #2 says "Idem à" [iamjeremie.me #9](https://github.com/JeremieLitzler/iam
 3. Add `i18n/fr.toml` carrying the dropped keys with today's French wording, taken from the current theme `fr.yaml`:
    - `widget.tagCloud`: title "Top {{ .MaxInCloud }} mots clés", accessibleLabel "Cliquer pour voir les mots clés", allDivParagraph "Mot clé manquant ? Seuls les {{ .MaxInCloud }} plus utilisés sont listés ici.", allDivLinkText "Consulter tous les mots clés".
    - `widget.categoriesCloud`: the same four keys with "catégories" wording.
-   - `taxoMisc.searchForm`: title "Filtrer", executeBtnTitle "Lancer la recherche", and placeholder "Filtrer..." (undefined today, so it renders blank; iamjeremie.me added it). See decision D3.
+   - `taxoMisc.searchForm`: title "Filtrer", executeBtnTitle "Lancer la recherche", and placeholder "Saisissez votre recherche..." (already defined in the v3 theme's `fr.yaml`; see decision D3).
 4. `config/_default/params.toml`, same changes as iamjeremie.me:
    - `[sidebar.avatar]` table becomes `avatar = "img/profilepic-400w.jpg"`.
    - `[article] headingAnchor = true`.
@@ -52,4 +52,10 @@ Issue #2 says "Idem à" [iamjeremie.me #9](https://github.com/JeremieLitzler/iam
   {{< /blockcontainer >}}
   ```
 
-- **D3, taxonomy filter placeholder.** Recommended: add "Filtrer..." (it is blank today). Alternative: leave it undefined so the output is unchanged.
+- **D3, taxonomy filter placeholder.** Plan v1 said it was blank today and proposed "Filtrer...". That was wrong: the v3 theme's `fr.yaml` defines it as "Saisissez votre recherche...", so that wording is carried over unchanged.
+
+## Found during implementation
+
+- **`relcanonical` occurs in front matter in 2 files only**, not 4. The two tutorials match only through a YAML example in their body. As on iamjeremie.me, every `relcanonical:` line was renamed (2 front matter, 2 body examples) and both tutorials got the D2 note, placed after the paragraph explaining the field.
+- **D3 premise was wrong.** The v3 theme's `fr.yaml` defines the taxonomy filter placeholder as "Saisissez votre recherche...", so that wording is carried over in `i18n/fr.toml` and the page is unchanged.
+- **Verification.** Both builds produce the same 690 pages. On every page, the `<h1>` count, canonical link, robots meta, `og:image` and `<title>` match, except the `csharp` tag page title ("CSharp" before, "Csharp" after): the content tags it both ways (6 `Csharp`, 2 `CSharp`) and Hugo picks one; normalising those tags is a content fix outside this upgrade. The category cloud lists the same 21 categories and counts. Side-by-side screenshots (home, an article, an SVG-cover article, the Mermaid demo, archives, a category, search, the category cloud; light and dark) show only v4's own style changes; the Mermaid diagram renders with the `neutral` dark theme plus v4's Expand button.

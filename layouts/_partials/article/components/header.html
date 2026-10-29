@@ -1,0 +1,45 @@
+{{- $IsList := .IsList -}}
+{{- $Page := .Page -}}
+{{- $pageIndex := $Page.Scratch.Get "pageIndex" -}}
+{{- $outOfVisibleViewPort := and $IsList (ge (int (default 0 $pageIndex)) 3) -}}
+<header class="article-header">
+  {{- $image := partial "helper/image" (dict "Image" $Page.Params.image "Resources" $Page.Resources "Context" $Page) -}}
+  {{ if $image }}
+    <div class="article-image">
+      <a href="{{ $Page.RelPermalink }}">
+        {{ if and $image.Resource (reflect.IsImageResourceProcessable $image.Resource) }}
+          {{- $Permalink := $image.Permalink -}}
+          {{- $Width := $image.Width -}}
+          {{- $Height := $image.Height -}}
+          {{- $Srcset := "" -}}
+
+          {{- if (default true $Page.Site.Params.imageProcessing.cover.enabled) -}}
+            <!-- customized JLI -->
+            {{- $small := $image.Resource.Resize "360x" -}}
+            {{- $medium := $image.Resource.Resize "600x" -}}
+            {{- $large := $image.Resource.Resize "1024x" -}}
+            {{- $Srcset = printf "%s 360w, %s 600w, %s 1024w" $small.RelPermalink $medium.RelPermalink $large.RelPermalink -}}
+            {{- $Permalink = $medium.RelPermalink -}}
+            {{- $Width = $medium.Width -}}
+            {{- $Height = $medium.Height -}}
+          {{- end -}}
+          <img
+            src="{{ $Permalink }}"
+            {{ with $Srcset }}srcset="{{ . }}"{{ end }}
+            width="{{ $Width }}"
+            height="{{ $Height }}"
+            {{ if $outOfVisibleViewPort }}loading="lazy"{{ end }}
+            alt="{{ $Page.Params.imageAlt }}"
+            title="{{ $Page.Params.imageAlt }}" />
+        {{ else }}
+          <img
+            src="{{ $image.Permalink }}"
+            {{ if or (not $IsList) $outOfVisibleViewPort }}loading="lazy"{{ end }}
+            alt="{{ $Page.Params.imageAlt }}"
+            title="{{ $Page.Params.imageAlt }}" />
+        {{ end }}
+      </a>
+    </div>
+  {{ end }}
+  {{ partial "article/components/details" (dict "Page" $Page "IsList" $IsList) }}
+</header>

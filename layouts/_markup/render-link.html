@@ -1,0 +1,20 @@
+{{- $url := urls.Parse .Destination -}}
+{{- $scheme := $url.Scheme -}}
+{{- $isExternal := strings.HasPrefix .Destination "http" -}}
+
+<a class="link" href="
+  {{- if eq $scheme "" -}}
+    {{- if strings.HasSuffix $url.Path ".md" -}}
+      {{- relref .Page .Destination | safeURL -}}
+    {{- else -}}
+      {{- .Destination | safeURL -}}
+    {{- end -}}
+  {{- else -}}
+    {{- .Destination | safeURL -}}
+  {{- end -}}"
+  {{- with .Title }} title="{{ . | safeHTML }}"{{- end -}}
+  {{- if $isExternal }} target="_blank" rel="noopener"{{- end -}}>
+  {{- .Text | safeHTML -}}
+</a>
+
+{{- /* whitespace stripped here to avoid trailing newline in rendered result caused by file EOL */ -}}

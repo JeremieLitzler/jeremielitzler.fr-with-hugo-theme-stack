@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{- $paginator := partial "helper/paginator.html" . -}}
+
+    <section class="article-list">
+        {{ range $index, $element := $paginator.Pages }}
+			<!-- customized JLI -->
+			<!--
+				pageIndex is used in `article/components/header.html`
+				to add `lazy` attr on `<img>` elements when it equals 3
+			-->
+			{{ .Scratch.Set "pageIndex" $index }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}
