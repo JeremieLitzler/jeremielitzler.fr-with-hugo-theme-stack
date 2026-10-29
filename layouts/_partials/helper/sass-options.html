@@ -1,0 +1,15 @@
+{{- /*
+    Options for every css.Sass call that compiles the theme's stylesheets.
+
+    Dart Sass replaces libsass, deprecated since Hugo v0.153.0.
+
+    The vendored theme's SCSS triggers two Dart Sass deprecations, both scheduled
+    for removal in Dart Sass 3.0.0: `import` (@import rules) and `global-builtin`
+    (global built-in functions such as map-get). The theme is kept unmodified for
+    upgrades, so they are silenced here rather than fixed. Drop an ID once the
+    upstream theme migrates to @use and sass:* modules. See README.
+*/ -}}
+{{- return dict
+    "transpiler" "dartsass"
+    "silenceDeprecations" (slice "import" "global-builtin")
+-}}
