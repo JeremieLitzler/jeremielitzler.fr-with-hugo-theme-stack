@@ -15,7 +15,7 @@
 <!-- customized JLI -->
 <!-- https://discourse.gohugo.io/t/how-to-add-cannonical-url-to-a-blog/34670/4 -->
 {{ with .Params.canonicalUrl }}
-  <link rel="canonical" href="{{ . | relLangURL }}" itemprop="url" />
+  <link rel="canonical" href="{{ . | absLangURL }}" itemprop="url" />
 {{ else -}}
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 {{ end -}}
