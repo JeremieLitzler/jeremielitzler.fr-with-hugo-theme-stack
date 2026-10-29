@@ -12,16 +12,16 @@
         {{ end }}
       </div>
 
-      {{- $image := partialCached "helper/image" (dict "Context" . "Type" "section") .RelPermalink "section" -}}
-      {{ if $image.exists }}
+      {{- $image := partial "helper/image" (dict "Image" .Params.image "Resources" .Resources "Context" .) -}}
+      {{ if $image }}
         <div class="section-image">
-          {{ if $image.resource }}
-            {{- $Permalink := $image.resource.RelPermalink -}}
-            {{- $Width := $image.resource.Width -}}
-            {{- $Height := $image.resource.Height -}}
+          {{ if and $image.Resource (reflect.IsImageResourceProcessable $image.Resource) }}
+            {{- $Permalink := $image.Permalink -}}
+            {{- $Width := $image.Width -}}
+            {{- $Height := $image.Height -}}
 
-            {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
-              {{- $thumbnail := $image.resource.Fill "120x120" -}}
+            {{- if (default true .Site.Params.imageProcessing.cover.enabled) -}}
+              {{- $thumbnail := $image.Resource.Fill "120x120" -}}
               {{- $Permalink = $thumbnail.RelPermalink -}}
               {{- $Width = $thumbnail.Width -}}
               {{- $Height = $thumbnail.Height -}}
@@ -34,7 +34,7 @@
               height="{{ $Height }}"
               alt="{{ .Params.imageAlt }}" title="{{ .Params.imageAlt }}" />
           {{ else }}
-            <img src="{{ $image.permalink }}" loading="lazy" />
+            <img src="{{ $image.Permalink }}" loading="lazy" />
           {{ end }}
         </div>
       {{ end }}
@@ -81,21 +81,21 @@
     const tagsElements = document.querySelectorAll('[data-tag-name]');
     const taxonomyFilterInput = document.querySelector('#taxonomy-filter')
     const executeTaxonomySearchBtn = document.querySelector('#execute-taxonomy-search')
-    
+
     taxonomyFilterInput.addEventListener("input", function() {
       filterCloud()
     });
     executeTaxonomySearchBtn.addEventListener("click", function() {
       filterCloud()
     });
-    
+
     function filterCloud() {
       const searchTerms = taxonomyFilterInput.value.toLowerCase().split(/\s+/);
-  
+
       tagsElements.forEach((tagElement) => {
         const tagName = tagElement.getAttribute('data-tag-name').toLowerCase();
         const shouldShow = searchTerms.some(term => tagName.includes(term));
-        
+
         tagElement.style.display = shouldShow ? '' : 'none';
       });
     }

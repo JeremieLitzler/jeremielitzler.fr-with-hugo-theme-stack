@@ -57,7 +57,7 @@ Cela donne ce qui suit :
 
 ```yaml
 ---
-relcanonical: https://jeremielitzler.fr
+canonicalUrl: https://jeremielitzler.fr
 ---
 ```
 
@@ -77,6 +77,12 @@ Dans le code ci-dessus,
 - On utilise sa valeur, qui est le `.` dans `{{ . }}`.
 
 {{< blockcontainer jli-notice-note "La syntaxe de la moustache est utilisée pour la programmation Go dans le modèle HTML">}}}
+{{< /blockcontainer >}}
+
+{{< blockcontainer jli-notice-note "Mise à jour suite au passage à hugo-theme-stack v4">}}
+
+Le champ personnalisé `relcanonical` décrit ci-dessus a été utilisé jusqu'au passage du site à hugo-theme-stack v4. Cette version gère nativement une URL canonique personnalisée : le champ a donc été renommé `canonicalUrl` dans tous les articles du site pour l'utiliser directement.
+
 {{< /blockcontainer >}}
 
 J’espère que vous avez trouvé cela utile.

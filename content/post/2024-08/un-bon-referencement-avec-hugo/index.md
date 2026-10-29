@@ -95,11 +95,17 @@ Qu’est-ce que cela signifie ? Si le _frontmatter_ contient la propriété `rel
 
 J’utilise rarement `relcanonical`, mais c’est pratique de l’avoir à disposition.
 
+{{< blockcontainer jli-notice-note "Mise à jour suite au passage à hugo-theme-stack v4">}}
+
+Le champ personnalisé `relcanonical` décrit ci-dessus a été utilisé jusqu'au passage du site à hugo-theme-stack v4. Cette version gère nativement une URL canonique personnalisée : le champ a donc été renommé `canonicalUrl` dans tous les articles du site pour l'utiliser directement.
+
+{{< /blockcontainer >}}
+
 Par exemple, j’avais un post LinkedIn que j’avais publié avant l’article :
 
 ```yaml
 ---
-relcanonical: https://www.linkedin.com/pulse/making-unused-method-argument-compliant-typescript-eslint-litzler-uiktf/
+canonicalUrl: https://www.linkedin.com/pulse/making-unused-method-argument-compliant-typescript-eslint-litzler-uiktf/
 ---
 ```
 

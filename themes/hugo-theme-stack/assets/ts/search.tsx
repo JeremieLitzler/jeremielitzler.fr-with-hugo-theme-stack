@@ -26,15 +26,15 @@ const tagsToReplace = {
     '…': '&hellip;'
 };
 
-function replaceTag(tag) {
-    return tagsToReplace[tag] || tag;
+function replaceTag(tag: string) {
+    return (tagsToReplace as Record<string, string>)[tag] || tag;
 }
 
-function replaceHTMLEnt(str) {
+function replaceHTMLEnt(str: string) {
     return str.replace(/[&<>"]/g, replaceTag);
 }
 
-function escapeRegExp(string) {
+function escapeRegExp(string: string) {
     return string.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
 }
 
@@ -45,13 +45,21 @@ class Search {
     private list: HTMLDivElement;
     private resultTitle: HTMLHeadElement;
     private resultTitleTemplate: string;
+    private container: HTMLDivElement;
 
-    constructor({ form, input, list, resultTitle, resultTitleTemplate }) {
+    constructor({ form, input, list, resultTitle, resultTitleTemplate }: {
+        form: HTMLFormElement,
+        input: HTMLInputElement,
+        list: HTMLDivElement,
+        resultTitle: HTMLHeadingElement,
+        resultTitleTemplate: string
+    }) {
         this.form = form;
         this.input = input;
         this.list = list;
         this.resultTitle = resultTitle;
         this.resultTitleTemplate = resultTitleTemplate;
+        this.container = list.parentElement as HTMLDivElement;
 
         /// Check if there's already value in the search input
         if (this.input.value.trim() !== '') {
@@ -135,38 +143,15 @@ class Search {
 
         return resultArray.join('');
     }
-    /* customized JLI */
-    /**
-     * Normalize a string by removing accents and converting to lowercase.
-     * @param str The input string to normalize.
-     * @returns The normalized string.
-     */
-    private normalizeString(str: string): string {
-      return str
-        .normalize("NFD") // Decompose accented characters into base characters and diacritics
-        .replace(/[\u0300-\u036f]/g, "") // Remove diacritical marks
-        .toLowerCase(); // Convert to lowercase
-    }
 
-    private async searchKeywords(
-        keywords: string[],
-        exactMatch: boolean = false)
-    {
+    private async searchKeywords(keywords: string[]) {
         const rawData = await this.getData();
         const results: pageData[] = [];
-        /* customized JLI */
-		// Normalize keywords for consistent matching
-		const normalizedKeywords = keywords.map(this.normalizeString);
-	        /* customized JLI */
-		const regex = exactMatch
-		  ? new RegExp(`\\b${keywords.map(escapeRegExp).join("\\b.*\\b")}\\b`, "gi") // Matches all words in any order
-		  : new RegExp(
-		    normalizedKeywords
-		    .filter((v) => v.trim() !== "")
-		    .map(escapeRegExp)
-		            .join("|"),
-		          "gi",
-		        );
+
+        const regex = new RegExp(keywords.filter((v, index, arr) => {
+            arr[index] = escapeRegExp(v);
+            return v.trim() !== '';
+        }).join('|'), 'gi');
 
         for (const item of rawData) {
             const titleMatches: match[] = [],
@@ -212,11 +197,11 @@ class Search {
             return b.matchCount - a.matchCount;
         });
     }
-    /* customized JLI */
-    private async doSearch(keywords: string[], exactMatch: boolean = false) {
+
+    private async doSearch(keywords: string[]) {
         const startTime = performance.now();
-      /* customized JLI */
-      const results = await this.searchKeywords(keywords, exactMatch);
+
+        const results = await this.searchKeywords(keywords);
         this.clear();
 
         for (const item of results) {
@@ -226,16 +211,18 @@ class Search {
         const endTime = performance.now();
 
         this.resultTitle.innerText = this.generateResultTitle(results.length, ((endTime - startTime) / 1000).toPrecision(1));
+
+        this.container?.classList.remove('hidden');
     }
 
-    private generateResultTitle(resultLen, time) {
-        return this.resultTitleTemplate.replace("#PAGES_COUNT", resultLen).replace("#TIME_SECONDS", time);
+    private generateResultTitle(resultLen: number, time: string) {
+        return this.resultTitleTemplate.replace("#PAGES_COUNT", resultLen.toString()).replace("#TIME_SECONDS", time);
     }
 
     public async getData() {
         if (!this.data) {
             /// Not fetched yet
-            const jsonURL = this.form.dataset.json;
+            const jsonURL = this.form.dataset.json as string;
             this.data = await fetch(jsonURL).then(res => res.json());
             const parser = new DOMParser();
 
@@ -246,26 +233,13 @@ class Search {
 
         return this.data;
     }
-    
-    /* customized JLI */
-    private getExactMatchCheckbox() {
-      const exactMatchCheckbox = document.getElementById(
-        "exact-match-checkbox",
-      ) as HTMLInputElement;
-      return exactMatchCheckbox;
-    }
 
     private bindSearchForm() {
         let lastSearch = '';
-        /* customized JLI */
-        let lastExactMatch: null | boolean = null;
 
-        const eventHandler = (e) => {
+        const eventHandler = (e: Event) => {
             e.preventDefault();
             const keywords = this.input.value.trim();
-	    
-	    /* customized JLI */
-            const exactMatch = this.getExactMatchCheckbox()?.checked || false;
 
             Search.updateQueryString(keywords, true);
 
@@ -273,31 +247,21 @@ class Search {
                 lastSearch = '';
                 return this.clear();
             }
-            /* customized JLI */
-            if (lastSearch === keywords && lastExactMatch === exactMatch) return;
+
+            if (lastSearch === keywords) return;
             lastSearch = keywords;
-            /* customized JLI */
-            lastExactMatch = exactMatch;
 
             this.doSearch(keywords.split(' '));
         }
 
         this.input.addEventListener('input', eventHandler);
         this.input.addEventListener('compositionend', eventHandler);
-	/* customized JLI */
-        this.getExactMatchCheckbox().addEventListener("change", (e: Event) => {
-          console.log(
-            (e.target as HTMLInputElement).id,
-            (e.target as HTMLInputElement).checked,
-        );
-  
-      eventHandler(e);
-      }); // Trigger search on checkbox change
     }
 
     private clear() {
         this.list.innerHTML = '';
         this.resultTitle.innerText = '';
+        this.container.classList.add('hidden');
     }
 
     private bindQueryStringChange() {
@@ -308,7 +272,7 @@ class Search {
 
     private handleQueryString() {
         const pageURL = new URL(window.location.toString());
-        const keywords = pageURL.searchParams.get('keyword');
+        const keywords = pageURL.searchParams.get('keyword') || '';
         this.input.value = keywords;
 
         if (keywords) {
@@ -338,19 +302,21 @@ class Search {
     }
 
     public static render(item: pageData) {
-        return <article>
-            <a href={item.permalink}>
-                <div class="article-details">
-                    <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-                    <section class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></section>
-                </div>
-                {item.image &&
-                    <div class="article-image">
-                        <img src={item.image} loading="lazy" />
+        return (
+            <article>
+                <a href={item.permalink}>
+                    <div class="article-details">
+                        <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
+                        <section class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></section>
                     </div>
-                }
-            </a>
-        </article>;
+                    {item.image &&
+                        <div class="article-image">
+                            <img src={item.image} loading="lazy" />
+                        </div>
+                    }
+                </a>
+            </article>
+        );
     }
 }
 
@@ -363,9 +329,11 @@ declare global {
 window.addEventListener('load', () => {
     setTimeout(function () {
         const searchForm = document.querySelector('.search-form') as HTMLFormElement,
-            searchInput = searchForm.querySelector('input') as HTMLInputElement,
+            searchInput = searchForm?.querySelector('input') as HTMLInputElement,
             searchResultList = document.querySelector('.search-result--list') as HTMLDivElement,
             searchResultTitle = document.querySelector('.search-result--title') as HTMLHeadingElement;
+
+        if (!searchForm || !searchInput || !searchResultList || !searchResultTitle) return;
 
         new Search({
             form: searchForm,

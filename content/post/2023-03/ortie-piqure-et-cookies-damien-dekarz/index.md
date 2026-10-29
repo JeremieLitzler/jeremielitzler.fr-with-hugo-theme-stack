@@ -4,7 +4,7 @@ description: "Ceci n'est pas *l'ortie de A à Z*, mais on comprendra pourquoi ç
 image: /images/2023-03-14-titre-de-la-video-sur-fond-d-ortie.jpg
 imageAlt: Le titre de la vidéo sur fond d'ortie
 date: 2023-03-14
-relcanonical: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
+canonicalUrl: https://jeremielitzler.fr/post/2023-03/ortie-piqure-et-cookies-damien-dekarz
 categories:
   - Jardin
 seoNoIndex: true

@@ -4,7 +4,7 @@ description: "Un sol vivant est le moyen le plus efficace de jardiner et ce n'es
 date: 2020-10-12
 image: "/images/2022-10-12-cycle-d-echanges-entre-les-plantes-et-les-mycorhizes.png"
 imageAlt: Image diagramme décrivant le cycle d'échanges entre les plantes et les mycorhizes
-relcanonical: https://jeremielitzler.fr/post/2022-10/comment-jardiner-avec-un-sol-vivant-damien-dekarz/
+canonicalUrl: https://jeremielitzler.fr/post/2022-10/comment-jardiner-avec-un-sol-vivant-damien-dekarz/
 categories:
   - Jardin
 seoNoIndex: true
